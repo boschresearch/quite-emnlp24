@@ -1,0 +1,615 @@
+{
+    "nodes": [
+        {
+            "name": "BirthAsphyxia",
+            "states": [
+                "yes",
+                "no"
+            ]
+        },
+        {
+            "name": "Disease",
+            "states": [
+                "PFC",
+                "TGA",
+                "Fallot",
+                "PAIVS",
+                "TAPVD",
+                "Lung"
+            ]
+        },
+        {
+            "name": "LungParench",
+            "states": [
+                "Normal",
+                "Congested",
+                "Abnormal"
+            ]
+        },
+        {
+            "name": "Grunting",
+            "states": [
+                "yes",
+                "no"
+            ]
+        },
+        {
+            "name": "GruntingReport",
+            "states": [
+                "yes",
+                "no"
+            ]
+        },
+        {
+            "name": "Age",
+            "states": [
+                "0-3_days",
+                "4-10_days",
+                "11-30_days"
+            ]
+        },
+        {
+            "name": "Sick",
+            "states": [
+                "yes",
+                "no"
+            ]
+        }
+    ],
+    "connectivity": [
+        {
+            "node": "BirthAsphyxia",
+            "incoming": []
+        },
+        {
+            "node": "Disease",
+            "incoming": []
+        },
+        {
+            "node": "LungParench",
+            "incoming": []
+        },
+        {
+            "node": "Grunting",
+            "incoming": [
+                "LungParench",
+                "Sick"
+            ]
+        },
+        {
+            "node": "GruntingReport",
+            "incoming": [
+                "Grunting"
+            ]
+        },
+        {
+            "node": "Age",
+            "incoming": [
+                "Disease",
+                "Sick"
+            ]
+        },
+        {
+            "node": "Sick",
+            "incoming": [
+                "Disease"
+            ]
+        }
+    ],
+    "numeric_premises": [
+        {
+            "id": 0,
+            "origin": "BirthAsphyxia",
+            "content": "The probability of a baby being free from birth asphyxia is 0.9, whereas the probability of a baby experiencing birth asphyxia is 0.1."
+        },
+        {
+            "id": 1,
+            "origin": "Disease",
+            "content": "There is a 29.5% chance that a child suffers from Fallot's Tetralogy, 5% that there is a lung related issue, 22.2% that it suffers from PAIVS, 4.7% for PFC, 5% for TAPVD, and 33.6% for TGA."
+        },
+        {
+            "id": 2,
+            "origin": "LungParench",
+            "content": "There's a 71.71% probability that a child's lung parenchyma will appear normal, an 8.985% probability it will be congested, and a 19.305% chance it will appear abnormal."
+        },
+        {
+            "id": 3,
+            "origin": "Sick",
+            "content": "If a child has the PFC disease, they have a 40% chance of being sick and a 60% chance of being healthy."
+        },
+        {
+            "id": 4,
+            "origin": "Sick",
+            "content": "A child with TGA disease has a 30% probability of being sick and a 70% chance of being healthy."
+        },
+        {
+            "id": 5,
+            "origin": "Sick",
+            "content": "In the case of Fallot disease, a child has a 20% probability of being sick and an 80% chance of being healthy."
+        },
+        {
+            "id": 6,
+            "origin": "Sick",
+            "content": "If a child has PAIVS disease, they have a 30% probability of being sick and a 70% chance of being healthy."
+        },
+        {
+            "id": 7,
+            "origin": "Sick",
+            "content": "A child with TAPVD disease has a 70% probability of being sick and a 30% chance of being healthy."
+        },
+        {
+            "id": 8,
+            "origin": "Sick",
+            "content": "If a child has lung disease, they have a 70% probability of being sick and a 30% chance of being healthy."
+        },
+        {
+            "id": 9,
+            "origin": "Age",
+            "content": "If a child is sick and has PFC, the likelihood of the child's age being within 0-3 days is 95%, within 4-10 days is 3%, and within 11-30 days is only 2%."
+        },
+        {
+            "id": 10,
+            "origin": "Age",
+            "content": "When a child with PFC disease shows no symptoms, the probability of the child being within 0-3 days old is 85%, within 4-10 days old is 10%, and within 11-30 days old is 5%."
+        },
+        {
+            "id": 11,
+            "origin": "Age",
+            "content": "If a child has TGA disease and displays symptoms, the age of the child is likely to be within 0-3 days with a probability of 80%, within 4-10 days with a probability of 15%, and within 11-30 days with a probability of 5%."
+        },
+        {
+            "id": 12,
+            "origin": "Age",
+            "content": "When a child with TGA disease does not show symptoms, the probability of the child's age being within 0-3 days is 70%, within 4-10 days is 20%, and within 11-30 days is 10%."
+        },
+        {
+            "id": 13,
+            "origin": "Age",
+            "content": "If a child has Fallot disease and exhibits symptoms, the age of the child is likely to be within 0-3 days with a probability of 70%, within 4-10 days with a probability of 15%, and within 11-30 days with a probability of 15%."
+        },
+        {
+            "id": 14,
+            "origin": "Age",
+            "content": "When a child with Fallot disease does not show symptoms, the probability of the child's age being within 0-3 days is 25%, within 4-10 days is 25%, and within 11-30 days is 50%."
+        },
+        {
+            "id": 15,
+            "origin": "Age",
+            "content": "If a child suffers from PAIVS and displays symptoms, the age of the child is likely to be within 0-3 days with a probability of 80%, within 4-10 days with a probability of 15%, and within 11-30 days with a probability of 5%."
+        },
+        {
+            "id": 16,
+            "origin": "Age",
+            "content": "When a child with PAIVS disease does not show symptoms, the probability of the child's age being within 0-3 days is 80%, within 4-10 days is 15%, and within 11-30 days is 5%."
+        },
+        {
+            "id": 17,
+            "origin": "Age",
+            "content": "If a child has TAPVD disease and displays symptoms, the age of the child is likely to be within 0-3 days with a probability of 80%, within 4-10 days with a probability of 15%, and within 11-30 days with a probability of 5%."
+        },
+        {
+            "id": 18,
+            "origin": "Age",
+            "content": "When a child with TAPVD disease does not show symptoms, the probability of the child's age being within 0-3 days is 70%, within 4-10 days is 20%, and within 11-30 days is 10%."
+        },
+        {
+            "id": 19,
+            "origin": "Age",
+            "content": "If a child has lung disease and displays symptoms, the age of the child is likely to be within 0-3 days with a probability of 90%, within 4-10 days with a probability of 8%, and within 11-30 days with a probability of 2%."
+        },
+        {
+            "id": 20,
+            "origin": "Age",
+            "content": "When a child with lung disease does not show symptoms, the probability of the child's age being within 0-3 days is 80%, within 4-10 days is 15%, and within 11-30 days is 5%."
+        },
+        {
+            "id": 21,
+            "origin": "Grunting",
+            "content": "If a child is sick and their lung parenchyma is normal, there is a 20% chance they will grunt and an 80% chance they will not."
+        },
+        {
+            "id": 22,
+            "origin": "Grunting",
+            "content": "If a child is not sick and their lung parenchyma is normal, they have a 95% chance of not grunting and a 5% chance of doing so."
+        },
+        {
+            "id": 23,
+            "origin": "Grunting",
+            "content": "If a child is sick and their lung parenchyma is congested, they have a 40% chance of grunting and a 60% chance of not grunting."
+        },
+        {
+            "id": 24,
+            "origin": "Grunting",
+            "content": "If a child is not sick and their lung parenchyma is congested, they have a 20% chance of grunting and an 80% chance of not grunting."
+        },
+        {
+            "id": 25,
+            "origin": "Grunting",
+            "content": "If a child is sick and their lung parenchyma is abnormal, they have an 80% chance of grunting and a 20% chance of not grunting."
+        },
+        {
+            "id": 26,
+            "origin": "Grunting",
+            "content": "If a child is not sick and their lung parenchyma is abnormal, they have a 60% chance of grunting and a 40% chance of not grunting."
+        },
+        {
+            "id": 27,
+            "origin": "GruntingReport",
+            "content": "If a child is grunting, there's an 80% probability that this symptom will be documented in their medical report."
+        },
+        {
+            "id": 28,
+            "origin": "GruntingReport",
+            "content": "Without grunting, the chance of this symptom being documented in the child's medical report is just 10%."
+        }
+    ],
+    "wep_based_premises": [
+        {
+            "id": 0,
+            "origin": "BirthAsphyxia",
+            "content": "It is unlikely that a child suffers from birth asphyxia."
+        },
+        {
+            "id": 1,
+            "origin": "Disease",
+            "content": "It is probably not the case that a child suffers from Fallot's Tetralogy, highly unlikely that there is a lung related issue, unlikely that it suffers from PAIVS, highly unlikely that it suffers from PFC and TAPVD, and the child does probably not suffer from TGA. Out of all, TGA is still the most likely one, closely followed by Fallot's Tetralogy."
+        },
+        {
+            "id": 2,
+            "origin": "LungParench",
+            "content": "It is probable that a child's lung parenchyma will appear normal, improbable that it will be congested, and unlikely that it will appear abnormal."
+        },
+        {
+            "id": 3,
+            "origin": "Sick",
+            "content": "Given that the child suffers from Persistent Fetal Circulation (PFC), there is an about even chance that the child will be sick (exhibiting symptoms of illness), and there is better than even chance that the child will not be sick."
+        },
+        {
+            "id": 4,
+            "origin": "Sick",
+            "content": "Given that the child has Transposition of the Great Arteries (TGA) disease, the child will probably not be sick."
+        },
+        {
+            "id": 5,
+            "origin": "Sick",
+            "content": "Given that the child has Tetralogy of Fallot (Fallot) disease, it is unlikely that the child will be sick."
+        },
+        {
+            "id": 6,
+            "origin": "Sick",
+            "content": "Given that the child suffers from Persistent Pulmonary Hypertension of the Newborn (PAIVS) disease, the child will probably not be sick."
+        },
+        {
+            "id": 7,
+            "origin": "Sick",
+            "content": "Given that the child has Total Anomalous Pulmonary Venous Return (TAPVD) disease, it is probable that the child will be sick."
+        },
+        {
+            "id": 8,
+            "origin": "Sick",
+            "content": "Given that the child has a lung-related disease, it is likely that the child will be sick (exhibiting symptoms of illness)."
+        },
+        {
+            "id": 9,
+            "origin": "Age",
+            "content": "If a child suffers from Persistent Fetal Circulation (PFC) and is currently sick, then there is a very high chance that the child is within the age range of 0-3 days, while it is almost certain that the child is not within the age range of 4-10 days or 11-30 days."
+        },
+        {
+            "id": 10,
+            "origin": "Age",
+            "content": "If a child has the Persistent Fetal Circulation (PFC) disease but is not currently sick, then there is a very good chance that the child is within the age range of 0-3 days, while there are only slight chances that the child is within the age range of 4-10 days, and it is highly unlikely that the child is within the age range of 11-30 days."
+        },
+        {
+            "id": 11,
+            "origin": "Age",
+            "content": "If a child suffers from Transposition of the Great Arteries (TGA) and is currently sick, then there is a very good chance that the child is within the age range of 0-3 days, while there are only slight chances that the child is within the age range of 4-10 days, and it is highly unlikely that the child is within the age range of 11-30 days."
+        },
+        {
+            "id": 12,
+            "origin": "Age",
+            "content": "If a child suffers from Transposition of the Great Arteries (TGA) but is not currently sick, then it is likely that the child is within the age range of 0-3 days, while it is unlikely that the child is within the age range of 4-10 days, and there is only a little chance that the child is within the age range of 11-30 days."
+        },
+        {
+            "id": 13,
+            "origin": "Age",
+            "content": "If a child has Tetralogy of Fallot (Fallot) disease and is currently sick, then it is likely that the child is within the age range of 0-3 days, while it is improbable that the child is within the age range of 4-10 days, and there is only a little chance that the child is within the age range of 11-30 days."
+        },
+        {
+            "id": 14,
+            "origin": "Age",
+            "content": "If a child has Tetralogy of Fallot (Fallot) disease but is not currently sick, then it is unlikely that the child is within the age range of 0-3 days or 4-10 days, while there are about even chances that the child is within the age range of 11-30 days."
+        },
+        {
+            "id": 15,
+            "origin": "Age",
+            "content": "If a child has Pulmonary Arterial Hypertension of the Newborn (PAIVS) disease and is currently sick, then there is a very good chance that the child is within the age range of 0-3 days, while it is slightly possible that the child is within the age range of 4-10 days, and it is highly unlikely that the child is within the age range of 11-30 days."
+        },
+        {
+            "id": 16,
+            "origin": "Age",
+            "content": "If a child has Pulmonary Arterial Hypertension of the Newborn (PAIVS) disease but is not currently sick, then there is a very good chance that the child is within the age range of 0-3 days, while it is unlikely that the child is within the age range of 4-10 days or 11-30 days."
+        },
+        {
+            "id": 17,
+            "origin": "Age",
+            "content": "If a child has Total Anomalous Pulmonary Venous Return (TAPVD) disease and is currently sick, then it is likely that the child is within the age range of 0-3 days, while it is improbable that the child is within the age range of 4-10 days, and it is highly unlikely that the child is within the age range of 11-30 days."
+        },
+        {
+            "id": 18,
+            "origin": "Age",
+            "content": "If a child has Total Anomalous Pulmonary Venous Return (TAPVD) disease but is not currently sick, then it is likely that the child is within the age range of 0-3 days, while it is unlikely that the child is within the age range of 4-10 days, and it is improbable that the child is within the age range of 11-30 days."
+        },
+        {
+            "id": 19,
+            "origin": "Age",
+            "content": "If a child has a lung disease and is currently sick, then it is highly likely that the child is within the age range of 0-3 days, while it is slightly possible that the child is within the age range of 4-10 days, and it is almost certain that the child is not within the age range of 11-30 days."
+        },
+        {
+            "id": 20,
+            "origin": "Age",
+            "content": "If a child has a lung disease but is not currently sick, then there is a very good chance that the child is within the age range of 0-3 days, while it is slightly possible that the child is within the age range of 4-10 days, and it is highly unlikely that the child is within the age range of 11-30 days."
+        },
+        {
+            "id": 21,
+            "origin": "Grunting",
+            "content": "If the lung parenchyma of a child is normal and they are currently sick, then it is unlikely that the child will be grunting"
+        },
+        {
+            "id": 22,
+            "origin": "Grunting",
+            "content": "If the lung parenchyma of a child is normal and they are not currently sick, then it is highly unlikely that the child will be grunting"
+        },
+        {
+            "id": 23,
+            "origin": "Grunting",
+            "content": "If the lung parenchyma of a child is congested and they are currently sick, then it is about even chances that the child will be grunting or not."
+        },
+        {
+            "id": 24,
+            "origin": "Grunting",
+            "content": "If the lung parenchyma of a child is congested and they are not currently sick, then it is unlikely that the child will be grunting."
+        },
+        {
+            "id": 25,
+            "origin": "Grunting",
+            "content": "If the lung parenchyma of a child is abnormal and they are currently sick, then there is a very good chance that the child will be grunting."
+        },
+        {
+            "id": 26,
+            "origin": "Grunting",
+            "content": "If the lung parenchyma of a child is abnormal and they are not currently sick, then there is a better than even chance that the child will be grunting."
+        },
+        {
+            "id": 27,
+            "origin": "GruntingReport",
+            "content": "If a child is exhibiting grunting symptoms, then there is probably a report or assessment of the grunting symptom."
+        },
+        {
+            "id": 28,
+            "origin": "GruntingReport",
+            "content": "If a child is not exhibiting grunting symptoms, then it is highly likely that there is no report or assessment of the grunting symptom."
+        }
+    ],
+    "evidence_query_pairs": [
+        {
+            "id": 0,
+            "evidences": [
+                "The child is between 11-30 days old."
+            ],
+            "query": "What is the likelihood of a report indicating that the child is grunting, given that the child is within the age range of 11-30 days?",
+            "answer": 0.23171645,
+            "reasoning_types": []
+        },
+        {
+            "id": 1,
+            "evidences": [
+                "The child is not grunting.",
+                "The child is currently sick."
+            ],
+            "query": "What is the likelihood of a sick child aged between 4-10 days?",
+            "answer": 0.14194861,
+            "reasoning_types": [
+                "causal"
+            ]
+        },
+        {
+            "id": 2,
+            "evidences": [
+                "The child has been observed to be grunting.",
+                "There is no documented report or assessment of the grunting symptom."
+            ],
+            "query": "What is the likelihood of the child aged between 4-10 days having grunting as a symptom?",
+            "answer": 0.16790675,
+            "reasoning_types": []
+        },
+        {
+            "id": 3,
+            "evidences": [
+                "The child is currently unwell.",
+                "The child is not grunting."
+            ],
+            "query": "What is the likelihood of the healthcare professional not documenting a grunting symptom for this child?",
+            "answer": 0.9,
+            "reasoning_types": [
+                "causal"
+            ]
+        },
+        {
+            "id": 4,
+            "evidences": [
+                "There is a report of grunting symptoms.",
+                "However, the child is not actually grunting."
+            ],
+            "query": "What is the likelihood of this child being 0-3 days old?",
+            "answer": 0.59263263,
+            "reasoning_types": []
+        },
+        {
+            "id": 5,
+            "evidences": [
+                "There is a documented report of a newborn grunting.",
+                "The newborn is within the age range of 0-3 days."
+            ],
+            "query": "What is the likelihood that this newborn is not grunting?",
+            "answer": 0.29527156,
+            "reasoning_types": [
+                "evidential"
+            ]
+        },
+        {
+            "id": 6,
+            "evidences": [
+                "The child has been grunting.",
+                "The child's age is between 11-30 days old.",
+                "The child is not currently sick."
+            ],
+            "query": "Given that the child has been grunting, is aged between 11-30 days and is not currently sick, what is the likelihood that there is a documented report of grunting?",
+            "answer": 0.8,
+            "reasoning_types": [
+                "causal"
+            ]
+        },
+        {
+            "id": 7,
+            "evidences": [
+                "The child is within the age range of 0-3 days.",
+                "There is no report or assessment of grunting symptoms."
+            ],
+            "query": "What is the likelihood of this child not grunting?",
+            "answer": 0.9378245,
+            "reasoning_types": [
+                "evidential"
+            ]
+        },
+        {
+            "id": 8,
+            "evidences": [
+                "The child is within the age range of 0-3 days."
+            ],
+            "query": "What is the likelihood of this child not grunting?",
+            "answer": 0.7702148,
+            "reasoning_types": []
+        },
+        {
+            "id": 9,
+            "evidences": [
+                "There is no report of a grunting symptom.",
+                "The child is currently sick."
+            ],
+            "query": "What is the likelihood of the child not grunting when they are currently sick?",
+            "answer": 0.89981091,
+            "reasoning_types": [
+                "causal",
+                "evidential"
+            ]
+        },
+        {
+            "id": 10,
+            "evidences": [
+                "The child's age is between 4 and 10 days old.",
+                "The child is currently not sick.",
+                "The child is grunting."
+            ],
+            "query": "What is the likelihood of the grunting symptom not being reported?",
+            "answer": 0.2,
+            "reasoning_types": [
+                "causal"
+            ]
+        },
+        {
+            "id": 11,
+            "evidences": [
+                "The child is within the age range of 0-3 days.",
+                "There is no report of grunting.",
+                "The child is not grunting."
+            ],
+            "query": "What is the likelihood of this child being sick?",
+            "answer": 0.31685295,
+            "reasoning_types": [
+                "evidential"
+            ]
+        },
+        {
+            "id": 12,
+            "evidences": [
+                "The child is grunting.",
+                "The child is currently sick."
+            ],
+            "query": "What is the likelihood of a medical professional not having documented a grunting symptom in the child's record?",
+            "answer": 0.2,
+            "reasoning_types": [
+                "causal"
+            ]
+        },
+        {
+            "id": 13,
+            "evidences": [
+                "The child is currently sick.",
+                "The child is within the age range of 0-3 days."
+            ],
+            "query": "What is the likelihood of this child exhibiting grunting as a clinical sign of respiratory distress?",
+            "answer": 0.3338,
+            "reasoning_types": [
+                "causal"
+            ]
+        },
+        {
+            "id": 14,
+            "evidences": [
+                "The child is currently sick."
+            ],
+            "query": "What is the likelihood of this child being 0-3 days old?",
+            "answer": 0.78900785,
+            "reasoning_types": [
+                "causal"
+            ]
+        },
+        {
+            "id": 15,
+            "evidences": [
+                "The child is between 11-30 days old."
+            ],
+            "query": "What is the likelihood that the child of this age is not sick?",
+            "answer": 0.88722558,
+            "reasoning_types": [
+                "evidential"
+            ]
+        },
+        {
+            "id": 16,
+            "evidences": [
+                "The child is not currently sick.",
+                "The child is between 11-30 days old.",
+                "There is no report of grunting."
+            ],
+            "query": "What is the likelihood of this child starting to grunt (i.e., exhibiting grunting as a symptom)?",
+            "answer": 0.043432153,
+            "reasoning_types": [
+                "causal",
+                "evidential"
+            ]
+        },
+        {
+            "id": 17,
+            "evidences": [
+                "The child is not grunting."
+            ],
+            "query": "What is the likelihood of this child being between 0-3 days old?",
+            "answer": 0.59263263,
+            "reasoning_types": []
+        },
+        {
+            "id": 18,
+            "evidences": [
+                "The child's age is between 4-10 days.",
+                "The child is currently sick.",
+                "The child is not grunting."
+            ],
+            "query": "What is the likelihood of there being no report of grunting symptoms for this child, given the child's age, sickness, and lack of grunting?",
+            "answer": 0.9,
+            "reasoning_types": [
+                "causal"
+            ]
+        }
+    ]
+}

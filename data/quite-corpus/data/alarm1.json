@@ -1,0 +1,877 @@
+{
+    "nodes": [
+        {
+            "name": "HISTORY",
+            "states": [
+                "TRUE",
+                "FALSE"
+            ]
+        },
+        {
+            "name": "CVP",
+            "states": [
+                "LOW",
+                "NORMAL",
+                "HIGH"
+            ]
+        },
+        {
+            "name": "PCWP",
+            "states": [
+                "LOW",
+                "NORMAL",
+                "HIGH"
+            ]
+        },
+        {
+            "name": "HYPOVOLEMIA",
+            "states": [
+                "TRUE",
+                "FALSE"
+            ]
+        },
+        {
+            "name": "LVEDVOLUME",
+            "states": [
+                "LOW",
+                "NORMAL",
+                "HIGH"
+            ]
+        },
+        {
+            "name": "LVFAILURE",
+            "states": [
+                "TRUE",
+                "FALSE"
+            ]
+        },
+        {
+            "name": "STROKEVOLUME",
+            "states": [
+                "LOW",
+                "NORMAL",
+                "HIGH"
+            ]
+        }
+    ],
+    "connectivity": [
+        {
+            "node": "HISTORY",
+            "incoming": [
+                "LVFAILURE"
+            ]
+        },
+        {
+            "node": "CVP",
+            "incoming": [
+                "LVEDVOLUME"
+            ]
+        },
+        {
+            "node": "PCWP",
+            "incoming": [
+                "LVEDVOLUME"
+            ]
+        },
+        {
+            "node": "HYPOVOLEMIA",
+            "incoming": []
+        },
+        {
+            "node": "LVEDVOLUME",
+            "incoming": [
+                "HYPOVOLEMIA",
+                "LVFAILURE"
+            ]
+        },
+        {
+            "node": "LVFAILURE",
+            "incoming": []
+        },
+        {
+            "node": "STROKEVOLUME",
+            "incoming": [
+                "HYPOVOLEMIA",
+                "LVFAILURE"
+            ]
+        }
+    ],
+    "numeric_premises": [
+        {
+            "id": 0,
+            "origin": "LVFAILURE",
+            "content": "The likelihood of Left Ventricular Failure is just 5% - implying that the heart's left ventricle effectively pumps blood 95 out of 100 times."
+        },
+        {
+            "id": 1,
+            "origin": "HISTORY",
+            "content": "If the left ventricle is failing to pump blood effectively, there's a 90% chance the patient has a medical history that influences this condition."
+        },
+        {
+            "id": 2,
+            "origin": "HISTORY",
+            "content": "With no left ventricular failure, it is highly probable, at 99%, that the patient doesn't have a medical history influencing this condition. The alternative, a history present, is very unlikely, at just 1%."
+        },
+        {
+            "id": 3,
+            "origin": "HYPOVOLEMIA",
+            "content": "There is an 80% probability that the blood volume is not low, induced by a condition called hypovolemia, and a 20% chance that it is low."
+        },
+        {
+            "id": 4,
+            "origin": "LVEDVOLUME",
+            "content": "If a patient experiences both low blood volume and left ventricular failure, there is a 95% probability that the left ventricular end-diastolic volume is low, a 4% probability that it is normal, and only a 1% probability that it is high."
+        },
+        {
+            "id": 5,
+            "origin": "LVEDVOLUME",
+            "content": "When a patient has low blood volume but no left ventricular failure, the left ventricular end-diastolic volume is likely to be high with a 90% probability, and there is only a 9% chance that it will be normal, while the probability of it being low is just 1%."
+        },
+        {
+            "id": 6,
+            "origin": "LVEDVOLUME",
+            "content": "If a patient does not have low blood volume but has left ventricular failure, the left ventricular end-diastolic volume is likely to be normal or high with a 1% probability, and a 98% probability that it will be low."
+        },
+        {
+            "id": 7,
+            "origin": "LVEDVOLUME",
+            "content": "When a patient does not have low blood volume and there is no left ventricular failure, the left ventricular end-diastolic volume is likely to be normal with a 90% probability, and there is a 5% probability that it will be low or high."
+        },
+        {
+            "id": 8,
+            "origin": "STROKEVOLUME",
+            "content": "If a patient is experiencing low blood volume and left ventricular failure, there is a 98% probability that the stroke volume will be low, while normal or high stroke volume is unlikely with only a 1% probability each."
+        },
+        {
+            "id": 9,
+            "origin": "STROKEVOLUME",
+            "content": "When a patient has low blood volume but no left ventricular failure, the stroke volume is more likely to be normal, with a probability of 0.49. However, there is still a chance of a low stroke volume (0.5) or a high stroke volume (0.01)."
+        },
+        {
+            "id": 10,
+            "origin": "STROKEVOLUME",
+            "content": "If a patient does not have low blood volume but is experiencing left ventricular failure, the stroke volume is most likely to be low, with a probability of 0.95. Meanwhile, there is a small chance of a normal stroke volume (0.04) or a high stroke volume (0.01)."
+        },
+        {
+            "id": 11,
+            "origin": "STROKEVOLUME",
+            "content": "When a patient does not have low blood volume and there is no left ventricular failure, the stroke volume is more likely to be normal, with a probability of 0.9. However, there is still a chance of a low or high stroke volume (0.05 each)."
+        },
+        {
+            "id": 12,
+            "origin": "PCWP",
+            "content": "When the left ventricular end-diastolic volume is low, there is a 95% probability that the pulmonary capillary wedge pressure will also be low, while a normal PCWP occurs with only 4% probability, and a high PCWP is even less likely, with a 1% probability."
+        },
+        {
+            "id": 13,
+            "origin": "PCWP",
+            "content": "When the left ventricular end-diastolic volume is normal the pulmonary capillary wedge pressure is likely to be normal with a 95% probability, while a low PCWP is quite unlikely, with only a 4% probability, and a high PCWP is even less likely, with a 1% probability."
+        },
+        {
+            "id": 14,
+            "origin": "PCWP",
+            "content": "When the left ventricular end-diastolic volume is high, there is a 95% probability that the pulmonary capillary wedge pressure will be high, while a normal PCWP is less likely, with only a 4% probability, and a low PCWP is even less likely, with a 1% probability."
+        },
+        {
+            "id": 15,
+            "origin": "CVP",
+            "content": "When the left ventricular end-diastolic volume is low, there is a 95% probability that the Central Venous Pressure will also be low, a 4% probability it will be normal, and a 1% probability it will be high."
+        },
+        {
+            "id": 16,
+            "origin": "CVP",
+            "content": "When the left ventricular end-diastolic volume is normal the Central Venous Pressure is likely to be normal with a 95% probability, and only a 4% and 1% chance of being low or high, respectively."
+        },
+        {
+            "id": 17,
+            "origin": "CVP",
+            "content": "When the left ventricular end-diastolic volume is high, there is a 70% probability that the Central Venous Pressure will be high, and only a 29% and 1% chance of being normal or low, respectively."
+        }
+    ],
+    "wep_based_premises": [
+        {
+            "id": 0,
+            "origin": "LVFAILURE",
+            "content": "The left ventricle of the heart failing to pump blood effectively, leading to heart failure, is highly unlikely to be the case."
+        },
+        {
+            "id": 1,
+            "origin": "HISTORY",
+            "content": "If left ventricular failure is present, then it is highly likely that the patient's medical history has influenced the likelihood of this condition or other cardiac events."
+        },
+        {
+            "id": 2,
+            "origin": "HISTORY",
+            "content": "If left ventricular failure is not present, then it is almost certain that the patient's medical history has not been a significant factor."
+        },
+        {
+            "id": 3,
+            "origin": "HYPOVOLEMIA",
+            "content": "Hypovolemia is a condition characterized by low blood volume, which can lead to serious complications. However, it is unlikely for a patient to have hypovolemia, but there is a very good chance that they do not have it."
+        },
+        {
+            "id": 4,
+            "origin": "LVEDVOLUME",
+            "content": "If a patient has low blood volume and left ventricular failure, then there is almost a certainty that the left ventricular end-diastolic volume will be low, it is highly unlikely that it will be normal, and there is almost no chance that it will be high."
+        },
+        {
+            "id": 5,
+            "origin": "LVEDVOLUME",
+            "content": "In the scenario where a patient has low blood volume but does not have left ventricular failure, the likelihood of left ventricular end-diastolic volume being low is almost non-existent, there is little chance of it being normal, and it is highly likely to be high."
+        },
+        {
+            "id": 6,
+            "origin": "LVEDVOLUME",
+            "content": "If a patient does not have low blood volume but has left ventricular failure, then it is almost certain that the left ventricular end-diastolic volume will be low, and there is almost no chance that it will be normal or high."
+        },
+        {
+            "id": 7,
+            "origin": "LVEDVOLUME",
+            "content": "In the case where a patient does not have low blood volume and does not have left ventricular failure, it is highly unlikely that the left ventricular end-diastolic volume will be low, highly likely to be normal, and highly unlikely to be high."
+        },
+        {
+            "id": 8,
+            "origin": "STROKEVOLUME",
+            "content": "If there is a low volume of blood circulating in the body and the left ventricle of the heart is failing to pump blood effectively, then it is almost certain that the stroke volume will be low, while there is almost no chance that the stroke volume will be normal or high."
+        },
+        {
+            "id": 9,
+            "origin": "STROKEVOLUME",
+            "content": "In the case where there is a low volume of blood in the body and the left ventricle is not failing, the chances of having a low stroke volume are about even, while the chance of having a normal stroke volume is also around even, and the chance of a high stroke volume is almost none."
+        },
+        {
+            "id": 10,
+            "origin": "STROKEVOLUME",
+            "content": "When the blood volume in the body is not low and the left ventricular failure is present, the stroke volume being low is almost certain, having a normal stroke volume is highly unlikely, and the chance of a high stroke volume is almost non-existent."
+        },
+        {
+            "id": 11,
+            "origin": "STROKEVOLUME",
+            "content": "In the scenario where the blood volume in the body is not low  and the left ventricle is not failing, the likelihood of having a low stroke volume is highly unlikely, while a normal stroke volume is highly likely, and the chance of a high stroke volume is also considered highly unlikely."
+        },
+        {
+            "id": 12,
+            "origin": "PCWP",
+            "content": "If the left ventricular end-diastolic volume is low, then it is almost certain that the pulmonary capillary wedge pressure will be low, highly unlikely to be normal, and almost with no chance of being high."
+        },
+        {
+            "id": 13,
+            "origin": "PCWP",
+            "content": "If the left ventricular end-diastolic volume is normal, then it is highly unlikely that the pulmonary capillary wedge pressure will be low, almost certain to be normal, and almost no chance of it being high."
+        },
+        {
+            "id": 14,
+            "origin": "PCWP",
+            "content": "If the left ventricular end-diastolic volume is high, then it is almost no chance that the pulmonary capillary wedge pressure will be low, highly unlikely to be normal, and almost certain to be high."
+        },
+        {
+            "id": 15,
+            "origin": "CVP",
+            "content": "If the left ventricular end-diastolic volume is low, then it is almost certain that the Central Venous Pressure will also be low, it is highly unlikely that the Central Venous Pressure will be normal, and there is almost no chance that the Central Venous Pressure will be high."
+        },
+        {
+            "id": 16,
+            "origin": "CVP",
+            "content": "This rule suggests that if the left ventricular end-diastolic volume is normal, then it is highly unlikely that the Central Venous Pressure will be low, it is almost certain that the Central Venous Pressure will be normal, and there is almost no chance that the Central Venous Pressure will be high."
+        },
+        {
+            "id": 17,
+            "origin": "CVP",
+            "content": "This rule indicates that if the left ventricular end-diastolic volume is high, then there is almost no chance that the Central Venous Pressure will be low, it is probably not the case that the Central Venous Pressure will be normal, and it is probably true that the Central Venous Pressure will be high."
+        }
+    ],
+    "evidence_query_pairs": [
+        {
+            "id": 0,
+            "evidences": [
+                "The patient has low blood volume.",
+                "The central venous pressure is normal.",
+                "The left ventricular end-diastolic volume is high."
+            ],
+            "query": "What is the likelihood of this patient having a normal pulmonary capillary wedge pressure?",
+            "answer": 0.04,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "HYPOVOLEMIA",
+                "CVP",
+                "LVEDVOLUME",
+                "PCWP"
+            ]
+        },
+        {
+            "id": 1,
+            "evidences": [
+                "The patient has a medical history.",
+                "The stroke volume is high.",
+                "The patient has hypovolemia (low blood volume).",
+                "The left ventricular end-diastolic volume is high."
+            ],
+            "query": "What is the likelihood of the patient experiencing left ventricular failure?",
+            "answer": 0.05,
+            "reasoning_types": [
+                "evidential",
+                "explaining_away"
+            ],
+            "sampled_nodes": [
+                "HISTORY",
+                "STROKEVOLUME",
+                "HYPOVOLEMIA",
+                "LVEDVOLUME",
+                "LVFAILURE"
+            ]
+        },
+        {
+            "id": 2,
+            "evidences": [
+                "The left ventricular end-diastolic volume is normal.",
+                "The stroke volume is low.",
+                "The patient has a medical history."
+            ],
+            "query": "What is the likelihood of the central venous pressure being normal, given the patient's current conditions?",
+            "answer": 0.95,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "LVEDVOLUME",
+                "STROKEVOLUME",
+                "HISTORY",
+                "CVP"
+            ]
+        },
+        {
+            "id": 3,
+            "evidences": [
+                "The patient has a medical history."
+            ],
+            "query": "What is the likelihood of this patient not having low blood volume?",
+            "answer": 0.8,
+            "reasoning_types": [],
+            "sampled_nodes": [
+                "HISTORY",
+                "HYPOVOLEMIA"
+            ]
+        },
+        {
+            "id": 4,
+            "evidences": [
+                "The left ventricular end-diastolic volume is normal.",
+                "Pulmonary capillary wedge pressure is high.",
+                "The patient does not have low blood volume.",
+                "The left ventricle of the heart is failing to pump blood effectively.",
+                "Central venous pressure is high.",
+                "Stroke volume is high."
+            ],
+            "query": "What is the likelihood of this patient not having a medical history that would influence the likelihood of left ventricular failure or other cardiac events?",
+            "answer": 0.1,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "LVEDVOLUME",
+                "PCWP",
+                "HYPOVOLEMIA",
+                "LVFAILURE",
+                "CVP",
+                "STROKEVOLUME",
+                "HISTORY"
+            ]
+        },
+        {
+            "id": 5,
+            "evidences": [
+                "The patient has hypovolemia (low blood volume).",
+                "The pulmonary capillary wedge pressure is low.",
+                "The central venous pressure is normal.",
+                "The stroke volume is low.",
+                "The patient has left ventricular failure."
+            ],
+            "query": "What is the likelihood of this patient having a medical history?",
+            "answer": 0.9,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "HYPOVOLEMIA",
+                "PCWP",
+                "CVP",
+                "STROKEVOLUME",
+                "LVFAILURE",
+                "HISTORY"
+            ]
+        },
+        {
+            "id": 6,
+            "evidences": [
+                "The pulmonary capillary wedge pressure is low."
+            ],
+            "query": "What is the likelihood of this individual having low blood volume (hypovolemia)?",
+            "answer": 0.11580273,
+            "reasoning_types": [],
+            "sampled_nodes": [
+                "PCWP",
+                "HYPOVOLEMIA"
+            ]
+        },
+        {
+            "id": 7,
+            "evidences": [
+                "The left ventricular end-diastolic volume is high.",
+                "The patient is experiencing left ventricular failure.",
+                "The patient has a history of medical issues.",
+                "The central venous pressure is high."
+            ],
+            "query": "What is the likelihood of this patient having a low stroke volume?",
+            "answer": 0.956,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "LVEDVOLUME",
+                "LVFAILURE",
+                "HISTORY",
+                "CVP",
+                "STROKEVOLUME"
+            ]
+        },
+        {
+            "id": 8,
+            "evidences": [
+                "The left ventricular failure is not present.",
+                "The pulmonary capillary wedge pressure is high.",
+                "The central venous pressure is low.",
+                "The stroke volume is high.",
+                "There is no significant medical history."
+            ],
+            "query": "What is the likelihood of this patient having a normal left ventricular end-diastolic volume?",
+            "answer": 0.20744818,
+            "reasoning_types": [
+                "causal",
+                "evidential"
+            ],
+            "sampled_nodes": [
+                "LVFAILURE",
+                "PCWP",
+                "CVP",
+                "STROKEVOLUME",
+                "HISTORY",
+                "LVEDVOLUME"
+            ]
+        },
+        {
+            "id": 9,
+            "evidences": [
+                "The patient has low blood volume.",
+                "The pulmonary capillary wedge pressure is low."
+            ],
+            "query": "What is the likelihood of this patient having a low central venous pressure?",
+            "answer": 0.78042519,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "HYPOVOLEMIA",
+                "PCWP",
+                "CVP"
+            ]
+        },
+        {
+            "id": 10,
+            "evidences": [
+                "The pulmonary capillary wedge pressure is high.",
+                "The patient has a medical history."
+            ],
+            "query": "What is the likelihood of this patient having a low stroke volume?",
+            "answer": 0.56927232,
+            "reasoning_types": [],
+            "sampled_nodes": [
+                "PCWP",
+                "HISTORY",
+                "STROKEVOLUME"
+            ]
+        },
+        {
+            "id": 11,
+            "evidences": [
+                "The patient does not have a history of medical issues.",
+                "The left ventricular end-diastolic volume is high."
+            ],
+            "query": "What is the likelihood of the patient having a high stroke volume?",
+            "answer": 0.01727097,
+            "reasoning_types": [],
+            "sampled_nodes": [
+                "HISTORY",
+                "LVEDVOLUME",
+                "STROKEVOLUME"
+            ]
+        },
+        {
+            "id": 12,
+            "evidences": [
+                "The patient has left ventricular failure.",
+                "The patient has a low blood volume due to hypovolemia.",
+                "The patient has a history of medical issues."
+            ],
+            "query": "What is the likelihood of this patient having a low left ventricular end-diastolic volume?",
+            "answer": 0.95,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "LVFAILURE",
+                "HYPOVOLEMIA",
+                "HISTORY",
+                "LVEDVOLUME"
+            ]
+        },
+        {
+            "id": 13,
+            "evidences": [
+                "The patient does not have low blood volume.",
+                "The left ventricular end-diastolic volume is high."
+            ],
+            "query": "What is the likelihood of this patient having a normal central venous pressure?",
+            "answer": 0.29,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "HYPOVOLEMIA",
+                "LVEDVOLUME",
+                "CVP"
+            ]
+        },
+        {
+            "id": 14,
+            "evidences": [
+                "The left ventricle of the heart has failed.",
+                "The central venous pressure is high.",
+                "The left ventricular end-diastolic volume is high.",
+                "The stroke volume is low.",
+                "There is no history of previous medical conditions."
+            ],
+            "query": "What is the likelihood of the pulmonary capillary wedge pressure being low, given the current conditions?",
+            "answer": 0.01,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "LVFAILURE",
+                "CVP",
+                "LVEDVOLUME",
+                "HISTORY",
+                "STROKEVOLUME",
+                "PCWP"
+            ]
+        },
+        {
+            "id": 15,
+            "evidences": [
+                "The patient does not have low blood volume.",
+                "The left ventricular end-diastolic volume is low.",
+                "The patient has no significant medical history."
+            ],
+            "query": "What is the likelihood of this patient having a low stroke volume?",
+            "answer": 0.13493019,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "HYPOVOLEMIA",
+                "LVEDVOLUME",
+                "HISTORY",
+                "STROKEVOLUME"
+            ]
+        },
+        {
+            "id": 16,
+            "evidences": [
+                "The pulmonary capillary wedge pressure is normal."
+            ],
+            "query": "What is the likelihood of the central venous pressure being low, given that the pulmonary capillary wedge pressure is normal?",
+            "answer": 0.044381189,
+            "reasoning_types": [],
+            "sampled_nodes": [
+                "PCWP",
+                "CVP"
+            ]
+        },
+        {
+            "id": 17,
+            "evidences": [
+                "The patient's medical history does not indicate any previous cardiac events.",
+                "The stroke volume is higher than normal.",
+                "The left ventricular failure has not occurred.",
+                "The pulmonary capillary wedge pressure is normal.",
+                "There is no evidence of low blood volume.",
+                "The central venous pressure is low."
+            ],
+            "query": "What is the likelihood of the patient's left ventricular end-diastolic volume being high?",
+            "answer": 0.00055370986,
+            "reasoning_types": [
+                "causal",
+                "evidential"
+            ],
+            "sampled_nodes": [
+                "HISTORY",
+                "STROKEVOLUME",
+                "LVFAILURE",
+                "PCWP",
+                "HYPOVOLEMIA",
+                "CVP",
+                "LVEDVOLUME"
+            ]
+        },
+        {
+            "id": 18,
+            "evidences": [
+                "The left ventricular end-diastolic volume is low.",
+                "The left ventricular failure is false (i.e., not present).",
+                "The patient has a medical history.",
+                "The stroke volume is high.",
+                "The central venous pressure is high.",
+                "The pulmonary capillary wedge pressure is normal."
+            ],
+            "query": "What is the likelihood of this patient not having low blood volume?",
+            "answer": 0.99009901,
+            "reasoning_types": [
+                "evidential",
+                "explaining_away"
+            ],
+            "sampled_nodes": [
+                "LVEDVOLUME",
+                "LVFAILURE",
+                "HISTORY",
+                "STROKEVOLUME",
+                "CVP",
+                "PCWP",
+                "HYPOVOLEMIA"
+            ]
+        },
+        {
+            "id": 19,
+            "evidences": [
+                "The left ventricular failure is not occurring.",
+                "The central venous pressure is high.",
+                "The patient has a medical history.",
+                "The left ventricular end-diastolic volume is normal.",
+                "The stroke volume is normal."
+            ],
+            "query": "What is the likelihood of the pulmonary capillary wedge pressure being normal?",
+            "answer": 0.95,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "LVFAILURE",
+                "CVP",
+                "HISTORY",
+                "LVEDVOLUME",
+                "STROKEVOLUME",
+                "PCWP"
+            ]
+        },
+        {
+            "id": 20,
+            "evidences": [
+                "The patient does not have low blood volume."
+            ],
+            "query": "What is the likelihood of this patient not having a medical history?",
+            "answer": 0.9455,
+            "reasoning_types": [],
+            "sampled_nodes": [
+                "HYPOVOLEMIA",
+                "HISTORY"
+            ]
+        },
+        {
+            "id": 21,
+            "evidences": [
+                "The stroke volume is high.",
+                "The pulmonary capillary wedge pressure is low.",
+                "The left ventricular end-diastolic volume is high.",
+                "The patient has a medical history."
+            ],
+            "query": "What is the likelihood of this patient not having left ventricular failure?",
+            "answer": 0.88916256,
+            "reasoning_types": [
+                "evidential"
+            ],
+            "sampled_nodes": [
+                "STROKEVOLUME",
+                "PCWP",
+                "LVEDVOLUME",
+                "HISTORY",
+                "LVFAILURE"
+            ]
+        },
+        {
+            "id": 22,
+            "evidences": [
+                "The patient has a medical history."
+            ],
+            "query": "What is the likelihood of this patient not having low blood volume?",
+            "answer": 0.8,
+            "reasoning_types": [],
+            "sampled_nodes": [
+                "HISTORY",
+                "HYPOVOLEMIA"
+            ]
+        },
+        {
+            "id": 23,
+            "evidences": [
+                "The patient has low blood volume.",
+                "The patient has a history of medical issues.",
+                "The pulmonary capillary wedge pressure is normal.",
+                "The central venous pressure is high.",
+                "The left ventricular failure is not present."
+            ],
+            "query": "What is the likelihood of this patient having a normal stroke volume?",
+            "answer": 0.49,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "HYPOVOLEMIA",
+                "HISTORY",
+                "PCWP",
+                "CVP",
+                "LVFAILURE",
+                "STROKEVOLUME"
+            ]
+        },
+        {
+            "id": 24,
+            "evidences": [
+                "The patient's medical history does not indicate any previous conditions.",
+                "The left ventricular end-diastolic volume is low.",
+                "The stroke volume is low.",
+                "The left ventricular failure has not occurred.",
+                "The pulmonary capillary wedge pressure is normal.",
+                "The patient does not have low blood volume."
+            ],
+            "query": "What is the likelihood of the central venous pressure being high in this patient?",
+            "answer": 0.01,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "HISTORY",
+                "LVEDVOLUME",
+                "STROKEVOLUME",
+                "LVFAILURE",
+                "PCWP",
+                "HYPOVOLEMIA",
+                "CVP"
+            ]
+        },
+        {
+            "id": 25,
+            "evidences": [
+                "The left ventricle of the heart is functioning properly."
+            ],
+            "query": "What is the likelihood of this patient having no history of medical issues?",
+            "answer": 0.99,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "LVFAILURE",
+                "HISTORY"
+            ]
+        },
+        {
+            "id": 26,
+            "evidences": [
+                "The patient has left ventricular failure.",
+                "The stroke volume is high.",
+                "The patient has a history of medical issues.",
+                "The pulmonary capillary wedge pressure is normal.",
+                "The central venous pressure is low.",
+                "The left ventricular end-diastolic volume is normal."
+            ],
+            "query": "What is the likelihood of this patient having low blood volume (hypovolemia) given the above evidence?",
+            "answer": 0.5,
+            "reasoning_types": [
+                "evidential",
+                "explaining_away"
+            ],
+            "sampled_nodes": [
+                "LVFAILURE",
+                "STROKEVOLUME",
+                "HISTORY",
+                "PCWP",
+                "CVP",
+                "LVEDVOLUME",
+                "HYPOVOLEMIA"
+            ]
+        },
+        {
+            "id": 27,
+            "evidences": [
+                "The Central Venous Pressure is low.",
+                "The pulmonary capillary wedge pressure is high.",
+                "The Left Ventricular Failure is false.",
+                "There is no significant medical history.",
+                "The blood volume is not low.",
+                "The left ventricular end-diastolic volume is high."
+            ],
+            "query": "What is the likelihood of this patient having a low Stroke Volume?",
+            "answer": 0.05,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "CVP",
+                "PCWP",
+                "LVFAILURE",
+                "HISTORY",
+                "HYPOVOLEMIA",
+                "LVEDVOLUME",
+                "STROKEVOLUME"
+            ]
+        },
+        {
+            "id": 28,
+            "evidences": [
+                "The patient has low blood volume.",
+                "The pulmonary capillary wedge pressure is high."
+            ],
+            "query": "What is the likelihood of this patient having a high left ventricular end-diastolic volume?",
+            "answer": 0.99822519,
+            "reasoning_types": [
+                "causal",
+                "evidential"
+            ],
+            "sampled_nodes": [
+                "HYPOVOLEMIA",
+                "PCWP",
+                "LVEDVOLUME"
+            ]
+        },
+        {
+            "id": 29,
+            "evidences": [
+                "The pulmonary capillary wedge pressure is normal.",
+                "The patient has a history of medical issues.",
+                "The central venous pressure is normal.",
+                "The stroke volume is high."
+            ],
+            "query": "What is the likelihood of this patient having low blood volume (hypovolemia)?",
+            "answer": 0.016162918,
+            "reasoning_types": [
+                "evidential"
+            ],
+            "sampled_nodes": [
+                "PCWP",
+                "HISTORY",
+                "CVP",
+                "STROKEVOLUME",
+                "HYPOVOLEMIA"
+            ]
+        }
+    ]
+}

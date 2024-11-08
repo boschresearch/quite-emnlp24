@@ -1,0 +1,849 @@
+{
+    "nodes": [
+        {
+            "name": "chlamydospores",
+            "states": [
+                "Chlamydospore",
+                "No chlamydospores"
+            ]
+        },
+        {
+            "name": "Invasiv_score_BH",
+            "states": [
+                "Very low",
+                "Low",
+                "Moderate",
+                "High",
+                "Very high"
+            ]
+        },
+        {
+            "name": "amphi_para",
+            "states": [
+                "Amphigynous",
+                "Both",
+                "Paragynous"
+            ]
+        },
+        {
+            "name": "urb_dist_nur",
+            "states": [
+                "No",
+                "Yes"
+            ]
+        },
+        {
+            "name": "temp_opt",
+            "states": [
+                "< 20",
+                "20 to 25",
+                "25",
+                "25 to 28",
+                ">= 28"
+            ]
+        },
+        {
+            "name": "hort_forest_perenial",
+            "states": [
+                "No",
+                "Yes"
+            ]
+        }
+    ],
+    "connectivity": [
+        {
+            "node": "chlamydospores",
+            "incoming": []
+        },
+        {
+            "node": "Invasiv_score_BH",
+            "incoming": []
+        },
+        {
+            "node": "amphi_para",
+            "incoming": [
+                "Invasiv_score_BH"
+            ]
+        },
+        {
+            "node": "urb_dist_nur",
+            "incoming": [
+                "Invasiv_score_BH",
+                "chlamydospores"
+            ]
+        },
+        {
+            "node": "temp_opt",
+            "incoming": [
+                "Invasiv_score_BH",
+                "urb_dist_nur"
+            ]
+        },
+        {
+            "node": "hort_forest_perenial",
+            "incoming": [
+                "Invasiv_score_BH",
+                "temp_opt"
+            ]
+        }
+    ],
+    "numeric_premises": [
+        {
+            "id": 0,
+            "origin": "chlamydospores",
+            "content": "There is a 50% chance that the phytophthora species produces chlamydospores."
+        },
+        {
+            "id": 1,
+            "origin": "Invasiv_score_BH",
+            "content": "The probability of a Phytophthora species having a very low invasive score (BH) is 21%, low is 19%, moderate is also 19%, high is 18%, and very high is 21%."
+        },
+        {
+            "id": 2,
+            "origin": "amphi_para",
+            "content": "If a Phytophthora species has been assigned a very low invasive score by the BH method, then the amphigynous reproductive structure is likely to be found in 30% of cases, while both structures are present in 50% of cases, and the paragynous structure is observed in 20% of cases."
+        },
+        {
+            "id": 3,
+            "origin": "amphi_para",
+            "content": "With a low invasive score from the BH method for a Phytophthora species, the amphigynous reproductive structure is present in approximately 50% of cases, while both structures are observed in around 38%, and the paragynous structure is found in about 12% of cases."
+        },
+        {
+            "id": 4,
+            "origin": "amphi_para",
+            "content": "In the case of a moderate invasive score from the BH method for a Phytophthora species, the amphigynous reproductive structure is present in roughly 17%, both structures are observed in about 44%, and the paragynous structure is found in approximately 39% of cases."
+        },
+        {
+            "id": 5,
+            "origin": "amphi_para",
+            "content": "When the Phytophthora species has a high invasive score from the BH method, the amphigynous reproductive structure is present in approximately 47%, both structures are observed in around 35%, and the paragynous structure is found in about 18% of cases."
+        },
+        {
+            "id": 6,
+            "origin": "amphi_para",
+            "content": "In the event of a very high invasive score from the BH method for a Phytophthora species, the amphigynous reproductive structure is present in roughly 70%, both structures are observed in about 10%, and the paragynous structure is found in approximately 20% of cases."
+        },
+        {
+            "id": 7,
+            "origin": "urb_dist_nur",
+            "content": "When the invasive score BH is very low and the Phytophthora species produces chlamydospores, there is a 67% probability that the Phytophthora species are not distributed in urban areas through nurseries, and a 33% chance that they are."
+        },
+        {
+            "id": 8,
+            "origin": "urb_dist_nur",
+            "content": "When the invasive score BH is very low and the Phytophthora species does not produce chlamydospores, there is a 74% probability that the Phytophthora species are not distributed in urban areas through nurseries, and a 26% chance that they are."
+        },
+        {
+            "id": 9,
+            "origin": "urb_dist_nur",
+            "content": "When the invasive score BH is low and the Phytophthora species produces chlamydospores, there is a 62% probability that the Phytophthora species are not distributed in urban areas through nurseries, and a 38% chance that they are."
+        },
+        {
+            "id": 10,
+            "origin": "urb_dist_nur",
+            "content": "When the invasive score BH is low and the Phytophthora species does not produce chlamydospores, there is a 29% probability that the Phytophthora species are not distributed in urban areas through nurseries, and a 71% chance that they are."
+        },
+        {
+            "id": 11,
+            "origin": "urb_dist_nur",
+            "content": "When the invasive score BH is moderate and the Phytophthora species produces chlamydospores, there is a 38% probability that the Phytophthora species are not distributed in urban areas through nurseries, and a 62% chance that they are."
+        },
+        {
+            "id": 12,
+            "origin": "urb_dist_nur",
+            "content": "When the invasive score BH is moderate and the Phytophthora species does not produce chlamydospores, there is a 58% probability that the Phytophthora species are not distributed in urban areas through nurseries, and a 42% chance that they are."
+        },
+        {
+            "id": 13,
+            "origin": "urb_dist_nur",
+            "content": "When the invasive score BH is high and the Phytophthora species produces chlamydospores, there is a 25% probability that the Phytophthora species are not distributed in urban areas through nurseries, and a 75% chance that they are."
+        },
+        {
+            "id": 14,
+            "origin": "urb_dist_nur",
+            "content": "When the invasive score BH is high and the Phytophthora species does not produce chlamydospores, there is an 18%% probability that the Phytophthora species are not distributed in urban areas through nurseries, and an 82% chance that they are."
+        },
+        {
+            "id": 15,
+            "origin": "urb_dist_nur",
+            "content": "When the invasive score BH is very high and the Phytophthora species produces chlamydospores, it is certain that the Phytophthora species are distributed in urban areas through nurseries. There is a 0% probability that they are not distributed in urban areas through nurseries."
+        },
+        {
+            "id": 16,
+            "origin": "urb_dist_nur",
+            "content": "When the invasive score BH is very high and the Phytophthora species does not produce chlamydospores, it is certain that the Phytophthora species are distributed in urban areas through nurseries. There is a 0% probability that they are not distributed in urban areas through nurseries."
+        },
+        {
+            "id": 17,
+            "origin": "temp_opt",
+            "content": "With a very low invasive score BH and no distribution in urban areas through nurseries, there is a 19% chance that the optimal temperature range for growth is below 20 degrees, a 44% chance it falls between 20 and 25 degrees, a 6% chance it's exactly 25 degrees, a 12% chance it's between 25 and 28 degrees, and a 19% chance it's 28 degrees or higher."
+        },
+        {
+            "id": 18,
+            "origin": "temp_opt",
+            "content": "Given a low invasive score BH and a presence in urban areas through nurseries, the likelihood of the optimal temperature range for growth being below 20 degrees is 17%, between 20 and 25 degrees is 67%, exactly 25 degrees is 0%, between 25 and 28 degrees is 0%, and 28 degrees or higher is 16%."
+        },
+        {
+            "id": 19,
+            "origin": "temp_opt",
+            "content": "With a low invasive score BH and no presence in urban areas through nurseries, there is a 10% chance that the optimal temperature range for growth is below 20 degrees, a 10% chance it's between 20 and 25 degrees, a 20% chance it's exactly 25 degrees, a 30% chance it's between 25 and 28 degrees, and a 30% chance it's 28 degrees or higher."
+        },
+        {
+            "id": 20,
+            "origin": "temp_opt",
+            "content": "In the case of a low invasive score BH and a presence in urban areas through nurseries, there is a 60% chance that the optimal temperature range for growth is below 20 degrees, a 30% chance it's between 20 and 25 degrees, a 10% chance it's exactly 25 degrees, and no chance it's between 25 and 28 degrees or 28 degrees or higher."
+        },
+        {
+            "id": 21,
+            "origin": "temp_opt",
+            "content": "If the Phytophthora species has a moderate invasive score BH and is not distributed in urban areas through nurseries, there is a 30% chance that the optimal temperature range for growth is below 20 degrees, a 20% chance it's between 20 and 25 degrees, a 30% chance it's exactly 25 degrees, no chance it's between 25 and 28 degrees, and a 20% chance it's 28 degrees or higher."
+        },
+        {
+            "id": 22,
+            "origin": "temp_opt",
+            "content": "In the case of a moderate invasive score BH and a presence in urban areas through nurseries, the Phytophthora species has a 20% chance of having an optimal temperature range for growth below 20 degrees, a 10% chance it's between 20 and 25 degrees, a 20% chance it's exactly 25 degrees, a 20% chance it's between 25 and 28 degrees, and a 30% chance it's 28 degrees or higher."
+        },
+        {
+            "id": 23,
+            "origin": "temp_opt",
+            "content": "If the Phytophthora species has a high invasive score BH and is not distributed in urban areas through nurseries, the optimal temperature range for growth is between 20 and 25 degrees with a 50% probability, exactly 25 degrees with a 25% probability, or between 25 and 28 degrees with a 25% probability, while there is no chance of the optimal temperature range being below 20 degrees or 28 degrees or higher."
+        },
+        {
+            "id": 24,
+            "origin": "temp_opt",
+            "content": "In the case of a high invasive score BH and a presence in urban areas through nurseries, the Phytophthora species has a 7% chance of having an optimal temperature range for growth below 20 degrees, a 27% chance it's between 20 and 25 degrees, a 40% chance it's exactly 25 degrees, a 6% chance it's between 25 and 28 degrees, and a 20% chance it's 28 degrees or higher."
+        },
+        {
+            "id": 25,
+            "origin": "temp_opt",
+            "content": "If the Phytophthora species has a very high invasive score BH and is not distributed in urban areas through nurseries, the optimal temperature range for growth has a 20% chance of being below 20 degrees, between 20 and 25 degrees, exactly 25 degrees, between 25 and 28 degrees, or 28 degrees or higher. The probabilities are evenly distributed, with no single temperature range having a higher probability than the others."
+        },
+        {
+            "id": 26,
+            "origin": "temp_opt",
+            "content": "In the case of a very high invasive score BH and a presence in urban areas through nurseries, the Phytophthora species has a 9% chance of having an optimal temperature range for growth below 20 degrees, an 18%% chance it's between 20 and 25 degrees, a 27% chance it's exactly 25 degrees, an 18%% chance it's between 25 and 28 degrees, and a 27% chance it's 28 degrees or higher."
+        },
+        {
+            "id": 27,
+            "origin": "hort_forest_perenial",
+            "content": "When the Phytophthora species has a very low invasiveness score BH and its optimal temperature range is below 20 degrees, there is a 75% probability that the species is not associated with horticultural, forest, or perennial environments, and a 25% chance that it is."
+        },
+        {
+            "id": 28,
+            "origin": "hort_forest_perenial",
+            "content": "With a very low invasiveness score BH and an optimal temperature range of 20 to 25 degrees, the Phytophthora species has a 73% probability of not being associated with horticultural, forest, or perennial environments, and a 27% chance of being associated with them."
+        },
+        {
+            "id": 29,
+            "origin": "hort_forest_perenial",
+            "content": "In the case of a very low invasiveness score BH and an optimal temperature of exactly 25 degrees, the Phytophthora species has a 0% probability of not being associated with horticultural, forest, or perennial environments, and a 100% chance of being associated with them."
+        },
+        {
+            "id": 30,
+            "origin": "hort_forest_perenial",
+            "content": "When the Phytophthora species has a very low invasiveness score BH and its optimal temperature range is between 25 and 28 degrees, there is an equal 50% probability of it not being associated with horticultural, forest, or perennial environments, and a 50% chance of it being associated with them."
+        },
+        {
+            "id": 31,
+            "origin": "hort_forest_perenial",
+            "content": "If the Phytophthora species has a very low invasiveness score BH and its optimal temperature range is 28 degrees or higher, there is a 75% probability that the species is not associated with horticultural, forest, or perennial environments, and a 25% chance that it is."
+        },
+        {
+            "id": 32,
+            "origin": "hort_forest_perenial",
+            "content": "When the Phytophthora species has a low invasiveness score BH and its optimal temperature range is below 20 degrees, there is an 86% probability that the species is not associated with horticultural, forest, or perennial environments, and a 14% chance that it is."
+        },
+        {
+            "id": 33,
+            "origin": "hort_forest_perenial",
+            "content": "If the Phytophthora species has a low invasiveness score BH and its optimal temperature range is between 20 and 25 degrees, there is a 25% probability that the species is not associated with horticultural, forest, or perennial environments, and a 75% chance that it is."
+        },
+        {
+            "id": 34,
+            "origin": "hort_forest_perenial",
+            "content": "When the Phytophthora species has a low invasiveness score BH and its optimal temperature range is exactly 25 degrees, there is a 0% probability that the species is not associated with horticultural, forest, or perennial environments, and a 100% chance that it is."
+        },
+        {
+            "id": 35,
+            "origin": "hort_forest_perenial",
+            "content": "If the Phytophthora species has a low invasiveness score BH and its optimal temperature range is between 25 and 28 degrees, there is a 67% probability that the species is not associated with horticultural, forest, or perennial environments, and a 33% chance that it is."
+        },
+        {
+            "id": 36,
+            "origin": "hort_forest_perenial",
+            "content": "If the Phytophthora species has a low invasiveness score BH and its optimal temperature range is 28 degrees or higher, there is a 67% probability that the species is not associated with horticultural, forest, or perennial environments, and a 33% chance that it is."
+        },
+        {
+            "id": 37,
+            "origin": "hort_forest_perenial",
+            "content": "If the Phytophthora species has a moderate invasiveness score BH and its optimal temperature range is below 20 degrees, there is a 60% probability that the species is not associated with horticultural, forest, or perennial environments, and a 40% chance that it is."
+        },
+        {
+            "id": 38,
+            "origin": "hort_forest_perenial",
+            "content": "If the Phytophthora species has a moderate invasiveness score BH and its optimal temperature range is between 20 and 25 degrees, there is a 100% probability that the species is not associated with horticultural, forest, or perennial environments, and a 0% chance that it is."
+        },
+        {
+            "id": 39,
+            "origin": "hort_forest_perenial",
+            "content": "If the Phytophthora species has a moderate invasiveness score BH and its optimal temperature range is 25 degrees, there is a 60% probability that the species is not associated with horticultural, forest, or perennial environments, and a 40% chance that it is."
+        },
+        {
+            "id": 40,
+            "origin": "hort_forest_perenial",
+            "content": "If the Phytophthora species has a moderate invasiveness score BH and its optimal temperature range is between 25 and 28 degrees, there is a 50% probability that the species is not associated with horticultural, forest, or perennial environments, and a 50% chance that it is."
+        },
+        {
+            "id": 41,
+            "origin": "hort_forest_perenial",
+            "content": "If the Phytophthora species has a moderate invasiveness score BH and its optimal temperature range is 28 degrees or higher, there is an 80% probability that the species is not associated with horticultural, forest, or perennial environments, and a 20% chance that it is."
+        },
+        {
+            "id": 42,
+            "origin": "hort_forest_perenial",
+            "content": "If the Phytophthora species has a high invasiveness score BH and its optimal temperature range is below 20 degrees, there is a 0% probability that the species is not associated with horticultural, forest, or perennial environments, and a 100% chance that it is."
+        },
+        {
+            "id": 43,
+            "origin": "hort_forest_perenial",
+            "content": "If the Phytophthora species has a high invasiveness score BH and its optimal temperature range is between 20 and 25 degrees, there is a 17% probability that the species is not associated with horticultural, forest, or perennial environments, and an 83% chance that it is."
+        },
+        {
+            "id": 44,
+            "origin": "hort_forest_perenial",
+            "content": "If the Phytophthora species has a high invasiveness score BH and its optimal temperature range is 25 degrees, there is a 43% probability that the species is not associated with horticultural, forest, or perennial environments, and a 57% chance that it is."
+        },
+        {
+            "id": 45,
+            "origin": "hort_forest_perenial",
+            "content": "If the Phytophthora species has a high invasiveness score BH and its optimal temperature range is between 25 and 28 degrees, there is a 0% probability that the species is not associated with horticultural, forest, or perennial environments, and a 100% chance that it is."
+        },
+        {
+            "id": 46,
+            "origin": "hort_forest_perenial",
+            "content": "If the Phytophthora species has a high invasiveness score BH and its optimal temperature range is 28 degrees or higher, there is a 67% probability that the species is not associated with horticultural, forest, or perennial environments, and a 33% chance that it is."
+        },
+        {
+            "id": 47,
+            "origin": "hort_forest_perenial",
+            "content": "If the Phytophthora species has a very high invasiveness score BH and its optimal temperature range is below 20 degrees, there is a 50% probability that the species is not associated with horticultural, forest, or perennial environments, and a 50% chance that it is."
+        },
+        {
+            "id": 48,
+            "origin": "hort_forest_perenial",
+            "content": "If the Phytophthora species has a very high invasiveness score BH and its optimal temperature range is between 20 and 25 degrees, there is a 50% probability that the species is not associated with horticultural, forest, or perennial environments, and a 50% chance that it is."
+        },
+        {
+            "id": 49,
+            "origin": "hort_forest_perenial",
+            "content": "If the Phytophthora species has a very high invasiveness score BH and its optimal temperature range is exactly 25 degrees, there is a 17% probability that the species is not associated with horticultural, forest, or perennial environments, and an 83% chance that it is."
+        },
+        {
+            "id": 50,
+            "origin": "hort_forest_perenial",
+            "content": "If the Phytophthora species has a very high invasiveness score BH and its optimal temperature range is between 25 and 28 degrees, there is a 0% probability that the species is not associated with horticultural, forest, or perennial environments, and a 100% chance that it is."
+        },
+        {
+            "id": 51,
+            "origin": "hort_forest_perenial",
+            "content": "If the Phytophthora species has a very high invasiveness score BH and its optimal temperature range is 28 degrees or higher, there is a 17% probability that the species is not associated with horticultural, forest, or perennial environments, and an 83% chance that it is."
+        }
+    ],
+    "wep_based_premises": [
+        {
+            "id": 0,
+            "origin": "chlamydospores",
+            "content": "There is an about even chance that the phytophthora species produces chlamydospores."
+        },
+        {
+            "id": 1,
+            "origin": "Invasiv_score_BH",
+            "content": "It is about equally likely that a Phytophthora species has a very low, low, moderate, high, or very high invasive score (BH)."
+        },
+        {
+            "id": 2,
+            "origin": "amphi_para",
+            "content": "If the invasive score of the Phytophthora species is very low, then its reproductive structures are probably not amphigynous; the chances are about even that they involve both male and female structures; and it is unlikely that they are paragynous."
+        },
+        {
+            "id": 3,
+            "origin": "amphi_para",
+            "content": "If the invasive score (BH) for this species of Phytophthora is low, there is an about even chance that its reproductive structure is amphigynous. However, it is probably not the case that the structure is both, and there are only slight chances that it is paragynous."
+        },
+        {
+            "id": 4,
+            "origin": "amphi_para",
+            "content": "If the invasive score for a specific species of Phytophthora is found to be moderate, it is unlikely that the reproductive structure or process of this species is amphigynous, and it is also probably not the case that it is both or paragynous"
+        },
+        {
+            "id": 5,
+            "origin": "amphi_para",
+            "content": "In the context of Phytophthora species, if the invasive score BH is classified as high, then the chances for the reproductive structure or process being amphigynous, where the male and female organs are intermixed or closely associated, are about even. However, it is unlikely to be paragynous, where the structures or processes are spatially related to female organs, and probably also not both."
+        },
+        {
+            "id": 6,
+            "origin": "amphi_para",
+            "content": "If the invasive score BH is very high, it is probable that the reproductive structure is amphigynous, but it is unlikely that it is paragynous, and there is little chance that it is both."
+        },
+        {
+            "id": 7,
+            "origin": "urb_dist_nur",
+            "content": "If the Phytophthora species has a very low invasiveness score based on the BH system and it produces chlamydospores, then it is probably not distributed in urban areas through nurseries."
+        },
+        {
+            "id": 8,
+            "origin": "urb_dist_nur",
+            "content": "If the Phytophthora species has a very low invasiveness score based on the BH system and it does not produce chlamydospores, then it is probably not distributed in urban areas through nurseries."
+        },
+        {
+            "id": 9,
+            "origin": "urb_dist_nur",
+            "content": "If the Phytophthora species has a low invasiveness score based on the BH system and it produces chlamydospores, then there is a better than even chance that it is not distributed in urban areas through nurseries."
+        },
+        {
+            "id": 10,
+            "origin": "urb_dist_nur",
+            "content": "If the Phytophthora species has a low invasiveness score based on the BH system and it does not produce chlamydospores, then it is probably not the case that it is not distributed in urban areas through nurseries."
+        },
+        {
+            "id": 11,
+            "origin": "urb_dist_nur",
+            "content": "If the Phytophthora species has a moderate invasiveness score based on the BH system and it produces chlamydospores, then it is probably not the case that it is not distributed in urban areas through nurseries."
+        },
+        {
+            "id": 12,
+            "origin": "urb_dist_nur",
+            "content": "If the Phytophthora species has a moderate invasiveness score based on the BH system and it does not produce chlamydospores, then there is a better than even chance that it is not distributed in urban areas through nurseries."
+        },
+        {
+            "id": 13,
+            "origin": "urb_dist_nur",
+            "content": "If the Phytophthora species has a high invasiveness score based on the BH system and it produces chlamydospores, then it is probably not the case that it is not distributed in urban areas through nurseries."
+        },
+        {
+            "id": 14,
+            "origin": "urb_dist_nur",
+            "content": "If the Phytophthora species has a high invasiveness score based on the BH system and it does not produce chlamydospores, then it is unlikely that it is not distributed in urban areas through nurseries."
+        },
+        {
+            "id": 15,
+            "origin": "urb_dist_nur",
+            "content": "If the Phytophthora species has a very high invasiveness score based on the BH system and it produces chlamydospores, then it is impossible that it is not distributed in urban areas through nurseries, and it is certain that it is a Phytophthora species with these characteristics."
+        },
+        {
+            "id": 16,
+            "origin": "urb_dist_nur",
+            "content": "If the Phytophthora species has a very high invasiveness score based on the BH system and it does not produce chlamydospores, then it is impossible that it is not distributed in urban areas through nurseries, and it is certain that it is a Phytophthora species with these characteristics."
+        },
+        {
+            "id": 17,
+            "origin": "temp_opt",
+            "content": "If the Phytophthora species has a low invasive score and is not distributed in urban areas through nurseries, then it is unlikely to have an optimal temperature range below 20 degrees, and probably does not have an optimal temperature range between 20 to 25 degrees, with a growth at temperatures above 28 degrees being unlikely. Furthermore, it is highly unlikely for the species to have an optimal temperature range of exactly 25 degrees, and there is only a little chance for it to be between 25 to 28 degrees under these conditions."
+        },
+        {
+            "id": 18,
+            "origin": "temp_opt",
+            "content": "If the Phytophthora species has a low invasive score and is distributed in urban areas through nurseries, then it is unlikely to have an optimal temperature range below 20 degrees, and probably has an optimal temperature range between 20 to 25 degrees, with a growth at temperatures above 28 degrees being unlikely. However, it is impossible for the species to have an optimal temperature range of exactly 25 degrees or between 25 to 28 degrees under these conditions."
+        },
+        {
+            "id": 19,
+            "origin": "temp_opt",
+            "content": "If the Phytophthora species has a low invasive score and is not distributed in urban areas through nurseries, then chances are slight of its optimal temperature range being below 20 degrees, it is improbable for the temperature range to be between 20 to 25 degrees, and it is unlikely to be at 25 degrees. Furthermore, it is probably not going to have an optimal temperature range of between 25 to 28 degrees or 28 degrees or above."
+        },
+        {
+            "id": 20,
+            "origin": "temp_opt",
+            "content": "If the Phytophthora species has a low invasive score and is distributed in urban areas through nurseries, then there is a better than even chance that its optimal temperature range is below 20 degrees, it is probably not going to be between 20 to 25 degrees, and there is a slight chance of it being at 25 degrees. Furthermore, it is impossible for the temperature range to be between 25 to 28 degrees or above 28 degrees under these conditions."
+        },
+        {
+            "id": 21,
+            "origin": "temp_opt",
+            "content": "If the Phytophthora species has a moderate invasive score and is not distributed in urban areas through nurseries, then its optimal temperature range is probably not below 20 degrees, it is unlikely to be between 20 to 25 degrees, and it is probably not going to be at 25 degrees. Furthermore, it is impossible for the temperature range to be between 25 to 28 degrees, but there is a chance that it could be above 28 degrees, although it is still unlikely."
+        },
+        {
+            "id": 22,
+            "origin": "temp_opt",
+            "content": "If the Phytophthora species has a moderate invasive score and is distributed in urban areas through nurseries, then its optimal temperature range being below 20 degrees is unlikely, it is improbable to be between 20 to 25 degrees, and it is unlikely to be at 25 degrees. It is probably not between 25 to 28 degrees, and it is probably not going to be above 28 degrees under these conditions."
+        },
+        {
+            "id": 23,
+            "origin": "temp_opt",
+            "content": "If the Phytophthora species has a high invasive score and is not distributed in urban areas through nurseries, then it is impossible that its optimal temperature range is below 20 degrees, it has an even chance of being between 20 to 25 degrees, and it is probably not going to be at 25 degrees or between 25 to 28 degrees. Furthermore, it is impossible for the temperature range to be above 28 degrees under these conditions."
+        },
+        {
+            "id": 24,
+            "origin": "temp_opt",
+            "content": "If the Phytophthora species has a high invasive score and is distributed in urban areas through nurseries, then it is highly unlikely that its optimal temperature range is below 20 degrees, it is probably not going to be between 20 to 25 degrees or at 25 degrees, and it is highly unlikely to be between 25 to 28 degrees. Furthermore, there is a chance that the temperature range is above 28 degrees, but it is still unlikely under these conditions."
+        },
+        {
+            "id": 25,
+            "origin": "temp_opt",
+            "content": "If the Phytophthora species has a very high invasive score and is not distributed in urban areas through nurseries, then it is unlikely that its optimal temperature range is below 20 degrees, between 20 to 25 degrees, at 25 degrees, between 25 to 28 degrees, or above 28 degrees under these conditions."
+        },
+        {
+            "id": 26,
+            "origin": "temp_opt",
+            "content": "If the Phytophthora species has a very high invasive score and is distributed in urban areas through nurseries, then it is improbable that its optimal temperature range is below 20 degrees, it is unlikely to be between 20 to 25 degrees, and it is probably not going to be at 25 degrees or above 28 degrees. Furthermore, there is a chance that the temperature range is between 25 to 28 degrees, but it is still unlikely under these conditions."
+        },
+        {
+            "id": 27,
+            "origin": "hort_forest_perenial",
+            "content": "If the Phytophthora species has a very low invasive score and an optimal temperature range for growth below 20 degrees, then it is probably not the case that the species is not associated with horticultural, forest, or perennial environments."
+        },
+        {
+            "id": 28,
+            "origin": "hort_forest_perenial",
+            "content": "If the Phytophthora species has a very low invasive score and an optimal temperature range for growth between 20 and 25 degrees, then it is probably not associated with horticultural, forest, or perennial environments."
+        },
+        {
+            "id": 29,
+            "origin": "hort_forest_perenial",
+            "content": "If the Phytophthora species has a very low invasive score and an optimal temperature range for growth exactly at 25 degrees, then it is impossible for the species to not be associated with horticultural, forest, or perennial environments, and it is certain that the species is associated with such environments."
+        },
+        {
+            "id": 30,
+            "origin": "hort_forest_perenial",
+            "content": "If the Phytophthora species has a very low invasive score and an optimal temperature range for growth between 25 and 28 degrees, then there are about even chances whether the species is not associated with horticultural, forest, or perennial environments or if it is associated with such environments."
+        },
+        {
+            "id": 31,
+            "origin": "hort_forest_perenial",
+            "content": "If the Phytophthora species has a very low invasive score and an optimal temperature range for growth of 28 degrees or higher, then there is a very good chance that the species is not associated with horticultural, forest, or perennial environments."
+        },
+        {
+            "id": 32,
+            "origin": "hort_forest_perenial",
+            "content": "If the Phytophthora species has a low invasive score and an optimal temperature range for growth below 20 degrees, then it is highly likely that the species is not associated with horticultural, forest, or perennial environments."
+        },
+        {
+            "id": 33,
+            "origin": "hort_forest_perenial",
+            "content": "If the Phytophthora species has a low invasive score and an optimal temperature range for growth between 20 and 25 degrees, then it is probably not the case that the species is not associated with horticultural, forest, or perennial environments, and there is a very good chance that the species is associated with such environments."
+        },
+        {
+            "id": 34,
+            "origin": "hort_forest_perenial",
+            "content": "If the Phytophthora species has a low invasive score and an optimal temperature range for growth of exactly 25 degrees, then it is impossible for the species not to be associated with horticultural, forest, or perennial environments, and it is certain that the species is associated with such environments."
+        },
+        {
+            "id": 35,
+            "origin": "hort_forest_perenial",
+            "content": "If the Phytophthora species has a low invasive score and an optimal temperature range for growth between 25 and 28 degrees, then it is likely that the species is not associated with horticultural, forest, or perennial environments, and it is probably not the case that the species is associated with such environments."
+        },
+        {
+            "id": 36,
+            "origin": "hort_forest_perenial",
+            "content": "If the Phytophthora species has a low invasive score and an optimal temperature range for growth of 28 degrees or higher, then it is probable that the species is not associated with horticultural, forest, or perennial environments, and it is probably not the case that the species is associated with such environments."
+        },
+        {
+            "id": 37,
+            "origin": "hort_forest_perenial",
+            "content": "If the Phytophthora species has a moderate invasive score and an optimal temperature range for growth below 20 degrees, then there is a better than even chance that the species is not associated with horticultural, forest, or perennial environments, and it is probably not the case that the species is associated with such environments."
+        },
+        {
+            "id": 38,
+            "origin": "hort_forest_perenial",
+            "content": "If the Phytophthora species has a moderate invasive score and an optimal temperature range for growth between 20 and 25 degrees, then it is certain that the species is not associated with horticultural, forest, or perennial environments, and it is impossible for the species to be associated with such environments."
+        },
+        {
+            "id": 39,
+            "origin": "hort_forest_perenial",
+            "content": "If the Phytophthora species has a moderate invasive score and an optimal temperature range for growth of exactly 25 degrees, then there is a better than even chance that the species is not associated with horticultural, forest, or perennial environments, and it is probably not the case that the species is associated with such environments."
+        },
+        {
+            "id": 40,
+            "origin": "hort_forest_perenial",
+            "content": "If the Phytophthora species has a moderate invasive score and an optimal temperature range for growth between 25 and 28 degrees, then there are about even chances that the species is not associated with horticultural, forest, or perennial environments, and there are about even chances that the species is associated with such environments."
+        },
+        {
+            "id": 41,
+            "origin": "hort_forest_perenial",
+            "content": "If the Phytophthora species has a moderate invasive score and an optimal temperature range for growth of 28 degrees or higher, then there is a very good chance that the species is not associated with horticultural, forest, or perennial environments, and it is unlikely that the species is associated with such environments."
+        },
+        {
+            "id": 42,
+            "origin": "hort_forest_perenial",
+            "content": "If the Phytophthora species has a high invasive score and an optimal temperature range for growth below 20 degrees, then it is impossible that the species is not associated with horticultural, forest, or perennial environments, and it is certain that the species is associated with such environments."
+        },
+        {
+            "id": 43,
+            "origin": "hort_forest_perenial",
+            "content": "If the Phytophthora species has a high invasive score and an optimal temperature range for growth between 20 and 25 degrees, then it is unlikely that the species is not associated with horticultural, forest, or perennial environments, and it is a very good chance that the species is associated with such environments."
+        },
+        {
+            "id": 44,
+            "origin": "hort_forest_perenial",
+            "content": "If the Phytophthora species has a high invasive score and an optimal temperature range for growth of exactly 25 degrees, then it is probably not the case that the species is not associated with horticultural, forest, or perennial environments, and there is a better than even chance that the species is associated with such environments."
+        },
+        {
+            "id": 45,
+            "origin": "hort_forest_perenial",
+            "content": "If the Phytophthora species has a high invasive score and an optimal temperature range for growth between 25 and 28 degrees, then it is impossible that the species is not associated with horticultural, forest, or perennial environments, and it is certain that the species is associated with such environments."
+        },
+        {
+            "id": 46,
+            "origin": "hort_forest_perenial",
+            "content": "If the Phytophthora species has a high invasive score and an optimal temperature range for growth above 28 degrees, then it is probable that the species is not associated with horticultural, forest, or perennial environments, and it is probably not the case that the species is associated with such environments."
+        },
+        {
+            "id": 47,
+            "origin": "hort_forest_perenial",
+            "content": "If the Phytophthora species has a very high invasive score and an optimal temperature range for growth below 20 degrees, then there are about even chances that the species is not associated with horticultural, forest, or perennial environments, and there are about even chances that the species is associated with such environments."
+        },
+        {
+            "id": 48,
+            "origin": "hort_forest_perenial",
+            "content": "If the Phytophthora species has a very high invasive score and an optimal temperature range for growth between 20 and 25 degrees, then there are about even chances that the species is not associated with horticultural, forest, or perennial environments, and there are about even chances that the species is associated with such environments."
+        },
+        {
+            "id": 49,
+            "origin": "hort_forest_perenial",
+            "content": "If the Phytophthora species has a very high invasive score and an optimal temperature range for growth of exactly 25 degrees, then it is unlikely that the species is not associated with horticultural, forest, or perennial environments, and there is a very good chance that the species is associated with such environments."
+        },
+        {
+            "id": 50,
+            "origin": "hort_forest_perenial",
+            "content": "If the Phytophthora species has a very high invasive score and an optimal temperature range for growth between 25 and 28 degrees, then it is impossible that the species is not associated with horticultural, forest, or perennial environments, and it is certain that the species is associated with such environments."
+        },
+        {
+            "id": 51,
+            "origin": "hort_forest_perenial",
+            "content": "If the Phytophthora species has a very high invasive score and an optimal temperature range for growth above 28 degrees, then it is unlikely that the species is not associated with horticultural, forest, or perennial environments, and there is a very good chance that the species is associated with such environments."
+        }
+    ],
+    "evidence_query_pairs": [
+        {
+            "id": 0,
+            "evidences": [
+                "The optimal temperature range for the growth of the Phytophthora species is 25 degrees celsius."
+            ],
+            "query": "What is the likelihood of the Phytophthora species having both reproductive structures or processes intermixed or closely associated?",
+            "answer": 0.3123691,
+            "reasoning_types": []
+        },
+        {
+            "id": 1,
+            "evidences": [
+                "The optimal temperature range for the growth of this Phytophthora species is 25 degrees.",
+                "This Phytophthora species has a moderate invasive score based on the BH scoring system.",
+                "The reproductive structure or process of this Phytophthora species is paragynous.",
+                "This Phytophthora species is not distributed in urban areas through nurseries."
+            ],
+            "query": "What is the likelihood of this Phytophthora species not being associated with horticultural, forest, or perennial environments?",
+            "answer": 0.6,
+            "reasoning_types": [
+                "causal"
+            ]
+        },
+        {
+            "id": 2,
+            "evidences": [
+                "The optimal temperature range for the growth of this Phytophthora species is below 20 degrees Celsius.",
+                "This Phytophthora species is distributed in urban areas through nurseries.",
+                "This Phytophthora species is associated with horticultural, forest, or perennial environments."
+            ],
+            "query": "What is the likelihood of this Phytophthora species having a high invasive score (Invasiv_score_BH)?",
+            "answer": 0.25640245,
+            "reasoning_types": [
+                "evidential",
+                "explaining_away"
+            ]
+        },
+        {
+            "id": 3,
+            "evidences": [
+                "The optimal temperature range for the growth of this Phytophthora species is between 20 to 25 degrees Celsius.",
+                "This Phytophthora species has both male and female reproductive structures intermixed or closely associated (amphigynous), and it also has a spatial relationship to female organs, perhaps adjacent or nearby (paragynous)."
+            ],
+            "query": "What is the likelihood of this Phytophthora species having a high invasive score (Invasiv_score_BH)?",
+            "answer": 0.19223352,
+            "reasoning_types": [
+                "evidential"
+            ]
+        },
+        {
+            "id": 4,
+            "evidences": [
+                "The reproductive structure of the Phytophthora species is amphigynous, meaning that the male and female organs are intermixed or closely associated."
+            ],
+            "query": "What is the likelihood of the Phytophthora species having a high invasive score (Invasiv_score_BH) according to the scoring system BH?",
+            "answer": 0.20052145,
+            "reasoning_types": [
+                "evidential"
+            ]
+        },
+        {
+            "id": 5,
+            "evidences": [
+                "The Phytophthora species is not distributed in urban areas through nurseries.",
+                "The optimal temperature range for the growth of the Phytophthora species is between 20 and 25 degrees Celsius.",
+                "The Phytophthora species is associated with horticultural, forest, or perennial environments.",
+                "The reproductive structure or process of the Phytophthora species is paragynous."
+            ],
+            "query": "What is the likelihood of the Phytophthora species having a low invasive score (Invasiv_score_BH) based on these conditions?",
+            "answer": 0.10826387,
+            "reasoning_types": [
+                "evidential"
+            ]
+        },
+        {
+            "id": 6,
+            "evidences": [
+                "The optimal temperature range for the growth of this Phytophthora species is below 20 degrees Celsius.",
+                "This Phytophthora species is not distributed in urban areas through nurseries.",
+                "The invasive score for this Phytophthora species, according to the BH system, is very high.",
+                "This Phytophthora species is associated with horticultural, forest, or perennial environments."
+            ],
+            "query": "What is the likelihood of this Phytophthora species having an amphigynous reproductive structure or process?",
+            "answer": -1,
+            "reasoning_types": [
+                "causal"
+            ]
+        },
+        {
+            "id": 7,
+            "evidences": [
+                "The Phytophthora species has an amphigynous reproductive structure.",
+                "The Phytophthora species is associated with horticultural, forest, or perennial environments."
+            ],
+            "query": "What is the likelihood of this Phytophthora species being distributed in urban areas through nurseries?",
+            "answer": 0.77272748,
+            "reasoning_types": [
+                "evidential"
+            ]
+        },
+        {
+            "id": 8,
+            "evidences": [
+                "The Phytophthora species has both amphigynous and paragynous reproductive structures.",
+                "The ability of the Phytophthora species to spread and establish in environments outside its native range is very low.",
+                "The Phytophthora species is distributed in urban areas through nurseries."
+            ],
+            "query": "What is the likelihood of the Phytophthora species being associated with horticultural, forest, or perennial environments?",
+            "answer": 0.2634,
+            "reasoning_types": [
+                "causal"
+            ]
+        },
+        {
+            "id": 9,
+            "evidences": [
+                "The Phytophthora species has an amphigynous reproductive structure.",
+                "The optimal temperature range for the growth of the Phytophthora species is below 20 degrees Celsius."
+            ],
+            "query": "What is the likelihood of the Phytophthora species having a high invasive score (Invasiv_score_BH) in the BH scoring system?",
+            "answer": 0.063791038,
+            "reasoning_types": [
+                "evidential"
+            ]
+        },
+        {
+            "id": 10,
+            "evidences": [
+                "The Phytophthora species is not associated with horticultural, forest, or perennial environments."
+            ],
+            "query": "What is the likelihood of the Phytophthora species not being distributed in urban areas through nurseries?",
+            "answer": 0.46332873,
+            "reasoning_types": [
+                "evidential"
+            ]
+        },
+        {
+            "id": 11,
+            "evidences": [
+                "The Phytophthora species has an amphigynous reproductive structure.",
+                "The Phytophthora species has a high invasive score (using the BH method)."
+            ],
+            "query": "What is the likelihood of the Phytophthora species not being associated with horticultural, forest, or perennial environments?",
+            "answer": 0.317629,
+            "reasoning_types": [
+                "causal"
+            ]
+        },
+        {
+            "id": 12,
+            "evidences": [
+                "The Phytophthora species has a moderate invasive score based on the BH system."
+            ],
+            "query": "What is the likelihood that the optimal temperature range for the growth of this Phytophthora species is 28 degrees Celsius or higher?",
+            "answer": 0.252,
+            "reasoning_types": [
+                "causal"
+            ]
+        },
+        {
+            "id": 13,
+            "evidences": [
+                "The optimal temperature range for the growth of this Phytophthora species is 28 degrees Celsius or higher.",
+                "This Phytophthora species has both amphigynous and paragynous reproductive structures or processes.",
+                "The Phytophthora species is not associated with horticultural, forest, or perennial environments.",
+                "The Phytophthora species is not distributed in urban areas through nurseries."
+            ],
+            "query": "What is the likelihood of this Phytophthora species having a high invasive score (Invasiv_score_BH) based on these conditions?",
+            "answer": 0.0,
+            "reasoning_types": [
+                "evidential"
+            ]
+        },
+        {
+            "id": 14,
+            "evidences": [
+                "The Phytophthora species is not associated with horticultural, forest, or perennial environments."
+            ],
+            "query": "What is the likelihood of this Phytophthora species having an amphigynous reproductive structure or process?",
+            "answer": 0.35386965,
+            "reasoning_types": []
+        },
+        {
+            "id": 15,
+            "evidences": [
+                "The reproductive structure of this Phytophthora species is paragynous.",
+                "The optimal temperature range for the growth of this Phytophthora species is between 25 and 28 degrees Celsius.",
+                "This Phytophthora species is associated with horticultural, forest, or perennial environments."
+            ],
+            "query": "What is the likelihood of this Phytophthora species having a very high invasive score (Invasiv_score_BH)?",
+            "answer": 0.43238628,
+            "reasoning_types": [
+                "evidential"
+            ]
+        },
+        {
+            "id": 16,
+            "evidences": [
+                "The Phytophthora species is not associated with horticultural, forest, or perennial environments.",
+                "The optimal temperature range for the growth of the Phytophthora species is 25 degrees Celsius.",
+                "The Phytophthora species has both amphigynous and paragynous reproductive structures or processes."
+            ],
+            "query": "What is the likelihood of the Phytophthora species having a high invasive score (Invasiv_score_BH) with these conditions?",
+            "answer": 0.42636217,
+            "reasoning_types": [
+                "evidential"
+            ]
+        },
+        {
+            "id": 17,
+            "evidences": [
+                "The optimal temperature range for the growth of this Phytophthora species is between 20 and 25 degrees Celsius."
+            ],
+            "query": "What is the likelihood of this Phytophthora species having a high invasive score (Invasiv_score_BH) according to the chosen scoring system or method?",
+            "answer": 0.21314073,
+            "reasoning_types": [
+                "evidential"
+            ]
+        },
+        {
+            "id": 18,
+            "evidences": [
+                "The Phytophthora species is distributed in urban areas through nurseries.",
+                "The Phytophthora species is associated with horticultural, forest, or perennial environments.",
+                "The optimal temperature range for the growth of the Phytophthora species is below 20 degrees Celsius.",
+                "The Phytophthora species has a very high invasive score according to the BH scoring system."
+            ],
+            "query": "What is the likelihood of the Phytophthora species having a paragynous reproductive structure or process?",
+            "answer": 0.2,
+            "reasoning_types": [
+                "causal"
+            ]
+        }
+    ]
+}

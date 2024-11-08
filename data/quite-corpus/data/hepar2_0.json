@@ -1,0 +1,153 @@
+{
+    "nodes": [
+        {
+            "name": "gallstones",
+            "states": [
+                "present",
+                "absent"
+            ]
+        },
+        {
+            "name": "flatulence",
+            "states": [
+                "present",
+                "absent"
+            ]
+        },
+        {
+            "name": "amylase",
+            "states": [
+                "a1400_500",
+                "a499_300",
+                "a299_0"
+            ]
+        }
+    ],
+    "connectivity": [
+        {
+            "node": "gallstones",
+            "incoming": []
+        },
+        {
+            "node": "flatulence",
+            "incoming": [
+                "gallstones"
+            ]
+        },
+        {
+            "node": "amylase",
+            "incoming": [
+                "gallstones"
+            ]
+        }
+    ],
+    "numeric_premises": [
+        {
+            "id": 0,
+            "origin": "gallstones",
+            "content": "With a 15.31% likelihood, a patient is likely to have gallstones, while an 84.69% probability suggests the absence of gallstones in an individual."
+        },
+        {
+            "id": 1,
+            "origin": "flatulence",
+            "content": "If gallstones are present, there is a 39.25% chance that flatulence will also be present, and a 60.75% chance that flatulence will not be present."
+        },
+        {
+            "id": 2,
+            "origin": "flatulence",
+            "content": "If gallstones are absent, there is a 43.07% chance that flatulence will still be present, and a 56.93% chance that flatulence will not be present."
+        },
+        {
+            "id": 3,
+            "origin": "amylase",
+            "content": "If gallstones are present, the likelihood of amylase levels between 0 and 299 is 93.46%, while elevated amylase levels of 300-499 units are slightly less likely at 4.67%, and extremely elevated amylase levels of 1400-500 units are even less likely at just 1.87%."
+        },
+        {
+            "id": 4,
+            "origin": "amylase",
+            "content": "With no gallstones present, the probability of having amylase levels between 0 and 299 is significantly higher, at 97.30%, while elevated amylase levels of 300-499 units are less common at 1.69%, and extremely elevated amylase levels of 1400-500 units are even less likely at just 1.01%."
+        }
+    ],
+    "wep_based_premises": [
+        {
+            "id": 0,
+            "origin": "gallstones",
+            "content": "It is unlikely that gallstones are present, but it is likely that gallstones are absent."
+        },
+        {
+            "id": 1,
+            "origin": "flatulence",
+            "content": "If gallstones are present, the chances of flatulence being present or absent are about even."
+        },
+        {
+            "id": 2,
+            "origin": "flatulence",
+            "content": "In the context of discovering liver disorders, if gallstones are absent, the chances of flatulence being present are about even, while the chances that flatulence is absent are better than even."
+        },
+        {
+            "id": 3,
+            "origin": "amylase",
+            "content": "If gallstones are present, it is almost certain that the amylase levels will be between 0 and 299, highly unlikely that they will be between 300 and 499, and there is almost no chance that they will be between 500 and 1400."
+        },
+        {
+            "id": 4,
+            "origin": "amylase",
+            "content": "If gallstones are absent, then it is almost certain that the amylase levels will be between 0 and 299, and there is almost no chance that the amylase levels will be between 300 and 499 or between 500 and 1400."
+        }
+    ],
+    "evidence_query_pairs": [
+        {
+            "id": 0,
+            "evidences": [
+                "The patient does not have flatulence."
+            ],
+            "query": "What is the likelihood of this patient having an amylase level between 300 and 499?",
+            "answer": 0.02171901,
+            "reasoning_types": []
+        },
+        {
+            "id": 1,
+            "evidences": [
+                "The patient does not have gallstones."
+            ],
+            "query": "What is the likelihood of this patient having flatulence?",
+            "answer": 0.4307,
+            "reasoning_types": [
+                "causal"
+            ]
+        },
+        {
+            "id": 2,
+            "evidences": [
+                "The amylase level is between 1400 and 500 U/L.",
+                "The patient does not have gallstones."
+            ],
+            "query": "What is the likelihood of this patient having flatulence?",
+            "answer": 0.4307,
+            "reasoning_types": [
+                "causal"
+            ]
+        },
+        {
+            "id": 3,
+            "evidences": [
+                "The patient does not have gallstones.",
+                "The patient is experiencing flatulence."
+            ],
+            "query": "What is the likelihood of a patient having an level of 0-299 w.r.t. amylase in the blood?",
+            "answer": 0.973,
+            "reasoning_types": [
+                "causal"
+            ]
+        },
+        {
+            "id": 4,
+            "evidences": [
+                "The patient has flatulence."
+            ],
+            "query": "What is the likelihood of a patient having an amylase level between 1400 and 500 U/L?",
+            "answer": 0.011316399,
+            "reasoning_types": []
+        }
+    ]
+}

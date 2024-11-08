@@ -1,0 +1,417 @@
+{
+    "nodes": [
+        {
+            "name": "DIFFN_SEV",
+            "states": [
+                "NO",
+                "MILD",
+                "MOD",
+                "SEV"
+            ]
+        },
+        {
+            "name": "DIFFN_TYPE",
+            "states": [
+                "MOTOR",
+                "MIXED",
+                "SENS"
+            ]
+        },
+        {
+            "name": "DIFFN_SENS_SEV",
+            "states": [
+                "NO",
+                "MILD",
+                "MOD",
+                "SEV"
+            ]
+        }
+    ],
+    "connectivity": [
+        {
+            "node": "DIFFN_SEV",
+            "incoming": []
+        },
+        {
+            "node": "DIFFN_TYPE",
+            "incoming": []
+        },
+        {
+            "node": "DIFFN_SENS_SEV",
+            "incoming": [
+                "DIFFN_SEV",
+                "DIFFN_TYPE"
+            ]
+        }
+    ],
+    "numeric_premises": [
+        {
+            "id": 0,
+            "origin": "DIFFN_SEV",
+            "content": "The severity of a differential diagnosis is rarely severe or moderate, specifically a 90% chance of no severity and a 5% chance of mild severity, while severe and moderate diagnoses are quite unlikely with only 2% and 3% chances, respectively."
+        },
+        {
+            "id": 1,
+            "origin": "DIFFN_TYPE",
+            "content": "A mixed type of differential diagnosis is overwhelmingly likely with a 93.5% probability, while a motor type diagnosis has a 6% chance, and sensory neuron involvement is highly unlikely with a 0.5% probability."
+        },
+        {
+            "id": 2,
+            "origin": "DIFFN_SENS_SEV",
+            "content": "If the differential diagnosis is motor neuron related and shows no severity, then the sensory neuron involvement in the differential diagnosis is certainly nonexistent, whereas mild, moderate or severe involvement is not possible."
+        },
+        {
+            "id": 3,
+            "origin": "DIFFN_SENS_SEV",
+            "content": "Given a mixed differential diagnosis with no severity, the sensory neuron involvement in the differential diagnosis is guaranteed to be of no severity, carrying a 100% probability."
+        },
+        {
+            "id": 4,
+            "origin": "DIFFN_SENS_SEV",
+            "content": "In the case of a sensory differential diagnosis with no severity, the sensory neuron involvement in the differential diagnosis is definitely nonexistent, with a 100% probability."
+        },
+        {
+            "id": 5,
+            "origin": "DIFFN_SENS_SEV",
+            "content": "If the differential diagnosis is related to motor neurons and has a mild severity, then the sensory neuron involvement in the differential diagnosis is certainly not present, with a 100% probability."
+        },
+        {
+            "id": 6,
+            "origin": "DIFFN_SENS_SEV",
+            "content": "When the differential diagnosis is mixed and has a mild severity, the sensory neuron involvement in the differential diagnosis is definitely mild, carrying a 100% probability."
+        },
+        {
+            "id": 7,
+            "origin": "DIFFN_SENS_SEV",
+            "content": "If the differential diagnosis is sensory and has a mild severity, then the sensory neuron involvement in the differential diagnosis is definitely mild, carrying a 100% probability."
+        },
+        {
+            "id": 8,
+            "origin": "DIFFN_SENS_SEV",
+            "content": "In the case of a motor differential diagnosis with a moderate severity, the sensory neuron involvement in the differential diagnosis is guaranteed to be nonexistent, with a 100% probability."
+        },
+        {
+            "id": 9,
+            "origin": "DIFFN_SENS_SEV",
+            "content": "When the differential diagnosis is mixed and has a moderate severity, the sensory neuron involvement in the differential diagnosis is definitely moderate, carrying a 100% probability."
+        },
+        {
+            "id": 10,
+            "origin": "DIFFN_SENS_SEV",
+            "content": "If the differential diagnosis is sensory and has a moderate severity, then the sensory neuron involvement in the differential diagnosis is definitely moderate, carrying a 100% probability."
+        },
+        {
+            "id": 11,
+            "origin": "DIFFN_SENS_SEV",
+            "content": "In the case of a motor differential diagnosis with a severe severity, the sensory neuron involvement in the differential diagnosis is guaranteed to be nonexistent, with a 100% probability."
+        },
+        {
+            "id": 12,
+            "origin": "DIFFN_SENS_SEV",
+            "content": "When the differential diagnosis is mixed and has a severe severity, the sensory neuron involvement in the differential diagnosis is definitely severe, carrying a 100% probability."
+        },
+        {
+            "id": 13,
+            "origin": "DIFFN_SENS_SEV",
+            "content": "If the differential diagnosis is sensory and has a severe severity, then the sensory neuron involvement in the differential diagnosis is definitely severe, carrying a 100% probability."
+        }
+    ],
+    "wep_based_premises": [
+        {
+            "id": 0,
+            "origin": "DIFFN_SEV",
+            "content": "It is highly likely that the diagnosis is not severe, while it is highly unlikely that the diagnosis is mild. Moreover, there is almost no chance that the diagnosis is moderate or severe."
+        },
+        {
+            "id": 1,
+            "origin": "DIFFN_TYPE",
+            "content": "In the context of differential diagnosis, it is highly unlikely that the type is motor, almost certain that the type is mixed, and there is almost no chance that the type is sensory."
+        },
+        {
+            "id": 2,
+            "origin": "DIFFN_SENS_SEV",
+            "content": "If the severity of the differential diagnosis is not present and the type of differential diagnosis represents motor neuron involvement, then it is certain that there is no sensory neuron involvement, and it is impossible for there to be mild, moderate, or severe sensory neuron involvement ."
+        },
+        {
+            "id": 3,
+            "origin": "DIFFN_SENS_SEV",
+            "content": "If the severity of the differential diagnosis is not present and the type of differential diagnosis represents mixed neuron involvement, then it is certain that there is no sensory neuron involvement, and it is impossible for there to be mild, moderate, or severe sensory neuron involvement ."
+        },
+        {
+            "id": 4,
+            "origin": "DIFFN_SENS_SEV",
+            "content": "If the severity of the differential diagnosis is not present and the type of differential diagnosis represents sensory neuron involvement, then it is certain that there is no sensory neuron involvement of any severity, and it is impossible for there to be mild, moderate, or severe sensory neuron involvement ."
+        },
+        {
+            "id": 5,
+            "origin": "DIFFN_SENS_SEV",
+            "content": "If the severity of the differential diagnosis is mild and the type of differential diagnosis represents motor neuron involvement, then it is certain that there is no sensory neuron involvement, and it is impossible for there to be mild, moderate, or severe sensory neuron involvement ."
+        },
+        {
+            "id": 6,
+            "origin": "DIFFN_SENS_SEV",
+            "content": "If the severity of the differential diagnosis is mild and the type of differential diagnosis represents mixed neuron involvement, then it is impossible for there to be no sensory neuron involvement, and it is certain that there is mild sensory neuron involvement . It is also impossible for there to be moderate or severe sensory neuron involvement ."
+        },
+        {
+            "id": 7,
+            "origin": "DIFFN_SENS_SEV",
+            "content": "If the severity of the differential diagnosis is mild and the type of differential diagnosis represents sensory neuron involvement, then it is impossible for there to be no sensory neuron involvement, and it is certain that the sensory neuron involvement is mild . It is also impossible for there to be moderate or severe sensory neuron involvement ."
+        },
+        {
+            "id": 8,
+            "origin": "DIFFN_SENS_SEV",
+            "content": "If the severity of the differential diagnosis is moderate and the type of differential diagnosis represents motor neuron involvement, then it is certain that there is no sensory neuron involvement, and it is impossible for there to be mild, moderate, or severe sensory neuron involvement ."
+        },
+        {
+            "id": 9,
+            "origin": "DIFFN_SENS_SEV",
+            "content": "If the severity of the differential diagnosis is moderate and the type of differential diagnosis represents mixed neuron involvement, then it is impossible for there to be no sensory neuron involvement  or mild sensory neuron involvement . It is certain that the sensory neuron involvement is moderate, and it is impossible for there to be severe sensory neuron involvement ."
+        },
+        {
+            "id": 10,
+            "origin": "DIFFN_SENS_SEV",
+            "content": "If the severity of the differential diagnosis is moderate and the type of differential diagnosis represents sensory neuron involvement, then it is impossible for there to be no sensory neuron involvement  or mild sensory neuron involvement . It is certain that the sensory neuron involvement is moderate, and it is impossible for there to be severe sensory neuron involvement ."
+        },
+        {
+            "id": 11,
+            "origin": "DIFFN_SENS_SEV",
+            "content": "If the severity of the differential diagnosis is severe and the type of differential diagnosis represents motor neuron involvement, then it is certain that there is no sensory neuron involvement, and it is impossible for there to be mild, moderate, or severe sensory neuron involvement ."
+        },
+        {
+            "id": 12,
+            "origin": "DIFFN_SENS_SEV",
+            "content": "If the severity of the differential diagnosis is severe and the type of differential diagnosis represents mixed neuron involvement, then it is impossible for there to be no sensory neuron involvement, mild sensory neuron involvement, or moderate sensory neuron involvement . It is certain that the sensory neuron involvement is severe ."
+        },
+        {
+            "id": 13,
+            "origin": "DIFFN_SENS_SEV",
+            "content": "If the severity of the differential diagnosis is severe and the type of differential diagnosis represents sensory neuron involvement, then it is impossible for there to be no sensory neuron involvement, mild sensory neuron involvement, or moderate sensory neuron involvement . It is certain that the sensory neuron involvement is severe ."
+        }
+    ],
+    "evidence_query_pairs": [
+        {
+            "id": 0,
+            "evidences": [
+                "The level of severity of the differential diagnosis is severe.",
+                "There is no sensory neuron involvement in the differential diagnosis."
+            ],
+            "query": "What is the likelihood of the differential diagnosis type being mixed?",
+            "answer": 0.0,
+            "reasoning_types": [
+                "evidential",
+                "explaining_away"
+            ]
+        },
+        {
+            "id": 1,
+            "evidences": [
+                "The differential diagnosis is of sensory neuron type."
+            ],
+            "query": "What is the likelihood of the sensory neuron type of differential diagnosis having no severity?",
+            "answer": 0.9,
+            "reasoning_types": [
+                "causal"
+            ]
+        },
+        {
+            "id": 2,
+            "evidences": [
+                "The differential diagnosis is of sensory neuron type."
+            ],
+            "query": "What is the severity of the differential diagnosis for this person?",
+            "answer": 0.02,
+            "reasoning_types": []
+        },
+        {
+            "id": 3,
+            "evidences": [
+                "The severity of sensory neuron involvement in the differential diagnosis is none."
+            ],
+            "query": "What is the likelihood of this differential diagnosis being of mixed type?",
+            "answer": 0.92880795,
+            "reasoning_types": [
+                "evidential"
+            ]
+        },
+        {
+            "id": 4,
+            "evidences": [
+                "The severity of the differential diagnosis is none."
+            ],
+            "query": "What is the likelihood of the sensory neuron involvement in the differential diagnosis being none?",
+            "answer": 1.0,
+            "reasoning_types": [
+                "causal"
+            ]
+        },
+        {
+            "id": 5,
+            "evidences": [
+                "The severity of sensory neuron involvement in the differential diagnosis is moderate."
+            ],
+            "query": "What is the likelihood of the sensory neuron component of the differential diagnosis being moderately severe?",
+            "answer": 1.0,
+            "reasoning_types": [
+                "evidential"
+            ]
+        },
+        {
+            "id": 6,
+            "evidences": [
+                "The severity of the differential diagnosis is moderate."
+            ],
+            "query": "What is the likelihood of the differential diagnosis being motor neuron related?",
+            "answer": 0.06,
+            "reasoning_types": []
+        },
+        {
+            "id": 7,
+            "evidences": [
+                "The severity of sensory neuron involvement in the differential diagnosis is severe."
+            ],
+            "query": "What is the likelihood of the severity of the differential diagnosis being severe?",
+            "answer": 1.0,
+            "reasoning_types": [
+                "evidential"
+            ]
+        },
+        {
+            "id": 8,
+            "evidences": [
+                "The severity of the differential diagnosis is mild."
+            ],
+            "query": "What is the likelihood of the sensory neuron involvement in the differential diagnosis being moderate?",
+            "answer": 0.0,
+            "reasoning_types": [
+                "causal"
+            ]
+        },
+        {
+            "id": 9,
+            "evidences": [
+                "The severity of sensory neuron involvement in the differential diagnosis is moderate."
+            ],
+            "query": "What is the likelihood of the differential diagnosis type being mixed?",
+            "answer": 0.99468085,
+            "reasoning_types": [
+                "evidential"
+            ]
+        },
+        {
+            "id": 10,
+            "evidences": [
+                "The severity of sensory neuron involvement in the differential diagnosis is severe."
+            ],
+            "query": "What is the likelihood of the severity of the differential diagnosis being severe?",
+            "answer": 1.0,
+            "reasoning_types": [
+                "evidential"
+            ]
+        },
+        {
+            "id": 11,
+            "evidences": [
+                "The differential diagnosis is of sensory neuron type."
+            ],
+            "query": "What is the likelihood of this differential diagnosis having mild sensory neuron severity?",
+            "answer": 0.05,
+            "reasoning_types": [
+                "causal"
+            ]
+        },
+        {
+            "id": 12,
+            "evidences": [
+                "The severity of the differential diagnosis is moderate.",
+                "The severity of sensory neuron involvement in the differential diagnosis is moderate."
+            ],
+            "query": "What is the likelihood of the differential diagnosis type being mixed?",
+            "answer": 0.99468085,
+            "reasoning_types": [
+                "evidential",
+                "explaining_away"
+            ]
+        },
+        {
+            "id": 13,
+            "evidences": [
+                "The differential diagnosis is of the motor type."
+            ],
+            "query": "What is the probability of dealing with a severe differential diagnosis?",
+            "answer": 0.02,
+            "reasoning_types": []
+        },
+        {
+            "id": 14,
+            "evidences": [
+                "The sensory neuron involvement in the differential diagnosis is mild."
+            ],
+            "query": "What is the likelihood of the sensory neuron involvement in the differential diagnosis being severe?",
+            "answer": 0.0,
+            "reasoning_types": [
+                "evidential"
+            ]
+        },
+        {
+            "id": 15,
+            "evidences": [
+                "The severity of sensory neuron involvement in the differential diagnosis is moderate."
+            ],
+            "query": "What is the likelihood of the severity of the differential diagnosis being mild?",
+            "answer": 0.0,
+            "reasoning_types": [
+                "evidential"
+            ]
+        },
+        {
+            "id": 16,
+            "evidences": [
+                "The severity of sensory neuron involvement in the differential diagnosis is moderate."
+            ],
+            "query": "What is the likelihood of the differential diagnosis primarily involving sensory neurons?",
+            "answer": 0.0053191489,
+            "reasoning_types": [
+                "evidential"
+            ]
+        },
+        {
+            "id": 17,
+            "evidences": [
+                "The differential diagnosis is of motor neuron type.",
+                "The severity of sensory neuron involvement in the differential diagnosis is severe."
+            ],
+            "query": "What is the likelihood of the differential diagnosis having no severity?",
+            "answer": -1,
+            "reasoning_types": [
+                "evidential",
+                "explaining_away"
+            ]
+        },
+        {
+            "id": 18,
+            "evidences": [
+                "The sensory neuron involvement in the differential diagnosis is moderate.",
+                "There is no severity of the differential diagnosis."
+            ],
+            "query": "What is the likelihood of the differential diagnosis being sensory neuron related?",
+            "answer": -1,
+            "reasoning_types": [
+                "evidential",
+                "explaining_away"
+            ]
+        },
+        {
+            "id": 19,
+            "evidences": [
+                "The severity of the differential diagnosis is moderate.",
+                "The sensory neuron involvement in the differential diagnosis is severe."
+            ],
+            "query": "What is the likelihood of the differential diagnosis being of the motor type?",
+            "answer": -1,
+            "reasoning_types": [
+                "evidential",
+                "explaining_away"
+            ]
+        }
+    ]
+}

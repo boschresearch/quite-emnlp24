@@ -1,0 +1,390 @@
+{
+    "nodes": [
+        {
+            "name": "asia",
+            "states": [
+                "yes",
+                "no"
+            ]
+        },
+        {
+            "name": "smoke",
+            "states": [
+                "yes",
+                "no"
+            ]
+        },
+        {
+            "name": "tub",
+            "states": [
+                "yes",
+                "no"
+            ]
+        },
+        {
+            "name": "lung",
+            "states": [
+                "yes",
+                "no"
+            ]
+        },
+        {
+            "name": "either",
+            "states": [
+                "yes",
+                "no"
+            ]
+        },
+        {
+            "name": "bronc",
+            "states": [
+                "yes",
+                "no"
+            ]
+        },
+        {
+            "name": "dysp",
+            "states": [
+                "yes",
+                "no"
+            ]
+        },
+        {
+            "name": "xray",
+            "states": [
+                "yes",
+                "no"
+            ]
+        }
+    ],
+    "connectivity": [
+        {
+            "node": "asia",
+            "incoming": []
+        },
+        {
+            "node": "smoke",
+            "incoming": []
+        },
+        {
+            "node": "tub",
+            "incoming": [
+                "asia"
+            ]
+        },
+        {
+            "node": "lung",
+            "incoming": [
+                "smoke"
+            ]
+        },
+        {
+            "node": "either",
+            "incoming": [
+                "tub",
+                "lung"
+            ]
+        },
+        {
+            "node": "bronc",
+            "incoming": [
+                "smoke"
+            ]
+        },
+        {
+            "node": "xray",
+            "incoming": [
+                "either"
+            ]
+        },
+        {
+            "node": "dysp",
+            "incoming": [
+                "either",
+                "bronc"
+            ]
+        }
+    ],
+    "numeric_premises": [
+        {
+            "id": 0,
+            "origin": "asia",
+            "content": "1% of all people visit Asia."
+        },
+        {
+            "id": 1,
+            "origin": "smoke",
+            "content": "Out of all people, 50% are smokers."
+        },
+        {
+            "id": 2,
+            "origin": "tub",
+            "content": "When someone travels to Asia, they have a 5% chance of getting tuberculosis."
+        },
+        {
+            "id": 3,
+            "origin": "tub",
+            "content": "Someone who did not travel to Asia has a 99% chance of not getting tuberculosis."
+        },
+        {
+            "id": 4,
+            "origin": "lung",
+            "content": "If someone smokes regularly, he or she has a 10% chance of getting lung cancer."
+        },
+        {
+            "id": 5,
+            "origin": "lung",
+            "content": "Even if someone doesn't smoke, there is still a 1% chance of getting lung cancer."
+        },
+        {
+            "id": 6,
+            "origin": "either",
+            "content": "There is a 100% chance that a patient suffers from both if both tuberculosis and lung cancer are diagnosed."
+        },
+        {
+            "id": 7,
+            "origin": "either",
+            "content": "There is a 100% chance that a patient suffers from both if tuberculosis is not diagnosed, but lung cancer is."
+        },
+        {
+            "id": 8,
+            "origin": "either",
+            "content": "There is a 100% chance that a patient suffers from both if lung cancer is not diagnosed, but tuberculosis is."
+        },
+        {
+            "id": 9,
+            "origin": "either",
+            "content": "Someone has 0% chance of having both lung cancer and tuberculosis if none of both are diagnosed."
+        },
+        {
+            "id": 10,
+            "origin": "bronc",
+            "content": "Smoking leads to bronchitis in 60% of all cases."
+        },
+        {
+            "id": 11,
+            "origin": "bronc",
+            "content": "30% of all non-smokers still get bronchitis."
+        },
+        {
+            "id": 12,
+            "origin": "dysp",
+            "content": "In 90% of all cases, people who suffer from bronchitis and have either lung cancer or tuberculosis do also have dyspnoea."
+        },
+        {
+            "id": 13,
+            "origin": "dysp",
+            "content": "80% of people with bronchitis, but without lung cancer and tuberculosis do have dyspnoea."
+        },
+        {
+            "id": 14,
+            "origin": "dysp",
+            "content": "The existence of lung cancer or tuberculosis and the absence of bronchitis leads to a likelihood of 70% of having dyspnoea."
+        },
+        {
+            "id": 15,
+            "origin": "dysp",
+            "content": "People without lung cancer, tuberculosis and bronchitis are 90% likely to not suffer from dyspnoea."
+        },
+        {
+            "id": 16,
+            "origin": "xray",
+            "content": "Having either lung cancer or tuberculosis, the chance of having a positive X-ray is 90%."
+        },
+        {
+            "id": 17,
+            "origin": "xray",
+            "content": "The X-ray scan has a false-positive rate of 5%."
+        }
+    ],
+    "wep_based_premises": [
+        {
+            "id": 0,
+            "origin": "asia",
+            "content": "Very few people visit Asia."
+        },
+        {
+            "id": 1,
+            "origin": "smoke",
+            "content": "Out of all people, half of them are smokers."
+        },
+        {
+            "id": 2,
+            "origin": "tub",
+            "content": "When someone travels to Asia, they have a five times higher chance of getting tuberculosis."
+        },
+        {
+            "id": 3,
+            "origin": "tub",
+            "content": "Someone who did not travel to Asia has a very low chance of not getting tuberculosis."
+        },
+        {
+            "id": 4,
+            "origin": "lung",
+            "content": "If someone smokes regularly, he or she has a ten times higher chance of getting lung cancer than non-smokers."
+        },
+        {
+            "id": 5,
+            "origin": "lung",
+            "content": "Even if someone doesn't smoke, there is still a negligible chance of getting lung cancer."
+        },
+        {
+            "id": 6,
+            "origin": "either",
+            "content": "It is certain that a patient suffers from tuberculosis or lung cancer if both are diagnosed."
+        },
+        {
+            "id": 7,
+            "origin": "either",
+            "content": "It is certain that a patient suffers from tuberculosis or lung cancer if only lung cancer is diagnosed."
+        },
+        {
+            "id": 8,
+            "origin": "either",
+            "content": "It is certain that a patient suffers from tuberculosis or lung cancer if only tuberculosis is diagnosed."
+        },
+        {
+            "id": 9,
+            "origin": "either",
+            "content": "It is impossible for someone to have either lung cancer or tuberculosis if none of them is diagnosed."
+        },
+        {
+            "id": 10,
+            "origin": "bronc",
+            "content": "Smoking leads to bronchitis in more than half of all cases."
+        },
+        {
+            "id": 11,
+            "origin": "bronc",
+            "content": "A third of all non-smokers still get bronchitis."
+        },
+        {
+            "id": 12,
+            "origin": "dysp",
+            "content": "In almost all cases, people who suffer from bronchitis and have either lung cancer or tuberculosis do also have dyspnoea."
+        },
+        {
+            "id": 13,
+            "origin": "dysp",
+            "content": "Most of the people with bronchitis, but without lung cancer and tuberculosis do have dyspnoea."
+        },
+        {
+            "id": 14,
+            "origin": "dysp",
+            "content": "The existence of lung cancer or tuberculosis and the absence of bronchitis leads to a higher likelihood of having dyspnoea."
+        },
+        {
+            "id": 15,
+            "origin": "dysp",
+            "content": "People without lung cancer, tuberculosis and bronchitis almost never suffer from dyspnoea."
+        },
+        {
+            "id": 16,
+            "origin": "xray",
+            "content": "Having either lung cancer or tuberculosis, the chance of having a positive X-ray is almost one hundred percent."
+        },
+        {
+            "id": 17,
+            "origin": "xray",
+            "content": "The X-ray scan yields a very low amount of false-positives."
+        }
+    ],
+    "evidence_query_pairs": [
+        {
+            "id": 0,
+            "evidences": [
+                "A person has lung cancer.",
+                "The person also has bronchitis."
+            ],
+            "query": "What is the likelihood of this person having dyspnoea?",
+            "answer": 0.9,
+            "reasoning_types": [
+                "causal"
+            ]
+        },
+        {
+            "id": 1,
+            "evidences": [
+                "A person has lung cancer.",
+                "The person also has bronchitis."
+            ],
+            "query": "What is the likelihood of this person being a smoker?",
+            "answer": 0.95238095,
+            "reasoning_types": [
+                "evidential"
+            ]
+        },
+        {
+            "id": 2,
+            "evidences": [
+                "A person visited asia before."
+            ],
+            "query": "What is the likelihood of this person having tuberculosis?",
+            "answer": 0.05,
+            "reasoning_types": [
+                "causal"
+            ]
+        },
+        {
+            "id": 3,
+            "evidences": [
+                "A person never visited asia before."
+            ],
+            "query": "What is the likelihood of this person having tuberculosis?",
+            "answer": 0.01,
+            "reasoning_types": [
+                "causal"
+            ]
+        },
+        {
+            "id": 4,
+            "evidences": [
+                "The person does not have lung cancer.",
+                "The person does not smoke.",
+                "The person has tuberculosis."
+            ],
+            "query": "What is the likelihood of this person having been to Asia?",
+            "answer": 0.048076923,
+            "reasoning_types": [
+                "evidential"
+            ]
+        },
+        {
+            "id": 5,
+            "evidences": [
+                "The person has not been to Asia.",
+                "The person is not a smoker.",
+                "The person does not have either tuberculosis or a lung disease."
+            ],
+            "query": "What is the likelihood of a person having tuberculosis?",
+            "answer": 0.0,
+            "reasoning_types": [
+                "causal",
+                "evidential"
+            ]
+        },
+        {
+            "id": 6,
+            "evidences": [
+                "A person has tuberculosis.",
+                "The person also has lung cancer."
+            ],
+            "query": "What is the likelihood of this person having traveled to Asia?",
+            "answer": 0.048076923,
+            "reasoning_types": [
+                "evidential"
+            ]
+        },
+        {
+            "id": 7,
+            "evidences": [
+                "The person has not experienced either tuberculosis or a lung disease."
+            ],
+            "query": "What is the likelihood of a person not having tuberculosis?",
+            "answer": 1.0,
+            "reasoning_types": [
+                "evidential"
+            ]
+        }
+    ]
+}

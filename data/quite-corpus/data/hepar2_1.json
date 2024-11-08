@@ -1,0 +1,226 @@
+{
+    "nodes": [
+        {
+            "name": "hospital",
+            "states": [
+                "present",
+                "absent"
+            ]
+        },
+        {
+            "name": "surgery",
+            "states": [
+                "present",
+                "absent"
+            ]
+        },
+        {
+            "name": "gallstones",
+            "states": [
+                "present",
+                "absent"
+            ]
+        },
+        {
+            "name": "choledocholithotomy",
+            "states": [
+                "present",
+                "absent"
+            ]
+        },
+        {
+            "name": "upper_pain",
+            "states": [
+                "present",
+                "absent"
+            ]
+        },
+        {
+            "name": "fat",
+            "states": [
+                "present",
+                "absent"
+            ]
+        }
+    ],
+    "connectivity": [
+        {
+            "node": "hospital",
+            "incoming": []
+        },
+        {
+            "node": "surgery",
+            "incoming": []
+        },
+        {
+            "node": "gallstones",
+            "incoming": []
+        },
+        {
+            "node": "choledocholithotomy",
+            "incoming": [
+                "gallstones"
+            ]
+        },
+        {
+            "node": "upper_pain",
+            "incoming": [
+                "gallstones"
+            ]
+        },
+        {
+            "node": "fat",
+            "incoming": [
+                "gallstones"
+            ]
+        }
+    ],
+    "numeric_premises": [
+        {
+            "id": 0,
+            "origin": "hospital",
+            "content": "With a slight tendency, there is a probability of around 53.51% that a patient's medical history includes hospitalization, and conversely, a 46.5% chance that the patient has no history of hospitalization."
+        },
+        {
+            "id": 1,
+            "origin": "surgery",
+            "content": "With a 42.35% probability, a surgery is required, and conversely, there is a 57.65% chance that surgery is not required."
+        },
+        {
+            "id": 2,
+            "origin": "gallstones",
+            "content": "With a 15.31% likelihood, a patient is likely to have gallstones, while the absence of gallstones is more prevalent, at 84.69%."
+        },
+        {
+            "id": 3,
+            "origin": "choledocholithotomy",
+            "content": "If gallstones are present, there is a 71.03% probability that a patient will have undergone a choledocholithotomy, and a 28.97% chance that they will not have had the procedure."
+        },
+        {
+            "id": 4,
+            "origin": "choledocholithotomy",
+            "content": "With an absence of gallstones, there is only a 3.72% probability that a patient will have undergone a choledocholithotomy, and a 96.28% chance that they have not had the procedure."
+        },
+        {
+            "id": 5,
+            "origin": "upper_pain",
+            "content": "If gallstones are present, there is a 41.12% probability of experiencing upper abdominal pain, and a 58.88% chance of not experiencing such pain."
+        },
+        {
+            "id": 6,
+            "origin": "upper_pain",
+            "content": "When there are no gallstones, there is still a 38.68% probability of experiencing upper abdominal pain, and a 61.32% chance of not having such pain."
+        },
+        {
+            "id": 7,
+            "origin": "fat",
+            "content": "If someone has gallstones, the probability of them also having an accumulation of fat in the liver is 17.76%, and conversely, the probability of no fatty liver disease is 82.24%."
+        },
+        {
+            "id": 8,
+            "origin": "fat",
+            "content": "In the absence of gallstones, there is a 28.04% chance that the patient has fatty liver disease, while the probability of no fatty liver disease is 71.96%."
+        }
+    ],
+    "wep_based_premises": [
+        {
+            "id": 0,
+            "origin": "hospital",
+            "content": "There is an about equal chance that a patient is hospitalized or not."
+        },
+        {
+            "id": 1,
+            "origin": "surgery",
+            "content": "There is a better than even chance that the patient had no surgery."
+        },
+        {
+            "id": 2,
+            "origin": "gallstones",
+            "content": "It is unlikely that gallstones are present, but it is likely that gallstones are absent."
+        },
+        {
+            "id": 3,
+            "origin": "choledocholithotomy",
+            "content": "If gallstones are present, then it is probably the case that choledocholithotomy, a surgical procedure to remove gallstones from the common bile duct, has been performed, and it is probably not the case that this procedure has not been performed."
+        },
+        {
+            "id": 4,
+            "origin": "choledocholithotomy",
+            "content": "If gallstones are absent, it is highly unlikely that choledocholithotomy, a surgical procedure to remove gallstones from the common bile duct, will be present, and it is almost certain that choledocholithotomy will be absent."
+        },
+        {
+            "id": 5,
+            "origin": "upper_pain",
+            "content": "If gallstones are present, then it is probably not the case that upper abdominal pain is present, but there is a better than even chance that upper abdominal pain is absent."
+        },
+        {
+            "id": 6,
+            "origin": "upper_pain",
+            "content": "In the context of discovering liver disorders, if gallstones are absent, there is probably no upper abdominal pain, while the chances that flatulence is absent are better than even."
+        },
+        {
+            "id": 7,
+            "origin": "fat",
+            "content": "If gallstones are present, it is unlikely that fat will also be present in the liver, but there is a very good chance that fat will be absent."
+        },
+        {
+            "id": 8,
+            "origin": "fat",
+            "content": "If gallstones are absent, it is probably not the case that fat is present in the liver, but it is probable that fat is absent in the liver."
+        }
+    ],
+    "evidence_query_pairs": [
+        {
+            "id": 0,
+            "evidences": [
+                "A person has undergone a choledocholithotomy to remove gallstones from the common bile duct.",
+                "The person is currently experiencing pain in the upper abdomen."
+            ],
+            "query": "What is the likelihood of this person not having gallstones?",
+            "answer": 0.21415504,
+            "reasoning_types": [
+                "evidential"
+            ]
+        },
+        {
+            "id": 1,
+            "evidences": [
+                "The person is experiencing pain in the upper abdomen."
+            ],
+            "query": "What is the likelihood of this person having undergone surgery?",
+            "answer": 0.4235,
+            "reasoning_types": []
+        },
+        {
+            "id": 2,
+            "evidences": [
+                "A person has had surgery."
+            ],
+            "query": "What is the likelihood of this person not having gallstones?",
+            "answer": 0.8469,
+            "reasoning_types": []
+        },
+        {
+            "id": 3,
+            "evidences": [
+                "The person has not reported any fatty liver disease."
+            ],
+            "query": "What is the likelihood of this person not having been hospitalized?",
+            "answer": 0.4649,
+            "reasoning_types": []
+        },
+        {
+            "id": 4,
+            "evidences": [
+                "The patient has been hospitalized.",
+                "The patient has not had a choledocholithotomy to remove gallstones from the common bile duct.",
+                "The patient is experiencing pain in the upper abdomen."
+            ],
+            "query": "What is the likelihood of this patient not having gallstones?",
+            "answer": 0.94533518,
+            "reasoning_types": [
+                "evidential"
+            ]
+        }
+    ]
+}

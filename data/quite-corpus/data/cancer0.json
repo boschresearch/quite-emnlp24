@@ -1,0 +1,468 @@
+{
+    "nodes": [
+        {
+            "name": "Pollution",
+            "states": [
+                "low",
+                "high"
+            ]
+        },
+        {
+            "name": "Smoker",
+            "states": [
+                "True",
+                "False"
+            ]
+        },
+        {
+            "name": "Cancer",
+            "states": [
+                "True",
+                "False"
+            ]
+        },
+        {
+            "name": "Xray",
+            "states": [
+                "positive",
+                "negative"
+            ]
+        },
+        {
+            "name": "Dyspnoea",
+            "states": [
+                "True",
+                "False"
+            ]
+        }
+    ],
+    "connectivity": [
+        {
+            "node": "Pollution",
+            "incoming": []
+        },
+        {
+            "node": "Smoker",
+            "incoming": []
+        },
+        {
+            "node": "Cancer",
+            "incoming": [
+                "Pollution",
+                "Smoker"
+            ]
+        },
+        {
+            "node": "Xray",
+            "incoming": [
+                "Cancer"
+            ]
+        },
+        {
+            "node": "Dyspnoea",
+            "incoming": [
+                "Cancer"
+            ]
+        }
+    ],
+    "numeric_premises": [
+        {
+            "id": 0,
+            "origin": "Pollution",
+            "content": "In 90% of all areas there is low air pollution, whereas in 10 percent of all areas there is high pollution."
+        },
+        {
+            "id": 1,
+            "origin": "Smoker",
+            "content": "30% of the entire population are smokers."
+        },
+        {
+            "id": 2,
+            "origin": "Cancer",
+            "content": "Even if someone is a smoker, there is only 3% chance of getting cancer if air pollution is low."
+        },
+        {
+            "id": 3,
+            "origin": "Cancer",
+            "content": "Low air pollution and being a non-smoker makes it 0.1% likely to get cancer."
+        },
+        {
+            "id": 4,
+            "origin": "Cancer",
+            "content": "High air pollution leads to 5% cases of cancer in the group of smokers."
+        },
+        {
+            "id": 5,
+            "origin": "Cancer",
+            "content": "2% of non-smokers get cancer if air pollution is high."
+        },
+        {
+            "id": 6,
+            "origin": "Xray",
+            "content": "90% of Xray scans show positive results if someone has cancer."
+        },
+        {
+            "id": 7,
+            "origin": "Xray",
+            "content": "Xray scans yield 20% false-positives if someone is cancer-free."
+        },
+        {
+            "id": 8,
+            "origin": "Dyspnoea",
+            "content": "Chances are 65% that a cancer-sick person also suffers from Dyspnoea."
+        },
+        {
+            "id": 9,
+            "origin": "Dyspnoea",
+            "content": "Cancer-free people have a 30% chance to suffer from Dyspnoea."
+        }
+    ],
+    "wep_based_premises": [
+        {
+            "id": 0,
+            "origin": "Pollution",
+            "content": "In most of all areas there is only low air pollution."
+        },
+        {
+            "id": 1,
+            "origin": "Smoker",
+            "content": "A third of the entire population are smokers."
+        },
+        {
+            "id": 2,
+            "origin": "Cancer",
+            "content": "Even if someone is a smoker, there is only a slight chance of getting cancer if air pollution is low."
+        },
+        {
+            "id": 3,
+            "origin": "Cancer",
+            "content": "Low air pollution and being a non-smoker makes it almost impossible to get cancer."
+        },
+        {
+            "id": 4,
+            "origin": "Cancer",
+            "content": "High air pollution leads to few cases of cancer in the group of smokers."
+        },
+        {
+            "id": 5,
+            "origin": "Cancer",
+            "content": "Very few non-smokers get cancer if air pollution is high."
+        },
+        {
+            "id": 6,
+            "origin": "Xray",
+            "content": "Almost all of Xray scans are successful if someone has cancer."
+        },
+        {
+            "id": 7,
+            "origin": "Xray",
+            "content": "Xray scans yield a low amount of false-positives if someone is cancer-free."
+        },
+        {
+            "id": 8,
+            "origin": "Dyspnoea",
+            "content": "Chances are high that a cancer-sick person also suffers from Dyspnoea."
+        },
+        {
+            "id": 9,
+            "origin": "Dyspnoea",
+            "content": "Cancer-free people are rather unlikely to suffer from Dyspnoea."
+        }
+    ],
+    "evidence_query_pairs": [
+        {
+            "id": 0,
+            "evidences": [
+                "The pollution level is high.",
+                "The patient is a smoker.",
+                "The x-ray result is positive."
+            ],
+            "query": "What is the likelihood of the patient having cancer?",
+            "answer": 0.19148936,
+            "reasoning_types": [
+                "causal",
+                "evidential"
+            ]
+        },
+        {
+            "id": 1,
+            "evidences": [
+                "The air pollution level is low.",
+                "The patient is experiencing dyspnoea."
+            ],
+            "query": "What is the likelihood of this person having cancer, given the air pollution is low and they have dyspnoea?",
+            "answer": 0.020781489,
+            "reasoning_types": [
+                "causal",
+                "evidential"
+            ]
+        },
+        {
+            "id": 2,
+            "evidences": [
+                "The patient does not smoke.",
+                "The air pollution level is low."
+            ],
+            "query": "What is the likelihood of this person's X-ray test being positive for cancer?",
+            "answer": 0.2007,
+            "reasoning_types": [
+                "causal"
+            ]
+        },
+        {
+            "id": 3,
+            "evidences": [
+                "The patient is a smoker.",
+                "The air pollution level is high."
+            ],
+            "query": "What is the likelihood of this person's X-ray for cancer being positive?",
+            "answer": 0.235,
+            "reasoning_types": [
+                "causal"
+            ]
+        },
+        {
+            "id": 4,
+            "evidences": [
+                "The patient has cancer.",
+                "The X-ray results for cancer were negative.",
+                "The level of air pollution is low.",
+                "The patient is a smoker."
+            ],
+            "query": "What is the likelihood of this person not having dyspnoea?",
+            "answer": 0.35,
+            "reasoning_types": [
+                "causal"
+            ]
+        },
+        {
+            "id": 5,
+            "evidences": [
+                "The air pollution level is high.",
+                "The X-ray scanner did not detect cancer.",
+                "The patient is not suffering from dyspnoea."
+            ],
+            "query": "What is the likelihood of this person being a smoker?",
+            "answer": 0.29392869,
+            "reasoning_types": [
+                "evidential"
+            ]
+        },
+        {
+            "id": 6,
+            "evidences": [
+                "The patient is experiencing dyspnoea.",
+                "The air pollution level is high.",
+                "The X-ray result for cancer is negative."
+            ],
+            "query": "What is the likelihood of this person not being a smoker?",
+            "answer": 0.70469299,
+            "reasoning_types": [
+                "evidential"
+            ]
+        },
+        {
+            "id": 7,
+            "evidences": [
+                "The air pollution levels are high.",
+                "The patient is not a smoker.",
+                "The patient does not have cancer."
+            ],
+            "query": "What is the likelihood of this person not having dyspnoea?",
+            "answer": 0.7,
+            "reasoning_types": [
+                "causal"
+            ]
+        },
+        {
+            "id": 8,
+            "evidences": [
+                "The patient has cancer.",
+                "The air pollution level is high."
+            ],
+            "query": "What is the likelihood of this person not having dyspnoea?",
+            "answer": 0.35,
+            "reasoning_types": [
+                "causal"
+            ]
+        },
+        {
+            "id": 9,
+            "evidences": [
+                "The patient does not have cancer.",
+                "The patient is not a smoker.",
+                "The X-ray results show the presence of cancer."
+            ],
+            "query": "What is the likelihood of this person having dyspnoea?",
+            "answer": 0.3,
+            "reasoning_types": []
+        },
+        {
+            "id": 10,
+            "evidences": [
+                "The patient is a smoker."
+            ],
+            "query": "What is the likelihood of the patient being exposed to high levels of air pollution?",
+            "answer": 0.1,
+            "reasoning_types": []
+        },
+        {
+            "id": 11,
+            "evidences": [
+                "The patient does not have cancer.",
+                "The air pollution level is high."
+            ],
+            "query": "What is the likelihood of this person having dyspnoea?",
+            "answer": 0.3,
+            "reasoning_types": [
+                "causal"
+            ]
+        },
+        {
+            "id": 12,
+            "evidences": [
+                "The X-ray scanner did not detect cancer in the patient.",
+                "The patient does not have cancer."
+            ],
+            "query": "What is the likelihood of the pollution being high, given that the patient has no cancer and the X-ray scanner did not detect cancer?",
+            "answer": 0.098242561,
+            "reasoning_types": [
+                "evidential"
+            ]
+        },
+        {
+            "id": 13,
+            "evidences": [
+                "The patient does not have dyspnoea."
+            ],
+            "query": "What is the likelihood of this person's X-ray test being positive for cancer?",
+            "answer": 0.20409431,
+            "reasoning_types": []
+        },
+        {
+            "id": 14,
+            "evidences": [
+                "The patient is experiencing dyspnoea."
+            ],
+            "query": "What is the likelihood of air pollution being high given that the patient is experiencing dyspnoea?",
+            "answer": 0.10199937,
+            "reasoning_types": [
+                "evidential"
+            ]
+        },
+        {
+            "id": 15,
+            "evidences": [
+                "The patient is a smoker.",
+                "The patient does not have cancer.",
+                "The level of air pollution is low.",
+                "The patient suffers from dyspnoea."
+            ],
+            "query": "What is the likelihood of this person's X-ray for cancer being positive?",
+            "answer": 0.2,
+            "reasoning_types": [
+                "causal"
+            ]
+        },
+        {
+            "id": 16,
+            "evidences": [
+                "The patient is a smoker."
+            ],
+            "query": "What is the likelihood of this person not having dyspnoea?",
+            "answer": 0.6888,
+            "reasoning_types": [
+                "causal"
+            ]
+        },
+        {
+            "id": 17,
+            "evidences": [
+                "The patient is experiencing dyspnoea.",
+                "The patient has been diagnosed with cancer.",
+                "The patient is not a smoker.",
+                "The X-ray results for cancer came back positive."
+            ],
+            "query": "What is the likelihood of the current air pollution levels being low, given that the patient has dyspnoea, cancer, the X-ray results are positive, and the patient is a non-smoker?",
+            "answer": 0.31034483,
+            "reasoning_types": [
+                "evidential",
+                "explaining_away"
+            ]
+        },
+        {
+            "id": 18,
+            "evidences": [
+                "A positive result was obtained from a recent X-ray scan for cancer.",
+                "The patient is not suffering from dyspnoea."
+            ],
+            "query": "What is the likelihood of this person being a non-smoker?",
+            "answer": 0.69247071,
+            "reasoning_types": [
+                "evidential"
+            ]
+        },
+        {
+            "id": 19,
+            "evidences": [
+                "The patient does not have cancer.",
+                "The results of the patient's X-ray scan for cancer were positive.",
+                "The patient is not a smoker."
+            ],
+            "query": "What is the likelihood of this person living in an area with low air pollution?",
+            "answer": 0.90171497,
+            "reasoning_types": [
+                "evidential",
+                "explaining_away"
+            ]
+        },
+        {
+            "id": 20,
+            "evidences": [
+                "The air pollution level is low.",
+                "The X-ray results show the presence of cancer.",
+                "The patient has cancer."
+            ],
+            "query": "What is the likelihood of this person not having dyspnoea?",
+            "answer": 0.35,
+            "reasoning_types": [
+                "causal"
+            ]
+        },
+        {
+            "id": 21,
+            "evidences": [],
+            "query": "What is the likelihood of a high air pollution?",
+            "answer": 0.1,
+            "reasoning_types": []
+        },
+        {
+            "id": 22,
+            "evidences": [],
+            "query": "What is the likelihood of the patient being a smoker?",
+            "answer": 0.3,
+            "reasoning_types": []
+        },
+        {
+            "id": 23,
+            "evidences": [],
+            "query": "What is the probability of the patient having cancer?",
+            "answer": 0.01163,
+            "reasoning_types": []
+        },
+        {
+            "id": 24,
+            "evidences": [],
+            "query": "What is the likelihood of the patient having a positive X-ray result?",
+            "answer": 0.208141,
+            "reasoning_types": []
+        },
+        {
+            "id": 25,
+            "evidences": [],
+            "query": "What is the likelihood of the patient having dyspnoea?",
+            "answer": 0.3040705,
+            "reasoning_types": []
+        }
+    ]
+}

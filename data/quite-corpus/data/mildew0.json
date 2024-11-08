@@ -1,0 +1,986 @@
+{
+    "nodes": [
+        {
+            "name": "lai_1",
+            "states": [
+                "0_0___0_5",
+                "0_5___1_5",
+                "1_5___2_5",
+                "2_5___3_5",
+                "3_5___4_5",
+                "4_5___5_5",
+                "5_5___6_5",
+                "___6_5"
+            ]
+        },
+        {
+            "name": "foto_1",
+            "states": [
+                "0_00_kg_m2",
+                "0_05_kg_m2",
+                "0_10_kg_m2",
+                "0_15_kg_m2",
+                "0_20_kg_m2",
+                "0_25_kg_m2",
+                "0_30_kg_m2",
+                "0_35_kg_m2",
+                "0_40_kg_m2",
+                "0_45_kg_m2",
+                "0_50_kg_m2",
+                "0_55_kg_m2",
+                "0_60_kg_m2",
+                "0_65_kg_m2",
+                "0_70_kg_m2",
+                "0_75_kg_m2",
+                "0_80_kg_m2",
+                "0_85_kg_m2",
+                "0_90_kg_m2",
+                "0_95_kg_m2"
+            ]
+        },
+        {
+            "name": "straaling_1",
+            "states": [
+                "___150_MJ_m2",
+                "150___199_MJ_m2",
+                "200___249_MJ_m2",
+                "____250_MJ_m2"
+            ]
+        },
+        {
+            "name": "temp_1",
+            "states": [
+                "___13_0_C",
+                "13_0___14_9_C",
+                "15_0___16_9_C",
+                "____17_0_C"
+            ]
+        }
+    ],
+    "connectivity": [
+        {
+            "node": "lai_1",
+            "incoming": []
+        },
+        {
+            "node": "foto_1",
+            "incoming": [
+                "lai_1",
+                "temp_1",
+                "straaling_1"
+            ]
+        },
+        {
+            "node": "straaling_1",
+            "incoming": []
+        },
+        {
+            "node": "temp_1",
+            "incoming": []
+        }
+    ],
+    "numeric_premises": [
+        {
+            "id": 0,
+            "origin": "lai_1",
+            "content": "There is no chance that the leaf area index (LAI) is between 0.0-0.5, 0.5-1.5, or 1.5-2.5. Furthermore, there is a 10% chance that it is between 2.5 and 3.5, 20% for 3.5-4.5, another 20% for 4.5-5.5, 40% for 5.5-6.5, and 10% for >6.5."
+        },
+        {
+            "id": 1,
+            "origin": "straaling_1",
+            "content": "The radiation levels of received Megajoules per square meter are distributed as follows: 6.7% of the time, it falls below 150 MJ/m2; 46.7% of the time, it falls within the range of 150 to 199 MJ/m2; 33.3% of the time, it falls within the range of 200 to 249 MJ/m2; and only 6.7% of the time does it exceed 250 MJ/m2."
+        },
+        {
+            "id": 2,
+            "origin": "temp_1",
+            "content": "The temperature at mildew site typically falls into one of four categories: around 13.0°C (13.3% likelihood), between 13.0°C and 14.9°C (56.7% likelihood), between 15.0°C and 16.9°C (16.7% likelihood), and around 17.0°C (13.3% likelihood)."
+        },
+        {
+            "id": 3,
+            "origin": "foto_1",
+            "content": "With a LAI of 1.5-2.5, temperature of 13.0°C, and radiation of 150 MJ/m2, there is a 3.47% chance of having 0.20 kg/m2 of photosynthetic biomass, a 30.23% chance of having 0.25 kg/m2, a 42% chance of having 0.30 kg/m2, a 20.43% chance of having 0.35 kg/m2, and a 3.87% chance of having 0.40 kg/m2."
+        },
+        {
+            "id": 4,
+            "origin": "foto_1",
+            "content": "With a LAI of 1.5-2.5, temperature of 13.0°C, and radiation between 150-199 MJ/m2, there is a 0.13% chance of having 0.25 kg/m2 of photosynthetic biomass, a 10.5% chance of having 0.30 kg/m2, a 33.4% chance of having 0.35 kg/m2, a 35.1% chance of having 0.40 kg/m2, a 17% chance of having 0.45 kg/m2, a 3.8% chance of having 0.50 kg/m2, and a 0.03% chance of having 0.55 kg/m2."
+        },
+        {
+            "id": 5,
+            "origin": "foto_1",
+            "content": "With a LAI of 1.5-2.5, temperature of 13.0°C, and radiation between 200-249 MJ/m2, there is a 4.3% chance of having 0.35 kg/m2 of photosynthetic biomass, a 21.33% chance of having 0.40 kg/m2, a 33.57% chance of having 0.45 kg/m2, a 26.27% chance of having 0.50 kg/m2, a 12.03% chance of having 0.55 kg/m2, and a 2.5% chance of having 0.60 kg/m2."
+        },
+        {
+            "id": 6,
+            "origin": "foto_1",
+            "content": "With a LAI of 1.5-2.5, temperature of 13.0°C, and radiation of 250 MJ/m2, there is a 2.6% chance of having 0.40 kg/m2 of photosynthetic biomass, a 15% chance of having 0.45 kg/m2, a 28.03% chance of having 0.50 kg/m2, a 27.67% chance of having 0.55 kg/m2, an 18%.23% chance of having 0.60 kg/m2, a 7.47% chance of having 0.65 kg/m2, and a 1% chance of having 0.70 kg/m2."
+        },
+        {
+            "id": 7,
+            "origin": "foto_1",
+            "content": "With a LAI of 1.5-2.5, temperature between 13.0-14.9°C, and radiation of 150 MJ/m2, there is a 7.43% chance of having 0.20 kg/m2 of photosynthetic biomass, a 39.57% chance of having 0.25 kg/m2, a 39.27% chance of having 0.30 kg/m2, a 12.9% chance of having 0.35 kg/m2, and a 0.83% chance of having 0.40 kg/m2."
+        },
+        {
+            "id": 8,
+            "origin": "foto_1",
+            "content": "With a LAI of 1.5-2.5, temperature between 13.0-14.9°C, and radiation between 150-199 MJ/m2, there is a 1.57% chance of having 0.25 kg/m2 of photosynthetic biomass, a 21.27% chance of having 0.30 kg/m2, a 40.8% chance of having 0.35 kg/m2, a 27.73% chance of having 0.40 kg/m2, an 8.33% chance of having 0.45 kg/m2, and a 0.3% chance of having 0.50 kg/m2."
+        },
+        {
+            "id": 9,
+            "origin": "foto_1",
+            "content": "With a LAI of 1.5-2.5, temperature between 13.0-14.9°C, and radiation between 200-249 MJ/m2, there is a 0.57% chance of having 0.30 kg/m2 of photosynthetic biomass, a 13.43% chance of having 0.35 kg/m2, a 33.2% chance of having 0.40 kg/m2, a 32.37% chance of having 0.45 kg/m2, a 16.83% chance of having 0.50 kg/m2, and a 3.6% chance of having 0.55 kg/m2."
+        },
+        {
+            "id": 10,
+            "origin": "foto_1",
+            "content": "With a LAI of 1.5-2.5, temperature between 13.0-14.9°C, and radiation of 250 MJ/m2, there is a 0.5% chance of having 0.35 kg/m2 of photosynthetic biomass, a 11.17% chance of having 0.40 kg/m2, a 27.73% chance of having 0.45 kg/m2, a 31.2% chance of having 0.50 kg/m2, a 20.53% chance of having 0.55 kg/m2, an 8.1% chance of having 0.60 kg/m2, and a 0.77% chance of having 0.65 kg/m2."
+        },
+        {
+            "id": 11,
+            "origin": "foto_1",
+            "content": "With a LAI of 1.5-2.5, temperature between 15.0-16.9°C, and radiation of 150 MJ/m2, there is a 13% chance of having 0.20 kg/m2 of photosynthetic biomass, a 47.2% chance of having 0.25 kg/m2, a 33% chance of having 0.30 kg/m2, and a 6.8% chance of having 0.35 kg/m2 of photosynthetic biomass."
+        },
+        {
+            "id": 12,
+            "origin": "foto_1",
+            "content": "With a LAI of 1.5-2.5, temperature between 15.0-16.9°C, and radiation between 150-199 MJ/m2, there is a 4.87% chance of having 0.25 kg/m2 of photosynthetic biomass, a 33.03% chance of having 0.30 kg/m2, a 41.1% chance of having 0.35 kg/m2, an 18%.5% chance of having 0.40 kg/m2, and a 2.5% chance of having 0.45 kg/m2 of photosynthetic biomass."
+        },
+        {
+            "id": 13,
+            "origin": "foto_1",
+            "content": "With a LAI of 1.5-2.5, temperature between 15.0-16.9°C, and radiation between 200-249 MJ/m2, there is a 3.67% chance of having 0.30 kg/m2 of photosynthetic biomass, a 25.43% chance of having 0.35 kg/m2, a 38.47% chance of having 0.40 kg/m2, a 24.83% chance of having 0.45 kg/m2, a 7.37% chance of having 0.50 kg/m2, and a 0.23% chance of having 0.55 kg/m2 of photosynthetic biomass."
+        },
+        {
+            "id": 14,
+            "origin": "foto_1",
+            "content": "With a LAI of 1.5-2.5, temperature between 15.0-16.9°C, and radiation of 250 MJ/m2, there is a 4.47% chance of having 0.35 kg/m2 of photosynthetic biomass, a 22.17% chance of having 0.40 kg/m2, a 34.93% chance of having 0.45 kg/m2, a 25.57% chance of having 0.50 kg/m2, a 11.43% chance of having 0.55 kg/m2, and a 1.43% chance of having 0.60 kg/m2 of photosynthetic biomass."
+        },
+        {
+            "id": 15,
+            "origin": "foto_1",
+            "content": "With a LAI of 1.5-2.5, temperature around 17.0°C, and radiation of 150 MJ/m2, there is a 0.001% chance of having 0.15 kg/m2 of photosynthetic biomass, a 20.53% chance of having 0.20 kg/m2, a 51.61% chance of having 0.25 kg/m2, a 24.93% chance of having 0.30 kg/m2, and a 2.83% chance of having 0.35 kg/m2 of photosynthetic biomass."
+        },
+        {
+            "id": 16,
+            "origin": "foto_1",
+            "content": "With a LAI of 1.5-2.5, temperature around 17.0°C, and radiation between 150-199 MJ/m2, there is an 11.23% chance of having 0.25 kg/m2 of photosynthetic biomass, a 42.77% chance of having 0.30 kg/m2, a 35.63% chance of having 0.35 kg/m2, a 10.13% chance of having 0.40 kg/m2, and a 0.23% chance of having 0.45 kg/m2 of photosynthetic biomass."
+        },
+        {
+            "id": 17,
+            "origin": "foto_1",
+            "content": "With a LAI of 1.5-2.5, temperature around 17.0°C, and radiation between 200-249 MJ/m2, there is a 10.53% chance of having 0.30 kg/m2 of photosynthetic biomass, a 35.9% chance of having 0.35 kg/m2, a 35.4% chance of having 0.40 kg/m2, a 16.2% chance of having 0.45 kg/m2, and a 1.97% chance of having 0.50 kg/m2 of photosynthetic biomass."
+        },
+        {
+            "id": 18,
+            "origin": "foto_1",
+            "content": "With a LAI of 1.5-2.5, temperature around 17.0°C, and radiation of 250 MJ/m2, there is a 0.2% chance of having 0.30 kg/m2 of photosynthetic biomass, a 12.47% chance of having 0.35 kg/m2, a 32.63% chance of having 0.40 kg/m2, a 32.77% chance of having 0.45 kg/m2, a 17.9% chance of having 0.50 kg/m2, and a 4.03% chance of having 0.55 kg/m2 of photosynthetic biomass."
+        },
+        {
+            "id": 19,
+            "origin": "foto_1",
+            "content": "With a LAI of 2.5-3.5, temperature of 13.0°C, and radiation of 150 MJ/m2, there is a 3.89% chance of having 0.25 kg/m2 of photosynthetic biomass, a 27.49% chance of having 0.30 kg/m2, a 39.87% chance of having 0.35 kg/m2, a 22.87% chance of having 0.40 kg/m2, and a 5.87% chance of having 0.45 kg/m2 of photosynthetic biomass."
+        },
+        {
+            "id": 20,
+            "origin": "foto_1",
+            "content": "With a LAI of 2.5-3.5, temperature of 13.0°C, and radiation between 150-199 MJ/m2, there is a 4.63% chance of having 0.35 kg/m2 of photosynthetic biomass, a 25.07% chance of having 0.40 kg/m2, a 35.83% chance of having 0.45 kg/m2, a 24.7% chance of having 0.50 kg/m2, a 9.2% chance of having 0.60 kg/m2, and a 0.57% chance of having 0.65 kg/m2 of photosynthetic biomass."
+        },
+        {
+            "id": 21,
+            "origin": "foto_1",
+            "content": "With a LAI of 2.5-3.5, temperature of 13.0°C, and radiation between 200-249 MJ/m2, there is a 0.17% chance of having 0.40 kg/m2 of photosynthetic biomass, a 9.37% chance of having 0.45 kg/m2, a 26.63% chance of having 0.50 kg/m2, a 30.07% chance of having 0.55 kg/m2, a 23.33% chance of having 0.60 kg/m2, a 9.4% chance of having 0.65 kg/m2, and a 1.03% chance of having 0.70 kg/m2 of photosynthetic biomass."
+        },
+        {
+            "id": 22,
+            "origin": "foto_1",
+            "content": "With a LAI of 2.5-3.5, temperature of 13.0°C, and radiation of 250 MJ/m2, there is a 2.57% chance of having 0.50 kg/m2 of photosynthetic biomass, a 16.87% chance of having 0.55 kg/m2, a 26.03% chance of having 0.60 kg/m2, a 25.73% chance of having 0.65 kg/m2, a 19.83% chance of having 0.70 kg/m2, a 7.97% chance of having 0.75 kg/m2, and a 1% chance of having 0.80 kg/m2 of photosynthetic biomass."
+        },
+        {
+            "id": 23,
+            "origin": "foto_1",
+            "content": "With a LAI of 2.5-3.5, temperature between 13.0-14.9°C, and radiation of 150 MJ/m2, there is a 9.23% chance of having 0.25 kg/m2 of photosynthetic biomass, a 37.23% chance of having 0.30 kg/m2, a 36.97% chance of having 0.35 kg/m2, a 15.33% chance of having 0.40 kg/m2, and a 1.23% chance of having 0.45 kg/m2 of photosynthetic biomass."
+        },
+        {
+            "id": 24,
+            "origin": "foto_1",
+            "content": "With a LAI of 2.5-3.5, temperature between 13.0-14.9°C, and radiation between 150-199 MJ/m2, there is a 0.17% chance of having 0.30 kg/m2 of photosynthetic biomass, a 14.13% chance of having 0.35 kg/m2, a 35.73% chance of having 0.40 kg/m2, a 33.03% chance of having 0.45 kg/m2, a 15.1% chance of having 0.50 kg/m2, and a 1.83% chance of having 0.55 kg/m2 of photosynthetic biomass."
+        },
+        {
+            "id": 25,
+            "origin": "foto_1",
+            "content": "With a LAI of 2.5-3.5, temperature between 13.0-14.9°C, and radiation between 200-249 MJ/m2, there is a 3.6% chance of having 0.40 kg/m2 of photosynthetic biomass, a 23.27% chance of having 0.45 kg/m2, a 32.83% chance of having 0.50 kg/m2, a 27.23% chance of having 0.55 kg/m2, a 11.73% chance of having 0.60 kg/m2, and a 1.33% chance of having 0.65 kg/m2 of photosynthetic biomass."
+        },
+        {
+            "id": 26,
+            "origin": "foto_1",
+            "content": "With a LAI of 2.5-3.5, temperature between 13.0-14.9°C, and radiation of 250 MJ/m2, there is a 0.8% chance of having 0.45 kg/m2 of photosynthetic biomass, a 14.27% chance of having 0.50 kg/m2, a 27.57% chance of having 0.55 kg/m2, a 27.83% chance of having 0.60 kg/m2, a 21.33% chance of having 0.65 kg/m2, a 7.7% chance of having 0.70 kg/m2, and a 0.5% chance of having 0.75 kg/m2 of photosynthetic biomass."
+        },
+        {
+            "id": 27,
+            "origin": "foto_1",
+            "content": "With a LAI of 2.5-3.5, temperature between 15.0-16.9°C, and radiation of 150 MJ/m2, there is a 16.13% chance of having 0.25 kg/m2 of photosynthetic biomass, a 44.57% chance of having 0.30 kg/m2, a 31.33% chance of having 0.35 kg/m2, and a 7.97% chance of having 0.40 kg/m2 of photosynthetic biomass."
+        },
+        {
+            "id": 28,
+            "origin": "foto_1",
+            "content": "With a LAI of 2.5-3.5, temperature between 15.0-16.9°C, and radiation between 150-199 MJ/m2, there is a 2.17% chance of having 0.30 kg/m2 of photosynthetic biomass, a 25.47% chance of having 0.35 kg/m2, a 40.5% chance of having 0.40 kg/m2, a 25.73% chance of having 0.45 kg/m2, and a 6.13% chance of having 0.50 kg/m2 of photosynthetic biomass."
+        },
+        {
+            "id": 29,
+            "origin": "foto_1",
+            "content": "With a LAI of 2.5-3.5, temperature between 15.0-16.9°C, and radiation between 200-249 MJ/m2, there is a 0.1% chance of having 0.35 kg/m2 of photosynthetic biomass, a 13.2% chance of having 0.40 kg/m2, a 33.07% chance of having 0.45 kg/m2, a 32.43% chance of having 0.50 kg/m2, an 18%% chance of having 0.55 kg/m2, and a 3.2% chance of having 0.60 kg/m2 of photosynthetic biomass."
+        },
+        {
+            "id": 30,
+            "origin": "foto_1",
+            "content": "With a LAI of 2.5-3.5, temperature between 15.0-16.9°C, and radiation of 250 MJ/m2, there is a 7.07% chance of having 0.45 kg/m2 of photosynthetic biomass, a 26.4% chance of having 0.50 kg/m2, a 30.37% chance of having 0.55 kg/m2, a 25.17% chance of having 0.60 kg/m2, a 10.2% chance of having 0.65 kg/m2, and a 0.8% chance of having 0.70 kg/m2 of photosynthetic biomass."
+        },
+        {
+            "id": 31,
+            "origin": "foto_1",
+            "content": "With a LAI of 2.5-3.5, temperature around 17°C, and radiation of 150 MJ/m2, there is a 0.5% chance of having 0.20 kg/m2 of photosynthetic biomass, a 24.57% chance of having 0.25 kg/m2, a 47.57% chance of having 0.30 kg/m2, a 24.3% chance of having 0.35 kg/m2, and a 3.07% chance of having 0.40 kg/m2 of photosynthetic biomass."
+        },
+        {
+            "id": 32,
+            "origin": "foto_1",
+            "content": "With a LAI of 2.5-3.5, temperature around 17°C, and radiation between 150-199 MJ/m2, there is a 7.1% chance of having 0.30 kg/m2 of photosynthetic biomass, a 35.93% chance of having 0.35 kg/m2, a 38.77% chance of having 0.40 kg/m2, a 16.87% chance of having 0.45 kg/m2, and a 1.33% chance of having 0.50 kg/m2 of photosynthetic biomass."
+        },
+        {
+            "id": 33,
+            "origin": "foto_1",
+            "content": "With a LAI of 2.5-3.5, temperature around 17°C, and radiation between 200-249 MJ/m2, there is a 2.4% chance of having 0.35 kg/m2 of photosynthetic biomass, a 25.03% chance of having 0.40 kg/m2, a 36.17% chance of having 0.45 kg/m2, a 27.9% chance of having 0.50 kg/m2, an 8.37% chance of having 0.55 kg/m2, and a 0.13% chance of having 0.60 kg/m2 of photosynthetic biomass."
+        },
+        {
+            "id": 34,
+            "origin": "foto_1",
+            "content": "With a LAI of 2.5-3.5, temperature around 17°C, and radiation of 250 MJ/m2, there is a 1.13% chance of having 0.40 kg/m2 of photosynthetic biomass, an 18%.43% chance of having 0.45 kg/m2, a 31.8% chance of having 0.50 kg/m2, a 29.83% chance of having 0.55 kg/m2, a 16.13% chance of having 0.60 kg/m2, and a 2.67% chance of having 0.65 kg/m2 of photosynthetic biomass."
+        },
+        {
+            "id": 35,
+            "origin": "foto_1",
+            "content": "With a LAI of 5.5-6.5, temperature of 13°C, and radiation of 150 MJ/m2, there is a 4.1% chance of having 0.30 kg/m2 of photosynthetic biomass, a 20.7% chance of having 0.35 kg/m2, a 35.57% chance of having 0.40 kg/m2, a 25.83% chance of having 0.45 kg/m2, a 12.5% chance of having 0.50 kg/m2, and a 1.3% chance of having 0.55 kg/m2 of photosynthetic biomass."
+        },
+        {
+            "id": 36,
+            "origin": "foto_1",
+            "content": "With a LAI of 5.5-6.5, temperature of 13°C, and radiation between 150-199 MJ/m2, there is a 0.0013% chance of having 0.40 kg/m2 of photosynthetic biomass, a 12.67% chance of having 0.45 kg/m2, a 27.17% chance of having 0.50 kg/m2, a 29.87% chance of having 0.55 kg/m2, a 20.37% chance of having 0.60 kg/m2, a 9.43% chance of having 0.65 kg/m2, and a 0.0037% chance of having 0.70 kg/m2 of photosynthetic biomass."
+        },
+        {
+            "id": 37,
+            "origin": "foto_1",
+            "content": "With a LAI of 5.5-6.5, temperature of 13°C, and radiation between 200-249 MJ/m2, there is a 10.07% chance of having 0.55 kg/m2 of photosynthetic biomass, a 22.43% chance of having 0.60 kg/m2, a 24.67% chance of having 0.65 kg/m2, a 24.57% chance of having 0.70 kg/m2, a 13.99% chance of having 0.75 kg/m2, and a 4.27% chance of having 0.80 kg/m2 of photosynthetic biomass."
+        },
+        {
+            "id": 38,
+            "origin": "foto_1",
+            "content": "With a LAI of 5.5-6.5, temperature of 13°C, and radiation of 250 MJ/m2, there is a 0.0003% chance of having 0.60 kg/m2 of photosynthetic biomass, a 9.9% chance of having 0.65 kg/m2, a 20.23% chance of having 0.70 kg/m2, a 21.33% chance of having 0.75 kg/m2, a 22.8% chance of having 0.80 kg/m2, a 16.43% chance of having 0.85 kg/m2, an 8.7% chance of having 0.90 kg/m2, and a 0.0057% chance of having 0.95 kg/m2 of photosynthetic biomass."
+        },
+        {
+            "id": 39,
+            "origin": "foto_1",
+            "content": "With a LAI of 5.5-6.5, temperature between 13-14.9°C, and radiation of 150 MJ/m2, there is a 7.97% chance of having 0.30 kg/m2 of photosynthetic biomass, a 28.83% chance of having 0.35 kg/m2, a 35.8% chance of having 0.40 kg/m2, a 20.7% chance of having 0.45 kg/m2, and a 6.7% chance of having 0.50 kg/m2 of photosynthetic biomass."
+        },
+        {
+            "id": 40,
+            "origin": "foto_1",
+            "content": "With a LAI of 5.5-6.5, temperature between 13-14.9°C, and radiation between 150-199 MJ/m2, there is a 4.57% chance of having 0.40 kg/m2 of photosynthetic biomass, a 21.37% chance of having 0.45 kg/m2, a 33% chance of having 0.50 kg/m2, a 26.3% chance of having 0.55 kg/m2, a 13.23% chance of having 0.60 kg/m2, and a 1.53% chance of having 0.65 kg/m2 of photosynthetic biomass."
+        },
+        {
+            "id": 41,
+            "origin": "foto_1",
+            "content": "With a LAI of 5.5-6.5, temperature between 13-14.9°C, and radiation between 200-249 MJ/m2, there is a 4.13% chance of having 0.50 kg/m2 of photosynthetic biomass, a 19.4% chance of having 0.55 kg/m2, a 27.67% chance of having 0.60 kg/m2, a 27.2% chance of having 0.65 kg/m2, a 16.1% chance of having 0.70 kg/m2, and a 5.5% chance of having 0.75 kg/m2 of photosynthetic biomass."
+        },
+        {
+            "id": 42,
+            "origin": "foto_1",
+            "content": "With a LAI of 5.5-6.5, temperature between 13-14.9°C, and radiation of 250 MJ/m2, there is a 6.2% chance of having 0.60 kg/m2 of photosynthetic biomass, a 19.93% chance of having 0.65 kg/m2, a 23.5% chance of having 0.70 kg/m2, a 24.37% chance of having 0.75 kg/m2, a 17.3% chance of having 0.80 kg/m2, an 8.57% chance of having 0.85 kg/m2, and a 0.13% chance of having 0.90 kg/m2 of photosynthetic biomass."
+        },
+        {
+            "id": 43,
+            "origin": "foto_1",
+            "content": "With a LAI of 5.5-6.5, temperature between 15-16.9°C, and radiation of 150 MJ/m2, there is a 13.79% chance of having 0.30 kg/m2 of photosynthetic biomass, a 35.66% chance of having 0.35 kg/m2, a 32.59% chance of having 0.40 kg/m2, a 16.46% chance of having 0.45 kg/m2, and a 1.46% chance of having 0.50 kg/m2 of photosynthetic biomass."
+        },
+        {
+            "id": 44,
+            "origin": "foto_1",
+            "content": "With a LAI of 5.5-6.5, temperature between 15-16.9°C, and radiation between 150-199 MJ/m2, there is a 10.8% chance of having 0.40 kg/m2 of photosynthetic biomass, a 29.37% chance of having 0.45 kg/m2, a 32.93% chance of having 0.50 kg/m2, a 20.2% chance of having 0.55 kg/m2, and a 6.7% chance of having 0.60 kg/m2 of photosynthetic biomass."
+        },
+        {
+            "id": 45,
+            "origin": "foto_1",
+            "content": "With a LAI of 5.5-6.5, temperature between 15-16.9°C, and radiation between 200-249 MJ/m2, there is a 13.06% chance of having 0.50 kg/m2 of photosynthetic biomass, a 28.16% chance of having 0.55 kg/m2, a 27.12% chance of having 0.60 kg/m2, a 21.46% chance of having 0.65 kg/m2, a 10.09% chance of having 0.70 kg/m2, and a 0.069% chance of having 0.75 kg/m2 of photosynthetic biomass."
+        },
+        {
+            "id": 46,
+            "origin": "foto_1",
+            "content": "With a LAI of 5.5-6.5, temperature between 15-16.9°C, and radiation of 250 MJ/m2, there is a 0.8% chance of having 0.55 kg/m2 of photosynthetic biomass, a 17.2% chance of having 0.60 kg/m2, a 25.9% chance of having 0.65 kg/m2, a 23.3% chance of having 0.70 kg/m2, a 20.9% chance of having 0.75 kg/m2, a 11.5% chance of having 0.80 kg/m2, and a 0.4% chance of having 0.85 kg/m2 of photosynthetic biomass."
+        },
+        {
+            "id": 47,
+            "origin": "foto_1",
+            "content": "With a LAI of 5.5-6.5, temperature at 17°C, and radiation of 150 MJ/m2, there is a 0.1% chance of having 0.25 kg/m2 of photosynthetic biomass, a 20.6% chance of having 0.30 kg/m2, a 40.8% chance of having 0.35 kg/m2, a 28.23% chance of having 0.40 kg/m2, and a 10.27% chance of having 0.45 kg/m2 of photosynthetic biomass."
+        },
+        {
+            "id": 48,
+            "origin": "foto_1",
+            "content": "With a LAI of 5.5-6.5, temperature at 17°C, and radiation between 150-199 MJ/m2, there is a 0.033% chance of having 0.35 kg/m2 of photosynthetic biomass, an 18%.27% chance of having 0.40 kg/m2, a 35.97% chance of having 0.45 kg/m2, a 30.03% chance of having 0.50 kg/m2, a 14.57% chance of having 0.55 kg/m2, and a 0.83% chance of having 0.60 kg/m2 of photosynthetic biomass."
+        },
+        {
+            "id": 49,
+            "origin": "foto_1",
+            "content": "With a LAI of 5.5-6.5, temperature at 17°C, and radiation between 200-249 MJ/m2, there is a 2.33% chance of having 0.45 kg/m2 of photosynthetic biomass, a 20.70% chance of having 0.50 kg/m2, a 29.70% chance of having 0.55 kg/m2, a 29.53% chance of having 0.60 kg/m2, a 15.70% chance of having 0.65 kg/m2, and a 2.03% chance of having 0.70 kg/m2 of photosynthetic biomass."
+        },
+        {
+            "id": 50,
+            "origin": "foto_1",
+            "content": "With a LAI of 5.5-6.5, temperature at 17°C, and radiation at 250 MJ/m2, there is a 7.90% chance of having 0.55 kg/m2 of photosynthetic biomass, a 23.43% chance of having 0.60 kg/m2, a 23.73% chance of having 0.65 kg/m2, a 26.60% chance of having 0.70 kg/m2, a 15.83% chance of having 0.75 kg/m2, and a 2.50% chance of having 0.80 kg/m2 of photosynthetic biomass."
+        },
+        {
+            "id": 51,
+            "origin": "foto_1",
+            "content": "With a LAI of 6.5, temperature at 13°C, and radiation at 150 MJ/m2, there is a 2.39% chance of having 0.30 kg/m2 of photosynthetic biomass, an 18%.39% chance of having 0.35 kg/m2, a 33.76% chance of having 0.40 kg/m2, a 27.06% chance of having 0.45 kg/m2, a 15.16% chance of having 0.50 kg/m2, and a 3.19% chance of having 0.55 kg/m2 of photosynthetic biomass."
+        },
+        {
+            "id": 52,
+            "origin": "foto_1",
+            "content": "With a LAI of 6.5, temperature at 13°C, and radiation between 150-199 MJ/m2, there is a 9.6% chance of having 0.45 kg/m2 of photosynthetic biomass, a 23.37% chance of having 0.50 kg/m2, a 30.5% chance of having 0.55 kg/m2, a 22.87% chance of having 0.60 kg/m2, a 11.83% chance of having 0.65 kg/m2, and a 1.83% chance of having 0.70 kg/m2 of photosynthetic biomass."
+        },
+        {
+            "id": 53,
+            "origin": "foto_1",
+            "content": "With a LAI of 6.5, temperature at 13°C, and radiation between 200-249 MJ/m2, there is a 5.83% chance of having 0.55 kg/m2 of photosynthetic biomass, an 18%.20% chance of having 0.60 kg/m2, a 25.70% chance of having 0.65 kg/m2, a 24.83% chance of having 0.70 kg/m2, a 16.43% chance of having 0.75 kg/m2, an 8.70% chance of having 0.80 kg/m2, and a 0.30% chance of having 0.85 kg/m2 of photosynthetic biomass."
+        },
+        {
+            "id": 54,
+            "origin": "foto_1",
+            "content": "With a LAI of 6.5, temperature at 13°C, and radiation at 250 MJ/m2, there is a 4.5% chance of having 0.65 kg/m2 of photosynthetic biomass, a 16.73% chance of having 0.70 kg/m2, a 22.9% chance of having 0.75 kg/m2, a 20.07% chance of having 0.80 kg/m2, a 20.13% chance of having 0.85 kg/m2, a 12.4% chance of having 0.90 kg/m2, and a 3.27% chance of having 0.95 kg/m2 of photosynthetic biomass."
+        },
+        {
+            "id": 55,
+            "origin": "foto_1",
+            "content": "With a LAI of 6.5, temperature between 13-14.9°C, and radiation at 150 MJ/m2, there is a 6.03% chance of having 0.30 kg/m2 of photosynthetic biomass, a 24.7% chance of having 0.35 kg/m2, a 36.97% chance of having 0.40 kg/m2, a 23.17% chance of having 0.45 kg/m2, and a 9.13% chance of having 0.50 kg/m2 of photosynthetic biomass."
+        },
+        {
+            "id": 56,
+            "origin": "foto_1",
+            "content": "With a LAI of 6.5, temperature between 13-14.9°C, and radiation between 150-199 MJ/m2, there is a 1.63% chance of having 0.40 kg/m2 of photosynthetic biomass, a 17.47% chance of having 0.45 kg/m2, a 31.9% chance of having 0.50 kg/m2, a 28.27% chance of having 0.55 kg/m2, a 15.9% chance of having 0.60 kg/m2, and a 4.83% chance of having 0.65 kg/m2 of photosynthetic biomass."
+        },
+        {
+            "id": 57,
+            "origin": "foto_1",
+            "content": "With a LAI of 6.5, temperature between 13-14.9°C, and radiation between 200-249 MJ/m2, there is a 0.87% chance of having 0.50 kg/m2 of photosynthetic biomass, a 15.37% chance of having 0.55 kg/m2, a 27.4% chance of having 0.60 kg/m2, a 25.33% chance of having 0.65 kg/m2, a 19.99% chance of having 0.70 kg/m2, a 10.67% chance of having 0.75 kg/m2, and a 0.37% chance of having 0.80 kg/m2 of photosynthetic biomass."
+        },
+        {
+            "id": 58,
+            "origin": "foto_1",
+            "content": "With a LAI of 6.5, temperature between 13-14.9°C, and radiation at 250 MJ/m2, there is a 1.43% chance of having 0.60 kg/m2 of photosynthetic biomass, a 15.93% chance of having 0.65 kg/m2, a 24.5% chance of having 0.70 kg/m2, a 20.3% chance of having 0.75 kg/m2, a 21.87% chance of having 0.80 kg/m2, a 13.57% chance of having 0.85 kg/m2, and a 2.4% chance of having 0.90 kg/m2 of photosynthetic biomass."
+        },
+        {
+            "id": 59,
+            "origin": "foto_1",
+            "content": "With a LAI of 6.5, temperature between 15-16.9°C, and radiation at 150 MJ/m2, there is a 9.87% chance of having 0.30 kg/m2 of photosynthetic biomass, a 32.63% chance of having 0.35 kg/m2, a 34.3% chance of having 0.40 kg/m2, an 18%.83% chance of having 0.45 kg/m2, and a 4.37% chance of having 0.50 kg/m2 of photosynthetic biomass."
+        },
+        {
+            "id": 60,
+            "origin": "foto_1",
+            "content": "With a LAI of 6.5, temperature between 15-16.9°C, and radiation between 150-199 MJ/m2, there is a 7.3% chance of having 0.40 kg/m2 of photosynthetic biomass, a 24.57% chance of having 0.45 kg/m2, a 33.17% chance of having 0.50 kg/m2, a 23.93% chance of having 0.55 kg/m2, a 10.97% chance of having 0.60 kg/m2, and a 0.07% chance of having 0.65 kg/m2 of photosynthetic biomass."
+        },
+        {
+            "id": 61,
+            "origin": "foto_1",
+            "content": "With a LAI of 6.5, temperature between 15-16.9°C, and radiation between 200-249 MJ/m2, there is a 7.77% chance of having 0.50 kg/m2 of photosynthetic biomass, a 22.73% chance of having 0.55 kg/m2, a 26.8% chance of having 0.60 kg/m2, a 26.53% chance of having 0.65 kg/m2, a 14.2% chance of having 0.70 kg/m2, and a 1.97% chance of having 0.75 kg/m2 of photosynthetic biomass."
+        },
+        {
+            "id": 62,
+            "origin": "foto_1",
+            "content": "With a LAI of 6.5, temperature between 15-16.9°C, and radiation at 250 MJ/m2, there is a 10.33% chance of having 0.60 kg/m2 of photosynthetic biomass, a 22.53% chance of having 0.65 kg/m2, a 21.73% chance of having 0.70 kg/m2, a 25.57% chance of having 0.75 kg/m2, a 15.37% chance of having 0.80 kg/m2, and a 4.47% chance of having 0.85 kg/m2 of photosynthetic biomass."
+        },
+        {
+            "id": 63,
+            "origin": "foto_1",
+            "content": "With a LAI of 6.5, temperature at 17.0°C, and radiation at 150 MJ/m2, there is a 16.23% chance of having 0.30 kg/m2 of photosynthetic biomass, a 37.2% chance of having 0.35 kg/m2, a 31.8% chance of having 0.40 kg/m2, a 14.4% chance of having 0.45 kg/m2, and a 0.37% chance of having 0.50 kg/m2 of photosynthetic biomass."
+        },
+        {
+            "id": 64,
+            "origin": "foto_1",
+            "content": "With a LAI of 6.5, temperature at 17.0°C, and radiation between 150-199 MJ/m2, there is a 12.67% chance of having 0.40 kg/m2 of photosynthetic biomass, a 31.7% chance of having 0.45 kg/m2, a 32.53% chance of having 0.50 kg/m2, an 18%.33% chance of having 0.55 kg/m2, and a 4.77% chance of having 0.60 kg/m2 of photosynthetic biomass."
+        },
+        {
+            "id": 65,
+            "origin": "foto_1",
+            "content": "With a LAI of 6.5, temperature at 17.0°C, and radiation between 200-249 MJ/m2, there is a 0.0003% chance of having 0.45 kg/m2 of photosynthetic biomass, a 15.00% chance of having 0.50 kg/m2, a 29.60% chance of having 0.55 kg/m2, a 27.63% chance of having 0.60 kg/m2, a 19.63% chance of having 0.65 kg/m2, and an 8.10% chance of having 0.70 kg/m2 of photosynthetic biomass."
+        },
+        {
+            "id": 66,
+            "origin": "foto_1",
+            "content": "With a LAI of 6.5, temperature at 17.0°C, and radiation at 250 MJ/m2, there is a 1.30% chance of having 0.55 kg/m2 of photosynthetic biomass, an 18%.30% chance of having 0.60 kg/m2, a 26.43% chance of having 0.65 kg/m2, a 24.53% chance of having 0.70 kg/m2, a 19.17% chance of having 0.75 kg/m2, a 10.20% chance of having 0.80 kg/m2, and a 0.003% chance of having 0.85 kg/m2 of photosynthetic biomass."
+        }
+    ],
+    "wep_based_premises": [
+        {
+            "id": 0,
+            "origin": "lai_1",
+            "content": "It is impossible that the leaf area index (LAI) is between 0.0-0.5, 0.5-1.5, or 1.5-2.5. Furthermore, it is improbable that it is between 2.5 and 3.5, unlikely that it is in the range 3.5-4.5 or 4.5-5.5. It is also probably not in the range 5.5-6.5, and improbable to be >6.5."
+        },
+        {
+            "id": 1,
+            "origin": "straaling_1",
+            "content": "The amount of radiation received by the wheat crop is probably not between 200-249 MJ/m2, and it is also unlikely to be 250 MJ/m2 or more or 150 MJ/m2 or less. However, the radiation level has roughly equal chances of being between 150-199 MJ/m2."
+        },
+        {
+            "id": 2,
+            "origin": "temp_1",
+            "content": "The chance of mildew growth is considered to be little chance when the temperature is below 13.0°C or above 17.0°C. However, the likelihood of mildew growth increases when the temperature is between 13.0°C and 14.9°C, denoted as better than even, and is unlikely when the temperature is between 15.0°C and 16.9°C."
+        },
+        {
+            "id": 3,
+            "origin": "foto_1",
+            "content": "Given a leaf area index of 1.5 to 2.5, a temperature of 13.0°C, and a radiation of 150 MJ/m^2, it is impossible for the photosynthetic biomass to be 0.00 kg/m^2, 0.05 kg/m^2, or any other value up to 0.15 kg/m^2. It is almost impossible for it to be 0.20 kg/m^2, it is probably not the case that it is 0.25 kg/m^2, there are about even chances for 0.30 kg/m^2, it is unlikely for 0.35 kg/m^2, highly unlikely for 0.40 kg/m^2, and impossible for all values above 0.40 kg/m^2. "
+        },
+        {
+            "id": 4,
+            "origin": "foto_1",
+            "content": "Given a leaf area index of 1.5 to 2.5, a temperature of 13.0°C, and a radiation of 150 to 199 MJ/m^2, it is impossible for the photosynthetic biomass to be 0.00 kg/m^2, 0.05 kg/m^2, or any other value up to 0.20 kg/m^2. It is almost impossible for it to be 0.25 kg/m^2, there is little chance for 0.30 kg/m^2, it is probably not the case that it is 0.35 kg/m^2 and 0.40 kg/m^2, unlikely that it is 0.45 kg/m^2, highly unlikely that it is 0.50 kg/m^2, there is almost no chance that is is 0.55 kg/m^2, and all values above or equal 0.60 kg/m^2 are impossible."
+        },
+        {
+            "id": 5,
+            "origin": "foto_1",
+            "content": "Given that the leaf area index is between 1.5 and 2.5, the temperature is 13.0 degrees Celsius, and the radiation is between 200 and 249 MJ/m2, then it is impossible for the photosynthetic biomass to be 0.00 kg/m2, 0.05 kg/m2, 0.10 kg/m2, 0.15 kg/m2, 0.20 kg/m2, 0.25 kg/m2, 0.30 kg/m2, and it is highly unlikely for it to be 0.35 kg/m2, it is unlikely for it to be 0.40 kg/m2, it is probably not the case that it is 0.45 kg/m2, 0.50 kg/m2, it is improbable for it to be 0.55 kg/m2, there is almost no chance for it to be 0.60 kg/m2, and it is impossible for it to be 0.65 kg/m2, 0.70 kg/m2, 0.75 kg/m2, 0.80 kg/m2, 0.85 kg/m2, 0.90 kg/m2, and 0.95 kg/m2."
+        },
+        {
+            "id": 6,
+            "origin": "foto_1",
+            "content": "Given that the leaf area index is between 1.5 and 2.5, the temperature is 13.0 degrees Celsius, and the radiation is 250 MJ/m2, then it is impossible for the photosynthetic biomass to be 0.00 kg/m2, 0.05 kg/m2, 0.10 kg/m2, 0.15 kg/m2, 0.20 kg/m2, 0.25 kg/m2, 0.30 kg/m2, 0.35 kg/m2, almost no chance for it to be 0.40 kg/m2, chances are slight for it to be 0.45 kg/m2, it is probably not the case that it is 0.50 kg/m2, 0.55 kg/m2, it is unlikely for it to be 0.60 kg/m2, it is highly unlikely for it to be 0.65 kg/m2, there is almost no chance for it to be 0.70 kg/m2, and it is impossible for it to be 0.75 kg/m2, 0.80 kg/m2, 0.85 kg/m2, 0.90 kg/m2, and 0.95 kg/m2."
+        },
+        {
+            "id": 7,
+            "origin": "foto_1",
+            "content": "Given that the leaf area index is between 1.5 and 2.5, the temperature is between 13.0 and 14.9 degrees Celsius, and the radiation is less than 150 MJ/m2, it is impossible for the photosynthetic biomass to be 0.00 kg/m2, 0.05 kg/m2, 0.10 kg/m2, 0.15 kg/m2, or 0.45 kg/m2 to 0.95 kg/m2. It is highly unlikely for the photosynthetic biomass to be 0.20 kg/m2, but there are about even chances for it to be 0.25 kg/m2 or 0.30 kg/m2. There is little chance for the photosynthetic biomass to be 0.35 kg/m2, and almost no chance for it to be 0.40 kg/m2."
+        },
+        {
+            "id": 8,
+            "origin": "foto_1",
+            "content": "Given that the leaf area index is between 1.5 and 2.5, the temperature is between 13.0 and 14.9 degrees Celsius, and the radiation is between 150 and 199 MJ/m2, it is impossible for the photosynthetic biomass to be 0.00 kg/m2, 0.05 kg/m2, 0.10 kg/m2, 0.15 kg/m2, or 0.20 kg/m2. There is almost no chance for the photosynthetic biomass to be 0.25 kg/m2, and unlikely for it to be 0.30 kg/m2. However, there are about even chances for the photosynthetic biomass to be 0.35 kg/m2. It is probably not the case that the photosynthetic biomass is 0.40 kg/m2, and chances are slight for it to be 0.45 kg/m2. There is almost no chance for the photosynthetic biomass to be 0.50 kg/m2, and it is impossible for it to be 0.55 kg/m2 to 0.95 kg/m2."
+        },
+        {
+            "id": 9,
+            "origin": "foto_1",
+            "content": "Given that the leaf area index is between 1.5 and 2.5, the temperature is between 13.0 and 14.9 degrees Celsius, and the radiation is between 200 and 249 MJ/m2, it is impossible for the photosynthetic biomass to be 0.00 kg/m2, 0.05 kg/m2, 0.10 kg/m2, 0.15 kg/m2, 0.20 kg/m2, or 0.25 kg/m2. There is almost no chance for the photosynthetic biomass to be 0.30 kg/m2, and unlikely for it to be 0.35 kg/m2. However, there are about even chances for the photosynthetic biomass to be 0.40 kg/m2. It is probably not the case that the photosynthetic biomass is 0.45 kg/m2, and chances are slight for it to be 0.50 kg/m2. There is almost no chance for the photosynthetic biomass to be 0.55 kg/m2, and it is impossible for it to be 0.60 kg/m2 to 0.95 kg/m2."
+        },
+        {
+            "id": 10,
+            "origin": "foto_1",
+            "content": "Given that the leaf area index is between 1.5 and 2.5, the temperature is between 13.0 and 14.9 degrees Celsius, and the radiation is around 250 MJ/m2, then it is impossible for the photosynthetic biomass to be 0.00 kg/m2, 0.05 kg/m2, 0.10 kg/m2, 0.15 kg/m2, 0.20 kg/m2, 0.25 kg/m2, 0.30 kg/m2, and there is almost no chance for it to be 0.35 kg/m2, chances are slight for it to be 0.40 kg/m2, it is probably not 0.45 kg/m2, there are about even chances for it to be 0.50 kg/m2, it is unlikely for it to be 0.55 kg/m2, chances are slight for it to be 0.60 kg/m2, there is almost no chance for it to be 0.65 kg/m2, it is impossible for it to be 0.70 kg/m2, 0.75 kg/m2, 0.80 kg/m2, 0.85 kg/m2, 0.90 kg/m2, and 0.95 kg/m2."
+        },
+        {
+            "id": 11,
+            "origin": "foto_1",
+            "content": "Given that the leaf area index is between 1.5 and 2.5, the temperature is between 15.0 and 16.9 degrees Celsius, and the radiation is less than 150 MJ/m2, then it is impossible for the photosynthetic biomass to be 0.00 kg/m2, 0.05 kg/m2, 0.10 kg/m2, 0.15 kg/m2, 0.40 kg/m2, 0.45 kg/m2, 0.50 kg/m2, 0.55 kg/m2, 0.60 kg/m2, 0.65 kg/m2, 0.70 kg/m2, 0.75 kg/m2, 0.80 kg/m2, 0.85 kg/m2, 0.90 kg/m2, or 0.95 kg/m2. It is also highly unlikely for the photosynthetic biomass to be 0.35 kg/m2, and probably not 0.30 kg/m2. However, there is a slight chance that the photosynthetic biomass could be 0.20 kg/m2, and there are about even chances that it could be 0.25 kg/m2."
+        },
+        {
+            "id": 12,
+            "origin": "foto_1",
+            "content": "Given that the leaf area index is between 1.5 and 2.5, the temperature is between 15.0 and 16.9 degrees Celsius, and the radiation is between 150 and 199 MJ/m2, then it is impossible for the photosynthetic biomass to be 0.00 kg/m2, 0.05 kg/m2, 0.10 kg/m2, 0.15 kg/m2, 0.20 kg/m2, and 0.50 kg/m2 to 0.95 kg/m2; it is highly unlikely for it to be 0.25 kg/m2, it is probably not the case that it is 0.30 kg/m2, there are about even chances for it to be 0.35 kg/m2, it is unlikely for it to be 0.40 kg/m2, and there is almost no chance for it to be 0.45 kg/m2."
+        },
+        {
+            "id": 13,
+            "origin": "foto_1",
+            "content": "Given that the leaf area index is between 1.5 and 2.5, the temperature is between 15.0 and 16.9 degrees Celsius, and the radiation is between 200 and 249 MJ/m2, then it is impossible for the photosynthetic biomass to be 0.00 kg/m2, 0.05 kg/m2, 0.10 kg/m2, 0.15 kg/m2, 0.20 kg/m2, 0.25 kg/m2, and highly unlikely for it to be 0.30 kg/m2, it is probably not the case that it is 0.35 kg/m2, 0.40 kg/m2, 0.45 kg/m2, it is highly unlikely for it to be 0.50 kg/m2, there is almost no chance for it to be 0.55 kg/m2, and it is impossible for it to be 0.60 kg/m2, 0.65 kg/m2, 0.70 kg/m2, 0.75 kg/m2, 0.80 kg/m2, 0.85 kg/m2, 0.90 kg/m2, and 0.95 kg/m2."
+        },
+        {
+            "id": 14,
+            "origin": "foto_1",
+            "content": "Given that the leaf area index is between 1.5 and 2.5, the temperature is between 15.0 and 16.9 degrees Celsius, and the radiation is 250 MJ/m2, it is impossible for the photosynthetic biomass to be 0.00 kg/m2, 0.05 kg/m2, 0.10 kg/m2, 0.15 kg/m2, 0.20 kg/m2, 0.25 kg/m2, 0.30 kg/m2, and it is highly unlikely for it to be 0.35 kg/m2, unlikely for it to be 0.40 kg/m2, it is probably not the case that it is 0.45 kg/m2 or 0.50 kg/m2, it is improbable for it to be 0.55 kg/m2, there is almost no chance for it to be 0.60 kg/m2, and it is impossible for it to be 0.65 kg/m2, 0.70 kg/m2, 0.75 kg/m2, 0.80 kg/m2, 0.85 kg/m2, 0.90 kg/m2, or 0.95 kg/m2."
+        },
+        {
+            "id": 15,
+            "origin": "foto_1",
+            "content": "Given that the leaf area index is between 1.5 and 2.5, the temperature is 17.0 degrees Celsius, and the radiation is 150 MJ/m2, then it is impossible for the photosynthetic biomass to be 0.00 kg/m2, 0.05 kg/m2, 0.10 kg/m2, 0.40 kg/m2, 0.45 kg/m2, 0.50 kg/m2, 0.55 kg/m2, 0.60 kg/m2, 0.65 kg/m2, 0.70 kg/m2, 0.75 kg/m2, 0.80 kg/m2, 0.85 kg/m2, 0.90 kg/m2, or 0.95 kg/m2. There is almost no chance for the photosynthetic biomass to be 0.15 kg/m2 or 0.35 kg/m2, it is unlikely for it to be 0.20 kg/m2, there are about even chances that it is 0.25 kg/m2, and it is probably not the case that it is 0.30 kg/m2."
+        },
+        {
+            "id": 16,
+            "origin": "foto_1",
+            "content": "Given that the leaf area index is between 1.5 and 2.5, the temperature is 17.0 degrees Celsius, and the radiation is between 150 and 199 MJ/m2, then it is impossible for the photosynthetic biomass to be 0.00 kg/m2, 0.05 kg/m2, 0.10 kg/m2, 0.15 kg/m2, 0.20 kg/m2, and 0.50 kg/m2 to 0.95 kg/m2. There is little chance for it to be 0.25 kg/m2, there are about even chances for it to be 0.30 kg/m2, it is probably not the case that it is 0.35 kg/m2, it is improbable for it to be 0.40 kg/m2, and there is almost no chance for it to be 0.45 kg/m2."
+        },
+        {
+            "id": 17,
+            "origin": "foto_1",
+            "content": "Given that the leaf area index is between 1.5 and 2.5, the temperature is 17.0 degrees Celsius, and the radiation is between 200 and 249 MJ/m2, then it is impossible for the photosynthetic biomass to be 0.00 kg/m2, 0.05 kg/m2, 0.10 kg/m2, 0.15 kg/m2, 0.20 kg/m2, 0.25 kg/m2, and 0.55 kg/m2 to 0.95 kg/m2. It is improbable for the photosynthetic biomass to be 0.30 kg/m2, and it is probably not the case that the photosynthetic biomass is 0.35 kg/m2 and 0.40 kg/m2. It is unlikely for the photosynthetic biomass to be 0.45 kg/m2, and there is almost no chance for the photosynthetic biomass to be 0.50 kg/m2."
+        },
+        {
+            "id": 18,
+            "origin": "foto_1",
+            "content": "Given that the leaf area index is between 1.5 and 2.5, the temperature is 17.0 degrees Celsius, and the radiation is 250 MJ/m2, then it is impossible for the photosynthetic biomass to be 0.00 kg/m2, 0.05 kg/m2, 0.10 kg/m2, 0.15 kg/m2, 0.20 kg/m2, 0.25 kg/m2, and there is almost no chance for it to be 0.30 kg/m2, there is also little chance for it to be 0.35 kg/m2, it is probably not the case that it is 0.40 kg/m2 or 0.45 kg/m2, it is unlikely for it to be 0.50 kg/m2, and it is highly unlikely for it to be 0.55 kg/m2. It is also impossible for the photosynthetic biomass to be 0.60 kg/m2, 0.65 kg/m2, 0.70 kg/m2, 0.75 kg/m2, 0.80 kg/m2, 0.85 kg/m2, 0.90 kg/m2, or 0.95 kg/m2."
+        },
+        {
+            "id": 19,
+            "origin": "foto_1",
+            "content": "Given that the leaf area index is between 2.5 and 3.5, the temperature is 13.0 degrees Celsius, and the radiation is 150 MJ/m2, then it is impossible for the photosynthetic biomass to be 0.00 kg/m2, 0.05 kg/m2, 0.10 kg/m2, 0.15 kg/m2, 0.20 kg/m2, and 0.50 kg/m2 to 0.95 kg/m2. It is highly unlikely for the photosynthetic biomass to be 0.25 kg/m2, and it is probably not 0.30 kg/m2 or 0.40 kg/m2. However, there are about even chances for the photosynthetic biomass to be 0.35 kg/m2."
+        },
+        {
+            "id": 20,
+            "origin": "foto_1",
+            "content": "Given that the leaf area index is between 2.5 and 3.5, the temperature is 13.0 degrees Celsius, and the radiation is between 150 and 199 MJ/m2, it is impossible for the photosynthetic biomass to be 0.00 kg/m2, 0.05 kg/m2, 0.10 kg/m2, 0.15 kg/m2, 0.20 kg/m2, 0.25 kg/m2, 0.30 kg/m2, and highly unlikely for it to be 0.35 kg/m2, it is probably not the case that it is 0.40 kg/m2, 0.45 kg/m2, 0.50 kg/m2, it is improbable for it to be 0.55 kg/m2, there is almost no chance for it to be 0.60 kg/m2, and it is impossible for it to be 0.65 kg/m2, 0.70 kg/m2, 0.75 kg/m2, 0.80 kg/m2, 0.85 kg/m2, 0.90 kg/m2, and 0.95 kg/m2."
+        },
+        {
+            "id": 21,
+            "origin": "foto_1",
+            "content": "Given that the leaf area index is between 2.5 and 3.5, the temperature is 13.0 degrees Celsius, and the radiation is between 200 and 249 MJ/m2, it is impossible for the photosynthetic biomass to be 0.00 kg/m2, 0.05 kg/m2, 0.10 kg/m2, 0.15 kg/m2, 0.20 kg/m2, 0.25 kg/m2, 0.30 kg/m2, 0.35 kg/m2, and there is almost no chance for it to be 0.40 kg/m2, it is improbable for it to be 0.45 kg/m2, it is probably not 0.50 kg/m2, 0.55 kg/m2, 0.60 kg/m2, there is little chance for it to be 0.65 kg/m2, there is almost no chance for it to be 0.70 kg/m2, it is impossible for it to be 0.75 kg/m2, 0.80 kg/m2, 0.85 kg/m2, 0.90 kg/m2, and 0.95 kg/m2."
+        },
+        {
+            "id": 22,
+            "origin": "foto_1",
+            "content": "Given that the leaf area index is between 2.5 and 3.5, the temperature is 13.0 degrees Celsius, and the radiation is 250 MJ/m2, then it is impossible for the photosynthetic biomass to be 0.00 kg/m2, 0.05 kg/m2, 0.10 kg/m2, 0.15 kg/m2, 0.20 kg/m2, 0.25 kg/m2, 0.30 kg/m2, 0.35 kg/m2, 0.40 kg/m2, or 0.45 kg/m2. There is almost no chance for the photosynthetic biomass to be 0.50 kg/m2, it is unlikely for it to be 0.55 kg/m2, it is probably not the case that it is 0.60 kg/m2 or 0.65 kg/m2, it is unlikely for it to be 0.70 kg/m2, chances are slight for it to be 0.75 kg/m2, there is almost no chance for it to be 0.80 kg/m2, and it is impossible for it to be 0.85 kg/m2, 0.90 kg/m2, or 0.95 kg/m2."
+        },
+        {
+            "id": 23,
+            "origin": "foto_1",
+            "content": "Given that the leaf area index is between 2.5 and 3.5, the temperature is between 13.0 and 14.9 degrees Celsius, and the radiation is less than 150 MJ/m2, then it is impossible for the photosynthetic biomass to be 0.00 kg/m2, 0.05 kg/m2, 0.10 kg/m2, 0.15 kg/m2, 0.20 kg/m2, and 0.50 kg/m2 to 0.95 kg/m2. There is little chance for the photosynthetic biomass to be 0.25 kg/m2, it is probably not 0.30 kg/m2 or 0.35 kg/m2, it is unlikely to be 0.40 kg/m2, and there is almost no chance for it to be 0.45 kg/m2."
+        },
+        {
+            "id": 24,
+            "origin": "foto_1",
+            "content": "Given that the leaf area index is between 2.5 and 3.5, the temperature is between 13.0 and 14.9 degrees Celsius, and the radiation is between 150 and 199 MJ/m2, then it is impossible for the photosynthetic biomass to be 0.00 kg/m2, 0.05 kg/m2, 0.10 kg/m2, 0.15 kg/m2, 0.20 kg/m2, 0.25 kg/m2, and there is almost no chance for it to be 0.30 kg/m2, there is a little chance for it to be 0.35 kg/m2, it is probably not the case that it is 0.40 kg/m2 or 0.45 kg/m2, it is unlikely for it to be 0.50 kg/m2, there is almost no chance for it to be 0.55 kg/m2, and it is impossible for it to be 0.60 kg/m2, 0.65 kg/m2, 0.70 kg/m2, 0.75 kg/m2, 0.80 kg/m2, 0.85 kg/m2, 0.90 kg/m2, or 0.95 kg/m2."
+        },
+        {
+            "id": 25,
+            "origin": "foto_1",
+            "content": "Given that the leaf area index is between 2.5 and 3.5, the temperature is between 13.0 and 14.9 degrees Celsius, and the radiation is between 200 and 249 MJ/m2, then it is impossible for the photosynthetic biomass to be 0.00 kg/m2, 0.05 kg/m2, 0.10 kg/m2, 0.15 kg/m2, 0.20 kg/m2, 0.25 kg/m2, 0.30 kg/m2, 0.35 kg/m2, highly unlikely for it to be 0.40 kg/m2, it is probably not the case that it is 0.45 kg/m2, 0.50 kg/m2, 0.55 kg/m2, there is only little chance for it to be 0.60 kg/m2, there is almost no chance for it to be 0.65 kg/m2, and it is impossible for it to be 0.70 kg/m2, 0.75 kg/m2, 0.80 kg/m2, 0.85 kg/m2, 0.90 kg/m2, and 0.95 kg/m2."
+        },
+        {
+            "id": 26,
+            "origin": "foto_1",
+            "content": "Given that the leaf area index is between 2.5 and 3.5, the temperature is between 13.0 and 14.9 degrees Celsius, and the radiation is less than 250 MJ/m2, then it is impossible for the photosynthetic biomass to be 0.00 kg/m2, 0.05 kg/m2, 0.10 kg/m2, 0.15 kg/m2, 0.20 kg/m2, 0.25 kg/m2, 0.30 kg/m2, 0.35 kg/m2, or 0.40 kg/m2; there is almost no chance for the photosynthetic biomass to be 0.45 kg/m2; it is slight chances for the photosynthetic biomass to be 0.50 kg/m2; it is probably not the case that the photosynthetic biomass is 0.55 kg/m2 or 0.60 kg/m2; it is unlikely for the photosynthetic biomass to be 0.65 kg/m2; there are slight chances for the photosynthetic biomass to be 0.70 kg/m2; there is almost no chance for the photosynthetic biomass to be 0.75 kg/m2; and it is impossible for the photosynthetic biomass to be 0.80 kg/m2, 0.85 kg/m2, 0.90 kg/m2, or 0.95 kg/m2."
+        },
+        {
+            "id": 27,
+            "origin": "foto_1",
+            "content": "Given that the leaf area index is between 2.5 and 3.5, the temperature is between 15.0 and 16.9 degrees Celsius, and the radiation is 150 MJ/m2, then it is impossible for the photosynthetic biomass to be 0.00 kg/m2, 0.05 kg/m2, 0.10 kg/m2, 0.15 kg/m2, 0.20 kg/m2, and 0.45 kg/m2 to 0.95 kg/m2. It is unlikely for the photosynthetic biomass to be 0.25 kg/m2, and there are about even chances for it to be 0.30 kg/m2. It is probably not the case that the photosynthetic biomass is 0.35 kg/m2, and it is improbable for it to be 0.40 kg/m2."
+        },
+        {
+            "id": 28,
+            "origin": "foto_1",
+            "content": "Given that the leaf area index is between 2.5 and 3.5, the temperature is between 15.0 and 16.9 degrees Celsius, and the radiation is between 150 and 199 MJ/m2, then it is impossible for the photosynthetic biomass to be 0.00 kg/m2, 0.05 kg/m2, 0.10 kg/m2, 0.15 kg/m2, 0.20 kg/m2, 0.25 kg/m2, and highly unlikely for it to be 0.50 kg/m2, while there is almost no chance for it to be 0.30 kg/m2, it is probably not the case that it is 0.35 kg/m2 or 0.45 kg/m2, and there are about even chances for it to be 0.40 kg/m2, and it is impossible for it to be 0.55 kg/m2, 0.60 kg/m2, 0.65 kg/m2, 0.70 kg/m2, 0.75 kg/m2, 0.80 kg/m2, 0.85 kg/m2, 0.90 kg/m2, and 0.95 kg/m2."
+        },
+        {
+            "id": 29,
+            "origin": "foto_1",
+            "content": "Given that the leaf area index is between 2.5 and 3.5, the temperature is between 15.0 and 16.9 degrees Celsius, and the radiation is between 200 and 249 MJ/m2, then it is impossible for the photosynthetic biomass to be 0.00 kg/m2, 0.05 kg/m2, 0.10 kg/m2, 0.15 kg/m2, 0.20 kg/m2, 0.25 kg/m2, 0.30 kg/m2, and there is almost no chance for it to be 0.35 kg/m2, the chances are slight for it to be 0.40 kg/m2, it is probably not 0.45 kg/m2, 0.50 kg/m2, it is unlikely to be 0.55 kg/m2, there is almost no chance for it to be 0.60 kg/m2, and it is impossible for it to be 0.65 kg/m2, 0.70 kg/m2, 0.75 kg/m2, 0.80 kg/m2, 0.85 kg/m2, 0.90 kg/m2, and 0.95 kg/m2."
+        },
+        {
+            "id": 30,
+            "origin": "foto_1",
+            "content": "Given that the leaf area index is between 2.5 and 3.5, the temperature is between 15.0 and 16.9 degrees Celsius, and the radiation is more than 250 MJ/m2, then it is impossible for the photosynthetic biomass to be 0.00 kg/m2, 0.05 kg/m2, 0.10 kg/m2, 0.15 kg/m2, 0.20 kg/m2, 0.25 kg/m2, 0.30 kg/m2, 0.35 kg/m2, 0.40 kg/m2, and highly unlikely for it to be 0.45 kg/m2. It is probably not possible for the photosynthetic biomass to be 0.50 kg/m2, 0.55 kg/m2, 0.60 kg/m2, and improbable for it to be 0.65 kg/m2. There is almost no chance for the photosynthetic biomass to be 0.70 kg/m2, and impossible for it to be 0.75 kg/m2, 0.80 kg/m2, 0.85 kg/m2, 0.90 kg/m2, and 0.95 kg/m2."
+        },
+        {
+            "id": 31,
+            "origin": "foto_1",
+            "content": "Given that the leaf area index is between 2.5 and 3.5, the temperature is 17.0 degrees Celsius, and the radiation is 150 MJ/m2, then it is impossible for the photosynthetic biomass to be 0.00 kg/m2, 0.05 kg/m2, 0.10 kg/m2, 0.15 kg/m2, 0.45 kg/m2, 0.50 kg/m2, 0.55 kg/m2, 0.60 kg/m2, 0.65 kg/m2, 0.70 kg/m2, 0.75 kg/m2, 0.80 kg/m2, 0.85 kg/m2, 0.90 kg/m2, or 0.95 kg/m2. There is almost no chance for the photosynthetic biomass to be 0.20 kg/m2 or 0.40 kg/m2. It is probably not the case that the photosynthetic biomass is 0.25 kg/m2 or 0.35 kg/m2. There are about even chances for the photosynthetic biomass to be 0.30 kg/m2."
+        },
+        {
+            "id": 32,
+            "origin": "foto_1",
+            "content": "Given that the leaf area index is between 2.5 and 3.5, the temperature is 17.0 degrees Celsius, and the radiation is between 150 and 199 MJ/m2, it is impossible for the photosynthetic biomass to be 0.00 kg/m2, 0.05 kg/m2, 0.10 kg/m2, 0.15 kg/m2, 0.20 kg/m2, 0.25 kg/m2, 0.55 kg/m2, 0.60 kg/m2, 0.65 kg/m2, 0.70 kg/m2, 0.75 kg/m2, 0.80 kg/m2, 0.85 kg/m2, 0.90 kg/m2, or 0.95 kg/m2. It is highly unlikely for the photosynthetic biomass to be 0.30 kg/m2, and it is probably not 0.35 kg/m2. There are about even chances for the photosynthetic biomass to be 0.40 kg/m2, but it is unlikely to be 0.45 kg/m2. There is almost no chance for the photosynthetic biomass to be 0.50 kg/m2."
+        },
+        {
+            "id": 33,
+            "origin": "foto_1",
+            "content": "Given that the leaf area index is between 2.5 and 3.5, the temperature is 17.0 degrees Celsius, and the radiation is between 200 and 249 MJ/m2, then it is impossible for the photosynthetic biomass to be 0.00 kg/m2, 0.05 kg/m2, 0.10 kg/m2, 0.15 kg/m2, 0.20 kg/m2, 0.25 kg/m2, 0.30 kg/m2, and there is almost no chance for it to be 0.35 kg/m2. It is probably not possible for the photosynthetic biomass to be 0.40 kg/m2, 0.45 kg/m2, 0.50 kg/m2, and it is improbable for it to be 0.55 kg/m2. There is almost no chance for the photosynthetic biomass to be 0.60 kg/m2, and it is impossible for it to be 0.65 kg/m2, 0.70 kg/m2, 0.75 kg/m2, 0.80 kg/m2, 0.85 kg/m2, 0.90 kg/m2, and 0.95 kg/m2."
+        },
+        {
+            "id": 34,
+            "origin": "foto_1",
+            "content": "Given that the leaf area index is between 2.5 and 3.5, the temperature is 17.0 degrees Celsius, and the radiation is 250 MJ/m2, then it is impossible for the photosynthetic biomass to be 0.00 kg/m2, 0.05 kg/m2, 0.10 kg/m2, 0.15 kg/m2, 0.20 kg/m2, 0.25 kg/m2, 0.30 kg/m2, 0.35 kg/m2, and there is almost no chance for it to be 0.40 kg/m2, it is unlikely for it to be 0.45 kg/m2, it is probably not the case that it is 0.50 kg/m2 and 0.55 kg/m2, it is unlikely for it to be 0.60 kg/m2, there is almost no chance for it to be 0.65 kg/m2, and it is impossible for it to be 0.70 kg/m2, 0.75 kg/m2, 0.80 kg/m2, 0.85 kg/m2, 0.90 kg/m2, and 0.95 kg/m2."
+        },
+        {
+            "id": 35,
+            "origin": "foto_1",
+            "content": "Given that the leaf area index is between 5.5 and 6.5, the temperature is 13.0 degrees Celsius, and the radiation is 150 MJ/m2, then it is impossible for the photosynthetic biomass to be 0.00 kg/m2, 0.05 kg/m2, 0.10 kg/m2, 0.15 kg/m2, 0.20 kg/m2, 0.25 kg/m2, 0.60 kg/m2, 0.65 kg/m2, 0.70 kg/m2, 0.75 kg/m2, 0.80 kg/m2, 0.85 kg/m2, 0.90 kg/m2, or 0.95 kg/m2. It is highly unlikely for the photosynthetic biomass to be 0.30 kg/m2, unlikely for it to be 0.35 kg/m2, it is probably not the case that it is 0.40 kg/m2 or 0.45 kg/m2, it is improbable for it to be 0.50 kg/m2, and there is almost no chance for it to be 0.55 kg/m2."
+        },
+        {
+            "id": 36,
+            "origin": "foto_1",
+            "content": "Given that the leaf area index is between 5.5 and 6.5, the temperature is 13.0 degrees Celsius, and the radiation is between 150 and 199 MJ/m2, then it is impossible for the photosynthetic biomass to be 0.00 kg/m2, 0.05 kg/m2, 0.10 kg/m2, 0.15 kg/m2, 0.20 kg/m2, 0.25 kg/m2, 0.30 kg/m2, 0.35 kg/m2, and there is almost no chance for it to be 0.40 kg/m2, chances are slight for it to be 0.45 kg/m2, it is probably not 0.50 kg/m2 or 0.55 kg/m2, it is unlikely to be 0.60 kg/m2, chances are slight for it to be 0.65 kg/m2, there is almost no chance for it to be 0.70 kg/m2, it is impossible for it to be 0.75 kg/m2, 0.80 kg/m2, 0.85 kg/m2, 0.90 kg/m2, or 0.95 kg/m2."
+        },
+        {
+            "id": 37,
+            "origin": "foto_1",
+            "content": "Given that the leaf area index is between 5.5 and 6.5, the temperature is 13.0 degrees Celsius, and the radiation is between 200 and 249 MJ/m2, it is impossible for the photosynthetic biomass to be 0.00 kg/m2, 0.05 kg/m2, 0.10 kg/m2, 0.15 kg/m2, 0.20 kg/m2, 0.25 kg/m2, 0.30 kg/m2, 0.35 kg/m2, 0.40 kg/m2, 0.45 kg/m2, 0.50 kg/m2, and highly unlikely for it to be 0.80 kg/m2; it is improbable for it to be 0.55 kg/m2, it is probably not the case that it is 0.60 kg/m2, 0.65 kg/m2, 0.70 kg/m2, and 0.75 kg/m2; and it is impossible for it to be 0.85 kg/m2, 0.90 kg/m2, and 0.95 kg/m2."
+        },
+        {
+            "id": 38,
+            "origin": "foto_1",
+            "content": "Given that the leaf area index is between 5.5 and 6.5, the temperature is 13.0 degrees Celsius, and the radiation is 250 MJ/m2, then it is impossible for the photosynthetic biomass to be 0.00 kg/m2, 0.05 kg/m2, 0.10 kg/m2, 0.15 kg/m2, 0.20 kg/m2, 0.25 kg/m2, 0.30 kg/m2, 0.35 kg/m2, 0.40 kg/m2, 0.45 kg/m2, 0.50 kg/m2, or 0.55 kg/m2; there is almost no chance for the photosynthetic biomass to be 0.60 kg/m2 or 0.95 kg/m2; there is little chance for the photosynthetic biomass to be 0.65 kg/m2; it is unlikely for the photosynthetic biomass to be 0.70 kg/m2 or 0.85 kg/m2; there is little chance for the photosynthetic biomass to be 0.75 kg/m2 or 0.90 kg/m2; it is probably not the case that the photosynthetic biomass is 0.80 kg/m2."
+        },
+        {
+            "id": 39,
+            "origin": "foto_1",
+            "content": "Given that the leaf area index is between 5.5 and 6.5, the temperature is between 13.0 and 14.9 degrees Celsius, and the radiation is less than 150 MJ/m2, it is impossible for the photosynthetic biomass to be 0.00 kg/m2, 0.05 kg/m2, 0.10 kg/m2, 0.15 kg/m2, 0.20 kg/m2, 0.25 kg/m2, 0.55 kg/m2, 0.60 kg/m2, 0.65 kg/m2, 0.70 kg/m2, 0.75 kg/m2, 0.80 kg/m2, 0.85 kg/m2, 0.90 kg/m2, or 0.95 kg/m2; it is improbable for the photosynthetic biomass to be 0.30 kg/m2; it is probably not the case that the photosynthetic biomass is 0.35 kg/m2 or 0.40 kg/m2; it is unlikely for the photosynthetic biomass to be 0.45 kg/m2; and it is highly unlikely for the photosynthetic biomass to be 0.50 kg/m2."
+        },
+        {
+            "id": 40,
+            "origin": "foto_1",
+            "content": "Given that the leaf area index is between 5.5 and 6.5, the temperature is between 13.0 and 14.9 degrees Celsius, and the radiation is between 150 and 199 MJ/m2, then it is impossible for the photosynthetic biomass to be 0.00 kg/m2, 0.05 kg/m2, 0.10 kg/m2, 0.15 kg/m2, 0.20 kg/m2, 0.25 kg/m2, 0.30 kg/m2, 0.35 kg/m2, highly unlikely for it to be 0.40 kg/m2, it is probably not the case that it is 0.45 kg/m2, 0.50 kg/m2, 0.55 kg/m2, there is also little chance for it to be 0.60 kg/m2, almost no chance for it to be 0.65 kg/m2, and it is impossible for it to be 0.70 kg/m2, 0.75 kg/m2, 0.80 kg/m2, 0.85 kg/m2, 0.90 kg/m2, and 0.95 kg/m2."
+        },
+        {
+            "id": 41,
+            "origin": "foto_1",
+            "content": "Given that the leaf area index is between 5.5 and 6.5, the temperature is between 13.0 and 14.9 degrees Celsius, and the radiation is between 200 and 249 MJ/m2, then it is impossible for the photosynthetic biomass to be 0.00 kg/m2, 0.05 kg/m2, 0.10 kg/m2, 0.15 kg/m2, 0.20 kg/m2, 0.25 kg/m2, 0.30 kg/m2, 0.35 kg/m2, 0.40 kg/m2, 0.45 kg/m2, and it is highly unlikely for it to be 0.50 kg/m2, unlikely for it to be 0.55 kg/m2, it is probably not the case that it is 0.60 kg/m2 and 0.65 kg/m2, it is unlikely for it to be 0.70 kg/m2, it is highly unlikely for it to be 0.75 kg/m2, and it is impossible for it to be 0.80 kg/m2, 0.85 kg/m2, 0.90 kg/m2, and 0.95 kg/m2."
+        },
+        {
+            "id": 42,
+            "origin": "foto_1",
+            "content": "Given that the leaf area index is between 5.5 and 6.5, the temperature is between 13.0 and 14.9 degrees Celsius, and the radiation is 250 MJ/m2, it is impossible for the photosynthetic biomass to be 0.00 kg/m2, 0.05 kg/m2, 0.10 kg/m2, 0.15 kg/m2, 0.20 kg/m2, 0.25 kg/m2, 0.30 kg/m2, 0.35 kg/m2, 0.40 kg/m2, 0.45 kg/m2, 0.50 kg/m2, or 0.55 kg/m2. It is highly unlikely for the photosynthetic biomass to be 0.60 kg/m2, unlikely for it to be 0.65 kg/m2 or 0.80 kg/m2, it is probably not the case that it is 0.70 kg/m2 or 0.75 kg/m2, it is improbable for it to be 0.85 kg/m2, there is almost no chance for it to be 0.90 kg/m2, and it is impossible for it to be 0.95 kg/m2."
+        },
+        {
+            "id": 43,
+            "origin": "foto_1",
+            "content": "If the leaf area index is between 5.5 and 6.5, the temperature is between 15.0 and 16.9 degrees Celsius, and the radiation is 150 MJ/m2, then it is impossible for the photosynthetic biomass to be 0.00 kg/m2, 0.05 kg/m2, 0.10 kg/m2, 0.15 kg/m2, 0.20 kg/m2, 0.25 kg/m2, 0.55 kg/m2, 0.60 kg/m2, 0.65 kg/m2, 0.70 kg/m2, 0.75 kg/m2, 0.80 kg/m2, 0.85 kg/m2, 0.90 kg/m2, or 0.95 kg/m2. Chances are slight for 0.30 kg/m2, it is also probably not 0.35 kg/m2 and 0.40 kg/m2, it is unlikely to be 0.45 kg/m2, and there is almost no chance for 0.50 kg/m2."
+        },
+        {
+            "id": 44,
+            "origin": "foto_1",
+            "content": "If the leaf area index is between 5.5 and 6.5, the temperature is between 15.0 and 16.9 degrees Celsius, and the radiation is between 150 and 199 MJ/m2, then it is impossible for the photosynthetic biomass to be 0.00 kg/m2, 0.05 kg/m2, 0.10 kg/m2, 0.15 kg/m2, 0.20 kg/m2, 0.25 kg/m2, 0.30 kg/m2, 0.35 kg/m2, and chances are slight for it to be 0.40 kg/m2, there are about even chances for it to be 0.45 kg/m2, it is probably not 0.50 kg/m2, it is unlikely for it to be 0.55 kg/m2, it is highly unlikely for it to be 0.60 kg/m2, and it is impossible for it to be 0.65 kg/m2, 0.70 kg/m2, 0.75 kg/m2, 0.80 kg/m2, 0.85 kg/m2, 0.90 kg/m2, and 0.95 kg/m2."
+        },
+        {
+            "id": 45,
+            "origin": "foto_1",
+            "content": "Given that the leaf area index is between 5.5 and 6.5, the temperature is between 15.0 and 16.9 degrees Celsius, and the radiation is between 200 and 249 MJ/m2, it is impossible for the photosynthetic biomass to be 0.00 kg/m2, 0.05 kg/m2, 0.10 kg/m2, 0.15 kg/m2, 0.20 kg/m2, 0.25 kg/m2, 0.30 kg/m2, 0.35 kg/m2, 0.40 kg/m2, or 0.45 kg/m2. There is little chance for the photosynthetic biomass to be 0.50 kg/m2, it is probably not 0.55 kg/m2 or 0.60 kg/m2, it is unlikely to be 0.65 kg/m2, it is improbable to be 0.70 kg/m2, there is almost no chance for it to be 0.75 kg/m2, and it is impossible for it to be 0.80 kg/m2, 0.85 kg/m2, 0.90 kg/m2, or 0.95 kg/m2."
+        },
+        {
+            "id": 46,
+            "origin": "foto_1",
+            "content": "Given that the leaf area index is between 5.5 and 6.5, the temperature is between 15.0 and 16.9 degrees Celsius, and the radiation is 250 MJ/m2, it is impossible for the photosynthetic biomass to be 0.00 kg/m2, 0.05 kg/m2, 0.10 kg/m2, 0.15 kg/m2, 0.20 kg/m2, 0.25 kg/m2, 0.30 kg/m2, 0.35 kg/m2, 0.40 kg/m2, 0.45 kg/m2, or 0.50 kg/m2. There is almost no chance for the photosynthetic biomass to be 0.55 kg/m2, it is unlikely for it to be 0.60 kg/m2, it is probably not the case that it is 0.65 kg/m2 or 0.70 kg/m2, and it is unlikely for it to be 0.75 kg/m2. The chances are slight for the photosynthetic biomass to be 0.80 kg/m2, there is almost no chance for it to be 0.85 kg/m2, and it is impossible for it to be 0.90 kg/m2 or 0.95 kg/m2."
+        },
+        {
+            "id": 47,
+            "origin": "foto_1",
+            "content": "Given that the leaf area index is between 5.5 and 6.5, the temperature is 17.0 degrees Celsius, and the radiation is 150 MJ/m2, it is impossible for the photosynthetic biomass to be 0.00 kg/m2, 0.05 kg/m2, 0.10 kg/m2, 0.15 kg/m2, 0.20 kg/m2, 0.50 kg/m2, 0.55 kg/m2, 0.60 kg/m2, 0.65 kg/m2, 0.70 kg/m2, 0.75 kg/m2, 0.80 kg/m2, 0.85 kg/m2, 0.90 kg/m2, or 0.95 kg/m2. There is almost no chance for the photosynthetic biomass to be 0.25 kg/m2, it is unlikely for it to be 0.30 kg/m2, there are about even chances for it to be 0.35 kg/m2, it is probably not the case that it is 0.40 kg/m2, and there are little chances for it to be 0.45 kg/m2."
+        },
+        {
+            "id": 48,
+            "origin": "foto_1",
+            "content": "Given that the leaf area index is between 5.5 and 6.5, the temperature is 17.0 degrees Celsius, and the radiation is between 150 and 199 MJ/m2, it is impossible for the photosynthetic biomass to be 0.00 kg/m2, 0.05 kg/m2, 0.10 kg/m2, 0.15 kg/m2, 0.20 kg/m2, 0.25 kg/m2, 0.30 kg/m2, and almost no chance for it to be 0.35 kg/m2. It is unlikely for it to be 0.40 kg/m2, it is probably not the case that it is 0.45 kg/m2 or 0.50 kg/m2, and chances are slight for it to be 0.55 kg/m2. There is almost no chance for it to be 0.60 kg/m2, and it is impossible for it to be 0.65 kg/m2, 0.70 kg/m2, 0.75 kg/m2, 0.80 kg/m2, 0.85 kg/m2, 0.90 kg/m2, and 0.95 kg/m2."
+        },
+        {
+            "id": 49,
+            "origin": "foto_1",
+            "content": "Given that the leaf area index is between 5.5 and 6.5, the temperature is 17.0 degrees Celsius, and the radiation is between 200 and 249 MJ/m2, it is impossible for the photosynthetic biomass to be 0.00 kg/m2, 0.05 kg/m2, 0.10 kg/m2, 0.15 kg/m2, 0.20 kg/m2, 0.25 kg/m2, 0.30 kg/m2, 0.35 kg/m2, or 0.40 kg/m2. There is almost no chance for the photosynthetic biomass to be 0.45 kg/m2, it is unlikely for it to be 0.50 kg/m2 or 0.70 kg/m2, it is probably not the case that it is 0.55 kg/m2 or 0.60 kg/m2, and it is unlikely for it to be 0.65 kg/m2. It is also impossible for the photosynthetic biomass to be 0.75 kg/m2, 0.80 kg/m2, 0.85 kg/m2, 0.90 kg/m2, or 0.95 kg/m2."
+        },
+        {
+            "id": 50,
+            "origin": "foto_1",
+            "content": "Given that the leaf area index is between 5.5 and 6.5, the temperature is 17.0 degrees Celsius, and the radiation is 250 MJ/m2, it is impossible for the photosynthetic biomass to be 0.00 kg/m2, 0.05 kg/m2, 0.10 kg/m2, 0.15 kg/m2, 0.20 kg/m2, 0.25 kg/m2, 0.30 kg/m2, 0.35 kg/m2, 0.40 kg/m2, 0.45 kg/m2, or 0.50 kg/m2. There is little chance for it to be 0.55 kg/m2, and it is probably not possible for it to be 0.60 kg/m2, 0.65 kg/m2, 0.70 kg/m2, or 0.75 kg/m2. There is almost no chance for it to be 0.80 kg/m2, and it is impossible for it to be 0.85 kg/m2, 0.90 kg/m2, or 0.95 kg/m2."
+        },
+        {
+            "id": 51,
+            "origin": "foto_1",
+            "content": "Given a leaf area index of 6.5, a temperature of 13.0°C, and a radiation of 150 MJ/m2, it is impossible for the photosynthetic biomass to be 0.00 kg/m2, 0.05 kg/m2, 0.10 kg/m2, 0.15 kg/m2, 0.20 kg/m2, 0.25 kg/m2, and 0.60 kg/m2 to 0.95 kg/m2. There is almost no chance for the photosynthetic biomass to be 0.30 kg/m2 or 0.55 kg/m2, and unlikely for it to be 0.35 kg/m2. It is probably not the case that the photosynthetic biomass is 0.40 kg/m2 or 0.45 kg/m2, and it is unlikely for it to be 0.50 kg/m2."
+        },
+        {
+            "id": 52,
+            "origin": "foto_1",
+            "content": "Given that the leaf area index is 6.5, the temperature is 13.0 degrees Celsius, and the radiation is between 150 and 199 MJ/m2, it is impossible for the photosynthetic biomass to be 0.00 kg/m2, 0.05 kg/m2, 0.10 kg/m2, 0.15 kg/m2, 0.20 kg/m2, 0.25 kg/m2, 0.30 kg/m2, 0.35 kg/m2, or 0.40 kg/m2; there is little chance for it to be 0.45 kg/m2, it is probably not 0.50 kg/m2, 0.55 kg/m2, or 0.60 kg/m2; there is little chance for it to be 0.65 kg/m2, almost no chance for it to be 0.70 kg/m2, and it is impossible for it to be 0.75 kg/m2, 0.80 kg/m2, 0.85 kg/m2, 0.90 kg/m2, or 0.95 kg/m2."
+        },
+        {
+            "id": 53,
+            "origin": "foto_1",
+            "content": "Given a leaf area index of 6.5, a temperature of 13.0°C, and radiation between 200 and 249 MJ/m2, it is impossible for the photosynthetic biomass to be 0.00 kg/m2, 0.05 kg/m2, 0.10 kg/m2, 0.15 kg/m2, 0.20 kg/m2, 0.25 kg/m2, 0.30 kg/m2, 0.35 kg/m2, 0.40 kg/m2, 0.45 kg/m2, or 0.50 kg/m2. It is highly unlikely for the photosynthetic biomass to be 0.55 kg/m2, unlikely for it to be 0.60 kg/m2, it is probably not the case that it is 0.65 kg/m2 or 0.70 kg/m2, and it is unlikely for it to be 0.75 kg/m2. There is little chance for the photosynthetic biomass to be 0.80 kg/m2, almost no chance for it to be 0.85 kg/m2, and it is impossible for it to be 0.90 kg/m2 or 0.95 kg/m2."
+        },
+        {
+            "id": 54,
+            "origin": "foto_1",
+            "content": "Given that the leaf area index is 6.5, the temperature is 13.0 degrees Celsius, and the radiation is 250 MJ/m2, it is impossible for the photosynthetic biomass to be 0.00 kg/m2, 0.05 kg/m2, 0.10 kg/m2, 0.15 kg/m2, 0.20 kg/m2, 0.25 kg/m2, 0.30 kg/m2, 0.35 kg/m2, 0.40 kg/m2, 0.45 kg/m2, 0.50 kg/m2, 0.55 kg/m2, or 0.60 kg/m2; it is highly unlikely for it to be 0.65 kg/m2; it is unlikely for it to be 0.70 kg/m2; it is probably not the case that it is 0.75 kg/m2 or 0.80 kg/m2; it is unlikely for it to be 0.85 kg/m2; chances are slight for it to be 0.90 kg/m2; and there is almost no chance for it to be 0.95 kg/m2."
+        },
+        {
+            "id": 55,
+            "origin": "foto_1",
+            "content": "Given a leaf area index of 6.5, a temperature range of 13.0 to 14.9 degrees Celsius, and a radiation of 150 MJ/m2, it is impossible for the photosynthetic biomass to be 0.00 kg/m2, 0.05 kg/m2, 0.10 kg/m2, 0.15 kg/m2, 0.20 kg/m2, 0.25 kg/m2, 0.55 kg/m2, 0.60 kg/m2, 0.65 kg/m2, 0.70 kg/m2, 0.75 kg/m2, 0.80 kg/m2, 0.85 kg/m2, 0.90 kg/m2, or 0.95 kg/m2. It is highly unlikely for the photosynthetic biomass to be 0.30 kg/m2, and it is probably not the case that the photosynthetic biomass is 0.35 kg/m2, 0.40 kg/m2, or 0.45 kg/m2. There is little chance for the photosynthetic biomass to be 0.50 kg/m2."
+        },
+        {
+            "id": 56,
+            "origin": "foto_1",
+            "content": "Given a leaf area index of 6.5, a temperature range of 13.0 to 14.9 degrees Celsius, and a radiation range of 150 to 199 MJ/m2, it is impossible for the photosynthetic biomass to be 0.00 kg/m2, 0.05 kg/m2, 0.10 kg/m2, 0.15 kg/m2, 0.20 kg/m2, 0.25 kg/m2, 0.30 kg/m2, 0.35 kg/m2, and highly unlikely for it to be 0.65 kg/m2, while there is almost no chance for it to be 0.40 kg/m2, it is unlikely for it to be 0.45 kg/m2, 0.60 kg/m2, and it is probably not the case that it is 0.50 kg/m2 or 0.55 kg/m2."
+        },
+        {
+            "id": 57,
+            "origin": "foto_1",
+            "content": "Given a leaf area index of 6.5, a temperature range of 13.0 to 14.9 degrees Celsius, and a radiation range of 200 to 249 MJ/m2, it is impossible for the photosynthetic biomass to be 0.00 kg/m2, 0.05 kg/m2, 0.10 kg/m2, 0.15 kg/m2, 0.20 kg/m2, 0.25 kg/m2, 0.30 kg/m2, 0.35 kg/m2, 0.40 kg/m2, or 0.45 kg/m2; there is almost no chance for it to be 0.50 kg/m2, it is unlikely for it to be 0.55 kg/m2, it is probably not the case that it is 0.60 kg/m2 or 0.65 kg/m2, it is unlikely for it to be 0.70 kg/m2, there is little chance for it to be 0.75 kg/m2, there is also almost no chance for it to be 0.80 kg/m2, and it is impossible for it to be 0.85 kg/m2, 0.90 kg/m2, or 0.95 kg/m2."
+        },
+        {
+            "id": 58,
+            "origin": "foto_1",
+            "content": "Given a leaf area index of 6.5, a temperature range of 13.0 to 14.9 degrees Celsius, and a radiation of 250 MJ/m2, it is impossible for mildew growth to produce photosynthetic biomass of 0.00 kg/m2, 0.05 kg/m2, 0.10 kg/m2, 0.15 kg/m2, 0.20 kg/m2, 0.25 kg/m2, 0.30 kg/m2, 0.35 kg/m2, 0.40 kg/m2, 0.45 kg/m2, 0.50 kg/m2, or 0.55 kg/m2; there is almost no chance for it to produce 0.60 kg/m2, it is unlikely that is produces 0.65 kg/m2, 0.75 kg/m2, 0.80 kg/m2, or 0.95 kg/m2; it is probably not the case that it produces 0.70 kg/m2, chances are slight for it to produce 0.85 kg/m2, and there is almost no chance that it produces 0.90 kg/m2."
+        },
+        {
+            "id": 59,
+            "origin": "foto_1",
+            "content": "Given a leaf area index of 6.5, a temperature range of 15.0 to 16.9 degrees Celsius, and a radiation of 150 MJ/m2, it is impossible for the photosynthetic biomass to be 0.00 kg/m2, 0.05 kg/m2, 0.10 kg/m2, 0.15 kg/m2, 0.20 kg/m2, 0.25 kg/m2, or 0.55 kg/m2 to 0.95 kg/m2. It is improbable for the photosynthetic biomass to be 0.30 kg/m2, and it is probably not the case that it is 0.35 kg/m2 or 0.40 kg/m2. It is unlikely for the photosynthetic biomass to be 0.45 kg/m2, and it is highly unlikely for it to be 0.50 kg/m2."
+        },
+        {
+            "id": 60,
+            "origin": "foto_1",
+            "content": "Given that the leaf area index is 6.5, the temperature is between 15.0 and 16.9 degrees Celsius, and the radiation is between 150 and 199 MJ/m2, it is impossible for the photosynthetic biomass to be 0.00 kg/m2, 0.05 kg/m2, 0.10 kg/m2, 0.15 kg/m2, 0.20 kg/m2, 0.25 kg/m2, 0.30 kg/m2, 0.35 kg/m2, highly unlikely for it to be 0.40 kg/m2, it is probably not the case that it is 0.45 kg/m2, 0.50 kg/m2, 0.55 kg/m2, there is little chance for it to be 0.60 kg/m2, there is almost no chance for it to be 0.65 kg/m2, and it is impossible for it to be 0.70 kg/m2, 0.75 kg/m2, 0.80 kg/m2, 0.85 kg/m2, 0.90 kg/m2, and 0.95 kg/m2."
+        },
+        {
+            "id": 61,
+            "origin": "foto_1",
+            "content": "Given that the leaf area index is 6.5, the temperature is between 15.0 and 16.9 degrees Celsius, and the radiation is between 200 and 249 MJ/m2, it is impossible for the photosynthetic biomass to be 0.00 kg/m2, 0.05 kg/m2, 0.10 kg/m2, 0.15 kg/m2, 0.20 kg/m2, 0.25 kg/m2, 0.30 kg/m2, 0.35 kg/m2, 0.40 kg/m2, or 0.45 kg/m2. It is improbable for the photosynthetic biomass to be 0.50 kg/m2, and it is probably not 0.55 kg/m2, 0.60 kg/m2, or 0.65 kg/m2. It is also improbable for the photosynthetic biomass to be 0.70 kg/m2, and there is almost no chance for it to be 0.75 kg/m2. It is impossible for the photosynthetic biomass to be 0.80 kg/m2, 0.85 kg/m2, 0.90 kg/m2, or 0.95 kg/m2."
+        },
+        {
+            "id": 62,
+            "origin": "foto_1",
+            "content": "Given a leaf area index of 6.5, a temperature range of 15.0 to 16.9 degrees Celsius, and a radiation of 250 MJ/m2, it is impossible for the photosynthetic biomass to be 0.00 kg/m2, 0.05 kg/m2, 0.10 kg/m2, 0.15 kg/m2, 0.20 kg/m2, 0.25 kg/m2, 0.30 kg/m2, 0.35 kg/m2, 0.40 kg/m2, 0.45 kg/m2, 0.50 kg/m2, or 0.55 kg/m2; there is little chance for it to be 0.60 kg/m2, it is probably not 0.65 kg/m2, it is unlikely to be 0.70 kg/m2 or 0.75 kg/m2, it is highly unlikely to be 0.85 kg/m2, and it is impossible for it to be 0.90 kg/m2 or 0.95 kg/m2."
+        },
+        {
+            "id": 63,
+            "origin": "foto_1",
+            "content": "Given that the leaf area index is 6.5, the temperature is 17.0 degrees Celsius, and the radiation is 150 MJ/m2, it is impossible for the photosynthetic biomass to be 0.00 kg/m2, 0.05 kg/m2, 0.10 kg/m2, 0.15 kg/m2, 0.20 kg/m2, 0.25 kg/m2, 0.55 kg/m2, 0.60 kg/m2, 0.65 kg/m2, 0.70 kg/m2, 0.75 kg/m2, 0.80 kg/m2, 0.85 kg/m2, 0.90 kg/m2, or 0.95 kg/m2. It is unlikely for the photosynthetic biomass to be 0.30 kg/m2, and it is probably not the case that it is 0.35 kg/m2 or 0.40 kg/m2. There is little chance for it to be 0.45 kg/m2, and there is almost no chance for it to be 0.50 kg/m2."
+        },
+        {
+            "id": 64,
+            "origin": "foto_1",
+            "content": "Given a leaf area index of 6.5, a temperature of 17.0°C, and a radiation of 150-199 MJ/m2, it is impossible for the photosynthetic biomass to be 0.00 kg/m2, 0.05 kg/m2, 0.10 kg/m2, 0.15 kg/m2, 0.20 kg/m2, 0.25 kg/m2, 0.30 kg/m2, 0.35 kg/m2, and 0.65 kg/m2 to 0.95 kg/m2; it is improbable for the photosynthetic biomass to be 0.40 kg/m2; it is unlikely for the photosynthetic biomass to be 0.45 kg/m2 and 0.55 kg/m2; it is probably not the case that the photosynthetic biomass is 0.50 kg/m2; and it is highly unlikely for the photosynthetic biomass to be 0.60 kg/m2."
+        },
+        {
+            "id": 65,
+            "origin": "foto_1",
+            "content": "Given a leaf area index of 6.5, a temperature of 17.0°C, and a radiation of 200-249 MJ/m2, it is impossible for the photosynthetic biomass to be 0.00 kg/m2, 0.05 kg/m2, 0.10 kg/m2, 0.15 kg/m2, 0.20 kg/m2, 0.25 kg/m2, 0.30 kg/m2, 0.35 kg/m2, or 0.40 kg/m2. There is almost no chance for it to be 0.45 kg/m2, it is unlikely to be 0.50 kg/m2, and it is probably not 0.55 kg/m2 or 0.60 kg/m2. The chances are slight for it to be 0.65 kg/m2 or 0.70 kg/m2, and it is impossible for it to be 0.75 kg/m2, 0.80 kg/m2, 0.85 kg/m2, 0.90 kg/m2, or 0.95 kg/m2."
+        },
+        {
+            "id": 66,
+            "origin": "foto_1",
+            "content": "Given that the leaf area index is 6.5, the temperature is 17.0 degrees Celsius, and the radiation is 250 MJ/m2, it is impossible for the photosynthetic biomass to be 0.00 kg/m2, 0.05 kg/m2, 0.10 kg/m2, 0.15 kg/m2, 0.20 kg/m2, 0.25 kg/m2, 0.30 kg/m2, 0.35 kg/m2, 0.40 kg/m2, 0.45 kg/m2, or 0.50 kg/m2. There is almost no chance for the photosynthetic biomass to be 0.55 kg/m2, it is unlikely for it to be 0.60 kg/m2, it is probably not the case that it is 0.65 kg/m2 or 0.70 kg/m2, it is unlikely for it to be 0.75 kg/m2, it is improbable for it to be 0.80 kg/m2, and there almost no chance for it to be 0.85 kg/m2. It is impossible for the photosynthetic biomass to be 0.90 kg/m2 or 0.95 kg/m2."
+        }
+    ],
+    "evidence_query_pairs": [
+        {
+            "id": 0,
+            "evidences": [
+                "The amount of radiation received is below 150 MJ/m2.",
+                "The amount of photosynthetic biomass is 0.50 kg/m2."
+            ],
+            "query": "What is the likelihood of the temperature being between 13.0 and 14.9 °C?",
+            "answer": 0.69559087,
+            "reasoning_types": [
+                "evidential",
+                "explaining_away"
+            ]
+        },
+        {
+            "id": 1,
+            "evidences": [
+                "The amount of radiation received is 250 MJ/m2.",
+                "The temperature is between 15.0 and 16.9 degrees Celsius."
+            ],
+            "query": "What is the likelihood of the photosynthetic biomass being 0.20 kg/m2 under these conditions?",
+            "answer": 0.0,
+            "reasoning_types": [
+                "causal"
+            ]
+        },
+        {
+            "id": 2,
+            "evidences": [
+                "The temperature is 13 degrees Celsius.",
+                "The amount of photosynthetic biomass is 0.15 kg per square meter."
+            ],
+            "query": "What is the likelihood of receiving 250 MJ/m2 of radiation?",
+            "answer": -1,
+            "reasoning_types": [
+                "evidential",
+                "explaining_away"
+            ]
+        },
+        {
+            "id": 3,
+            "evidences": [
+                "The amount of radiation received is below 150 MJ/m2.",
+                "The amount of photosynthetic biomass is 0.15 kg/m2."
+            ],
+            "query": "What is the likelihood of the temperature being between 15.0 and 16.9 °C?",
+            "answer": -1,
+            "reasoning_types": [
+                "evidential",
+                "explaining_away"
+            ]
+        },
+        {
+            "id": 4,
+            "evidences": [
+                "The amount of photosynthetic biomass per square meter is 0.35 kg per square meter."
+            ],
+            "query": "What is the likelihood of the temperature being 13.0 degrees Celsius?",
+            "answer": 0.079972639,
+            "reasoning_types": [
+                "evidential"
+            ]
+        },
+        {
+            "id": 5,
+            "evidences": [
+                "The temperature is 13 degrees Celsius."
+            ],
+            "query": "What is the likelihood of receiving radiation between 150 and 199 MJ/m2?",
+            "answer": 0.467,
+            "reasoning_types": []
+        },
+        {
+            "id": 6,
+            "evidences": [
+                "The amount of radiation received is more than 250 MJ/m2."
+            ],
+            "query": "What is the likelihood of there being 0.70 kg of photosynthetic biomass per square meter?",
+            "answer": 0.08534845,
+            "reasoning_types": [
+                "causal"
+            ]
+        },
+        {
+            "id": 7,
+            "evidences": [
+                "The temperature is 13 degrees Celsius."
+            ],
+            "query": "What is the likelihood of receiving less than 150 MJ/m2 of radiation at this temperature?",
+            "answer": 0.067,
+            "reasoning_types": []
+        },
+        {
+            "id": 8,
+            "evidences": [
+                "The amount of radiation received is more than 250 MJ/m2."
+            ],
+            "query": "What is the likelihood of there being 0.90 kg of photosynthetic biomass per square meter?",
+            "answer": 0.00492324,
+            "reasoning_types": [
+                "causal"
+            ]
+        },
+        {
+            "id": 9,
+            "evidences": [
+                "The amount of radiation received is between 150 and 199 MJ/m2."
+            ],
+            "query": "What is the likelihood of the temperature being between 13.0 and 14.9 °C?",
+            "answer": 0.567,
+            "reasoning_types": []
+        },
+        {
+            "id": 10,
+            "evidences": [
+                "The amount of photosynthetic biomass per square meter is 0.80 kg/m2."
+            ],
+            "query": "What is the likelihood of the temperature being between 13.0°C and 14.9°C?",
+            "answer": 0.61192722,
+            "reasoning_types": [
+                "evidential"
+            ]
+        },
+        {
+            "id": 11,
+            "evidences": [
+                "The temperature is 17 degrees Celsius."
+            ],
+            "query": "What is the likelihood of there being 0.40 kg of photosynthetic biomass per square meter?",
+            "answer": 0.06841598,
+            "reasoning_types": [
+                "causal"
+            ]
+        },
+        {
+            "id": 12,
+            "evidences": [
+                "The amount of photosynthetic biomass per square meter is 0.95 kg/m2."
+            ],
+            "query": "What is the likelihood of the amount of radiation received being between 200 and 249 MJ/m2?",
+            "answer": 0.0,
+            "reasoning_types": [
+                "evidential"
+            ]
+        },
+        {
+            "id": 13,
+            "evidences": [
+                "The temperature is 17 degrees Celsius."
+            ],
+            "query": "What is the likelihood of there being 0.35 kg of photosynthetic biomass per square meter at this temperature?",
+            "answer": 0.030202654,
+            "reasoning_types": [
+                "causal"
+            ]
+        },
+        {
+            "id": 14,
+            "evidences": [
+                "The amount of photosynthetic biomass is 0.45 kg per square meter.",
+                "The amount of radiation received is between 150 and 199 MJ per square meter."
+            ],
+            "query": "What is the likelihood of the temperature being 13.0 degrees Celsius?",
+            "answer": 0.11023269,
+            "reasoning_types": [
+                "evidential",
+                "explaining_away"
+            ]
+        },
+        {
+            "id": 15,
+            "evidences": [
+                "The temperature is 17 degrees Celsius."
+            ],
+            "query": "What is the likelihood of there being no photosynthetic biomass under these temperature conditions?",
+            "answer": 0.0,
+            "reasoning_types": [
+                "causal"
+            ]
+        },
+        {
+            "id": 16,
+            "evidences": [
+                "The temperature is 17 degrees Celsius."
+            ],
+            "query": "What is the likelihood of receiving less than 150 MJ/m2 of radiation at this temperature?",
+            "answer": 0.067,
+            "reasoning_types": []
+        },
+        {
+            "id": 17,
+            "evidences": [
+                "The temperature is 13 degrees Celsius."
+            ],
+            "query": "What is the likelihood of receiving radiation between 150 and 199 MJ/m2?",
+            "answer": 0.467,
+            "reasoning_types": []
+        },
+        {
+            "id": 18,
+            "evidences": [
+                "The amount of radiation received is between 200 and 249 MJ/m2."
+            ],
+            "query": "What is the likelihood of the temperature being 13.0 degrees Celsius?",
+            "answer": 0.133,
+            "reasoning_types": []
+        },
+        {
+            "id": 19,
+            "evidences": [
+                "The amount of photosynthetic biomass per square meter is 0.40 kg/m2."
+            ],
+            "query": "What is the likelihood of the amount of radiation received being between 150 and 199 MJ/m2?",
+            "answer": 0.70098579,
+            "reasoning_types": [
+                "evidential"
+            ]
+        },
+        {
+            "id": 20,
+            "evidences": [
+                "The amount of radiation received is between 200 and 249 MJ/m2."
+            ],
+            "query": "What is the likelihood of this area having a photosynthetic biomass of 0.25 kg/m2?",
+            "answer": 0.0,
+            "reasoning_types": [
+                "causal"
+            ]
+        }
+    ]
+}

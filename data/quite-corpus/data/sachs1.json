@@ -1,0 +1,2604 @@
+{
+    "nodes": [
+        {
+            "name": "Akt",
+            "states": [
+                "LOW",
+                "AVG",
+                "HIGH"
+            ]
+        },
+        {
+            "name": "Erk",
+            "states": [
+                "LOW",
+                "AVG",
+                "HIGH"
+            ]
+        },
+        {
+            "name": "Jnk",
+            "states": [
+                "LOW",
+                "AVG",
+                "HIGH"
+            ]
+        },
+        {
+            "name": "Mek",
+            "states": [
+                "LOW",
+                "AVG",
+                "HIGH"
+            ]
+        },
+        {
+            "name": "P38",
+            "states": [
+                "LOW",
+                "AVG",
+                "HIGH"
+            ]
+        },
+        {
+            "name": "PKA",
+            "states": [
+                "LOW",
+                "AVG",
+                "HIGH"
+            ]
+        },
+        {
+            "name": "PKC",
+            "states": [
+                "LOW",
+                "AVG",
+                "HIGH"
+            ]
+        },
+        {
+            "name": "Raf",
+            "states": [
+                "LOW",
+                "AVG",
+                "HIGH"
+            ]
+        }
+    ],
+    "connectivity": [
+        {
+            "node": "Akt",
+            "incoming": [
+                "Erk",
+                "PKA"
+            ]
+        },
+        {
+            "node": "Erk",
+            "incoming": [
+                "Mek",
+                "PKA"
+            ]
+        },
+        {
+            "node": "Jnk",
+            "incoming": [
+                "PKA",
+                "PKC"
+            ]
+        },
+        {
+            "node": "Mek",
+            "incoming": [
+                "PKA",
+                "PKC",
+                "Raf"
+            ]
+        },
+        {
+            "node": "P38",
+            "incoming": [
+                "PKA",
+                "PKC"
+            ]
+        },
+        {
+            "node": "PKA",
+            "incoming": [
+                "PKC"
+            ]
+        },
+        {
+            "node": "PKC",
+            "incoming": []
+        },
+        {
+            "node": "Raf",
+            "incoming": [
+                "PKA",
+                "PKC"
+            ]
+        }
+    ],
+    "numeric_premises": [
+        {
+            "id": 0,
+            "origin": "Akt",
+            "content": "If the levels of ERK and PKA are both low, there is a 67.1% probability that the level of Akt is also low, a 32.8% probability that it is average, and a negligible 0.01% chance that Akt's level is high."
+        },
+        {
+            "id": 1,
+            "origin": "Akt",
+            "content": "When ERK levels are low and PKA levels are average, the probability of Akt being low is 61%, being average is 37.95%, and being high is a mere 0.01%."
+        },
+        {
+            "id": 2,
+            "origin": "Akt",
+            "content": "In the case where ERK levels are low and PKA levels are high, Akt is likely to be low with a 96.51% probability, while being average or high only accounts for 2.41% and 0.09%, respectively."
+        },
+        {
+            "id": 3,
+            "origin": "Akt",
+            "content": "If ERK levels are average and PKA levels are low, Akt is more likely to be at an average level (66.49%), followed by being low (32.5%), and it is highly unlikely for Akt to be high (0.02%)."
+        },
+        {
+            "id": 4,
+            "origin": "Akt",
+            "content": "When ERK and PKA levels are both average, Akt is more likely to be low (81.14%), with a smaller chance of being average (17.82%), and an extremely low probability of being high (0.04%)."
+        },
+        {
+            "id": 5,
+            "origin": "Akt",
+            "content": "In the scenario where ERK levels are average and PKA levels are high, Akt is most likely to be low (94.83%), with a small probability of being average (5.15%), and nearly no chance of being high (0.0092%)."
+        },
+        {
+            "id": 6,
+            "origin": "Akt",
+            "content": "If ERK levels are high and PKA levels are low, it is highly probable that Akt is at a high level (88.16%), followed by a low probability of being average (11.83%), and an extremely low probability of being low (0.0077%)."
+        },
+        {
+            "id": 7,
+            "origin": "Akt",
+            "content": "When ERK levels are high and PKA levels are average, Akt is more likely to be at an average level (81.37%), followed by a lower probability of being low (18.37%), and a minimal chance of being high (0.02%)."
+        },
+        {
+            "id": 8,
+            "origin": "Akt",
+            "content": "In the case where ERK and PKA levels are both high, Akt is more likely to be at an average level (82.94%), followed by a lower probability of being low (17.03%), and an extremely low probability of being high (0.03%)."
+        },
+        {
+            "id": 9,
+            "origin": "Erk",
+            "content": "If the activity level of both MEK and PKA is low, there is an 85.05% chance that ERK's level is also low, a 13.87% chance it is average, and only a 1.08% chance that ERK's level is high."
+        },
+        {
+            "id": 10,
+            "origin": "Erk",
+            "content": "Given that MEK's activity is low and PKA's is average, there's an 11.77% chance ERK's level is low, a 69.19% chance it is average, and a 19.04% chance ERK's level is high."
+        },
+        {
+            "id": 11,
+            "origin": "Erk",
+            "content": "With MEK activity low and PKA activity high, the probability of ERK being low is 7.41%, being average is 70.04%, and being high is 22.55%."
+        },
+        {
+            "id": 12,
+            "origin": "Erk",
+            "content": "If MEK's activity is average and PKA's is low, then Erk is likely to be low with a probability of 38.70%, average with a probability of 48.37%, and high with a probability of 12.93%."
+        },
+        {
+            "id": 13,
+            "origin": "Erk",
+            "content": "With MEK and PKA both average, there's a 4.89% chance Erk is low, a 72.82% chance it's average, and a 22.28% chance Erk is high."
+        },
+        {
+            "id": 14,
+            "origin": "Erk",
+            "content": "If MEK is average and PKA is high, then Erk is likely to be high with an 88.38% chance and has a 10.26% and 0.37% chance of being average or low, respectively."
+        },
+        {
+            "id": 15,
+            "origin": "Erk",
+            "content": "With high MEK activity and low PKA activity, Erk is highly likely to be high (80.24%), and less likely to be average (18.80%) or low (0.87%)."
+        },
+        {
+            "id": 16,
+            "origin": "Erk",
+            "content": "If MEK is high and PKA is average, then Erk is typically high with a 25.03% probability, average with a 74.76% probability, and low with only a 0.12% probability."
+        },
+        {
+            "id": 17,
+            "origin": "Erk",
+            "content": "If MEK and PKA both have high activity, Erk is highly likely to be high (93.33%) and has a 3.33% chance of being either low or average."
+        },
+        {
+            "id": 18,
+            "origin": "Jnk",
+            "content": "If Protein Kinase A (PKA) and Protein Kinase C (PKC) both have low activation levels, then there is a 46.43% probability that the c-Jun N-terminal kinases (Jnk) are highly activated, a 24.58% probability that Jnk activation is average, and a 28.99% probability that Jnk activation is low."
+        },
+        {
+            "id": 19,
+            "origin": "Jnk",
+            "content": "When Protein Kinase A (PKA) is at a low activation level and Protein Kinase C (PKC) is at an average level, there is a 57.94% probability that the c-Jun N-terminal kinases (Jnk) have a low activation level, a 42.03% probability that Jnk activation is at an average level, and a very small 0.02% probability that Jnk activation is high."
+        },
+        {
+            "id": 20,
+            "origin": "Jnk",
+            "content": "In the case where Protein Kinase A (PKA) is at a low activation level and Protein Kinase C (PKC) is highly activated, there is a 0.46% probability that the c-Jun N-terminal kinases (Jnk) have low activation, a 98.09% probability that Jnk activation is at an average level, and a 0.46% probability that Jnk activation is high."
+        },
+        {
+            "id": 21,
+            "origin": "Jnk",
+            "content": "If Protein Kinase A (PKA) is at an average activation level and Protein Kinase C (PKC) has low activation, then there is a 57.67% probability that the c-Jun N-terminal kinases (Jnk) have low activation, a 42.32% probability that Jnk activation is at an average level, and a nearly negligible 0.0043% probability that Jnk activation is high."
+        },
+        {
+            "id": 22,
+            "origin": "Jnk",
+            "content": "When Protein Kinase A (PKA) and Protein Kinase C (PKC) are both at an average activation level, there is a 61.28% probability that the c-Jun N-terminal kinases (Jnk) have low activation, a 38.71% probability that Jnk activation is at an average level, and a nearly negligible 0.0015% probability that Jnk activation is high."
+        },
+        {
+            "id": 23,
+            "origin": "Jnk",
+            "content": "If Protein Kinase A (PKA) is at an average activation level and Protein Kinase C (PKC) is highly activated, there is a 4.47% probability that the c-Jun N-terminal kinases (Jnk) have low activation, a 93.40% probability that Jnk activation is at an average level, and a 2.04% probability that Jnk activation is high."
+        },
+        {
+            "id": 24,
+            "origin": "Jnk",
+            "content": "In the case where Protein Kinase A (PKA) is highly activated and Protein Kinase C (PKC) has low activation, there is a 99.61% probability that the c-Jun N-terminal kinases (Jnk) have low activation, a 0.38% probability that Jnk activation is at an average level, and a nearly negligible 0.0069% probability that Jnk activation is high."
+        },
+        {
+            "id": 25,
+            "origin": "Jnk",
+            "content": "If Protein Kinase A (PKA) is highly activated and Protein Kinase C (PKC) is at an average activation level, there is an 86.23% probability that the c-Jun N-terminal kinases (Jnk) have low activation, a 13.69% probability that Jnk activation is at an average level, and a 0.08% probability that Jnk activation is high. This indicates that PKA being highly activated leads to a higher probability of Jnk being at a low or average activation level."
+        },
+        {
+            "id": 26,
+            "origin": "Jnk",
+            "content": "When Protein Kinase A (PKA) and Protein Kinase C (PKC) are both highly activated, there is a 15.54% probability that the c-Jun N-terminal kinases (Jnk) have low activation, an 84.18% probability that Jnk activation is at an average level, and a 0.28% probability that Jnk activation is high. This suggests that PKA and PKC being highly activated leads to a higher probability of Jnk being at an average activation level."
+        },
+        {
+            "id": 27,
+            "origin": "Mek",
+            "content": "If Protein Kinase C, Protein Kinase A, and Raf all have low activation levels, there is a 74.4% probability that MAPK/ERK (MEK) kinase is also at a low activation level, a 25.5% probability that it is at an average level, and a slim 0.02% chance that it is highly activated."
+        },
+        {
+            "id": 28,
+            "origin": "Mek",
+            "content": "Given that Protein Kinase C and Protein Kinase A levels are low while Raf is at an average level, there's a 38.5% chance that MAPK/ERK (MEK) kinase is also at a low level, a 12.3% probability that it's at an average level, and a 49.2% likelihood that it's highly activated."
+        },
+        {
+            "id": 29,
+            "origin": "Mek",
+            "content": "In the scenario where Protein Kinase C and Protein Kinase A are both low and Raf is highly activated, the probability of MAPK/ERK kinase being at a low level is 26.2%, at an average level is a mere 0.15%, and at a high level is 73.6%."
+        },
+        {
+            "id": 30,
+            "origin": "Mek",
+            "content": "When Protein Kinase C is average, Protein Kinase A is low, and Raf is also low, there's a 70.6% probability that MAPK/ERK kinase is at a low level, a 29.3% chance it's at an average level, and a mere 0.02% likelihood that it's highly activated."
+        },
+        {
+            "id": 31,
+            "origin": "Mek",
+            "content": "In the case where Protein Kinase C is average, Protein Kinase A is low, and Raf is at an average level, the probability of MAPK/ERK kinase being at a low level is 26.9%, at an average level is 73.0%, and at a high level is a very slim 0.02%."
+        },
+        {
+            "id": 32,
+            "origin": "Mek",
+            "content": "If Protein Kinase C is average, Protein Kinase A is low, and Raf is highly activated, then MAPK/ERK kinase has an 85% chance of being at a low level, a 10.7% probability of being at an average level, and a 4.3% likelihood of being highly activated."
+        },
+        {
+            "id": 33,
+            "origin": "Mek",
+            "content": "When Protein Kinase C is highly activated, Protein Kinase A is low, and Raf is at a low level, MAPK/ERK kinase is likely to be at a low level with a probability of 85.4%, at an average level with a probability of 14.4%, and at a high level with a probability of 0.18%."
+        },
+        {
+            "id": 34,
+            "origin": "Mek",
+            "content": "In the scenario where Protein Kinase C is highly activated, Protein Kinase A is low, and Raf is at an average level, MAPK/ERK kinase is highly likely to be at an average level with a probability of 97.6%, and it has a 1.2% chance of being at both a low and a high level."
+        },
+        {
+            "id": 35,
+            "origin": "Mek",
+            "content": "If Protein Kinase C is highly activated, Protein Kinase A is low, and Raf is highly activated, then MAPK/ERK kinase has an equal probability of being at a low, average, or high level, each with a 33.3% chance."
+        },
+        {
+            "id": 36,
+            "origin": "Mek",
+            "content": "When Protein Kinase C is low, Protein Kinase A is average, and Raf is low, MAPK/ERK kinase is most likely to be at a low level with a probability of 75.7%, at an average level with a probability of 24.2%, and at a high level with a probability of 0.000032."
+        },
+        {
+            "id": 37,
+            "origin": "Mek",
+            "content": "If Protein Kinase C is low, Protein Kinase A is average, and Raf is at an average level, then MAPK/ERK kinase has a 34.3% chance of being at a low level, a 64.9% probability of being at an average level, and a 0.74% likelihood of being at a high level."
+        },
+        {
+            "id": 38,
+            "origin": "Mek",
+            "content": "In the case where Protein Kinase C is low, Protein Kinase A is average, and Raf is highly activated, MAPK/ERK kinase is likely to be at a low level with a probability of 86.5%, at an average level with a probability of 10.1%, and at a high level with a probability of 3.4%."
+        },
+        {
+            "id": 39,
+            "origin": "Mek",
+            "content": "If Protein Kinase C and Protein Kinase A are both at an average level, and Raf is low, then MAPK/ERK kinase is most likely to be at a low level with a probability of 71.4%, at an average level with a probability of 28.5%, and at a high level with a probability of 0.0009%."
+        },
+        {
+            "id": 40,
+            "origin": "Mek",
+            "content": "When Protein Kinase C and Protein Kinase A are at an average level, and Raf is also at an average level, MAPK/ERK kinase is likely to be at an average level with a probability of 72%, at a low level with a probability of 27.4%, and at a high level with a probability of 0.53%."
+        },
+        {
+            "id": 41,
+            "origin": "Mek",
+            "content": "If Protein Kinase C and Protein Kinase A are at an average level, and Raf is highly activated, then MAPK/ERK kinase is likely to be at an average level with a probability of 58.5%, at a low level with a probability of 28.1%, and at a high level with a probability of 13.3%."
+        },
+        {
+            "id": 42,
+            "origin": "Mek",
+            "content": "If Protein Kinase A is at an average level, Protein Kinase C is highly activated, and Raf is low, then MAPK/ERK kinase is most likely to be at a low level with a probability of 82.5%, at an average level with a probability of 17.4%, and at a high level with a probability of 0.003%."
+        },
+        {
+            "id": 43,
+            "origin": "Mek",
+            "content": "If Protein Kinase A is at an average level, Protein Kinase C is highly activated, and Raf is at an average level, then MAPK/ERK kinase is likely to be at an average level with a probability of 89.4%, at a low level with a probability of 10.5%, and at a high level with a probability of 0.02%."
+        },
+        {
+            "id": 44,
+            "origin": "Mek",
+            "content": "If Protein Kinase A is at an average level, Protein Kinase C is highly activated, and Raf is also highly activated, then MAPK/ERK kinase has an equal probability of being at a low, average, or high level, with each probability being 33.3%."
+        },
+        {
+            "id": 45,
+            "origin": "Mek",
+            "content": "If Protein Kinase A is highly activated, Protein Kinase C is low, and Raf is also low, then MAPK/ERK kinase is most likely to be at a low level with a probability of 99.7%, at an average level with a probability of 0.002, and at a high level with a probability of 0.003%."
+        },
+        {
+            "id": 46,
+            "origin": "Mek",
+            "content": "If Protein Kinase A is highly activated, Protein Kinase C is low, and Raf is at an average level, then MAPK/ERK kinase is most likely to be at a low level with a probability of 99.96%, at an average level with a probability of 0.02%, and at a high level with a probability of 0.02%."
+        },
+        {
+            "id": 47,
+            "origin": "Mek",
+            "content": "If Protein Kinase A is highly activated, Protein Kinase C is low, and Raf is highly activated, then MAPK/ERK kinase is likely to be at a high level with a probability of 6.3%, at a low level with a probability of 92.6%, and at an average level with a probability of 0.08%."
+        },
+        {
+            "id": 48,
+            "origin": "Mek",
+            "content": "If Protein Kinase A is highly activated, Protein Kinase C is at an average level, and Raf is low, then MAPK/ERK kinase is likely to be at a low level with a probability of 95.9%, at an average level with a probability of 3.1%, and at a high level with a probability of 0.04%."
+        },
+        {
+            "id": 49,
+            "origin": "Mek",
+            "content": "If Protein Kinase A is highly activated, Protein Kinase C is at an average level, and Raf is at an average level, then MAPK/ERK kinase is likely to be at a low level with a probability of 85.4%, at an average level with a probability of 14.4%, and at a high level with a probability of 0.2%."
+        },
+        {
+            "id": 50,
+            "origin": "Mek",
+            "content": "If Protein Kinase A is highly activated, Protein Kinase C is at an average level, and Raf is highly activated, then MAPK/ERK kinase has an equal probability of being at a low or average level, with each probability being 49.8%, and at a high level with a probability of 0.4%."
+        },
+        {
+            "id": 51,
+            "origin": "Mek",
+            "content": "If Protein Kinase A is highly activated, Protein Kinase C is highly activated, and Raf is low, then MAPK/ERK kinase is likely to be at a low level with a probability of 72.6%, at an average level with a probability of 27.3%, and at a high level with a probability of 0.001."
+        },
+        {
+            "id": 52,
+            "origin": "Mek",
+            "content": "If Protein Kinase A is highly activated, Protein Kinase C is highly activated, and Raf is at an average level, then MAPK/ERK kinase is most likely to be at an average level with a probability of 98.8%, and at a low or high level with a probability of 0.6% for each."
+        },
+        {
+            "id": 53,
+            "origin": "Mek",
+            "content": "If Protein Kinase A is highly activated, Protein Kinase C is highly activated, and Raf is highly activated, then MAPK/ERK kinase has an equal probability of being at a low, average, or high level, with each probability being 33.3%."
+        },
+        {
+            "id": 54,
+            "origin": "P38",
+            "content": "If Protein Kinase A (PKA) and Protein Kinase C (PKC) levels are both low, then there is a 62.85% chance that the P38 protein level is high, a 30.69% chance that it is low, and a 6.46% chance that it is average."
+        },
+        {
+            "id": 55,
+            "origin": "P38",
+            "content": "If Protein Kinase A (PKA) is low and Protein Kinase C (PKC) is average, then there is a 64.58% chance that the P38 protein level is low, a 34.39% chance that it is average, and a very slim chance of 0.02% that it is high."
+        },
+        {
+            "id": 56,
+            "origin": "P38",
+            "content": "If Protein Kinase A (PKA) is low and Protein Kinase C (PKC) is high, then there is an 86.75% chance that the P38 protein level is low, a 12.79% chance that it is average, and only a 0.46% chance that it is high."
+        },
+        {
+            "id": 57,
+            "origin": "P38",
+            "content": "If Protein Kinase A (PKA) is average and Protein Kinase C (PKC) is low, then there is a 91.92% chance that the P38 protein level is low, a 7.85% chance that it is average, and only a 0.23% chance that it is high."
+        },
+        {
+            "id": 58,
+            "origin": "P38",
+            "content": "If Protein Kinase A (PKA) and Protein Kinase C (PKC) are both at average levels, then there is an 80.49% chance that the P38 protein level is low, an 18.50% chance that it is average, and a near-zero chance of 0.15% that it is high."
+        },
+        {
+            "id": 59,
+            "origin": "P38",
+            "content": "If Protein Kinase A (PKA) is average and Protein Kinase C (PKC) is high, then there is an 80.31% chance that the P38 protein level is low, a 19.27% chance that it is average, and a 0.41% chance that it is high."
+        },
+        {
+            "id": 60,
+            "origin": "P38",
+            "content": "If Protein Kinase A (PKA) is high and Protein Kinase C (PKC) is low, then there is an 80.74% chance that the P38 protein level is low, a 9.16% chance that it is average, and a 10.10% chance that it is high."
+        },
+        {
+            "id": 61,
+            "origin": "P38",
+            "content": "If Protein Kinase A (PKA) is high and Protein Kinase C (PKC) is average, then there is a 38.62% chance that the P38 protein level is low, a 15.95% chance that it is average, and a 45.42% chance that it is high."
+        },
+        {
+            "id": 62,
+            "origin": "P38",
+            "content": "If Protein Kinase A (PKA) and Protein Kinase C (PKC) are both high, then there is a 76.55% chance that the P38 protein level is low, a 23.16% chance that it is average, and a 0.28% chance that it is high."
+        },
+        {
+            "id": 63,
+            "origin": "PKA",
+            "content": "If the level of PKC is low, there is a 38.64% chance that PKA is also low, a 37.94% chance that PKA is average, and a 23.42% chance that PKA is high."
+        },
+        {
+            "id": 64,
+            "origin": "PKA",
+            "content": "With an average level of PKC, there is a 92.26% chance that PKA is also at an average level, and only a 6.04% chance that PKA is low, and a 1.70% chance that PKA is high."
+        },
+        {
+            "id": 65,
+            "origin": "PKA",
+            "content": "If PKC is at a high level, PKA is likely to be at a high level too, with a 2.55% chance, while in 95.87% of the cases PKA is at an average level, and only in 1.58% of the cases PKA is low."
+        },
+        {
+            "id": 66,
+            "origin": "PKC",
+            "content": "There's a 42.31% chance that PKC activity is low, when it's average, there's a 48.16% chance, and when it's high, there's a 9.52% chance."
+        },
+        {
+            "id": 67,
+            "origin": "Raf",
+            "content": "If the levels of both PKA and PKC are low, there is a 79.04% probability that the level of Raf is high, and only a 6.23% and 14.72% chance that it is low or average, respectively."
+        },
+        {
+            "id": 68,
+            "origin": "Raf",
+            "content": "When PKA level is low and PKC level is average, there is a 36.94% probability that Raf level is low, 33.12% probability that it is average, and 29.94% probability that it is high."
+        },
+        {
+            "id": 69,
+            "origin": "Raf",
+            "content": "In the case where PKA level is low and PKC level is high, Raf level is likely to be low with a probability of 86.75%, and it has only a 12.79% and 0.46% chance of being average or high, respectively."
+        },
+        {
+            "id": 70,
+            "origin": "Raf",
+            "content": "If PKA level is average and PKC level is low, Raf level is predicted to be low with a probability of 44.75%, average with a probability of 31.26%, and high with a probability of 23.99%."
+        },
+        {
+            "id": 71,
+            "origin": "Raf",
+            "content": "When PKA level is average and PKC level is also average, Raf level is likely to be low with a probability of 55.08%, around average with a probability of 39.29%, and high with a probability of only 5.63%."
+        },
+        {
+            "id": 72,
+            "origin": "Raf",
+            "content": "If PKA level is average and PKC level is high, Raf level is highly likely to be low with a probability of 88.42%, and it has only a 11.57% probability of being average, and a very small probability of being high (0.000075)."
+        },
+        {
+            "id": 73,
+            "origin": "Raf",
+            "content": "When PKA level is high and PKC level is low, Raf level is likely to be low with a probability of 84.29%, and it has a 12.71% and 2.99% chance of being average or high, respectively."
+        },
+        {
+            "id": 74,
+            "origin": "Raf",
+            "content": "If PKA level is high and PKC level is average, Raf level is likely to be low with a probability of 74.89%, around average with a probability of 15.95%, and high with a probability of 9.15%."
+        },
+        {
+            "id": 75,
+            "origin": "Raf",
+            "content": "In the case where PKA level is high and PKC level is also high, Raf level is likely to be low with a probability of 84.18%, around average with a probability of 15.54%, and high with a very small probability of 0.28%."
+        }
+    ],
+    "wep_based_premises": [
+        {
+            "id": 0,
+            "origin": "Akt",
+            "content": "If Erk and PKA are both low, then it is probably the case that Akt will also be low. However, it is probably not the case that Akt will be average, and there is almost no chance that Akt will be high."
+        },
+        {
+            "id": 1,
+            "origin": "Akt",
+            "content": "Given that Erk is low and PKA is average, there is a better than even chance that Akt will also be low, it is probably not average, and there is almost no chance that Akt will be high."
+        },
+        {
+            "id": 2,
+            "origin": "Akt",
+            "content": "Given that Erk is low and PKA is high, it is almost certain that Akt will also be low, and there is almost no chance that Akt will be average or high."
+        },
+        {
+            "id": 3,
+            "origin": "Akt",
+            "content": "Given that Erk is average and PKA is low, it is probably not the case that Akt is low, there is a better than even chance that Akt is average, and there is almost no chance that Akt is high."
+        },
+        {
+            "id": 4,
+            "origin": "Akt",
+            "content": "If both Erk and PKA levels are average, then there is a very good chance that Akt levels will be low, unlikely that Akt levels will be average, and almost no chance that Akt levels will be high."
+        },
+        {
+            "id": 5,
+            "origin": "Akt",
+            "content": "Given that Erk is at an average level and PKA is high, it is almost certain that Akt will be low, highly unlikely that Akt will be average, and there is almost no chance that Akt will be high."
+        },
+        {
+            "id": 6,
+            "origin": "Akt",
+            "content": "Given that Erk is high and PKA is low, there is almost no chance that Akt will also be low, chances are slight that Akt will be average, and it is highly likely that Akt will be high."
+        },
+        {
+            "id": 7,
+            "origin": "Akt",
+            "content": "Given that Erk is high and PKA is average, it is unlikely that Akt will be low, there is a very good chance that Akt will be average, and there is almost no chance that Akt will be high."
+        },
+        {
+            "id": 8,
+            "origin": "Akt",
+            "content": "If Erk and PKA are both high, it is unlikely that Akt will be low, there is a very good chance that Akt will be average, and there is almost no chance that Akt will be high."
+        },
+        {
+            "id": 9,
+            "origin": "Erk",
+            "content": "If Mek is low and PKA is low, then it is highly likely that Erk will also be low, while it is improbable that Erk will be average, and there is almost no chance that Erk will be high."
+        },
+        {
+            "id": 10,
+            "origin": "Erk",
+            "content": "If the level of Mek is low and PKA is average, then it is almost certain that the level of Erk will be low, it is probable that the level of Erk will be average, and it is unlikely that the level of Erk will be high."
+        },
+        {
+            "id": 11,
+            "origin": "Erk",
+            "content": "If the level of Mek is low and PKA is high, then it is highly unlikely that the level of Erk will be low, it is probable that the level of Erk will be average, and it is probably not the case that the level of Erk will be high."
+        },
+        {
+            "id": 12,
+            "origin": "Erk",
+            "content": "If the level of Mek is average and PKA is low, then it is probably not the case that the level of Erk will be low, there are about even chances that the level of Erk will be average, and it is improbable that the level of Erk will be high."
+        },
+        {
+            "id": 13,
+            "origin": "Erk",
+            "content": "If the level of Mek and PKA are both average, then it is highly unlikely that the level of Erk will be low, it is probably the case that the level of Erk will be average, and it is unlikely that the level of Erk will be high."
+        },
+        {
+            "id": 14,
+            "origin": "Erk",
+            "content": "If the level of Mek is average and PKA is high, then it is almost certain that the level of Erk will not be low, it is improbable that the level of Erk will be average, and it is highly likely that the level of Erk will be high."
+        },
+        {
+            "id": 15,
+            "origin": "Erk",
+            "content": "If the level of Mek is high and PKA is low, then it is almost certain that the level of Erk will not be low, it is unlikely that the level of Erk will be average, and it is very likely that the level of Erk will be high."
+        },
+        {
+            "id": 16,
+            "origin": "Erk",
+            "content": "If the level of Mek is high and PKA is average, then it is almost certain that the level of Erk will not be low, it is probable that the level of Erk will be average, and it is probably not the case that the level of Erk will be high."
+        },
+        {
+            "id": 17,
+            "origin": "Erk",
+            "content": "If the level of Mek and PKA are both high, then it is almost certain that the level of Erk will not be low or average, and it is almost certain that the level of Erk will be high."
+        },
+        {
+            "id": 18,
+            "origin": "Jnk",
+            "content": "If the concentration of Protein Kinase A (PKA) and Protein Kinase C (PKC) are both low, then it is unlikely for c-Jun N-terminal kinases (Jnk) to be at a high level, and it is probably not the case that Jnk is at an average level, instead, there are about even chances that Jnk is at a high level."
+        },
+        {
+            "id": 19,
+            "origin": "Jnk",
+            "content": "If the concentration of Protein Kinase A (PKA) is low and Protein Kinase C (PKC) is average, then there is a better than even chance that c-Jun N-terminal kinases (Jnk) are at a low level, there are about even chances that Jnk is at an average level, and there is almost no chance that Jnk is at a high level."
+        },
+        {
+            "id": 20,
+            "origin": "Jnk",
+            "content": "If the concentration of Protein Kinase A (PKA) is low and Protein Kinase C (PKC) is high, then there is almost no chance that c-Jun N-terminal kinases (Jnk) are at a low level, it is almost certain that Jnk is at an average level, and there is almost no chance that Jnk is at a high level."
+        },
+        {
+            "id": 21,
+            "origin": "Jnk",
+            "content": "If the concentration of Protein Kinase A (PKA) is average and Protein Kinase C (PKC) is low, then there is a better than even chance that c-Jun N-terminal kinases (Jnk) are at a low level, it is probably not at an average level, and there is almost no chance that Jnk is at a high level."
+        },
+        {
+            "id": 22,
+            "origin": "Jnk",
+            "content": "If the concentration of Protein Kinase A (PKA) and Protein Kinase C (PKC) are both average, then there is a better than even chance that c-Jun N-terminal kinases (Jnk) are at a low level, it is probably not at an average level, and there is almost no chance that Jnk is at a high level."
+        },
+        {
+            "id": 23,
+            "origin": "Jnk",
+            "content": "If the concentration of Protein Kinase A (PKA) is average and Protein Kinase C (PKC) is high, then it is highly unlikely that c-Jun N-terminal kinases (Jnk) are at a low level, it is almost certain that Jnk is at an average level, and there is almost no chance that Jnk is at a high level."
+        },
+        {
+            "id": 24,
+            "origin": "Jnk",
+            "content": "If the concentration of Protein Kinase A (PKA) is high and Protein Kinase C (PKC) is low, then it is almost certain that c-Jun N-terminal kinases (Jnk) are at a low level, and there is almost no chance that Jnk is at an average level or at a high level."
+        },
+        {
+            "id": 25,
+            "origin": "Jnk",
+            "content": "If the concentration of Protein Kinase A (PKA) is high and Protein Kinase C (PKC) is average, then it is highly likely that c-Jun N-terminal kinases (Jnk) are at a low level, it is improbable that Jnk is at an average level, and there is almost no chance that Jnk is at a high level."
+        },
+        {
+            "id": 26,
+            "origin": "Jnk",
+            "content": "If the concentration of Protein Kinase A (PKA) and Protein Kinase C (PKC) are both high, then it is unlikely that c-Jun N-terminal kinases (Jnk) are at a low level, there is a very good chance that Jnk is at an average level, and there is almost no chance that Jnk is at a high level."
+        },
+        {
+            "id": 27,
+            "origin": "Mek",
+            "content": "If the concentrations of PKA and PKC are both low and the activity of Raf is also low, it is probable that the level of Mek is low, it is likely not the case that the level of Mek is average, and it is highly unlikely that the level of Mek is high."
+        },
+        {
+            "id": 28,
+            "origin": "Mek",
+            "content": "If the concentration of PKA is low and the concentration of PKC is also low, but the activity of Raf is average, then there is an about even chance that the level of Mek is low, there is almost no chance that the level of Mek is average, and it is more likely than not that the level of Mek is high."
+        },
+        {
+            "id": 29,
+            "origin": "Mek",
+            "content": "If the concentration of PKA is low and the concentration of PKC is also low, and the activity of Raf is high, then it is probably not the case that the level of Mek is low, there is almost no chance that the level of Mek is average, and it is probable that the level of Mek is high."
+        },
+        {
+            "id": 30,
+            "origin": "Mek",
+            "content": "If the concentration of PKA is low, the concentration of PKC is average, and the activity of Raf is low, then it is probable that the level of Mek is low, it is probably not the case that the level of Mek is average, and it is highly unlikely that the level of Mek is high."
+        },
+        {
+            "id": 31,
+            "origin": "Mek",
+            "content": "If the concentration of PKA is low, the concentration of PKC is average, and the activity of Raf is average, then it is unlikely that the level of Mek is low, it is likely that the level of Mek is average, and there is almost no chance that the level of Mek is high."
+        },
+        {
+            "id": 32,
+            "origin": "Mek",
+            "content": "If the concentration of PKA is low, the concentration of PKC is average, and the activity of Raf is high, then it is highly likely that the level of Mek is low, it is improbable that the level of Mek is average, and it is highly unlikely that the level of Mek is high."
+        },
+        {
+            "id": 33,
+            "origin": "Mek",
+            "content": "If the concentration of PKA is low, the concentration of PKC is high, and the activity of Raf is low, then it is highly likely that the level of Mek is low, it is unlikely that the level of Mek is average, and there is almost no chance that the level of Mek is high."
+        },
+        {
+            "id": 34,
+            "origin": "Mek",
+            "content": "If the concentration of PKA is low, the concentration of PKC is high, and the activity of Raf is average, then there is almost no chance that the level of Mek is low, it is almost certain that the level of Mek is average, and there is almost no chance that the level of Mek is high."
+        },
+        {
+            "id": 35,
+            "origin": "Mek",
+            "content": "If the concentration of PKA is low, the concentration of PKC is high, and the activity of Raf is high, then there is an equal chance of Mek being in a low, average, or high state."
+        },
+        {
+            "id": 36,
+            "origin": "Mek",
+            "content": "If the concentration of PKA is average, the concentration of PKC is low, and the activity of Raf is low, then it is very likely that the level of Mek is low, it is unlikely that the level of Mek is average, and it is highly unlikely that the level of Mek is high."
+        },
+        {
+            "id": 37,
+            "origin": "Mek",
+            "content": "If the concentration of PKA is average, the concentration of PKC is low, and the activity of Raf is average, then it is unlikely that the level of Mek is low, there is a better than even chance that the level of Mek is average, and it is highly unlikely that the level of Mek is high."
+        },
+        {
+            "id": 38,
+            "origin": "Mek",
+            "content": "If the concentration of PKA is average, the concentration of PKC is low, and the activity of Raf is high, then it is highly likely that the level of Mek is low, it is unlikely that the level of Mek is average, and it is highly unlikely that the level of Mek is high."
+        },
+        {
+            "id": 39,
+            "origin": "Mek",
+            "content": "If the concentration of PKA is average, the concentration of PKC is average, and the activity of Raf is low, then it is likely that the level of Mek is low, it is unlikely that the level of Mek is average, and it is highly unlikely that the level of Mek is high."
+        },
+        {
+            "id": 40,
+            "origin": "Mek",
+            "content": "If the concentration of PKA is average, the concentration of PKC is average, and the activity of Raf is average, then it is unlikely that the level of Mek is low, it is probable that the level of Mek is average, and it is highly unlikely that the level of Mek is high."
+        },
+        {
+            "id": 41,
+            "origin": "Mek",
+            "content": "If the concentration of PKA is average, the concentration of PKC is average, and the activity of Raf is high, then it is unlikely that the level of Mek is low, there is a better than even chance that the level of Mek is average, and there is only a little chance that the level of Mek is high."
+        },
+        {
+            "id": 42,
+            "origin": "Mek",
+            "content": "If the concentration of PKA is average, the concentration of PKC is high, and the activity of Raf is low, then it is highly likely that the level of Mek is low, it is unlikely that the level of Mek is average, and it is highly unlikely that the level of Mek is high."
+        },
+        {
+            "id": 43,
+            "origin": "Mek",
+            "content": "If the concentration of PKA is average, the concentration of PKC is high, and the activity of Raf is average, then it is unlikely that the level of Mek is low, it is highly likely that the level of Mek is average, and it is highly unlikely that the level of Mek is high."
+        },
+        {
+            "id": 44,
+            "origin": "Mek",
+            "content": "If the concentration of PKA is average, the concentration of PKC is high, and the activity of Raf is high, then there is an equal chance that Mek is at a low, average, or high level."
+        },
+        {
+            "id": 45,
+            "origin": "Mek",
+            "content": "If the concentration of PKA is high, the concentration of PKC is low, and the activity of Raf is low, then it is almost certain that the level of Mek is low, it is highly unlikely that the level of Mek is average, and there is almost no chance that the level of Mek is high."
+        },
+        {
+            "id": 46,
+            "origin": "Mek",
+            "content": "If the concentration of PKA is high, the concentration of PKC is low, and the activity of Raf is average, then it is almost certain that the level of Mek is low, it is highly unlikely that the level of Mek is average, and there is almost no chance that the level of Mek is high."
+        },
+        {
+            "id": 47,
+            "origin": "Mek",
+            "content": "If the concentration of PKA is high, the concentration of PKC is low, and the activity of Raf is high, then it is highly likely that the level of Mek is low, it is highly unlikely that the level of Mek is average, and it is unlikely that the level of Mek is high."
+        },
+        {
+            "id": 48,
+            "origin": "Mek",
+            "content": "If the concentration of PKA is high, the concentration of PKC is average, and the activity of Raf is low, then it is highly likely that the level of Mek is low, it is highly unlikely that the level of Mek is average, and it is highly unlikely that the level of Mek is high."
+        },
+        {
+            "id": 49,
+            "origin": "Mek",
+            "content": "If the concentration of PKA is high, the concentration of PKC is average, and the activity of Raf is average, then it is highly likely that the level of Mek is low, it is unlikely that the level of Mek is average, and there is almost no chance that the level of Mek is high."
+        },
+        {
+            "id": 50,
+            "origin": "Mek",
+            "content": "If the concentration of PKA is high, the concentration of PKC is average, and the activity of Raf is high, then there are about even chances that the level of Mek is low, and there are also about even chances that the level of Mek is average, and it is highly unlikely that the level of Mek is high."
+        },
+        {
+            "id": 51,
+            "origin": "Mek",
+            "content": "If the concentration of PKA is high, the concentration of PKC is high, and the activity of Raf is low, then it is likely that the level of Mek is low, it is unlikely that the level of Mek is average, and there is almost no chance that the level of Mek is high."
+        },
+        {
+            "id": 52,
+            "origin": "Mek",
+            "content": "If the concentration of PKA is high, the concentration of PKC is high, and the activity of Raf is average, then there is almost no chance that the level of Mek is low, it is almost certain that the level of Mek is average, and there is almost no that the level of Mek is high."
+        },
+        {
+            "id": 53,
+            "origin": "Mek",
+            "content": "If the concentration of PKA is high, the concentration of PKC is high, and the activity of Raf is high, then there are equal chances that the level of Mek is low, average, or high."
+        },
+        {
+            "id": 54,
+            "origin": "P38",
+            "content": "If the levels of PKA and PKC are low, then it is likely that the level of P38, which is a group of MAPKs that respond to stress stimuli and are involved in cell differentiation and apoptosis, will be high, while it is highly unlikely that the level of P38 will be average, and it is also probably not low."
+        },
+        {
+            "id": 55,
+            "origin": "P38",
+            "content": "If PKA levels are low and PKC levels are average, it is probable that P38 levels will also be low, it is probably not the case that P38 levels will be average, and there is almost no chance that P38 levels will be high."
+        },
+        {
+            "id": 56,
+            "origin": "P38",
+            "content": "If PKA is low and PKC is high, then it is highly likely that P38 will also be low, it is improbable that P38 will be average, and there is almost no chance that P38 will be high."
+        },
+        {
+            "id": 57,
+            "origin": "P38",
+            "content": "If the protein kinase A (PKA) is at an average level and the protein kinase C (PKC) is at a low level, then it is highly likely that the level of P38 will also be low, while it is improbable that the level of P38 will be average, and there is almost no chance that the level of P38 will be high."
+        },
+        {
+            "id": 58,
+            "origin": "P38",
+            "content": "If PKA and PKC are average, then there is a very good chance that P38 will be low, it is unlikely that P38 will be average, and there is almost no chance that P38 will be high."
+        },
+        {
+            "id": 59,
+            "origin": "P38",
+            "content": "If the level of PKA is average and the level of PKC is high, then there is a very good chance that P38 will be low, it is unlikely that P38 will be average, and there is almost no chance that P38 will be high."
+        },
+        {
+            "id": 60,
+            "origin": "P38",
+            "content": "If the levels of PKA are high and PKC levels are low, then there is a very good chance that P38 levels will be low, a slight chance that P38 levels will be average, and it is improbable that P38 levels will be high."
+        },
+        {
+            "id": 61,
+            "origin": "P38",
+            "content": "If the levels of PKA are high and PKC are average, then there are about even chances for P38 to be low and P38 to be high, but it is unlikely for P38 to be average."
+        },
+        {
+            "id": 62,
+            "origin": "P38",
+            "content": "If PKA and PKC levels are high, it is highly likely that P38 will be low, it is probably not the case that P38 will be average, and there is almost no chance that P38 will also be high."
+        },
+        {
+            "id": 63,
+            "origin": "PKA",
+            "content": "If the level of PKC is low, there are about even chances that the level of PKA will also be low, and there are also about even chances that the level of PKA will be average, while it is probably not the case that the level of PKA will be high."
+        },
+        {
+            "id": 64,
+            "origin": "PKA",
+            "content": "If the level of Protein Kinase C (PKC) is average, then it is highly unlikely for the level of Protein Kinase A (PKA) to be low, it is highly likely for the level of PKA to also be average, and there is almost no chance for the level of PKA to be high."
+        },
+        {
+            "id": 65,
+            "origin": "PKA",
+            "content": "If the level of PKC is high, then there is almost no chance that the level of PKA is low, there is almost a certainty that the level of PKA is average, and there is almost no chance that the level of PKA is high."
+        },
+        {
+            "id": 66,
+            "origin": "PKC",
+            "content": "There are about even chances that PKC has a low level of activation, similarly, there are about even chances that PKC has an average level of activation, however, it is improbable that PKC has a high level of activation."
+        },
+        {
+            "id": 67,
+            "origin": "Raf",
+            "content": "It is highly unlikely that Raf will be low when both PKA and PKC are low, and there is only a slight chance that Raf will be average. However, there is a very good chance that Raf will be high."
+        },
+        {
+            "id": 68,
+            "origin": "Raf",
+            "content": "Given that the concentration of cAMP-dependent protein kinase (PKA) is low and Protein Kinase C (PKC) is at an average level, it is rather unlikely that Raf proteins are in a low, average, or high state."
+        },
+        {
+            "id": 69,
+            "origin": "Raf",
+            "content": "Given that the concentration of cAMP-dependent protein kinase (PKA) is low and Protein Kinase C (PKC) is highly activated, there is a very good chance that Raf proteins are in a low state, a little chance that they are in an average state, and almost no chance that they are in a high state."
+        },
+        {
+            "id": 70,
+            "origin": "Raf",
+            "content": "Given that the concentration of cAMP-dependent protein kinase (PKA) is average and Protein Kinase C (PKC) is low, there is an about even chance that Raf proteins are in a low state, while it is probably not the case that they are in an average or high state."
+        },
+        {
+            "id": 71,
+            "origin": "Raf",
+            "content": "Given that the concentration of cAMP-dependent protein kinase (PKA) and Protein Kinase C (PKC) are both at an average level, there is a better than even chance that Raf proteins are in a low state, it is probably not the case that they are in an average state, and highly unlikely that they are in a high state."
+        },
+        {
+            "id": 72,
+            "origin": "Raf",
+            "content": "Given that the concentration of cAMP-dependent protein kinase (PKA) is average and Protein Kinase C (PKC) is highly activated, it is highly likely that Raf proteins are in a low state, the chances are slight that they are in an average state, and almost no chance that they are in a high state."
+        },
+        {
+            "id": 73,
+            "origin": "Raf",
+            "content": "Given that the concentration of cAMP-dependent protein kinase (PKA) is high and Protein Kinase C (PKC) is low, there is a very good chance that Raf proteins are in a low state, the chances are slight that they are in an average state, and almost no chance that they are in a high state."
+        },
+        {
+            "id": 74,
+            "origin": "Raf",
+            "content": "Given that the concentration of cAMP-dependent protein kinase (PKA) is high and Protein Kinase C (PKC) is at an average level, it is likely that Raf proteins are in a low state, unlikely that they are in an average state, and improbable that they are in a high state."
+        },
+        {
+            "id": 75,
+            "origin": "Raf",
+            "content": "Given that the concentration of cAMP-dependent protein kinase (PKA) and Protein Kinase C (PKC) are both high, there is a very good chance that Raf proteins are in a low state, it is unlikely that they are in an average state, and almost no chance that they are in a high state."
+        }
+    ],
+    "evidence_query_pairs": [
+        {
+            "id": 0,
+            "evidences": [
+                "The AKT protein level is average.",
+                "The ERK protein level is low."
+            ],
+            "query": "What is the likelihood of the JNK protein level being HIGH?",
+            "answer": 0.15703602,
+            "reasoning_types": []
+        },
+        {
+            "id": 1,
+            "evidences": [
+                "Raf is at an average level.",
+                "Protein Kinase C (PKC) is at an average level.",
+                "Akt is at an average level.",
+                "Jnk is at an average level.",
+                "Mek is at an average level.",
+                "PKA is at an average level.",
+                "P38 is at an average level."
+            ],
+            "query": "What is the likelihood of Erk being at a low level?",
+            "answer": 0.056300659,
+            "reasoning_types": [
+                "causal",
+                "evidential"
+            ]
+        },
+        {
+            "id": 2,
+            "evidences": [
+                "The level of MAPK/ERK kinase (Mek) is low."
+            ],
+            "query": "What is the likelihood of the level of Extracellular signal-regulated kinases (Erk) being average?",
+            "answer": 0.6271779,
+            "reasoning_types": [
+                "causal"
+            ]
+        },
+        {
+            "id": 3,
+            "evidences": [
+                "The JNK level is low.",
+                "The ERK level is low.",
+                "The P38 level is low.",
+                "The PKA level is high.",
+                "The Raf level is low."
+            ],
+            "query": "What is the likelihood of the PKC level being low?",
+            "answer": 0.96901669,
+            "reasoning_types": [
+                "evidential"
+            ]
+        },
+        {
+            "id": 4,
+            "evidences": [
+                "The level of Akt is high.",
+                "The level of protein kinase C (PKC) is low."
+            ],
+            "query": "What is the likelihood of Jnk being average?",
+            "answer": 0.24586071,
+            "reasoning_types": [
+                "causal"
+            ]
+        },
+        {
+            "id": 5,
+            "evidences": [
+                "The level of P38 is low.",
+                "The level of PKC is low.",
+                "The level of PKA is low.",
+                "The level of Jnk is low.",
+                "The level of Akt is high.",
+                "The level of Erk is average.",
+                "The level of Mek is high."
+            ],
+            "query": "What is the likelihood of the level of Raf being average?",
+            "answer": 0.11070896,
+            "reasoning_types": [
+                "causal",
+                "evidential"
+            ]
+        },
+        {
+            "id": 6,
+            "evidences": [
+                "The level of Protein Kinase C (PKC) is high."
+            ],
+            "query": "What is the likelihood of PKC being high?",
+            "answer": 1.0,
+            "reasoning_types": [
+                "observation"
+            ]
+        },
+        {
+            "id": 7,
+            "evidences": [
+                "The level of P38 is low.",
+                "The level of PKC is low.",
+                "The level of PKA is low.",
+                "The level of Jnk is low.",
+                "The level of Akt is high.",
+                "The level of Erk is average.",
+                "The level of Mek is high."
+            ],
+            "query": "What is the likelihood of PKA being high?",
+            "answer": 0.0,
+            "reasoning_types": [
+                "observation"
+            ]
+        },
+        {
+            "id": 8,
+            "evidences": [
+                "The MAPK/ERK kinase signal transduction pathway is highly active.",
+                "The protein kinase A is at a low level.",
+                "The Raf family of proteins is at an average level.",
+                "The c-Jun N-terminal kinases are highly active.",
+                "The Protein Kinase C is at an average level."
+            ],
+            "query": "What is the likelihood of the P38 group of MAPKs being at an average level?",
+            "answer": 0.3493,
+            "reasoning_types": [
+                "causal",
+                "evidential"
+            ]
+        },
+        {
+            "id": 9,
+            "evidences": [
+                "The level of MEK is high."
+            ],
+            "query": "What is the likelihood of the level of Raf being high?",
+            "answer": 0.88394073,
+            "reasoning_types": [
+                "evidential"
+            ]
+        }
+    ],
+    "additional_evidence_query_pairs": [
+        {
+            "id": 10,
+            "evidences": [
+                "The ERK signaling pathway is highly active."
+            ],
+            "query": "What is the likelihood of the Akt signaling pathway being highly active?",
+            "answer": 0.30547805,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "Erk",
+                "Akt"
+            ]
+        },
+        {
+            "id": 11,
+            "evidences": [
+                "The activity level of Jnk is highly elevated."
+            ],
+            "query": "What is the likelihood that the activity level of Akt is highly elevated?",
+            "answer": 0.45827879,
+            "reasoning_types": [],
+            "sampled_nodes": [
+                "Jnk",
+                "Akt"
+            ]
+        },
+        {
+            "id": 12,
+            "evidences": [
+                "The activity level of MAPK/ERK kinase (Mek) is high."
+            ],
+            "query": "What is the likelihood of the activity level of Protein Kinase B (Akt) being average?",
+            "answer": 0.22978664,
+            "reasoning_types": [],
+            "sampled_nodes": [
+                "Mek",
+                "Akt"
+            ]
+        },
+        {
+            "id": 13,
+            "evidences": [
+                "The level of p38 MAPK activity is low."
+            ],
+            "query": "The level of Akt (Protein Kinase B) activity is average.",
+            "answer": 0.31362022,
+            "reasoning_types": [],
+            "sampled_nodes": [
+                "P38",
+                "Akt"
+            ]
+        },
+        {
+            "id": 14,
+            "evidences": [
+                "The activity level of the p38 protein kinase is average."
+            ],
+            "query": "What is the likelihood that the Akt protein kinase is active?",
+            "answer": 0.32133169,
+            "reasoning_types": [],
+            "sampled_nodes": [
+                "P38",
+                "Akt"
+            ]
+        },
+        {
+            "id": 15,
+            "evidences": [
+                "The ERK signaling pathway is highly active.",
+                "The Jnk signaling pathway is not very active."
+            ],
+            "query": "What is the likelihood of the Akt signaling pathway being not very active?",
+            "answer": 0.14285787,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "Erk",
+                "Jnk",
+                "Akt"
+            ]
+        },
+        {
+            "id": 16,
+            "evidences": [
+                "The ERK signaling pathway is highly active.",
+                "The Jnk signaling pathway is average."
+            ],
+            "query": "The Akt signaling pathway is average.",
+            "answer": 0.64127665,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "Erk",
+                "Jnk",
+                "Akt"
+            ]
+        },
+        {
+            "id": 17,
+            "evidences": [
+                "The ERK signaling pathway is highly active.",
+                "The MAPK/ERK kinase (Mek) signaling pathway has an average level of activity."
+            ],
+            "query": "What is the likelihood of the Akt signaling pathway being active to an average degree?",
+            "answer": 0.79124755,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "Erk",
+                "Mek",
+                "Akt"
+            ]
+        },
+        {
+            "id": 18,
+            "evidences": [
+                "The ERK signaling pathway is highly active.",
+                "The P38 signaling pathway is not very active."
+            ],
+            "query": "What is the likelihood of the Akt signaling pathway being active at an average level?",
+            "answer": 0.69820692,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "Erk",
+                "P38",
+                "Akt"
+            ]
+        },
+        {
+            "id": 19,
+            "evidences": [
+                "The ERK signaling pathway is highly active.",
+                "The p38 signaling pathway is highly active."
+            ],
+            "query": "What is the likelihood of the Akt signaling pathway being highly active?",
+            "answer": 0.82682261,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "Erk",
+                "P38",
+                "Akt"
+            ]
+        },
+        {
+            "id": 20,
+            "evidences": [
+                "The ERK signaling pathway is highly active.",
+                "The Protein Kinase A signaling pathway is not very active."
+            ],
+            "query": "What is the likelihood of the Protein Kinase B (Akt) signaling pathway being active at an average level?",
+            "answer": 0.1183,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "Erk",
+                "PKA",
+                "Akt"
+            ]
+        },
+        {
+            "id": 21,
+            "evidences": [
+                "The ERK signaling pathway is highly active.",
+                "The Protein Kinase A signaling pathway is average active."
+            ],
+            "query": "What is the likelihood of the Akt signaling pathway being not very active?",
+            "answer": 0.1837,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "Erk",
+                "PKA",
+                "Akt"
+            ]
+        },
+        {
+            "id": 22,
+            "evidences": [
+                "The ERK signaling pathway is highly active.",
+                "The Protein Kinase A (PKA) signaling pathway is highly active."
+            ],
+            "query": "What is the likelihood of the Protein Kinase B (Akt) signaling pathway being highly active?",
+            "answer": 0.0003,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "Erk",
+                "PKA",
+                "Akt"
+            ]
+        },
+        {
+            "id": 23,
+            "evidences": [
+                "The ERK signaling pathway is highly active.",
+                "The Protein Kinase C (PKC) signaling pathway is not very active."
+            ],
+            "query": "What is the likelihood of the Protein Kinase B (Akt) signaling pathway being not very active?",
+            "answer": 0.068982538,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "Erk",
+                "PKC",
+                "Akt"
+            ]
+        },
+        {
+            "id": 24,
+            "evidences": [
+                "The ERK signaling pathway is highly active.",
+                "The Protein Kinase C (PKC) signaling pathway is highly active."
+            ],
+            "query": "What is the likelihood of the PKC signaling pathway being low?",
+            "answer": 0.18226129,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "Erk",
+                "PKC",
+                "Akt"
+            ]
+        },
+        {
+            "id": 25,
+            "evidences": [
+                "The ERK signaling pathway is highly active.",
+                "The Raf protein activity is low."
+            ],
+            "query": "What is the likelihood of the Akt signaling pathway being not very active?",
+            "answer": 0.1791583,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "Erk",
+                "Raf",
+                "Akt"
+            ]
+        },
+        {
+            "id": 26,
+            "evidences": [
+                "The activity level of the c-Jun N-terminal kinases (JNK) is average.",
+                "The activity level of the Raf protein is high."
+            ],
+            "query": "What is the likelihood of the activity level of the Akt (Protein Kinase B) being average?",
+            "answer": 0.2962001,
+            "reasoning_types": [],
+            "sampled_nodes": [
+                "Jnk",
+                "Raf",
+                "Akt"
+            ]
+        },
+        {
+            "id": 27,
+            "evidences": [
+                "The activity level of Jnk is highly elevated.",
+                "The level of Raf protein is highly elevated."
+            ],
+            "query": "What is the likelihood of the Akt protein level being average?",
+            "answer": 0.26225419,
+            "reasoning_types": [],
+            "sampled_nodes": [
+                "Jnk",
+                "Raf",
+                "Akt"
+            ]
+        },
+        {
+            "id": 28,
+            "evidences": [
+                "The activity level of MAPK/ERK kinase (Mek) is high.",
+                "The activity level of p38 MAPK is average."
+            ],
+            "query": "What is the likelihood of the activity level of Protein Kinase B (Akt) being average?",
+            "answer": 0.23740636,
+            "reasoning_types": [],
+            "sampled_nodes": [
+                "Mek",
+                "P38",
+                "Akt"
+            ]
+        },
+        {
+            "id": 29,
+            "evidences": [
+                "The activity level of MAPK/ERK kinase (Mek) is high.",
+                "The activity level of Protein Kinase A (PKA) is average."
+            ],
+            "query": "What is the likelihood of the activity level of Protein Kinase B (Akt) being average?",
+            "answer": 0.33734683,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "Mek",
+                "PKA",
+                "Akt"
+            ]
+        },
+        {
+            "id": 30,
+            "evidences": [
+                "The activity level of MAPK/ERK kinase (Mek) is low.",
+                "The activity level of Raf is high."
+            ],
+            "query": "What is the likelihood of the activity level of Protein Kinase B (Akt) being average?",
+            "answer": 0.34342595,
+            "reasoning_types": [],
+            "sampled_nodes": [
+                "Mek",
+                "Raf",
+                "Akt"
+            ]
+        },
+        {
+            "id": 31,
+            "evidences": [
+                "The activity level of MAPK/ERK kinase (Mek) is high.",
+                "The activity level of Raf is high."
+            ],
+            "query": "What is the likelihood of the protein kinase B (Akt) having high activity?",
+            "answer": 0.6733844,
+            "reasoning_types": [],
+            "sampled_nodes": [
+                "Mek",
+                "Raf",
+                "Akt"
+            ]
+        },
+        {
+            "id": 32,
+            "evidences": [
+                "The level of p38 MAPK activity is low.",
+                "The level of PKA (Protein Kinase A) activity is low."
+            ],
+            "query": "The level of Akt (Protein Kinase B) activity is low.",
+            "answer": 0.3308944,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "P38",
+                "PKA",
+                "Akt"
+            ]
+        },
+        {
+            "id": 33,
+            "evidences": [
+                "The level of p38 MAPK activity is low.",
+                "The level of PKA activity is average."
+            ],
+            "query": "The level of Akt activity is low.",
+            "answer": 0.66480902,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "P38",
+                "PKA",
+                "Akt"
+            ]
+        },
+        {
+            "id": 34,
+            "evidences": [
+                "The level of p38 MAPK activity is low.",
+                "The level of PKA (Protein Kinase A) activity is high."
+            ],
+            "query": "The level of Akt (Protein Kinase B) activity is low.",
+            "answer": 0.76492158,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "P38",
+                "PKA",
+                "Akt"
+            ]
+        },
+        {
+            "id": 35,
+            "evidences": [
+                "The activity level of the p38 protein kinase is average.",
+                "The activity level of the PKA protein kinase is average."
+            ],
+            "query": "What is the likelihood that the activity level of the Akt protein kinase is average?",
+            "answer": 0.32558003,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "P38",
+                "PKA",
+                "Akt"
+            ]
+        },
+        {
+            "id": 36,
+            "evidences": [
+                "The level of p38 MAPK activity is low.",
+                "The level of Protein Kinase C activity is low."
+            ],
+            "query": "The level of Akt (Protein Kinase B) activity is high.",
+            "answer": 0.085102145,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "P38",
+                "PKC",
+                "Akt"
+            ]
+        },
+        {
+            "id": 37,
+            "evidences": [
+                "The level of p38 MAPK activity is low.",
+                "The level of Protein Kinase C (PKC) activity is high."
+            ],
+            "query": "The level of Akt (Protein Kinase B) activity is high.",
+            "answer": 0.00098944785,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "P38",
+                "PKC",
+                "Akt"
+            ]
+        },
+        {
+            "id": 38,
+            "evidences": [
+                "The level of p38 MAPK activity is low.",
+                "The level of Raf protein activity is low."
+            ],
+            "query": "The level of Akt (Protein Kinase B) activity is high.",
+            "answer": 0.0013298568,
+            "reasoning_types": [],
+            "sampled_nodes": [
+                "P38",
+                "Raf",
+                "Akt"
+            ]
+        },
+        {
+            "id": 39,
+            "evidences": [
+                "The level of p38 MAPK activity is low.",
+                "The level of Raf protein activity is average."
+            ],
+            "query": "The level of Akt (Protein Kinase B) activity is low.",
+            "answer": 0.65052454,
+            "reasoning_types": [],
+            "sampled_nodes": [
+                "P38",
+                "Raf",
+                "Akt"
+            ]
+        },
+        {
+            "id": 40,
+            "evidences": [
+                "The level of p38 MAPK activity is low.",
+                "The level of Raf protein activity is high."
+            ],
+            "query": "The level of Akt (Protein Kinase B) activity is average.",
+            "answer": 0.30296606,
+            "reasoning_types": [],
+            "sampled_nodes": [
+                "P38",
+                "Raf",
+                "Akt"
+            ]
+        },
+        {
+            "id": 41,
+            "evidences": [
+                "The level of protein kinase A is low.",
+                "The level of Raf protein is low."
+            ],
+            "query": "What is the likelihood of the level of protein kinase B being average?",
+            "answer": 0.39651943,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "PKA",
+                "Raf",
+                "Akt"
+            ]
+        },
+        {
+            "id": 42,
+            "evidences": [
+                "The ERK signaling pathway is highly active.",
+                "The Jnk signaling pathway is not very active.",
+                "The Mek signaling pathway is not very active."
+            ],
+            "query": "What is the likelihood of the Akt signaling pathway being moderately active?",
+            "answer": 0.81663257,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "Erk",
+                "Jnk",
+                "Mek",
+                "Akt"
+            ]
+        },
+        {
+            "id": 43,
+            "evidences": [
+                "The ERK signaling pathway is highly active.",
+                "The Jnk signaling pathway is not very active.",
+                "The Mek signaling pathway is at average activity level."
+            ],
+            "query": "What is the likelihood of the Akt signaling pathway being not very active?",
+            "answer": 0.17829592,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "Erk",
+                "Jnk",
+                "Mek",
+                "Akt"
+            ]
+        },
+        {
+            "id": 44,
+            "evidences": [
+                "The ERK signaling pathway is highly active.",
+                "The Jnk signaling pathway is not very active.",
+                "The Mek signaling pathway is highly active."
+            ],
+            "query": "What is the likelihood of the Akt signaling pathway being highly active?",
+            "answer": 0.8451366,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "Erk",
+                "Jnk",
+                "Mek",
+                "Akt"
+            ]
+        },
+        {
+            "id": 45,
+            "evidences": [
+                "The ERK signaling pathway is highly active.",
+                "The Jnk signaling pathway is average.",
+                "The Mek signaling pathway is not very active."
+            ],
+            "query": "What is the likelihood of the Akt signaling pathway being not very active?",
+            "answer": 0.18240508,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "Erk",
+                "Jnk",
+                "Mek",
+                "Akt"
+            ]
+        },
+        {
+            "id": 46,
+            "evidences": [
+                "The ERK signaling pathway is highly active.",
+                "The Jnk signaling pathway is average.",
+                "The Mek signaling pathway is average."
+            ],
+            "query": "What is the likelihood of the Akt signaling pathway being highly active?",
+            "answer": 0.024971069,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "Erk",
+                "Jnk",
+                "Mek",
+                "Akt"
+            ]
+        },
+        {
+            "id": 47,
+            "evidences": [
+                "The ERK signaling pathway is highly active.",
+                "The Jnk signaling pathway is average.",
+                "The Mek signaling pathway is highly active."
+            ],
+            "query": "The Akt signaling pathway is average.",
+            "answer": 0.13738901,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "Erk",
+                "Jnk",
+                "Mek",
+                "Akt"
+            ]
+        },
+        {
+            "id": 48,
+            "evidences": [
+                "The ERK signaling pathway is highly active.",
+                "The Jnk signaling pathway is highly active.",
+                "The Mek signaling pathway is highly active."
+            ],
+            "query": "What is the likelihood of the Akt signaling pathway being highly active?",
+            "answer": 0.88159769,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "Erk",
+                "Jnk",
+                "Mek",
+                "Akt"
+            ]
+        },
+        {
+            "id": 49,
+            "evidences": [
+                "The ERK signaling pathway is highly active.",
+                "The Jnk signaling pathway is not very active.",
+                "The P38 signaling pathway is not very active."
+            ],
+            "query": "What is the likelihood of the Akt signaling pathway being not very active?",
+            "answer": 0.16369377,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "Erk",
+                "Jnk",
+                "P38",
+                "Akt"
+            ]
+        },
+        {
+            "id": 50,
+            "evidences": [
+                "The ERK signaling pathway is highly active.",
+                "The Jnk signaling pathway is not very active.",
+                "The p38 signaling pathway is active at an average level."
+            ],
+            "query": "What is the likelihood of the Akt signaling pathway being highly active?",
+            "answer": 0.10827709,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "Erk",
+                "Jnk",
+                "P38",
+                "Akt"
+            ]
+        },
+        {
+            "id": 51,
+            "evidences": [
+                "The ERK signaling pathway is highly active.",
+                "The Jnk signaling pathway is not very active.",
+                "The P38 signaling pathway is highly active."
+            ],
+            "query": "What is the likelihood of the Akt signaling pathway being not very active?",
+            "answer": 0.029579582,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "Erk",
+                "Jnk",
+                "P38",
+                "Akt"
+            ]
+        },
+        {
+            "id": 52,
+            "evidences": [
+                "The ERK signaling pathway is highly active.",
+                "The Jnk signaling pathway is average.",
+                "The P38 signaling pathway is average."
+            ],
+            "query": "What is the likelihood of the Akt signaling pathway being not very active?",
+            "answer": 0.15953623,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "Erk",
+                "Jnk",
+                "P38",
+                "Akt"
+            ]
+        },
+        {
+            "id": 53,
+            "evidences": [
+                "The ERK signaling pathway is highly active.",
+                "The Jnk signaling pathway is average.",
+                "The p38 signaling pathway is highly active."
+            ],
+            "query": "What is the likelihood that the Akt signaling pathway is highly active?",
+            "answer": 0.8617181,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "Erk",
+                "Jnk",
+                "P38",
+                "Akt"
+            ]
+        },
+        {
+            "id": 54,
+            "evidences": [
+                "The ERK signaling pathway is highly active.",
+                "The Jnk signaling pathway is highly active.",
+                "The P38 signaling pathway is averagely active."
+            ],
+            "query": "What is the likelihood of the Akt signaling pathway being averagely active?",
+            "answer": 0.13715715,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "Erk",
+                "Jnk",
+                "P38",
+                "Akt"
+            ]
+        },
+        {
+            "id": 55,
+            "evidences": [
+                "The ERK signaling pathway is highly active.",
+                "The Jnk signaling pathway is highly active.",
+                "The P38 signaling pathway is highly active."
+            ],
+            "query": "What is the likelihood of the Akt signaling pathway being highly active?",
+            "answer": 0.88151211,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "Erk",
+                "Jnk",
+                "P38",
+                "Akt"
+            ]
+        },
+        {
+            "id": 56,
+            "evidences": [
+                "The ERK signaling pathway is highly active.",
+                "The Jnk signaling pathway is not very active.",
+                "The PKA signaling pathway is not very active."
+            ],
+            "query": "What is the likelihood of the Akt signaling pathway being average in activity?",
+            "answer": 0.1183,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "Erk",
+                "Jnk",
+                "PKA",
+                "Akt"
+            ]
+        },
+        {
+            "id": 57,
+            "evidences": [
+                "The ERK signaling pathway is highly active.",
+                "The Jnk signaling pathway is average.",
+                "The PKA signaling pathway is not very active."
+            ],
+            "query": "The Akt signaling pathway is not very active.",
+            "answer": 0.0,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "Erk",
+                "Jnk",
+                "PKA",
+                "Akt"
+            ]
+        },
+        {
+            "id": 58,
+            "evidences": [
+                "The ERK signaling pathway is highly active.",
+                "The Jnk signaling pathway is average.",
+                "The Protein Kinase A signaling pathway is average."
+            ],
+            "query": "What is the likelihood of the Akt signaling pathway being highly active?",
+            "answer": 0.0002,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "Erk",
+                "Jnk",
+                "PKA",
+                "Akt"
+            ]
+        },
+        {
+            "id": 59,
+            "evidences": [
+                "The ERK signaling pathway is highly active.",
+                "The Jnk signaling pathway is highly active.",
+                "The PKA signaling pathway is active at an average level."
+            ],
+            "query": "What is the likelihood of the Akt signaling pathway being highly active?",
+            "answer": 0.0002,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "Erk",
+                "Jnk",
+                "PKA",
+                "Akt"
+            ]
+        },
+        {
+            "id": 60,
+            "evidences": [
+                "The ERK signaling pathway is highly active.",
+                "The Jnk signaling pathway is highly active.",
+                "The PKA signaling pathway is highly active."
+            ],
+            "query": "What is the likelihood of the Akt signaling pathway being not very active?",
+            "answer": 0.1703,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "Erk",
+                "Jnk",
+                "PKA",
+                "Akt"
+            ]
+        },
+        {
+            "id": 61,
+            "evidences": [
+                "The ERK signaling pathway is highly active.",
+                "The Jnk signaling pathway is not very active.",
+                "The PKC signaling pathway is not very active."
+            ],
+            "query": "What is the likelihood of the Akt signaling pathway being highly active?",
+            "answer": 0.33538216,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "Erk",
+                "Jnk",
+                "PKC",
+                "Akt"
+            ]
+        },
+        {
+            "id": 62,
+            "evidences": [
+                "The ERK signaling pathway is highly active.",
+                "The Jnk signaling pathway is not very active.",
+                "The Protein Kinase C (PKC) signaling pathway has average activity."
+            ],
+            "query": "What is the likelihood of the Akt signaling pathway being highly active?",
+            "answer": 0.016841968,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "Erk",
+                "Jnk",
+                "PKC",
+                "Akt"
+            ]
+        },
+        {
+            "id": 63,
+            "evidences": [
+                "The ERK signaling pathway is highly active.",
+                "The Jnk signaling pathway is not very active.",
+                "The PKC signaling pathway is highly active."
+            ],
+            "query": "What is the likelihood of the Akt signaling pathway being not very active?",
+            "answer": 0.18119427,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "Erk",
+                "Jnk",
+                "PKC",
+                "Akt"
+            ]
+        },
+        {
+            "id": 64,
+            "evidences": [
+                "The ERK signaling pathway is highly active.",
+                "The Jnk signaling pathway is average.",
+                "The PKC signaling pathway is not very active."
+            ],
+            "query": "The Akt signaling pathway is not very active.",
+            "answer": 0.071989767,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "Erk",
+                "Jnk",
+                "PKC",
+                "Akt"
+            ]
+        },
+        {
+            "id": 65,
+            "evidences": [
+                "The ERK signaling pathway is highly active.",
+                "The Jnk signaling pathway is average.",
+                "The PKC signaling pathway is average."
+            ],
+            "query": "What is the likelihood of the Akt signaling pathway being not very active?",
+            "answer": 0.17951032,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "Erk",
+                "Jnk",
+                "PKC",
+                "Akt"
+            ]
+        },
+        {
+            "id": 66,
+            "evidences": [
+                "The ERK signaling pathway is highly active.",
+                "The Jnk signaling pathway is highly active.",
+                "The PKC signaling pathway is not very active."
+            ],
+            "query": "What is the likelihood of the Akt signaling pathway being not very active?",
+            "answer": 0.0,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "Erk",
+                "Jnk",
+                "PKC",
+                "Akt"
+            ]
+        },
+        {
+            "id": 67,
+            "evidences": [
+                "The ERK signaling pathway is highly active.",
+                "The Jnk signaling pathway is highly active.",
+                "The PKC signaling pathway is active at an average level."
+            ],
+            "query": "What is the likelihood of the Akt signaling pathway being highly active?",
+            "answer": 0.094099897,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "Erk",
+                "Jnk",
+                "PKC",
+                "Akt"
+            ]
+        },
+        {
+            "id": 68,
+            "evidences": [
+                "The ERK signaling pathway is highly active.",
+                "The Jnk signaling pathway is highly active.",
+                "The PKC signaling pathway is highly active."
+            ],
+            "query": "What is the likelihood of the Akt signaling pathway being highly active?",
+            "answer": 0.00092367611,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "Erk",
+                "Jnk",
+                "PKC",
+                "Akt"
+            ]
+        },
+        {
+            "id": 69,
+            "evidences": [
+                "The ERK signaling pathway is highly active.",
+                "The Jnk signaling pathway is not very active.",
+                "The Raf signaling pathway is not very active."
+            ],
+            "query": "What is the likelihood of the Akt signaling pathway being highly active?",
+            "answer": 0.0062490752,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "Erk",
+                "Jnk",
+                "Raf",
+                "Akt"
+            ]
+        },
+        {
+            "id": 70,
+            "evidences": [
+                "The ERK signaling pathway is highly active.",
+                "The Jnk signaling pathway is not very active.",
+                "The Raf protein activity is average."
+            ],
+            "query": "What is the likelihood of the Akt signaling pathway being not very active?",
+            "answer": 0.16484974,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "Erk",
+                "Jnk",
+                "Raf",
+                "Akt"
+            ]
+        },
+        {
+            "id": 71,
+            "evidences": [
+                "The ERK signaling pathway is highly active.",
+                "The Jnk signaling pathway is not very active.",
+                "The Raf signaling protein is highly active."
+            ],
+            "query": "What is the likelihood of the Akt signaling pathway being moderately active?",
+            "answer": 0.31465106,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "Erk",
+                "Jnk",
+                "Raf",
+                "Akt"
+            ]
+        },
+        {
+            "id": 72,
+            "evidences": [
+                "The ERK signaling pathway is highly active.",
+                "The Jnk signaling pathway is average.",
+                "The Raf signaling pathway is not very active."
+            ],
+            "query": "What is the likelihood of the Akt signaling pathway being not very active?",
+            "answer": 0.18182811,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "Erk",
+                "Jnk",
+                "Raf",
+                "Akt"
+            ]
+        },
+        {
+            "id": 73,
+            "evidences": [
+                "The ERK signaling pathway is highly active.",
+                "The Jnk signaling pathway is average.",
+                "The Raf protein is present in average amounts."
+            ],
+            "query": "The Akt signaling pathway is active at an average level.",
+            "answer": 0.73179828,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "Erk",
+                "Jnk",
+                "Raf",
+                "Akt"
+            ]
+        },
+        {
+            "id": 74,
+            "evidences": [
+                "The ERK signaling pathway is highly active.",
+                "The Jnk signaling pathway is average.",
+                "The Raf protein is highly active."
+            ],
+            "query": "The Akt signaling pathway is average.",
+            "answer": 0.27088031,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "Erk",
+                "Jnk",
+                "Raf",
+                "Akt"
+            ]
+        },
+        {
+            "id": 75,
+            "evidences": [
+                "The ERK signaling pathway is highly active.",
+                "The Jnk signaling pathway is highly active.",
+                "The Raf protein activity is average."
+            ],
+            "query": "What is the likelihood of the Akt signaling pathway being not very active?",
+            "answer": 0.0020208222,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "Erk",
+                "Jnk",
+                "Raf",
+                "Akt"
+            ]
+        },
+        {
+            "id": 76,
+            "evidences": [
+                "The ERK signaling pathway is highly active.",
+                "The Jnk signaling pathway is highly active.",
+                "The Raf protein is highly active."
+            ],
+            "query": "What is the likelihood of the Akt signaling pathway being highly active?",
+            "answer": 0.88157927,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "Erk",
+                "Jnk",
+                "Raf",
+                "Akt"
+            ]
+        },
+        {
+            "id": 77,
+            "evidences": [
+                "The ERK signaling pathway is highly active.",
+                "The MAPK/ERK kinase (Mek) signaling pathway has an average level of activity.",
+                "The p38 signaling pathway is highly active."
+            ],
+            "query": "What is the likelihood of the Akt signaling pathway being active at an average level?",
+            "answer": 0.46024101,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "Erk",
+                "Mek",
+                "P38",
+                "Akt"
+            ]
+        },
+        {
+            "id": 78,
+            "evidences": [
+                "The ERK signaling pathway is highly active.",
+                "The Mek signaling pathway is highly active.",
+                "The P38 signaling pathway is not very active."
+            ],
+            "query": "What is the likelihood of the Akt signaling pathway being not very active?",
+            "answer": 0.0091917529,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "Erk",
+                "Mek",
+                "P38",
+                "Akt"
+            ]
+        },
+        {
+            "id": 79,
+            "evidences": [
+                "The ERK signaling pathway is highly active.",
+                "The Mek signaling pathway is highly active.",
+                "The P38 signaling pathway is highly active."
+            ],
+            "query": "What is the likelihood of the Akt signaling pathway being highly active?",
+            "answer": 0.88120677,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "Erk",
+                "Mek",
+                "P38",
+                "Akt"
+            ]
+        },
+        {
+            "id": 80,
+            "evidences": [
+                "The ERK signaling pathway is highly active.",
+                "The MAPK/ERK kinase (Mek) signaling pathway has an average level of activity.",
+                "The Protein Kinase A (PKA) signaling pathway is highly active."
+            ],
+            "query": "What is the likelihood of the Protein Kinase B (Akt) signaling pathway having an average level of activity?",
+            "answer": 0.8294,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "Erk",
+                "Mek",
+                "PKA",
+                "Akt"
+            ]
+        },
+        {
+            "id": 81,
+            "evidences": [
+                "The ERK signaling pathway is highly active.",
+                "The Mek signaling pathway is highly active.",
+                "The PKA signaling pathway is not very active."
+            ],
+            "query": "What is the likelihood of the Akt signaling pathway being highly active?",
+            "answer": 0.8816,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "Erk",
+                "Mek",
+                "PKA",
+                "Akt"
+            ]
+        },
+        {
+            "id": 82,
+            "evidences": [
+                "The ERK signaling pathway is highly active.",
+                "The Mek signaling pathway is highly active.",
+                "The PKA signaling pathway is highly active."
+            ],
+            "query": "What is the likelihood of the Akt signaling pathway being highly active?",
+            "answer": 0.0003,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "Erk",
+                "Mek",
+                "PKA",
+                "Akt"
+            ]
+        },
+        {
+            "id": 83,
+            "evidences": [
+                "The ERK signaling pathway is highly active.",
+                "The MAPK/ERK kinase (Mek) signaling pathway has low activity.",
+                "The Protein Kinase C (PKC) signaling pathway is highly active."
+            ],
+            "query": "What is the likelihood of the Protein Kinase B (Akt) signaling pathway being highly active?",
+            "answer": 0.0010073077,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "Erk",
+                "Mek",
+                "PKC",
+                "Akt"
+            ]
+        },
+        {
+            "id": 84,
+            "evidences": [
+                "The ERK signaling pathway is highly active.",
+                "The MAPK/ERK kinase (Mek) signaling pathway has an average level of activity.",
+                "The Protein Kinase C (PKC) signaling pathway has a low level of activity."
+            ],
+            "query": "What is the likelihood of the Protein Kinase B (Akt) signaling pathway being highly active?",
+            "answer": 0.051043722,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "Erk",
+                "Mek",
+                "PKC",
+                "Akt"
+            ]
+        },
+        {
+            "id": 85,
+            "evidences": [
+                "The ERK signaling pathway is highly active.",
+                "The MAPK/ERK kinase (Mek) signaling pathway has an average level of activity.",
+                "The Protein Kinase C (PKC) signaling pathway is highly active."
+            ],
+            "query": "What is the likelihood of the Akt signaling pathway being active at an average level?",
+            "answer": 0.81025388,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "Erk",
+                "Mek",
+                "PKC",
+                "Akt"
+            ]
+        },
+        {
+            "id": 86,
+            "evidences": [
+                "The ERK signaling pathway is highly active.",
+                "The Mek signaling pathway is highly active.",
+                "The PKC signaling pathway is highly active."
+            ],
+            "query": "What is the likelihood of the Akt signaling pathway being not very active?",
+            "answer": 0.10116711,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "Erk",
+                "Mek",
+                "PKC",
+                "Akt"
+            ]
+        },
+        {
+            "id": 87,
+            "evidences": [
+                "The ERK signaling pathway is highly active.",
+                "The MAPK/ERK kinase (Mek) signaling pathway has low activity.",
+                "The Raf protein is highly active."
+            ],
+            "query": "What is the likelihood of the Akt signaling pathway being highly active?",
+            "answer": 0.044687856,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "Erk",
+                "Mek",
+                "Raf",
+                "Akt"
+            ]
+        },
+        {
+            "id": 88,
+            "evidences": [
+                "The ERK signaling pathway is highly active.",
+                "The MAPK/ERK kinase (Mek) signaling pathway has an average level of activity.",
+                "The Raf protein family is highly active."
+            ],
+            "query": "What is the likelihood of the Akt signaling pathway having an average level of activity?",
+            "answer": 0.79282306,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "Erk",
+                "Mek",
+                "Raf",
+                "Akt"
+            ]
+        },
+        {
+            "id": 89,
+            "evidences": [
+                "The ERK signaling pathway is highly active.",
+                "The Mek signaling pathway is highly active.",
+                "The Raf signaling pathway is highly active."
+            ],
+            "query": "What is the likelihood of the Akt signaling pathway being highly active?",
+            "answer": 0.86644754,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "Erk",
+                "Mek",
+                "Raf",
+                "Akt"
+            ]
+        },
+        {
+            "id": 90,
+            "evidences": [
+                "The ERK signaling pathway is highly active.",
+                "The p38 signaling pathway is averagely active.",
+                "The PKA signaling pathway is not very active."
+            ],
+            "query": "What is the likelihood of the Akt signaling pathway being not very active?",
+            "answer": 0.0,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "Erk",
+                "P38",
+                "PKA",
+                "Akt"
+            ]
+        },
+        {
+            "id": 91,
+            "evidences": [
+                "The ERK signaling pathway is highly active.",
+                "The p38 signaling pathway is highly active.",
+                "The PKA signaling pathway is not very active."
+            ],
+            "query": "What is the likelihood of the Akt signaling pathway being averagely active?",
+            "answer": 0.1183,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "Erk",
+                "P38",
+                "PKA",
+                "Akt"
+            ]
+        },
+        {
+            "id": 92,
+            "evidences": [
+                "The ERK signaling pathway is highly active.",
+                "The p38 signaling pathway is highly active.",
+                "The PKA signaling pathway is highly active."
+            ],
+            "query": "What is the likelihood of the Akt signaling pathway being average?",
+            "answer": 0.8294,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "Erk",
+                "P38",
+                "PKA",
+                "Akt"
+            ]
+        },
+        {
+            "id": 93,
+            "evidences": [
+                "The ERK signaling pathway is highly active.",
+                "The p38 signaling pathway is highly active.",
+                "The activity of the PKC signaling pathway is low."
+            ],
+            "query": "What is the likelihood of the Akt signaling pathway being not very active?",
+            "answer": 0.007111221,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "Erk",
+                "P38",
+                "PKC",
+                "Akt"
+            ]
+        },
+        {
+            "id": 94,
+            "evidences": [
+                "The ERK signaling pathway is highly active.",
+                "The p38 signaling pathway is highly active.",
+                "The PKC signaling pathway is averagely active."
+            ],
+            "query": "What is the likelihood of the Akt signaling pathway being highly active?",
+            "answer": 0.00057271153,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "Erk",
+                "P38",
+                "PKC",
+                "Akt"
+            ]
+        },
+        {
+            "id": 95,
+            "evidences": [
+                "The ERK signaling pathway is highly active.",
+                "The p38 signaling pathway is highly active.",
+                "The PKC signaling pathway is highly active."
+            ],
+            "query": "What is the likelihood of the Akt signaling pathway being not very active?",
+            "answer": 0.18241632,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "Erk",
+                "P38",
+                "PKC",
+                "Akt"
+            ]
+        },
+        {
+            "id": 96,
+            "evidences": [
+                "The ERK signaling pathway is highly active.",
+                "The P38 signaling pathway is not very active.",
+                "The Raf protein is not very active."
+            ],
+            "query": "What is the likelihood of the Akt signaling pathway being active at an average level?",
+            "answer": 0.81279853,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "Erk",
+                "P38",
+                "Raf",
+                "Akt"
+            ]
+        },
+        {
+            "id": 97,
+            "evidences": [
+                "The ERK signaling pathway is highly active.",
+                "The p38 signaling pathway is averagely active.",
+                "The Raf protein is not very active."
+            ],
+            "query": "What is the likelihood of the Akt signaling pathway being highly active?",
+            "answer": 0.011586423,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "Erk",
+                "P38",
+                "Raf",
+                "Akt"
+            ]
+        }
+    ]
+}

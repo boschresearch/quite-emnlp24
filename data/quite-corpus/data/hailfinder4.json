@@ -1,0 +1,4108 @@
+{
+    "nodes": [
+        {
+            "name": "AMInsWliScen",
+            "states": [
+                "LessUnstable",
+                "Average",
+                "MoreUnstable"
+            ]
+        },
+        {
+            "name": "LoLevMoistAd",
+            "states": [
+                "StrongPos",
+                "WeakPos",
+                "Neutral",
+                "Negative"
+            ]
+        },
+        {
+            "name": "CompPlFcst",
+            "states": [
+                "IncCapDecIns",
+                "LittleChange",
+                "DecCapIncIns"
+            ]
+        },
+        {
+            "name": "AMCINInScen",
+            "states": [
+                "LessThanAve",
+                "Average",
+                "MoreThanAve"
+            ]
+        },
+        {
+            "name": "CapChange",
+            "states": [
+                "Decreasing",
+                "LittleChange",
+                "Increasing"
+            ]
+        },
+        {
+            "name": "InsChange",
+            "states": [
+                "Decreasing",
+                "LittleChange",
+                "Increasing"
+            ]
+        },
+        {
+            "name": "CapInScen",
+            "states": [
+                "LessThanAve",
+                "Average",
+                "MoreThanAve"
+            ]
+        },
+        {
+            "name": "InsSclInScen",
+            "states": [
+                "LessUnstable",
+                "Average",
+                "MoreUnstable"
+            ]
+        }
+    ],
+    "connectivity": [
+        {
+            "node": "AMInsWliScen",
+            "incoming": []
+        },
+        {
+            "node": "LoLevMoistAd",
+            "incoming": []
+        },
+        {
+            "node": "CompPlFcst",
+            "incoming": []
+        },
+        {
+            "node": "AMCINInScen",
+            "incoming": []
+        },
+        {
+            "node": "CapChange",
+            "incoming": [
+                "CompPlFcst"
+            ]
+        },
+        {
+            "node": "InsChange",
+            "incoming": [
+                "LoLevMoistAd",
+                "CompPlFcst"
+            ]
+        },
+        {
+            "node": "CapInScen",
+            "incoming": [
+                "AMCINInScen",
+                "CapChange"
+            ]
+        },
+        {
+            "node": "InsSclInScen",
+            "incoming": [
+                "AMInsWliScen",
+                "InsChange"
+            ]
+        }
+    ],
+    "numeric_premises": [
+        {
+            "id": 0,
+            "origin": "CompPlFcst",
+            "content": "There is a 40% chance that the composite plains forecast predicts increasing capping and decreasing instability, 36% that there is only little change, and 24% that there is decreasing capping and increasing instability."
+        },
+        {
+            "id": 1,
+            "origin": "LoLevMoistAd",
+            "content": "In 12% of all cases, low-level moisture advection is strongly positive, whereas it is weakly positive in 28% of all cases, neutral in 30%, and also negative in 30% of all cases."
+        },
+        {
+            "id": 2,
+            "origin": "AMCINInScen",
+            "content": "The atmospheric (AM) convective inhibition is less than average with a likelihood of 34%, average with 43%, and more than average with 23% probability."
+        },
+        {
+            "id": 3,
+            "origin": "AMInsWliScen",
+            "content": "The atmospheric instability (AM instability) is equally likely to show signs of being less unstable, average, or more unstable (33%, 33%, 34%)."
+        },
+        {
+            "id": 4,
+            "origin": "InsChange",
+            "content": "When low-level moisture advection is strongly positive and the composite Plains forecast predicts a increasing cap and decreasing instability, there is a 95% probability that the instability change will increase, 5% that there is only a little change, and 0% that it is decreasing."
+        },
+        {
+            "id": 5,
+            "origin": "InsChange",
+            "content": "When low-level moisture advection is strongly positive and the composite Plains forecast shows little change, there is an 88% probability that the instability change will increase, and only a 12% chance that there is only a little change."
+        },
+        {
+            "id": 6,
+            "origin": "InsChange",
+            "content": "When low-level moisture advection is strongly positive and the composite Plains forecast indicates a decreasing cap and increasing instability, there is an 80% probability that the instability change will increase, a 15% chance that there is only a little change, and only a 5% chance that it will decrease."
+        },
+        {
+            "id": 7,
+            "origin": "InsChange",
+            "content": "When low-level moisture advection is weakly positive and the composite Plains forecast shows an increasing cap and decreasing instability, there is an 80% probability that the instability change will increase, a 15% chance that there is only a little change, and only a 5% chance that it will decrease."
+        },
+        {
+            "id": 8,
+            "origin": "InsChange",
+            "content": "When low-level moisture advection is weakly positive and the composite Plains forecast shows little change, there is a 50% probability that the instability change will increase, and a 40% chance that there is only a little change. However, there is also a 10% chance that the instability change will decrease."
+        },
+        {
+            "id": 9,
+            "origin": "InsChange",
+            "content": "When low-level moisture advection is weakly positive and the composite Plains forecast shows a decreasing cap and increasing instability, there is a 50% probability that the instability change will remain relatively unchanged, and a 25% chance that it will either decrease or increase."
+        },
+        {
+            "id": 10,
+            "origin": "InsChange",
+            "content": "When low-level moisture advection is neutral and the composite Plains forecast shows an increasing cap and decreasing instability, there is a 35% probability that the instability change will increase, and a 50% chance that there is only a little change. However, there is also a 15% chance that the instability change will decrease."
+        },
+        {
+            "id": 11,
+            "origin": "InsChange",
+            "content": "When low-level moisture advection is neutral and the composite Plains forecast shows little change, there is a 60% probability that the instability change will remain relatively unchanged, and a 20% chance that it will either decrease or increase. This suggests that the influence of neutral low-level moisture advection on instability change is limited in this scenario."
+        },
+        {
+            "id": 12,
+            "origin": "InsChange",
+            "content": "When low-level moisture advection is neutral and the composite Plains forecast shows decreasing cap and increasing instability, there is a 50% probability that the instability change will remain relatively unchanged, and a 35% chance that it will decrease. However, there is only a 15% chance that the instability change will increase. This suggests that the influence of neutral low-level moisture advection on instability change is limited in this scenario."
+        },
+        {
+            "id": 13,
+            "origin": "InsChange",
+            "content": "When low-level moisture advection is negative and the composite Plains forecast shows increasing cap and decreasing instability, there is a 50% probability that the instability change will decrease, and a 40% chance that there is only a little change. However, there is only a 10% chance that the instability change will increase. This suggests that negative low-level moisture advection may contribute to a decrease in instability change in this scenario."
+        },
+        {
+            "id": 14,
+            "origin": "InsChange",
+            "content": "When low-level moisture advection is negative and the composite Plains forecast shows little change, there is an 80% probability that the instability change will decrease, and a 16% chance that there is only a little change. However, there is only a 4% chance that the instability change will increase. This suggests that negative low-level moisture advection may contribute to a decrease in instability change in this scenario."
+        },
+        {
+            "id": 15,
+            "origin": "InsChange",
+            "content": "When low-level moisture advection is negative and the composite Plains forecast shows decreasing cap and increasing instability, there is a 90% probability that the instability change will decrease, and a 9% chance that there is only a little change. However, there is only a 1% chance that the instability change will increase. This suggests that negative low-level moisture advection may contribute to a decrease in instability change in this scenario."
+        },
+        {
+            "id": 16,
+            "origin": "InsSclInScen",
+            "content": "In scenarios where atmospheric instability is less pronounced and is further decreasing, the instability scaling is consistently classified as less unstable with a 100% probability, whereas average and more unstable situations are not possible at all."
+        },
+        {
+            "id": 17,
+            "origin": "InsSclInScen",
+            "content": "When the atmospheric instability level is relatively low and there's only a slight change in instability, the scenario is mostly seen as less unstable, with a 90% probability and a 10% chance of being average in terms of instability. It cannot be more unstable in this scenario."
+        },
+        {
+            "id": 18,
+            "origin": "InsSclInScen",
+            "content": "In cases where atmospheric instability is relatively low, and instability is increasing, the instability scaling is more likely to become more unstable. There's a 25% chance of it being more unstable, a 35% chance of average instability scaling, and a 40% probability of low instability scaling within the scenario."
+        },
+        {
+            "id": 19,
+            "origin": "InsSclInScen",
+            "content": "When atmospheric instability is average and decreasing, the scenario's instability scaling is less likely to be more unstable, as it remains less unstable or average. The probabilities are 60% for less unstable and 40% for average instability within the scenario, with no chance of more unstable conditions."
+        },
+        {
+            "id": 20,
+            "origin": "InsSclInScen",
+            "content": "If atmospheric instability is average and there's only a slight change in instability, the scenario's instability scaling is slightly more likely to be average. The probabilities are 15% for less unstable, 70% for average instability, and 15% for more unstable conditions within the scenario."
+        },
+        {
+            "id": 21,
+            "origin": "InsSclInScen",
+            "content": "When atmospheric instability is average and there's an increase in instability, the scenario's instability scaling is more likely to be more unstable. The probabilities are 40% for average instability and 60% for more unstable conditions within the scenario, with no chance of less unstable conditions."
+        },
+        {
+            "id": 22,
+            "origin": "InsSclInScen",
+            "content": "In scenarios where atmospheric instability is already more unstable and decreases, the instability scaling is still likely to be more unstable. The probabilities are 25% for less unstable, 35% for average instability scaling, and 40% for more unstable conditions within the scenario."
+        },
+        {
+            "id": 23,
+            "origin": "InsSclInScen",
+            "content": "If atmospheric instability is already more unstable and there's only a slight change, the scenario's instability scaling remains more likely to be more unstable. The probabilities are 10% for average instability and 90% for more unstable conditions within the scenario, with no chance of less unstable conditions."
+        },
+        {
+            "id": 24,
+            "origin": "InsSclInScen",
+            "content": "When atmospheric instability is already more unstable and increases further, the scenario's instability scaling is guaranteed to be more unstable. The probability is 100% for more unstable conditions within the scenario, with no chance of less unstable or average instability."
+        },
+        {
+            "id": 25,
+            "origin": "CapInScen",
+            "content": "In scenario conditions where AM convective inhibition is below average and the capping change is decreasing, there is a 100% probability that capping within the scenario is also below average, with no chance of it being average or more than average."
+        },
+        {
+            "id": 26,
+            "origin": "CapInScen",
+            "content": "When AM convective inhibition is below average and the capping change is minimal, there is a 98% probability that capping within the scenario is below average, a 2% chance it is average, and no chance of it being more than average."
+        },
+        {
+            "id": 27,
+            "origin": "CapInScen",
+            "content": "In a scenario where AM convective inhibition is below average and the capping change is increasing, there is a 35% probability that capping within the scenario is below average, a 35% chance it is average, and a 30% probability that it is more than average."
+        },
+        {
+            "id": 28,
+            "origin": "CapInScen",
+            "content": "If AM convective inhibition in the scenario is average and the capping change is decreasing, there is a 75% probability that capping within the scenario is below average, a 25% chance it is average, and no chance of it being more than average."
+        },
+        {
+            "id": 29,
+            "origin": "CapInScen",
+            "content": "When AM convective inhibition in the scenario is average and the capping change is minimal, there is a 94% probability that capping within the scenario is also average, a 3% chance it is below average, and a 3% probability that it is more than average."
+        },
+        {
+            "id": 30,
+            "origin": "CapInScen",
+            "content": "In a scenario where AM convective inhibition is average and the capping change is increasing, there is no probability (0%) that capping within the scenario is below average, a 25% probability that it is average, and a 75% probability that it is more than average."
+        },
+        {
+            "id": 31,
+            "origin": "CapInScen",
+            "content": "If AM convective inhibition in the scenario is more than average and the capping change is decreasing, there is a 30% probability that capping within the scenario is below average, a 35% chance it is average, and a 35% probability that it is more than average."
+        },
+        {
+            "id": 32,
+            "origin": "CapInScen",
+            "content": "In a scenario where AM convective inhibition is more than average and the capping change is minimal, there is no probability (0%) that capping within the scenario is below average, 2% that it is average, and a 98% probability that it is more than average."
+        },
+        {
+            "id": 33,
+            "origin": "CapInScen",
+            "content": "If AM convective inhibition in the scenario is more than average and the capping change is increasing, there is no probability (0%) that capping within the scenario is below average or average, and a 100% probability that it is more than average."
+        },
+        {
+            "id": 34,
+            "origin": "CapChange",
+            "content": "When the composite Plains forecast predicts an increasing capping and decreasing instability, the probability of the capping change increasing is 100%, while little changes or decreasing capping change is not possible at all."
+        },
+        {
+            "id": 35,
+            "origin": "CapChange",
+            "content": "When the composite Plains forecast shows little change, the probability of the capping change remaining relatively unchanged is 100%."
+        },
+        {
+            "id": 36,
+            "origin": "CapChange",
+            "content": "With the composite Plains forecast indicating decreasing cap and increasing instability, the probability of the capping change decreasing is 100%."
+        }
+    ],
+    "wep_based_premises": [
+        {
+            "id": 0,
+            "origin": "CompPlFcst",
+            "content": "The composite plains forecast probably does not predict increasing capping and decreasing instability, that there is only little change, or that there is decreasing capping and increasing instability. However, the first scenario is still the most likely one, whereas the last one is the most unlikely."
+        },
+        {
+            "id": 1,
+            "origin": "LoLevMoistAd",
+            "content": "Chances are slight that low-level moisture advection is strongly positive, whereas it is probably not weakly positive, neutral, or also negative. Still, the last three options remain the most likely ones."
+        },
+        {
+            "id": 2,
+            "origin": "AMCINInScen",
+            "content": "The atmospheric (AM) convective inhibition is probably not less than average, average with about even chances, and more than average is also probably not the case."
+        },
+        {
+            "id": 3,
+            "origin": "AMInsWliScen",
+            "content": "The atmospheric instability (AM instability) is equally likely to show signs of being less unstable, average, or more unstable."
+        },
+        {
+            "id": 4,
+            "origin": "InsChange",
+            "content": "If low-level moisture advection is strong and the composite Plains forecast indicates a increasing cap and decreasing instability, then it is impossible for instability change to decrease, highly unlikely for it to experience little change, and almost certain for it to increase."
+        },
+        {
+            "id": 5,
+            "origin": "InsChange",
+            "content": "If low-level moisture advection is strong and positive, and the composite Plains forecast indicates little change, then the chances of instability change decreasing are impossible, there is little chance of it remaining the same, and it is highly likely for instability change to increase."
+        },
+        {
+            "id": 6,
+            "origin": "InsChange",
+            "content": "If low-level moisture advection is strong and positive, and the composite Plains forecast indicates a decreasing cap and increasing instability, then it is highly unlikely for instability change to decrease, there is little chance for it to remain the same, and there is a very good chance for instability change to increase."
+        },
+        {
+            "id": 7,
+            "origin": "InsChange",
+            "content": "If low-level moisture advection is weakly positive, and the composite Plains forecast suggests an increasing cap and decreasing instability, then it is highly unlikely for instability change to decrease, it is improbable for it to remain the same, and there is a very good chance for instability change to increase."
+        },
+        {
+            "id": 8,
+            "origin": "InsChange",
+            "content": "If low-level moisture advection is weakly positive and the composite Plains forecast indicates little change, then the chances of instability change decreasing are slight, it is probably not going to remain the same, and there is an about even chance for instability change to increase."
+        },
+        {
+            "id": 9,
+            "origin": "InsChange",
+            "content": "If low-level moisture advection is weakly positive and the composite Plains forecast indicates a decreasing cap and increasing instability, then it is probably not the case that instability change decreases, there is an about even chance for it to remain the same, and it is probably not the case that the instability change increases."
+        },
+        {
+            "id": 10,
+            "origin": "InsChange",
+            "content": "If low-level moisture advection is neutral and the composite Plains forecast indicates an increasing cap and decreasing instability, then there is little chance for instability change to decrease, there is an about even chance for it to remain the same, and it is probably not the case that instability change increases."
+        },
+        {
+            "id": 11,
+            "origin": "InsChange",
+            "content": "If low-level moisture advection is neutral and the composite Plains forecast indicates little change, then it is probably not the case that instability change decreases, there is a better than even chance that it remains the same, and it is unlikely for instability change to increase."
+        },
+        {
+            "id": 12,
+            "origin": "InsChange",
+            "content": "If low-level moisture advection is neutral and the composite Plains forecast indicates a decreasing cap and increasing instability, then it is probably not the case that instability change decreases, there is an about even chance for it to remain the same, and it is improbable for instability change to increase."
+        },
+        {
+            "id": 13,
+            "origin": "InsChange",
+            "content": "If low-level moisture advection is negative and the composite Plains forecast indicates an increasing cap and decreasing instability, then there are about even chances for instability change to decrease, it is probably not the case that it remains the same, and it is improbable for instability change to increase."
+        },
+        {
+            "id": 14,
+            "origin": "InsChange",
+            "content": "If low-level moisture advection is negative and the composite Plains forecast indicates little change, then there is a very good chance for instability change to decrease, it is unlikely for it to remain the same, and it is highly unlikely for instability change to increase."
+        },
+        {
+            "id": 15,
+            "origin": "InsChange",
+            "content": "If low-level moisture advection is negative and the composite Plains forecast indicates a decreasing cap and increasing instability, then it is highly likely for instability change to decrease, there is little chance for it to remain the same, and there is almost no chance for instability change to increase."
+        },
+        {
+            "id": 16,
+            "origin": "InsSclInScen",
+            "content": "Given that the instability within the scenario is less unstable and the change in instability is decreasing, it is certain that the instability scaling within the scenario will be less unstable, and it is impossible for the instability scaling within the scenario to be average or more unstable."
+        },
+        {
+            "id": 17,
+            "origin": "InsSclInScen",
+            "content": "If the instability within the scenario is less unstable and the change in instability is little change, then it is highly likely that the instability scaling within the scenario will be less unstable, there is little chance that it will be average, and it is impossible for the instability scaling within the scenario to be more unstable."
+        },
+        {
+            "id": 18,
+            "origin": "InsSclInScen",
+            "content": "If the instability within the scenario is less unstable and the change in instability is increasing, then it is probably not the case that the instability scaling within the scenario will be less unstable, average, or more unstable. This suggests that the relationship between the given conditions and the possible outcomes is uncertain or unpredictable."
+        },
+        {
+            "id": 19,
+            "origin": "InsSclInScen",
+            "content": "If the instability within the scenario is average and the change in instability is decreasing, then there is an about even chance that the instability scaling within the scenario will be less unstable, it is probably not the case that it will be average, and it is impossible for the instability scaling within the scenario to be more unstable."
+        },
+        {
+            "id": 20,
+            "origin": "InsSclInScen",
+            "content": "If the instability within the scenario is average and the change in instability is little change, then the chances are slight that the instability scaling within the scenario will be less unstable, it is probably the case that it will be average, and the chances are slight that the instability scaling within the scenario will be more unstable."
+        },
+        {
+            "id": 21,
+            "origin": "InsSclInScen",
+            "content": "If the instability within the scenario is average and the change in instability is increasing, then it is impossible for the instability scaling within the scenario to be less unstable, it is probably not the case that it will be average, and there is a better than even chance that the instability scaling within the scenario will be more unstable. This suggests that the given conditions make it more likely that the instability scaling within the scenario will increase."
+        },
+        {
+            "id": 22,
+            "origin": "InsSclInScen",
+            "content": "If the instability within the scenario is more unstable and the change in instability is decreasing, then it is probably not the case that the instability scaling within the scenario will be less unstable, average, or more unstable. This suggests that the relationship between the given conditions and the possible outcomes is uncertain or unpredictable."
+        },
+        {
+            "id": 23,
+            "origin": "InsSclInScen",
+            "content": "If the instability within the scenario is more unstable and the change in instability is little change, then it is impossible for the instability scaling within the scenario to be less unstable, the chances are slight that it will be average, and it is highly likely that the instability scaling within the scenario will be more unstable. This suggests that the given conditions make it more likely that the instability scaling within the scenario will increase."
+        },
+        {
+            "id": 24,
+            "origin": "InsSclInScen",
+            "content": "If the instability within the scenario is more unstable and the change in instability is increasing, then it is impossible for the instability scaling within the scenario to be less unstable or average, and it is certain that the instability scaling within the scenario will be more unstable. This suggests that the given conditions make it certain that the instability scaling within the scenario will increase."
+        },
+        {
+            "id": 25,
+            "origin": "CapInScen",
+            "content": "If the convective inhibition in the AM scenario is less than average and the capping change is decreasing, then it is certain that the capping within the scenario is also less than average, and it is impossible for the capping to be average or more than average."
+        },
+        {
+            "id": 26,
+            "origin": "CapInScen",
+            "content": "If the convective inhibition in the AM scenario is less than average and the capping change is little, then it is almost certain that the capping within the scenario is also less than average, and the chance of the capping being average is almost none, and it is impossible for the capping to be more than average."
+        },
+        {
+            "id": 27,
+            "origin": "CapInScen",
+            "content": "If the convective inhibition in the AM scenario is less than average and the capping change is increasing, then it is probably not the case that the capping within the scenario is less than average, average, or more than average."
+        },
+        {
+            "id": 28,
+            "origin": "CapInScen",
+            "content": "If the convective inhibition in the AM scenario is average and the capping change is decreasing, then there is a very good chance that the capping within the scenario is less than average, it is probably not the case that the capping is average, and it is impossible for the capping to be more than average."
+        },
+        {
+            "id": 299,
+            "origin": "CapInScen",
+            "content": "If the convective inhibition in the AM scenario is average and the capping change is little, then it is almost certain that the capping within the scenario is also average, and it is almost impossible for the capping to be less than average or more than average."
+        },
+        {
+            "id": 30,
+            "origin": "CapInScen",
+            "content": "If the convective inhibition in the AM scenario is average and the capping change is increasing, then it is impossible for the capping within the scenario to be less than average, it is probably not the case that the capping is average, and there is a very good chance that the capping is more than average."
+        },
+        {
+            "id": 31,
+            "origin": "CapInScen",
+            "content": "If the convective inhibition in the AM scenario is more than average and the capping change is decreasing, then it is probably not the case that the capping within the scenario is less than average, average, or more than average."
+        },
+        {
+            "id": 32,
+            "origin": "CapInScen",
+            "content": "If the convective inhibition in the AM scenario is more than average and the capping change is little, then it is impossible for the capping within the scenario to be less than average, it is almost impossible for the capping to be average, and it is almost certain that the capping is more than average."
+        },
+        {
+            "id": 33,
+            "origin": "CapInScen",
+            "content": "If the convective inhibition in the AM scenario is more than average and the capping change is increasing, then it is impossible for the capping within the scenario to be less than average or average, and it is certain that the capping is more than average."
+        },
+        {
+            "id": 34,
+            "origin": "CapChange",
+            "content": "If the composite Plains forecast is equal to increasing cap and decreasing instability, then it is impossible for the capping change to be decreasing or experiencing little change, and it is certain that the capping change is increasing."
+        },
+        {
+            "id": 35,
+            "origin": "CapChange",
+            "content": "If the composite Plains forecast is showing little change, then it is impossible for the capping change to be decreasing or increasing, and it is certain that the capping change is experiencing little change."
+        },
+        {
+            "id": 36,
+            "origin": "CapChange",
+            "content": "If the composite Plains forecast is equal to decreasing cap and increasing instability, then it is certain that the capping change is decreasing, and it is impossible for the capping change to experience little change or increase."
+        }
+    ],
+    "evidence_query_pairs": [
+        {
+            "id": 0,
+            "evidences": [
+                "The instability change is increasing.",
+                "The capping within the scenario is average.",
+                "The capping change is increasing."
+            ],
+            "query": "What is the likelihood of the instability scaling within the scenario being average?",
+            "answer": 0.2475,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "InsChange",
+                "CapInScen",
+                "CapChange",
+                "InsSclInScen"
+            ]
+        },
+        {
+            "id": 1,
+            "evidences": [
+                "The instability change is decreasing."
+            ],
+            "query": "What is the likelihood of the instability scaling within the scenario becoming more unstable?",
+            "answer": 0.136,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "InsChange",
+                "InsSclInScen"
+            ]
+        },
+        {
+            "id": 2,
+            "evidences": [
+                "The change in instability is little.",
+                "The change in capping is also little."
+            ],
+            "query": "What is the likelihood of the instability scaling within the scenario being more unstable?",
+            "answer": 0.3555,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "InsChange",
+                "CapChange",
+                "InsSclInScen"
+            ]
+        },
+        {
+            "id": 3,
+            "evidences": [
+                "The instability change is increasing.",
+                "The instability scaling within the scenario is average."
+            ],
+            "query": "What is the likelihood of the capping change being little change?",
+            "answer": 0.32216762,
+            "reasoning_types": [],
+            "sampled_nodes": [
+                "InsChange",
+                "InsSclInScen",
+                "CapChange"
+            ]
+        },
+        {
+            "id": 4,
+            "evidences": [
+                "The change in capping is decreasing.",
+                "The change in instability is decreasing.",
+                "The instability scaling within the scenario is less unstable."
+            ],
+            "query": "What is the likelihood of the capping within the scenario being average?",
+            "answer": 0.188,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "CapChange",
+                "InsChange",
+                "InsSclInScen",
+                "CapInScen"
+            ]
+        },
+        {
+            "id": 5,
+            "evidences": [
+                "The capping within the scenario is average."
+            ],
+            "query": "What is the likelihood of the instability scaling within the scenario being more unstable?",
+            "answer": 0.38042706,
+            "reasoning_types": [],
+            "sampled_nodes": [
+                "CapInScen",
+                "InsSclInScen"
+            ]
+        },
+        {
+            "id": 6,
+            "evidences": [
+                "The change in capping within the scenario is little."
+            ],
+            "query": "What is the likelihood of the instability scaling within the scenario becoming more unstable?",
+            "answer": 0.367668,
+            "reasoning_types": [],
+            "sampled_nodes": [
+                "CapChange",
+                "InsSclInScen"
+            ]
+        },
+        {
+            "id": 7,
+            "evidences": [
+                "The instability scaling within the scenario is more unstable.",
+                "The capping within the scenario is average.",
+                "The capping change is decreasing."
+            ],
+            "query": "What is the likelihood of the instability change being decreasing?",
+            "answer": 0.19582683,
+            "reasoning_types": [
+                "evidential"
+            ],
+            "sampled_nodes": [
+                "InsSclInScen",
+                "CapInScen",
+                "CapChange",
+                "InsChange"
+            ]
+        },
+        {
+            "id": 8,
+            "evidences": [
+                "The change in capping within the scenario is little.",
+                "The capping within the scenario is average."
+            ],
+            "query": "What is the likelihood of the instability change being decreasing?",
+            "answer": 0.328,
+            "reasoning_types": [],
+            "sampled_nodes": [
+                "CapChange",
+                "CapInScen",
+                "InsChange"
+            ]
+        },
+        {
+            "id": 9,
+            "evidences": [
+                "The instability change is decreasing."
+            ],
+            "query": "What is the likelihood of the instability scaling within the scenario becoming less unstable?",
+            "answer": 0.613,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "InsChange",
+                "InsSclInScen"
+            ]
+        },
+        {
+            "id": 10,
+            "evidences": [
+                "The instability scaling within the scenario is less unstable than average."
+            ],
+            "query": "What is the likelihood of the capping within the scenario being less than average?",
+            "answer": 0.37896988,
+            "reasoning_types": [],
+            "sampled_nodes": [
+                "InsSclInScen",
+                "CapInScen"
+            ]
+        },
+        {
+            "id": 11,
+            "evidences": [
+                "The change in capping is increasing.",
+                "The change in instability is increasing.",
+                "The instability scaling within the scenario is less unstable."
+            ],
+            "query": "What is the likelihood of the capping within the scenario being less than average?",
+            "answer": 0.119,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "CapChange",
+                "InsChange",
+                "InsSclInScen",
+                "CapInScen"
+            ]
+        },
+        {
+            "id": 12,
+            "evidences": [
+                "The capping change is decreasing."
+            ],
+            "query": "What is the likelihood of the instability change also decreasing?",
+            "answer": 0.451,
+            "reasoning_types": [],
+            "sampled_nodes": [
+                "CapChange",
+                "InsChange"
+            ]
+        },
+        {
+            "id": 13,
+            "evidences": [
+                "The instability change is decreasing."
+            ],
+            "query": "What is the likelihood of the capping within the scenario being less than average?",
+            "answer": 0.41944195,
+            "reasoning_types": [],
+            "sampled_nodes": [
+                "InsChange",
+                "CapInScen"
+            ]
+        },
+        {
+            "id": 14,
+            "evidences": [
+                "The capping within the scenario is less than average."
+            ],
+            "query": "What is the likelihood of the instability scaling within the scenario being average?",
+            "answer": 0.26595933,
+            "reasoning_types": [],
+            "sampled_nodes": [
+                "CapInScen",
+                "InsSclInScen"
+            ]
+        },
+        {
+            "id": 15,
+            "evidences": [
+                "The change in capping within the scenario is little."
+            ],
+            "query": "What is the likelihood of the instability scaling within the scenario becoming more unstable?",
+            "answer": 0.367668,
+            "reasoning_types": [],
+            "sampled_nodes": [
+                "CapChange",
+                "InsSclInScen"
+            ]
+        },
+        {
+            "id": 16,
+            "evidences": [
+                "The capping change is increasing."
+            ],
+            "query": "What is the likelihood of the instability change also increasing?",
+            "answer": 0.473,
+            "reasoning_types": [],
+            "sampled_nodes": [
+                "CapChange",
+                "InsChange"
+            ]
+        },
+        {
+            "id": 17,
+            "evidences": [
+                "The capping change is decreasing."
+            ],
+            "query": "What is the likelihood of the instability change increasing?",
+            "answer": 0.214,
+            "reasoning_types": [],
+            "sampled_nodes": [
+                "CapChange",
+                "InsChange"
+            ]
+        },
+        {
+            "id": 18,
+            "evidences": [
+                "The instability scaling within the scenario is average."
+            ],
+            "query": "What is the likelihood of capping change being increasing?",
+            "answer": 0.39816051,
+            "reasoning_types": [],
+            "sampled_nodes": [
+                "InsSclInScen",
+                "CapChange"
+            ]
+        },
+        {
+            "id": 19,
+            "evidences": [
+                "The instability scale within the scenario is average.",
+                "The instability change is decreasing."
+            ],
+            "query": "What is the likelihood of the capping change being increasing?",
+            "answer": 0.26974703,
+            "reasoning_types": [],
+            "sampled_nodes": [
+                "InsSclInScen",
+                "InsChange",
+                "CapChange"
+            ]
+        },
+        {
+            "id": 20,
+            "evidences": [
+                "The instability scaling within the scenario is average.",
+                "The capping within the scenario is also average.",
+                "The capping change is little change."
+            ],
+            "query": "What is the likelihood of the instability change being little change?",
+            "answer": 0.39622248,
+            "reasoning_types": [
+                "evidential"
+            ],
+            "sampled_nodes": [
+                "InsSclInScen",
+                "CapInScen",
+                "CapChange",
+                "InsChange"
+            ]
+        },
+        {
+            "id": 21,
+            "evidences": [
+                "The capping change is increasing."
+            ],
+            "query": "What is the likelihood of the capping being average within the scenario?",
+            "answer": 0.2265,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "CapChange",
+                "CapInScen"
+            ]
+        }
+    ],
+    "additional_evidence_query_pairs": [
+        {
+            "id": 22,
+            "evidences": [
+                "The change in insurance is decreasing."
+            ],
+            "query": "The capping change is increasing.",
+            "answer": 0.26974703,
+            "reasoning_types": [],
+            "sampled_nodes": [
+                "InsChange",
+                "CapChange"
+            ]
+        },
+        {
+            "id": 23,
+            "evidences": [
+                "The change in instability is little."
+            ],
+            "query": "The capping is increasing.",
+            "answer": 0.37949305,
+            "reasoning_types": [],
+            "sampled_nodes": [
+                "InsChange",
+                "CapChange"
+            ]
+        },
+        {
+            "id": 24,
+            "evidences": [
+                "The change in instability is increasing."
+            ],
+            "query": "The change in capping is little change.",
+            "answer": 0.32216762,
+            "reasoning_types": [],
+            "sampled_nodes": [
+                "InsChange",
+                "CapChange"
+            ]
+        },
+        {
+            "id": 25,
+            "evidences": [
+                "The capping within the scenario is less than average."
+            ],
+            "query": "What is the likelihood that the capping change is little change?",
+            "answer": 0.35828569,
+            "reasoning_types": [
+                "evidential"
+            ],
+            "sampled_nodes": [
+                "CapInScen",
+                "CapChange"
+            ]
+        },
+        {
+            "id": 26,
+            "evidences": [
+                "The capping within the scenario is average."
+            ],
+            "query": "What is the likelihood that the capping change is little?",
+            "answer": 0.52435024,
+            "reasoning_types": [
+                "evidential"
+            ],
+            "sampled_nodes": [
+                "CapInScen",
+                "CapChange"
+            ]
+        },
+        {
+            "id": 27,
+            "evidences": [
+                "The scenario has lower instability scaling."
+            ],
+            "query": "What is the likelihood that the capping will decrease?",
+            "answer": 0.28611404,
+            "reasoning_types": [],
+            "sampled_nodes": [
+                "InsSclInScen",
+                "CapChange"
+            ]
+        },
+        {
+            "id": 28,
+            "evidences": [
+                "The scale of instability within the scenario is average."
+            ],
+            "query": "What is the likelihood that the capping change is little change?",
+            "answer": 0.36140155,
+            "reasoning_types": [],
+            "sampled_nodes": [
+                "InsSclInScen",
+                "CapChange"
+            ]
+        },
+        {
+            "id": 29,
+            "evidences": [
+                "The scenario has a higher instability scaling."
+            ],
+            "query": "What is the likelihood that the capping is increasing within the scenario?",
+            "answer": 0.45603848,
+            "reasoning_types": [],
+            "sampled_nodes": [
+                "InsSclInScen",
+                "CapChange"
+            ]
+        },
+        {
+            "id": 30,
+            "evidences": [
+                "The change in insurance is decreasing.",
+                "The capping within the scenario is less than average."
+            ],
+            "query": "The capping change is experiencing little change.",
+            "answer": 0.31438114,
+            "reasoning_types": [
+                "evidential"
+            ],
+            "sampled_nodes": [
+                "InsChange",
+                "CapInScen",
+                "CapChange"
+            ]
+        },
+        {
+            "id": 31,
+            "evidences": [
+                "The change in insurance is decreasing.",
+                "The capping within the scenario is average."
+            ],
+            "query": "What is the likelihood of the capping change being increasing?",
+            "answer": 0.2143018,
+            "reasoning_types": [
+                "evidential"
+            ],
+            "sampled_nodes": [
+                "InsChange",
+                "CapInScen",
+                "CapChange"
+            ]
+        },
+        {
+            "id": 32,
+            "evidences": [
+                "The change in instability is little.",
+                "The capping within the scenario is less than average."
+            ],
+            "query": "What is the likelihood that the capping change is little?",
+            "answer": 0.3738738,
+            "reasoning_types": [
+                "evidential"
+            ],
+            "sampled_nodes": [
+                "InsChange",
+                "CapInScen",
+                "CapChange"
+            ]
+        },
+        {
+            "id": 33,
+            "evidences": [
+                "The change in instability is little.",
+                "The capping within the scenario is average."
+            ],
+            "query": "What is the likelihood that the capping change is little?",
+            "answer": 0.54692067,
+            "reasoning_types": [
+                "evidential"
+            ],
+            "sampled_nodes": [
+                "InsChange",
+                "CapInScen",
+                "CapChange"
+            ]
+        },
+        {
+            "id": 34,
+            "evidences": [
+                "The change in instability is increasing.",
+                "The capping within the scenario is less than average."
+            ],
+            "query": "What is the likelihood that the capping within the scenario will become higher than average given that it is currently increasing?",
+            "answer": 0.22592444,
+            "reasoning_types": [
+                "evidential"
+            ],
+            "sampled_nodes": [
+                "InsChange",
+                "CapInScen",
+                "CapChange"
+            ]
+        },
+        {
+            "id": 35,
+            "evidences": [
+                "The change in instability is increasing.",
+                "The capping within the scenario is average."
+            ],
+            "query": "What is the likelihood that the capping within the scenario will increase?",
+            "answer": 0.42842009,
+            "reasoning_types": [
+                "evidential"
+            ],
+            "sampled_nodes": [
+                "InsChange",
+                "CapInScen",
+                "CapChange"
+            ]
+        },
+        {
+            "id": 36,
+            "evidences": [
+                "The change in insurance is decreasing.",
+                "The insurance scaling within the scenario is less unstable."
+            ],
+            "query": "What is the likelihood of the capping change being decreasing?",
+            "answer": 0.34925142,
+            "reasoning_types": [],
+            "sampled_nodes": [
+                "InsChange",
+                "InsSclInScen",
+                "CapChange"
+            ]
+        },
+        {
+            "id": 37,
+            "evidences": [
+                "The change in insurance is decreasing.",
+                "The insurance scaling within the scenario is average."
+            ],
+            "query": "What is the likelihood that the capping change is increasing?",
+            "answer": 0.26974703,
+            "reasoning_types": [],
+            "sampled_nodes": [
+                "InsChange",
+                "InsSclInScen",
+                "CapChange"
+            ]
+        },
+        {
+            "id": 38,
+            "evidences": [
+                "The change in insurance is decreasing.",
+                "The insurance scaling within the scenario is more unstable."
+            ],
+            "query": "What is the likelihood of the capping change being decreasing?",
+            "answer": 0.34925142,
+            "reasoning_types": [],
+            "sampled_nodes": [
+                "InsChange",
+                "InsSclInScen",
+                "CapChange"
+            ]
+        },
+        {
+            "id": 39,
+            "evidences": [
+                "The change in instability is little.",
+                "The instability scaling within the scenario is less unstable."
+            ],
+            "query": "What is the likelihood of capping increasing in this scenario?",
+            "answer": 0.37949305,
+            "reasoning_types": [],
+            "sampled_nodes": [
+                "InsChange",
+                "InsSclInScen",
+                "CapChange"
+            ]
+        },
+        {
+            "id": 40,
+            "evidences": [
+                "The change in instability is little.",
+                "The instability scaling within the scenario is average."
+            ],
+            "query": "What is the likelihood of capping increasing in this scenario?",
+            "answer": 0.37949305,
+            "reasoning_types": [],
+            "sampled_nodes": [
+                "InsChange",
+                "InsSclInScen",
+                "CapChange"
+            ]
+        },
+        {
+            "id": 41,
+            "evidences": [
+                "The change in instability is little.",
+                "The instability scaling within the scenario is more unstable."
+            ],
+            "query": "What is the likelihood of capping increasing in this scenario?",
+            "answer": 0.37949305,
+            "reasoning_types": [],
+            "sampled_nodes": [
+                "InsChange",
+                "InsSclInScen",
+                "CapChange"
+            ]
+        },
+        {
+            "id": 42,
+            "evidences": [
+                "The change in instability is increasing.",
+                "The instability scaling within the scenario is less unstable."
+            ],
+            "query": "The change in capping is little change.",
+            "answer": 0.32216762,
+            "reasoning_types": [],
+            "sampled_nodes": [
+                "InsChange",
+                "InsSclInScen",
+                "CapChange"
+            ]
+        },
+        {
+            "id": 43,
+            "evidences": [
+                "The change in instability is increasing.",
+                "The instability scaling within the scenario is average."
+            ],
+            "query": "What is the likelihood that the capping change is decreasing?",
+            "answer": 0.14471845,
+            "reasoning_types": [],
+            "sampled_nodes": [
+                "InsChange",
+                "InsSclInScen",
+                "CapChange"
+            ]
+        },
+        {
+            "id": 44,
+            "evidences": [
+                "The change in instability is increasing.",
+                "The instability scaling within the scenario is more unstable."
+            ],
+            "query": "What is the likelihood that the capping change is decreasing?",
+            "answer": 0.14471845,
+            "reasoning_types": [],
+            "sampled_nodes": [
+                "InsChange",
+                "InsSclInScen",
+                "CapChange"
+            ]
+        },
+        {
+            "id": 45,
+            "evidences": [
+                "The capping within the scenario is less than average.",
+                "The instability scaling within the scenario is less unstable."
+            ],
+            "query": "What is the likelihood that the capping change is decreasing?",
+            "answer": 0.55226664,
+            "reasoning_types": [
+                "evidential"
+            ],
+            "sampled_nodes": [
+                "CapInScen",
+                "InsSclInScen",
+                "CapChange"
+            ]
+        },
+        {
+            "id": 46,
+            "evidences": [
+                "The capping within the scenario is less than average.",
+                "The instability scaling within the scenario is average."
+            ],
+            "query": "What is the likelihood that the capping change is decreasing?",
+            "answer": 0.50490634,
+            "reasoning_types": [
+                "evidential"
+            ],
+            "sampled_nodes": [
+                "CapInScen",
+                "InsSclInScen",
+                "CapChange"
+            ]
+        },
+        {
+            "id": 47,
+            "evidences": [
+                "The capping within the scenario is less than average.",
+                "The instability scaling within the scenario is more unstable."
+            ],
+            "query": "What is the likelihood that the capping change is decreasing?",
+            "answer": 0.45256729,
+            "reasoning_types": [
+                "evidential"
+            ],
+            "sampled_nodes": [
+                "CapInScen",
+                "InsSclInScen",
+                "CapChange"
+            ]
+        },
+        {
+            "id": 48,
+            "evidences": [
+                "The capping within the scenario is average.",
+                "The instability scaling within the scenario is less unstable."
+            ],
+            "query": "What is the likelihood that the capping change is little change?",
+            "answer": 0.54206858,
+            "reasoning_types": [
+                "evidential"
+            ],
+            "sampled_nodes": [
+                "CapInScen",
+                "InsSclInScen",
+                "CapChange"
+            ]
+        },
+        {
+            "id": 49,
+            "evidences": [
+                "The capping within the scenario is average.",
+                "The instability scaling within the scenario is average."
+            ],
+            "query": "What is the likelihood that the capping change is increasing?",
+            "answer": 0.31578555,
+            "reasoning_types": [
+                "evidential"
+            ],
+            "sampled_nodes": [
+                "CapInScen",
+                "InsSclInScen",
+                "CapChange"
+            ]
+        },
+        {
+            "id": 50,
+            "evidences": [
+                "The capping within the scenario is average.",
+                "The instability scaling within the scenario is more unstable."
+            ],
+            "query": "What is the likelihood that the capping change is increasing?",
+            "answer": 0.36304381,
+            "reasoning_types": [
+                "evidential"
+            ],
+            "sampled_nodes": [
+                "CapInScen",
+                "InsSclInScen",
+                "CapChange"
+            ]
+        },
+        {
+            "id": 51,
+            "evidences": [
+                "The change in insurance is decreasing.",
+                "The capping within the scenario is less than average.",
+                "The instability scaling within the scenario is less unstable."
+            ],
+            "query": "The capping change is experiencing little change.",
+            "answer": 0.31438114,
+            "reasoning_types": [
+                "evidential"
+            ],
+            "sampled_nodes": [
+                "InsChange",
+                "CapInScen",
+                "InsSclInScen",
+                "CapChange"
+            ]
+        },
+        {
+            "id": 52,
+            "evidences": [
+                "The change in insurance is decreasing.",
+                "The capping within the scenario is less than average.",
+                "The instability scaling within the scenario is average."
+            ],
+            "query": "The capping change is increasing.",
+            "answer": 0.076530011,
+            "reasoning_types": [
+                "evidential"
+            ],
+            "sampled_nodes": [
+                "InsChange",
+                "CapInScen",
+                "InsSclInScen",
+                "CapChange"
+            ]
+        },
+        {
+            "id": 53,
+            "evidences": [
+                "The change in insurance is decreasing.",
+                "The capping within the scenario is less than average.",
+                "The instability scaling within the scenario is more unstable."
+            ],
+            "query": "The capping change is increasing.",
+            "answer": 0.076530011,
+            "reasoning_types": [
+                "evidential"
+            ],
+            "sampled_nodes": [
+                "InsChange",
+                "CapInScen",
+                "InsSclInScen",
+                "CapChange"
+            ]
+        },
+        {
+            "id": 54,
+            "evidences": [
+                "The change in insurance is decreasing.",
+                "The capping within the scenario is average.",
+                "The instability scaling within the scenario is less unstable."
+            ],
+            "query": "What is the likelihood of the capping change being increasing?",
+            "answer": 0.2143018,
+            "reasoning_types": [
+                "evidential"
+            ],
+            "sampled_nodes": [
+                "InsChange",
+                "CapInScen",
+                "InsSclInScen",
+                "CapChange"
+            ]
+        },
+        {
+            "id": 55,
+            "evidences": [
+                "The change in insurance is decreasing.",
+                "The capping within the scenario is average.",
+                "The instability scaling within the scenario is average."
+            ],
+            "query": "The capping change is decreasing.",
+            "answer": 0.2303016,
+            "reasoning_types": [
+                "evidential"
+            ],
+            "sampled_nodes": [
+                "InsChange",
+                "CapInScen",
+                "InsSclInScen",
+                "CapChange"
+            ]
+        },
+        {
+            "id": 56,
+            "evidences": [
+                "The change in insurance is decreasing.",
+                "The capping within the scenario is average.",
+                "The instability scaling within the scenario is more unstable."
+            ],
+            "query": "What is the likelihood of the capping change being increasing?",
+            "answer": 0.2143018,
+            "reasoning_types": [
+                "evidential"
+            ],
+            "sampled_nodes": [
+                "InsChange",
+                "CapInScen",
+                "InsSclInScen",
+                "CapChange"
+            ]
+        },
+        {
+            "id": 57,
+            "evidences": [
+                "The change in instability is little.",
+                "The capping within the scenario is less than average.",
+                "The instability scaling within the scenario is less unstable."
+            ],
+            "query": "What is the likelihood that the capping will continue to decrease in the near future?",
+            "answer": 0.4979636,
+            "reasoning_types": [
+                "evidential"
+            ],
+            "sampled_nodes": [
+                "InsChange",
+                "CapInScen",
+                "InsSclInScen",
+                "CapChange"
+            ]
+        },
+        {
+            "id": 58,
+            "evidences": [
+                "The change in instability is little.",
+                "The capping within the scenario is less than average.",
+                "The instability scaling within the scenario is average."
+            ],
+            "query": "What is the likelihood that the capping within the scenario will continue to increase?",
+            "answer": 0.1281626,
+            "reasoning_types": [
+                "evidential"
+            ],
+            "sampled_nodes": [
+                "InsChange",
+                "CapInScen",
+                "InsSclInScen",
+                "CapChange"
+            ]
+        },
+        {
+            "id": 59,
+            "evidences": [
+                "The change in instability is little.",
+                "The capping within the scenario is less than average.",
+                "The instability scaling within the scenario is more unstable."
+            ],
+            "query": "What is the likelihood that the capping will continue to decrease?",
+            "answer": 0.4979636,
+            "reasoning_types": [
+                "evidential"
+            ],
+            "sampled_nodes": [
+                "InsChange",
+                "CapInScen",
+                "InsSclInScen",
+                "CapChange"
+            ]
+        },
+        {
+            "id": 60,
+            "evidences": [
+                "The change in instability is little.",
+                "The capping within the scenario is average.",
+                "The instability scaling within the scenario is less unstable."
+            ],
+            "query": "The capping is increasing.",
+            "answer": 0.29717201,
+            "reasoning_types": [
+                "evidential"
+            ],
+            "sampled_nodes": [
+                "InsChange",
+                "CapInScen",
+                "InsSclInScen",
+                "CapChange"
+            ]
+        },
+        {
+            "id": 61,
+            "evidences": [
+                "The change in instability is little.",
+                "The capping within the scenario is average.",
+                "The instability scaling within the scenario is average."
+            ],
+            "query": "What is the likelihood that the capping will continue to increase?",
+            "answer": 0.29717201,
+            "reasoning_types": [
+                "evidential"
+            ],
+            "sampled_nodes": [
+                "InsChange",
+                "CapInScen",
+                "InsSclInScen",
+                "CapChange"
+            ]
+        },
+        {
+            "id": 62,
+            "evidences": [
+                "The change in instability is little.",
+                "The capping within the scenario is average.",
+                "The instability scaling within the scenario is more unstable."
+            ],
+            "query": "What is the likelihood of the capping decreasing?",
+            "answer": 0.15590731,
+            "reasoning_types": [
+                "evidential"
+            ],
+            "sampled_nodes": [
+                "InsChange",
+                "CapInScen",
+                "InsSclInScen",
+                "CapChange"
+            ]
+        },
+        {
+            "id": 63,
+            "evidences": [
+                "The change in instability is increasing.",
+                "The capping within the scenario is less than average.",
+                "The instability scaling within the scenario is less unstable."
+            ],
+            "query": "What is the likelihood that the capping change will continue to decrease?",
+            "answer": 0.37699402,
+            "reasoning_types": [
+                "evidential"
+            ],
+            "sampled_nodes": [
+                "InsChange",
+                "CapInScen",
+                "InsSclInScen",
+                "CapChange"
+            ]
+        },
+        {
+            "id": 64,
+            "evidences": [
+                "The change in instability is increasing.",
+                "The capping within the scenario is less than average.",
+                "The instability scaling within the scenario is average."
+            ],
+            "query": "What is the likelihood that the capping change is increasing?",
+            "answer": 0.22592444,
+            "reasoning_types": [
+                "evidential"
+            ],
+            "sampled_nodes": [
+                "InsChange",
+                "CapInScen",
+                "InsSclInScen",
+                "CapChange"
+            ]
+        },
+        {
+            "id": 65,
+            "evidences": [
+                "The change in instability is increasing.",
+                "The capping within the scenario is less than average.",
+                "The instability scaling within the scenario is more unstable."
+            ],
+            "query": "What is the likelihood that the capping change is decreasing?",
+            "answer": 0.37699402,
+            "reasoning_types": [
+                "evidential"
+            ],
+            "sampled_nodes": [
+                "InsChange",
+                "CapInScen",
+                "InsSclInScen",
+                "CapChange"
+            ]
+        },
+        {
+            "id": 66,
+            "evidences": [
+                "The change in instability is increasing.",
+                "The capping within the scenario is average.",
+                "The instability scaling within the scenario is less unstable."
+            ],
+            "query": "What is the likelihood that the capping change is decreasing?",
+            "answer": 0.096530233,
+            "reasoning_types": [
+                "evidential"
+            ],
+            "sampled_nodes": [
+                "InsChange",
+                "CapInScen",
+                "InsSclInScen",
+                "CapChange"
+            ]
+        },
+        {
+            "id": 67,
+            "evidences": [
+                "The change in instability is increasing.",
+                "The capping within the scenario is average.",
+                "The instability scaling within the scenario is average."
+            ],
+            "query": "What is the likelihood that the capping change is little change?",
+            "answer": 0.47504967,
+            "reasoning_types": [
+                "evidential"
+            ],
+            "sampled_nodes": [
+                "InsChange",
+                "CapInScen",
+                "InsSclInScen",
+                "CapChange"
+            ]
+        },
+        {
+            "id": 68,
+            "evidences": [
+                "The change in instability is increasing.",
+                "The capping within the scenario is average.",
+                "The instability scaling within the scenario is more unstable."
+            ],
+            "query": "What is the likelihood that the capping change is decreasing?",
+            "answer": 0.096530233,
+            "reasoning_types": [
+                "evidential"
+            ],
+            "sampled_nodes": [
+                "InsChange",
+                "CapInScen",
+                "InsSclInScen",
+                "CapChange"
+            ]
+        },
+        {
+            "id": 69,
+            "evidences": [
+                "The capping change is decreasing."
+            ],
+            "query": "What is the likelihood that the instability change will increase?",
+            "answer": 0.214,
+            "reasoning_types": [],
+            "sampled_nodes": [
+                "CapChange",
+                "InsChange"
+            ]
+        },
+        {
+            "id": 70,
+            "evidences": [
+                "The change in capping is little."
+            ],
+            "query": "What is the likelihood of a little change in the insurance cost?",
+            "answer": 0.3544,
+            "reasoning_types": [],
+            "sampled_nodes": [
+                "CapChange",
+                "InsChange"
+            ]
+        },
+        {
+            "id": 71,
+            "evidences": [
+                "The capping change is increasing."
+            ],
+            "query": "What is the likelihood that the instability change is increasing?",
+            "answer": 0.473,
+            "reasoning_types": [],
+            "sampled_nodes": [
+                "CapChange",
+                "InsChange"
+            ]
+        },
+        {
+            "id": 72,
+            "evidences": [
+                "The capping within the scenario is less than average."
+            ],
+            "query": "What is the likelihood of there being little change in the insurance premium within the scenario?",
+            "answer": 0.33962382,
+            "reasoning_types": [],
+            "sampled_nodes": [
+                "CapInScen",
+                "InsChange"
+            ]
+        },
+        {
+            "id": 73,
+            "evidences": [
+                "The capping within the scenario is average."
+            ],
+            "query": "What is the likelihood of the insurance change being decreasing?",
+            "answer": 0.30966498,
+            "reasoning_types": [],
+            "sampled_nodes": [
+                "CapInScen",
+                "InsChange"
+            ]
+        },
+        {
+            "id": 74,
+            "evidences": [
+                "The scenario has lower instability scaling."
+            ],
+            "query": "What is the likelihood that there will be little change in the insurance assessment?",
+            "answer": 0.32904143,
+            "reasoning_types": [
+                "evidential"
+            ],
+            "sampled_nodes": [
+                "InsSclInScen",
+                "InsChange"
+            ]
+        },
+        {
+            "id": 75,
+            "evidences": [
+                "The scale of instability within the scenario is average."
+            ],
+            "query": "What is the likelihood that there will be little change in the insurance assessment?",
+            "answer": 0.37619774,
+            "reasoning_types": [
+                "evidential"
+            ],
+            "sampled_nodes": [
+                "InsSclInScen",
+                "InsChange"
+            ]
+        },
+        {
+            "id": 76,
+            "evidences": [
+                "The scenario has a higher instability scaling."
+            ],
+            "query": "What is the likelihood that there is little change in instability?",
+            "answer": 0.31232416,
+            "reasoning_types": [
+                "evidential"
+            ],
+            "sampled_nodes": [
+                "InsSclInScen",
+                "InsChange"
+            ]
+        },
+        {
+            "id": 77,
+            "evidences": [
+                "The capping change is decreasing.",
+                "The capping within the scenario is less than average."
+            ],
+            "query": "What is the likelihood of instability change being little change?",
+            "answer": 0.335,
+            "reasoning_types": [],
+            "sampled_nodes": [
+                "CapChange",
+                "CapInScen",
+                "InsChange"
+            ]
+        },
+        {
+            "id": 78,
+            "evidences": [
+                "The capping change is decreasing.",
+                "The capping within the scenario is average."
+            ],
+            "query": "The instability change is experiencing little change.",
+            "answer": 0.335,
+            "reasoning_types": [],
+            "sampled_nodes": [
+                "CapChange",
+                "CapInScen",
+                "InsChange"
+            ]
+        },
+        {
+            "id": 79,
+            "evidences": [
+                "The change in capping is little.",
+                "The capping within the scenario is less than average."
+            ],
+            "query": "What is the likelihood that the instability change is little?",
+            "answer": 0.3544,
+            "reasoning_types": [],
+            "sampled_nodes": [
+                "CapChange",
+                "CapInScen",
+                "InsChange"
+            ]
+        },
+        {
+            "id": 80,
+            "evidences": [
+                "The change in capping is little.",
+                "The capping within the scenario is average."
+            ],
+            "query": "What is the likelihood of instability change being increasing?",
+            "answer": 0.3176,
+            "reasoning_types": [],
+            "sampled_nodes": [
+                "CapChange",
+                "CapInScen",
+                "InsChange"
+            ]
+        },
+        {
+            "id": 81,
+            "evidences": [
+                "The capping change is increasing.",
+                "The capping within the scenario is less than average."
+            ],
+            "query": "What is the likelihood that the instability change is increasing?",
+            "answer": 0.473,
+            "reasoning_types": [],
+            "sampled_nodes": [
+                "CapChange",
+                "CapInScen",
+                "InsChange"
+            ]
+        },
+        {
+            "id": 82,
+            "evidences": [
+                "The capping change is increasing.",
+                "The capping within the scenario is average."
+            ],
+            "query": "What is the likelihood that the instability change will be little changed?",
+            "answer": 0.318,
+            "reasoning_types": [],
+            "sampled_nodes": [
+                "CapChange",
+                "CapInScen",
+                "InsChange"
+            ]
+        },
+        {
+            "id": 83,
+            "evidences": [
+                "The capping change is decreasing.",
+                "The instability scaling within the scenario is less unstable."
+            ],
+            "query": "The change in instability is little change.",
+            "answer": 0.27585711,
+            "reasoning_types": [
+                "evidential"
+            ],
+            "sampled_nodes": [
+                "CapChange",
+                "InsSclInScen",
+                "InsChange"
+            ]
+        },
+        {
+            "id": 84,
+            "evidences": [
+                "The capping change is decreasing.",
+                "The instability scaling within the scenario is average."
+            ],
+            "query": "The instability change is experiencing little change.",
+            "answer": 0.3753064,
+            "reasoning_types": [
+                "evidential"
+            ],
+            "sampled_nodes": [
+                "CapChange",
+                "InsSclInScen",
+                "InsChange"
+            ]
+        },
+        {
+            "id": 85,
+            "evidences": [
+                "The capping change is decreasing.",
+                "The instability scaling within the scenario is more unstable."
+            ],
+            "query": "What is the likelihood that the instability change is increasing?",
+            "answer": 0.42394773,
+            "reasoning_types": [
+                "evidential"
+            ],
+            "sampled_nodes": [
+                "CapChange",
+                "InsSclInScen",
+                "InsChange"
+            ]
+        },
+        {
+            "id": 86,
+            "evidences": [
+                "The change in capping is little.",
+                "The instability scaling within the scenario is less unstable."
+            ],
+            "query": "What is the likelihood that the instability changes?",
+            "answer": 0.11461102,
+            "reasoning_types": [
+                "evidential"
+            ],
+            "sampled_nodes": [
+                "CapChange",
+                "InsSclInScen",
+                "InsChange"
+            ]
+        },
+        {
+            "id": 87,
+            "evidences": [
+                "The change in capping is little.",
+                "The instability scaling within the scenario is more unstable."
+            ],
+            "query": "What is the likelihood that the change in instability is little?",
+            "answer": 0.34267111,
+            "reasoning_types": [
+                "evidential"
+            ],
+            "sampled_nodes": [
+                "CapChange",
+                "InsSclInScen",
+                "InsChange"
+            ]
+        },
+        {
+            "id": 88,
+            "evidences": [
+                "The capping change is increasing.",
+                "The instability scaling within the scenario is less unstable."
+            ],
+            "query": "What is the likelihood that the instability change will continue to decrease?",
+            "answer": 0.42600585,
+            "reasoning_types": [
+                "evidential"
+            ],
+            "sampled_nodes": [
+                "CapChange",
+                "InsSclInScen",
+                "InsChange"
+            ]
+        },
+        {
+            "id": 89,
+            "evidences": [
+                "The capping change is increasing.",
+                "The instability scaling within the scenario is more unstable."
+            ],
+            "query": "What is the likelihood that the instability change will remain relatively stable?",
+            "answer": 0.25990098,
+            "reasoning_types": [
+                "evidential"
+            ],
+            "sampled_nodes": [
+                "CapChange",
+                "InsSclInScen",
+                "InsChange"
+            ]
+        },
+        {
+            "id": 90,
+            "evidences": [
+                "The capping within the scenario is less than average.",
+                "The instability scaling within the scenario is less unstable."
+            ],
+            "query": "What is the likelihood that there will be little change in instability?",
+            "answer": 0.30593939,
+            "reasoning_types": [
+                "evidential"
+            ],
+            "sampled_nodes": [
+                "CapInScen",
+                "InsSclInScen",
+                "InsChange"
+            ]
+        },
+        {
+            "id": 91,
+            "evidences": [
+                "The capping within the scenario is less than average.",
+                "The instability scaling within the scenario is average."
+            ],
+            "query": "What is the likelihood that the instability change is increasing?",
+            "answer": 0.26667987,
+            "reasoning_types": [
+                "evidential"
+            ],
+            "sampled_nodes": [
+                "CapInScen",
+                "InsSclInScen",
+                "InsChange"
+            ]
+        },
+        {
+            "id": 92,
+            "evidences": [
+                "The capping within the scenario is less than average.",
+                "The instability scaling within the scenario is more unstable."
+            ],
+            "query": "What is the likelihood of instability change being decreasing?",
+            "answer": 0.14550393,
+            "reasoning_types": [
+                "evidential"
+            ],
+            "sampled_nodes": [
+                "CapInScen",
+                "InsSclInScen",
+                "InsChange"
+            ]
+        },
+        {
+            "id": 93,
+            "evidences": [
+                "The capping within the scenario is average.",
+                "The instability scaling within the scenario is less unstable."
+            ],
+            "query": "What is the likelihood that the instability change is little?",
+            "answer": 0.33273525,
+            "reasoning_types": [
+                "evidential"
+            ],
+            "sampled_nodes": [
+                "CapInScen",
+                "InsSclInScen",
+                "InsChange"
+            ]
+        },
+        {
+            "id": 94,
+            "evidences": [
+                "The capping within the scenario is average.",
+                "The instability scaling within the scenario is average."
+            ],
+            "query": "What is the likelihood that the instability change is increasing?",
+            "answer": 0.32649552,
+            "reasoning_types": [
+                "evidential"
+            ],
+            "sampled_nodes": [
+                "CapInScen",
+                "InsSclInScen",
+                "InsChange"
+            ]
+        },
+        {
+            "id": 95,
+            "evidences": [
+                "The capping within the scenario is average.",
+                "The instability scaling within the scenario is more unstable."
+            ],
+            "query": "What is the likelihood that the instability change is increasing?",
+            "answer": 0.57178575,
+            "reasoning_types": [
+                "evidential"
+            ],
+            "sampled_nodes": [
+                "CapInScen",
+                "InsSclInScen",
+                "InsChange"
+            ]
+        },
+        {
+            "id": 96,
+            "evidences": [
+                "The capping change is decreasing.",
+                "The capping within the scenario is less than average.",
+                "The instability scaling within the scenario is less unstable."
+            ],
+            "query": "The likelihood of the instability change decreasing.",
+            "answer": 0.65701178,
+            "reasoning_types": [
+                "evidential"
+            ],
+            "sampled_nodes": [
+                "CapChange",
+                "CapInScen",
+                "InsSclInScen",
+                "InsChange"
+            ]
+        },
+        {
+            "id": 97,
+            "evidences": [
+                "The capping change is decreasing.",
+                "The capping within the scenario is less than average.",
+                "The instability scaling within the scenario is average."
+            ],
+            "query": "The instability change is little change.",
+            "answer": 0.3753064,
+            "reasoning_types": [
+                "evidential"
+            ],
+            "sampled_nodes": [
+                "CapChange",
+                "CapInScen",
+                "InsSclInScen",
+                "InsChange"
+            ]
+        },
+        {
+            "id": 98,
+            "evidences": [
+                "The capping change is decreasing.",
+                "The capping within the scenario is less than average.",
+                "The instability scaling within the scenario is more unstable."
+            ],
+            "query": "What is the likelihood of the instability change increasing?",
+            "answer": 0.42394773,
+            "reasoning_types": [
+                "evidential"
+            ],
+            "sampled_nodes": [
+                "CapChange",
+                "CapInScen",
+                "InsSclInScen",
+                "InsChange"
+            ]
+        },
+        {
+            "id": 99,
+            "evidences": [
+                "The capping change is decreasing.",
+                "The capping within the scenario is average.",
+                "The instability scaling within the scenario is less unstable."
+            ],
+            "query": "The instability change is decreasing.",
+            "answer": 0.65701178,
+            "reasoning_types": [
+                "evidential"
+            ],
+            "sampled_nodes": [
+                "CapChange",
+                "CapInScen",
+                "InsSclInScen",
+                "InsChange"
+            ]
+        },
+        {
+            "id": 100,
+            "evidences": [
+                "The capping change is decreasing.",
+                "The capping within the scenario is average.",
+                "The instability scaling within the scenario is average."
+            ],
+            "query": "The instability change is decreasing.",
+            "answer": 0.42557407,
+            "reasoning_types": [
+                "evidential"
+            ],
+            "sampled_nodes": [
+                "CapChange",
+                "CapInScen",
+                "InsSclInScen",
+                "InsChange"
+            ]
+        },
+        {
+            "id": 101,
+            "evidences": [
+                "The capping change is decreasing.",
+                "The capping within the scenario is average.",
+                "The instability scaling within the scenario is more unstable."
+            ],
+            "query": "The instability change is little change.",
+            "answer": 0.38022544,
+            "reasoning_types": [
+                "evidential"
+            ],
+            "sampled_nodes": [
+                "CapChange",
+                "CapInScen",
+                "InsSclInScen",
+                "InsChange"
+            ]
+        },
+        {
+            "id": 102,
+            "evidences": [
+                "The change in capping is little.",
+                "The capping within the scenario is less than average.",
+                "The instability scaling within the scenario is less unstable."
+            ],
+            "query": "What is the likelihood that the instability change is little?",
+            "answer": 0.33571359,
+            "reasoning_types": [
+                "evidential"
+            ],
+            "sampled_nodes": [
+                "CapChange",
+                "CapInScen",
+                "InsSclInScen",
+                "InsChange"
+            ]
+        },
+        {
+            "id": 103,
+            "evidences": [
+                "The change in capping is little.",
+                "The capping within the scenario is less than average.",
+                "The instability scaling within the scenario is average."
+            ],
+            "query": "What is the likelihood that the instability change is little?",
+            "answer": 0.39622248,
+            "reasoning_types": [
+                "evidential"
+            ],
+            "sampled_nodes": [
+                "CapChange",
+                "CapInScen",
+                "InsSclInScen",
+                "InsChange"
+            ]
+        },
+        {
+            "id": 104,
+            "evidences": [
+                "The change in capping is little.",
+                "The capping within the scenario is less than average.",
+                "The instability scaling within the scenario is more unstable."
+            ],
+            "query": "What is the likelihood that the instability is increasing?",
+            "answer": 0.53600205,
+            "reasoning_types": [
+                "evidential"
+            ],
+            "sampled_nodes": [
+                "CapChange",
+                "CapInScen",
+                "InsSclInScen",
+                "InsChange"
+            ]
+        },
+        {
+            "id": 105,
+            "evidences": [
+                "The change in capping is little.",
+                "The capping within the scenario is average.",
+                "The instability scaling within the scenario is less unstable."
+            ],
+            "query": "What is the likelihood that the instability change is little?",
+            "answer": 0.33571359,
+            "reasoning_types": [
+                "evidential"
+            ],
+            "sampled_nodes": [
+                "CapChange",
+                "CapInScen",
+                "InsSclInScen",
+                "InsChange"
+            ]
+        },
+        {
+            "id": 106,
+            "evidences": [
+                "The change in capping is little.",
+                "The capping within the scenario is average.",
+                "The instability scaling within the scenario is average."
+            ],
+            "query": "What is the likelihood that the instability change is little?",
+            "answer": 0.39622248,
+            "reasoning_types": [
+                "evidential"
+            ],
+            "sampled_nodes": [
+                "CapChange",
+                "CapInScen",
+                "InsSclInScen",
+                "InsChange"
+            ]
+        },
+        {
+            "id": 107,
+            "evidences": [
+                "The change in capping is little.",
+                "The capping within the scenario is average.",
+                "The instability scaling within the scenario is more unstable."
+            ],
+            "query": "What is the likelihood of the instability change being decreasing?",
+            "answer": 0.12132685,
+            "reasoning_types": [
+                "evidential"
+            ],
+            "sampled_nodes": [
+                "CapChange",
+                "CapInScen",
+                "InsSclInScen",
+                "InsChange"
+            ]
+        },
+        {
+            "id": 108,
+            "evidences": [
+                "The capping change is increasing.",
+                "The capping within the scenario is less than average.",
+                "The instability scaling within the scenario is less unstable."
+            ],
+            "query": "What is the likelihood that the instability change is increasing?",
+            "answer": 0.2076079,
+            "reasoning_types": [
+                "evidential"
+            ],
+            "sampled_nodes": [
+                "CapChange",
+                "CapInScen",
+                "InsSclInScen",
+                "InsChange"
+            ]
+        },
+        {
+            "id": 109,
+            "evidences": [
+                "The capping change is increasing.",
+                "The capping within the scenario is less than average.",
+                "The instability scaling within the scenario is average."
+            ],
+            "query": "What is the likelihood that the instability change is decreasing?",
+            "answer": 0.19848992,
+            "reasoning_types": [
+                "evidential"
+            ],
+            "sampled_nodes": [
+                "CapChange",
+                "CapInScen",
+                "InsSclInScen",
+                "InsChange"
+            ]
+        },
+        {
+            "id": 110,
+            "evidences": [
+                "The capping change is increasing.",
+                "The capping within the scenario is less than average.",
+                "The instability scaling within the scenario is more unstable."
+            ],
+            "query": "What is the likelihood that the instability change will remain relatively stable?",
+            "answer": 0.25990098,
+            "reasoning_types": [
+                "evidential"
+            ],
+            "sampled_nodes": [
+                "CapChange",
+                "CapInScen",
+                "InsSclInScen",
+                "InsChange"
+            ]
+        },
+        {
+            "id": 111,
+            "evidences": [
+                "The capping change is increasing.",
+                "The capping within the scenario is average.",
+                "The instability scaling within the scenario is less unstable."
+            ],
+            "query": "What is the likelihood that the instability change is increasing?",
+            "answer": 0.2076079,
+            "reasoning_types": [
+                "evidential"
+            ],
+            "sampled_nodes": [
+                "CapChange",
+                "CapInScen",
+                "InsSclInScen",
+                "InsChange"
+            ]
+        },
+        {
+            "id": 112,
+            "evidences": [
+                "The capping change is increasing.",
+                "The capping within the scenario is average.",
+                "The instability scaling within the scenario is average."
+            ],
+            "query": "What is the likelihood that the instability change is little change?",
+            "answer": 0.35855999,
+            "reasoning_types": [
+                "evidential"
+            ],
+            "sampled_nodes": [
+                "CapChange",
+                "CapInScen",
+                "InsSclInScen",
+                "InsChange"
+            ]
+        },
+        {
+            "id": 113,
+            "evidences": [
+                "The capping change is increasing.",
+                "The capping within the scenario is average.",
+                "The instability scaling within the scenario is more unstable."
+            ],
+            "query": "What is the likelihood that the instability change will decrease?",
+            "answer": 0.065347111,
+            "reasoning_types": [
+                "evidential"
+            ],
+            "sampled_nodes": [
+                "CapChange",
+                "CapInScen",
+                "InsSclInScen",
+                "InsChange"
+            ]
+        },
+        {
+            "id": 114,
+            "evidences": [
+                "The capping change is decreasing."
+            ],
+            "query": "What is the likelihood that the capping within the scenario is less than average?",
+            "answer": 0.7315,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "CapChange",
+                "CapInScen"
+            ]
+        },
+        {
+            "id": 115,
+            "evidences": [
+                "The change in capping is little."
+            ],
+            "query": "What is the likelihood that the capping within the scenario is average?",
+            "answer": 0.4156,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "CapChange",
+                "CapInScen"
+            ]
+        },
+        {
+            "id": 116,
+            "evidences": [
+                "The capping change is increasing."
+            ],
+            "query": "The capping within the scenario is more than average.",
+            "answer": 0.0,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "CapChange",
+                "CapInScen"
+            ]
+        },
+        {
+            "id": 117,
+            "evidences": [
+                "The change in insurance is decreasing."
+            ],
+            "query": "What is the likelihood of the capping being average within the scenario?",
+            "answer": 0.28510121,
+            "reasoning_types": [],
+            "sampled_nodes": [
+                "InsChange",
+                "CapInScen"
+            ]
+        },
+        {
+            "id": 118,
+            "evidences": [
+                "The change in instability is little."
+            ],
+            "query": "The capping within the scenario is average.",
+            "answer": 0.28924385,
+            "reasoning_types": [],
+            "sampled_nodes": [
+                "InsChange",
+                "CapInScen"
+            ]
+        },
+        {
+            "id": 119,
+            "evidences": [
+                "The change in instability is increasing."
+            ],
+            "query": "The capping within the scenario is average.",
+            "answer": 0.28185024,
+            "reasoning_types": [],
+            "sampled_nodes": [
+                "InsChange",
+                "CapInScen"
+            ]
+        },
+        {
+            "id": 120,
+            "evidences": [
+                "The scenario has lower instability scaling."
+            ],
+            "query": "What is the likelihood that the scenario has a capping greater than average?",
+            "answer": 0.0,
+            "reasoning_types": [],
+            "sampled_nodes": [
+                "InsSclInScen",
+                "CapInScen"
+            ]
+        },
+        {
+            "id": 121,
+            "evidences": [
+                "The scale of instability within the scenario is average."
+            ],
+            "query": "What is the likelihood that the capping within the scenario is average?",
+            "answer": 0.28558417,
+            "reasoning_types": [],
+            "sampled_nodes": [
+                "InsSclInScen",
+                "CapInScen"
+            ]
+        },
+        {
+            "id": 122,
+            "evidences": [
+                "The scenario has a higher instability scaling."
+            ],
+            "query": "What is the likelihood that the capping within the scenario is more than average?",
+            "answer": 0.0,
+            "reasoning_types": [],
+            "sampled_nodes": [
+                "InsSclInScen",
+                "CapInScen"
+            ]
+        },
+        {
+            "id": 123,
+            "evidences": [
+                "The capping change is decreasing.",
+                "The instability change is decreasing."
+            ],
+            "query": "The capping within the scenario is average.",
+            "answer": 0.188,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "CapChange",
+                "InsChange",
+                "CapInScen"
+            ]
+        },
+        {
+            "id": 124,
+            "evidences": [
+                "The capping change is decreasing.",
+                "The instability change is experiencing little change."
+            ],
+            "query": "What is the likelihood that the capping within the scenario is less than average?",
+            "answer": 0.7315,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "CapChange",
+                "InsChange",
+                "CapInScen"
+            ]
+        },
+        {
+            "id": 125,
+            "evidences": [
+                "The capping change is decreasing.",
+                "The instability change is increasing."
+            ],
+            "query": "What is the likelihood that the capping within the scenario is less than average?",
+            "answer": 0.7315,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "CapChange",
+                "InsChange",
+                "CapInScen"
+            ]
+        },
+        {
+            "id": 126,
+            "evidences": [
+                "The change in capping is little.",
+                "Instability change is decreasing."
+            ],
+            "query": "What is the likelihood that the capping within the scenario is more than average?",
+            "answer": 0.0,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "CapChange",
+                "InsChange",
+                "CapInScen"
+            ]
+        },
+        {
+            "id": 127,
+            "evidences": [
+                "The change in capping is little.",
+                "The change in instability is little."
+            ],
+            "query": "What is the likelihood that the capping within the scenario is average?",
+            "answer": 0.4156,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "CapChange",
+                "InsChange",
+                "CapInScen"
+            ]
+        },
+        {
+            "id": 128,
+            "evidences": [
+                "The change in capping is little.",
+                "The instability change is increasing."
+            ],
+            "query": "What is the likelihood that the capping within the scenario is less than average?",
+            "answer": 0.3461,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "CapChange",
+                "InsChange",
+                "CapInScen"
+            ]
+        },
+        {
+            "id": 129,
+            "evidences": [
+                "The capping change is increasing.",
+                "The instability change is decreasing."
+            ],
+            "query": "What is the likelihood that the capping within the scenario is more than average?",
+            "answer": 0.0,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "CapChange",
+                "InsChange",
+                "CapInScen"
+            ]
+        },
+        {
+            "id": 130,
+            "evidences": [
+                "The capping change is decreasing.",
+                "The instability scaling within the scenario is less unstable."
+            ],
+            "query": "The capping within the scenario is average.",
+            "answer": 0.188,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "CapChange",
+                "InsSclInScen",
+                "CapInScen"
+            ]
+        },
+        {
+            "id": 131,
+            "evidences": [
+                "The capping change is decreasing.",
+                "The instability scaling within the scenario is average."
+            ],
+            "query": "The capping within the scenario is average.",
+            "answer": 0.188,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "CapChange",
+                "InsSclInScen",
+                "CapInScen"
+            ]
+        },
+        {
+            "id": 132,
+            "evidences": [
+                "The capping change is decreasing.",
+                "The instability scaling within the scenario is more unstable."
+            ],
+            "query": "What is the likelihood that the capping within the scenario is more than average?",
+            "answer": 0.0,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "CapChange",
+                "InsSclInScen",
+                "CapInScen"
+            ]
+        },
+        {
+            "id": 133,
+            "evidences": [
+                "The change in capping is little.",
+                "The instability scaling within the scenario is less unstable."
+            ],
+            "query": "What is the likelihood that the capping within the scenario is less than average?",
+            "answer": 0.3461,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "CapChange",
+                "InsSclInScen",
+                "CapInScen"
+            ]
+        },
+        {
+            "id": 134,
+            "evidences": [
+                "The change in capping is little.",
+                "The instability scaling within the scenario is average."
+            ],
+            "query": "What is the likelihood that the capping within the scenario is average?",
+            "answer": 0.4156,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "CapChange",
+                "InsSclInScen",
+                "CapInScen"
+            ]
+        },
+        {
+            "id": 135,
+            "evidences": [
+                "The change in capping is little.",
+                "The instability scaling within the scenario is more unstable."
+            ],
+            "query": "What is the likelihood that the capping within the scenario is less than average?",
+            "answer": 0.3461,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "CapChange",
+                "InsSclInScen",
+                "CapInScen"
+            ]
+        },
+        {
+            "id": 136,
+            "evidences": [
+                "The capping change is increasing.",
+                "The instability scaling within the scenario is less unstable."
+            ],
+            "query": "What is the likelihood that the capping within the scenario is greater than average?",
+            "answer": 0.0,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "CapChange",
+                "InsSclInScen",
+                "CapInScen"
+            ]
+        },
+        {
+            "id": 137,
+            "evidences": [
+                "The capping change is increasing.",
+                "The instability scaling within the scenario is more unstable."
+            ],
+            "query": "What is the likelihood that the capping within the scenario is less than average?",
+            "answer": 0.119,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "CapChange",
+                "InsSclInScen",
+                "CapInScen"
+            ]
+        },
+        {
+            "id": 138,
+            "evidences": [
+                "The change in insurance is decreasing.",
+                "The insurance scaling within the scenario is less unstable."
+            ],
+            "query": "What is the likelihood of the capping within the scenario being average?",
+            "answer": 0.28510121,
+            "reasoning_types": [],
+            "sampled_nodes": [
+                "InsChange",
+                "InsSclInScen",
+                "CapInScen"
+            ]
+        },
+        {
+            "id": 139,
+            "evidences": [
+                "The change in insurance is decreasing.",
+                "The insurance scaling within the scenario is average."
+            ],
+            "query": "What is the likelihood that the capping within the scenario is more than average?",
+            "answer": 0.0,
+            "reasoning_types": [],
+            "sampled_nodes": [
+                "InsChange",
+                "InsSclInScen",
+                "CapInScen"
+            ]
+        },
+        {
+            "id": 140,
+            "evidences": [
+                "The change in insurance is decreasing.",
+                "The insurance scaling within the scenario is more unstable."
+            ],
+            "query": "What is the likelihood of the capping being less than average within the scenario?",
+            "answer": 0.41944195,
+            "reasoning_types": [],
+            "sampled_nodes": [
+                "InsChange",
+                "InsSclInScen",
+                "CapInScen"
+            ]
+        },
+        {
+            "id": 141,
+            "evidences": [
+                "The change in instability is little.",
+                "The instability scaling within the scenario is less unstable."
+            ],
+            "query": "What is the likelihood of capping being above average within the scenario?",
+            "answer": 0.0,
+            "reasoning_types": [],
+            "sampled_nodes": [
+                "InsChange",
+                "InsSclInScen",
+                "CapInScen"
+            ]
+        },
+        {
+            "id": 142,
+            "evidences": [
+                "The change in instability is little.",
+                "The instability scaling within the scenario is average."
+            ],
+            "query": "What is the likelihood that the capping within the scenario is less than average?",
+            "answer": 0.35236235,
+            "reasoning_types": [],
+            "sampled_nodes": [
+                "InsChange",
+                "InsSclInScen",
+                "CapInScen"
+            ]
+        },
+        {
+            "id": 143,
+            "evidences": [
+                "The change in instability is little.",
+                "The instability scaling within the scenario is more unstable."
+            ],
+            "query": "What is the likelihood of capping being higher than average within the scenario?",
+            "answer": 0.0,
+            "reasoning_types": [],
+            "sampled_nodes": [
+                "InsChange",
+                "InsSclInScen",
+                "CapInScen"
+            ]
+        },
+        {
+            "id": 144,
+            "evidences": [
+                "The change in instability is increasing.",
+                "The instability scaling within the scenario is less unstable."
+            ],
+            "query": "The capping within the scenario is average.",
+            "answer": 0.28185024,
+            "reasoning_types": [],
+            "sampled_nodes": [
+                "InsChange",
+                "InsSclInScen",
+                "CapInScen"
+            ]
+        },
+        {
+            "id": 145,
+            "evidences": [
+                "The change in instability is increasing.",
+                "The instability scaling within the scenario is average."
+            ],
+            "query": "What is the likelihood that the capping within the scenario is more than average?",
+            "answer": 0.0,
+            "reasoning_types": [],
+            "sampled_nodes": [
+                "InsChange",
+                "InsSclInScen",
+                "CapInScen"
+            ]
+        },
+        {
+            "id": 146,
+            "evidences": [
+                "The change in instability is increasing.",
+                "The instability scaling within the scenario is more unstable."
+            ],
+            "query": "What is the likelihood that the capping within the scenario is average?",
+            "answer": 0.28185024,
+            "reasoning_types": [],
+            "sampled_nodes": [
+                "InsChange",
+                "InsSclInScen",
+                "CapInScen"
+            ]
+        },
+        {
+            "id": 147,
+            "evidences": [
+                "The capping change is decreasing.",
+                "The instability change is decreasing.",
+                "The instability scaling within the scenario is less unstable."
+            ],
+            "query": "What is the likelihood that the capping within the scenario is greater than average?",
+            "answer": 0.0,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "CapChange",
+                "InsChange",
+                "InsSclInScen",
+                "CapInScen"
+            ]
+        },
+        {
+            "id": 148,
+            "evidences": [
+                "The capping change is decreasing.",
+                "The instability change is decreasing.",
+                "The instability scaling within the scenario is average."
+            ],
+            "query": "What is the likelihood that the capping within the scenario is less than average?",
+            "answer": 0.7315,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "CapChange",
+                "InsChange",
+                "InsSclInScen",
+                "CapInScen"
+            ]
+        },
+        {
+            "id": 149,
+            "evidences": [
+                "The capping change is decreasing.",
+                "The instability change is decreasing.",
+                "The instability scaling within the scenario is more unstable."
+            ],
+            "query": "What is the likelihood that the capping within the scenario is less than average?",
+            "answer": 0.7315,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "CapChange",
+                "InsChange",
+                "InsSclInScen",
+                "CapInScen"
+            ]
+        },
+        {
+            "id": 150,
+            "evidences": [
+                "The capping change is decreasing.",
+                "The instability change is experiencing little change.",
+                "The instability scaling within the scenario is less unstable."
+            ],
+            "query": "The capping within the scenario is average.",
+            "answer": 0.188,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "CapChange",
+                "InsChange",
+                "InsSclInScen",
+                "CapInScen"
+            ]
+        },
+        {
+            "id": 151,
+            "evidences": [
+                "The capping change is decreasing.",
+                "The instability change is experiencing little change.",
+                "The instability scaling within the scenario is average."
+            ],
+            "query": "The capping within the scenario is less than average.",
+            "answer": 0.7315,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "CapChange",
+                "InsChange",
+                "InsSclInScen",
+                "CapInScen"
+            ]
+        },
+        {
+            "id": 152,
+            "evidences": [
+                "The capping change is decreasing.",
+                "The instability change is experiencing little change.",
+                "The instability scaling within the scenario is more unstable."
+            ],
+            "query": "The capping within the scenario is more than average.",
+            "answer": 0.0,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "CapChange",
+                "InsChange",
+                "InsSclInScen",
+                "CapInScen"
+            ]
+        },
+        {
+            "id": 153,
+            "evidences": [
+                "The capping change is decreasing.",
+                "The instability change is increasing.",
+                "The instability scaling within the scenario is less unstable."
+            ],
+            "query": "What is the likelihood that the capping within the scenario is average?",
+            "answer": 0.188,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "CapChange",
+                "InsChange",
+                "InsSclInScen",
+                "CapInScen"
+            ]
+        },
+        {
+            "id": 154,
+            "evidences": [
+                "The capping change is decreasing.",
+                "The instability change is increasing.",
+                "The instability scaling within the scenario is average."
+            ],
+            "query": "What is the likelihood that the capping within the scenario is less than average?",
+            "answer": 0.7315,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "CapChange",
+                "InsChange",
+                "InsSclInScen",
+                "CapInScen"
+            ]
+        },
+        {
+            "id": 155,
+            "evidences": [
+                "The capping change is decreasing.",
+                "The instability change is increasing.",
+                "The instability scaling within the scenario is more unstable."
+            ],
+            "query": "What is the likelihood that the capping within the scenario is more than average?",
+            "answer": 0.0,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "CapChange",
+                "InsChange",
+                "InsSclInScen",
+                "CapInScen"
+            ]
+        },
+        {
+            "id": 156,
+            "evidences": [
+                "The change in capping is little.",
+                "Instability change is decreasing.",
+                "The scenario has less instability."
+            ],
+            "query": "What is the likelihood that the capping within the scenario is less than average?",
+            "answer": 0.3461,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "CapChange",
+                "InsChange",
+                "InsSclInScen",
+                "CapInScen"
+            ]
+        },
+        {
+            "id": 157,
+            "evidences": [
+                "The change in capping is little.",
+                "Instability change is decreasing.",
+                "Instability scaling within the scenario is average."
+            ],
+            "query": "What is the likelihood that the capping within the scenario is more than average?",
+            "answer": 0.0,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "CapChange",
+                "InsChange",
+                "InsSclInScen",
+                "CapInScen"
+            ]
+        },
+        {
+            "id": 158,
+            "evidences": [
+                "The change in capping is little.",
+                "Instability change is decreasing.",
+                "The scenario has more instability."
+            ],
+            "query": "What is the likelihood that the capping within the scenario is less than average?",
+            "answer": 0.3461,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "CapChange",
+                "InsChange",
+                "InsSclInScen",
+                "CapInScen"
+            ]
+        },
+        {
+            "id": 159,
+            "evidences": [
+                "The change in capping is little.",
+                "The change in instability is little.",
+                "The scenario has less instability."
+            ],
+            "query": "What is the likelihood that the capping within the scenario is less than average?",
+            "answer": 0.3461,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "CapChange",
+                "InsChange",
+                "InsSclInScen",
+                "CapInScen"
+            ]
+        },
+        {
+            "id": 160,
+            "evidences": [
+                "The change in capping is little.",
+                "The change in instability is little.",
+                "The scaling of instability within the scenario is average."
+            ],
+            "query": "What is the likelihood that the capping within the scenario is more than average?",
+            "answer": 0.0,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "CapChange",
+                "InsChange",
+                "InsSclInScen",
+                "CapInScen"
+            ]
+        },
+        {
+            "id": 161,
+            "evidences": [
+                "The change in capping is little.",
+                "The change in instability is little.",
+                "The scenario has more instability."
+            ],
+            "query": "What is the likelihood that the capping within the scenario is average?",
+            "answer": 0.4156,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "CapChange",
+                "InsChange",
+                "InsSclInScen",
+                "CapInScen"
+            ]
+        },
+        {
+            "id": 162,
+            "evidences": [
+                "The change in capping is little.",
+                "The instability change is increasing.",
+                "The instability scaling within the scenario is less unstable."
+            ],
+            "query": "What is the likelihood that the capping within the scenario is less than average?",
+            "answer": 0.3461,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "CapChange",
+                "InsChange",
+                "InsSclInScen",
+                "CapInScen"
+            ]
+        },
+        {
+            "id": 163,
+            "evidences": [
+                "The change in capping is little.",
+                "The instability change is increasing.",
+                "The instability scaling within the scenario is average."
+            ],
+            "query": "What is the likelihood that the capping within the scenario is less than average?",
+            "answer": 0.3461,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "CapChange",
+                "InsChange",
+                "InsSclInScen",
+                "CapInScen"
+            ]
+        },
+        {
+            "id": 164,
+            "evidences": [
+                "The change in capping is little.",
+                "The instability change is increasing.",
+                "The instability scaling within the scenario is more unstable."
+            ],
+            "query": "What is the likelihood that the capping within the scenario is average?",
+            "answer": 0.4156,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "CapChange",
+                "InsChange",
+                "InsSclInScen",
+                "CapInScen"
+            ]
+        },
+        {
+            "id": 165,
+            "evidences": [
+                "The capping change is increasing.",
+                "The instability change is decreasing.",
+                "The instability scaling within the scenario is less unstable."
+            ],
+            "query": "What is the likelihood that the capping within the scenario is less than average?",
+            "answer": 0.119,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "CapChange",
+                "InsChange",
+                "InsSclInScen",
+                "CapInScen"
+            ]
+        },
+        {
+            "id": 166,
+            "evidences": [
+                "The capping change is increasing.",
+                "The instability change is decreasing.",
+                "The instability scaling within the scenario is average."
+            ],
+            "query": "What is the likelihood that the capping within the scenario is average?",
+            "answer": 0.2265,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "CapChange",
+                "InsChange",
+                "InsSclInScen",
+                "CapInScen"
+            ]
+        },
+        {
+            "id": 167,
+            "evidences": [
+                "The capping change is increasing.",
+                "The instability change is decreasing.",
+                "The instability scaling within the scenario is more unstable."
+            ],
+            "query": "What is the likelihood that the capping within the scenario is greater than average?",
+            "answer": 0.0,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "CapChange",
+                "InsChange",
+                "InsSclInScen",
+                "CapInScen"
+            ]
+        },
+        {
+            "id": 168,
+            "evidences": [
+                "The capping change is increasing.",
+                "The instability change is little changed.",
+                "The instability scaling within the scenario is less unstable."
+            ],
+            "query": "What is the likelihood that the capping within the scenario is less than average?",
+            "answer": 0.119,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "CapChange",
+                "InsChange",
+                "InsSclInScen",
+                "CapInScen"
+            ]
+        },
+        {
+            "id": 169,
+            "evidences": [
+                "The capping change is increasing.",
+                "The instability change is little changed.",
+                "The instability scaling within the scenario is average."
+            ],
+            "query": "What is the likelihood that the capping within the scenario is more than average?",
+            "answer": 0.0,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "CapChange",
+                "InsChange",
+                "InsSclInScen",
+                "CapInScen"
+            ]
+        },
+        {
+            "id": 170,
+            "evidences": [
+                "The capping change is increasing.",
+                "The instability change is little changed.",
+                "The instability scaling within the scenario is more unstable."
+            ],
+            "query": "What is the likelihood that the capping within the scenario is less than average?",
+            "answer": 0.119,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "CapChange",
+                "InsChange",
+                "InsSclInScen",
+                "CapInScen"
+            ]
+        },
+        {
+            "id": 171,
+            "evidences": [
+                "The capping change is increasing.",
+                "The instability change is increasing.",
+                "The instability scaling within the scenario is less unstable."
+            ],
+            "query": "What is the likelihood that the capping within the scenario is less than average?",
+            "answer": 0.119,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "CapChange",
+                "InsChange",
+                "InsSclInScen",
+                "CapInScen"
+            ]
+        },
+        {
+            "id": 172,
+            "evidences": [
+                "The capping change is increasing.",
+                "The instability change is increasing.",
+                "The instability scaling within the scenario is average."
+            ],
+            "query": "What is the likelihood that the capping within the scenario is more than average?",
+            "answer": 0.0,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "CapChange",
+                "InsChange",
+                "InsSclInScen",
+                "CapInScen"
+            ]
+        },
+        {
+            "id": 173,
+            "evidences": [
+                "The capping change is increasing.",
+                "The instability change is increasing.",
+                "The instability scaling within the scenario is more unstable."
+            ],
+            "query": "What is the likelihood that the capping within the scenario is less than average?",
+            "answer": 0.119,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "CapChange",
+                "InsChange",
+                "InsSclInScen",
+                "CapInScen"
+            ]
+        },
+        {
+            "id": 174,
+            "evidences": [
+                "The capping change is decreasing."
+            ],
+            "query": "What is the likelihood that the instability scaling within the scenario is more unstable?",
+            "answer": 0.3132155,
+            "reasoning_types": [],
+            "sampled_nodes": [
+                "CapChange",
+                "InsSclInScen"
+            ]
+        },
+        {
+            "id": 175,
+            "evidences": [
+                "The change in capping is little."
+            ],
+            "query": "What is the likelihood of the insurance scaling within the scenario being average?",
+            "answer": 0.2665452,
+            "reasoning_types": [],
+            "sampled_nodes": [
+                "CapChange",
+                "InsSclInScen"
+            ]
+        },
+        {
+            "id": 176,
+            "evidences": [
+                "The capping change is increasing."
+            ],
+            "query": "What is the likelihood that the instability scaling within the scenario is average?",
+            "answer": 0.2642905,
+            "reasoning_types": [],
+            "sampled_nodes": [
+                "CapChange",
+                "InsSclInScen"
+            ]
+        },
+        {
+            "id": 177,
+            "evidences": [
+                "The change in insurance is decreasing."
+            ],
+            "query": "What is the likelihood of the insurance scenario being less unstable (InsSclInScen = LessUnstable)?",
+            "answer": 0.613,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "InsChange",
+                "InsSclInScen"
+            ]
+        },
+        {
+            "id": 178,
+            "evidences": [
+                "The change in instability is little."
+            ],
+            "query": "The instability scaling within the scenario is less unstable.",
+            "answer": 0.3465,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "InsChange",
+                "InsSclInScen"
+            ]
+        },
+        {
+            "id": 179,
+            "evidences": [
+                "The change in instability is increasing."
+            ],
+            "query": "The instability scaling within the scenario is more unstable.",
+            "answer": 0.6205,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "InsChange",
+                "InsSclInScen"
+            ]
+        },
+        {
+            "id": 180,
+            "evidences": [
+                "The capping within the scenario is less than average."
+            ],
+            "query": "What is the likelihood that the instability scaling within the scenario is average?",
+            "answer": 0.26595933,
+            "reasoning_types": [],
+            "sampled_nodes": [
+                "CapInScen",
+                "InsSclInScen"
+            ]
+        },
+        {
+            "id": 181,
+            "evidences": [
+                "The capping within the scenario is average."
+            ],
+            "query": "What is the likelihood that the instability scaling within the scenario is more unstable?",
+            "answer": 0.38042706,
+            "reasoning_types": [],
+            "sampled_nodes": [
+                "CapInScen",
+                "InsSclInScen"
+            ]
+        },
+        {
+            "id": 182,
+            "evidences": [
+                "The capping change is decreasing.",
+                "The instability change is decreasing."
+            ],
+            "query": "The instability scaling within the scenario is average.",
+            "answer": 0.251,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "CapChange",
+                "InsChange",
+                "InsSclInScen"
+            ]
+        },
+        {
+            "id": 183,
+            "evidences": [
+                "The capping change is decreasing.",
+                "The instability change is experiencing little change."
+            ],
+            "query": "The instability scaling within the scenario is average.",
+            "answer": 0.298,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "CapChange",
+                "InsChange",
+                "InsSclInScen"
+            ]
+        },
+        {
+            "id": 184,
+            "evidences": [
+                "The capping change is decreasing.",
+                "The instability change is increasing."
+            ],
+            "query": "What is the likelihood that the instability scaling within the scenario is more unstable?",
+            "answer": 0.6205,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "CapChange",
+                "InsChange",
+                "InsSclInScen"
+            ]
+        },
+        {
+            "id": 185,
+            "evidences": [
+                "The change in capping is little.",
+                "Instability change is decreasing."
+            ],
+            "query": "What is the likelihood that the instability scaling within the scenario is average?",
+            "answer": 0.251,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "CapChange",
+                "InsChange",
+                "InsSclInScen"
+            ]
+        },
+        {
+            "id": 186,
+            "evidences": [
+                "The change in capping is little.",
+                "The change in instability is little."
+            ],
+            "query": "What is the likelihood that the scenario is less unstable?",
+            "answer": 0.3465,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "CapChange",
+                "InsChange",
+                "InsSclInScen"
+            ]
+        },
+        {
+            "id": 187,
+            "evidences": [
+                "The change in capping is little.",
+                "The instability change is increasing."
+            ],
+            "query": "What is the likelihood that the instability scaling within the scenario is more unstable?",
+            "answer": 0.6205,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "CapChange",
+                "InsChange",
+                "InsSclInScen"
+            ]
+        },
+        {
+            "id": 188,
+            "evidences": [
+                "The capping change is increasing.",
+                "The instability change is decreasing."
+            ],
+            "query": "What is the likelihood that the instability scaling within the scenario is more unstable given that the instability change is decreasing?",
+            "answer": 0.136,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "CapChange",
+                "InsChange",
+                "InsSclInScen"
+            ]
+        },
+        {
+            "id": 189,
+            "evidences": [
+                "The capping change is increasing.",
+                "The instability change is little changed."
+            ],
+            "query": "What is the likelihood that the instability scaling within the scenario is average?",
+            "answer": 0.298,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "CapChange",
+                "InsChange",
+                "InsSclInScen"
+            ]
+        },
+        {
+            "id": 190,
+            "evidences": [
+                "The capping change is increasing.",
+                "The instability change is increasing."
+            ],
+            "query": "What is the likelihood that the instability scaling within the scenario is more unstable?",
+            "answer": 0.6205,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "CapChange",
+                "InsChange",
+                "InsSclInScen"
+            ]
+        },
+        {
+            "id": 191,
+            "evidences": [
+                "The capping change is decreasing.",
+                "The capping within the scenario is less than average."
+            ],
+            "query": "The instability scaling within the scenario is less unstable.",
+            "answer": 0.4207885,
+            "reasoning_types": [],
+            "sampled_nodes": [
+                "CapChange",
+                "CapInScen",
+                "InsSclInScen"
+            ]
+        },
+        {
+            "id": 192,
+            "evidences": [
+                "The capping change is decreasing.",
+                "The capping within the scenario is average."
+            ],
+            "query": "The instability scaling within the scenario is more unstable.",
+            "answer": 0.3132155,
+            "reasoning_types": [],
+            "sampled_nodes": [
+                "CapChange",
+                "CapInScen",
+                "InsSclInScen"
+            ]
+        },
+        {
+            "id": 193,
+            "evidences": [
+                "The change in capping is little.",
+                "The capping within the scenario is less than average."
+            ],
+            "query": "What is the likelihood that the instability scaling within the scenario is more unstable?",
+            "answer": 0.367668,
+            "reasoning_types": [],
+            "sampled_nodes": [
+                "CapChange",
+                "CapInScen",
+                "InsSclInScen"
+            ]
+        },
+        {
+            "id": 194,
+            "evidences": [
+                "The change in capping is little.",
+                "The capping within the scenario is average."
+            ],
+            "query": "What is the likelihood that the instability scaling within the scenario is less unstable?",
+            "answer": 0.3657868,
+            "reasoning_types": [],
+            "sampled_nodes": [
+                "CapChange",
+                "CapInScen",
+                "InsSclInScen"
+            ]
+        },
+        {
+            "id": 195,
+            "evidences": [
+                "The capping change is increasing.",
+                "The capping within the scenario is average."
+            ],
+            "query": "What is the likelihood that the instability scaling within the scenario is average?",
+            "answer": 0.2642905,
+            "reasoning_types": [],
+            "sampled_nodes": [
+                "CapChange",
+                "CapInScen",
+                "InsSclInScen"
+            ]
+        },
+        {
+            "id": 196,
+            "evidences": [
+                "The change in insurance is decreasing.",
+                "The capping within the scenario is less than average."
+            ],
+            "query": "The instability scaling within the scenario is more unstable.",
+            "answer": 0.136,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "InsChange",
+                "CapInScen",
+                "InsSclInScen"
+            ]
+        },
+        {
+            "id": 197,
+            "evidences": [
+                "The change in insurance is decreasing.",
+                "The capping within the scenario is average."
+            ],
+            "query": "What is the likelihood of the insurance scaling within the scenario being less unstable?",
+            "answer": 0.613,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "InsChange",
+                "CapInScen",
+                "InsSclInScen"
+            ]
+        },
+        {
+            "id": 198,
+            "evidences": [
+                "The change in instability is little.",
+                "The capping within the scenario is less than average."
+            ],
+            "query": "What is the likelihood of the insurance scaling within the scenario being average?",
+            "answer": 0.298,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "InsChange",
+                "CapInScen",
+                "InsSclInScen"
+            ]
+        },
+        {
+            "id": 199,
+            "evidences": [
+                "The change in instability is little.",
+                "The capping within the scenario is average."
+            ],
+            "query": "What is the likelihood of the instability scaling within the scenario being more unstable?",
+            "answer": 0.3555,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "InsChange",
+                "CapInScen",
+                "InsSclInScen"
+            ]
+        },
+        {
+            "id": 200,
+            "evidences": [
+                "The change in instability is increasing.",
+                "The capping within the scenario is less than average."
+            ],
+            "query": "What is the likelihood that the instability scaling within the scenario is average?",
+            "answer": 0.2475,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "InsChange",
+                "CapInScen",
+                "InsSclInScen"
+            ]
+        },
+        {
+            "id": 201,
+            "evidences": [
+                "The change in instability is increasing.",
+                "The capping within the scenario is average."
+            ],
+            "query": "What is the likelihood that the instability scaling within the scenario is more unstable?",
+            "answer": 0.6205,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "InsChange",
+                "CapInScen",
+                "InsSclInScen"
+            ]
+        },
+        {
+            "id": 202,
+            "evidences": [
+                "The capping change is decreasing.",
+                "The instability change is decreasing.",
+                "The capping within the scenario is less than average."
+            ],
+            "query": "The instability scaling within the scenario is average.",
+            "answer": 0.251,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "CapChange",
+                "InsChange",
+                "CapInScen",
+                "InsSclInScen"
+            ]
+        },
+        {
+            "id": 203,
+            "evidences": [
+                "The capping change is decreasing.",
+                "The instability change is decreasing.",
+                "The capping within the scenario is average."
+            ],
+            "query": "What is the likelihood that the instability scaling within the scenario is less unstable?",
+            "answer": 0.613,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "CapChange",
+                "InsChange",
+                "CapInScen",
+                "InsSclInScen"
+            ]
+        },
+        {
+            "id": 204,
+            "evidences": [
+                "The capping change is decreasing.",
+                "The instability change is experiencing little change.",
+                "The capping within the scenario is less than average."
+            ],
+            "query": "The instability scaling within the scenario is less unstable.",
+            "answer": 0.3465,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "CapChange",
+                "InsChange",
+                "CapInScen",
+                "InsSclInScen"
+            ]
+        },
+        {
+            "id": 205,
+            "evidences": [
+                "The capping change is decreasing.",
+                "The instability change is experiencing little change.",
+                "The capping within the scenario is average."
+            ],
+            "query": "The instability scaling within the scenario is less unstable.",
+            "answer": 0.3465,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "CapChange",
+                "InsChange",
+                "CapInScen",
+                "InsSclInScen"
+            ]
+        },
+        {
+            "id": 206,
+            "evidences": [
+                "The capping change is decreasing.",
+                "The instability change is increasing.",
+                "The capping within the scenario is less than average."
+            ],
+            "query": "What is the likelihood that the instability scaling within the scenario is more unstable?",
+            "answer": 0.6205,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "CapChange",
+                "InsChange",
+                "CapInScen",
+                "InsSclInScen"
+            ]
+        },
+        {
+            "id": 207,
+            "evidences": [
+                "The capping change is decreasing.",
+                "The instability change is increasing.",
+                "The capping within the scenario is average."
+            ],
+            "query": "What is the likelihood that the instability scaling within the scenario is more unstable?",
+            "answer": 0.6205,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "CapChange",
+                "InsChange",
+                "CapInScen",
+                "InsSclInScen"
+            ]
+        },
+        {
+            "id": 208,
+            "evidences": [
+                "The change in capping is little.",
+                "Instability change is decreasing.",
+                "Capping within the scenario is less than average."
+            ],
+            "query": "What is the likelihood that the instability scaling within the scenario is less unstable?",
+            "answer": 0.613,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "CapChange",
+                "InsChange",
+                "CapInScen",
+                "InsSclInScen"
+            ]
+        },
+        {
+            "id": 209,
+            "evidences": [
+                "The change in capping is little.",
+                "Instability change is decreasing.",
+                "The capping within the scenario is average."
+            ],
+            "query": "What is the likelihood that the instability scaling within the scenario is more unstable?",
+            "answer": 0.136,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "CapChange",
+                "InsChange",
+                "CapInScen",
+                "InsSclInScen"
+            ]
+        },
+        {
+            "id": 210,
+            "evidences": [
+                "The change in capping is little.",
+                "The change in instability is little.",
+                "Within the scenario, the capping is less than average."
+            ],
+            "query": "What is the likelihood that the instability scaling within the scenario is average?",
+            "answer": 0.298,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "CapChange",
+                "InsChange",
+                "CapInScen",
+                "InsSclInScen"
+            ]
+        },
+        {
+            "id": 211,
+            "evidences": [
+                "The change in capping is little.",
+                "The change in instability is little.",
+                "The capping within the scenario is average."
+            ],
+            "query": "What is the likelihood that the instability scaling within the scenario is less unstable?",
+            "answer": 0.3465,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "CapChange",
+                "InsChange",
+                "CapInScen",
+                "InsSclInScen"
+            ]
+        },
+        {
+            "id": 212,
+            "evidences": [
+                "The change in capping is little.",
+                "The instability change is increasing.",
+                "The capping within the scenario is less than average."
+            ],
+            "query": "What is the likelihood that the instability scaling within the scenario is more unstable?",
+            "answer": 0.6205,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "CapChange",
+                "InsChange",
+                "CapInScen",
+                "InsSclInScen"
+            ]
+        },
+        {
+            "id": 213,
+            "evidences": [
+                "The change in capping is little.",
+                "The instability change is increasing.",
+                "The capping within the scenario is average."
+            ],
+            "query": "What is the likelihood that the instability scaling within the scenario is less unstable?",
+            "answer": 0.132,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "CapChange",
+                "InsChange",
+                "CapInScen",
+                "InsSclInScen"
+            ]
+        },
+        {
+            "id": 214,
+            "evidences": [
+                "The capping change is increasing.",
+                "The instability change is decreasing.",
+                "The capping within the scenario is less than average."
+            ],
+            "query": "What is the likelihood that the instability scaling within the scenario is average?",
+            "answer": 0.251,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "CapChange",
+                "InsChange",
+                "CapInScen",
+                "InsSclInScen"
+            ]
+        },
+        {
+            "id": 215,
+            "evidences": [
+                "The capping change is increasing.",
+                "The instability change is decreasing.",
+                "The capping within the scenario is average."
+            ],
+            "query": "What is the likelihood that the instability scaling within the scenario is less unstable?",
+            "answer": 0.613,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "CapChange",
+                "InsChange",
+                "CapInScen",
+                "InsSclInScen"
+            ]
+        }
+    ]
+}

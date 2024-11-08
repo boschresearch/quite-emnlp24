@@ -1,0 +1,1190 @@
+{
+    "nodes": [
+        {
+            "name": "caduceus",
+            "states": [
+                "Caducous",
+                "Non-caducious"
+            ]
+        },
+        {
+            "name": "aplerotic_plerotic",
+            "states": [
+                "Aplerotic",
+                "Both",
+                "Plerotic"
+            ]
+        },
+        {
+            "name": "nat_eco",
+            "states": [
+                "No",
+                "Yes"
+            ]
+        },
+        {
+            "name": "stem_cank",
+            "states": [
+                "No",
+                "Yes"
+            ]
+        },
+        {
+            "name": "Invasiv_score_BH",
+            "states": [
+                "Very low",
+                "Low",
+                "Moderate",
+                "High",
+                "Very high"
+            ]
+        },
+        {
+            "name": "temp_opt",
+            "states": [
+                "< 20",
+                "20 to 25",
+                "25",
+                "25 to 28",
+                ">= 28"
+            ]
+        }
+    ],
+    "connectivity": [
+        {
+            "node": "Invasiv_score_BH",
+            "incoming": []
+        },
+        {
+            "node": "temp_opt",
+            "incoming": []
+        },
+        {
+            "node": "caduceus",
+            "incoming": [
+                "Invasiv_score_BH",
+                "temp_opt"
+            ]
+        },
+        {
+            "node": "aplerotic_plerotic",
+            "incoming": [
+                "Invasiv_score_BH",
+                "temp_opt"
+            ]
+        },
+        {
+            "node": "nat_eco",
+            "incoming": [
+                "Invasiv_score_BH",
+                "temp_opt"
+            ]
+        },
+        {
+            "node": "stem_cank",
+            "incoming": [
+                "Invasiv_score_BH",
+                "nat_eco"
+            ]
+        }
+    ],
+    "numeric_premises": [
+        {
+            "id": 0,
+            "origin": "Invasiv_score_BH",
+            "content": "The probability of a Phytophthora species having a very low invasive score (BH) is 21%, low is 19%, moderate is also 19%, high is 18%, and very high is 21%."
+        },
+        {
+            "id": 1,
+            "origin": "temp_opt",
+            "content": "There is an 18.5% chance that the optimal temperature range for the growth of a Phytophthora species is below 20 degrees, a 27% chance it's between 20 and 25 degrees, a 20.7% chance it's exactly 25 degrees, 11.9% it's between 25 and 28 degrees, and a 19.7% chance it's 28 degrees or higher."
+        },
+        {
+            "id": 2,
+            "origin": "aplerotic_plerotic",
+            "content": "In a Phytophthora species with a very low invasive score (invasiv_score_BH) and an optimal growth temperature below 20 degrees, it is certain that the species is partially invasive (both aplerotic and plerotic) in terms of its aplerotic-plerotic degree of invasiveness, without a chance of being only either aplerotic or plerotic."
+        },
+        {
+            "id": 3,
+            "origin": "aplerotic_plerotic",
+            "content": "With a very low invasive score and an optimal growth temperature between 20 and 25 degrees for the Phytophthora species, there is a probability of 18% that the species is non-invasive (Aplerotic), 36% chance that it is partially invasive (Both), and a 45% likelihood that it is fully invasive (Plerotic)."
+        },
+        {
+            "id": 4,
+            "origin": "aplerotic_plerotic",
+            "content": "If the Phytophthora species has a very low invasive score and an optimal growth temperature of exactly 25 degrees, then the species has an equal probability of being non-invasive (Aplerotic), partially invasive (Both), and fully invasive (Plerotic) with a 33.33% chance for each category."
+        },
+        {
+            "id": 5,
+            "origin": "aplerotic_plerotic",
+            "content": "Given a very low invasive score for the Phytophthora species and an optimal growth temperature between 25 and 28 degrees, the probability of the species being non-invasive (Aplerotic) or partially invasive (Both) is equal at 50%, while there is no chance of the species being fully invasive (Plerotic) with a probability of 0%."
+        },
+        {
+            "id": 6,
+            "origin": "aplerotic_plerotic",
+            "content": "In the case where the Phytophthora species has a very low invasive score and an optimal growth temperature of 28 degrees or higher, the probability of the species being non-invasive (Aplerotic) is 67%, while there is no chance of the species being partially invasive (Both) with a probability of 0%. The likelihood of the species being fully invasive (Plerotic) is 33%."
+        },
+        {
+            "id": 7,
+            "origin": "aplerotic_plerotic",
+            "content": "If the Phytophthora species has a low invasive score and an optimal growth temperature below 20 degrees, the probability of the species being non-invasive (Aplerotic) is 57%, while the likelihood of the species being partially invasive (Both) is 29%. The probability of the species being fully invasive (Plerotic) is 14%."
+        },
+        {
+            "id": 8,
+            "origin": "aplerotic_plerotic",
+            "content": "In the case where the Phytophthora species has a low invasive score and an optimal growth temperature between 20 and 25 degrees, the probability of the species being non-invasive (Aplerotic) is 0%. The likelihood of the species being partially invasive (Both) or fully invasive (Plerotic) is equal at 50%."
+        },
+        {
+            "id": 9,
+            "origin": "aplerotic_plerotic",
+            "content": "If the Phytophthora species has a low invasive score and an optimal growth temperature of 25 degrees, the probability of the species being non-invasive (Aplerotic) is 67%, while the likelihood of the species being partially invasive (Both) is 33%. The probability of the species being fully invasive (Plerotic) is 0%."
+        },
+        {
+            "id": 10,
+            "origin": "aplerotic_plerotic",
+            "content": "In the case where the Phytophthora species has a low invasive score and an optimal growth temperature between 25 and 28 degrees, the probability of the species being non-invasive (Aplerotic) or partially invasive (Both) is 0%. The likelihood of the species being fully invasive (Plerotic) is 100%."
+        },
+        {
+            "id": 11,
+            "origin": "aplerotic_plerotic",
+            "content": "If the Phytophthora species has a low invasive score and an optimal growth temperature of 28 degrees or higher, the probability of the species being non-invasive (Aplerotic) is 33%, while the likelihood of the species being partially invasive (Both) or fully invasive (Plerotic) is equal at 33%."
+        },
+        {
+            "id": 12,
+            "origin": "aplerotic_plerotic",
+            "content": "When the Phytophthora species has a moderate invasive score and an optimal growth temperature below 20 degrees, the probability of the species being non-invasive (Aplerotic) is 20%, while the likelihood of the species being fully invasive (Plerotic) is 80%. The probability of the species being partially invasive (Both) is 0%."
+        },
+        {
+            "id": 13,
+            "origin": "aplerotic_plerotic",
+            "content": "If the Phytophthora species has a moderate invasive score and an optimal growth temperature between 20 and 25 degrees, the probability of the species being non-invasive (Aplerotic) is 33%, while the likelihood of the species being partially invasive (Both) is 67%. The probability of the species being fully invasive (Plerotic) is 0%."
+        },
+        {
+            "id": 14,
+            "origin": "aplerotic_plerotic",
+            "content": "When the Phytophthora species has a moderate invasive score and an optimal growth temperature of exactly 25 degrees, the probability of the species being non-invasive (Aplerotic) is 40%, while the likelihood of the species being partially invasive (Both) or fully invasive (Plerotic) is at 20% and 40%, respectively."
+        },
+        {
+            "id": 15,
+            "origin": "aplerotic_plerotic",
+            "content": "If the Phytophthora species has a moderate invasive score and an optimal growth temperature between 25 and 28 degrees, the probability of the species being non-invasive (Aplerotic) or fully invasive (Plerotic) is 0%, while the likelihood of the species being partially invasive (Both) is 100%."
+        },
+        {
+            "id": 16,
+            "origin": "aplerotic_plerotic",
+            "content": "When the Phytophthora species has a moderate invasive score and an optimal growth temperature of 28 degrees or higher, the probability of the species being non-invasive (Aplerotic) is 75%, while the likelihood of the species being partially invasive (Both) is 25%. The probability of the species being fully invasive (Plerotic) is 0%."
+        },
+        {
+            "id": 17,
+            "origin": "aplerotic_plerotic",
+            "content": "If the Phytophthora species has a high invasive score and an optimal growth temperature below 20 degrees, the probability of the species being non-invasive (Aplerotic) or fully invasive (Plerotic) is 0%, while the likelihood of the species being partially invasive (Both) is 100%."
+        },
+        {
+            "id": 18,
+            "origin": "aplerotic_plerotic",
+            "content": "When the Phytophthora species has a high invasive score and an optimal growth temperature between 20 and 25 degrees, the probability of the species being non-invasive (Aplerotic) is 20%, while the likelihood of the species being partially invasive (Both) is also 20%. The probability of the species being fully invasive (Plerotic) is 60%."
+        },
+        {
+            "id": 19,
+            "origin": "aplerotic_plerotic",
+            "content": "If the Phytophthora species has a high invasive score and an optimal growth temperature of exactly 25 degrees, the probability of the species being non-invasive (Aplerotic) is 29%, while the likelihood of the species being partially invasive (Both) is 29% too. The probability of the species being fully invasive (Plerotic) is 43%."
+        },
+        {
+            "id": 20,
+            "origin": "aplerotic_plerotic",
+            "content": "When the Phytophthora species has a high invasive score and an optimal growth temperature between 25 and 28 degrees, the probability of the species being non-invasive (Aplerotic) is 50%, while the likelihood of the species being partially invasive (Both) is also 50%. The probability of the species being fully invasive (Plerotic) is 0%."
+        },
+        {
+            "id": 21,
+            "origin": "aplerotic_plerotic",
+            "content": "If the Phytophthora species has a high invasive score and an optimal growth temperature of 28 degrees or higher, the probability of the species being non-invasive (Aplerotic) is 0%. The likelihood of the species being partially invasive (Both) is 50%, and the probability of the species being fully invasive (Plerotic) is also 50%."
+        },
+        {
+            "id": 22,
+            "origin": "aplerotic_plerotic",
+            "content": "If the Phytophthora species has a very high invasive score and an optimal growth temperature below 20 degrees, the probability of the species being non-invasive (Aplerotic) is 0%. The likelihood of the species being partially invasive (Both) is 50%, and the probability of the species being fully invasive (Plerotic) is also 50%."
+        },
+        {
+            "id": 23,
+            "origin": "aplerotic_plerotic",
+            "content": "When the Phytophthora species has a very high invasive score and an optimal growth temperature between 20 and 25 degrees, the probability of the species being non-invasive (Aplerotic) is 0%. The likelihood of the species being partially invasive (Both) is 25%, and the probability of the species being fully invasive (Plerotic) is 75%."
+        },
+        {
+            "id": 24,
+            "origin": "aplerotic_plerotic",
+            "content": "If the Phytophthora species has a very high invasive score and an optimal growth temperature of exactly 25 degrees, the probability of the species being non-invasive (Aplerotic) is 17%. The likelihood of the species being partially invasive (Both) is 33%, and the probability of the species being fully invasive (Plerotic) is 50%."
+        },
+        {
+            "id": 25,
+            "origin": "aplerotic_plerotic",
+            "content": "If the Phytophthora species has a very high invasive score and an optimal growth temperature between 25 and 28 degrees, the probability of the species being non-invasive (Aplerotic) is 0%. The likelihood of the species being partially invasive (Both) is 33%, and the probability of the species being fully invasive (Plerotic) is 67%."
+        },
+        {
+            "id": 26,
+            "origin": "aplerotic_plerotic",
+            "content": "If the Phytophthora species has a very high invasive score and an optimal growth temperature of 28 degrees or higher, the probability of the species being non-invasive (Aplerotic) is 0%. The likelihood of the species being partially invasive (Both) is 40%, and the probability of the species being fully invasive (Plerotic) is 60%."
+        },
+        {
+            "id": 27,
+            "origin": "caduceus",
+            "content": "When the Phytophthora species has a very low invasive score and its optimal temperature range is below 20 degrees, there is an equal 50% probability of the species being caducous or non-caducous in shedding leaves."
+        },
+        {
+            "id": 28,
+            "origin": "caduceus",
+            "content": "With a very low invasive score and an optimal temperature range of 20 to 25 degrees for the Phytophthora species, there is an 18%% chance the species sheds leaves and an 82% likelihood that it does not shed leaves."
+        },
+        {
+            "id": 29,
+            "origin": "caduceus",
+            "content": "Given a very low invasive score and a precise temperature of 25 degrees for the Phytophthora species, there is a 0% probability of the species shedding leaves and a 100% chance it does not shed leaves."
+        },
+        {
+            "id": 30,
+            "origin": "caduceus",
+            "content": "In the case of a very low invasive score and an optimal temperature range for the Phytophthora species between 25 and 28 degrees, there is a 0% probability of the species shedding leaves and a 100% chance it does not shed leaves."
+        },
+        {
+            "id": 31,
+            "origin": "caduceus",
+            "content": "If the Phytophthora species has a very low invasive score and an optimal temperature range of 28 degrees or higher, there is a 0% probability of the species shedding leaves and a 100% chance it does not shed leaves."
+        },
+        {
+            "id": 32,
+            "origin": "caduceus",
+            "content": "When the Phytophthora species has a low invasive score and its optimal temperature range is below 20 degrees, there is a 43% chance the species sheds leaves and a 57% likelihood that it does not shed leaves."
+        },
+        {
+            "id": 33,
+            "origin": "caduceus",
+            "content": "If the Phytophthora species has a low invasive score and its optimal temperature range is between 20 and 25 degrees, there is a 25% probability of the species shedding leaves and a 75% chance it does not shed leaves."
+        },
+        {
+            "id": 34,
+            "origin": "caduceus",
+            "content": "In the case of a low invasive score and an optimal temperature range of 25 degrees for the Phytophthora species, there is a 0% probability of the species shedding leaves and a 100% chance it does not shed leaves."
+        },
+        {
+            "id": 35,
+            "origin": "caduceus",
+            "content": "If the Phytophthora species has a low invasive score and its optimal temperature range is between 25 and 28 degrees, there is a 33% probability of the species shedding leaves and a 67% chance it does not shed leaves."
+        },
+        {
+            "id": 36,
+            "origin": "caduceus",
+            "content": "In the case of a low invasive score and an optimal temperature range of 28 degrees or higher for the Phytophthora species, there is a 0% probability of the species shedding leaves and a 100% chance it does not shed leaves."
+        },
+        {
+            "id": 37,
+            "origin": "caduceus",
+            "content": "If the Phytophthora species has a moderate invasive score and its optimal temperature range is below 20 degrees, there is a 60% probability of the species shedding leaves and a 40% chance it does not shed leaves."
+        },
+        {
+            "id": 38,
+            "origin": "caduceus",
+            "content": "When the Phytophthora species has a moderate invasive score and its optimal temperature range is between 20 and 25 degrees, there is a 67% probability of the species shedding leaves and a 33% chance it does not shed leaves."
+        },
+        {
+            "id": 39,
+            "origin": "caduceus",
+            "content": "If the Phytophthora species has a moderate invasive score and its optimal temperature range is exactly 25 degrees, there is a 0% probability of the species shedding leaves and a 100% chance it does not shed leaves."
+        },
+        {
+            "id": 40,
+            "origin": "caduceus",
+            "content": "When the Phytophthora species has a moderate invasive score and its optimal temperature range is between 25 and 28 degrees, there is a 0% probability of the species shedding leaves and a 100% chance it does not shed leaves."
+        },
+        {
+            "id": 41,
+            "origin": "caduceus",
+            "content": "If the Phytophthora species has a moderate invasive score and its optimal temperature range is 28 degrees or higher, there is a 0% probability of the species shedding leaves and a 100% chance it does not shed leaves."
+        },
+        {
+            "id": 42,
+            "origin": "caduceus",
+            "content": "When the Phytophthora species has a high invasive score and its optimal temperature range is below 20 degrees, there is a 0% probability of the species shedding leaves and a 100% chance it does not shed leaves."
+        },
+        {
+            "id": 43,
+            "origin": "caduceus",
+            "content": "If the Phytophthora species has a high invasive score and its optimal temperature range is between 20 and 25 degrees, there is a 0% probability of the species shedding leaves and a 100% chance it does not shed leaves."
+        },
+        {
+            "id": 44,
+            "origin": "caduceus",
+            "content": "When the Phytophthora species has a high invasive score and its optimal temperature range is exactly 25 degrees, there is a 14% probability of the species shedding leaves and an 86% chance it does not shed leaves."
+        },
+        {
+            "id": 45,
+            "origin": "caduceus",
+            "content": "If the Phytophthora species has a high invasive score and its optimal temperature range is between 25 and 28 degrees, there is a 100% probability of the species shedding leaves and a 0% chance it does not shed leaves."
+        },
+        {
+            "id": 46,
+            "origin": "caduceus",
+            "content": "When the Phytophthora species has a high invasive score and its optimal temperature range is equal to or greater than 28 degrees, there is a 0% probability of the species shedding leaves and a 100% chance it does not shed leaves."
+        },
+        {
+            "id": 47,
+            "origin": "caduceus",
+            "content": "If the Phytophthora species has a very high invasive score and its optimal temperature range is below 20 degrees, there is a 100% probability of the species shedding leaves and a 0% chance it does not shed leaves."
+        },
+        {
+            "id": 48,
+            "origin": "caduceus",
+            "content": "When the Phytophthora species has a very high invasive score and its optimal temperature range is between 20 and 25 degrees, there is a 75% probability of the species shedding leaves and a 25% chance it does not shed leaves."
+        },
+        {
+            "id": 49,
+            "origin": "caduceus",
+            "content": "If the Phytophthora species has a very high invasive score and its optimal temperature range is exactly 25 degrees, there is a 0% probability of the species shedding leaves and a 100% chance it does not shed leaves."
+        },
+        {
+            "id": 50,
+            "origin": "caduceus",
+            "content": "When the Phytophthora species has a very high invasive score and its optimal temperature range is between 25 and 28 degrees, there is a 25% probability of the species shedding leaves and a 75% chance it does not shed leaves."
+        },
+        {
+            "id": 51,
+            "origin": "caduceus",
+            "content": "If the Phytophthora species has a very high invasive score and its optimal temperature range is equal to or greater than 28 degrees, there is a 33% probability of the species shedding leaves and a 67% chance it does not shed leaves."
+        },
+        {
+            "id": 52,
+            "origin": "nat_eco",
+            "content": "If a Phytophthora species has a very low invasive score and requires a temperature of less than 20 to grow, it is three times more likely to be found in natural ecosystems rather than not."
+        },
+        {
+            "id": 53,
+            "origin": "nat_eco",
+            "content": "With a very low invasive score and an optimal growth temperature range of 20 to 25 degrees, a Phytophthora species is 1.78 times more likely to be found in natural ecosystems than not."
+        },
+        {
+            "id": 54,
+            "origin": "nat_eco",
+            "content": "If a Phytophthora species has a very low invasive score and its optimal growth temperature is exactly 25 degrees, it will not be found in natural ecosystems."
+        },
+        {
+            "id": 55,
+            "origin": "nat_eco",
+            "content": "A Phytophthora species with a very low invasive score and an optimal growth temperature range of 25 to 28 degrees will never be found in natural ecosystems."
+        },
+        {
+            "id": 56,
+            "origin": "nat_eco",
+            "content": "If a Phytophthora species has a very low invasive score and its optimal growth temperature is 28 degrees or higher, it is three times more likely to not be found in natural ecosystems than to be found in them."
+        },
+        {
+            "id": 57,
+            "origin": "nat_eco",
+            "content": "When a Phytophthora species has a low invasive score and requires a temperature below 20 degrees to grow, it is 1.33 times more likely to not be found in natural ecosystems than to be found in them."
+        },
+        {
+            "id": 58,
+            "origin": "nat_eco",
+            "content": "If a Phytophthora species has a low invasive score and its optimal growth temperature is between 20 and 25 degrees, it is equally likely to be found in or not found in natural ecosystems."
+        },
+        {
+            "id": 59,
+            "origin": "nat_eco",
+            "content": "When a Phytophthora species has a low invasive score and its optimal growth temperature is 25 degrees, it is twice as likely to be found in natural ecosystems than not to be found in them."
+        },
+        {
+            "id": 60,
+            "origin": "nat_eco",
+            "content": "If a Phytophthora species has a low invasive score and its optimal growth temperature is between 25 and 28 degrees, it is 2 times more likely to not be found in natural ecosystems than to be found in them."
+        },
+        {
+            "id": 61,
+            "origin": "nat_eco",
+            "content": "When a Phytophthora species has a low invasive score and requires a temperature of 28 degrees or higher to grow, it is certain to not be found in natural ecosystems."
+        },
+        {
+            "id": 62,
+            "origin": "nat_eco",
+            "content": "If a Phytophthora species has a moderate invasive score and requires a temperature of less than 20 to grow, it is 1.5 times more likely to be found in natural ecosystems than not to be found in them."
+        },
+        {
+            "id": 63,
+            "origin": "nat_eco",
+            "content": "When a Phytophthora species has a moderate invasive score and its optimal growth temperature is between 20 and 25 degrees, it is 2 times more likely to not be found in natural ecosystems than to be found in them."
+        },
+        {
+            "id": 64,
+            "origin": "nat_eco",
+            "content": "If a Phytophthora species has a moderate invasive score and its optimal growth temperature is 25 degrees, it is slightly more likely to not be found in natural ecosystems than to be found in them. The probability of not being found in natural ecosystems is 0.6, while the probability of being found in natural ecosystems is 0.4."
+        },
+        {
+            "id": 65,
+            "origin": "nat_eco",
+            "content": "When a Phytophthora species has a moderate invasive score and its optimal growth temperature is between 25 and 28 degrees, it is equally likely to be found or not found in natural ecosystems. The probability of not being found in natural ecosystems is 0.5, while the probability of being found in natural ecosystems is also 0.5."
+        },
+        {
+            "id": 66,
+            "origin": "nat_eco",
+            "content": "If a Phytophthora species has a moderate invasive score and requires a temperature of 28 degrees or higher to grow, it is more likely to be found in natural ecosystems than not. The probability of being found in natural ecosystems is 0.6, while the probability of not being found in natural ecosystems is 0.4."
+        },
+        {
+            "id": 67,
+            "origin": "nat_eco",
+            "content": "If a Phytophthora species has a high invasive score and requires a temperature of less than 20 to grow, it is certain to not be found in natural ecosystems. The probability of not being found in natural ecosystems is 1.0, while the probability of being found in natural ecosystems is 0.0."
+        },
+        {
+            "id": 68,
+            "origin": "nat_eco",
+            "content": "If a Phytophthora species has a high invasive score and its optimal growth temperature is between 20 and 25 degrees, it is certain to be found in natural ecosystems. The probability of being found in natural ecosystems is 1.0, while the probability of not being found in natural ecosystems is 0.0."
+        },
+        {
+            "id": 69,
+            "origin": "nat_eco",
+            "content": "If a Phytophthora species has a high invasive score and its optimal growth temperature is 25 degrees, it is more likely to be found in natural ecosystems than not. The probability of being found in natural ecosystems is 0.57, while the probability of not being found in natural ecosystems is 0.43."
+        },
+        {
+            "id": 70,
+            "origin": "nat_eco",
+            "content": "If a Phytophthora species has a high invasive score and its optimal growth temperature is between 25 and 28 degrees, the probability of it being found in natural ecosystems is 0.5, and the probability of it not being found in natural ecosystems is also 0.5."
+        },
+        {
+            "id": 71,
+            "origin": "nat_eco",
+            "content": "If a Phytophthora species has a high invasive score and its optimal growth temperature is 28 degrees or higher, it is more likely to not be found in natural ecosystems than to be found in them. The probability of not being found in natural ecosystems is 0.67, while the probability of being found in natural ecosystems is 0.33."
+        },
+        {
+            "id": 72,
+            "origin": "nat_eco",
+            "content": "If a Phytophthora species has a very high invasive score and requires a temperature of less than 20 to grow, the probability of it being found in natural ecosystems is 0.5, and the probability of it not being found in natural ecosystems is also 0.5."
+        },
+        {
+            "id": 73,
+            "origin": "nat_eco",
+            "content": "If a Phytophthora species has a very high invasive score and its optimal growth temperature is between 20 and 25 degrees, it is more likely to be found in natural ecosystems than not. The probability of being found in natural ecosystems is 0.75, while the probability of not being found in natural ecosystems is 0.25."
+        },
+        {
+            "id": 74,
+            "origin": "nat_eco",
+            "content": "If a Phytophthora species has a very high invasive score and its optimal growth temperature is 25 degrees, it is guaranteed to be found in natural ecosystems. The probability of being found in natural ecosystems is 1.0, while the probability of not being found in natural ecosystems is 0.0."
+        },
+        {
+            "id": 75,
+            "origin": "nat_eco",
+            "content": "If a Phytophthora species has a very high invasive score and its optimal growth temperature is between 25 and 28 degrees, it is more likely to be found in natural ecosystems than not. The probability of being found in natural ecosystems is 0.75, while the probability of not being found in natural ecosystems is 0.25."
+        },
+        {
+            "id": 76,
+            "origin": "nat_eco",
+            "content": "If a Phytophthora species has a very high invasive score and its optimal growth temperature is 28 degrees or higher, the probability of it being found in natural ecosystems is 0.5, and the probability of it not being found in natural ecosystems is also 0.5."
+        },
+        {
+            "id": 77,
+            "origin": "stem_cank",
+            "content": "When the Phytophthora species has a very low invasive score and is not found in natural ecosystems, there is a 73% probability that it does not cause stem cankers and a 27% chance that it does."
+        },
+        {
+            "id": 78,
+            "origin": "stem_cank",
+            "content": "If the Phytophthora species has a very low invasive score and is found in natural ecosystems, there is a 91% probability that it does not cause stem cankers and only a 9% chance that it does."
+        },
+        {
+            "id": 79,
+            "origin": "stem_cank",
+            "content": "When the Phytophthora species has a low invasive score and is not present in natural ecosystems, there is an 83% probability that it does not cause stem cankers and a 17% chance that it does."
+        },
+        {
+            "id": 80,
+            "origin": "stem_cank",
+            "content": "If the Phytophthora species has a low invasive score and is found in natural ecosystems, there is a 50% probability that it does not cause stem cankers and a 50% chance that it does."
+        },
+        {
+            "id": 81,
+            "origin": "stem_cank",
+            "content": "When the Phytophthora species has a moderate invasive score and is not present in natural ecosystems, there is a 90% probability that it does not cause stem cankers and a 10% chance that it does."
+        },
+        {
+            "id": 82,
+            "origin": "stem_cank",
+            "content": "If the Phytophthora species has a moderate invasive score and is found in natural ecosystems, there is a 60% probability that it does not cause stem cankers and a 40% chance that it does."
+        },
+        {
+            "id": 83,
+            "origin": "stem_cank",
+            "content": "When the Phytophthora species has a high invasive score and is not present in natural ecosystems, there is an 86% probability that it does not cause stem cankers and a 14% chance that it does."
+        },
+        {
+            "id": 84,
+            "origin": "stem_cank",
+            "content": "If the Phytophthora species has a high invasive score and is found in natural ecosystems, there is a 50% probability that it does not cause stem cankers and a 50% chance that it does."
+        },
+        {
+            "id": 85,
+            "origin": "stem_cank",
+            "content": "When the Phytophthora species has a very high invasive score and is not present in natural ecosystems, there is a 67% probability that it does not cause stem cankers and a 33% chance that it does."
+        },
+        {
+            "id": 86,
+            "origin": "stem_cank",
+            "content": "If the Phytophthora species has a very high invasive score and is found in natural ecosystems, there is a 44% probability that it does not cause stem cankers and a 56% chance that it does."
+        }
+    ],
+    "wep_based_premises": [
+        {
+            "id": 0,
+            "origin": "Invasiv_score_BH",
+            "content": "It is about equally likely that a Phytophthora species has a very low, low, moderate, high, or very high invasive score (BH)."
+        },
+        {
+            "id": 1,
+            "origin": "temp_opt",
+            "content": "It is unlikely that the optimal temperature range for the growth of a Phytophthora species is below 20 degrees, it is probably not the case that it is between 20 and 25 degrees, unlikely that it is exactly 25 degrees, improbable that it is between 25 and 28 degrees, and also unlikely that it is 28 degrees or higher. However, it is still most likely that it is between 20 and 25 degrees."
+        },
+        {
+            "id": 2,
+            "origin": "aplerotic_plerotic",
+            "content": "If the invasive score of a Phytophthora species is very low and its optimal temperature range is below 20 degrees, then it is impossible for the species to be only either aplerotic or plerotic, and it is certain that the species is partially invasive (both aplerotic and plerotic)."
+        },
+        {
+            "id": 3,
+            "origin": "aplerotic_plerotic",
+            "content": "If the invasive score of a Phytophthora species is very low and its optimal temperature range is between 20 and 25 degrees, then it is unlikely for the species to be aplerotic, it is probably not both aplerotic and plerotic at the same time, and there is an even chance that the species is fully invasive (plerotic)."
+        },
+        {
+            "id": 4,
+            "origin": "aplerotic_plerotic",
+            "content": "If the invasive score of a Phytophthora species is very low and its optimal temperature range is exactly 25 degrees, then it is equally likely to be aplerotic, partially invasive (both aplerotic and plerotic), or fully invasive (plerotic)."
+        },
+        {
+            "id": 5,
+            "origin": "aplerotic_plerotic",
+            "content": "If the invasive score of a Phytophthora species is very low and its optimal temperature range is between 25 and 28 degrees, then it is approximately evenly likely for the species to be aplerotic or partially invasive (both aplerotic and plerotic), and it is not possible for the species to be fully invasive (plerotic)."
+        },
+        {
+            "id": 6,
+            "origin": "aplerotic_plerotic",
+            "content": "If the invasive score of a Phytophthora species is very low and its optimal temperature range is about 28 degrees, then it is likely for the species to be aplerotic, whereas it is probably not plerotic and it is impossible for it to be both plerotic and aplerotic."
+        },
+        {
+            "id": 7,
+            "origin": "aplerotic_plerotic",
+            "content": "If the invasive score of a Phytophthora species is low and its optimal temperature range is below 20 degrees, then there is a better than even chance for the species to be aplerotic. It is probably not both aplerotic and plerotic, and chances are slight that the species is fully invasive (plerotic)."
+        },
+        {
+            "id": 8,
+            "origin": "aplerotic_plerotic",
+            "content": "If the invasive score of a Phytophthora species is low and its optimal temperature range is between 20 and 25 degrees, then it is impossible for the species to be aplerotic, it is about even chances for the species to be plerotic and aplerotic at the same time or plerotic only."
+        },
+        {
+            "id": 9,
+            "origin": "aplerotic_plerotic",
+            "content": "If the invasive score of a Phytophthora species is low and its optimal temperature range is precisely 25 degrees, then it is likely for the species to be aplerotic. It is probably not both aplerotic and plerotic, and it is impossible for the species to be fully invasive (plerotic)."
+        },
+        {
+            "id": 10,
+            "origin": "aplerotic_plerotic",
+            "content": "If the invasive score of a Phytophthora species is low and its optimal temperature range is between 25 and 28 degrees, then it is impossible for the species to be aplerotic or plerotic and aplerotic at the same time, and it is certain for the species to plerotic only."
+        },
+        {
+            "id": 11,
+            "origin": "aplerotic_plerotic",
+            "content": "If the invasive score of a Phytophthora species is low and its optimal temperature range is greater than or equal to 28 degrees, then it is equally likely to be aplerotic, partially invasive (both aplerotic and plerotic), or fully invasive (plerotic)."
+        },
+        {
+            "id": 12,
+            "origin": "aplerotic_plerotic",
+            "content": "If the invasive score of a Phytophthora species is moderate and its optimal temperature range is below 20 degrees, then it is unlikely for the species to be aplerotic, it is impossible for the species to be partially invasive (both aplerotic and plerotic), and it is very likely that the species is fully invasive (plerotic)."
+        },
+        {
+            "id": 13,
+            "origin": "aplerotic_plerotic",
+            "content": "If the invasive score of a Phytophthora species is moderately high and its optimal temperature range is between 20 and 25 degrees, then it is probably not aplerotic, whereas it is probable that the species is partially invasive (both aplerotic and plerotic), and it is impossible for the species to be fully invasive (plerotic)."
+        },
+        {
+            "id": 14,
+            "origin": "aplerotic_plerotic",
+            "content": "If the invasive score of a Phytophthora species is moderately high, and its optimal temperature range is exactly 25 degrees Celsius, then it is about even chance for the species to be either aplerotic or plerotic, whereas it is unlikely for the species to be partially invasive (both aplerotic and plerotic)."
+        },
+        {
+            "id": 15,
+            "origin": "aplerotic_plerotic",
+            "content": "If the invasive score of a Phytophthora species is moderately high, and its optimal temperature range is between 25 and 28 degrees, then it is impossible for the species to be aplerotic, it is certain for the species to be partially invasive (both aplerotic and plerotic), and it is also impossible for the species to be fully invasive (plerotic)."
+        },
+        {
+            "id": 16,
+            "origin": "aplerotic_plerotic",
+            "content": "If the invasive score of a Phytophthora species is moderate and its optimal temperature range is greater than or equal to 28 degrees, then there is a very good chance for the species to be aplerotic; it is probably not partially invasive (both aplerotic and plerotic); and it is impossible for the species to be fully invasive (plerotic)."
+        },
+        {
+            "id": 17,
+            "origin": "aplerotic_plerotic",
+            "content": "If the invasive score of a Phytophthora species is high and its optimal temperature range is below 20 degrees, it is impossible for the species to be aplerotic or both aplerotic and plerotic at the same time, whereas it is certain for the species to be partially invasive (both aplerotic and plerotic)."
+        },
+        {
+            "id": 18,
+            "origin": "aplerotic_plerotic",
+            "content": "If the invasive score of a Phytophthora species is high and its optimal temperature range is between 20 and 25 degrees, then it is unlikely for the species to be aplerotic, it is also unlikely for the species to be partially invasive (both aplerotic and plerotic), and there is a better than even chance for the species to be fully invasive (plerotic)."
+        },
+        {
+            "id": 19,
+            "origin": "aplerotic_plerotic",
+            "content": "If the invasive score of a Phytophthora species is high and its optimal temperature range is precisely 25 degrees, then it is probably not aplerotic or partially invasive (both aplerotic and plerotic), whereas it is a bit more likely to be fully invasive (plerotic)."
+        },
+        {
+            "id": 20,
+            "origin": "aplerotic_plerotic",
+            "content": "If the invasive score of a Phytophthora species is high and its optimal temperature range is between 25 and 28 degrees, then there is an even chance for the species to be aplerotic or partially invasive (both aplerotic and plerotic), and it is impossible for the species to be fully invasive (plerotic)."
+        },
+        {
+            "id": 21,
+            "origin": "aplerotic_plerotic",
+            "content": "If the invasive score of a Phytophthora species is high and its optimal temperature range is greater than or equal to 28 degrees, then it is impossible for the species to be aplerotic, and there are about even chances for the species to be partially invasive (both aplerotic and plerotic) or fully invasive (plerotic)."
+        },
+        {
+            "id": 22,
+            "origin": "aplerotic_plerotic",
+            "content": "If the invasive score of a Phytophthora species is very high and its optimal temperature range is below 20 degrees, then it is impossible for the species to be aplerotic, it is equally likely for the species to be partially invasive (both aplerotic and plerotic), and it is also equally likely for the species to be fully invasive (plerotic)."
+        },
+        {
+            "id": 23,
+            "origin": "aplerotic_plerotic",
+            "content": "If the invasive score of a Phytophthora species is very high and its optimal temperature range is between 20 and 25 degrees, then it is impossible for the species to be aplerotic, it is probably not partially invasive (both aplerotic and plerotic), and it has a very good chance for being fully invasive (plerotic)."
+        },
+        {
+            "id": 24,
+            "origin": "aplerotic_plerotic",
+            "content": "If the invasive score of a Phytophthora species is very high and its optimal temperature range is precisely 25 degrees, then it is highly unlikely for the species to be aplerotic; it is probably not partially invasive (both aplerotic and plerotic); and in half of the cases it is fully invasive (plerotic)."
+        },
+        {
+            "id": 25,
+            "origin": "aplerotic_plerotic",
+            "content": "If the invasive score of a Phytophthora species is very high and its optimal temperature range is between 25 and 28 degrees, then it is impossible for the species to be aplerotic, it is probably not partially invasive (both aplerotic and plerotic), and it is likely for the species to be fully invasive (plerotic)."
+        },
+        {
+            "id": 26,
+            "origin": "aplerotic_plerotic",
+            "content": "If the invasive score of a Phytophthora species is very high and its optimal temperature range is greater than or equal to 28 degrees, then it is impossible for the species to be aplerotic, there are about even chances for the species to be partially invasive (both aplerotic and plerotic), and there is better than even chance for the species to be fully invasive (plerotic)."
+        },
+        {
+            "id": 27,
+            "origin": "caduceus",
+            "content": "If the invasive score of a Phytophthora species is very low and its optimal temperature range is up to 20 degrees, then the probability of the Phytophthora species being caducous or non-caducous is roughly even."
+        },
+        {
+            "id": 28,
+            "origin": "caduceus",
+            "content": "If the invasive score of a Phytophthora species is very low and its optimal temperature range is between 20 to 25 degrees, then the probability of the species being non-caducous is very high, while the probability of the species being caducous is low."
+        },
+        {
+            "id": 29,
+            "origin": "caduceus",
+            "content": "If the invasive score of a Phytophthora species is very low and the optimal temperature range is exactly 25 degrees, then it is certain that it is non-caducous."
+        },
+        {
+            "id": 30,
+            "origin": "caduceus",
+            "content": "If the Phytophthora species has a very low invasive score and its optimal temperature range is between 25 to 28 degrees, then it is certain that the species is non-caducous."
+        },
+        {
+            "id": 31,
+            "origin": "caduceus",
+            "content": "If the invasive score of a Phytophthora species is very low and its optimal temperature range is greater than or equal to 28 degrees, then it is certain that the species is non-caducous."
+        },
+        {
+            "id": 32,
+            "origin": "caduceus",
+            "content": "If the invasive score of a Phytophthora species is low and the optimal temperature range is below 20 degrees, then the probability of the species being non-caducous is greater than even."
+        },
+        {
+            "id": 33,
+            "origin": "caduceus",
+            "content": "If the Phytophthora species has a low invasive score and its optimal temperature range is between 20 to 25 degrees, then there is a very good chance that the species is non-caducous."
+        },
+        {
+            "id": 34,
+            "origin": "caduceus",
+            "content": "If the invasive score of a Phytophthora species is low and its optimal temperature range is exactly 25 degrees, then it is impossible that it is caducous."
+        },
+        {
+            "id": 35,
+            "origin": "caduceus",
+            "content": "If the invasive score of a Phytophthora species is low and its optimal temperature range is between 25 to 28 degrees, then it is probably non-caducous."
+        },
+        {
+            "id": 36,
+            "origin": "caduceus",
+            "content": "If the invasive score of a Phytophthora species is low and its optimal temperature range is greater than or equal to 28 degrees, then it is impossible that it is caducous."
+        },
+        {
+            "id": 37,
+            "origin": "caduceus",
+            "content": "If the Phytophthora species has a moderate invasive score and an optimal temperature range below 20 degrees, then there is a better than even chance that the species is caducous."
+        },
+        {
+            "id": 38,
+            "origin": "caduceus",
+            "content": "If the Phytophthora species has a moderate invasive score and an optimal temperature range of 20 to 25 degrees, then the species is likely caducous."
+        },
+        {
+            "id": 39,
+            "origin": "caduceus",
+            "content": "If the invasive score of a Phytophthora species is moderate and its optimal temperature range is exactly 25 degrees, then it is certain that the species is non-caducous."
+        },
+        {
+            "id": 40,
+            "origin": "caduceus",
+            "content": "If the invasive score of a Phytophthora species is moderate and its optimal temperature range is between 25 to 28 degrees, then it is impossible that the species is caducous."
+        },
+        {
+            "id": 41,
+            "origin": "caduceus",
+            "content": "If the invasive score of a Phytophthora species is moderate and its optimal temperature range is greater than or equal to 28 degrees, then the probability of the species being caducous is zero."
+        },
+        {
+            "id": 42,
+            "origin": "caduceus",
+            "content": "If the invasive score of a Phytophthora species is high, and its optimal temperature range is below 20 degrees Celsius, then the probability of the species being non-caducous is certain."
+        },
+        {
+            "id": 43,
+            "origin": "caduceus",
+            "content": "If the invasive score of a Phytophthora species is high, and its optimal temperature range is between 20 to 25 degrees, then the probability of the species being non-caducous is certain."
+        },
+        {
+            "id": 44,
+            "origin": "caduceus",
+            "content": "If the invasive score of a Phytophthora species is high and its optimal temperature range is 25 degrees, then the probability of the species being non-caducous is highly probable."
+        },
+        {
+            "id": 45,
+            "origin": "caduceus",
+            "content": "If the invasive score of a Phytophthora species is high and its optimal temperature range is between 25 to 28 degrees, then the probability of the species being caducous is certain."
+        },
+        {
+            "id": 46,
+            "origin": "caduceus",
+            "content": "If the invasive score of a Phytophthora species is high, and its optimal temperature range is greater than or equal to 28 degrees, then is impossible that the species is caducous."
+        },
+        {
+            "id": 47,
+            "origin": "caduceus",
+            "content": "If the invasive score of a Phytophthora species is very high and the optimal temperature range is below 20 degrees, then the probability of the species being caducous is certain."
+        },
+        {
+            "id": 48,
+            "origin": "caduceus",
+            "content": "If the Phytophthora species has a very high invasive score and an optimal temperature range between 20 to 25 degrees, then the probability of the species being caducous is very good."
+        },
+        {
+            "id": 49,
+            "origin": "caduceus",
+            "content": "If the invasive score of a Phytophthora species is very high and the optimal temperature range is exactly 25 degrees, then the probability of the species being non-caducous is certain."
+        },
+        {
+            "id": 50,
+            "origin": "caduceus",
+            "content": "If the invasive score of a Phytophthora species is very high, and its optimal temperature range is between 25 to 28 degrees, then there is a very good chance that species is non-caducous."
+        },
+        {
+            "id": 51,
+            "origin": "caduceus",
+            "content": "If the invasive score of a Phytophthora species is very high, and its optimal temperature range is greater than or equal to 28 degrees, then the probability of the species being non-caducous is better than even."
+        },
+        {
+            "id": 52,
+            "origin": "nat_eco",
+            "content": "If a Phytophthora species has a very low invasive score and requires a temperature of less than 20 to grow, then there is a very good chance that it is found in natural ecosystems."
+        },
+        {
+            "id": 53,
+            "origin": "nat_eco",
+            "content": "If the invasive score of a Phytophthora species is very low and its optimal temperature range is between 20 to 25 degrees, then it is probably found in natural ecosystems."
+        },
+        {
+            "id": 54,
+            "origin": "nat_eco",
+            "content": "If the invasive score of a Phytophthora species is very low and its optimal temperature range is exactly 25 degrees, then it is certainly not found in natural ecosystems."
+        },
+        {
+            "id": 55,
+            "origin": "nat_eco",
+            "content": "If the invasive score of a Phytophthora species is very low and its optimal temperature range is between 25 to 28 degrees, then it is certainly not found in natural ecosystems."
+        },
+        {
+            "id": 56,
+            "origin": "nat_eco",
+            "content": "If the invasive score of a Phytophthora species is very low and its optimal temperature range is 28 degrees or higher, then there is a very good chance that it is not found in natural ecosystems."
+        },
+        {
+            "id": 57,
+            "origin": "nat_eco",
+            "content": "If the invasive score of a Phytophthora species is low and its optimal temperature range is below 20 degrees, then there is a better than even chance that it is not found in natural ecosystems."
+        },
+        {
+            "id": 58,
+            "origin": "nat_eco",
+            "content": "If the invasive score of a Phytophthora species is low and its optimal temperature range is between 20 to 25 degrees, then there is an even chance that it is found or not found in natural ecosystems."
+        },
+        {
+            "id": 59,
+            "origin": "nat_eco",
+            "content": "If the invasive score of a Phytophthora species is low and its optimal temperature range is around 25 degrees, then it is probably found in natural ecosystems."
+        },
+        {
+            "id": 60,
+            "origin": "nat_eco",
+            "content": "If the invasive score of a Phytophthora species is low and its optimal temperature range is between 25 to 28 degrees, then it is probable that it is not found in natural ecosystems."
+        },
+        {
+            "id": 61,
+            "origin": "nat_eco",
+            "content": "If the invasive score of a Phytophthora species is low and its optimal temperature range is equal to or greater than 28 degrees, then it is certainly not found in natural ecosystems."
+        },
+        {
+            "id": 62,
+            "origin": "nat_eco",
+            "content": "If the invasive score of a Phytophthora species is moderate and its optimal temperature range is below 20 degrees, then there is a better than even chance that it is found in natural ecosystems."
+        },
+        {
+            "id": 63,
+            "origin": "nat_eco",
+            "content": "If the invasive score of a Phytophthora species is moderate and its optimal temperature range is between 20 to 25 degrees, then it is probable that it is not found in natural ecosystems."
+        },
+        {
+            "id": 64,
+            "origin": "nat_eco",
+            "content": "If the invasive score of a Phytophthora species is moderate and its optimal temperature range is 25 degrees, then there is a better than even chance that it is not found in natural ecosystems."
+        },
+        {
+            "id": 65,
+            "origin": "nat_eco",
+            "content": "If the invasive score of a Phytophthora species is moderate and its optimal temperature range is between 25 to 28 degrees, then there is roughly equal chance that it is found or not found in natural ecosystems."
+        },
+        {
+            "id": 66,
+            "origin": "nat_eco",
+            "content": "If the invasive score of a Phytophthora species is moderate and its optimal temperature range is 28 degrees or higher, then there is an about even chance that it is not found in naturally occurring ecosystems."
+        },
+        {
+            "id": 67,
+            "origin": "nat_eco",
+            "content": "If the invasive score of a Phytophthora species is high and its optimal temperature range is below 20 degrees, then it is certainly not found in natural ecosystems."
+        },
+        {
+            "id": 68,
+            "origin": "nat_eco",
+            "content": "If the invasive score of a Phytophthora species is high and its optimal temperature range is between 20 to 25 degrees, then it is impossible for it not to be found in natural ecosystems."
+        },
+        {
+            "id": 69,
+            "origin": "nat_eco",
+            "content": "If the invasive score of a Phytophthora species is high and its optimal temperature range is precisely 25 degrees, then there is an about even chance that it is not found in natural ecosystems."
+        },
+        {
+            "id": 70,
+            "origin": "nat_eco",
+            "content": "If the invasive score of a Phytophthora species is high and its optimal temperature range is between 25 to 28 degrees, there are even chances that it is found in natural ecosystems or not."
+        },
+        {
+            "id": 71,
+            "origin": "nat_eco",
+            "content": "If the invasive score of a Phytophthora species is high and its optimal temperature range is 28 degrees or above, then it is probable that it is not found in natural ecosystems."
+        },
+        {
+            "id": 72,
+            "origin": "nat_eco",
+            "content": "If the invasive score of a Phytophthora species is very high and its optimal temperature range is below 20 degrees, then there is approximately an equal chance that it is found or not found in natural ecosystems."
+        },
+        {
+            "id": 73,
+            "origin": "nat_eco",
+            "content": "If the invasive score of a Phytophthora species is very high and its optimal temperature range is between 20 to 25 degrees, then there is a very good chance that it is found in natural ecosystems."
+        },
+        {
+            "id": 74,
+            "origin": "nat_eco",
+            "content": "If the invasive score of a Phytophthora species is very high and its optimal temperature range is precisely 25 degrees, then it is impossible that it is not found in natural ecosystems."
+        },
+        {
+            "id": 75,
+            "origin": "nat_eco",
+            "content": "If the invasive score of a Phytophthora species is very high and its optimal temperature range is between 25 to 28 degrees, then there is a very good chance that it is found in natural ecosystems."
+        },
+        {
+            "id": 76,
+            "origin": "nat_eco",
+            "content": "If the invasive score of a Phytophthora species is very high and its optimal temperature range is greater than or equal to 28 degrees, then the chances are roughly equal that it is found or not found in natural ecosystems."
+        },
+        {
+            "id": 77,
+            "origin": "stem_cank",
+            "content": "If the invasive score of a Phytophthora species is very low and it is not found in natural ecosystems, then it is probable that the species does not cause stem cankers."
+        },
+        {
+            "id": 78,
+            "origin": "stem_cank",
+            "content": "If the invasive score of a Phytophthora species is very low and it is found in natural ecosystems, then it is highly likely that the species does not cause stem cankers."
+        },
+        {
+            "id": 79,
+            "origin": "stem_cank",
+            "content": "If the invasive score of a Phytophthora species is low and it is not found in natural ecosystems, then it is very likely not causing stem cankers."
+        },
+        {
+            "id": 80,
+            "origin": "stem_cank",
+            "content": "If a Phytophthora species has a low invasive score and is found in natural ecosystems, then it is equally likely that the species does not cause stem cankers, and it is equally likely that the species causes stem cankers."
+        },
+        {
+            "id": 81,
+            "origin": "stem_cank",
+            "content": "If the invasive score of a Phytophthora species is moderate and it is not found in natural ecosystems, then it is highly likely that the species does not cause stem cankers."
+        },
+        {
+            "id": 82,
+            "origin": "stem_cank",
+            "content": "If the invasive score of a Phytophthora species is moderate and it is found in natural ecosystems, then it is more likely than not that the species does not cause stem cankers."
+        },
+        {
+            "id": 83,
+            "origin": "stem_cank",
+            "content": "If the invasive score of a Phytophthora species is high and it is not found in natural ecosystems, then it is highly likely that the species does not cause stem cankers."
+        },
+        {
+            "id": 84,
+            "origin": "stem_cank",
+            "content": "If the invasive score of a Phytophthora species is high and it is found in natural ecosystems, then it is equally likely that the species does or does not cause stem cankers."
+        },
+        {
+            "id": 85,
+            "origin": "stem_cank",
+            "content": "If the invasive score of a Phytophthora species is very high and it is not found in natural ecosystems, then it is very likely that the species does not cause stem cankers."
+        },
+        {
+            "id": 86,
+            "origin": "stem_cank",
+            "content": "If the invasive score of a Phytophthora species is very high and it is found in natural ecosystems, then there is an about even chance that the species causes stem cankers or not."
+        }
+    ],
+    "evidence_query_pairs": [
+        {
+            "id": 0,
+            "evidences": [
+                "The Phytophthora species is non-caducous (does not shed leaves).",
+                "The Phytophthora species is plerotic (fully invasive).",
+                "The Phytophthora species causes stem cankers."
+            ],
+            "query": "What is the likelihood of the Phytophthora species not being found in natural ecosystems?",
+            "answer": 0.20030947,
+            "reasoning_types": [
+                "evidential"
+            ]
+        },
+        {
+            "id": 1,
+            "evidences": [
+                "The Phytophthora species is fully invasive.",
+                "The species causes stem cankers.",
+                "The species is caducous (shedding leaves)."
+            ],
+            "query": "What is the likelihood of this Phytophthora species not being found in natural ecosystems?",
+            "answer": 0.23864077,
+            "reasoning_types": [
+                "evidential"
+            ]
+        },
+        {
+            "id": 2,
+            "evidences": [
+                "The Phytophthora species does not cause stem cankers."
+            ],
+            "query": "What is the likelihood of the Phytophthora species not being found in natural ecosystems?",
+            "answer": 0.67387424,
+            "reasoning_types": [
+                "evidential"
+            ]
+        },
+        {
+            "id": 3,
+            "evidences": [
+                "The Phytophthora species is caducous (shedding leaves).",
+                "The Phytophthora species does not cause stem cankers.",
+                "The Phytophthora species is not found in natural ecosystems."
+            ],
+            "query": "What is the likelihood of the Phytophthora species being both aplerotic and plerotic (partially and fully invasive)?",
+            "answer": 0.44232003,
+            "reasoning_types": []
+        },
+        {
+            "id": 4,
+            "evidences": [
+                "The Phytophthora species causes stem cankers.",
+                "The Phytophthora species is non-shedding leaves (non-caducous).",
+                "The Phytophthora species is fully invasive (plerotic)."
+            ],
+            "query": "What is the likelihood of the Phytophthora species being found in natural ecosystems?",
+            "answer": 0.79969053,
+            "reasoning_types": [
+                "evidential"
+            ]
+        },
+        {
+            "id": 5,
+            "evidences": [
+                "The Phytophthora species is fully invasive."
+            ],
+            "query": "What is the likelihood of this Phytophthora species not shedding its leaves?",
+            "answer": 0.66317607,
+            "reasoning_types": []
+        },
+        {
+            "id": 6,
+            "evidences": [
+                "The Phytophthora species is found in natural ecosystems."
+            ],
+            "query": "What is the likelihood of the Phytophthora species causing stem cankers in natural ecosystems?",
+            "answer": 0.43684174,
+            "reasoning_types": [
+                "causal"
+            ]
+        },
+        {
+            "id": 7,
+            "evidences": [
+                "The Phytophthora species is found in natural ecosystems.",
+                "The Phytophthora species is caducous (shedding leaves).",
+                "The Phytophthora species is plerotic (fully invasive)."
+            ],
+            "query": "What is the likelihood of the Phytophthora species causing stem cankers?",
+            "answer": 0.49980736,
+            "reasoning_types": [
+                "causal"
+            ]
+        },
+        {
+            "id": 8,
+            "evidences": [
+                "The Phytophthora species is both aplerotic and plerotic (non-invasive and fully invasive)."
+            ],
+            "query": "What is the likelihood of the Phytophthora species being caducous (shedding leaves)?",
+            "answer": 0.31581661,
+            "reasoning_types": []
+        },
+        {
+            "id": 9,
+            "evidences": [
+                "The Phytophthora species is found in natural ecosystems."
+            ],
+            "query": "What is the likelihood of the Phytophthora species being partially invasive (both aplerotic and plerotic) when it is found in natural ecosystems?",
+            "answer": 0.38071936,
+            "reasoning_types": []
+        },
+        {
+            "id": 10,
+            "evidences": [
+                "The Phytophthora species is found in natural ecosystems.",
+                "The Phytophthora species does not cause stem cankers.",
+                "The Phytophthora species is caducous (shedding leaves)."
+            ],
+            "query": "What is the likelihood of the Phytophthora species being partially invasive (both aplerotic and plerotic)?",
+            "answer": 0.46823384,
+            "reasoning_types": []
+        },
+        {
+            "id": 11,
+            "evidences": [
+                "The Phytophthora species is found in natural ecosystems.",
+                "The Phytophthora species is both aplerotic (non-invasive) and plerotic (fully invasive)."
+            ],
+            "query": "What is the likelihood of the Phytophthora species being caducous (shedding leaves)?",
+            "answer": 0.35293367,
+            "reasoning_types": []
+        },
+        {
+            "id": 12,
+            "evidences": [
+                "The Phytophthora species does not shed its leaves."
+            ],
+            "query": "What is the likelihood of this Phytophthora species not being found in natural ecosystems?",
+            "answer": 0.63461481,
+            "reasoning_types": []
+        },
+        {
+            "id": 13,
+            "evidences": [
+                "The Phytophthora species is both aplerotic and plerotic.",
+                "The Phytophthora species is not found in natural ecosystems."
+            ],
+            "query": "What is the likelihood of this Phytophthora species not causing stem cankers?",
+            "answer": 0.81285576,
+            "reasoning_types": [
+                "causal"
+            ]
+        },
+        {
+            "id": 14,
+            "evidences": [
+                "The Phytophthora species is both aplerotic and plerotic.",
+                "The Phytophthora species is not found in natural ecosystems."
+            ],
+            "query": "What is the likelihood of this Phytophthora species causing stem cankers?",
+            "answer": 0.18714424,
+            "reasoning_types": [
+                "causal"
+            ]
+        },
+        {
+            "id": 15,
+            "evidences": [
+                "The Phytophthora species is caducous (shedding leaves).",
+                "The Phytophthora species does not cause stem cankers.",
+                "The Phytophthora species is aplerotic (non-invasive)."
+            ],
+            "query": "What is the likelihood of the Phytophthora species being found in natural ecosystems?",
+            "answer": 0.35137578,
+            "reasoning_types": [
+                "evidential"
+            ]
+        },
+        {
+            "id": 16,
+            "evidences": [
+                "The Phytophthora species is aplerotic (non-invasive)."
+            ],
+            "query": "What is the likelihood of this Phytophthora species causing stem cankers?",
+            "answer": 0.31115913,
+            "reasoning_types": []
+        },
+        {
+            "id": 17,
+            "evidences": [
+                "The Phytophthora species causes stem cankers.",
+                "The Phytophthora species is not invasive.",
+                "The Phytophthora species is found in natural ecosystems."
+            ],
+            "query": "What is the likelihood of the Phytophthora species being non-caducous (not shedding leaves)?",
+            "answer": 0.78302383,
+            "reasoning_types": []
+        },
+        {
+            "id": 18,
+            "evidences": [
+                "The Phytophthora species does not cause stem cankers."
+            ],
+            "query": "What is the likelihood of the Phytophthora species not being found in natural ecosystems?",
+            "answer": 0.67387424,
+            "reasoning_types": [
+                "evidential"
+            ]
+        },
+        {
+            "id": 19,
+            "evidences": [
+                "The Phytophthora species is caducous (shedding leaves).",
+                "The Phytophthora species is aplerotic (non-invasive).",
+                "The Phytophthora species is not found in natural ecosystems."
+            ],
+            "query": "What is the likelihood of the Phytophthora species causing stem cankers?",
+            "answer": 0.1333777,
+            "reasoning_types": [
+                "causal"
+            ]
+        }
+    ]
+}

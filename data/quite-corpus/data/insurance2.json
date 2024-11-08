@@ -1,0 +1,1886 @@
+{
+    "nodes": [
+        {
+            "name": "MakeModel",
+            "states": [
+                "SportsCar",
+                "Economy",
+                "FamilySedan",
+                "Luxury",
+                "SuperLuxury"
+            ]
+        },
+        {
+            "name": "VehicleYear",
+            "states": [
+                "Current",
+                "Older"
+            ]
+        },
+        {
+            "name": "Age",
+            "states": [
+                "Adolescent",
+                "Adult",
+                "Senior"
+            ]
+        },
+        {
+            "name": "DrivingSkill",
+            "states": [
+                "SubStandard",
+                "Normal",
+                "Expert"
+            ]
+        },
+        {
+            "name": "Mileage",
+            "states": [
+                "FiveThou",
+                "TwentyThou",
+                "FiftyThou",
+                "Million"
+            ]
+        },
+        {
+            "name": "RuggedAuto",
+            "states": [
+                "EggShell",
+                "Football",
+                "Tank"
+            ]
+        },
+        {
+            "name": "Accident",
+            "states": [
+                "None",
+                "Mild",
+                "Moderate",
+                "Severe"
+            ]
+        },
+        {
+            "name": "Antilock",
+            "states": [
+                "True",
+                "False"
+            ]
+        },
+        {
+            "name": "OtherCarCost",
+            "states": [
+                "Thousand",
+                "TenThou",
+                "HundredThou",
+                "Million"
+            ]
+        },
+        {
+            "name": "MedCost",
+            "states": [
+                "Thousand",
+                "TenThou",
+                "HundredThou",
+                "Million"
+            ]
+        },
+        {
+            "name": "Cushioning",
+            "states": [
+                "Poor",
+                "Fair",
+                "Good",
+                "Excellent"
+            ]
+        },
+        {
+            "name": "Airbag",
+            "states": [
+                "True",
+                "False"
+            ]
+        },
+        {
+            "name": "ILiCost",
+            "states": [
+                "Thousand",
+                "TenThou",
+                "HundredThou",
+                "Million"
+            ]
+        }
+    ],
+    "connectivity": [
+        {
+            "node": "MakeModel",
+            "incoming": []
+        },
+        {
+            "node": "VehicleYear",
+            "incoming": []
+        },
+        {
+            "node": "Age",
+            "incoming": []
+        },
+        {
+            "node": "DrivingSkill",
+            "incoming": []
+        },
+        {
+            "node": "Mileage",
+            "incoming": []
+        },
+        {
+            "node": "RuggedAuto",
+            "incoming": []
+        },
+        {
+            "node": "Accident",
+            "incoming": [
+                "Antilock",
+                "Mileage",
+                "DrivQuality"
+            ]
+        },
+        {
+            "node": "Antilock",
+            "incoming": [
+                "MakeModel",
+                "VehicleYear"
+            ]
+        },
+        {
+            "node": "OtherCarCost",
+            "incoming": [
+                "Accident",
+                "RuggedAuto"
+            ]
+        },
+        {
+            "node": "MedCost",
+            "incoming": [
+                "Accident",
+                "Age",
+                "Cushioning"
+            ]
+        },
+        {
+            "node": "Cushioning",
+            "incoming": [
+                "RuggedAuto",
+                "Airbag"
+            ]
+        },
+        {
+            "node": "Airbag",
+            "incoming": [
+                "MakeModel",
+                "VehicleYear"
+            ]
+        },
+        {
+            "node": "ILiCost",
+            "incoming": [
+                "Accident"
+            ]
+        }
+    ],
+    "numeric_premises": [
+        {
+            "id": 0,
+            "origin": "RuggedAuto",
+            "content": "In half of the cases, a vehicle as an eggshell-like finish, whereas in 35% of the cases, it has a football-like finish and a tank-like finish occurs in 15% of all cases."
+        },
+        {
+            "id": 1,
+            "origin": "MakeModel",
+            "content": "There is a 14% chance that the make and model of a car is sport, 38% for economy, 38% for family sedan, 9.8% for luxury, and 0.2% for super luxury."
+        },
+        {
+            "id": 2,
+            "origin": "VehicleYear",
+            "content": "There is a 35% chance that a vehicle is from the current year, whereas a 65% chance indicates that it is an older one."
+        },
+        {
+            "id": 3,
+            "origin": "Mileage",
+            "content": "A car with mileage of twenty thousand is most common (40%), followed closely by one with fifty thousand miles (40%), and is relatively rare for a car to have a mileage of five thousand (10%) or to have a mileage of 1000000. (10%)."
+        },
+        {
+            "id": 4,
+            "origin": "DrivingSkill",
+            "content": "It is 33% likely that a car owner has poor driving skills, 56% that he or she has normal driving skills, and 11% that he or she has excellent driving skills."
+        },
+        {
+            "id": 5,
+            "origin": "Age",
+            "content": "With 20% of drivers being adolescents, 60% of drivers being adults, and 20% of drivers being seniors, the age distribution is quite balanced but skewed towards adults."
+        },
+        {
+            "id": 6,
+            "origin": "Airbag",
+            "content": "When the car is a sports model and was manufactured this year, there is a 100% probability that it is equipped with an airbag."
+        },
+        {
+            "id": 7,
+            "origin": "Airbag",
+            "content": "When the car is a sports model and is not from the current year, there is a 90% probability that it does not have an airbag."
+        },
+        {
+            "id": 8,
+            "origin": "Airbag",
+            "content": "When the car is an economy model and was manufactured this year, there is a 100% probability that it is equipped with an airbag."
+        },
+        {
+            "id": 9,
+            "origin": "Airbag",
+            "content": "When the car is an economy model and is not from the current year, there is a 95% probability that it does not have an airbag."
+        },
+        {
+            "id": 10,
+            "origin": "Airbag",
+            "content": "When the car is a family sedan and was manufactured this year, there is a 100% probability that it is equipped with an airbag."
+        },
+        {
+            "id": 11,
+            "origin": "Airbag",
+            "content": "When the car is a family sedan and is not from the current year, there is an 80% probability that it does not have an airbag."
+        },
+        {
+            "id": 12,
+            "origin": "Airbag",
+            "content": "When the car is a luxury model and was manufactured this year, there is a 100% probability that it is equipped with an airbag."
+        },
+        {
+            "id": 13,
+            "origin": "Airbag",
+            "content": "When the car is a luxury model and is not from the current year, there is a 40% probability that it does not have an airbag."
+        },
+        {
+            "id": 14,
+            "origin": "Airbag",
+            "content": "When the car is a super luxury model and was manufactured this year, there is a 100% probability that it is equipped with an airbag."
+        },
+        {
+            "id": 15,
+            "origin": "Airbag",
+            "content": "When the car is a super luxury model and is not from the current year, there is a 90% probability that it does not have an airbag."
+        },
+        {
+            "id": 16,
+            "origin": "Antilock",
+            "content": "When the car is a current-year sports model, there's a 90% probability that it's equipped with anti-lock brakes, and a 10% chance it's not."
+        },
+        {
+            "id": 17,
+            "origin": "Antilock",
+            "content": "If the Make and Model is an older style of sports car, there's a 90% probability it doesn't have anti-lock brakes, and only a 10% chance it does."
+        },
+        {
+            "id": 18,
+            "origin": "Antilock",
+            "content": "In the case of a current economy model, there's a 0.1% chance it comes with anti-lock brakes, and a 99.9% probability it doesn't."
+        },
+        {
+            "id": 19,
+            "origin": "Antilock",
+            "content": "For an older economy model, there's no chance it has anti-lock brakes - it's 100% certain that it doesn't."
+        },
+        {
+            "id": 20,
+            "origin": "Antilock",
+            "content": "When it comes to a current family sedan, there's a 40% probability it's equipped with anti-lock brakes, and a 60% chance it's not."
+        },
+        {
+            "id": 21,
+            "origin": "Antilock",
+            "content": "In the case of an older family sedan, it's a certainty that it doesn't have anti-lock brakes - there's a 100% probability it doesn't."
+        },
+        {
+            "id": 22,
+            "origin": "Antilock",
+            "content": "With a current luxury model, there's a 99% chance it comes with anti-lock brakes, and only a 1% probability it doesn't."
+        },
+        {
+            "id": 23,
+            "origin": "Antilock",
+            "content": "For an older luxury model, there's a 30% probability it has anti-lock brakes, and a 70% likelihood it doesn't."
+        },
+        {
+            "id": 24,
+            "origin": "Antilock",
+            "content": "When it comes to a current super-luxury vehicle, there's a 99% chance it's equipped with anti-lock brakes, and only a 1% probability it's not."
+        },
+        {
+            "id": 25,
+            "origin": "Antilock",
+            "content": "In the case of an older super-luxury model, there's a 15% probability it has anti-lock brakes, and an 85% likelihood it doesn't."
+        },
+        {
+            "id": 26,
+            "origin": "Cushioning",
+            "content": "If a vehicle has an Eggshell finish and is equipped with an airbag, the probabilities of its cushioning are 50% poor, 30% fair, 20% good, and 0% for excellent."
+        },
+        {
+            "id": 27,
+            "origin": "Cushioning",
+            "content": "In the case of a car with an Eggshell finish and no airbags, the probabilities slightly shift, with a 70% chance of poor cushioning and a 30% likelihood of fair cushioning, while good and excellent cushioning are virtually impossible."
+        },
+        {
+            "id": 28,
+            "origin": "Cushioning",
+            "content": "When a vehicle has a Football-like texture and features an airbag, the probabilities for cushioning are 0% for poor, 10% for fair, 60% for good, and 30% for excellent cushioning performance."
+        },
+        {
+            "id": 29,
+            "origin": "Cushioning",
+            "content": "In the event of a Football-textured car without an airbag, the probabilities for cushioning are 10% for poor, 60% for fair, and 30% for good cushioning performance, while excellent cushioning is not a possibility."
+        },
+        {
+            "id": 30,
+            "origin": "Cushioning",
+            "content": "If a vehicle resembles a Tank and is equipped with an airbag, the cushioning is virtually guaranteed to be excellent, as the probabilities for poor, fair, and good cushioning are all 0%."
+        },
+        {
+            "id": 31,
+            "origin": "Cushioning",
+            "content": "In the case of a Tank-like vehicle without an airbag, the probabilities for cushioning are 0% for poor and fair, 70% for good, and 30% for excellent cushioning performance, as the vehicle's structure likely provides sufficient protection."
+        },
+        {
+            "id": 32,
+            "origin": "Accident",
+            "content": "If a car has anti-lock brakes, has been driven for five thousand miles, and is driven poorly, there is a 70% chance of no accident, a 20% chance of a mild accident, a 7% chance of a moderate accident, and a 3% chance of a severe accident."
+        },
+        {
+            "id": 33,
+            "origin": "Accident",
+            "content": "With anti-lock brakes, five thousand miles of driving, and normal driving quality, there is a 99% chance of no accident, a 0.7% chance of a mild accident, a 0.2% chance of a moderate accident, and a 0.1% chance of a severe accident."
+        },
+        {
+            "id": 34,
+            "origin": "Accident",
+            "content": "When a car is equipped with anti-lock brakes, has been driven for five thousand miles, and is driven excellently, there is a 99.9% probability of no accident, a 0.07% chance of a mild accident, a 0.02% chance of a moderate accident, and a 0.01% chance of a severe accident."
+        },
+        {
+            "id": 35,
+            "origin": "Accident",
+            "content": "If a car has anti-lock brakes, has been driven for twenty thousand miles, and is driven poorly, there is a 40% chance of no accident, a 30% chance of a mild accident, a 20% chance of a moderate accident, and a 10% chance of a severe accident."
+        },
+        {
+            "id": 36,
+            "origin": "Accident",
+            "content": "With anti-lock brakes, twenty thousand miles of driving, and normal driving quality, there is a 98% probability of no accident, a 1% chance of a mild accident, a 0.5% chance of a moderate accident, and a 0.5% chance of a severe accident."
+        },
+        {
+            "id": 37,
+            "origin": "Accident",
+            "content": "When a car is equipped with anti-lock brakes, has been driven for twenty thousand miles, and is driven excellently, there is a 99.5% probability of no accident, a 0.3% chance of a mild accident, a 0.1% chance of a moderate accident, and a 0.1% chance of a severe accident."
+        },
+        {
+            "id": 38,
+            "origin": "Accident",
+            "content": "If a car has anti-lock brakes, has been driven for fifty thousand miles, and is driven poorly, there is a 30% chance of no accident, a 30% chance of a mild accident, a 20% chance of a moderate accident, and a 20% chance of a severe accident."
+        },
+        {
+            "id": 39,
+            "origin": "Accident",
+            "content": "With anti-lock brakes, fifty thousand miles of driving, and normal driving quality, there is a 97% probability of no accident, a 2% chance of a mild accident, a 0.7% chance of a moderate accident, and a 0.3% chance of a severe accident."
+        },
+        {
+            "id": 40,
+            "origin": "Accident",
+            "content": "If a car is equipped with anti-lock brakes, has been driven for fifty thousand miles, and is driven excellently, there is a 99% probability of no accident, a 0.7% chance of a mild accident, a 0.2% chance of a moderate accident, and a 0.1% chance of a severe accident."
+        },
+        {
+            "id": 41,
+            "origin": "Accident",
+            "content": "If a car has anti-lock brakes, has been driven for one million miles, and is driven poorly, there is a 20% chance of no accident, a 20% chance of a mild accident, a 30% chance of a moderate accident, and a 30% chance of a severe accident."
+        },
+        {
+            "id": 42,
+            "origin": "Accident",
+            "content": "With anti-lock brakes, one million miles of driving, and normal driving quality, there is a 95% probability of no accident, a 3% chance of a mild accident, a 1% chance of a moderate accident, and a 1% chance of a severe accident."
+        },
+        {
+            "id": 43,
+            "origin": "Accident",
+            "content": "If a car is equipped with anti-lock brakes, has been driven for one million miles, and is driven excellently, there is a 98.5% probability of no accident, a 1% chance of a mild accident, a 0.3% chance of a moderate accident, and a 0.2% chance of a severe accident."
+        },
+        {
+            "id": 44,
+            "origin": "Accident",
+            "content": "If a car does not have anti-lock brakes, has been driven for five thousand miles, and is driven poorly, there is a 60% probability of no accident, a 20% chance of a mild accident, a 10% chance of a moderate accident, and a 10% chance of a severe accident."
+        },
+        {
+            "id": 45,
+            "origin": "Accident",
+            "content": "If a car does not have anti-lock brakes, has been driven for five thousand miles, and is driven normally, there is a 98% probability of no accident, a 1% chance of a mild accident, a 0.5% chance of a moderate accident, and a 0.5% chance of a severe accident."
+        },
+        {
+            "id": 46,
+            "origin": "Accident",
+            "content": "If a car does not have anti-lock brakes, has been driven for five thousand miles, and is driven excellently, there is a 99.5% probability of no accident, a 0.3% chance of a mild accident, a 0.1% chance of a moderate accident, and a 0.1% chance of a severe accident."
+        },
+        {
+            "id": 47,
+            "origin": "Accident",
+            "content": "If a car does not have anti-lock brakes, has been driven for twenty thousand miles, and is driven poorly, there is a 30% probability of no accident, a 20% chance of a mild accident, a 20% chance of a moderate accident, and a 30% chance of a severe accident."
+        },
+        {
+            "id": 48,
+            "origin": "Accident",
+            "content": "If a car does not have anti-lock brakes, has been driven for twenty thousand miles, and is driven normally, there is a 96% probability of no accident, a 2% chance of a mild accident, a 1.5% chance of a moderate accident, and a 0.5% chance of a severe accident."
+        },
+        {
+            "id": 49,
+            "origin": "Accident",
+            "content": "If a car does not have anti-lock brakes, has been driven for twenty thousand miles, and is driven excellently, there is a 99% probability of no accident, a 0.7% chance of a mild accident, a 0.2% chance of a moderate accident, and a 0.1% chance of a severe accident."
+        },
+        {
+            "id": 50,
+            "origin": "Accident",
+            "content": "If a car does not have anti-lock brakes, has been driven for fifty thousand miles, and is driven poorly, there is a 20% probability of no accident, a 20% chance of a mild accident, a 20% chance of a moderate accident, and a 40% chance of a severe accident."
+        },
+        {
+            "id": 51,
+            "origin": "Accident",
+            "content": "If a car does not have anti-lock brakes, has been driven for fifty thousand miles, and is driven normally, there is a 95% probability of no accident, a 3% chance of a mild accident, a 1.5% chance of a moderate accident, and a 0.5% chance of a severe accident."
+        },
+        {
+            "id": 52,
+            "origin": "Accident",
+            "content": "If a car does not have anti-lock brakes, has been driven for fifty thousand miles, and is driven excellently, there is a 98% probability of no accident, a 1% chance of a mild accident, a 0.5% chance of a moderate accident, and a 0.5% chance of a severe accident."
+        },
+        {
+            "id": 53,
+            "origin": "Accident",
+            "content": "If a car does not have anti-lock brakes, has been driven for one million miles, and is driven poorly, there is a 10% probability of no accident, a 10% chance of a mild accident, a 30% chance of a moderate accident, and a 50% chance of a severe accident."
+        },
+        {
+            "id": 54,
+            "origin": "Accident",
+            "content": "If a car does not have anti-lock brakes, has been driven for one million miles, and is driven normally, there is a 94% probability of no accident, a 3% chance of a mild accident, a 2% chance of a moderate accident, and a 1% chance of a severe accident."
+        },
+        {
+            "id": 55,
+            "origin": "Accident",
+            "content": "If a car does not have anti-lock brakes, has been driven for one million miles, and is driven excellently, there is a 98% probability of no accident, a 1% chance of a mild accident, a 0.7% chance of a moderate accident, and a 0.3% chance of a severe accident."
+        },
+        {
+            "id": 56,
+            "origin": "MedCost",
+            "content": "When an adolescent with eggshell cushioning has not been in an accident, there is a 100% probability of medical costs amounting to one thousand dollars with no possibility of being $10.000, $100.000, or $1.000.000."
+        },
+        {
+            "id": 57,
+            "origin": "MedCost",
+            "content": "With no accidents, an adolescent carrying a policy and that has a fair cushioning faces a 100% chance of medical costs amounting to one thousand dollars."
+        },
+        {
+            "id": 58,
+            "origin": "MedCost",
+            "content": "In the absence of an accident, a teenage policyholder with good cushioning has a 100% probability of medical costs amounting to one thousand dollars."
+        },
+        {
+            "id": 59,
+            "origin": "MedCost",
+            "content": "When an adolescent, free from accidents, has excellent cushioning, there is a 100% chance of medical costs amounting to one thousand dollars."
+        },
+        {
+            "id": 60,
+            "origin": "MedCost",
+            "content": "If an adult hasn't had an accident and has poor cushioning, there is a 100% probability of medical costs amounting to one thousand dollars."
+        },
+        {
+            "id": 61,
+            "origin": "MedCost",
+            "content": "With no accidents and fair cushioning, an adult has a 100% chance of medical costs amounting to one thousand dollars."
+        },
+        {
+            "id": 62,
+            "origin": "MedCost",
+            "content": "If an adult hasn't had an accident and has good cushioning, there is a 100% probability of medical costs amounting to one thousand dollars."
+        },
+        {
+            "id": 63,
+            "origin": "MedCost",
+            "content": "When an adult hasn't experienced an accident and has excellent cushioning, there is a 100% chance of medical costs amounting to one thousand dollars."
+        },
+        {
+            "id": 64,
+            "origin": "MedCost",
+            "content": "If a senior hasn't had an accident and poor cushioning, there is a 100% probability of medical costs amounting to one thousand dollars."
+        },
+        {
+            "id": 65,
+            "origin": "MedCost",
+            "content": "When a senior hasn't had an accident and fair cushioning, there is a 100% chance of medical costs amounting to one thousand dollars."
+        },
+        {
+            "id": 66,
+            "origin": "MedCost",
+            "content": "If a senior hasn't experienced an accident and good cushioning, there is a 100% probability of medical costs amounting to one thousand dollars."
+        },
+        {
+            "id": 67,
+            "origin": "MedCost",
+            "content": "When a senior hasn't had an accident and excellent cushioning, there is a 100% chance of medical costs amounting to one thousand dollars."
+        },
+        {
+            "id": 68,
+            "origin": "MedCost",
+            "content": "In the case of a mild accident, if the policyholder is an adolescent with poor cushioning, there is a 96% probability of medical costs amounting to one thousand dollars, a 3% probability of ten thousand dollars, a 0.9% probability of one hundred thousand dollars, and a 0.1% probability of one million dollars."
+        },
+        {
+            "id": 69,
+            "origin": "MedCost",
+            "content": "If a mild accident occurs and the policyholder is an adolescent with fair cushioning, there is a 98% probability of medical costs amounting to one thousand dollars, a 1.9% probability of ten thousand dollars, a 0.09% probability of one hundred thousand dollars, and a 0.01% probability of one million dollars."
+        },
+        {
+            "id": 70,
+            "origin": "MedCost",
+            "content": "In the case of a mild accident, if the policyholder is an adolescent with good cushioning, there is a 99% probability of medical costs amounting to one thousand dollars, a 0.99% probability of ten thousand dollars, a 0.009% probability of one hundred thousand dollars, and a 0.001% probability of one million dollars."
+        },
+        {
+            "id": 71,
+            "origin": "MedCost",
+            "content": "If a mild accident occurs and the policyholder is an adolescent with excellent cushioning, there is a 99.9% probability of medical costs amounting to one thousand dollars, a 0.099% probability of ten thousand dollars, a 0.00099% probability of one hundred thousand dollars, and a 0.0001% probability of one million dollars."
+        },
+        {
+            "id": 72,
+            "origin": "MedCost",
+            "content": "In the case of a mild accident, if the policyholder is an adult with poor cushioning, there is a 96% probability of medical costs amounting to one thousand dollars, a 3% probability of ten thousand dollars, a 0.9% probability of one hundred thousand dollars, and a 0.1% probability of one million dollars."
+        },
+        {
+            "id": 73,
+            "origin": "MedCost",
+            "content": "If a mild accident occurs and the policyholder is an adult with fair cushioning, there is a 98% probability of medical costs amounting to one thousand dollars, a 1.9% probability of ten thousand dollars, a 0.09% probability of one hundred thousand dollars, and a 0.01% probability of one million dollars."
+        },
+        {
+            "id": 74,
+            "origin": "MedCost",
+            "content": "In the case of a mild accident, if the policyholder is an adult with good cushioning, there is a 99% probability of medical costs amounting to one thousand dollars, a 0.99% probability of ten thousand dollars, a 0.009% probability of one hundred thousand dollars, and a 0.001% probability of one million dollars."
+        },
+        {
+            "id": 75,
+            "origin": "MedCost",
+            "content": "If a mild accident occurs and the policyholder is an adult with excellent cushioning, there is a 99.9% probability of medical costs amounting to one thousand dollars, a 0.099% probability of ten thousand dollars, a 0.0009% probability of one hundred thousand dollars, and a 0.0001% probability of one million dollars."
+        },
+        {
+            "id": 76,
+            "origin": "MedCost",
+            "content": "In the case of a mild accident, if the policyholder is a senior with poor cushioning, there is a 90% probability of medical costs amounting to one thousand dollars, a 7% probability of ten thousand dollars, a 2% probability of one hundred thousand dollars, and a 1% probability of one million dollars."
+        },
+        {
+            "id": 77,
+            "origin": "MedCost",
+            "content": "If a mild accident occurs and the policyholder is a senior with fair cushioning, there is a 95% probability of medical costs amounting to one thousand dollars, a 4% probability of ten thousand dollars, a 0.7% probability of one hundred thousand dollars, and a 0.3% probability of one million dollars."
+        },
+        {
+            "id": 78,
+            "origin": "MedCost",
+            "content": "In the case of a mild accident, if the policyholder is a senior with good cushioning, there is a 97% probability of medical costs amounting to one thousand dollars, a 2.5% probability of ten thousand dollars, a 0.3% probability of one hundred thousand dollars, and a 0.2% probability of one million dollars."
+        },
+        {
+            "id": 79,
+            "origin": "MedCost",
+            "content": "If a mild accident occurs and the policyholder is a senior with excellent cushioning, there is a 99% probability of medical costs amounting to one thousand dollars, a 0.7% probability of ten thousand dollars, a 0.2% probability of one hundred thousand dollars, and a 0.1% probability of one million dollars."
+        },
+        {
+            "id": 80,
+            "origin": "MedCost",
+            "content": "In the case of a moderate accident, if the policyholder is an adolescent with poor cushioning, there is a 50% probability of medical costs amounting to one thousand dollars, a 20% probability of ten thousand dollars, a 20% probability of one hundred thousand dollars, and a 10% probability of one million dollars."
+        },
+        {
+            "id": 81,
+            "origin": "MedCost",
+            "content": "If a moderate accident occurs and the policyholder is an adolescent with fair cushioning, there is an 80% probability of medical costs amounting to one thousand dollars, a 15% probability of ten thousand dollars, a 3% probability of one hundred thousand dollars, and a 2% probability of one million dollars."
+        },
+        {
+            "id": 82,
+            "origin": "MedCost",
+            "content": "In the case of a moderate accident, if the policyholder is an adolescent with good cushioning, there is a 95% probability of medical costs amounting to one thousand dollars, a 2% probability of ten thousand dollars, a 2% probability of one hundred thousand dollars, and a 1% probability of one million dollars."
+        },
+        {
+            "id": 83,
+            "origin": "MedCost",
+            "content": "If a moderate accident occurs and the policyholder is an adolescent with excellent cushioning, there is a 99% probability of medical costs amounting to one thousand dollars, a 0.7% probability of ten thousand dollars, a 0.2% probability of one hundred thousand dollars, and a 0.1% probability of one million dollars."
+        },
+        {
+            "id": 84,
+            "origin": "MedCost",
+            "content": "If a moderate accident occurs and the policyholder is an adult with poor cushioning, there is a 50% probability of medical costs amounting to one thousand dollars, a 20% probability of ten thousand dollars, a 20% probability of one hundred thousand dollars, and a 10% probability of one million dollars."
+        },
+        {
+            "id": 85,
+            "origin": "MedCost",
+            "content": "In the case of a moderate accident, if the policyholder is an adult with fair cushioning, there is an 80% probability of medical costs amounting to one thousand dollars, a 15% probability of ten thousand dollars, a 3% probability of one hundred thousand dollars, and a 2% probability of one million dollars."
+        },
+        {
+            "id": 86,
+            "origin": "MedCost",
+            "content": "If a moderate accident occurs and the policyholder is an adult with good cushioning, there is a 95% probability of medical costs amounting to one thousand dollars, a 2% probability of ten thousand dollars, a 2% probability of one hundred thousand dollars, and a 1% probability of one million dollars."
+        },
+        {
+            "id": 87,
+            "origin": "MedCost",
+            "content": "If a moderate accident occurs and the policyholder is an adult with excellent cushioning, there is a 99% probability of medical costs amounting to one thousand dollars, a 0.7% probability of ten thousand dollars, a 0.2% probability of one hundred thousand dollars, and a 0.1% probability of one million dollars."
+        },
+        {
+            "id": 88,
+            "origin": "MedCost",
+            "content": "If a moderate accident occurs and the policyholder is a senior with poor cushioning, there is a 30% probability of medical costs amounting to one thousand dollars, a 30% probability of ten thousand dollars, a 20% probability of one hundred thousand dollars, and a 20% probability of one million dollars."
+        },
+        {
+            "id": 89,
+            "origin": "MedCost",
+            "content": "In the case of a moderate accident, if the policyholder is a senior with fair cushioning, there is a 50% probability of medical costs amounting to one thousand dollars, a 20% probability of ten thousand dollars, a 20% probability of one hundred thousand dollars, and a 10% probability of one million dollars."
+        },
+        {
+            "id": 90,
+            "origin": "MedCost",
+            "content": "If a moderate accident occurs and the policyholder is a senior with good cushioning, there is a 90% probability of medical costs amounting to one thousand dollars, a 7% probability of ten thousand dollars, a 2% probability of one hundred thousand dollars, and a 1% probability of one million dollars."
+        },
+        {
+            "id": 91,
+            "origin": "MedCost",
+            "content": "If a moderate accident occurs and the policyholder is a senior with excellent cushioning, there is a 95% probability of medical costs amounting to one thousand dollars, a 3% probability of ten thousand dollars, a 1% probability of one hundred thousand dollars, and a 1% probability of one million dollars."
+        },
+        {
+            "id": 92,
+            "origin": "MedCost",
+            "content": "In the case of a severe accident, if the policyholder is an adolescent with poor cushioning, there is a 30% probability of medical costs amounting to one thousand dollars, a 30% probability of ten thousand dollars, a 20% probability of one hundred thousand dollars, and a 20% probability of one million dollars."
+        },
+        {
+            "id": 93,
+            "origin": "MedCost",
+            "content": "If a severe accident occurs and the policyholder is an adolescent with fair cushioning, there is a 50% probability of medical costs amounting to one thousand dollars, a 20% probability of ten thousand dollars, a 20% probability of one hundred thousand dollars, and a 10% probability of one million dollars."
+        },
+        {
+            "id": 94,
+            "origin": "MedCost",
+            "content": "In the case of a severe accident, if the policyholder is an adolescent with good cushioning, there is a 90% probability of medical costs amounting to one thousand dollars, a 7% probability of ten thousand dollars, a 2% probability of one hundred thousand dollars, and a 1% probability of one million dollars."
+        },
+        {
+            "id": 95,
+            "origin": "MedCost",
+            "content": "If a severe accident occurs and the policyholder is an adolescent with excellent cushioning, there is a 95% probability of medical costs amounting to one thousand dollars, a 3% probability of ten thousand dollars, a 1% probability of one hundred thousand dollars, and a 1% probability of one million dollars."
+        },
+        {
+            "id": 96,
+            "origin": "MedCost",
+            "content": "In the case of a severe accident, if the policyholder is an adult with poor cushioning, there is a 30% probability of medical costs amounting to one thousand dollars, a 30% probability of ten thousand dollars, a 20% probability of one hundred thousand dollars, and a 20% probability of one million dollars."
+        },
+        {
+            "id": 97,
+            "origin": "MedCost",
+            "content": "If a severe accident occurs and the policyholder is an adult with fair cushioning, there is a 50% probability of medical costs amounting to one thousand dollars, a 20% probability of ten thousand dollars, a 20% probability of one hundred thousand dollars, and a 10% probability of one million dollars."
+        },
+        {
+            "id": 98,
+            "origin": "MedCost",
+            "content": "In the case of a severe accident, if the policyholder is an adult with good cushioning, there is a 90% probability of medical costs amounting to one thousand dollars, a 7% probability of ten thousand dollars, a 2% probability of one hundred thousand dollars, and a 1% probability of one million dollars."
+        },
+        {
+            "id": 99,
+            "origin": "MedCost",
+            "content": "If a severe accident occurs and the policyholder is an adult with excellent cushioning, there is a 95% probability of medical costs amounting to one thousand dollars, a 3% probability of ten thousand dollars, a 1% probability of one hundred thousand dollars, and a 1% probability of one million dollars."
+        },
+        {
+            "id": 100,
+            "origin": "MedCost",
+            "content": "In the case of a severe accident, if the policyholder is a senior with poor cushioning, there is a 20% probability of medical costs amounting to one thousand dollars, a 20% probability of ten thousand dollars, a 30% probability of one hundred thousand dollars, and a 30% probability of one million dollars."
+        },
+        {
+            "id": 101,
+            "origin": "MedCost",
+            "content": "If a severe accident occurs and the policyholder is a senior with fair cushioning, there is a 30% probability of medical costs amounting to one thousand dollars, a 30% probability of ten thousand dollars, a 20% probability of one hundred thousand dollars, and a 20% probability of one million dollars."
+        },
+        {
+            "id": 102,
+            "origin": "MedCost",
+            "content": "In the case of a severe accident, if the policyholder is a senior with good cushioning, there is a 60% probability of medical costs amounting to one thousand dollars, a 30% probability of ten thousand dollars, a 7% probability of one hundred thousand dollars, and a 3% probability of one million dollars."
+        },
+        {
+            "id": 103,
+            "origin": "MedCost",
+            "content": "If a severe accident occurs and the policyholder is a senior with excellent cushioning, there is a 90% probability of medical costs amounting to one thousand dollars, a 5% probability of ten thousand dollars, a 3% probability of one hundred thousand dollars, and a 2% probability of one million dollars."
+        },
+        {
+            "id": 104,
+            "origin": "ILiCost",
+            "content": "When there is no accident, the likelihood of the insurance liability cost being exactly one thousand dollars is 100%. In this case, the probabilities of the cost ranging from ten thousand, one hundred thousand up to a million dollars are all 0%."
+        },
+        {
+            "id": 105,
+            "origin": "ILiCost",
+            "content": "If the accident is mild, there is a 99.9% probability that the insurance liability cost will be one thousand dollars. Meanwhile, the likelihood of the cost ranging from ten thousand to a million dollars is quite remote, with all three probabilities being 0.0998%, 0.001% and 0.001%, respectively."
+        },
+        {
+            "id": 106,
+            "origin": "ILiCost",
+            "content": "When the accident is moderate, the insurance liability cost is likely to be one thousand dollars with a probability of 90%. However, there is also a chance that the cost could escalate to ten thousand, hundred thousand, or even a million dollars, with probabilities of 5%, 3%, and 2%, respectively."
+        },
+        {
+            "id": 107,
+            "origin": "ILiCost",
+            "content": "If the accident is severe, there is a likelihood of 80% for the insurance liability cost to be one thousand dollars. However, the cost may increase to ten thousand, hundred thousand, or even a million dollars, with probabilities of 10%, 6%, and 4%, respectively. This highlights the significant financial impact of severe accidents."
+        },
+        {
+            "id": 108,
+            "origin": "OtherCarCost",
+            "content": "If the vehicle is not involved in an accident and has eggshell-thin exterior protection, there is a 100% probability that the cost of the other car involved in the incident will amount to only one thousand dollars, with no chance of being at $10.000, $100.000, or $1.000.000."
+        },
+        {
+            "id": 109,
+            "origin": "OtherCarCost",
+            "content": "With no accidents and a car that's as tough as a football, the cost of the other car in the incident is certain to be just one thousand dollars."
+        },
+        {
+            "id": 110,
+            "origin": "OtherCarCost",
+            "content": "In the absence of an accident and when the car is as robust as a tank, the cost of the other vehicle in the incident will undoubtedly be a mere thousand dollars."
+        },
+        {
+            "id": 111,
+            "origin": "OtherCarCost",
+            "content": "In the case of a mild accident and a car with an eggshell-thin exterior, there's a 99% chance the other car's cost will be one thousand dollars, a 0.5% chance it will be ten thousand dollars, a 0.499% chance it will be hundred thousand dollars, and a 0.001% chance it will reach one million dollars."
+        },
+        {
+            "id": 112,
+            "origin": "OtherCarCost",
+            "content": "When the collision is mild and the car is as durable as a football, there's a 95% probability the other car's cost will be one thousand dollars, a 3% chance it will be ten thousand dollars, a 1.998% chance it will be hundred thousand dollars, and a 0.002% chance it will reach one million dollars."
+        },
+        {
+            "id": 113,
+            "origin": "OtherCarCost",
+            "content": "In the event of a mild accident and a car as robust as a tank, there's a 60% chance the other car's cost will be one thousand dollars, a 20% chance it will be ten thousand dollars, an 19.998% chance it will be hundred thousand dollars, and a 0.002% chance it will reach one million dollars."
+        },
+        {
+            "id": 114,
+            "origin": "OtherCarCost",
+            "content": "In the case of a moderate accident and a car with an eggshell-thin exterior, there's a 50% chance the other car's cost will be one thousand dollars, a 20% chance it will be ten thousand dollars, a 29.997% chance it will be hundred thousand dollars, and a 0.003% chance it will reach one million dollars."
+        },
+        {
+            "id": 115,
+            "origin": "OtherCarCost",
+            "content": "When the collision is moderate and the car is as durable as a football, there's a 40% probability the other car's cost will be one thousand dollars, a 30% chance it will be ten thousand dollars, a 29.996% chance it will be hundred thousand dollars, and a 0.004% chance it will reach one million dollars."
+        },
+        {
+            "id": 116,
+            "origin": "OtherCarCost",
+            "content": "In the case of a moderate accident and a car as robust as a tank, there's a 20% chance the other car's cost will be one thousand dollars, a 40% chance it will be ten thousand dollars, a 39.996% chance it will be hundred thousand dollars, and a 0.004% chance it will reach one million dollars."
+        },
+        {
+            "id": 117,
+            "origin": "OtherCarCost",
+            "content": "When the accident is severe and the car has an eggshell-thin exterior, there's a 10% probability the other car's cost will be one thousand dollars, a 50% chance it will be ten thousand dollars, a 39.994% chance it will be hundred thousand dollars, and a 0.006% chance it will reach one million dollars."
+        },
+        {
+            "id": 118,
+            "origin": "OtherCarCost",
+            "content": "In the case of a severe accident and a car with a durability similar to a football, there's a 0.5% probability the other car's cost will be one thousand dollars, a 55% chance it will be ten thousand dollars, a 44.49% chance it will be hundred thousand dollars, and a 0.01% chance it will reach one million dollars."
+        }
+    ],
+    "wep_based_premises": [
+        {
+            "id": 0,
+            "origin": "RuggedAuto",
+            "content": "There is an about even chance that vehicle as an eggshell-like finish, whereas it probably doesn't have a football-like finish and a tank-like finish is improbable."
+        },
+        {
+            "id": 1,
+            "origin": "MakeModel",
+            "content": "There is little chance that the make and model of a car is sport, whereas it is probably not an economy or family sedan. Chances are slight for luxury class, and there is almost no chance for super luxury. Out of all, economy and family sedan are still by far the most likely categories."
+        },
+        {
+            "id": 2,
+            "origin": "VehicleYear",
+            "content": "It is probably not the case that a vehicle is from the current year, whereas it is probable that it is an older one."
+        },
+        {
+            "id": 3,
+            "origin": "Mileage",
+            "content": "It is considered improbable that a car has a mileage of five thousand. A car with mileage of twenty thousand has an slighly less than about even chance. Similarly, a car with mileage of fifty thousand also has an slighly below even chance. A car with a mileage of one million only has slight chances."
+        },
+        {
+            "id": 4,
+            "origin": "DrivingSkill",
+            "content": "It is probably not the case that a car owner has poor driving skills, whereas there is a better than even chance that he or she has normal driving skills, while it is improbable that he or she has excellent driving skills."
+        },
+        {
+            "id": 5,
+            "origin": "Age",
+            "content": "It is unlikely that a driver is an adolescent or senior, whereas there is a better than even chance that the driver is an adult."
+        },
+        {
+            "id": 6,
+            "origin": "Airbag",
+            "content": "If the make and model of the car is a sports car and the car is of the current year, then it is certain that the car has airbags and impossible that the car does not have airbags."
+        },
+        {
+            "id": 7,
+            "origin": "Airbag",
+            "content": "If the make and model of the car is a sports car and the car is older, then there is a slight chance that the car has airbags and it is highly likely that the car does not have airbags."
+        },
+        {
+            "id": 8,
+            "origin": "Airbag",
+            "content": "If the make and model of the car is an economy car and the car is of the current year, then it is certain that the car has airbags and impossible that the car does not have airbags."
+        },
+        {
+            "id": 9,
+            "origin": "Airbag",
+            "content": "If the make and model of the car is an economy car and the car is older, then it is highly unlikely that the car has airbags and almost certain that the car does not have airbags."
+        },
+        {
+            "id": 10,
+            "origin": "Airbag",
+            "content": "If the make and model of the car is a family sedan and the car is of the current year, then it is certain that the car has airbags and impossible that the car does not have airbags"
+        },
+        {
+            "id": 11,
+            "origin": "Airbag",
+            "content": "If the make and model of the car is a family sedan and the car is older, then it is probably not the case that the car has airbags and it is likely that the car does not have airbags"
+        },
+        {
+            "id": 12,
+            "origin": "Airbag",
+            "content": "If the make and model of the car is a luxury car and the car is of the current year, then it is certain that the car has airbags and impossible that the car does not have airbags."
+        },
+        {
+            "id": 13,
+            "origin": "Airbag",
+            "content": "If the make and model of the car is a luxury car and the car is older, then there is a better than even chance that the car has airbags and probably not the case that the car does not have airbags."
+        },
+        {
+            "id": 14,
+            "origin": "Airbag",
+            "content": "If the make and model of the car is a super luxury car and the car is of the current year, then it is certain that the car has airbags and impossible that the car does not have airbags."
+        },
+        {
+            "id": 15,
+            "origin": "Airbag",
+            "content": "If the make and model of the car is a super luxury car and the car is older, then it is the case that the chances are slight that the car has airbags and highly likely that the car does not have airbags."
+        },
+        {
+            "id": 16,
+            "origin": "Antilock",
+            "content": "If the make and model of the car is a sports car and it was manufactured in the current year, then the likelihood of anti-theft devices being present in the car is highly likely."
+        },
+        {
+            "id": 17,
+            "origin": "Antilock",
+            "content": "If the make and model of the car is a sports car and it is an older model, then there is only a little chance of anti-lock brakes being present in the car."
+        },
+        {
+            "id": 18,
+            "origin": "Antilock",
+            "content": "If the make and model of the car is an economy car and it is a current year model, then there is almost no chance of anti-lock brakes being present in the car."
+        },
+        {
+            "id": 19,
+            "origin": "Antilock",
+            "content": "If the make and model of the car is an economy car and it is an older model, then it is impossible for anti-lock brakes being present in the car."
+        },
+        {
+            "id": 20,
+            "origin": "Antilock",
+            "content": "If the make and model of the car is a family sedan and it is a current year model, then anti-lock brakes are probably not present in the car."
+        },
+        {
+            "id": 21,
+            "origin": "Antilock",
+            "content": "If the make and model of the car is a family sedan and it is an older model, then it is impossible for anti-lock brakes being present in the car."
+        },
+        {
+            "id": 22,
+            "origin": "Antilock",
+            "content": "If the make and model of the car is a luxury car and it is a current year model, then anti-lock brakes are almost certainly present in the car."
+        },
+        {
+            "id": 23,
+            "origin": "Antilock",
+            "content": "If the make and model of the car is a luxury car and it is an older model, then anti-lock brakes are probably not present in the car."
+        },
+        {
+            "id": 24,
+            "origin": "Antilock",
+            "content": "If the make and model of the car is a super luxury car and it is a current year model, then anti-lock brakes are almost certainly present in the car."
+        },
+        {
+            "id": 25,
+            "origin": "Antilock",
+            "content": "If the make and model of the car is a super luxury car and it is an older model, then anti-lock brakes are probably not present in the car."
+        },
+        {
+            "id": 26,
+            "origin": "Cushioning",
+            "content": "If the car is eggshell-like and has an airbag, then there is an about even chance for their cushioning to be poor, it is probably not the case that their cushioning is fair, it is unlikely for their cushioning to be good, and impossible for their cushioning to be excellent."
+        },
+        {
+            "id": 27,
+            "origin": "Cushioning",
+            "content": "Given that the car is eggshell-like and the car does not have an airbag, it is probable that the cushioning of the car is poor, but it is probably not fair. It is impossible for the cushioning to be good or excellent."
+        },
+        {
+            "id": 28,
+            "origin": "Cushioning",
+            "content": "Given that the car is football-like and it has an Airbag installed, it is virtually impossible for the car to have a poor cushioning. Additionally, there is little chance that the car will have a fair cushioning, while there is a better than even chance that the car has a good cushioning. However, it is probably not the case that the car has an excellent cushioning."
+        },
+        {
+            "id": 29,
+            "origin": "Cushioning",
+            "content": "Given that the car is football-like and has no airbag, then it is improbable that the cushioning is poor, there is a better than even chance that the cushioning is fair, it is probably not the case that the cushioning is good, and it is impossible that the cushioning is excellent."
+        },
+        {
+            "id": 30,
+            "origin": "Cushioning",
+            "content": "Given that the car model tank-like and it has an airbag, it is absolutely impossible for the cushioning to be poor, fair, or even good. However, it is certain that the cushioning is excellent."
+        },
+        {
+            "id": 31,
+            "origin": "Cushioning",
+            "content": "Given that the car is like a tank and does not have an airbag, it is impossible that the cushioning is poor or fair, but it is probably good and probably not excellent."
+        },
+        {
+            "id": 32,
+            "origin": "Accident",
+            "content": "If it is determined that the car has anti-lock brakes, the mileage is 5,000, and the overall driving quality is poor, then the chances of having no accident are better than even, it is unlikely to have a mild accident, it is highly unlikely to have a moderate accident, and there is almost no chance of having a severe accident."
+        },
+        {
+            "id": 33,
+            "origin": "Accident",
+            "content": "If it is determined that the car has anti-lock brakes, the mileage is 5,000, and the overall driving quality is normal, then it is almost certain that there will be no accident, and there is almost no to have a mild, moderate, or severe accident."
+        },
+        {
+            "id": 34,
+            "origin": "Accident",
+            "content": "If the car has anti-lock brakes, the mileage is 5,000, and the driving quality is excellent, then it is almost certain that there will be no accident, and there is almost no chance to have a mild, moderate, or severe accident."
+        },
+        {
+            "id": 35,
+            "origin": "Accident",
+            "content": "If the car has anti-lock brakes, the mileage is 20,000, and the driving quality is poor, then it is probably not the case that there will be no accident or a mild one, and it is unlikely to have a moderate accident and improbable to have a severe one."
+        },
+        {
+            "id": 36,
+            "origin": "Accident",
+            "content": "If the car has anti-lock brakes, the mileage is 20,000, and the driving quality is normal, then it is almost certain that there will be no accident, and there is almost no chance to have a mild, moderate, or severe accident."
+        },
+        {
+            "id": 37,
+            "origin": "Accident",
+            "content": "If the car has anti-lock brakes, the mileage is 20,000, and the driving quality is excellent, then it is almost certain that there will be no accident, and there is almost no to have a mild, moderate, or severe accident."
+        },
+        {
+            "id": 38,
+            "origin": "Accident",
+            "content": "If the car has anti-lock brakes, the mileage is 50,000, and the driving quality is poor, then it is probably not the case that there will be no accident or a mild one, and there are slight chances to have a moderate accident and unlikely to have a severe one."
+        },
+        {
+            "id": 39,
+            "origin": "Accident",
+            "content": "If the car has anti-lock brakes, the mileage is 50,000, and the driving quality is normal, then it is almost certain that there will be no accident, and there is almost no to have a mild, moderate, or severe accident."
+        },
+        {
+            "id": 40,
+            "origin": "Accident",
+            "content": "If the car has anti-lock brakes, the mileage is 50,000, and the driving quality is excellent, then it is almost certain that there will be no accident, and there is almost no chance to have a mild, moderate, or severe accident."
+        },
+        {
+            "id": 41,
+            "origin": "Accident",
+            "content": "Given that the car is equipped with antilock brakes, has a high mileage of one million, and has a poor driving quality, it is unlikely that there will be no accidents, and it is probably not the case that any accidents that do occur will be mild, moderate, or severe."
+        },
+        {
+            "id": 42,
+            "origin": "Accident",
+            "content": "Given that the car insurance holder has anti-lock brakes, normal driving quality, and has driven for a million miles, we can almost certainly say that they will not have a severe or moderate accident, and there is almost no chance that they will have a mild or no accident."
+        },
+        {
+            "id": 43,
+            "origin": "Accident",
+            "content": "Given that the car insurance holder has a vehicle with antilock brakes, has driven for a million miles, and has an excellent driving quality, then it is almost certain that they will not have any accidents, and there is almost no chance that they will have mild, moderate, or severe accidents."
+        },
+        {
+            "id": 44,
+            "origin": "Accident",
+            "content": "Assuming the driver has no anti-lock brakes, their car has 5,000 miles, and their driving quality is poor, then there is a better than even chance of no accident, it is unlikely to have a mild accident, there is a slight chance of a moderate accident, and there is little chance of a severe accident."
+        },
+        {
+            "id": 45,
+            "origin": "Accident",
+            "content": "Assuming the driver does not have anti-lock brakes, their car has 5,000 miles, and their driving quality is normal, then it is almost certain that there will be no accident, and there is almost no chance of a mild, moderate, or severe accident."
+        },
+        {
+            "id": 46,
+            "origin": "Accident",
+            "content": "Assuming the driver does not have anti-lock brakes, their car has 5,000 miles, and their driving quality is excellent, then it is almost certain that there will be no accident, and there is almost no chance of a mild, moderate, or severe accident."
+        },
+        {
+            "id": 47,
+            "origin": "Accident",
+            "content": "Assuming the driver does not have anti-lock brakes, their car has 20,000 miles, and their driving quality is poor, then there is probably not going to be an accident, but if there is, it is unlikely to be mild or moderate, and there is probably not going to be a severe accident either."
+        },
+        {
+            "id": 48,
+            "origin": "Accident",
+            "content": "Assuming the driver does not have anti-lock brakes, their car has 20,000 miles, and their driving quality is normal, then it is almost certain that there will be no accident, and there is almost no chance of a mild, moderate, or severe accident."
+        },
+        {
+            "id": 49,
+            "origin": "Accident",
+            "content": "Assuming the driver does not have anti-lock brakes, their car has 20,000 miles, and their driving quality is excellent, then it is almost certain that there will be no accident, and there is almost no chance of a mild, moderate, or severe accident."
+        },
+        {
+            "id": 50,
+            "origin": "Accident",
+            "content": "Assuming the driver does not have anti-lock brakes, their car has 50,000 miles, and their driving quality is poor, then it is unlikely that there will be no accident, and it is also unlikely to be mild or moderate. Moreover, there is probably not going to be a severe accident."
+        },
+        {
+            "id": 51,
+            "origin": "Accident",
+            "content": "Assuming the driver does not have anti-lock brakes, their car has 50,000 miles, and their driving quality is normal, then it is almost certain that there will be no accident, and there is almost no chance of a mild, moderate, or severe accident."
+        },
+        {
+            "id": 52,
+            "origin": "Accident",
+            "content": "Assuming the driver does not have anti-lock brakes, their car has 50,000 miles, and their driving quality is excellent, then it is almost certain that there will be no accident, and there is almost no chance of a mild, moderate, or severe accident."
+        },
+        {
+            "id": 53,
+            "origin": "Accident",
+            "content": "Given that the car does not have anti-lock brakes, the mileage is at one million, and the driving quality is poor, then the chances of having no accident are little, the chances of having a mild accident are improbable, the chances of having a moderate accident are probably not high, and the chances of having a severe accident are about even."
+        },
+        {
+            "id": 54,
+            "origin": "Accident",
+            "content": "Assuming the driver does not have anti-lock brakes, their car has mileage of one million, and their driving quality is normal, then it is almost certain that there will be no accident, and there is almost no chance of a mild, moderate, or severe accident."
+        },
+        {
+            "id": 55,
+            "origin": "Accident",
+            "content": "Assuming the driver does not have anti-lock brakes, their car has a mileage of one million, and their driving quality is excellent, then it is almost certain that there will be no accident, and there is almost no chance of a mild, moderate, or severe accident."
+        },
+        {
+            "id": 56,
+            "origin": "MedCost",
+            "content": "If there has been no accident, the driver is an adolescent, and the cushioning in the event of an accident is poor, then the medical cost will be a thousand dollars with certainty, and it is impossible for the medical cost to be ten thousand, hundred thousand, or one million dollars."
+        },
+        {
+            "id": 57,
+            "origin": "MedCost",
+            "content": "If there has been no accident, the driver is an adolescent, and the cushioning in the event of an accident is fair, then the medical cost will certainly be a thousand dollars, and it is impossible for the medical cost to be ten thousand, hundred thousand, or one million dollars."
+        },
+        {
+            "id": 58,
+            "origin": "MedCost",
+            "content": "If there has been no accident, the driver is an adolescent, and the cushioning in the event of an accident is good, then the medical cost will certainly be a thousand dollars, and it is impossible for the medical cost to be ten thousand, hundred thousand, or one million dollars."
+        },
+        {
+            "id": 59,
+            "origin": "MedCost",
+            "content": "If there has been no accident, the driver is an adolescent, and the cushioning in the event of an accident is excellent, then the medical cost will certainly be a thousand dollars, and it is impossible for the medical cost to be ten thousand, hundred thousand, or one million dollars."
+        },
+        {
+            "id": 60,
+            "origin": "MedCost",
+            "content": "If there has been no accident, the driver is an adult, and the cushioning in the event of an accident is poor, then the medical cost will certainly be a thousand dollars, and it is impossible for the medical cost to be ten thousand, hundred thousand, or one million dollars."
+        },
+        {
+            "id": 61,
+            "origin": "MedCost",
+            "content": "If there has been no accident, the driver is an adult, and the cushioning in the event of an accident is fair, then the medical cost will certainly be a thousand dollars, and it is impossible for the medical cost to be ten thousand, hundred thousand, or one million dollars."
+        },
+        {
+            "id": 62,
+            "origin": "MedCost",
+            "content": "If there has been no accident, the driver is an adult, and the cushioning in the event of an accident is good, then the medical cost will certainly be a thousand dollars, and it is impossible for the medical cost to be ten thousand, hundred thousand, or one million dollars."
+        },
+        {
+            "id": 63,
+            "origin": "MedCost",
+            "content": "If there has been no accident, the driver is an adult, and the cushioning in the event of an accident is excellent, then the medical cost will certainly be a thousand dollars, and it is impossible for the medical cost to be ten thousand, hundred thousand, or one million dollars."
+        },
+        {
+            "id": 64,
+            "origin": "MedCost",
+            "content": "If there has been no accident, the driver is a senior, and the cushioning in the event of an accident is poor, then the medical cost will certainly be a thousand dollars, and it is impossible for the medical cost to be ten thousand, hundred thousand, or one million dollars."
+        },
+        {
+            "id": 65,
+            "origin": "MedCost",
+            "content": "If there has been no accident, the driver is a senior, and the cushioning in the event of an accident is fair, then the medical cost will certainly be a thousand dollars, and it is impossible for the medical cost to be ten thousand, hundred thousand, or one million dollars."
+        },
+        {
+            "id": 66,
+            "origin": "MedCost",
+            "content": "If there has been no accident, the driver is a senior, and the cushioning in the event of an accident is good, then the medical cost will certainly be a thousand dollars, and it is impossible for the medical cost to be ten thousand, hundred thousand, or one million dollars."
+        },
+        {
+            "id": 67,
+            "origin": "MedCost",
+            "content": "If there has been no accident, the driver is a senior, and the cushioning in the event of an accident is excellent, then the medical cost will certainly be a thousand dollars, and it is impossible for the medical cost to be ten thousand, hundred thousand, or one million dollars."
+        },
+        {
+            "id": 68,
+            "origin": "MedCost",
+            "content": "If the accident is mild, the driver is an adolescent, and the cushioning in the event of an accident is poor, then the medical cost will almost certainly be a thousand dollars, and there is almost no chance for the medical cost to be ten thousand, hundred thousand, or one million dollars."
+        },
+        {
+            "id": 69,
+            "origin": "MedCost",
+            "content": "If the accident is mild, the driver is an adolescent, and the cushioning in the event of an accident is fair, then the medical cost will almost certainly be a thousand dollars, and there is almost no chance for the medical cost to be ten thousand, hundred thousand, or one million dollars."
+        },
+        {
+            "id": 70,
+            "origin": "MedCost",
+            "content": "If the accident is mild, the driver is an adolescent, and the cushioning in the event of an accident is good, then the medical cost will almost certainly be a thousand dollars, and there is almost no chance for the medical cost to be ten thousand, hundred thousand, or one million dollars."
+        },
+        {
+            "id": 71,
+            "origin": "MedCost",
+            "content": "If the accident is mild, the driver is an adolescent, and the cushioning in the event of an accident is excellent, then the medical cost will almost certainly be a thousand dollars, and there is almost no chance for the medical cost to be ten thousand, hundred thousand, or one million dollars."
+        },
+        {
+            "id": 72,
+            "origin": "MedCost",
+            "content": "If the accident is mild, the driver is an adult, and the cushioning in the event of an accident is poor, then the medical cost will almost certainly be a thousand dollars, and there is almost no chance for the medical cost to be ten thousand, hundred thousand, or one million dollars."
+        },
+        {
+            "id": 73,
+            "origin": "MedCost",
+            "content": "If the accident is mild, the driver is an adult, and the cushioning in the event of an accident is fair, then the medical cost will almost certainly be a thousand dollars, and there is almost no chance for the medical cost to be ten thousand, hundred thousand, or one million dollars."
+        },
+        {
+            "id": 74,
+            "origin": "MedCost",
+            "content": "If the accident is mild, the driver is an adult, and the cushioning in the event of an accident is good, then the medical cost will almost certainly be a thousand dollars, and there is almost no chance for the medical cost to be ten thousand, hundred thousand, or one million dollars."
+        },
+        {
+            "id": 75,
+            "origin": "MedCost",
+            "content": "If the accident is mild, the driver is an adult, and the cushioning in the event of an accident is excellent, then the medical cost will almost certainly be a thousand dollars, and there is almost no chance for the medical cost to be ten thousand, hundred thousand, or one million dollars."
+        },
+        {
+            "id": 76,
+            "origin": "MedCost",
+            "content": "If the accident is mild, the driver is a senior, and the cushioning in the event of an accident is poor, then the medical cost is highly likely to be a thousand dollars, and it is highly unlikely to be ten thousand dollars, with almost no chance of it being hundred thousand or one million dollars."
+        },
+        {
+            "id": 77,
+            "origin": "MedCost",
+            "content": "If the accident is mild, the driver is a senior, and the cushioning in the event of an accident is fair, then the medical cost is almost certain to be a thousand dollars, and it is highly unlikely to be ten thousand dollars, with almost no chance of it being hundred thousand or one million dollars."
+        },
+        {
+            "id": 78,
+            "origin": "MedCost",
+            "content": "If the accident is mild, the driver is a senior, and the cushioning in the event of an accident is good, then the medical cost is almost certain to be a thousand dollars, and there is almost no chance for the medical cost to be ten thousand, hundred thousand, or one million dollars."
+        },
+        {
+            "id": 79,
+            "origin": "MedCost",
+            "content": "If the accident is mild, the driver is a senior, and the cushioning in the event of an accident is excellent, then the medical cost is almost certain to be a thousand dollars, and there is almost no chance for the medical cost to be ten thousand, hundred thousand, or one million dollars."
+        },
+        {
+            "id": 80,
+            "origin": "MedCost",
+            "content": "If the accident is moderate, the driver is an adolescent, and the cushioning in the event of an accident is poor, then the medical cost has an about even chance to be a thousand dollars, and it is unlikely for the medical cost to be ten thousand dollars, probably not the case that it is hundred thousand, and improbable to be one million dollars."
+        },
+        {
+            "id": 81,
+            "origin": "MedCost",
+            "content": "If the accident is moderate, the driver is an adolescent, and the cushioning in the event of an accident is fair, then the medical cost has a very good chance of being a thousand dollars, and it is highly unlikely for the medical cost to be ten thousand dollars, with almost no chance of it being hundred thousand or one million dollars."
+        },
+        {
+            "id": 82,
+            "origin": "MedCost",
+            "content": "If the accident is moderate, the driver is an adolescent, and the cushioning in the event of an accident is good, then the medical cost is almost certain to be a thousand dollars, and there is almost no chance for the medical cost to be ten thousand, hundred thousand, or one million dollars."
+        },
+        {
+            "id": 83,
+            "origin": "MedCost",
+            "content": "If the accident is moderate, the driver is an adolescent, and the cushioning in the event of an accident is excellent, then the medical cost is almost certain to be a thousand dollars, and there is almost no chance for the medical cost to be ten thousand, hundred thousand, or one million dollars."
+        },
+        {
+            "id": 84,
+            "origin": "MedCost",
+            "content": "If the accident is moderate, the driver is an adult, and the cushioning in the event of an accident is poor, then the medical cost is probably not going to be a thousand dollars, and it is unlikely for the medical cost to be ten thousand or hundred thousand dollars, with chances being slight for it to be one million dollars."
+        },
+        {
+            "id": 85,
+            "origin": "MedCost",
+            "content": "If the accident is moderate, the driver is an adult, and the cushioning in the event of an accident is fair, then the medical cost has a very good chance of being a thousand dollars, and there is only a slight chance for the medical cost to be ten thousand dollars, with almost no chance of it being hundred thousand or one million dollars."
+        },
+        {
+            "id": 86,
+            "origin": "MedCost",
+            "content": "If the accident is moderate, the driver is an adult, and the cushioning in the event of an accident is good, then the medical cost is almost certain to be a thousand dollars, and there is almost no chance for the medical cost to be ten thousand, hundred thousand, or one million dollars."
+        },
+        {
+            "id": 87,
+            "origin": "MedCost",
+            "content": "If the accident is moderate, the driver is an adult, and the cushioning in the event of an accident is excellent, then the medical cost is almost certain to be a thousand dollars, and there is almost no chance for the medical cost to be ten thousand, hundred thousand, or one million dollars."
+        },
+        {
+            "id": 88,
+            "origin": "MedCost",
+            "content": "If the accident is moderate, the driver is a senior, and the cushioning in the event of an accident is poor, then the medical cost is probably not going to be a thousand or ten thousand dollars, and it is unlikely for the medical cost to be hundred thousand or one million dollars."
+        },
+        {
+            "id": 89,
+            "origin": "MedCost",
+            "content": "If the accident is moderate, the driver is a senior, and the cushioning in the event of an accident is fair, then the medical cost has about even chances of being a thousand dollars, and it is unlikely for the medical cost to be ten thousand or hundred thousand dollars, with only slight chances of it being one million dollars."
+        },
+        {
+            "id": 90,
+            "origin": "MedCost",
+            "content": "If the accident is moderate, the driver is a senior, and the cushioning in the event of an accident is good, then the medical cost is highly likely to be a thousand dollars, and it is highly unlikely for the medical cost to be ten thousand, hundred thousand, or one million dollars."
+        },
+        {
+            "id": 91,
+            "origin": "MedCost",
+            "content": "If the accident is moderate, the driver is a senior, and the cushioning in the event of an accident is excellent, then the medical cost is almost certain to be a thousand dollars, and there is almost no chance for the medical cost to be ten thousand, hundred thousand, or one million dollars."
+        },
+        {
+            "id": 92,
+            "origin": "MedCost",
+            "content": "If the accident is severe, the driver is an adolescent, and the cushioning in the event of an accident is poor, then the medical cost is probably not going to be a thousand or ten thousand dollars, and it is unlikely for the medical cost to be hundred thousand or one million dollars."
+        },
+        {
+            "id": 93,
+            "origin": "MedCost",
+            "content": "If the accident is severe, the driver is an adolescent, and the cushioning in the event of an accident is fair, then the medical cost has about even chances of being a thousand dollars, and it is unlikely for the medical cost to be ten thousand or hundred thousand dollars, with only slight chances of it being one million dollars."
+        },
+        {
+            "id": 94,
+            "origin": "MedCost",
+            "content": "If the accident is severe, the driver is an adolescent, and the cushioning in the event of an accident is good, then the medical cost is highly likely to be a thousand dollars, and there is almost no chance for the medical cost to be ten thousand, hundred thousand, or one million dollars."
+        },
+        {
+            "id": 95,
+            "origin": "MedCost",
+            "content": "If the accident is severe, the driver is an adolescent, and the cushioning in the event of an accident is excellent, then the medical cost is almost certain to be a thousand dollars, and there is almost no chance for the medical cost to be ten thousand, hundred thousand, or one million dollars."
+        },
+        {
+            "id": 96,
+            "origin": "MedCost",
+            "content": "If the accident is severe, the driver is an adult, and the cushioning in the event of an accident is poor, then the medical cost is probably not going to be a thousand or ten thousand dollars, and it is unlikely for the medical cost to be hundred thousand or one million dollars."
+        },
+        {
+            "id": 97,
+            "origin": "MedCost",
+            "content": "If the accident is severe, the driver is an adult, and the cushioning in the event of an accident is fair, then the medical cost has about even chances of being a thousand dollars, and it is unlikely for the medical cost to be ten thousand or hundred thousand dollars, with improbable chances of it being one million dollars."
+        },
+        {
+            "id": 98,
+            "origin": "MedCost",
+            "content": "If the accident is severe, the driver is an adult, and the cushioning in the event of an accident is good, then the medical cost is highly likely to be a thousand dollars, highly unlikely to be ten thousand dollars, and it is almost impossible for the medical cost to be hundred thousand or one million dollars."
+        },
+        {
+            "id": 99,
+            "origin": "MedCost",
+            "content": "If the accident is severe, the driver is an adult, and the cushioning in the event of an accident is excellent, then the medical cost is almost certain to be a thousand dollars, and there is almost no chance for the medical cost to be ten thousand, hundred thousand, or one million dollars."
+        },
+        {
+            "id": 100,
+            "origin": "MedCost",
+            "content": "If the accident is severe, the driver is a senior, and the cushioning in the event of an accident is poor, then the medical cost is unlikely to be a thousand or ten thousand dollars, and it is probably not going to be hundred thousand dollars. Also, one million dollars is unlikely."
+        },
+        {
+            "id": 101,
+            "origin": "MedCost",
+            "content": "If the accident is severe, the driver is a senior, and the cushioning in the event of an accident is fair, then the medical cost is probably not going to be a thousand or ten thousand dollars, and it is unlikely for the medical cost to be hundred thousand or one million dollars."
+        },
+        {
+            "id": 102,
+            "origin": "MedCost",
+            "content": "If the accident is severe, the driver is a senior, and the cushioning in the event of an accident is good, then the medical cost is better than even to be a thousand dollars, and it is probably not going to be ten thousand dollars, it is highly unlikely that it is hundred thousand and there is almost no chance of being one million dollars."
+        },
+        {
+            "id": 103,
+            "origin": "MedCost",
+            "content": "If the accident is severe, the driver is a senior, and the cushioning in the event of an accident is excellent, then the medical cost is highly likely to be a thousand dollars, highly unlikely to be ten thousand, and there is almost no chance for the medical cost to be hundred thousand, or one million dollars."
+        },
+        {
+            "id": 104,
+            "origin": "ILiCost",
+            "content": "Given that the car insurance holder has had no accidents, it is certain that the insurance liability cost will be one thousand, while it is impossible for the insurance liability cost to be ten thousand, one hundred thousand, or one million."
+        },
+        {
+            "id": 105,
+            "origin": "ILiCost",
+            "content": "In a scenario where the driver has been involved in a mild accident, the insurance liability cost is almost certain to be around one thousand dollars, while there is almost no chance for it to reach ten thousand, hundred thousand, or million dollars."
+        },
+        {
+            "id": 106,
+            "origin": "ILiCost",
+            "content": "If the driver has been involved in a moderate accident, then the insurance liability cost is highly likely to be around one thousand dollars, highly unlikely to reach ten thousand dollars, and almost certainly not going to be as high as hundred thousand or million dollars."
+        },
+        {
+            "id": 107,
+            "origin": "ILiCost",
+            "content": "In the case where the driver has been involved in a severe accident, the insurance liability cost is highly likely to be around one thousand dollars, there is little chance for it to reach ten thousand dollars, and it is highly unlikely for it to be as high as hundred thousand or million dollars."
+        },
+        {
+            "id": 108,
+            "origin": "OtherCarCost",
+            "content": "Given that the car insurance holder has not been in an accident and the car's durability is compared to an egg shell, it is certain that the cost of damage to the other car will be a thousand dollars, but it is impossible for it to be ten thousand dollars, a hundred thousand dollars, or a million dollars."
+        },
+        {
+            "id": 109,
+            "origin": "OtherCarCost",
+            "content": "In the scenario where there is no accident and the car's durability is compared to a football, it is certain that the cost of the other car involved would be a thousand dollars, while it is impossible for it to be ten thousand, hundred thousand, or a million dollars."
+        },
+        {
+            "id": 110,
+            "origin": "OtherCarCost",
+            "content": "In the situation where there is no accident and the car's durability is described as being similar to a tank, it is certain that the cost of the other car involved would not be a thousand dollars, and it is impossible for it to be ten thousand, hundred thousand, or a million dollars."
+        },
+        {
+            "id": 111,
+            "origin": "OtherCarCost",
+            "content": "In the case where there is a mild accident and the car's durability is as fragile as an eggshell, it is almost certain that the cost of the other car involved would be a thousand dollars, and there is almost no chance for it to be ten thousand, hundred thousand, or a million dollars."
+        },
+        {
+            "id": 112,
+            "origin": "OtherCarCost",
+            "content": "In the scenario where there is a mild accident and the car's durability is compared to a football, it is almost certain that the cost of the other car involved would be a thousand dollars, and there is almost no chance for it to be ten thousand, hundred thousand, or a million dollars."
+        },
+        {
+            "id": 113,
+            "origin": "OtherCarCost",
+            "content": "In the situation where there is a mild accident and the car's durability is described as being similar to a tank, there is a better than even chance that the cost of the other car involved would be a thousand dollars, and it is unlikely for it to be ten thousand or hundred thousand dollars, while there is almost no chance for it to be one million."
+        },
+        {
+            "id": 114,
+            "origin": "OtherCarCost",
+            "content": "In the case where there is a moderate accident and the car's durability is as fragile as an eggshell, there is an about even chance that the cost of the other car involved would be a thousand dollars, and it is unlikely for it to be ten thousand dollars, it is probably not a hundred thousand dollars, and there is almost no chance of it being one million dollars."
+        },
+        {
+            "id": 115,
+            "origin": "OtherCarCost",
+            "content": "In the scenario where there is a moderate accident and the car's durability is compared to a football, it is probably not the case that the cost of the other car involved would be a thousand, ten thousand, or hundred thousand dollars, and there is almost no chance of it being one million dollars."
+        },
+        {
+            "id": 116,
+            "origin": "OtherCarCost",
+            "content": "In the situation where there is a moderate accident and the car's durability is described as being similar to a tank, it is unlikely that the cost of the other car involved would be a thousand dollars, and it is probably not the case that the cost would be ten thousand or hundred thousand dollars. It is almost impossible for the cost to be a million dollars."
+        },
+        {
+            "id": 117,
+            "origin": "OtherCarCost",
+            "content": "In the case where there is a severe accident and the car's durability is as fragile as an eggshell, there are only slight chances that the cost of the other car involved would be a thousand dollars, and there is an about even chance that the cost would be ten thousand dollars. It is probably not the case that the cost would be hundred thousand dollars, and it is almost impossible for it to be a million dollars."
+        },
+        {
+            "id": 118,
+            "origin": "OtherCarCost",
+            "content": "In the scenario where there is a severe accident and the car's durability is compared to a football, it is almost impossible for the cost of the other car involved to be a thousand dollars, and there is a better than even chance that the cost would be ten thousand dollars. However, it is probably not the case that the cost would be hundred thousand dollars, and it is almost impossible for it to be a million dollars."
+        }
+    ],
+    "evidence_query_pairs": [
+        {
+            "id": 0,
+            "evidences": [
+                "The cost of the other car involved in the accident is one million.",
+                "The car's cushioning is good.",
+                "The accident is moderate.",
+                "The medical costs in case of an accident are one thousand."
+            ],
+            "query": "What is the likelihood of the insurance liability cost being ten thousand?",
+            "answer": 0.05,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "OtherCarCost",
+                "Cushioning",
+                "Accident",
+                "MedCost",
+                "ILiCost"
+            ]
+        },
+        {
+            "id": 1,
+            "evidences": [
+                "The car is equipped with an antilock braking system.",
+                "The medical costs in case of an accident are equal to one hundred thousand dollars.",
+                "The accident is severe.",
+                "The insurance liability cost is equal to one million dollars.",
+                "The car has an airbag built in.",
+                "The cost of the other car involved in the accident is equal to one thousand dollars."
+            ],
+            "query": "What is the likelihood of the car's cushioning being poor given these circumstances?",
+            "answer": 0.61979862,
+            "reasoning_types": [
+                "causal",
+                "evidential",
+                "explaining_away"
+            ],
+            "sampled_nodes": [
+                "Antilock",
+                "MedCost",
+                "Accident",
+                "ILiCost",
+                "Airbag",
+                "OtherCarCost",
+                "Cushioning"
+            ]
+        },
+        {
+            "id": 2,
+            "evidences": [
+                "The car does not have an airbag.",
+                "The car does not have an antilock system for the brakes.",
+                "The car has fair cushioning."
+            ],
+            "query": "What is the likelihood of this car being involved in a moderate accident?",
+            "answer": 0.074516,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "Airbag",
+                "Antilock",
+                "Cushioning",
+                "Accident"
+            ]
+        },
+        {
+            "id": 3,
+            "evidences": [
+                "The cost of the other car involved in the accident is one thousand.",
+                "The car is equipped with an antilock braking system."
+            ],
+            "query": "What is the likelihood of incurring medical costs in the million-dollar range in this accident?",
+            "answer": 0.0021390555,
+            "reasoning_types": [],
+            "sampled_nodes": [
+                "OtherCarCost",
+                "Antilock",
+                "MedCost"
+            ]
+        },
+        {
+            "id": 4,
+            "evidences": [
+                "The cost of the other car involved in the accident is ten thousand dollars."
+            ],
+            "query": "What is the likelihood of the car having an antilock system for the brakes?",
+            "answer": 0.1059359,
+            "reasoning_types": [
+                "evidential"
+            ],
+            "sampled_nodes": [
+                "OtherCarCost",
+                "Antilock"
+            ]
+        },
+        {
+            "id": 5,
+            "evidences": [
+                "The car is equipped with an antilock braking system.",
+                "The car also has an airbag installed.",
+                "The insurance liability cost for this car is one hundred thousand dollars.",
+                "The car's cushioning is rated as poor."
+            ],
+            "query": "What is the likelihood of medical costs for this driver being one hundred thousand dollars?",
+            "answer": 0.21214332,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "Antilock",
+                "Airbag",
+                "ILiCost",
+                "Cushioning",
+                "MedCost"
+            ]
+        },
+        {
+            "id": 6,
+            "evidences": [
+                "The accident is severe.",
+                "The medical costs for this accident are in the thousands of dollars.",
+                "The car's cushioning is excellent.",
+                "The car does not have an antilock system for the brakes."
+            ],
+            "query": "What is the likelihood of the other car involved in the accident also having costs in the thousands of dollars?",
+            "answer": 0.0015907336,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "Accident",
+                "MedCost",
+                "Cushioning",
+                "Antilock",
+                "OtherCarCost"
+            ]
+        },
+        {
+            "id": 7,
+            "evidences": [
+                "The insurance liability cost in case of an accident is one million."
+            ],
+            "query": "What is the likelihood of the medical costs in case of an accident being one hundred thousand?",
+            "answer": 0.12598858,
+            "reasoning_types": [],
+            "sampled_nodes": [
+                "ILiCost",
+                "MedCost"
+            ]
+        },
+        {
+            "id": 8,
+            "evidences": [
+                "The car does not have an airbag.",
+                "The medical costs in case of an accident are estimated to be one thousand dollars.",
+                "The car does not have an antilock system for the brakes."
+            ],
+            "query": "What is the likelihood of this car being involved in no accident?",
+            "answer": 0.80065863,
+            "reasoning_types": [
+                "causal",
+                "evidential"
+            ],
+            "sampled_nodes": [
+                "Airbag",
+                "MedCost",
+                "Antilock",
+                "Accident"
+            ]
+        },
+        {
+            "id": 9,
+            "evidences": [
+                "The car does not have an antilock system for the brakes.",
+                "The car has an airbag built in."
+            ],
+            "query": "What is the likelihood of this car being involved in a moderate accident?",
+            "answer": 0.074516,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "Antilock",
+                "Airbag",
+                "Accident"
+            ]
+        },
+        {
+            "id": 10,
+            "evidences": [
+                "The car has fair cushioning.",
+                "The car is equipped with an antilock braking system."
+            ],
+            "query": "What is the likelihood of this car being involved in a moderate accident?",
+            "answer": 0.0685372,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "Cushioning",
+                "Antilock",
+                "Accident"
+            ]
+        },
+        {
+            "id": 11,
+            "evidences": [
+                "The cushioning of the car is good.",
+                "The accident is moderate."
+            ],
+            "query": "What is the likelihood of the car not having an airbag installed?",
+            "answer": 0.44949518,
+            "reasoning_types": [
+                "evidential"
+            ],
+            "sampled_nodes": [
+                "Cushioning",
+                "Accident",
+                "Airbag"
+            ]
+        },
+        {
+            "id": 12,
+            "evidences": [
+                "The car's cushioning is good.",
+                "The car has an airbag.",
+                "The car does not have an antilock system for the brakes.",
+                "The person has not had an accident.",
+                "The medical costs in case of an accident are in the thousand range."
+            ],
+            "query": "What is the likelihood of the insurance liability cost being in the hundred thousand range if the given conditions are true?",
+            "answer": 0.0,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "Cushioning",
+                "Airbag",
+                "Antilock",
+                "Accident",
+                "MedCost",
+                "ILiCost"
+            ]
+        },
+        {
+            "id": 13,
+            "evidences": [
+                "The car's cushioning is poor.",
+                "The car does not have an airbag."
+            ],
+            "query": "What is the likelihood of the insurance liability cost being one thousand, given the car's poor cushioning and no airbag?",
+            "answer": 0.96974125,
+            "reasoning_types": [],
+            "sampled_nodes": [
+                "Cushioning",
+                "Airbag",
+                "ILiCost"
+            ]
+        },
+        {
+            "id": 14,
+            "evidences": [
+                "The car does not have an airbag."
+            ],
+            "query": "What is the likelihood of this car not having an antilock system for the brakes?",
+            "answer": 0.97039663,
+            "reasoning_types": [],
+            "sampled_nodes": [
+                "Airbag",
+                "Antilock"
+            ]
+        },
+        {
+            "id": 15,
+            "evidences": [
+                "The accident was mild.",
+                "The car has an antilock system for the brakes.",
+                "The car does not have an airbag built in."
+            ],
+            "query": "What is the likelihood of the other car involved in the accident costing a million dollars?",
+            "answer": 0.0,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "Accident",
+                "Antilock",
+                "Airbag",
+                "OtherCarCost"
+            ]
+        },
+        {
+            "id": 16,
+            "evidences": [
+                "The insurance liability cost in case of an accident is set to Million."
+            ],
+            "query": "What is the likelihood of the car having fair cushioning?",
+            "answer": 0.28534653,
+            "reasoning_types": [],
+            "sampled_nodes": [
+                "ILiCost",
+                "Cushioning"
+            ]
+        },
+        {
+            "id": 17,
+            "evidences": [
+                "The car does not have an antilock system for the brakes.",
+                "The medical costs in case of an accident are ten thousand dollars.",
+                "The cost of the other car involved in the accident is one thousand dollars.",
+                "The car has fair cushioning.",
+                "The accident was mild.",
+                "The insurance liability cost is one hundred thousand dollars."
+            ],
+            "query": "What is the likelihood of the car having an airbag built in?",
+            "answer": 0.23850717,
+            "reasoning_types": [
+                "evidential"
+            ],
+            "sampled_nodes": [
+                "Antilock",
+                "MedCost",
+                "OtherCarCost",
+                "Cushioning",
+                "Accident",
+                "ILiCost",
+                "Airbag"
+            ]
+        },
+        {
+            "id": 18,
+            "evidences": [
+                "The accident was mild.",
+                "The car's cushioning was good.",
+                "The cost of the other car involved in the accident was ten thousand.",
+                "The medical costs in case of the accident were million.",
+                "The car does not have an antilock system for the brakes."
+            ],
+            "query": "What is the likelihood of the insurance liability cost being hundred thousand?",
+            "answer": 0.0,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "Accident",
+                "Cushioning",
+                "OtherCarCost",
+                "MedCost",
+                "Antilock",
+                "ILiCost"
+            ]
+        },
+        {
+            "id": 19,
+            "evidences": [
+                "The cushioning of the car is good.",
+                "The accident is moderate.",
+                "The car is equipped with an antilock braking system.",
+                "The car does not have an airbag."
+            ],
+            "query": "What is the likelihood of the insurance liability cost being one thousand dollars?",
+            "answer": 0.9,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "Cushioning",
+                "Accident",
+                "Antilock",
+                "Airbag",
+                "ILiCost"
+            ]
+        },
+        {
+            "id": 20,
+            "evidences": [
+                "The accident has a moderate severity.",
+                "The cost of the other car involved in the accident is one thousand.",
+                "The medical costs in case of an accident are one million.",
+                "The car does not have an antilock system for the brakes.",
+                "The car has an airbag built in."
+            ],
+            "query": "What is the likelihood of the insurance liability cost being one million?",
+            "answer": 0.02,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "Accident",
+                "OtherCarCost",
+                "MedCost",
+                "Antilock",
+                "Airbag",
+                "ILiCost"
+            ]
+        },
+        {
+            "id": 21,
+            "evidences": [
+                "The car does not have an airbag.",
+                "The insurance liability cost is ten thousand dollars.",
+                "The medical costs in case of an accident are one million dollars.",
+                "The cost of the other car involved in the accident is one hundred thousand dollars.",
+                "The car has excellent cushioning."
+            ],
+            "query": "What is the likelihood of the car being equipped with an antilock braking system?",
+            "answer": 0.027301523,
+            "reasoning_types": [
+                "evidential"
+            ],
+            "sampled_nodes": [
+                "Airbag",
+                "ILiCost",
+                "MedCost",
+                "OtherCarCost",
+                "Cushioning",
+                "Antilock"
+            ]
+        },
+        {
+            "id": 22,
+            "evidences": [
+                "The accident has a moderate severity."
+            ],
+            "query": "What is the likelihood of the other car involved in the accident costing one million dollars?",
+            "answer": 0.0,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "Accident",
+                "OtherCarCost"
+            ]
+        },
+        {
+            "id": 23,
+            "evidences": [
+                "The car does not have an airbag.",
+                "The cost of the other car involved in the accident is ten thousand dollars.",
+                "The medical costs in case of an accident are one million dollars.",
+                "The accident is moderate."
+            ],
+            "query": "What is the likelihood of the insurance liability cost being one thousand dollars?",
+            "answer": 0.9,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "Airbag",
+                "OtherCarCost",
+                "MedCost",
+                "Accident",
+                "ILiCost"
+            ]
+        },
+        {
+            "id": 24,
+            "evidences": [
+                "The car's cushioning is excellent.",
+                "The car is equipped with an airbag.",
+                "The car has an antilock system for the brakes."
+            ],
+            "query": "What is the likelihood of the insurance liability cost being equal to one hundred thousand?",
+            "answer": 0.0052367637,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "Cushioning",
+                "Airbag",
+                "Antilock",
+                "ILiCost"
+            ]
+        },
+        {
+            "id": 25,
+            "evidences": [
+                "The cushioning of the car is fair.",
+                "The accident was severe.",
+                "The cost of the other car involved in the accident was ten thousand dollars.",
+                "The insurance liability cost was one million dollars.",
+                "The medical costs in case of an accident were one hundred thousand dollars.",
+                "The car does not have an antilock system for the brakes."
+            ],
+            "query": "What is the likelihood of the car having an airbag installed, given the current circumstances?",
+            "answer": 0.22881537,
+            "reasoning_types": [
+                "evidential"
+            ],
+            "sampled_nodes": [
+                "Cushioning",
+                "Accident",
+                "OtherCarCost",
+                "ILiCost",
+                "MedCost",
+                "Antilock",
+                "Airbag"
+            ]
+        }
+    ]
+}

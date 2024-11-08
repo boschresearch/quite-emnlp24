@@ -1,0 +1,459 @@
+{
+    "nodes": [
+        {
+            "name": "LatestCIN",
+            "states": [
+                "None",
+                "PartInhibit",
+                "Stifling",
+                "TotalInhibit"
+            ]
+        },
+        {
+            "name": "LLIW",
+            "states": [
+                "Unfavorable",
+                "Weak",
+                "Moderate",
+                "Strong"
+            ]
+        },
+        {
+            "name": "CurPropConv",
+            "states": [
+                "None",
+                "Slight",
+                "Moderate",
+                "Strong"
+            ]
+        }
+    ],
+    "connectivity": [
+        {
+            "node": "LatestCIN",
+            "incoming": []
+        },
+        {
+            "node": "LLIW",
+            "incoming": []
+        },
+        {
+            "node": "CurPropConv",
+            "incoming": [
+                "LatestCIN",
+                "LLIW"
+            ]
+        }
+    ],
+    "numeric_premises": [
+        {
+            "id": 0,
+            "origin": "LatestCIN",
+            "content": "The latest convective inhibition (LatestCIN) is nonexistent 40% of the time, provides partial inhibition another 40%, stifles convection in 15% of cases, and completely inhibits in 5% of the occurrences."
+        },
+        {
+            "id": 1,
+            "origin": "LLIW",
+            "content": "The likelihood of an unfavorable LLIW severe weather index is 12%, weak is 32%, moderate is 38%, and strong is 18%."
+        },
+        {
+            "id": 2,
+            "origin": "CurPropConv",
+            "content": "In unfavorable LLIW conditions when latest convective inhibition is nonexistent, there is a 70% probability that the current propensity to convection is none, 28% that it is slight, and only a 2% and 0% chance that it is moderate or strong, respectively."
+        },
+        {
+            "id": 3,
+            "origin": "CurPropConv",
+            "content": "When latest convective inhibition is absent and LLIW is weak, the current propensity to convection is slightly high (50%) or moderately high (30%). In addition, there is a 10% probability that convection is strong, and only a 10% chance that it is nonexistent."
+        },
+        {
+            "id": 4,
+            "origin": "CurPropConv",
+            "content": "With no latest convective inhibition and LLIW at moderate levels, the current propensity to convection is more likely to be moderate (35%) or strong (50%). There is only a 14% probability that convection is slight, and a mere 1% chance that it is nonexistent."
+        },
+        {
+            "id": 5,
+            "origin": "CurPropConv",
+            "content": "When latest convective inhibition is absent and LLIW is strong, the current propensity to convection is strong most of the times (80%). There is only an 18% probability that convection is moderate, a mere 2% chance that it is slight, and 0% chance of being nonexistent."
+        },
+        {
+            "id": 6,
+            "origin": "CurPropConv",
+            "content": "If latest convective inhibition is partially inhibited and LLIW is unfavorable, there is a 90% probability that the current propensity to convection is nonexistent, followed by a 9% chance that it is slight, and only a 1% probability that it is moderate, whereas being strong is impossible."
+        },
+        {
+            "id": 7,
+            "origin": "CurPropConv",
+            "content": "When latest convective inhibition is partially inhibited and LLIW is weak, there is a 65% probability that the current propensity to convection is nonexistent, followed by a 25% chance that it is slight, and only a 9% and 1% probability that it is moderate or strong, respectively."
+        },
+        {
+            "id": 8,
+            "origin": "CurPropConv",
+            "content": "If latest convective inhibition is partially inhibited and LLIW is moderate, there is a 25% probability that the current propensity to convection is nonexistent, followed by a 35% chance that it is slight, a 30% probability that it is moderate, and a 10% probability that it is strong."
+        },
+        {
+            "id": 9,
+            "origin": "CurPropConv",
+            "content": "When latest convective inhibition is partially inhibited and LLIW is strong, there is a 1% probability that the current propensity to convection is nonexistent, followed by a 15% chance that it is slight, a 33% probability that it is moderate, and a 51% probability that it is strong."
+        },
+        {
+            "id": 10,
+            "origin": "CurPropConv",
+            "content": "If latest convective inhibition is stifling and LLIW is unfavorable, there is a 95% probability that the current propensity to convection is nonexistent, followed by a 5% chance that it is slight, and no probability that it is moderate or strong."
+        },
+        {
+            "id": 11,
+            "origin": "CurPropConv",
+            "content": "When latest convective inhibition is stifling and LLIW is weak, there is a 75% probability that the current propensity to convection is nonexistent, followed by a 23% chance that it is slight, a 2% probability that it is moderate, and no probability that it is strong."
+        },
+        {
+            "id": 12,
+            "origin": "CurPropConv",
+            "content": "If latest convective inhibition is stifling and LLIW is moderate, there is a 40% probability that the current propensity to convection is nonexistent or slight, followed by an 18% probability that it is moderate, and a 2% probability that it is strong."
+        },
+        {
+            "id": 13,
+            "origin": "CurPropConv",
+            "content": "When latest convective inhibition is stifling and LLIW is strong, there is a 20% probability that the current propensity to convection is nonexistent, followed by a 30% chance that it is slight, a 35% probability that it is moderate, and a 15% probability that it is strong."
+        },
+        {
+            "id": 14,
+            "origin": "CurPropConv",
+            "content": "If latest convective inhibition is totally inhibited and LLIW is unfavorable, there is a 100% probability that the current propensity to convection is nonexistent, and no probability that it is slight, moderate, or strong."
+        },
+        {
+            "id": 15,
+            "origin": "CurPropConv",
+            "content": "When latest convective inhibition is totally inhibited and LLIW is weak, there is a 95% probability that the current propensity to convection is nonexistent, followed by a 5% chance that it is slight, and no probability that it is moderate or strong."
+        },
+        {
+            "id": 16,
+            "origin": "CurPropConv",
+            "content": "If latest convective inhibition is totally inhibited and LLIW is moderate, there is a 75% probability that the current propensity to convection is nonexistent, followed by a 20% chance that it is slight, and a 5% probability that it is moderate, and no probability that it is strong."
+        },
+        {
+            "id": 17,
+            "origin": "CurPropConv",
+            "content": "When latest convective inhibition is totally inhibited and LLIW is strong, there is a 50% probability that the current propensity to convection is nonexistent, followed by a 35% chance that it is slight, a 10% probability that it is moderate, and a 5% probability that it is strong."
+        }
+    ],
+    "wep_based_premises": [
+        {
+            "id": 0,
+            "origin": "LatestCIN",
+            "content": "The latest convective inhibition (LatestCIN) is probably not nonexistent or provides partial inhibition, improbable that it stifles convection and highly unlikely that it completely inhibits."
+        },
+        {
+            "id": 1,
+            "origin": "LLIW",
+            "content": "The LLIW severe weather index is probably not unfavorable or weak, improbable to be moderate, and unlikely to be strong."
+        },
+        {
+            "id": 2,
+            "origin": "CurPropConv",
+            "content": "If the latest convective inhibition is nonexistent and the LLIW severe weather index indicates unfavorable conditions, then it is probable that the current propensity to convection is none, it is probably not slight, there is almost no chance that it is moderate, and it is impossible that it is strong."
+        },
+        {
+            "id": 3,
+            "origin": "CurPropConv",
+            "content": "If the latest convective inhibition is nonexistent and the LLIW severe weather index is weak, then there is little chance that the current propensity to convection is none, the chances are about even that it is slight, it is probably not moderate, and the chances are slight that it is strong."
+        },
+        {
+            "id": 4,
+            "origin": "CurPropConv",
+            "content": "If the latest convective inhibition is nonexistent and the LLIW severe weather index is moderate, then the chances are almost none that the current propensity to convection is none, the chances are slight that it is slight, it is probably not moderate, and the chances are about even that it is strong."
+        },
+        {
+            "id": 5,
+            "origin": "CurPropConv",
+            "content": "If the latest convective inhibition is nonexistent and the LLIW severe weather index is strong, then it is impossible that the current propensity to convection is none, the chances are almost none that it is slight, it is unlikely that it is moderate, and there is a very good chance that it is strong."
+        },
+        {
+            "id": 6,
+            "origin": "CurPropConv",
+            "content": "If the latest convective inhibition is partially inhibited and the LLIW severe weather index is unfavorable, then it is highly likely that the current propensity to convection is none, it is improbable that it is slight, the chances are almost none that it is moderate, and it is impossible that it is strong."
+        },
+        {
+            "id": 7,
+            "origin": "CurPropConv",
+            "content": "If the latest convective inhibition is partially inhibited and the LLIW severe weather index is weak, then it is probably the case that the current propensity to convection is none, it is probably not slight, the chances are little that it is moderate, and there is almost no chance that it is strong."
+        },
+        {
+            "id": 8,
+            "origin": "CurPropConv",
+            "content": "If the latest convective inhibition is partially inhibited and the LLIW severe weather index is moderate, then it is probably not the case that the current propensity to convection is none, it is probably not slight, it is probably not moderate, and there is only a slight chance that it is strong."
+        },
+        {
+            "id": 9,
+            "origin": "CurPropConv",
+            "content": "If the latest convective inhibition is partially inhibited and the LLIW severe weather index is strong, then the chances are almost none that the current propensity to convection is none, it is improbable that it is slight, it is probably not moderate, and there is an about even chance that it is strong."
+        },
+        {
+            "id": 10,
+            "origin": "CurPropConv",
+            "content": "If the latest convective inhibition is stifling and the LLIW severe weather index is unfavorable, then it is almost certain that the current propensity to convection is none, it is highly unlikely that it is slight, and it is impossible that it is moderate or strong."
+        },
+        {
+            "id": 11,
+            "origin": "CurPropConv",
+            "content": "If the latest convective inhibition is stifling and the LLIW severe weather index is weak, then there is a very good chance that the current propensity to convection is none, it is probably not slight, the chances are almost none that it is moderate, and it is impossible that it is strong."
+        },
+        {
+            "id": 12,
+            "origin": "CurPropConv",
+            "content": "If the latest convective inhibition is stifling and the LLIW severe weather index is moderate, then it is probably not the case that the current propensity to convection is none or slight, it is unlikely that it is moderate, and the chances are almost none that it is strong."
+        },
+        {
+            "id": 13,
+            "origin": "CurPropConv",
+            "content": "If the latest convective inhibition is stifling and the LLIW severe weather index is strong, then it is unlikely that the current propensity to convection is none, it is probably not the case that it is slight or moderate, and it is improbable that it is strong."
+        },
+        {
+            "id": 14,
+            "origin": "CurPropConv",
+            "content": "If the latest convective inhibition is totally inhibiting and the LLIW severe weather index is unfavorable, then it is certain that the current propensity to convection is none, and it is impossible that it is slight, moderate, or strong."
+        },
+        {
+            "id": 15,
+            "origin": "CurPropConv",
+            "content": "If the latest convective inhibition is totally inhibiting and the LLIW severe weather index is weak, then it is almost certain that the current propensity to convection is none, it is highly unlikely that it is slight, and it is impossible that it is moderate or strong."
+        },
+        {
+            "id": 16,
+            "origin": "CurPropConv",
+            "content": "If the latest convective inhibition is totally inhibiting and the LLIW severe weather index is moderate, then there is a very good chance that the current propensity to convection is none, it is unlikely that it is slight, highly unlikely that it is moderate, and impossible that it is strong."
+        },
+        {
+            "id": 17,
+            "origin": "CurPropConv",
+            "content": "If the latest convective inhibition is totally inhibiting and the LLIW severe weather index is strong, then there is a better than even chance that the current propensity to convection is none, it is probably not the case that it is slight, the chances are slight that it is moderate, and it is highly unlikely that it is strong."
+        }
+    ],
+    "evidence_query_pairs": [
+        {
+            "id": 0,
+            "evidences": [
+                "The latest convective inhibition (CIN) is stifling."
+            ],
+            "query": "What is the likelihood of the LLIW (LLIW severe weather index) being weak?",
+            "answer": 0.32,
+            "reasoning_types": []
+        },
+        {
+            "id": 1,
+            "evidences": [
+                "The latest convective inhibition is None.",
+                "The current propensity to convection is moderate."
+            ],
+            "query": "What is the likelihood of the LLIW severe weather index being strong?",
+            "answer": 0.12282032,
+            "reasoning_types": [
+                "evidential",
+                "explaining_away"
+            ]
+        },
+        {
+            "id": 2,
+            "evidences": [
+                "The latest convective inhibition is None."
+            ],
+            "query": "What is the likelihood of there being no current propensity to convection?",
+            "answer": 0.1198,
+            "reasoning_types": [
+                "causal"
+            ]
+        },
+        {
+            "id": 3,
+            "evidences": [
+                "The latest convective inhibition is None."
+            ],
+            "query": "What is the likelihood of a strong current propensity to convection?",
+            "answer": 0.366,
+            "reasoning_types": [
+                "causal"
+            ]
+        },
+        {
+            "id": 4,
+            "evidences": [
+                "The current propensity to convection is moderate.",
+                "The latest convective inhibition is stifling."
+            ],
+            "query": "What is the likelihood of the LLIW severe weather index being weak under these conditions?",
+            "answer": 0.046444122,
+            "reasoning_types": [
+                "evidential",
+                "explaining_away"
+            ]
+        },
+        {
+            "id": 5,
+            "evidences": [
+                "The latest convective inhibition is partially inhibited.",
+                "The current propensity to convection is slight."
+            ],
+            "query": "What is the likelihood of the LLIW severe weather index being weak?",
+            "answer": 0.31897927,
+            "reasoning_types": [
+                "evidential",
+                "explaining_away"
+            ]
+        },
+        {
+            "id": 6,
+            "evidences": [
+                "The current propensity to convection is nonexistent.",
+                "The latest convective inhibition is partially inhibiting."
+            ],
+            "query": "What is the likelihood of the LLIW severe weather index being weak?",
+            "answer": 0.50387597,
+            "reasoning_types": [
+                "evidential",
+                "explaining_away"
+            ]
+        },
+        {
+            "id": 7,
+            "evidences": [
+                "The LLIW severe weather index is currently at a strong level.",
+                "The latest convective inhibition (CIN) level is stifling."
+            ],
+            "query": "What is the likelihood of the current propensity to convection being strong?",
+            "answer": 0.15,
+            "reasoning_types": [
+                "causal"
+            ]
+        },
+        {
+            "id": 8,
+            "evidences": [
+                "The LLIW severe weather index is currently at a moderate level."
+            ],
+            "query": "What is the likelihood of the latest convective inhibition being stifling?",
+            "answer": 0.15,
+            "reasoning_types": []
+        },
+        {
+            "id": 9,
+            "evidences": [
+                "The latest convective inhibition is partially inhibited."
+            ],
+            "query": "What is the likelihood of the LLIW severe weather index being moderate?",
+            "answer": 0.38,
+            "reasoning_types": []
+        },
+        {
+            "id": 10,
+            "evidences": [
+                "The latest convective inhibition is None.",
+                "The LLIW severe weather index is currently at a moderate level."
+            ],
+            "query": "What is the likelihood of current propensity to convection being at a moderate level?",
+            "answer": 0.35,
+            "reasoning_types": [
+                "causal"
+            ]
+        },
+        {
+            "id": 11,
+            "evidences": [
+                "The current propensity to convection is slight."
+            ],
+            "query": "What is the likelihood of the LLIW severe weather index being strong?",
+            "answer": 0.093559565,
+            "reasoning_types": [
+                "evidential"
+            ]
+        },
+        {
+            "id": 12,
+            "evidences": [
+                "The latest convective inhibition (CIN) is stifling."
+            ],
+            "query": "What is the likelihood of the current propensity to convection being moderate?",
+            "answer": 0.1378,
+            "reasoning_types": [
+                "causal"
+            ]
+        },
+        {
+            "id": 13,
+            "evidences": [
+                "The latest convective inhibition (CIN) is stifling.",
+                "The current propensity to convection is slight."
+            ],
+            "query": "What is the likelihood of the LLIW severe weather index being moderate?",
+            "answer": 0.53221289,
+            "reasoning_types": [
+                "evidential",
+                "explaining_away"
+            ]
+        },
+        {
+            "id": 14,
+            "evidences": [
+                "The current propensity to convection is none."
+            ],
+            "query": "What is the likelihood of the LLIW severe weather index being weak?",
+            "answer": 0.44033624,
+            "reasoning_types": [
+                "evidential"
+            ]
+        },
+        {
+            "id": 15,
+            "evidences": [
+                "The latest convective inhibition is None."
+            ],
+            "query": "What is the likelihood of the LLIW severe weather index being Moderate?",
+            "answer": 0.38,
+            "reasoning_types": []
+        },
+        {
+            "id": 16,
+            "evidences": [
+                "The current propensity to convection is slight.",
+                "The LLIW severe weather index is unfavorable."
+            ],
+            "query": "What is the likelihood of there being no latest convective inhibition?",
+            "answer": 0.72025723,
+            "reasoning_types": [
+                "evidential",
+                "explaining_away"
+            ]
+        },
+        {
+            "id": 17,
+            "evidences": [
+                "The latest convective inhibition is partially inhibited."
+            ],
+            "query": "What is the likelihood of there being no current propensity to convection?",
+            "answer": 0.4128,
+            "reasoning_types": [
+                "causal"
+            ]
+        },
+        {
+            "id": 18,
+            "evidences": [
+                "The LLIW severe weather index is currently at a moderate level.",
+                "The latest convective inhibition (CIN) level is stifling."
+            ],
+            "query": "What is the likelihood of the current propensity to convection being slight?",
+            "answer": 0.4,
+            "reasoning_types": [
+                "causal"
+            ]
+        },
+        {
+            "id": 19,
+            "evidences": [
+                "The LLIW severe weather index is currently at a strong level."
+            ],
+            "query": "What is the likelihood of the latest convective inhibition being totally inhibitive?",
+            "answer": 0.05,
+            "reasoning_types": []
+        }
+    ]
+}

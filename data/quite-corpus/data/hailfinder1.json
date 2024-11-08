@@ -1,0 +1,887 @@
+{
+    "nodes": [
+        {
+            "name": "Date",
+            "states": [
+                "May15_Jun14",
+                "Jun15_Jul1",
+                "Jul2_Jul15",
+                "Jul16_Aug10",
+                "Aug11_Aug20",
+                "Aug20_Sep15"
+            ]
+        },
+        {
+            "name": "Scenario",
+            "states": [
+                "A",
+                "B",
+                "C",
+                "D",
+                "E",
+                "F",
+                "G",
+                "H",
+                "I",
+                "J",
+                "K"
+            ]
+        },
+        {
+            "name": "MvmtFeatures",
+            "states": [
+                "StrongFront",
+                "MarkedUpper",
+                "OtherRapid",
+                "NoMajor"
+            ]
+        },
+        {
+            "name": "RHRatio",
+            "states": [
+                "MoistMDryL",
+                "DryMMoistL",
+                "Other"
+            ]
+        }
+    ],
+    "connectivity": [
+        {
+            "node": "Date",
+            "incoming": []
+        },
+        {
+            "node": "Scenario",
+            "incoming": [
+                "Date"
+            ]
+        },
+        {
+            "node": "MvmtFeatures",
+            "incoming": [
+                "Scenario"
+            ]
+        },
+        {
+            "node": "RHRatio",
+            "incoming": [
+                "Scenario"
+            ]
+        }
+    ],
+    "numeric_premises": [
+        {
+            "id": 0,
+            "origin": "Date",
+            "content": "The probability of having severe weather during a specific time period varies greatly; having it from May 15th to June 14th is 0.254098, from June 15th to July 1st is 0.131148, from July 2nd to July 15th is 0.106557, from July 16th to August 10th is 0.213115, from August 11th to August 20th is 0.07377, and from August 20th to September 15th is 0.221312."
+        },
+        {
+            "id": 1,
+            "origin": "Scenario",
+            "content": "On May 15th through June 14th, there is a 16% probability for Scenario B, 10% for Scenario D, 8% each for Scenarios E, F, G, I, and K, 9% for Scenario J, 17% for Scenario K, and 1% for Scenario F."
+        },
+        {
+            "id": 2,
+            "origin": "Scenario",
+            "content": "During June 15th to July 1st, Scenario B has a 16% probability, Scenario C has a 9%, Scenario D has a 9%, Scenario E has a 12%, Scenario G has a 13%, Scenario H has a 6%, Scenario I has a 7%, Scenario J has an 11%, Scenario K has a 10%, and Scenario A has a 5%."
+        },
+        {
+            "id": 3,
+            "origin": "Scenario",
+            "content": "From July 2nd to July 15th, Scenario B has a 13% probability, Scenario C has a 10%, Scenario D has an 8%, Scenario E has a 15%, Scenario G has a 14%, Scenario H has a 4%, Scenario I has a 6%, Scenario J has a 15%, Scenario K has an 8%, and Scenario A has a 4%."
+        },
+        {
+            "id": 4,
+            "origin": "Scenario",
+            "content": "During July 16th to August 10th, Scenario B has a 13% probability, Scenario C has a 9%, Scenario D has a 7%, Scenario E has a 20%, Scenario F has an 8%, Scenario G has a 6%, Scenario H has a 5%, Scenario I has a 7%, Scenario J has a 13%, and Scenario K has an 8%. Scenario A has a 4% probability."
+        },
+        {
+            "id": 5,
+            "origin": "Scenario",
+            "content": "From August 11th to August 20th, Scenario B has an 11% probability, Scenario C has a 10%, Scenario D has a 7%, Scenario E has a 17%, Scenario F has a 5%, Scenario G has a 10%, Scenario H has a 5%, Scenario I has a 7%, Scenario J has a 14%, Scenario K has a 10%, and Scenario A has a 4%."
+        },
+        {
+            "id": 6,
+            "origin": "Scenario",
+            "content": "During August 20th to September 15th, Scenario B has an 11% probability, Scenario C has a 10%, Scenario D has an 8%, Scenario E has a 11%, Scenario G has a 11%, Scenario H has a 6%, Scenario I has an 8%, Scenario J has a 11%, Scenario K has a 17%, and Scenario A has a 5%. Scenario F has a 2% probability."
+        },
+        {
+            "id": 7,
+            "origin": "MvmtFeatures",
+            "content": "When the scenario is classified as A, there is a 25% chance of strong front movement features, a 55% likelihood of marked upper movement features, a 20% probability of other rapid movement features, and a negligible chance of no major movement features."
+        },
+        {
+            "id": 8,
+            "origin": "MvmtFeatures",
+            "content": "When the scenario is identified as B, there is a 5% chance of strong front movement features, a 10% likelihood of marked upper movement features, a 10% probability of other rapid movement features, and a 75% chance of no major movement features."
+        },
+        {
+            "id": 9,
+            "origin": "MvmtFeatures",
+            "content": "When the scenario is categorized as C, there is a 10% chance of strong front movement features, a 30% likelihood of marked upper movement features, a 30% probability of other rapid movement features, and a 30% chance of no major movement features."
+        },
+        {
+            "id": 10,
+            "origin": "MvmtFeatures",
+            "content": "When the scenario is set as D, there is an 18% chance of strong front movement features, a 38% likelihood of marked upper movement features, a 34% probability of other rapid movement features, and a 10% chance of no major movement features."
+        },
+        {
+            "id": 11,
+            "origin": "MvmtFeatures",
+            "content": "When the scenario is specified as E, there is a 2% chance of strong front movement features, a 2% likelihood of marked upper movement features, a 26% probability of other rapid movement features, and a 70% chance of no major movement features."
+        },
+        {
+            "id": 12,
+            "origin": "MvmtFeatures",
+            "content": "When the scenario is labeled as F, there is a 5% chance of strong front movement features, a 7% likelihood of marked upper movement features, a 5% probability of other rapid movement features, and an 83% chance of no major movement features."
+        },
+        {
+            "id": 13,
+            "origin": "MvmtFeatures",
+            "content": "When the scenario is tagged as G, there is a 10% chance of strong front movement features, a 25% likelihood of marked upper movement features, a 15% probability of other rapid movement features, and a 50% chance of no major movement features."
+        },
+        {
+            "id": 14,
+            "origin": "MvmtFeatures",
+            "content": "When the scenario is designated as H, there is a 0% chance of strong front movement features, a 60% likelihood of marked upper movement features, a 10% probability of other rapid movement features, and a 30% chance of no major movement features."
+        },
+        {
+            "id": 15,
+            "origin": "MvmtFeatures",
+            "content": "When the scenario is described as I, there is a 20% chance of strong front movement features, a 10% likelihood of marked upper movement features, a 20% probability of other rapid movement features, and a 50% chance of no major movement features."
+        },
+        {
+            "id": 16,
+            "origin": "MvmtFeatures",
+            "content": "When the scenario is described as J, there is a 4% chance of strong front movement features, a 0% likelihood of marked upper movement features, a 4% probability of other rapid movement features, and a 92% chance of no major movement features."
+        },
+        {
+            "id": 17,
+            "origin": "MvmtFeatures",
+            "content": "When the scenario is identified as K, there is a 50% chance of strong front movement features, a 35% likelihood of marked upper movement features, a 9% probability of other rapid movement features, and a 6% chance of no major movement features."
+        },
+        {
+            "id": 18,
+            "origin": "RHRatio",
+            "content": "In scenario A, the relative humidity ratio is likely to be dry with moderate moisture (50% probability), followed by other conditions (45% probability), while moist-to-dry conditions are least likely (5% probability)."
+        },
+        {
+            "id": 19,
+            "origin": "RHRatio",
+            "content": "In scenario B, the relative humidity ratio is most likely to be dry with moderate moisture (50% probability), followed by other conditions (40% probability), while moist-to-dry conditions are less likely (10% probability)."
+        },
+        {
+            "id": 20,
+            "origin": "RHRatio",
+            "content": "In scenario C, the relative humidity ratio is more likely to be other conditions (45% probability), followed by moist-to-dry conditions (40% probability) and dry with moderate moisture (15% probability)."
+        },
+        {
+            "id": 21,
+            "origin": "RHRatio",
+            "content": "In scenario D, the relative humidity ratio is most likely to be dry with moderate moisture (45% probability), followed by other conditions (35% probability) and moist-to-dry conditions (20% probability)."
+        },
+        {
+            "id": 22,
+            "origin": "RHRatio",
+            "content": "In scenario E, the relative humidity ratio is highly likely to be moist-to-dry (80% probability), while other conditions have a lower probability (15% probability for dry with moderate moisture and 5% probability for other conditions)."
+        },
+        {
+            "id": 23,
+            "origin": "RHRatio",
+            "content": "In scenario F, the relative humidity ratio is always other conditions (100% probability), as moist-to-dry and dry with moderate moisture conditions are not possible."
+        },
+        {
+            "id": 24,
+            "origin": "RHRatio",
+            "content": "In scenario G, the relative humidity ratio is more likely to be moist-to-dry (60% probability), while other conditions have a lower probability (40% probability for other conditions, and dry with moderate moisture is not possible)."
+        },
+        {
+            "id": 25,
+            "origin": "RHRatio",
+            "content": "In scenario H, the relative humidity ratio is most likely to be dry with moderate moisture (70% probability), while other conditions have a lower probability (30% probability for other conditions, and moist-to-dry conditions are not possible)."
+        },
+        {
+            "id": 26,
+            "origin": "RHRatio",
+            "content": "In scenario I, the relative humidity ratio is most likely to be dry with moderate moisture (70% probability), while other conditions have a lower probability (20% probability for other conditions, and 10% probability for moist-to-dry conditions)."
+        },
+        {
+            "id": 27,
+            "origin": "RHRatio",
+            "content": "In scenario J, the relative humidity ratio is equally likely to be dry with moderate moisture or moist-to-dry (both with 40% probability), while other conditions have a lower probability (20% probability)."
+        },
+        {
+            "id": 28,
+            "origin": "RHRatio",
+            "content": "In scenario K, the relative humidity ratio is more likely to be dry with moderate moisture (45% probability), while other conditions have a lower probability (30% probability for other conditions, and 15% probability for moist-to-dry conditions)."
+        }
+    ],
+    "wep_based_premises": [
+        {
+            "id": 0,
+            "origin": "Date",
+            "content": "If the date is between May 15 and June 14, there is probably not a high chance of severe weather; from June 15 to July 1, it is improbable; from July 2 to July 15, there is little chance; from July 16 to August 10, it is unlikely; from August 11 to August 20, it is highly unlikely; and from August 20 to September 15, it is once again unlikely."
+        },
+        {
+            "id": 1,
+            "origin": "Scenario",
+            "content": "On May 15th to June 14th, the scenarios A, and I are predicted to be improbable, while scenarios B and K are considered unlikely. Scenarios E, G, H, and I have little chance of occurring, and there is almost no chance of scenario F and J. Scenarios C and D only have slight chances of occurring."
+        },
+        {
+            "id": 2,
+            "origin": "Scenario",
+            "content": "From June 15th to July 1st, the scenarios A, H, and I are highly unlikely, while scenario B is unlikely, whereas C, D, and G are improbable. Scenarios E and J have a little chance, and scenario K has a slight chance of happening. Finally, for scenario F there is almost no chance of occurring."
+        },
+        {
+            "id": 3,
+            "origin": "Scenario",
+            "content": "During July 2nd to 15th, scenarios A, H, and I are highly unlikely, while scenarios B, G, and K have a slight chance of occurring. Scenarios C, D, and E have a little chance, and scenario F has almost no chance. Scenario J is improbable, and scenario K has a slight chance of happening."
+        },
+        {
+            "id": 4,
+            "origin": "Scenario",
+            "content": "From July 16th to August 10th, scenarios A, D, G, H, and I are highly unlikely, while scenarios B and C have a slight chance of occurring. Scenario E is unlikely, and scenario F is improbable. Scenario J has a slight chance, and scenario K has a little chance of happening."
+        },
+        {
+            "id": 5,
+            "origin": "Scenario",
+            "content": "During August 11th to 20th, scenarios A, D, E, F, H, and I are highly unlikely, while scenarios B and J have a slight chance of occurring. Scenarios C, G, and K are improbable."
+        },
+        {
+            "id": 6,
+            "origin": "Scenario",
+            "content": "From August 20th to September 15th, scenarios A, B, D, and H are highly unlikely or improbable, while scenarios C, E, F, G, I, and J have a little to almost none chance. Scenario K is unlikely."
+        },
+        {
+            "id": 7,
+            "origin": "MvmtFeatures",
+            "content": "If the scenario is described as A, then the likelihood of various movement features is as follows: there is probably not a strong front, there is better than even odds of marked upper movement, it is unlikely that there are other rapid movements, and it is impossible for there to be no major movement."
+        },
+        {
+            "id": 8,
+            "origin": "MvmtFeatures",
+            "content": "If the scenario is classified as B, then the probability of different movement features is as follows: there is a very good chance of no major movement, there is only a slight chance of other rapid movements, it is improbable that there will be marked upper movement, and it is highly unlikely that there will be a strong front."
+        },
+        {
+            "id": 9,
+            "origin": "MvmtFeatures",
+            "content": "If the scenario is categorized as C, then the likelihood of various movement features is as follows: there is little chance of a strong front, it is probably not the case that there will be marked upper movement or other rapid movements, and it is unlikely that there will be no major movement."
+        },
+        {
+            "id": 10,
+            "origin": "MvmtFeatures",
+            "content": "If the scenario is described as D, then the probability of different movement features is as follows: there is a slight chance of no major movement, and it is unlikely that there will be a strong front, marked upper movement, or other rapid movements."
+        },
+        {
+            "id": 11,
+            "origin": "MvmtFeatures",
+            "content": "If the scenario is described as E, then the likelihood of different movement features is as follows: there is almost no chance of a strong front or marked upper movement, it is probably not the case that there will be other rapid movements, and there is a probability of no major movement."
+        },
+        {
+            "id": 12,
+            "origin": "MvmtFeatures",
+            "content": "If the scenario is classified as F, then the probability of different movement features is as follows: there is a very good chance of no major movement, and it is highly unlikely that there will be a strong front, marked upper movement, or other rapid movements."
+        },
+        {
+            "id": 13,
+            "origin": "MvmtFeatures",
+            "content": "If the scenario is categorized as G, then the probability of different movement features is as follows: there is a slight chance of a strong front or other rapid movements, and it is probably not the case that there will be marked upper movement. There is an about even chance of no major movement."
+        },
+        {
+            "id": 14,
+            "origin": "MvmtFeatures",
+            "content": "If the scenario is described as H, then the likelihood of different movement features is as follows: it is impossible for there to be a strong front, there is little chance of other rapid movements, and it is unlikely that there will be no major movement. However, it is likely that there will be marked upper movement."
+        },
+        {
+            "id": 15,
+            "origin": "MvmtFeatures",
+            "content": "If the scenario is described as I, then the likelihood of different movement features is as follows: it is unlikely that there will be a strong front or other rapid movements, and there is little chance of marked upper movement. There is an about even chance of no major movement."
+        },
+        {
+            "id": 16,
+            "origin": "MvmtFeatures",
+            "content": "If the scenario is described as J, then the likelihood of different movement features is as follows: it is highly unlikely that there will be a strong front or other rapid movements, and it is impossible for there to be marked upper movement. There is a highly likely chance of no major movement."
+        },
+        {
+            "id": 17,
+            "origin": "MvmtFeatures",
+            "content": "Given that the scenario is categorized as K, then the probability of different movement features is as follows: there are about even chances of a strong front, and it is probably not the case that there will be marked upper movement. There is little chance of other rapid movements, and it is highly unlikely that there will be no major movement."
+        },
+        {
+            "id": 18,
+            "origin": "RHRatio",
+            "content": "If Scenario A is in play, it is highly unlikely that the relative humidity ratio will change from Moist to Dry, but there is a better than even chance that it will change from Dry to Moist, while other changes are probably not going to happen."
+        },
+        {
+            "id": 19,
+            "origin": "RHRatio",
+            "content": "In scenario B, the likelihood of a change from moist to dry conditions (MoistMDryL) is quite low, while the chances of a shift from dry to moist conditions (DryMMoistL) and other transitions (Other) are approximately equal."
+        },
+        {
+            "id": 20,
+            "origin": "RHRatio",
+            "content": "In Scenario C, it is probably not the case that the relative humidity ratio represents a change from moist conditions to dry conditions (MoistMDryL), there is little chance that it represents a change from dry conditions to moist conditions (DryMMoistL), and there are about even chances that the relative humidity ratio represents other conditions (Other)."
+        },
+        {
+            "id": 21,
+            "origin": "RHRatio",
+            "content": "In Scenario D, it is unlikely that the relative humidity ratio represents a change from moist conditions to dry conditions (MoistMDryL), there are about even chances that it represents a change from dry conditions to moist conditions (DryMMoistL), and it is probably not the case that the relative humidity ratio represents other conditions (Other)."
+        },
+        {
+            "id": 22,
+            "origin": "RHRatio",
+            "content": "If scenario E occurs, it is probable that the relative humidity ratio will transition from moist to dry conditions, whereas it is highly unlikely that the relative humidity ratio will transition from dry to moist conditions. Additionally, it is improbable that the relative humidity ratio will change in any other way."
+        },
+        {
+            "id": 23,
+            "origin": "RHRatio",
+            "content": "In scenario F, it is impossible for the relative humidity ratio to indicate a change from moist conditions to dry conditions (MoistMDryL) or from dry conditions to moist conditions (DryMMoistL). However, it is certain for the relative humidity ratio to indicate 'Other' in scenario F."
+        },
+        {
+            "id": 24,
+            "origin": "RHRatio",
+            "content": "In Scenario G, the relative humidity ratio transitioning from MoistMDryL is better than even, while the relative humidity ratio changing from DryMMoistL is impossible, and a different relative humidity ratio scenario is probably not likely."
+        },
+        {
+            "id": 25,
+            "origin": "RHRatio",
+            "content": "If the scenario is H, it is impossible for the relative humidity ratio to change from moist conditions to dry conditions, it is likely for the relative humidity ratio to change from dry conditions to moist conditions, and it is probably not the case that the the relative humidity ratio is in any other state."
+        },
+        {
+            "id": 26,
+            "origin": "RHRatio",
+            "content": "In scenario I, it is improbable that the relative humidity ratio will display a transition from moist conditions to dry conditions (MoistMDryL), whereas it is probable that it will show a transition from dry conditions to moist conditions (DryMMoistL). However, it is considered unlikely that the relative humidity ratio will exhibit any other changes apart from these two (Other)."
+        },
+        {
+            "id": 27,
+            "origin": "RHRatio",
+            "content": "In scenario J, it is probably not the case that the relative humidity ratio will transition from moist to dry conditions (MoistMDryL), there are about even chances that the relative humidity ratio will transition from dry to moist conditions (DryMMoistL), and it is improbable that the relative humidity ratio will be anything else (Other)."
+        },
+        {
+            "id": 28,
+            "origin": "RHRatio",
+            "content": "If the scenario is K, it is improbable for the relative humidity ratio to indicate a change from moist conditions to dry conditions, there are about even chances for it to indicate a change from dry conditions to moist conditions, and it is probably not the case that it indicates any other scenario."
+        }
+    ],
+    "evidence_query_pairs": [
+        {
+            "id": 0,
+            "evidences": [
+                "The scenario is B.",
+                "The date is from Aug 20 to Sep 15.",
+                "The relative humidity ratio is Moist-to-Dry L."
+            ],
+            "query": "What is the likelihood of marked upper movement of features under these conditions?",
+            "answer": 0.97188547,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "Scenario",
+                "Date",
+                "RHRatio",
+                "MvmtFeatures"
+            ]
+        },
+        {
+            "id": 1,
+            "evidences": [
+                "The date is between June 15th and July 1st.",
+                "The relative humidity ratio is other than the predefined values.",
+                "The movement of features is strong in the front."
+            ],
+            "query": "What is the likelihood of the scenario being scenario A?",
+            "answer": 0.065693431,
+            "reasoning_types": [
+                "causal",
+                "evidential"
+            ],
+            "sampled_nodes": [
+                "Date",
+                "RHRatio",
+                "MvmtFeatures",
+                "Scenario"
+            ]
+        },
+        {
+            "id": 2,
+            "evidences": [
+                "The relative humidity ratio is at the Moist-to-Dry Line.",
+                "The date range is from June 15th to July 1st."
+            ],
+            "query": "What is the likelihood of this scenario being F?",
+            "answer": 0.0,
+            "reasoning_types": [
+                "causal",
+                "evidential"
+            ],
+            "sampled_nodes": [
+                "RHRatio",
+                "Date",
+                "Scenario"
+            ]
+        },
+        {
+            "id": 3,
+            "evidences": [
+                "The scenario is J.",
+                "The relative humidity ratio is Dry to Moistly Humid.",
+                "The movement of features is strong and occurs from the front."
+            ],
+            "query": "What is the likelihood of this scenario taking place on May 15th through June 14th?",
+            "answer": 0.075918257,
+            "reasoning_types": [
+                "evidential"
+            ],
+            "sampled_nodes": [
+                "Scenario",
+                "RHRatio",
+                "MvmtFeatures",
+                "Date"
+            ]
+        },
+        {
+            "id": 4,
+            "evidences": [
+                "The movement of features is strong at the front.",
+                "The current scenario is scenario B."
+            ],
+            "query": "What is the likelihood of this movement period being on June 15th through July 1st?",
+            "answer": 0.15468332,
+            "reasoning_types": [
+                "evidential"
+            ],
+            "sampled_nodes": [
+                "MvmtFeatures",
+                "Scenario",
+                "Date"
+            ]
+        },
+        {
+            "id": 5,
+            "evidences": [
+                "The scenario is scenario A.",
+                "The movement of features is other rapid."
+            ],
+            "query": "What is the likelihood of the date being July 2 - July 15?",
+            "answer": 0.072524165,
+            "reasoning_types": [
+                "evidential"
+            ],
+            "sampled_nodes": [
+                "Scenario",
+                "MvmtFeatures",
+                "Date"
+            ]
+        },
+        {
+            "id": 6,
+            "evidences": [
+                "The scenario is 'H'.",
+                "The date is between August 20 and September 15.",
+                "The relative humidity ratio is Dry to Moistly Humid."
+            ],
+            "query": "What is the likelihood of this scenario having other rapid movement features?",
+            "answer": 0.87497587,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "Scenario",
+                "Date",
+                "RHRatio",
+                "MvmtFeatures"
+            ]
+        },
+        {
+            "id": 7,
+            "evidences": [
+                "The relative humidity ratio is MoistMDryL."
+            ],
+            "query": "What is the likelihood of this scenario being classified as B?",
+            "answer": 0.045073876,
+            "reasoning_types": [
+                "evidential"
+            ],
+            "sampled_nodes": [
+                "RHRatio",
+                "Scenario"
+            ]
+        },
+        {
+            "id": 8,
+            "evidences": [
+                "The movement of features for this period is other.",
+                "The date range is from June 15th to July 1st.",
+                "The relative humidity ratio is other."
+            ],
+            "query": "What is the likelihood of this period being classified as scenario C?",
+            "answer": 0.11824818,
+            "reasoning_types": [
+                "causal",
+                "evidential"
+            ],
+            "sampled_nodes": [
+                "MvmtFeatures",
+                "Date",
+                "RHRatio",
+                "Scenario"
+            ]
+        },
+        {
+            "id": 9,
+            "evidences": [
+                "The relative humidity ratio is in the Moist-to-Dry range."
+            ],
+            "query": "What is the likelihood of this system having other rapid movement features?",
+            "answer": 0.87497587,
+            "reasoning_types": [],
+            "sampled_nodes": [
+                "RHRatio",
+                "MvmtFeatures"
+            ]
+        },
+        {
+            "id": 10,
+            "evidences": [
+                "The relative humidity ratio is MoistMDryL."
+            ],
+            "query": "What is the likelihood of this scenario being classified as H?",
+            "answer": 0.0,
+            "reasoning_types": [
+                "evidential"
+            ],
+            "sampled_nodes": [
+                "RHRatio",
+                "Scenario"
+            ]
+        },
+        {
+            "id": 11,
+            "evidences": [
+                "The relative humidity ratio is currently at DryMMoistL (Dry to Moist Level).",
+                "The current scenario is E.",
+                "There are no major movement features detected."
+            ],
+            "query": "What is the likelihood of the date being from Aug20_Sep15?",
+            "answer": 0.18504718,
+            "reasoning_types": [
+                "evidential"
+            ],
+            "sampled_nodes": [
+                "RHRatio",
+                "Scenario",
+                "MvmtFeatures",
+                "Date"
+            ]
+        },
+        {
+            "id": 12,
+            "evidences": [
+                "The relative humidity ratio is DryMMoistL (between Dry and Moist).",
+                "The scenario is D.",
+                "The date is between Aug11 and Aug20."
+            ],
+            "query": "What is the likelihood of marked upper movement of features under these conditions?",
+            "answer": 0.97188547,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "RHRatio",
+                "Scenario",
+                "Date",
+                "MvmtFeatures"
+            ]
+        },
+        {
+            "id": 13,
+            "evidences": [
+                "The scenario is B."
+            ],
+            "query": "What is the likelihood of the relative humidity ratio being Other?",
+            "answer": 0.4,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "Scenario",
+                "RHRatio"
+            ]
+        },
+        {
+            "id": 14,
+            "evidences": [
+                "The date is between June 15th and July 1st.",
+                "The relative humidity ratio is other.",
+                "The scenario is category C."
+            ],
+            "query": "What is the likelihood of there being no major movement of features?",
+            "answer": 0.99989429,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "Date",
+                "RHRatio",
+                "Scenario",
+                "MvmtFeatures"
+            ]
+        },
+        {
+            "id": 15,
+            "evidences": [
+                "The date is between June 15th and July 1st.",
+                "The scenario is D."
+            ],
+            "query": "What is the likelihood of marked upper movement of features?",
+            "answer": 0.97188547,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "Date",
+                "Scenario",
+                "MvmtFeatures"
+            ]
+        },
+        {
+            "id": 16,
+            "evidences": [
+                "The relative humidity ratio is in the Moist-to-Dry range.",
+                "The current scenario is K."
+            ],
+            "query": "What is the likelihood of this system having other rapid movement features?",
+            "answer": 0.87497587,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "RHRatio",
+                "Scenario",
+                "MvmtFeatures"
+            ]
+        },
+        {
+            "id": 17,
+            "evidences": [
+                "The scenario is A.",
+                "The date range is from May 15 to June 14.",
+                "The movement of features is marked in the upper area."
+            ],
+            "query": "What is the likelihood of the relative humidity ratio being other than the default values?",
+            "answer": 0.45,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "Scenario",
+                "Date",
+                "MvmtFeatures",
+                "RHRatio"
+            ]
+        },
+        {
+            "id": 18,
+            "evidences": [
+                "The movement of features shows no major changes."
+            ],
+            "query": "What is the likelihood of the scenario being G?",
+            "answer": 0.09680328,
+            "reasoning_types": [
+                "evidential"
+            ],
+            "sampled_nodes": [
+                "MvmtFeatures",
+                "Scenario"
+            ]
+        },
+        {
+            "id": 19,
+            "evidences": [
+                "The relative humidity ratio is currently at Dry to Moist Level L."
+            ],
+            "query": "What is the likelihood of today being between July 16th and August 10th?",
+            "answer": 0.19007918,
+            "reasoning_types": [
+                "evidential"
+            ],
+            "sampled_nodes": [
+                "RHRatio",
+                "Date"
+            ]
+        },
+        {
+            "id": 20,
+            "evidences": [
+                "The movement of features is strong at the front.",
+                "The date range is from Jun15 to Jul1.",
+                "The scenario is J."
+            ],
+            "query": "What is the likelihood of the relative humidity ratio being in the Dry-to-MMoistL range?",
+            "answer": 0.4,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "MvmtFeatures",
+                "Date",
+                "Scenario",
+                "RHRatio"
+            ]
+        },
+        {
+            "id": 21,
+            "evidences": [
+                "The date is between Aug 11 and Aug 20.",
+                "The relative humidity ratio is other.",
+                "The scenario is J."
+            ],
+            "query": "What is the likelihood of movement features being strong and frontal?",
+            "answer": 0.83081391,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "Date",
+                "RHRatio",
+                "Scenario",
+                "MvmtFeatures"
+            ]
+        },
+        {
+            "id": 22,
+            "evidences": [
+                "The relative humidity ratio is currently at DryMMoistL (Dry to Moist Level).",
+                "The current date is between May 15 and June 14.",
+                "The scenario is F."
+            ],
+            "query": "What is the likelihood of movement features showing no major changes under these conditions?",
+            "answer": -1,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "RHRatio",
+                "Date",
+                "Scenario",
+                "MvmtFeatures"
+            ]
+        },
+        {
+            "id": 23,
+            "evidences": [
+                "The scenario is F."
+            ],
+            "query": "What is the likelihood of this situation having no major movement of features?",
+            "answer": 0.99989429,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "Scenario",
+                "MvmtFeatures"
+            ]
+        },
+        {
+            "id": 24,
+            "evidences": [
+                "The scenario is category G."
+            ],
+            "query": "What is the likelihood of the relative humidity ratio being Other?",
+            "answer": 0.4,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "Scenario",
+                "RHRatio"
+            ]
+        },
+        {
+            "id": 25,
+            "evidences": [
+                "The scenario is A."
+            ],
+            "query": "What is the likelihood of the relative humidity ratio being Dry to Moist during scenario A?",
+            "answer": 0.5,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "Scenario",
+                "RHRatio"
+            ]
+        },
+        {
+            "id": 26,
+            "evidences": [
+                "The date is between July 16th and August 10th.",
+                "The scenario is scenario B.",
+                "The relative humidity ratio is classified as Other."
+            ],
+            "query": "What is the likelihood of this scenario having other (possibly rapid) movement of features?",
+            "answer": 0.87497587,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "Date",
+                "Scenario",
+                "RHRatio",
+                "MvmtFeatures"
+            ]
+        },
+        {
+            "id": 27,
+            "evidences": [
+                "The relative humidity ratio is MoistMDryL."
+            ],
+            "query": "What is the likelihood of today being between May 15 and June 14?",
+            "answer": 1.0,
+            "reasoning_types": [
+                "evidential"
+            ],
+            "sampled_nodes": [
+                "RHRatio",
+                "Date"
+            ]
+        },
+        {
+            "id": 28,
+            "evidences": [
+                "The relative humidity ratio is currently at Dry to Moist Level.",
+                "The current date range is from July 2nd to July 15th.",
+                "The scenario is C."
+            ],
+            "query": "What is the likelihood of having strong front movement of features?",
+            "answer": 0.83081391,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "RHRatio",
+                "Date",
+                "Scenario",
+                "MvmtFeatures"
+            ]
+        },
+        {
+            "id": 29,
+            "evidences": [
+                "The movement of features on the skin shows no major changes.",
+                "The scenario is 'C'."
+            ],
+            "query": "What is the likelihood of the relative humidity ratio being in the range of Dry to Moderately Moist?",
+            "answer": 0.15,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "MvmtFeatures",
+                "Scenario",
+                "RHRatio"
+            ]
+        }
+    ]
+}

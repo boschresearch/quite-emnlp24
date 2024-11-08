@@ -1,0 +1,952 @@
+{
+    "nodes": [
+        {
+            "name": "GoodStudent",
+            "states": [
+                "True",
+                "False"
+            ]
+        },
+        {
+            "name": "Age",
+            "states": [
+                "Adolescent",
+                "Adult",
+                "Senior"
+            ]
+        },
+        {
+            "name": "SocioEcon",
+            "states": [
+                "Prole",
+                "Middle",
+                "UpperMiddle",
+                "Wealthy"
+            ]
+        },
+        {
+            "name": "RiskAversion",
+            "states": [
+                "Psychopath",
+                "Adventurous",
+                "Normal",
+                "Cautious"
+            ]
+        },
+        {
+            "name": "DrivingSkill",
+            "states": [
+                "SubStandard",
+                "Normal",
+                "Expert"
+            ]
+        },
+        {
+            "name": "SeniorTrain",
+            "states": [
+                "True",
+                "False"
+            ]
+        },
+        {
+            "name": "OtherCar",
+            "states": [
+                "True",
+                "False"
+            ]
+        }
+    ],
+    "connectivity": [
+        {
+            "node": "GoodStudent",
+            "incoming": [
+                "SocioEcon",
+                "Age"
+            ]
+        },
+        {
+            "node": "Age",
+            "incoming": []
+        },
+        {
+            "node": "SocioEcon",
+            "incoming": [
+                "Age"
+            ]
+        },
+        {
+            "node": "RiskAversion",
+            "incoming": [
+                "Age",
+                "SocioEcon"
+            ]
+        },
+        {
+            "node": "DrivingSkill",
+            "incoming": [
+                "Age",
+                "SeniorTrain"
+            ]
+        },
+        {
+            "node": "SeniorTrain",
+            "incoming": [
+                "Age",
+                "RiskAversion"
+            ]
+        },
+        {
+            "node": "OtherCar",
+            "incoming": [
+                "SocioEcon"
+            ]
+        }
+    ],
+    "numeric_premises": [
+        {
+            "id": 0,
+            "origin": "Age",
+            "content": "With 20% of drivers being adolescents, 60% of drivers being adults, and 20% of drivers being seniors, the age distribution is quite balanced but skewed towards adults."
+        },
+        {
+            "id": 1,
+            "origin": "SocioEcon",
+            "content": "When someone is an adolescent, they are most likely to belong to the middle or prole socioeconomic class, each with a probability of 40%, followed by the upper-middle class with a probability of 19%, and the wealthy class with a mere 1% chance."
+        },
+        {
+            "id": 2,
+            "origin": "SocioEcon",
+            "content": "If someone is an adult, they are most likely to belong to the middle or prole socioeconomic class, each with a probability of 40%, followed by the upper-middle class with a probability of 19%, and the wealthy class with a mere 1% chance."
+        },
+        {
+            "id": 3,
+            "origin": "SocioEcon",
+            "content": "When someone reaches the age of a senior, they are most likely to belong to the lower socioeconomic class with a probability of 50%, followed by the upper-middle class with a probability of 29%, and the wealthy class with a mere 1% chance, while the middle class has a probability of 20%."
+        },
+        {
+            "id": 4,
+            "origin": "GoodStudent",
+            "content": "If a driver is an adolescent and comes from a low socioeconomic background, there is a 90% probability that they are not a good student."
+        },
+        {
+            "id": 5,
+            "origin": "GoodStudent",
+            "content": "If an adult belongs to a low socioeconomic class, they have a 100% chance of not being a good student."
+        },
+        {
+            "id": 6,
+            "origin": "GoodStudent",
+            "content": "For senior drivers who come from a low socioeconomic background, the probability of being a good student is 0%, meaning they are certainly not good students."
+        },
+        {
+            "id": 7,
+            "origin": "GoodStudent",
+            "content": "If an adolescent falls within the middle socioeconomic class, there is an 80% chance that they are not a good student."
+        },
+        {
+            "id": 8,
+            "origin": "GoodStudent",
+            "content": "If an adult is in the middle socioeconomic class, they have a 100% chance of not being a good student."
+        },
+        {
+            "id": 9,
+            "origin": "GoodStudent",
+            "content": "For senior drivers who are in the middle socioeconomic class, the probability of being a good student is 0%, meaning they are certainly not good students."
+        },
+        {
+            "id": 10,
+            "origin": "GoodStudent",
+            "content": "If an adolescent is part of the upper-middle socioeconomic class, they have a 50% chance of being a good student and a 50% chance of not being a good student."
+        },
+        {
+            "id": 11,
+            "origin": "GoodStudent",
+            "content": "If an adult is in the upper-middle socioeconomic class, they have a 100% chance of not being a good student."
+        },
+        {
+            "id": 12,
+            "origin": "GoodStudent",
+            "content": "For senior drivers who are in the upper-middle socioeconomic class, the probability of being a good student is 0%, meaning they are certainly not good students."
+        },
+        {
+            "id": 13,
+            "origin": "GoodStudent",
+            "content": "If an adolescent is from a wealthy background, they have a 40% chance of being a good student and a 60% chance of not being a good student."
+        },
+        {
+            "id": 14,
+            "origin": "GoodStudent",
+            "content": "If an adult is from a wealthy background, they have a 100% chance of not being a good student."
+        },
+        {
+            "id": 15,
+            "origin": "GoodStudent",
+            "content": "For senior drivers who are from a wealthy background, the probability of being a good student is 0%, meaning they are certainly not good students."
+        },
+        {
+            "id": 16,
+            "origin": "RiskAversion",
+            "content": "If a driver is an adolescent and comes from a low-income socioeconomic background, there's a 2% chance they have a psychopathic aversion to risk, a 58% chance they prefer adventurous risks, a 30% chance they have a normal risk aversion, and only a 10% chance they are cautious when it comes to risk."
+        },
+        {
+            "id": 17,
+            "origin": "RiskAversion",
+            "content": "If an adolescent falls within the middle socioeconomic class, they have a 2% probability of being a psychopath when it comes to risk aversion, a 38% chance of being adventurous, a 50% likelihood of having a normal risk aversion, and a 10% probability of being cautious."
+        },
+        {
+            "id": 18,
+            "origin": "RiskAversion",
+            "content": "In the case of an adolescent from an upper-middle socioeconomic background, they have a 2% probability of being a psychopath when it comes to risk, a 48% chance of being adventurous, a 40% likelihood of having a normal risk aversion, and a 10% probability of being cautious."
+        },
+        {
+            "id": 19,
+            "origin": "RiskAversion",
+            "content": "When an adolescent comes from a wealthy socioeconomic background, they have a 2% probability of being a psychopath when it comes to risk, a 58% chance of being adventurous, a 30% likelihood of having a normal risk aversion, and a 10% probability of being cautious."
+        },
+        {
+            "id": 20,
+            "origin": "RiskAversion",
+            "content": "If an adult is from a low-income socioeconomic background, they have a 1.5% probability of being a psychopath when it comes to risk, a 28.5% chance of being adventurous, a 50% likelihood of having a normal risk aversion, and a 20% probability of being cautious."
+        },
+        {
+            "id": 21,
+            "origin": "RiskAversion",
+            "content": "If an adult falls within the middle socioeconomic class, they have a 1.5% probability of being a psychopath when it comes to risk, an 18.5% chance of being adventurous, a 60% likelihood of having a normal risk aversion, and a 20% probability of being cautious."
+        },
+        {
+            "id": 22,
+            "origin": "RiskAversion",
+            "content": "If an adult is from an upper-middle socioeconomic background, they have a 1.5% probability of being a psychopath when it comes to risk, a 28.5% chance of being adventurous, a 50% likelihood of having a normal risk aversion, and a 20% probability of being cautious."
+        },
+        {
+            "id": 23,
+            "origin": "RiskAversion",
+            "content": "If an adult comes from a wealthy socioeconomic background, they have a 1.5% probability of being a psychopath when it comes to risk, a 28.5% chance of being adventurous, a 40% likelihood of having a normal risk aversion, and a 30% probability of being cautious."
+        },
+        {
+            "id": 24,
+            "origin": "RiskAversion",
+            "content": "If a senior is from a low-income socioeconomic background, they have a 1% probability of being a psychopath when it comes to risk, a 9% chance of being adventurous, a 40% likelihood of having a normal risk aversion, and a 50% probability of being cautious."
+        },
+        {
+            "id": 25,
+            "origin": "RiskAversion",
+            "content": "If a senior falls within the middle socioeconomic class, they have a 1% probability of being a psychopath when it comes to risk, a 4% chance of being adventurous, a 35% likelihood of having a normal risk aversion, and a 60% probability of being cautious."
+        },
+        {
+            "id": 26,
+            "origin": "RiskAversion",
+            "content": "If a senior is from an upper-middle socioeconomic background, they have a 1% probability of being a psychopath when it comes to risk, a 9% chance of being adventurous, a 40% likelihood of having a normal risk aversion, and a 50% probability of being cautious."
+        },
+        {
+            "id": 27,
+            "origin": "RiskAversion",
+            "content": "If a senior comes from a wealthy socioeconomic background, they have a 1% probability of being a psychopath when it comes to risk, a 9% chance of being adventurous, a 40% likelihood of having a normal risk aversion, and a 50% probability of being cautious."
+        },
+        {
+            "id": 28,
+            "origin": "OtherCar",
+            "content": "When a driver belongs to the socioeconomic class known as prole, they are equally likely to either own another car or not."
+        },
+        {
+            "id": 29,
+            "origin": "OtherCar",
+            "content": "For those in the middle socioeconomic group, there is an 80% probability that they own a second car, while only a 20% chance remains that they do not."
+        },
+        {
+            "id": 30,
+            "origin": "OtherCar",
+            "content": "In the upper-middle class, it's highly likely (90%) for drivers to have more than one car, leaving just a 10% chance they don't."
+        },
+        {
+            "id": 31,
+            "origin": "OtherCar",
+            "content": "For the wealthy, they are almost certain (95%) to own another car, whereas the possibility of having only one car is quite slim (5%)."
+        },
+        {
+            "id": 32,
+            "origin": "SeniorTrain",
+            "content": "If an adolescent has a risk aversion akin to a psychopath, they will not have taken a senior driving training or safety course, with 100% certainty."
+        },
+        {
+            "id": 33,
+            "origin": "SeniorTrain",
+            "content": "Even if a teenage driver craves adventure, they are still unlikely to take a senior driving training or safety course, with the probability of not taking it being 100%."
+        },
+        {
+            "id": 34,
+            "origin": "SeniorTrain",
+            "content": "Regardless of whether an adolescent has a normal risk aversion or not, they will not have taken a senior driving training or safety course, with the probability of not taking it being 100%."
+        },
+        {
+            "id": 35,
+            "origin": "SeniorTrain",
+            "content": "No matter how cautious an adolescent's risk aversion is, they will not have taken a senior driving training or safety course, with the probability of not taking it being 100%."
+        },
+        {
+            "id": 36,
+            "origin": "SeniorTrain",
+            "content": "Even if an adult has a risk aversion like a psychopath, they will not have taken a senior driving training or safety course, with the probability of not taking it being 100%."
+        },
+        {
+            "id": 37,
+            "origin": "SeniorTrain",
+            "content": "Regardless of whether an adult has an adventurous risk aversion or not, they will not have taken a senior driving training or safety course, with the probability of not taking it being 100%."
+        },
+        {
+            "id": 38,
+            "origin": "SeniorTrain",
+            "content": "No matter the normalcy of an adult's risk aversion, they will not have taken a senior driving training or safety course, with the probability of not taking it being 100%."
+        },
+        {
+            "id": 39,
+            "origin": "SeniorTrain",
+            "content": "Despite an adult's cautious risk aversion, they will not have taken a senior driving training or safety course, with the probability of not taking it being 100%."
+        },
+        {
+            "id": 40,
+            "origin": "SeniorTrain",
+            "content": "In the rare case that a senior has a risk aversion like a psychopath, they have a 99.9999% chance of not having taken a senior driving training or safety course, and only a 0.00001% chance of having taken it."
+        },
+        {
+            "id": 41,
+            "origin": "SeniorTrain",
+            "content": "If a senior has an adventurous risk aversion, they have a 99.9999% chance of not having taken a senior driving training or safety course, and only a 0.00001% chance of having taken it."
+        },
+        {
+            "id": 42,
+            "origin": "SeniorTrain",
+            "content": "If a senior has a normal risk aversion, there is a 70% probability that they have not taken a senior driving training or safety course, and a 30% chance that they have taken it."
+        },
+        {
+            "id": 43,
+            "origin": "SeniorTrain",
+            "content": "If a senior has a cautious risk aversion, there is a 90% probability that they have taken a senior driving training or safety course, and only a 10% chance that they have not taken it."
+        },
+        {
+            "id": 44,
+            "origin": "DrivingSkill",
+            "content": "If a driver is an adolescent and has taken a senior driver's training course, there's a 5% chance they have expert driving skills, a 45% chance they have normal driving skills, and a 50% chance they have substandard driving skills."
+        },
+        {
+            "id": 45,
+            "origin": "DrivingSkill",
+            "content": "When an adolescent hasn't taken a senior driver's training course, there's a 5% chance they have expert driving skills, a 45% chance they have normal driving skills, and a 50% chance they have substandard driving skills."
+        },
+        {
+            "id": 46,
+            "origin": "DrivingSkill",
+            "content": "If an adult has completed a senior driver's training course, they have a 10% chance of being an expert driver, a 60% chance of having normal driving skills, and a 30% chance of having substandard driving skills."
+        },
+        {
+            "id": 47,
+            "origin": "DrivingSkill",
+            "content": "If an adult hasn't taken a senior driver's training course, they have a 10% chance of being an expert driver, a 60% chance of having normal driving skills, and a 30% chance of having substandard driving skills."
+        },
+        {
+            "id": 48,
+            "origin": "DrivingSkill",
+            "content": "When a senior driver has completed a senior driver's training course, they have a 30% chance of being an expert driver, a 60% chance of having normal driving skills, and only a 10% chance of having substandard driving skills."
+        },
+        {
+            "id": 49,
+            "origin": "DrivingSkill",
+            "content": "If a senior driver hasn't taken a senior driver's training course, they have a 10% chance of being an expert driver, a 50% chance of having normal driving skills, and a 40% chance of having substandard driving skills."
+        }
+    ],
+    "wep_based_premises": [
+        {
+            "id": 0,
+            "origin": "Age",
+            "content": "It is unlikely that a driver is an adolescent or senior, whereas there is a better than even chance that the driver is an adult."
+        },
+        {
+            "id": 1,
+            "origin": "SocioEcon",
+            "content": "If the driver is an adolescent, then the socioeconomic status of the insurance holder is probably not prole, probably not middle, unlikely to be upper-middle, and almost no chance of being wealthy."
+        },
+        {
+            "id": 2,
+            "origin": "SocioEcon",
+            "content": "The socioeconomic status of the insurance holder is equally likely to be prole or middle class, is unlikely to be upper-middle, and there is almost no chance of being wealthy, if the driver is an adult."
+        },
+        {
+            "id": 3,
+            "origin": "SocioEcon",
+            "content": "If the driver's age is senior, then there are about even chances that the socioeconomic status of the insurance holder is prole, the status is unlikely to be middle class, it is probably not upper-middle, and there is almost no chance for being wealthy."
+        },
+        {
+            "id": 4,
+            "origin": "GoodStudent",
+            "content": "If the socioeconomic status of the insurance holder can be described as prole and they are an adolescent, then the chances are slight that the driver's record shows that they are a good student, while it is highly likely that they are not a good student."
+        },
+        {
+            "id": 5,
+            "origin": "GoodStudent",
+            "content": "If the socioeconomic status of the insurance holder can be described as prole and they are an adult, then it is impossible that the driver's record shows that they are a good student, and it is certain that they are not a good student."
+        },
+        {
+            "id": 6,
+            "origin": "GoodStudent",
+            "content": "If the socioeconomic status of the insurance holder can be described as prole and they are a senior, then it is impossible that the driver's record shows that they are a good student, and it is certain that they are not a good student."
+        },
+        {
+            "id": 7,
+            "origin": "GoodStudent",
+            "content": "If the socioeconomic status of the insurance holder can be referred to as middle class and they are an adolescent, then there is a slight chance that the driver's record shows that they are a good student, and a very good chance that they are not a good student."
+        },
+        {
+            "id": 8,
+            "origin": "GoodStudent",
+            "content": "If the socioeconomic status of the insurance holder can be referred to as middle class and they are an adult, then it is impossible that the driver's record shows that they are a good student, and it is certain that they are not a good student."
+        },
+        {
+            "id": 9,
+            "origin": "GoodStudent",
+            "content": "If the socioeconomic status of the insurance holder can be referred to as middle class and they are a senior, then it is impossible that the driver's record shows that they are a good student, and it is certain that they are not a good student."
+        },
+        {
+            "id": 10,
+            "origin": "GoodStudent",
+            "content": "If the socioeconomic status of the insurance holder can be described as upper-middle class and they are an adolescent, then there is an equal chance of them being a good driver or not."
+        },
+        {
+            "id": 11,
+            "origin": "GoodStudent",
+            "content": "If the socioeconomic status of the insurance holder can be described as upper-middle class and they are an adult, then it is impossible that the driver's record shows that they are a good student, and it is certain that they are not a good student."
+        },
+        {
+            "id": 12,
+            "origin": "GoodStudent",
+            "content": "If the socioeconomic status of the insurance holder can be described as upper-middle class and they are a senior, then it is impossible that the driver's record shows that they are a good student, and it is certain that they are not a good student."
+        },
+        {
+            "id": 13,
+            "origin": "GoodStudent",
+            "content": "If the socioeconomic status of the insurance holder can be described as wealthy and they are an adolescent, then it is probably not the case that the driver's record shows that they are a good student, while there is a better than even chance that they are not a good student."
+        },
+        {
+            "id": 14,
+            "origin": "GoodStudent",
+            "content": "If the socioeconomic status of the insurance holder can be described as wealthy and they are an adult, then it is impossible that the driver's record shows that they are a good student, and it is certain that they are not a good student."
+        },
+        {
+            "id": 15,
+            "origin": "GoodStudent",
+            "content": "If the socioeconomic status of the insurance holder can be described as wealthy and they are a senior, then it is impossible that the driver's record shows that they are a good student, and it is certain that they are not a good student."
+        },
+        {
+            "id": 16,
+            "origin": "RiskAversion",
+            "content": "Given that the insurance holder is an adolescent and has a prole socioeconomic status, then the probabilities for the insurance holder's risk aversion are as follows: there is almost no chance that the individual is a psychopath when it comes to risk-taking, there is a better than even chance that they are adventurous, it is probably not the case that they have normal risk aversion, and there is little chance that they are cautious."
+        },
+        {
+            "id": 17,
+            "origin": "RiskAversion",
+            "content": "If the insurance holder is an adolescent and has a middle socioeconomic status, then the probabilities for the insurance holder's risk aversion are as follows: there is almost no chance that the individual is a psychopath when it comes to risk-taking, it is probably not the case that they are adventurous, the chances are roughly even for normal risk aversion, and there is only a slight chance that they are cautious."
+        },
+        {
+            "id": 18,
+            "origin": "RiskAversion",
+            "content": "If the insurance holder is an adolescent and has an upper-middle socioeconomic status, then the probabilities for the insurance holder's risk aversion are as follows: there is almost no chance that the individual is a psychopath when it comes to risk-taking, the chances are roughly even for them to be adventurous, it is probably not the case that they have normal risk aversion, and there is only a slight chance that they are cautious."
+        },
+        {
+            "id": 19,
+            "origin": "RiskAversion",
+            "content": "If the insurance holder is an adolescent and has a wealthy socioeconomic status, then the probabilities for the insurance holder's risk aversion are as follows: there is almost no chance that the individual is a psychopath when it comes to risk-taking, it is more likely than not that they are adventurous, it is probably not the case that they have normal risk aversion, and it is improbable that they are cautious."
+        },
+        {
+            "id": 20,
+            "origin": "RiskAversion",
+            "content": "If the insurance holder is an adult and has a prole socioeconomic status, then the probabilities for the insurance holder's risk aversion are as follows: there is almost no chance that the individual is a psychopath when it comes to risk-taking, it is probably not the case that they are adventurous, there are about even chances that they have normal risk aversion, and it is not probable that they are cautious."
+        },
+        {
+            "id": 21,
+            "origin": "RiskAversion",
+            "content": "If the insurance holder is an adult and has a middle socioeconomic status, then the probabilities for the insurance holder's risk aversion are as follows: there is almost no chance that the individual is a psychopath when it comes to risk-taking, it is unlikely that they are adventurous, there is a better than even chance that they have normal risk aversion, and it is unlikely that they are cautious."
+        },
+        {
+            "id": 22,
+            "origin": "RiskAversion",
+            "content": "If the insurance holder is an adult and has an upper-middle socioeconomic status, then the probabilities for the insurance holder's risk aversion are as follows: there is almost no chance that the individual is a psychopath when it comes to risk-taking, it is probably not the case that they are adventurous, the chances are about even that they have normal risk aversion, and it is improbable that they are cautious."
+        },
+        {
+            "id": 23,
+            "origin": "RiskAversion",
+            "content": "If the insurance holder is an adult and has a wealthy socioeconomic status, then the probabilities for the insurance holder's risk aversion are as follows: there is almost no chance that the individual is a psychopath when it comes to risk-taking, it is probably not the case that they are adventurous, it is not likely that they have normal risk aversion, and it is also not probable that they are cautious."
+        },
+        {
+            "id": 24,
+            "origin": "RiskAversion",
+            "content": "If the insurance holder is a senior and has a prole socioeconomic status, then the probabilities for the insurance holder's risk aversion are as follows: there is almost no chance that the individual is a psychopath when it comes to risk-taking, the chances are slight that they are adventurous, it is probably not the case that they have normal risk aversion, and there are about even chances that they are cautious."
+        },
+        {
+            "id": 25,
+            "origin": "RiskAversion",
+            "content": "If the insurance holder is a senior and has a middle socioeconomic status, then the probabilities for the insurance holder's risk aversion are as follows: there is almost no chance that the individual is a psychopath when it comes to risk-taking, it is highly unlikely that they are adventurous, it is probably not the case that they have normal risk aversion, and there is a better than even chance that they are cautious."
+        },
+        {
+            "id": 26,
+            "origin": "RiskAversion",
+            "content": "If the insurance holder is a senior and has an upper-middle socioeconomic status, then the probabilities for the insurance holder's risk aversion are as follows: there is almost no chance that the individual is a psychopath when it comes to risk-taking, there is little chance that they are adventurous, it is probably not the case that they have normal risk aversion, and there are about even chances that they are cautious."
+        },
+        {
+            "id": 27,
+            "origin": "RiskAversion",
+            "content": "If the insurance holder is a senior and has a wealthy socioeconomic status, then the probabilities for the insurance holder's risk aversion are as follows: there is almost no chance that the individual is a psychopath when it comes to risk-taking, there is little chance that they are adventurous, it is probably not the case that they have normal risk aversion, and there are about even chances that they are cautious."
+        },
+        {
+            "id": 28,
+            "origin": "OtherCar",
+            "content": "If the socioeconomic status of the insurance holder can be described as prole, then there are about even chances that they own another car or that they do not."
+        },
+        {
+            "id": 29,
+            "origin": "OtherCar",
+            "content": "If the socioeconomic status of the insurance holder can be described as middle class, then there is a very good chance that they own another car, and it is unlikely that no other car is present."
+        },
+        {
+            "id": 30,
+            "origin": "OtherCar",
+            "content": "If the socioeconomic status of the insurance holder can be referred to as upper-middle class, then it is highly likely that they own another car."
+        },
+        {
+            "id": 31,
+            "origin": "OtherCar",
+            "content": "If the socioeconomic status of the insurance holder is wealthy, then it is almost certain that they own another car."
+        },
+        {
+            "id": 32,
+            "origin": "SeniorTrain",
+            "content": "If the insurance holder is an adolescent with a psychopathic behaviour in terms of avoiding risk, then it is impossible for them to have received senior training, and it is certain that they have not received such training."
+        },
+        {
+            "id": 33,
+            "origin": "SeniorTrain",
+            "content": "If the insurance holder is an adolescent with an adventurous behaviour in terms of avoiding risk, then it is impossible for them to have received senior training, and it is certain that they have not received such training."
+        },
+        {
+            "id": 34,
+            "origin": "SeniorTrain",
+            "content": "If the insurance holder is an adolescent with a normal behaviour in terms of avoiding risk, then it is impossible for them to have received senior training, and it is certain that they have not received such training."
+        },
+        {
+            "id": 35,
+            "origin": "SeniorTrain",
+            "content": "If the insurance holder is an adolescent with a cautious behaviour in terms of avoiding risk, then it is impossible for them to have received senior training, and it is certain that they have not received such training."
+        },
+        {
+            "id": 36,
+            "origin": "SeniorTrain",
+            "content": "If the insurance holder is an adult with a psychopathic behaviour in terms of avoiding risk, then it is impossible for them to have received senior training, and it is certain that they have not received such training."
+        },
+        {
+            "id": 37,
+            "origin": "SeniorTrain",
+            "content": "If the insurance holder is an adult with an adventurous behaviour in terms of avoiding risk, then it is impossible for them to have received senior training, and it is certain that they have not received such training."
+        },
+        {
+            "id": 38,
+            "origin": "SeniorTrain",
+            "content": "If the insurance holder is an adult with a normal behaviour in terms of avoiding risk, then it is impossible for them to have received senior training, and it is certain that they have not received such training."
+        },
+        {
+            "id": 39,
+            "origin": "SeniorTrain",
+            "content": "If the insurance holder is an adult with a cautious behaviour in terms of avoiding risk, then it is impossible for them to have received senior training, and it is certain that they have not received such training."
+        },
+        {
+            "id": 40,
+            "origin": "SeniorTrain",
+            "content": "If the insurance holder is a senior with a psychopathic behaviour in terms of avoiding risk, then there is almost no chance that they have received senior training, and it is almost certain that they have not received such training."
+        },
+        {
+            "id": 41,
+            "origin": "SeniorTrain",
+            "content": "If the insurance holder is a senior with an adventurous behaviour in terms of avoiding risk, then there is almost no chance that they have received senior training, and it is almost certain that they have not received such training."
+        },
+        {
+            "id": 42,
+            "origin": "SeniorTrain",
+            "content": "If the insurance holder is a senior with a normal behaviour in terms of avoiding risk, then it is probably not the case that they have received senior training, and it is probable that they have not received such training."
+        },
+        {
+            "id": 43,
+            "origin": "SeniorTrain",
+            "content": "If the insurance holder is a senior with a cautious behaviour in terms of avoiding risk, then it is highly likely that they have received senior training, and it is improbable that they have not received such training."
+        },
+        {
+            "id": 44,
+            "origin": "DrivingSkill",
+            "content": "Given that the insurance holder is an adolescent and has undergone senior training, chances for the the insurance holder having substandard driving skills are about even. The driving skills are probably not normal and expert driving skills are also highly unlikely."
+        },
+        {
+            "id": 45,
+            "origin": "DrivingSkill",
+            "content": "Given that the insurance holder is an adolescent and has not undergone senior training, chances for the insurance holder having substandard or normal driving skills are about even. Expert driving skills are highly unlikely."
+        },
+        {
+            "id": 46,
+            "origin": "DrivingSkill",
+            "content": "Given that the insurance holder is an adult and has undergone senior training, they probably don't have substandard driving skills, whereas the probability of normal driving skills is better than even, and there is little chance of expert driving skills."
+        },
+        {
+            "id": 47,
+            "origin": "DrivingSkill",
+            "content": "Given that the insurance holder is an adult and has not undergone senior training, they probably don't have substandard driving skills, whereas the probability of normal driving skills is better than even, and there is a slight chance of expert driving skills."
+        },
+        {
+            "id": 48,
+            "origin": "DrivingSkill",
+            "content": "Given that the insurance holder is a senior and has undergone senior training, the probability of the insurance holder having substandard driving skills is improbable, the probability of normal driving skills is better than even, and they probably do not have expert driving skills."
+        },
+        {
+            "id": 49,
+            "origin": "DrivingSkill",
+            "content": "Given that the insurance holder is a senior and has not undergone senior training, the insurance holder probably does not have substandard driving skills, the chances of normal driving skills are about even, and expert driving skills are improbable."
+        }
+    ],
+    "evidence_query_pairs": [
+        {
+            "id": 0,
+            "evidences": [
+                "The driver has a normal risk aversion.",
+                "The driver has normal driving skills.",
+                "The senior driver has not taken a driver's training or safety course.",
+                "The driver owns another car.",
+                "The driver is a senior.",
+                "The driver has a lower socio-economic status."
+            ],
+            "query": "What is the likelihood of this driver not being a good student?",
+            "answer": 1.0,
+            "reasoning_types": [
+                "causal"
+            ]
+        },
+        {
+            "id": 1,
+            "evidences": [
+                "The driver seeking insurance is a senior.",
+                "The driver is not a good student.",
+                "The driver has expert driving skills.",
+                "The driver does not own another car.",
+                "The driver has a prole socio-economic status."
+            ],
+            "query": "What is the likelihood of this driver having normal risk aversion?",
+            "answer": 0.29906539,
+            "reasoning_types": [
+                "causal",
+                "evidential"
+            ]
+        },
+        {
+            "id": 2,
+            "evidences": [
+                "The driver has a high risk aversion, which in this case is referred to as psychopath.",
+                "The driver has not taken a senior driver's training or safety course.",
+                "The driver is a good student."
+            ],
+            "query": "What is the likelihood of this driver having substandard driving skills?",
+            "answer": 0.5,
+            "reasoning_types": [
+                "causal"
+            ]
+        },
+        {
+            "id": 3,
+            "evidences": [
+                "The driver has substandard driving skills.",
+                "The driver is of upper-middle socio-economic status.",
+                "The driver has a normal risk aversion.",
+                "The driver owns another car.",
+                "The driver is a good student."
+            ],
+            "query": "What is the likelihood of this driver being an adolescent?",
+            "answer": 1.0,
+            "reasoning_types": [
+                "evidential",
+                "explaining_away"
+            ]
+        },
+        {
+            "id": 4,
+            "evidences": [
+                "The driver has not taken a senior driver's training or safety course.",
+                "The driver is not a good student.",
+                "The driver's socio-economic status is middle class."
+            ],
+            "query": "What is the likelihood of this driver having expert driving skills?",
+            "answer": 0.089943432,
+            "reasoning_types": [
+                "causal"
+            ]
+        },
+        {
+            "id": 5,
+            "evidences": [
+                "The driver seeking insurance is a senior.",
+                "The driver's driving skill is normal.",
+                "The senior driver has not taken a driver's training or safety course."
+            ],
+            "query": "What is the likelihood of this senior driver having an extreme lack of risk aversion towards dangerous driving situations?",
+            "answer": 0.024096367,
+            "reasoning_types": [
+                "causal",
+                "evidential"
+            ]
+        },
+        {
+            "id": 6,
+            "evidences": [
+                "The driver has a normal risk aversion.",
+                "The driver does not own any other car.",
+                "The driver has taken a driver's training or safety course."
+            ],
+            "query": "What is the likelihood of this driver having substandard driving skills?",
+            "answer": 0.1,
+            "reasoning_types": [
+                "causal"
+            ]
+        },
+        {
+            "id": 7,
+            "evidences": [
+                "The driver does not own another car.",
+                "The driver is of upper-middle socio-economic status.",
+                "The driver is a good student.",
+                "The driver has a psychopathic risk aversion.",
+                "The driver has not taken a driver's training or safety course."
+            ],
+            "query": "What is the likelihood of this driver having substandard driving skills?",
+            "answer": 0.5,
+            "reasoning_types": [
+                "causal"
+            ]
+        },
+        {
+            "id": 8,
+            "evidences": [
+                "The driver has expert driving skills.",
+                "The senior driver has taken a driver's training or safety course.",
+                "The driver is from a low socio-economic background.",
+                "The driver does not own another car.",
+                "The driver is a senior.",
+                "The driver is adventurous when it comes to risk-taking."
+            ],
+            "query": "What is the likelihood of this driver not being a good student?",
+            "answer": 1.0,
+            "reasoning_types": [
+                "causal"
+            ]
+        },
+        {
+            "id": 9,
+            "evidences": [
+                "The driver has an adventurous risk aversion.",
+                "The driver does not own another car.",
+                "The driver's socio-economic status is prole",
+                "The driver's driving skill is normal."
+            ],
+            "query": "What is the likelihood of this driver being a good student?",
+            "answer": 0.031436314,
+            "reasoning_types": [
+                "causal"
+            ]
+        },
+        {
+            "id": 10,
+            "evidences": [
+                "The driver has typical driving skills.",
+                "The driver is not a good student.",
+                "The senior driver has taken a driver's training or safety course.",
+                "The driver does not own another car.",
+                "The driver is a senior."
+            ],
+            "query": "What is the likelihood of this driver having a middle socio-economic status?",
+            "answer": 0.13937281,
+            "reasoning_types": [
+                "causal",
+                "evidential"
+            ]
+        },
+        {
+            "id": 11,
+            "evidences": [
+                "The driver seeking insurance has a lower socio-economic status (which could include factors like income level, occupation, and education).",
+                "The driver is not a good student."
+            ],
+            "query": "What is the likelihood of this driver not owning another car?",
+            "answer": 0.5,
+            "reasoning_types": [
+                "causal"
+            ]
+        },
+        {
+            "id": 12,
+            "evidences": [
+                "The driver has normal driving skills.",
+                "The driver is wealthy.",
+                "The driver does not own another car."
+            ],
+            "query": "What is the likelihood of this driver being a good student?",
+            "answer": 0.064125401,
+            "reasoning_types": [
+                "causal"
+            ]
+        },
+        {
+            "id": 13,
+            "evidences": [
+                "The driver owns another car.",
+                "The driver has normal driving skills."
+            ],
+            "query": "What is the likelihood of this driver having not taken a senior driver training or safety course?",
+            "answer": 0.87735866,
+            "reasoning_types": [
+                "evidential"
+            ]
+        },
+        {
+            "id": 14,
+            "evidences": [
+                "The driver is not a good student.",
+                "The driver has a lower socio-economic status (e.g., lower income, limited education).",
+                "The driver does not own another car."
+            ],
+            "query": "What is the likelihood of this driver having normal risk aversion?",
+            "answer": 0.4407767,
+            "reasoning_types": [
+                "causal"
+            ]
+        },
+        {
+            "id": 15,
+            "evidences": [
+                "The driver seeking insurance has a middle socio-economic status.",
+                "The senior driver has not taken a driver's training or safety course.",
+                "The driver's risk aversion is within normal limits.",
+                "The driver's driving skill is considered normal.",
+                "The driver is an adolescent.",
+                "The driver does not own another car."
+            ],
+            "query": "What is the likelihood of this driver not being a good student?",
+            "answer": 0.8,
+            "reasoning_types": [
+                "causal"
+            ]
+        },
+        {
+            "id": 16,
+            "evidences": [
+                "The driver is an adolescent.",
+                "The senior driver has not taken a driver's training or safety course.",
+                "The driver has a psychopathic risk aversion.",
+                "The driver has expert driving skills."
+            ],
+            "query": "What is the likelihood of this driver owning another car?",
+            "answer": 0.7005,
+            "reasoning_types": [
+                "causal"
+            ]
+        },
+        {
+            "id": 17,
+            "evidences": [
+                "The driver owns another car.",
+                "The driver has substandard driving skills.",
+                "The driver is not a good student.",
+                "The driver is adventurous when it comes to risk-taking.",
+                "The driver belongs to the upper-middle socio-economic class.",
+                "The driver is an adolescent."
+            ],
+            "query": "What is the likelihood of this driver having taken a senior driver training or safety course?",
+            "answer": 0.0,
+            "reasoning_types": [
+                "causal",
+                "evidential"
+            ]
+        },
+        {
+            "id": 18,
+            "evidences": [
+                "The driver has a high risk aversion, which in this case is represented as 'Psychopath'."
+            ],
+            "query": "What is the likelihood of this driver having normal driving skills?",
+            "answer": 0.54666668,
+            "reasoning_types": [
+                "causal"
+            ]
+        },
+        {
+            "id": 19,
+            "evidences": [
+                "The driver seeking insurance has a middle socio-economic status.",
+                "The driver is an adult."
+            ],
+            "query": "What is the likelihood of this driver owning another car?",
+            "answer": 0.8,
+            "reasoning_types": [
+                "causal"
+            ]
+        },
+        {
+            "id": 20,
+            "evidences": [
+                "The driver owns another car.",
+                "The driver has a lower socio-economic status."
+            ],
+            "query": "What is the likelihood of this driver having undergone a senior driver training or safety course?",
+            "answer": 0.13571431,
+            "reasoning_types": [
+                "causal"
+            ]
+        },
+        {
+            "id": 21,
+            "evidences": [
+                "The driver has expert driving skills."
+            ],
+            "query": "What is the likelihood of this driver being cautious about taking risks?",
+            "answer": 0.37195766,
+            "reasoning_types": [
+                "evidential"
+            ]
+        },
+        {
+            "id": 22,
+            "evidences": [
+                "The driver seeking insurance has a lower socio-economic status, which may indicate factors like a lower income level, lesser education, or less prestigious occupation."
+            ],
+            "query": "What is the likelihood of this driver being an adolescent?",
+            "answer": 0.19047619,
+            "reasoning_types": [
+                "evidential"
+            ]
+        },
+        {
+            "id": 23,
+            "evidences": [
+                "The driver has normal driving skills.",
+                "The driver seeking insurance has attended a senior drivers training.",
+                "The driver is a good student."
+            ],
+            "query": "What is the likelihood of this driver being part of the middle class?",
+            "answer": -1,
+            "reasoning_types": [
+                "evidential"
+            ]
+        },
+        {
+            "id": 24,
+            "evidences": [
+                "The driver is a good student.",
+                "The driver seeking insurance is a senior."
+            ],
+            "query": " What is the likelihood of this driver having adventurous risk aversion?",
+            "answer": -1,
+            "reasoning_types": [
+                "causal"
+            ]
+        }
+    ]
+}

@@ -1,0 +1,605 @@
+{
+    "nodes": [
+        {
+            "name": "BirthAsphyxia",
+            "states": [
+                "yes",
+                "no"
+            ]
+        },
+        {
+            "name": "Disease",
+            "states": [
+                "PFC",
+                "TGA",
+                "Fallot",
+                "PAIVS",
+                "TAPVD",
+                "Lung"
+            ]
+        },
+        {
+            "name": "LungParench",
+            "states": [
+                "Normal",
+                "Congested",
+                "Abnormal"
+            ]
+        },
+        {
+            "name": "LungFlow",
+            "states": [
+                "Normal",
+                "Low",
+                "High"
+            ]
+        },
+        {
+            "name": "ChestXray",
+            "states": [
+                "Normal",
+                "Oligaemic",
+                "Plethoric",
+                "Grd_Glass",
+                "Asy/Patch"
+            ]
+        },
+        {
+            "name": "XrayReport",
+            "states": [
+                "Normal",
+                "Oligaemic",
+                "Plethoric",
+                "Grd_Glass",
+                "Asy/Patchy"
+            ]
+        }
+    ],
+    "connectivity": [
+        {
+            "node": "BirthAsphyxia",
+            "incoming": []
+        },
+        {
+            "node": "Disease",
+            "incoming": [
+                "BirthAsphyxia"
+            ]
+        },
+        {
+            "node": "LungParench",
+            "incoming": [
+                "Disease"
+            ]
+        },
+        {
+            "node": "LungFlow",
+            "incoming": [
+                "Disease"
+            ]
+        },
+        {
+            "node": "ChestXray",
+            "incoming": [
+                "LungParench",
+                "LungFlow"
+            ]
+        },
+        {
+            "node": "XrayReport",
+            "incoming": [
+                "ChestXray"
+            ]
+        }
+    ],
+    "numeric_premises": [
+        {
+            "id": 0,
+            "origin": "BirthAsphyxia",
+            "content": "The probability of a baby being free from birth asphyxia is 0.9, whereas the probability of a baby experiencing birth asphyxia is 0.1."
+        },
+        {
+            "id": 1,
+            "origin": "Disease",
+            "content": "Should a baby suffer from birth asphyxia, there is a 20% chance of Persistent Fetal Circulation (PFC), a 30% probability of Transposition of the Great Arteries (TGA), a 25% likelihood of Fallot's Tetralogy (Fallot), a 15% risk of Pulmonary Atresia with Intact Ventricular Septum (PAIVS), a 5% chance of Total Anomalous Pulmonary Venous Drainage (TAPVD), and a 5% probability of lung issues."
+        },
+        {
+            "id": 2,
+            "origin": "Disease",
+            "content": "However, if the baby doesn't experience birth asphyxia, there is a 97% probability of no PFC, an approximately 34% chance of TGA, a 30% likelihood of Fallot, a 23% risk of PAIVS, a 95% possibility of no TAPVD, and a 95% probability of no lung conditions."
+        },
+        {
+            "id": 3,
+            "origin": "LungParench",
+            "content": "In case a baby suffers from persistent fetal circulation (PFC), there's a 60% probability that their lung parenchyma will appear normal, a 10% probability it will be congested, and a 30% chance it will appear abnormal."
+        },
+        {
+            "id": 4,
+            "origin": "LungParench",
+            "content": "Should the baby be diagnosed with Transposition of the Great Arteries (TGA), the lung parenchyma is likely to be normal in 80% of cases. The chance for it to be congested is 5%, and the chance of abnormality is 15%."
+        },
+        {
+            "id": 5,
+            "origin": "LungParench",
+            "content": "If the baby is diagnosed with Fallot, there's an 80% probability that the lung parenchyma will be normal, a 5% probability it will be congested, and a 15% chance it will be abnormal."
+        },
+        {
+            "id": 6,
+            "origin": "LungParench",
+            "content": "If the baby is diagnosed with PAIVS, there's an 80% probability that the lung parenchyma will be normal, a 5% probability it will be congested, and a 15% chance it will be abnormal."
+        },
+        {
+            "id": 7,
+            "origin": "LungParench",
+            "content": "In case the baby has TAPVD, there's a 10% probability that the lung parenchyma will be normal, a 60% probability it will be congested, and a 30% chance it will be abnormal."
+        },
+        {
+            "id": 8,
+            "origin": "LungParench",
+            "content": "In case the baby has a lung condition, there's a 3% probability that the lung parenchyma will be normal, a 25% probability it will be congested, and a 72% chance it will be abnormal."
+        },
+        {
+            "id": 9,
+            "origin": "LungFlow",
+            "content": "If a child has Persistent Fetal Circulation (PFC), there's a 65% likelihood of low lung flow, while a normal lung flow only occurs with a 30% probability, and a high lung flow is highly unlikely, with a 5% chance."
+        },
+        {
+            "id": 10,
+            "origin": "LungFlow",
+            "content": "In cases of Transposition of Great Arteries (TGA), there's only a 5% probability of observing low lung flow, and a high lung flow is more likely, with a 75% chance, while a normal lung flow still has a 20% probability."
+        },
+        {
+            "id": 11,
+            "origin": "LungFlow",
+            "content": "If a child has Fallot's Tetralogy (Fallot), the lung flow is often low, with a probability of 80%, and higher lung flows are unlikely, with a normal lung flow being a 15% possibility and high lung flow an even lower 5% risk."
+        },
+        {
+            "id": 12,
+            "origin": "LungFlow",
+            "content": "Childs with Pulmonary Artery Stenosis (PAIVS) typically display low lung flow, with an 85% probability, while normal lung flow or high lung flow are unlikely, capturing only a 10% or 5% chance respectively."
+        },
+        {
+            "id": 13,
+            "origin": "LungFlow",
+            "content": "For Total Anomalous Pulmonary Venous Drainage (TAPVD), low lung flow is not common, with only a 10% probability. High lung flow is the most common, with a 60% chance. Normal lung flow is less likely, but possible, with a 30% probability."
+        },
+        {
+            "id": 14,
+            "origin": "LungFlow",
+            "content": "Should a child have a lung disease, there's a 10% likelihood of observing low lung flow, and a 70% probability of normal lung flow, leaving a 20% probability of high lung flow."
+        },
+        {
+            "id": 15,
+            "origin": "ChestXray",
+            "content": "If the lung parenchyma is normal and lung flow is normal, the chest X-ray is most likely to be normal, with a 90% likelihood. There is also a 3% probability for oligaemic, plethoric, or asymmetry/patchiness showing up on the chest X-ray and a 1% chance of ground glass opacity."
+        },
+        {
+            "id": 16,
+            "origin": "ChestXray",
+            "content": "If the lung parenchyma is normal and the lung flow is low, oligaemic signs are more likely to be found on the chest X-ray, with an 80% likelihood. However, there is still a 14% chance that the chest X-ray will appear normal. A 2% probability exists for plethoric, ground glass opacity, or asymmetry/patchiness findings."
+        },
+        {
+            "id": 17,
+            "origin": "ChestXray",
+            "content": "In a situation where the lung parenchyma is normal and the lung flow is high, the report may indicate a plethoric outcome with an 79% probability. There is a 15% chance the report presents a normal finding while it is also slightly possible for an oligaemic (1%), ground glass opacity (4%), or asymmetry/patchiness (1%) result to occur."
+        },
+        {
+            "id": 18,
+            "origin": "ChestXray",
+            "content": "If the lung parenchyma is congested and the lung flow is normal, it is most probable that the radiological report will show ground glass opacity, with a 70% likelihood. An 8% chance exists for asymmetry/patchiness. The probability of a normal finding is about 5%, and an oligaemic or plethoric outcome is quite unlikely, at 2% and 15% respectively."
+        },
+        {
+            "id": 19,
+            "origin": "ChestXray",
+            "content": "When the lung parenchyma is congested and the lung flow is low, there is a high probability, amounting to 50%, for ground glass opacity. In this case, there is also a 22% likelihood for the report to state oligaemic signs. A plethoric finding is less likely with 8%, the probability for normal findings stands at 5% and the likelihood for asymmetry or patchiness findings at 15%."
+        },
+        {
+            "id": 20,
+            "origin": "ChestXray",
+            "content": "Should the lung parenchyma be congested and lung flow high, there is still a considerable 40% likelihood for both plethoric or ground glass outcomes on the chest X-ray. The probability for an oligaemic finding is 2%, while the likelihood for asymmetry or patchiness is 13%. The chances for a normal finding remain low, at 5%."
+        },
+        {
+            "id": 21,
+            "origin": "ChestXray",
+            "content": "When dealing with an abnormal lung parenchyma and normal lung flow, there is a high likelihood for asymmetry or patchiness, with an 80% probability. The chance for an oligaemic finding remains at 5%. The probability of normal, plethoric, and ground glass outcomes is equal to oligaemic outcome, at 5%."
+        },
+        {
+            "id": 22,
+            "origin": "ChestXray",
+            "content": "If the lung parenchyma is abnormal and the lung flow is low, then the analysis suggests that asymmetry or patchiness is still somewhat likely to happen, with a 70% probability. The likelihood of an oligaemic report is 15%, and the probabilities for normal, plethoric, and ground glass opacity are 5%."
+        },
+        {
+            "id": 23,
+            "origin": "ChestXray",
+            "content": "When the lung parenchyma is abnormal and lung flow is high, there is a high probability for a ground glass opacity finding, with a 34% likelihood. The chance for normal findings is also substantial, at 24%. Oligaemic and asymmetry or patchiness outcomes are still possible, with a 33% and 6% likelihood, respectively, but Plethoric findings have a relatively low chances of occurring, at 3%."
+        },
+        {
+            "id": 24,
+            "origin": "XrayReport",
+            "content": "A normal chest X-ray will most likely yield a normal X-ray report with a likelihood of 80%, though there is a 6% probability for each of oligaemic, plethoric, and asymmetry/patchy findings in the X-ray report and 2% for ground glass."
+        },
+        {
+            "id": 25,
+            "origin": "XrayReport",
+            "content": "An oligaemic chest X-ray has high odds, 80%, of resulting in an oligaemic X-ray report. Meanwhile, there's a 10% chance of a normal report, a 2% chance of a plethoric and a ground glass report, and a 6% for and asymmetry/patchy results."
+        },
+        {
+            "id": 26,
+            "origin": "XrayReport",
+            "content": "A plethoric chest X-ray most likely brings about a plethoric X-ray report with an 80% probability. There's a 10% likelihood of a normal report and a 2%, 2% and 6% chance for oligaemic, ground glass and asymmetry/patchy findings, respectively."
+        },
+        {
+            "id": 27,
+            "origin": "XrayReport",
+            "content": "A chest X-ray that shows ground glass signs will likely result in a ground glass X-ray report with a probability of 60%. It has a 20% chance of revealing asymmetry/patchy indications, an 8% chance of appearing as normal, and only a 2% and 10% likelihood for oligaemic and plethoric results, respectively."
+        },
+        {
+            "id": 28,
+            "origin": "XrayReport",
+            "content": "An asymmetry/patchy chest X-ray has a high 70% probability of producing a similar X-ray report. The likelihood of it being interpreted as plethoric or ground glass is only 10% each, while there's an 8% and 2% chance of it being seen as normal or oligaemic, respectively."
+        }
+    ],
+    "wep_based_premises": [
+        {
+            "id": 0,
+            "origin": "BirthAsphyxia",
+            "content": "Most babies are born without birth asphyxia, only a small number of babies experience birth asphyxia."
+        },
+        {
+            "id": 1,
+            "origin": "Disease",
+            "content": "If a baby has birth asphyxia, then it is quite possible for them to develop serious heart problems such as Persistent Fetal Circulation (PFC), Transposition of the Great Arteries (TGA), Fallot's Tetralogy (Fallot), Pulmonary Atresia with Intact Ventricular Septum (PAIVS), or Total Anomalous Pulmonary Venous Drainage (TAPVD). In addition, they may also have lung issues."
+        },
+        {
+            "id": 2,
+            "origin": "Disease",
+            "content": "If a baby does not have birth asphyxia, then it is highly unlikely for them to have Persistent Fetal Circulation (PFC), they are quite unlikely to develop Total Anomalous Pulmonary Venous Drainage (TAPVD) or lung issues. However, they may still have a chance of having Transposition of the Great Arteries (TGA), Fallot's Tetralogy (Fallot) or Pulmonary Atresia with Intact Ventricular Septum (PAIVS)."
+        },
+        {
+            "id": 3,
+            "origin": "LungParench",
+            "content": "If a baby has PFC, then examination of their lung parenchyma may show normal results, it may also show congested results, or it may show abnormal results. It's not certain what the results will be, but it's more likely for the lung parenchyma to appear normal than congested or abnormal."
+        },
+        {
+            "id": 4,
+            "origin": "LungParench",
+            "content": "In cases where a baby is diagnosed with Transposition of the Great Arteries (TGA), the lung parenchyma is more likely to be normal than not. However, there is still a small chance of it being congested or abnormal."
+        },
+        {
+            "id": 5,
+            "origin": "LungParench",
+            "content": "In babies diagnosed with Fallot, the lung parenchyma is typically normal in most cases, but it can also be congested or abnormal in some instances."
+        },
+        {
+            "id": 6,
+            "origin": "LungParench",
+            "content": "In babies diagnosed with PAIVS, the lung parenchyma is usually normal in the majority of cases, but it can occasionally be congested or abnormal."
+        },
+        {
+            "id": 7,
+            "origin": "LungParench",
+            "content": "For babies with TAPVD, it's rare for the lung parenchyma to be normal, and it's much more common for it to be congested. There's also a possibility for it to be abnormal."
+        },
+        {
+            "id": 8,
+            "origin": "LungParench",
+            "content": "If a baby has a lung condition, then the lung parenchyma is rarely normal, occasionally congested, and often abnormal."
+        },
+        {
+            "id": 9,
+            "origin": "LungFlow",
+            "content": "If a child has Persistent Fetal Circulation (PFC), then low lung flow is common, a normal lung flow is uncommon, and a high lung flow is extremely rare."
+        },
+        {
+            "id": 10,
+            "origin": "LungFlow",
+            "content": "In cases of Transposition of Great Arteries (TGA), low lung flow is extremely rare, a normal lung flow is uncommon, and a high lung flow is highly likely."
+        },
+        {
+            "id": 11,
+            "origin": "LungFlow",
+            "content": "If a child has Fallot's Tetralogy (Fallot), then low lung flow is very common, while a normal lung flow is quite rare and a high lung flow is extremely rare."
+        },
+        {
+            "id": 12,
+            "origin": "LungFlow",
+            "content": "Childs with Pulmonary Artery Stenosis (PAIVS) most commonly exhibit low lung flow, whereas normal or high lung flow is considerably less frequent among them."
+        },
+        {
+            "id": 13,
+            "origin": "LungFlow",
+            "content": "In TAPVD, low lung flow is uncommon, whereas high lung flow is the most prevalent. Normal lung flow, although possible, is significantly less frequent compared to high lung flow."
+        },
+        {
+            "id": 14,
+            "origin": "LungFlow",
+            "content": "If a child has a lung disease, then it's quite rare to see low lung flow, and while normal lung flow is common, high lung flow is also possible though less likely than normal lung flow."
+        },
+        {
+            "id": 15,
+            "origin": "ChestXray",
+            "content": "In a situation where the lung parenchyma is normal and lung flow is normal, it is highly probable that the chest X-ray will appear normal. However, there is still a small chance that the chest X-ray may show oligaemic, plethoric, or asymmetry/patchiness, or very rarely, ground glass opacity."
+        },
+        {
+            "id": 16,
+            "origin": "ChestXray",
+            "content": "In a situation where the lung parenchyma is normal and lung flow is low, it is highly probable that oligaemic signs will show up on the chest X-ray. However, there is also a chance that the chest X-ray may still appear normal. Furthermore, there is a small possibility of finding plethoric, ground glass opacity, or asymmetry/patchiness on the chest X-ray."
+        },
+        {
+            "id": 17,
+            "origin": "ChestXray",
+            "content": "In a situation where the lung parenchyma is normal and the lung flow is high, the report may likely indicate a plethoric outcome. It is also possible for the report to show normal findings, or in rare cases, for it to indicate an oligaemic, a ground glass opacity, or an asymmetry/patchiness result."
+        },
+        {
+            "id": 18,
+            "origin": "ChestXray",
+            "content": "When the lung parenchyma is congested and the lung flow is normal, it is highly likely that the radiological report will indicate ground glass opacity. There is also a chance for the report to show asymmetry/patchiness. A normal finding is possible, but rare, while an oligaemic or plethoric outcome is unlikely."
+        },
+        {
+            "id": 19,
+            "origin": "ChestXray",
+            "content": "If the lung parenchyma is congested and the lung flow is low, it is highly probable to have ground glass opacity. It is also possible to have oligaemic signs. A plethoric finding is less likely. Normal findings and asymmetry or patchiness each occur in few cases."
+        },
+        {
+            "id": 20,
+            "origin": "ChestXray",
+            "content": "If the lung parenchyma is congested and lung flow is high, there is still a significant chance of observing plethoric or ground glass outcomes on the chest X-ray. An oligaemic finding is relatively rare, while asymmetry or patchiness is uncommon. Normal findings are not expected to be common."
+        },
+        {
+            "id": 21,
+            "origin": "ChestXray",
+            "content": "When dealing with an abnormal lung parenchyma and normal lung flow, it is much more likely to observe asymmetry or patchiness than an oligaemic finding. Furthermore, the chances of observing normal, plethoric, and ground glass outcomes are as likely as observing an oligaemic finding."
+        },
+        {
+            "id": 22,
+            "origin": "ChestXray",
+            "content": "If the lung parenchyma is abnormal and the lung flow is low, then the analysis suggests that asymmetry or patchiness is quite likely, and an oligaemic report is less likely to occur. Normal, plethoric, or ground glass opacity readings are the least likely outcomes of the analysis."
+        },
+        {
+            "id": 23,
+            "origin": "ChestXray",
+            "content": "If the lung parenchyma is abnormal and lung flow is high, then there is a strong tendency for a ground glass opacity finding. While normal findings can still occur, they are less likely. Other possible outcomes include oligaemic changes, asymmetry or patchiness, but plethoric findings are rare in this scenario."
+        },
+        {
+            "id": 24,
+            "origin": "XrayReport",
+            "content": "A normal chest X-ray will typically result in a normal X-ray report. However, there are other possible findings, including oligaemic, plethoric, and asymmetry or patchiness, which occur with relatively equal likelihood. Additionally, there is a small chance for ground glass findings to appear in the X-ray report."
+        },
+        {
+            "id": 25,
+            "origin": "XrayReport",
+            "content": "An oligaemic chest X-ray will usually show up as oligaemic on the X-ray report. Although the chance of a normal report is possible, it is less likely. Additionally, there is a small chance for plethoric, ground glass, or asymmetry/patchy findings in the X-ray report."
+        },
+        {
+            "id": 26,
+            "origin": "XrayReport",
+            "content": "A plethoric chest X-ray will typically result in a plethoric X-ray report. While it's still possible for the report to show normal results, this is relatively uncommon. The likelihood of other specific findings, such as oligaemic, ground glass, or asymmetry/patchy results, is also relatively low."
+        },
+        {
+            "id": 27,
+            "origin": "XrayReport",
+            "content": "A chest X-ray indicating ground glass signs will predominantly yield a ground glass X-ray report. However, there is a possibility for other results, including asymmetry/patchy findings, normal results, and even less likely, oligaemic or plethoric readings."
+        },
+        {
+            "id": 28,
+            "origin": "XrayReport",
+            "content": "An asymmetry/patchy chest X-ray will most often result in an asymmetry/patchy X-ray report. Though, there is a chance it could be mistaken for a plethoric or ground glass finding, and even a small chance it may look normal or oligaemic, however, these cases are less common."
+        }
+    ],
+    "evidence_query_pairs": [
+        {
+            "id": 0,
+            "evidences": [
+                "The chest X-ray report indicates ground glass opacity."
+            ],
+            "query": "Given that the chest X-ray report shows ground glass opacity, what is the likelihood of the chest X-ray having been taken with asymmetrical or patchy findings?",
+            "answer": 0.15343266,
+            "reasoning_types": ["evidential"]
+        },
+        {
+            "id": 1,
+            "evidences": [
+                "A chest X-ray shows an oligaemic pattern."
+            ],
+            "query": "Given that the chest X-ray shows an oligaemic pattern, what is the likelihood of the lung blood flow being normal?",
+            "answer": 0.019557052,
+            "reasoning_types": ["evidential"]
+        },
+        {
+            "id": 2,
+            "evidences": [
+                "The chest X-ray report indicates a plethoric pattern.",
+                "The lung parenchyma is normal.",
+                "The child has Fallot's disease.",
+                "The blood flow through the lungs is high.",
+                "The chest X-ray is normal."
+            ],
+            "query": "What is the likelihood of this child not having birth asphyxia?",
+            "answer": 0.91525424,
+            "reasoning_types": ["evidential"]
+        },
+        {
+            "id": 3,
+            "evidences": [
+                "The blood flow through the lungs is high.",
+                "A child has a disease called TAPVD (Total Anomalous Pulmonary Venous Drainage).",
+                "A chest X-ray has been taken and it shows a plethoric (enlarged) appearance."
+            ],
+            "query": "What is the likelihood of the chest X-ray report indicating a plethoric appearance?",
+            "answer": 0.8,
+            "reasoning_types": ["causal"]
+        },
+        {
+            "id": 4,
+            "evidences": [
+                "The child did not experience a lack of oxygen at birth.",
+                "A chest X-ray was taken and it showed a ground glass pattern.",
+                "The blood flow through the lungs is low.",
+                "The report of the chest X-ray shows an asymmetric or patchy appearance."
+            ],
+            "query": "What is the likelihood of the lung parenchyma being normal given these findings?",
+            "answer": 0.053994681,
+            "reasoning_types": ["causal", "evidential", "explaining_away"]
+        },
+        {
+            "id": 5,
+            "evidences": [
+                "A chest X-ray shows asymmetrical or patchy densities.",
+                "The child did not experience a lack of oxygen at birth.",
+                "The blood flow through the lungs is low."
+            ],
+            "query": "Given an asymmetrical or patchy chest X-ray, no birth asphyxia, and low lung blood flow, what is the likelihood of abnormal lung parenchyma?",
+            "answer": 0.82368923,
+            "reasoning_types": ["causal", "explaining_away"]
+        },
+        {
+            "id": 6,
+            "evidences": [
+                "A child has experienced a lack of oxygen at birth.",
+                "The blood flow through the lungs is normal."
+            ],
+            "query": "Given that the child had asphyxia at birth and the blood flow through the lungs is normal, what is the likelihood of the chest X-ray report showing oligaemic infiltrates?",
+            "answer": 0.068541326,
+            "reasoning_types": ["causal"]
+        },
+        {
+            "id": 7,
+            "evidences": [
+                "The lung parenchyma is abnormal.",
+                "The child has a disease called TAPVD (Total Anomalous Pulmonary Venous Return).",
+                "The child did not experience a lack of oxygen at birth.",
+                "The chest X-ray shows a plethoric pattern.",
+                "The X-ray report indicates an asy/patchy condition."
+            ],
+            "query": "What is the likelihood of this child having low lung blood flow?",
+            "answer": 0.0041237113,
+            "reasoning_types": ["causal", "evidential", "explaining_away"]
+        },
+        {
+            "id": 8,
+            "evidences": [
+                "The child has Fallot's tetralogy.",
+                "The blood flow through the lungs is high.",
+                "The chest X-ray results are normal.",
+                "The lung parenchyma is abnormal."
+            ],
+            "query": "What is the likelihood of this child having experienced birth asphyxia?",
+            "answer": 0.084745763,
+            "reasoning_types": ["evidential"]
+        },
+        {
+            "id": 9,
+            "evidences": [
+                "A child has PAIVS (Perinatal Arterial Ischemic Stroke)."
+            ],
+            "query": "Given that a child has PAIVS, what is the likelihood of a chest X-ray showing a plethoric pattern?",
+            "answer": 0.0601,
+            "reasoning_types": ["causal"]
+        },
+        {
+            "id": 10,
+            "evidences": [
+                "The chest X-ray shows plethoric patterns.",
+                "The report of the chest X-ray also indicates plethoric patterns.",
+                "The child experienced a lack of oxygen at birth.",
+                "The blood flow through the lungs is low."
+            ],
+            "query": "What is the likelihood of the lung parenchyma being congested, given these conditions?",
+            "answer": 0.18865659,
+            "reasoning_types": ["causal", "evidential", "explaining_away"]
+        },
+        {
+            "id": 11,
+            "evidences": [
+                "A chest X-ray shows asynphatic or patchy patterns.",
+                "The child experienced a lack of oxygen at birth.",
+                "The child has a disease called Perinatal Arterial Ischemic Stroke (PAIVS).",
+                "The chest X-ray report indicates oligaemia."
+            ],
+            "query": "What is the likelihood of this child having low lung blood flow?",
+            "answer": 0.87240415,
+            "reasoning_types": ["causal", "evidential"]
+        },
+        {
+            "id": 12,
+            "evidences": [
+                "The blood flow through the lungs is low.",
+                "The lung parenchyma, or functional tissue, is congested."
+            ],
+            "query": "What is the likelihood of the chest X-ray report indicating a plethoric pattern?",
+            "answer": 0.1364,
+            "reasoning_types": ["causal"]
+        },
+        {
+            "id": 13,
+            "evidences": [
+                "The child experienced a lack of oxygen at birth.",
+                "The chest X-ray showed a ground-glass pattern.",
+                "The blood flow through the lungs is low.",
+                "The X-ray report indicates an oligaemic pattern.",
+                "The lung parenchyma appears normal."
+            ],
+            "query": "What is the likelihood of this child having a lung-related disease?",
+            "answer": 0.00042535091,
+            "reasoning_types": ["causal", "evidential"]
+        },
+        {
+            "id": 14,
+            "evidences": [
+                "The blood flow through the lungs is normal.",
+                "The child experienced a lack of oxygen at birth."
+            ],
+            "query": "What is the likelihood of this child having a congenital heart defect known as Total Anomalous Pulmonary Venous Return (TAPVD) as the disease?",
+            "answer": 0.06741573,
+            "reasoning_types": ["causal", "evidential"]
+        },
+        {
+            "id": 15,
+            "evidences": [ "The chest X-ray report indicates ground glass opacity." ],
+            "query": "What is the likelihood of a child's lung parenchyma being abnormal, given that the chest X-ray report shows ground glass opacity?",
+            "answer": 0.33221603,
+            "reasoning_types": ["evidential"]
+        },
+        {    "id": 16,
+            "evidences": [
+                "The child has Fallot's tetralogy.",
+                "A chest X-ray with ground glass opacity has been conducted."
+            ],
+            "query": "What is the likelihood of the child's lung blood flow being normal?",
+            "answer": 0.14701601,
+            "reasoning_types": ["causal", "evidential"]
+        },
+        {
+            "id": 17,
+            "evidences": [
+                "The blood flow through the lungs is high."
+            ],
+            "query": "Given high lung flow, what is the likelihood of a chest X-ray showing asymmetric or patchy areas?",
+            "answer": 0.032125,
+            "reasoning_types": ["causal"]
+        },
+        {
+            "id": 18,
+            "evidences": [
+                "The lung parenchyma, or functional tissue of the lungs, is congested.",
+                "The chest X-ray report indicates asymmetrical or patchy opacities."
+            ],
+            "query": "What is the likelihood of this child having a lung disease?",
+            "answer": 0.1378278,
+            "reasoning_types": ["evidential"]
+        },
+        {
+            "id": 19,
+            "evidences": [
+                "A chest X-ray was taken and it was normal.",
+                "The lung parenchyma is abnormal.",
+                "The child did not experience birth asphyxia.",
+                "The blood flow through the lungs is low.",
+                "The disease present in the child is lung disease."
+            ],
+            "query": "What is the likelihood of the X-ray report indicating plethoric patterns, given these conditions?",
+            "answer": 0.06,
+            "reasoning_types": ["causal", "evidential"]
+        }
+    ]
+}

@@ -1,0 +1,1561 @@
+{
+    "nodes": [
+        {
+            "name": "RiskAversion",
+            "states": [
+                "Psychopath",
+                "Adventurous",
+                "Normal",
+                "Cautious"
+            ]
+        },
+        {
+            "name": "SocioEcon",
+            "states": [
+                "Prole",
+                "Middle",
+                "UpperMiddle",
+                "Wealthy"
+            ]
+        },
+        {
+            "name": "VehicleYear",
+            "states": [
+                "Current",
+                "Older"
+            ]
+        },
+        {
+            "name": "MakeModel",
+            "states": [
+                "SportsCar",
+                "Economy",
+                "FamilySedan",
+                "Luxury",
+                "SuperLuxury"
+            ]
+        },
+        {
+            "name": "Mileage",
+            "states": [
+                "FiveThou",
+                "TwentyThou",
+                "FiftyThou",
+                "Million"
+            ]
+        },
+        {
+            "name": "Theft",
+            "states": [
+                "True",
+                "False"
+            ]
+        },
+        {
+            "name": "CarValue",
+            "states": [
+                "FiveThou",
+                "TenThou",
+                "TwentyThou",
+                "FiftyThou",
+                "Million"
+            ]
+        },
+        {
+            "name": "HomeBase",
+            "states": [
+                "Secure",
+                "City",
+                "Suburb",
+                "Rural"
+            ]
+        },
+        {
+            "name": "AntiTheft",
+            "states": [
+                "True",
+                "False"
+            ]
+        }
+    ],
+    "connectivity": [
+        {
+            "node": "RiskAversion",
+            "incoming": []
+        },
+        {
+            "node": "SocioEcon",
+            "incoming": []
+        },
+        {
+            "node": "VehicleYear",
+            "incoming": []
+        },
+        {
+            "node": "MakeModel",
+            "incoming": []
+        },
+        {
+            "node": "Mileage",
+            "incoming": []
+        },
+        {
+            "node": "Theft",
+            "incoming": [
+                "AntiTheft",
+                "HomeBase",
+                "CarValue"
+            ]
+        },
+        {
+            "node": "CarValue",
+            "incoming": [
+                "MakeModel",
+                "VehicleYear",
+                "Mileage"
+            ]
+        },
+        {
+            "node": "HomeBase",
+            "incoming": [
+                "RiskAversion",
+                "SocioEcon"
+            ]
+        },
+        {
+            "node": "AntiTheft",
+            "incoming": [
+                "RiskAversion",
+                "SocioEcon"
+            ]
+        }
+    ],
+    "numeric_premises": [
+        {
+            "id": 0,
+            "origin": "SocioEcon",
+            "content": "A driver most likely belongs to the prole socioeconomic class with a probability of 42%, followed by the middle class with a probability of 36%, the upper middle class with 21%, and the wealthy class with a mere 1% chance."
+        },
+        {
+            "id": 1,
+            "origin": "VehicleYear",
+            "content": "There is a 34.8% chance that a vehicle is from the current year, whereas a 65.2% chance indicates that it is an older one."
+        },
+        {
+            "id": 2,
+            "origin": "MakeModel",
+            "content": "There is a 14% chance that the make and model of a car is sport, 38% for economy, 38% for family sedan, 9.8% for luxury, and 0.2% for super luxury."
+        },
+        {
+            "id": 3,
+            "origin": "RiskAversion",
+            "content": "In 2% of the cases, the risk aversion behaviour of a car owner can be described as psychopathic, adventurous in 58% of the cases, normal in 30% and cautious in 10% of the cases."
+        },
+        {
+            "id": 4,
+            "origin": "HomeBase",
+            "content": "When a driver with psychopathic risk aversion and prole socioeconomic status is assessed for car insurance, their home base is estimated to be in the city with a probability of 0.8, in the suburbs with a probability of 0.05, and in rural areas with a probability of 0.15; meanwhile, the likelihood of having a secure home base is extremely remote, at approximately 0."
+        },
+        {
+            "id": 5,
+            "origin": "HomeBase",
+            "content": "When a driver with psychopathic risk aversion and middle-class socioeconomic status is evaluated for car insurance, their home base is estimated to be in the city with a probability of 0.8, in the suburbs with a probability of 0.04, and in rural areas with a probability of 0.01; the likelihood of having a secure home base is 0.15."
+        },
+        {
+            "id": 6,
+            "origin": "HomeBase",
+            "content": "When a driver with psychopathic risk aversion and upper-middle class socioeconomic status is assessed for car insurance, their home base is estimated to be in the city with a probability of 0.6, in the suburbs with a probability of 0.04, and in rural areas with a probability of 0.01; the likelihood of having a secure home base is 0.35."
+        },
+        {
+            "id": 7,
+            "origin": "HomeBase",
+            "content": "When a driver with psychopathic risk aversion and wealthy socioeconomic status is evaluated for car insurance, their home base is estimated to be in the city with a probability of 0.5, in the suburbs with a probability of zero, and in rural areas with a probability of 0.01; the likelihood of having a secure home base is 0.49."
+        },
+        {
+            "id": 8,
+            "origin": "HomeBase",
+            "content": "When a driver with adventurous risk aversion and prole socioeconomic status is assessed for car insurance, their home base is estimated to be in the city with a probability of 0.8, in the suburbs with a probability of 0.05, and in rural areas with a probability of 0.15; the likelihood of having a secure home base is extremely remote, at approximately 0."
+        },
+        {
+            "id": 9,
+            "origin": "HomeBase",
+            "content": "When a driver with adventurous risk aversion and middle-tier socioeconomic status is evaluated for car insurance, their home base is estimated to be in the suburbs with a probability of 0.6, in the city with a probability of 0.25, and in rural areas with a probability of 0.14; the likelihood of having a secure home base is 0.01."
+        },
+        {
+            "id": 10,
+            "origin": "HomeBase",
+            "content": "When a driver with adventurous risk aversion and upper-middle socioeconomic status is assessed for car insurance, their home base is estimated to be in the suburbs with a probability of 0.3, in the city with a probability of 0.4, and in rural areas with a probability of 0.1; the likelihood of having a secure home base is 0.2."
+        },
+        {
+            "id": 11,
+            "origin": "HomeBase",
+            "content": "When a driver with adventurous risk aversion and wealthy socioeconomic status is evaluated for car insurance, their home base is estimated to be in a secure location with a probability of 0.95, and in rural areas with a probability of 0.05; the likelihood of having a home base in the city or suburbs is extremely remote, at approximately 0."
+        },
+        {
+            "id": 12,
+            "origin": "HomeBase",
+            "content": "When a driver with normal risk aversion and prole socioeconomic status is assessed for car insurance, their home base is estimated to be in the city with a probability of 0.8, in the suburbs with a probability of 0.05, and in rural areas with a probability of 0.15; the likelihood of having a secure home base is extremely remote, at approximately 0."
+        },
+        {
+            "id": 13,
+            "origin": "HomeBase",
+            "content": "When a driver with normal risk aversion and middle-tier socioeconomic status is evaluated for car insurance, their home base is estimated to be in the suburbs with a probability of 0.6, in the city with a probability of 0, and in rural areas with a probability of 0.1; the likelihood of having a secure home base is 0.3."
+        },
+        {
+            "id": 14,
+            "origin": "HomeBase",
+            "content": "When a driver with normal risk aversion and upper-middle socioeconomic status is assessed for car insurance, their home base is estimated to be in the suburbs with a probability of 0.4, in the city with a probability of 0, and in rural areas with a probability of 0.1; the likelihood of having a secure home base is 0.5."
+        },
+        {
+            "id": 15,
+            "origin": "HomeBase",
+            "content": "When a driver with normal risk aversion and wealthy socioeconomic status is evaluated for car insurance, their home base is estimated to be in rural areas with a probability of 0.15, in the suburbs and city with a probability of 0; the likelihood of having a secure home base is 0.85."
+        },
+        {
+            "id": 16,
+            "origin": "HomeBase",
+            "content": "When a driver with cautious risk aversion and prole socioeconomic status is assessed for car insurance, their home base is estimated to be in the city with a probability of 0.8, in the suburbs with a probability of 0.05, and in rural areas with a probability of 0.15; the likelihood of having a secure home base is extremely remote, at approximately 0."
+        },
+        {
+            "id": 17,
+            "origin": "HomeBase",
+            "content": "When a driver with cautious risk aversion and middle-tier socioeconomic status is evaluated for car insurance, their home base is estimated to be in a secure location with a probability of 0.95, in rural areas with a probability of 0.025, and in the suburbs with a probability of 0.025; the likelihood of having a home base in the city is extremely remote, at approximately 0."
+        },
+        {
+            "id": 18,
+            "origin": "HomeBase",
+            "content": "When a driver with cautious risk aversion and upper-middle socioeconomic status is assessed for car insurance, their home base is estimated to be in a secure location with a probability of 0.999997, and in rural areas, the city, and suburbs with a probability of approximately 0."
+        },
+        {
+            "id": 19,
+            "origin": "HomeBase",
+            "content": "When a driver with cautious risk aversion and wealthy socioeconomic status is evaluated for car insurance, their home base is estimated to be in a secure location with a probability of 0.999997, and in rural areas, the city, and suburbs with a probability of approximately 0."
+        },
+        {
+            "id": 20,
+            "origin": "AntiTheft",
+            "content": "If someone exhibits a psychopathic aversion to risk and comes from a prole socioeconomic background, the likelihood of their car being equipped with anti-theft devices is almost non-existent, at approximately 0.0001%."
+        },
+        {
+            "id": 21,
+            "origin": "AntiTheft",
+            "content": "With a risk aversion profile that is psychopathic and hailing from a middle socioeconomic background, the probability of having anti-theft devices installed in one's car is extremely low, around 0.0001%."
+        },
+        {
+            "id": 22,
+            "origin": "AntiTheft",
+            "content": "In the case of an upper-middle class driver with psychopathic risk aversion tendencies, the likelihood of their car being equipped with anti-theft devices is relatively low, standing at just 5%."
+        },
+        {
+            "id": 23,
+            "origin": "AntiTheft",
+            "content": "For a wealthy driver with psychopathic risk aversion tendencies, the probability of their car being fitted with anti-theft devices is evenly split, at 50%."
+        },
+        {
+            "id": 24,
+            "origin": "AntiTheft",
+            "content": "When a driver is adventurous in their risk aversion and comes from a prole socioeconomic background, the chance of their car being equipped with anti-theft devices is extremely slim, around 0.0001%."
+        },
+        {
+            "id": 25,
+            "origin": "AntiTheft",
+            "content": "In the context of an adventurous risk-averse driver from a middle-class background, the probability of their car being installed with anti-theft devices is extremely low, approximately 0.0001%."
+        },
+        {
+            "id": 26,
+            "origin": "AntiTheft",
+            "content": "In the case of an upper-middle class driver with an adventurous risk aversion profile, the likelihood of their car being equipped with anti-theft devices is 20%."
+        },
+        {
+            "id": 27,
+            "origin": "AntiTheft",
+            "content": "For a wealthy driver with adventurous risk aversion tendencies, the probability of their car being fitted with anti-theft devices is 50%."
+        },
+        {
+            "id": 28,
+            "origin": "AntiTheft",
+            "content": "When it comes to a normal risk-averse driver from a prole socioeconomic background, the probability of their car being equipped with anti-theft devices is 10%."
+        },
+        {
+            "id": 29,
+            "origin": "AntiTheft",
+            "content": "In the context of a normal risk-averse driver from a middle-class background, the likelihood of their car being installed with anti-theft devices is 30%."
+        },
+        {
+            "id": 30,
+            "origin": "AntiTheft",
+            "content": "In the case of an upper-middle class driver with a normal risk aversion profile, the probability of their car being equipped with anti-theft devices is 90%."
+        },
+        {
+            "id": 31,
+            "origin": "AntiTheft",
+            "content": "For a wealthy driver with normal risk aversion tendencies, the likelihood of their car being fitted with anti-theft devices is 80%."
+        },
+        {
+            "id": 32,
+            "origin": "AntiTheft",
+            "content": "When dealing with a cautious risk-averse driver from a prole socioeconomic background, the probability of their car being equipped with anti-theft devices is 95%."
+        },
+        {
+            "id": 33,
+            "origin": "AntiTheft",
+            "content": "In the case of a cautious risk-averse driver from a middle-class background, the likelihood of their car being installed with anti-theft devices is almost certain, at approximately 99.9999%."
+        },
+        {
+            "id": 34,
+            "origin": "AntiTheft",
+            "content": "When it comes to a cautious risk-averse driver from an upper-middle class background, the probability of their car being equipped with anti-theft devices is almost certain, at approximately 99.9999%."
+        },
+        {
+            "id": 35,
+            "origin": "AntiTheft",
+            "content": "In the context of a cautious risk-averse wealthy driver, the likelihood of their car being installed with anti-theft devices is almost certain, at approximately 99.9999%."
+        },
+        {
+            "id": 36,
+            "origin": "Mileage",
+            "content": "A car with mileage of twenty thousand is most common (40%), followed closely by one with fifty thousand miles (40%), and is relatively rare for a car to have a mileage of five thousand (10%) or to have a mileage of 1000000. (10%)."
+        },
+        {
+            "id": 37,
+            "origin": "CarValue",
+            "content": "If the car is a current year model, sport class and with a mileage of 5,000, there is a 10% chance that it has a value of 10.000 dollars; if it's worth twenty thousand dollars, there's an 80% chance; and if it's worth either fifty thousand or a million dollars, there's a 9% chance or 1% chance respectively. There is no chance for it to be worth 5.000 dollars."
+        },
+        {
+            "id": 38,
+            "origin": "CarValue",
+            "content": "With a car that's a current year model, a sports car make and model, and a mileage of 20,000, there's a 10% chance it's worth ten thousand dollars, an 80% chance it's worth twenty thousand dollars, a 9% chance it's worth fifty thousand dollars, and only a 1% chance it's worth a million dollars."
+        },
+        {
+            "id": 39,
+            "origin": "CarValue",
+            "content": "When a sports car is the make and model, the vehicle is currently manufactured, and the car has a mileage of 50,000, the probability is 10% that the car is worth ten thousand dollars, 80% that it's worth twenty thousand dollars, 9% that it's worth fifty thousand dollars, and just 1% that it's worth a million dollars."
+        },
+        {
+            "id": 40,
+            "origin": "CarValue",
+            "content": "Given a current year sports car with a mileage of one million, it is improbable that the car has a value of five thousand dollars. The likelihood of the car being worth ten thousand dollars is 10%, twenty thousand dollars is 80%, while there is a 9% chance that it is worth fifty thousand dollars, and only a 1% chance that it is worth one million dollars."
+        },
+        {
+            "id": 41,
+            "origin": "CarValue",
+            "content": "When the car is an older model and a sports car, and it has a mileage of 5,000, the probability is 3% that the car is worth five thousand dollars, 30% that it's worth ten thousand dollars, 60% that it's worth twenty thousand dollars, 6% that it's worth fifty thousand dollars, and only 1% that it's worth a million dollars."
+        },
+        {
+            "id": 42,
+            "origin": "CarValue",
+            "content": "In the case of an older sports car model with a mileage of 20,000, the probability is 16% that the car is worth five thousand dollars, 50% that it's worth ten thousand dollars, 30% that it's worth twenty thousand dollars, 3% that it's worth fifty thousand dollars, and 1% that it's worth a million dollars."
+        },
+        {
+            "id": 43,
+            "origin": "CarValue",
+            "content": "When the car is an older sports model, and it has a mileage of 50,000, the probability is 40% that the car is worth five thousand dollars, 47% that it's worth ten thousand dollars, 10% that it's worth twenty thousand dollars, 2% that it's worth fifty thousand dollars, and 1% that it's worth a million dollars."
+        },
+        {
+            "id": 44,
+            "origin": "CarValue",
+            "content": "For an older sports car with a mileage of one million, it is highly likely to have a value of five thousand dollars, with a 90% chance of this being the case. The likelihood of the car being worth ten thousand dollars is only 6%, and the chance of it being worth twenty thousand dollars, fifty thousand dollars, or one million dollars is 2%, 1%, and 1% respectively."
+        },
+        {
+            "id": 45,
+            "origin": "CarValue",
+            "content": "When the car is a current model and an economy make and model, and it has a mileage of 5,000, the probability is 10% that the car is worth five thousand dollars, 80% that it's worth ten thousand dollars, and 10% that it's worth twenty thousand dollars. The car has no chance of being worth fifty thousand dollars or a million dollars in this case."
+        },
+        {
+            "id": 46,
+            "origin": "CarValue",
+            "content": "In the case of a current economy model car with a mileage of 20,000, the probability is 10% that the car is worth five thousand dollars, 80% that it's worth ten thousand dollars, and 10% that it's worth twenty thousand dollars. The car has no chance of being worth fifty thousand dollars or a million dollars in this case."
+        },
+        {
+            "id": 47,
+            "origin": "CarValue",
+            "content": "When the car is a current economy model, and it has a mileage of 50,000, the probability is 10% that the car is worth five thousand dollars, 80% that it's worth ten thousand dollars, and 10% that it's worth twenty thousand dollars. The car has no chance of being worth fifty thousand dollars or a million dollars in this case."
+        },
+        {
+            "id": 48,
+            "origin": "CarValue",
+            "content": "For a current economy car with a mileage of one million, it is unlikely to have a value of twenty thousand dollars, and there is only a 10% chance of this being the case. Instead, there is an 80% chance that the car is worth ten thousand dollars, and a 10% chance that it is worth five thousand dollars. There is no chance that the car is worth fifty thousand dollars or one million dollars."
+        },
+        {
+            "id": 49,
+            "origin": "CarValue",
+            "content": "If the car is an older economy model, and it has a mileage of 5,000, the probability is 25% that the car is worth five thousand dollars, 70% that it's worth ten thousand dollars, and 5% that it's worth twenty thousand dollars. The car has no chance of being worth fifty thousand dollars or a million dollars in this case."
+        },
+        {
+            "id": 50,
+            "origin": "CarValue",
+            "content": "In the case of an older economy model car with a mileage of 20,000, the probability is 70% that the car is worth five thousand dollars, 29.99% that it's worth ten thousand dollars, and 0.01% that it's worth twenty thousand dollars. The car has no chance of being worth fifty thousand dollars or a million dollars in this case."
+        },
+        {
+            "id": 51,
+            "origin": "CarValue",
+            "content": "When the car is an older economy model, and it has a mileage of 50,000, the probability is 99% that the car is worth five thousand dollars, 0.01% that it's worth ten thousand dollars, and 0.0001% that it's worth twenty thousand dollars. The car has no chance of being worth fifty thousand dollars or a million dollars in this case."
+        },
+        {
+            "id": 52,
+            "origin": "CarValue",
+            "content": "In the case of an older economy car with a mileage of one million, it is highly unlikely to have a value of twenty thousand dollars, and there is only a 1 in 1,000,000 chance of this being the case. Instead, there is a 99.9998% chance that the car is worth five thousand dollars, and a 1 in 1,000,000 chance that it is worth ten thousand dollars. There is no chance that the car is worth fifty thousand dollars or one million dollars."
+        },
+        {
+            "id": 53,
+            "origin": "CarValue",
+            "content": "If the car is a current family sedan, and it has a mileage of 5,000, the probability is 90% that the car is worth twenty thousand dollars, 10% that it's worth ten thousand dollars, and 0% that it's worth five thousand or fifty thousand dollars. The car is not likely to be worth a million dollars in this case either."
+        },
+        {
+            "id": 54,
+            "origin": "CarValue",
+            "content": "In the case of a current family sedan car with a mileage of 20,000, the probability is 90% that the car is worth twenty thousand dollars, 10% that it's worth ten thousand dollars, and 0% that it's worth five thousand or fifty thousand dollars. The car is not likely to be worth a million dollars in this case either."
+        },
+        {
+            "id": 55,
+            "origin": "CarValue",
+            "content": "When the car is a current family sedan, and it has a mileage of 50,000, the probability is 90% that the car is worth twenty thousand dollars, 10% that it's worth ten thousand dollars, and 0% that it's worth five thousand or fifty thousand dollars. The car is not likely to be worth a million dollars in this case either."
+        },
+        {
+            "id": 56,
+            "origin": "CarValue",
+            "content": "In the case of a current family sedan with a mileage of one million, it is highly unlikely to have a value of five thousand dollars, and there is no chance of this being the case. Instead, there is a 90% chance that the car is worth twenty thousand dollars, and a 10% chance that it is worth ten thousand dollars. There is no chance that the car is worth fifty thousand dollars or one million dollars."
+        },
+        {
+            "id": 57,
+            "origin": "CarValue",
+            "content": "If the car is an older family sedan, and it has a mileage of 5,000, the probability is 50% that the car is worth twenty thousand dollars, 30% that it's worth ten thousand dollars, and 20% that it's worth five thousand dollars. The car has no chance of being worth fifty thousand or a million dollars in this case."
+        },
+        {
+            "id": 58,
+            "origin": "CarValue",
+            "content": "In the case of an older family sedan car with a mileage of 20,000, the probability is 50% that the car is worth five thousand dollars, 30% that it's worth ten thousand dollars, and 20% that it's worth twenty thousand dollars. The car has no chance of being worth fifty thousand or a million dollars in this case."
+        },
+        {
+            "id": 59,
+            "origin": "CarValue",
+            "content": "When the car is an older family sedan, and it has a mileage of 50,000, the probability is 70% that the car is worth five thousand dollars, 20% that it's worth ten thousand dollars, and 10% that it's worth twenty thousand dollars. The car has no chance of being worth fifty thousand or a million dollars in this case."
+        },
+        {
+            "id": 60,
+            "origin": "CarValue",
+            "content": "In the case of an older family sedan with a mileage of one million, there is a 99% chance that the car is worth five thousand dollars, a 0.01% chance that it is worth ten thousand dollars, and a 0.00001% chance that it is worth twenty thousand dollars. There is no chance that the car is worth fifty thousand dollars or one million dollars."
+        },
+        {
+            "id": 61,
+            "origin": "CarValue",
+            "content": "If the car is a current luxury model, and it has a mileage of 5,000, the probability is 100% that the car is worth fifty thousand dollars. It is impossible to be worth five thousand, ten thousand, twenty thousand, or a million dollars in this case."
+        },
+        {
+            "id": 62,
+            "origin": "CarValue",
+            "content": "When the car is a current luxury model, and it has a mileage of 20,000, the probability is 100% that the car is worth fifty thousand dollars. It is impossible to be worth five thousand, ten thousand, twenty thousand, or a million dollars in this case."
+        },
+        {
+            "id": 63,
+            "origin": "CarValue",
+            "content": "In the case of a current luxury car, and it has a mileage of 50,000, the probability is 100% that the car is worth fifty thousand dollars. It is impossible to be worth five thousand, ten thousand, twenty thousand, or a million dollars in this case."
+        },
+        {
+            "id": 64,
+            "origin": "CarValue",
+            "content": "If the car is a current year luxury model with a mileage of one million, it is certain to have a value of fifty thousand dollars, with no chance of being worth five thousand dollars, ten thousand dollars, twenty thousand dollars, or one million dollars."
+        },
+        {
+            "id": 65,
+            "origin": "CarValue",
+            "content": "If the car is an older luxury model, and it has a mileage of 5,000, the probability is 70% that the car is worth fifty thousand dollars, 9% that it's worth ten thousand dollars, and 20% that it's worth twenty thousand dollars. The car still has a 1% chance of being worth $5000, however, it cannot be worth one million dollar."
+        },
+        {
+            "id": 66,
+            "origin": "CarValue",
+            "content": "When the car is an older luxury model, and it has a mileage of 20,000, the probability is 50% that the car is worth fifty thousand dollars, 30% that it's worth twenty thousand dollars, 15% that it's worth ten thousand dollars, and 5% that it's worth five thousand dollars. The car cannot be worth a million dollars in this case."
+        },
+        {
+            "id": 67,
+            "origin": "CarValue",
+            "content": "In the case of an older luxury car, and it has a mileage of 50,000, the probability is 30% that the car is worth fifty thousand dollars, 30% that it's worth twenty thousand dollars, and 30% that it's worth ten thousand dollars. In 10% of all cases, it is worth five thousand dollars; one million dollar is impossible."
+        },
+        {
+            "id": 68,
+            "origin": "CarValue",
+            "content": "If the car is an older luxury model with a mileage of one million, there is a 20% chance it has a value of five thousand dollars, a 20% chance it has a value of ten thousand dollars, a 30% chance it has a value of twenty thousand dollars, and a 30% chance it has a value of fifty thousand dollars."
+        },
+        {
+            "id": 69,
+            "origin": "CarValue",
+            "content": "If the car is a current super-luxury model, and it has a mileage of 5,000, the probability is 100% that the car is worth a million dollars. The car cannot be worth five thousand, ten thousand, twenty thousand, or fifty thousand dollars in this case."
+        },
+        {
+            "id": 70,
+            "origin": "CarValue",
+            "content": "When the car is a current super-luxury model, and it has a mileage of 20,000, the probability is 100% that the car is worth a million dollars. The car cannot be worth five thousand, ten thousand, twenty thousand, or fifty thousand dollars in this case."
+        },
+        {
+            "id": 71,
+            "origin": "CarValue",
+            "content": "n the case of a current super-luxury car, and it has a mileage of 50,000, the probability is 100% that the car is worth a million dollars. The car cannot to be worth five thousand, ten thousand, twenty thousand, or fifty thousand dollars in this case."
+        },
+        {
+            "id": 72,
+            "origin": "CarValue",
+            "content": "If the car is a current model of a super-luxury brand with a mileage of one million, it is still almost certain to have a value of one million dollars, as there is a 100% chance of this value given the combination of the super-luxury brand, the current year, and the extremely high mileage."
+        },
+        {
+            "id": 73,
+            "origin": "CarValue",
+            "content": "If the car is an older super-luxury model, and it has a mileage of 5,000, the probability is 100% that the car is worth a million dollars. The car cannot be worth five thousand, ten thousand, twenty thousand, or fifty thousand dollars in this case."
+        },
+        {
+            "id": 74,
+            "origin": "CarValue",
+            "content": "When the car is an older super-luxury model, and it has a mileage of 20,000, the probability is 100% that the car is worth a million dollars. The car cannot be worth five thousand, ten thousand, twenty thousand, or fifty thousand dollars in this case."
+        },
+        {
+            "id": 75,
+            "origin": "CarValue",
+            "content": "In the case of an older super-luxury car, and it has a mileage of 50,000, the probability is 100% that the car is worth a million dollars. The car cannot be worth five thousand, ten thousand, twenty thousand, or fifty thousand dollars in this case."
+        },
+        {
+            "id": 76,
+            "origin": "CarValue",
+            "content": "If the car is a super-luxury model from an older year with a mileage of one million, it is still almost certain to have a value of one million dollars, as there is a 99.9996% chance of this value given the combination of the super-luxury brand, the older year, and the extremely high mileage, whereas the remaining car value options have equal probability."
+        },
+        {
+            "id": 77,
+            "origin": "Theft",
+            "content": "If a car is equipped with an anti-theft device, is normally parked in a secure home base, and has a modest value of $5,000, there is a 99.9999% chance it will not be stolen."
+        },
+        {
+            "id": 78,
+            "origin": "Theft",
+            "content": "Even with an anti-theft device and secure parking, a car valued at $10,000 has a vanishingly small chance of 0.00002% of being stolen when parked in a secure home base location and equipped with an anti-theft device."
+        },
+        {
+            "id": 79,
+            "origin": "Theft",
+            "content": "Despite having an anti-theft device and being parked in a secure home base location, a car valued at $20,000 has an incredibly slim chance of 0.00003% of being stolen."
+        },
+        {
+            "id": 80,
+            "origin": "Theft",
+            "content": "With an anti-theft device and secure parking, a car valued at $50,000 has an incredibly low probability of 0.00002% of being stolen, despite its high value."
+        },
+        {
+            "id": 81,
+            "origin": "Theft",
+            "content": "A car valued at $1,000,000, even when equipped with an anti-theft device and parked in a secure location, has an incredibly tiny chance of 0.00001% of being stolen, making the risk almost negligible."
+        },
+        {
+            "id": 82,
+            "origin": "Theft",
+            "content": "When an anti-theft device is installed, a car worth $5,000 and the home base being in the city, it has a 0.05% chance of being stolen, while the probability of it not being stolen is 99.95%."
+        },
+        {
+            "id": 83,
+            "origin": "Theft",
+            "content": "A car valued at $10,000 and equipped with an anti-theft device in a city home base has a 0.2% chance of being stolen, while the probability of it not being stolen is 99.8%."
+        },
+        {
+            "id": 84,
+            "origin": "Theft",
+            "content": "In a city home base, a car valued at $20,000 and equipped with an anti-theft device has a 0.5% chance of being stolen, while the probability of it not being stolen is 99.5%."
+        },
+        {
+            "id": 85,
+            "origin": "Theft",
+            "content": "When an anti-theft device is installed in a city home base and the car is worth $50,000, there is a 0.5% chance of the car being stolen, while the probability of it not being stolen is 99.5%."
+        },
+        {
+            "id": 86,
+            "origin": "Theft",
+            "content": "In a city home base, a car valued at $1,000,000, even when equipped with an anti-theft device, has an incredibly tiny chance of 0.0001% of being stolen, making the risk almost negligible."
+        },
+        {
+            "id": 87,
+            "origin": "Theft",
+            "content": "Parked in a suburb home base, a car valued at $5,000 and equipped with an anti-theft device has a 0.001% chance of being stolen, while the probability of it not being stolen is 99.999%."
+        },
+        {
+            "id": 88,
+            "origin": "Theft",
+            "content": "Parked in a suburb home base, a car valued at $10,000 and equipped with an anti-theft device has a 0.01% chance of being stolen, while the probability of it not being stolen is 99.99%."
+        },
+        {
+            "id": 89,
+            "origin": "Theft",
+            "content": "Parked in a suburb home base, a car valued at $20,000 and equipped with an anti-theft device has a 0.03% chance of being stolen, while the probability of it not being stolen is 99.97%."
+        },
+        {
+            "id": 90,
+            "origin": "Theft",
+            "content": "Parked in a suburb home base, a car valued at $50,000 and equipped with an anti-theft device has a 0.03% chance of being stolen, while the probability of it not being stolen is 99.97%."
+        },
+        {
+            "id": 91,
+            "origin": "Theft",
+            "content": "Parked in a suburb home base, a car valued at $1,000,000 and equipped with an anti-theft device has an incredibly tiny chance of 0.0001% of being stolen, making the risk almost negligible."
+        },
+        {
+            "id": 92,
+            "origin": "Theft",
+            "content": "Parked in a rural home base, a car valued at $5,000 and equipped with an anti-theft device has a 0.001% chance of being stolen, while the probability of it not being stolen is 99.99%."
+        },
+        {
+            "id": 93,
+            "origin": "Theft",
+            "content": "Parked in a rural home base, a car valued at $10,000 and equipped with an anti-theft device has a 0.002% chance of being stolen, while the probability of it not being stolen is 99.998%."
+        },
+        {
+            "id": 94,
+            "origin": "Theft",
+            "content": "Parked in a rural home base, a car valued at $20,000 and equipped with an anti-theft device has a 0.005% chance of being stolen, while the probability of it not being stolen is 99.995%."
+        },
+        {
+            "id": 95,
+            "origin": "Theft",
+            "content": "Parked in a rural home base, a car valued at $50,000 and equipped with an anti-theft device has a 0.005% chance of being stolen, while the probability of it not being stolen is 99.995%."
+        },
+        {
+            "id": 96,
+            "origin": "Theft",
+            "content": "Parked in a rural home base, a car valued at $1,000,000 and equipped with an anti-theft device has an incredibly tiny chance of 0.0001% of being stolen, making the risk almost negligible."
+        },
+        {
+            "id": 97,
+            "origin": "Theft",
+            "content": "If a car is not equipped with an anti-theft device, is parked in a home base in a secure location, and has a modest value of $5,000, the chance of it being stolen is extremely low, with a 0.0001% probability, while the probability of it not being stolen is 99.9999%."
+        },
+        {
+            "id": 98,
+            "origin": "Theft",
+            "content": "If a car is not equipped with an anti-theft device, is parked in a home base in a secure location, and has a value of $10,000, the probability of it being stolen is 0.0002%, making the risk very low, while the probability of it not being stolen is 99.9998%."
+        },
+        {
+            "id": 99,
+            "origin": "Theft",
+            "content": "If a car is not equipped with an anti-theft device, is parked in a home base in a secure location, and has a value of $20,000, the probability of it being stolen is 0.0003%, making the risk very low, while the probability of it not being stolen is 99.9997%."
+        },
+        {
+            "id": 100,
+            "origin": "Theft",
+            "content": "If a car is not equipped with an anti-theft device, is parked in a home base in a secure location, and has a value of $50,000, the probability of it being stolen is 0.0002%, making the risk very low, while the probability of it not being stolen is 99.9998%."
+        },
+        {
+            "id": 101,
+            "origin": "Theft",
+            "content": "If a car is not equipped with an anti-theft device, is parked in a home base in a secure location, and has a value of $1,000,000, the chance of it being stolen is extremely low, with a 0.0001% probability, while the probability of it not being stolen is 99.9999%."
+        },
+        {
+            "id": 102,
+            "origin": "Theft",
+            "content": "If a car is not equipped with an anti-theft device and is parked in city-based home base, with a modest value of $5,000, the probability of it being stolen is 0.1%, making the risk relatively low, while the probability of it not being stolen is 99.9%."
+        },
+        {
+            "id": 103,
+            "origin": "Theft",
+            "content": "If a car is not equipped with an anti-theft device and is parked in city-based home base, with a value of $10,000, the probability of it being stolen is 0.5%, making the risk moderately low, while the probability of it not being stolen is 99.5%."
+        },
+        {
+            "id": 104,
+            "origin": "Theft",
+            "content": "If a car is not equipped with an anti-theft device and is parked in city-based home base, with a value of $20,000, the probability of it being stolen is 1%, making the risk moderately low, while the probability of it not being stolen is 99%."
+        },
+        {
+            "id": 105,
+            "origin": "Theft",
+            "content": "If a car is not equipped with an anti-theft device and is parked in city-based home base, with a value of $50,000, the probability of it being stolen is 1%, making the risk moderately low, while the probability of it not being stolen is 99%."
+        },
+        {
+            "id": 106,
+            "origin": "Theft",
+            "content": "If a car is not equipped with an anti-theft device and is parked in city-based home base, with a value of $1,000,000, the chance of it being stolen is extremely low, with a 0.0001% probability, while the probability of it not being stolen is 99.9999%."
+        },
+        {
+            "id": 107,
+            "origin": "Theft",
+            "content": "If a car is not equipped with an anti-theft device and is located in a suburb-based home base, with a modest value of $5,000, the probability of it being stolen is 0.001%, making the risk very low, while the probability of it not being stolen is 99.999%."
+        },
+        {
+            "id": 108,
+            "origin": "Theft",
+            "content": "If a car is not equipped with an anti-theft device and is located in a suburb-based home base, with a value of $10,000, the probability of it being stolen is 0.02%, making the risk very low, while the probability of it not being stolen is 99.98%."
+        },
+        {
+            "id": 109,
+            "origin": "Theft",
+            "content": "If a car is not equipped with an anti-theft device and is located in a suburb-based home base, with a value of $20,000, the probability of it being stolen is 0.05%, making the risk very low, while the probability of it not being stolen is 99.95%."
+        },
+        {
+            "id": 110,
+            "origin": "Theft",
+            "content": "If a car is not equipped with an anti-theft device and is located in a suburb-based home base, with a value of $50,000, the probability of it being stolen is 0.05%, making the risk very low, while the probability of it not being stolen is 99.95%."
+        },
+        {
+            "id": 111,
+            "origin": "Theft",
+            "content": "If a car is not equipped with an anti-theft device and is located in a suburb-based home base, with a value of $1,000,000, the chance of it being stolen is extremely low, with a 0.0001% probability, while the probability of it not being stolen is 99.9999%."
+        },
+        {
+            "id": 112,
+            "origin": "Theft",
+            "content": "If a car is not equipped with an anti-theft device and its home base located in a rural area, with a modest value of $5,000, the probability of it being stolen is 0.01%, making the risk very low, while the probability of it not being stolen is 99.99%."
+        },
+        {
+            "id": 113,
+            "origin": "Theft",
+            "content": "If a car is not equipped with an anti-theft device and its home base located in a rural area, with a value of $10,000, the probability of it being stolen is 0.01%, making the risk very low, while the probability of it not being stolen is 99.99%."
+        },
+        {
+            "id": 114,
+            "origin": "Theft",
+            "content": "If a car is not equipped with an anti-theft device and its home base located in a rural area, with a value of $20,000, the probability of it being stolen is 0.02%, making the risk very low, while the probability of it not being stolen is 99.98%."
+        },
+        {
+            "id": 115,
+            "origin": "Theft",
+            "content": "If a car is not equipped with an anti-theft device and its home base located in a rural area, with a value of $50,000, the probability of it being stolen is 0.02%, making the risk very low, while the probability of it not being stolen is 99.98%."
+        },
+        {
+            "id": 116,
+            "origin": "Theft",
+            "content": "If a car is not equipped with an anti-theft device and its home base located in a rural area, with a value of $1,000,000, the chance of it being stolen is extremely low, with a 0.0001% probability, while the probability of it not being stolen is 99.9999%."
+        }
+    ],
+    "wep_based_premises": [
+        {
+            "id": 0,
+            "origin": "SocioEcon",
+            "content": "A driver probably does not belong to the prole socioeconomic class or middle class, is unlikly to belong to the upper middle class, and there is almost no chance to be part of the wealthy class. Out of all classes, being prole is still the most likely one, closely followed by the middle class."
+        },
+        {
+            "id": 1,
+            "origin": "VehicleYear",
+            "content": "It is probably not the case that a vehicle is from the current year, whereas it is probable that it is an older one."
+        },
+        {
+            "id": 2,
+            "origin": "MakeModel",
+            "content": "There is little chance that the make and model of a car is sport, whereas it is probably not an economy or family sedan. Chances are slight for luxury class, and there is almost no chance for super luxury. Out of all, economy and family sedan are still by far the most likely categories."
+        },
+        {
+            "id": 3,
+            "origin": "RiskAversion",
+            "content": "There is almost no chance that the risk aversion behaviour of a car owner can be described as psychopathic, whereas there is a better than even chance that it is adventurous, normal is it probably not and cautious is improbable."
+        },
+        {
+            "id": 4,
+            "origin": "HomeBase",
+            "content": "Assuming an individual is extremely risk-averse, to the point of psychopathy, and has a proletarian (prole) socioeconomic status, there is almost no chance their car is parked in a secure location. There is very good chance that it is in the city, rather than the suburbs, where it is highly unlikely to be found. The chances of the car being parked in a rural area are slight."
+        },
+        {
+            "id": 5,
+            "origin": "HomeBase",
+            "content": "If an individual is psychopathic about risk aversion and has a middle socioeconomic status, then the chances of their car being parked in a secure location are little, the likelihood of it being in the city is very good, whereas the chances of it being in the suburbs are highly unlikely, and the car is almost never in a rural area."
+        },
+        {
+            "id": 6,
+            "origin": "HomeBase",
+            "content": "If an individual is a psychopath when it comes to risk aversion and has an upper-middle socioeconomic status, then their car will probably not be parked in a secure location, the likelihood is better than even that it is in the city, whereas the chances are highly unlikely that it is in the suburbs, and the car is almost never in a rural area."
+        },
+        {
+            "id": 7,
+            "origin": "HomeBase",
+            "content": "If an individual is psychopathically risk-averse and is from a wealthy socioeconomic class, then the chances of their car being parked in a secure location are about even, the chances of it being in the city are also about even, while the chances of it being in the suburbs or a rural area are almost non-existent."
+        },
+        {
+            "id": 8,
+            "origin": "HomeBase",
+            "content": "If an individual is adventurous in risk aversion and has a prole socioeconomic status, then the chances of their car being parked in a secure location are almost non-existent, the likelihood of it being in the city is very high, whereas the chances of it being in the suburbs are highly unlikely, and the car is improbable to be parked in a rural area."
+        },
+        {
+            "id": 9,
+            "origin": "HomeBase",
+            "content": "If an individual is adventurous in risk aversion and has a middle socioeconomic status, then the chances of their car being parked in a secure location are almost non-existent, it is probably not in the city either, whereas the chances of it being in the suburbs are better than even, and the car is unlikely to be parked in a rural area."
+        },
+        {
+            "id": 10,
+            "origin": "HomeBase",
+            "content": "If an individual is adventurous in risk aversion and has an upper-middle socioeconomic status, then the chances of their car being parked in a secure location are unlikely, the chances of it being in the city are about even, whereas it is probably not being parked in the suburbs, and the car has little chance to be parked in a rural area."
+        },
+        {
+            "id": 11,
+            "origin": "HomeBase",
+            "content": "If an individual is adventurous in risk aversion and is wealthy, then the chances of their car being parked in a secure location are almost certain, there is almost no chance for it being parked in a rural area, whereas it is impossible for it to be parked in the city or suburbs."
+        },
+        {
+            "id": 12,
+            "origin": "HomeBase",
+            "content": "If an individual has normal risk aversion and a prole socioeconomic status, then the chances of their car being parked in a secure location are almost non-existent, the likelihood of it being in the city is highly likely, whereas the chances of it being in the suburbs are highly unlikely, and the car is improbable to be parked in a rural area."
+        },
+        {
+            "id": 13,
+            "origin": "HomeBase",
+            "content": "If an individual has a normal risk aversion and has a middle socioeconomic status, then it is probably not the case that their car will be parked in a secure location, there is almost no chance that it is in the city, while the chances are better than even that it is in the suburbs, and it is improbable that the car is being parked in a rural area."
+        },
+        {
+            "id": 14,
+            "origin": "HomeBase",
+            "content": "If an individual has a normal risk aversion and has an upper-middle socioeconomic status, then the chances of their car being parked in a secure location are about even, the likelihood of it being in the city is almost none, whereas the chances of it being in the suburbs are also about even, and the car has slightly greater chances of being parked in a rural area."
+        },
+        {
+            "id": 15,
+            "origin": "HomeBase",
+            "content": "If an individual has a normal risk aversion and has a wealthy socioeconomic status, then the chances of their car being parked in a secure location are very good, there is almost no chance for it to be parked in the city, whereas the chances of it being in the suburbs are almost no chance, and the car has slight chances to be parked in a rural area."
+        },
+        {
+            "id": 16,
+            "origin": "HomeBase",
+            "content": "If an individual is cautious about risk aversion and has a prole socioeconomic status, then the chances of their car being parked in a secure location are almost non-existent, the likelihood of it being in the city is very high, whereas the chances of it being in the suburbs or a rural area are highly unlikely."
+        },
+        {
+            "id": 17,
+            "origin": "HomeBase",
+            "content": "If an individual is cautious about risk aversion and has a middle socioeconomic status, then the chances of their car being parked in a secure location are almost certain, whereas the likelihood of it being in the city, suburbs, or a rural area is almost non-existent."
+        },
+        {
+            "id": 18,
+            "origin": "HomeBase",
+            "content": "If an individual is cautious about risk aversion and has an upper-middle socioeconomic status, then the chances of their car being parked in a secure location are almost certain, whereas the likelihood of it being in the city, the suburbs, or a rural area is almost non-existent."
+        },
+        {
+            "id": 19,
+            "origin": "HomeBase",
+            "content": "If an individual is cautious about risk aversion and has a wealthy socioeconomic status, then the chances of their car being parked in a secure location are almost certain, whereas the likelihood of it being in the city, suburbs, or a rural area is almost non-existent."
+        },
+        {
+            "id": 20,
+            "origin": "AntiTheft",
+            "content": "Assuming an individual is a psychopath when it comes to risk aversion and has a prole socioeconomic status, it is almost certain that their car does not have anti-theft devices installed."
+        },
+        {
+            "id": 21,
+            "origin": "AntiTheft",
+            "content": "If someone is a psychopath in terms of risk aversion and has a middle socioeconomic status, it's almost certain they don't have anti-theft devices in their car; it's almost certain their car lacks anti-theft devices."
+        },
+        {
+            "id": 22,
+            "origin": "AntiTheft",
+            "content": "If someone is a psychopath in terms of risk aversion and has an upper-middle socioeconomic status, it's almost certain that their car lacks anti-theft devices, and therefore it's highly unlikely that their car has anti-theft devices."
+        },
+        {
+            "id": 23,
+            "origin": "AntiTheft",
+            "content": "Considering an individual is extremely risk-averse, to the point of psychopathy, and has a wealthy socioeconomic status, it is equally likely that their car does or does not have anti-theft devices."
+        },
+        {
+            "id": 24,
+            "origin": "AntiTheft",
+            "content": "An individual, being adventurous with risk aversion and having a prole socioeconomic status, is almost certainly lacking anti-theft devices in their car."
+        },
+        {
+            "id": 25,
+            "origin": "AntiTheft",
+            "content": "An individual, adventurous in risk aversion and of middle socioeconomic status, is likely not to have anti-theft devices installed in their car. This is almost certain."
+        },
+        {
+            "id": 26,
+            "origin": "AntiTheft",
+            "content": "If someone is adventurous with risk aversion and has an upper-middle socioeconomic status, they probably don't have anti-theft devices in their car, and there's a very high chance their car has no anti-theft devices."
+        },
+        {
+            "id": 27,
+            "origin": "AntiTheft",
+            "content": "An individual, adventurous in terms of risk aversion and of wealthy socioeconomic status, has roughly equal odds of having anti-theft devices installed in their car."
+        },
+        {
+            "id": 28,
+            "origin": "AntiTheft",
+            "content": "An individual, with normal risk aversion and prole socioeconomic status, is unlikely to have anti-theft devices installed in their car."
+        },
+        {
+            "id": 29,
+            "origin": "AntiTheft",
+            "content": "An individual with normal risk aversion and middle socioeconomic status is unlikely of having anti-theft devices installed in their car."
+        },
+        {
+            "id": 30,
+            "origin": "AntiTheft",
+            "content": "If an individual has normal risk aversion and upper-middle socioeconomic status, they highly likely have anti-theft devices in their car, with little chance their car lacks such devices."
+        },
+        {
+            "id": 31,
+            "origin": "AntiTheft",
+            "content": "An individual with normal risk aversion and a wealthy socioeconomic status is likely to have anti-theft devices installed in their car, and it is unlikely they do not have such devices."
+        },
+        {
+            "id": 32,
+            "origin": "AntiTheft",
+            "content": "If someone is cautious about risk aversion and has a prole socioeconomic status, it's almost certain their car has anti-theft devices. It's highly unlikely their car lacks anti-theft devices."
+        },
+        {
+            "id": 33,
+            "origin": "AntiTheft",
+            "content": "If someone is cautious about risk aversion and has a middle socioeconomic status, it's almost certain that their car has anti-theft devices installed."
+        },
+        {
+            "id": 34,
+            "origin": "AntiTheft",
+            "content": "If someone is cautious about risk aversion and has upper-middle socioeconomic status, it's almost certain their car has anti-theft devices."
+        },
+        {
+            "id": 35,
+            "origin": "AntiTheft",
+            "content": "If someone is cautious about risk aversion and has a wealthy socioeconomic status, it's almost certain that their car has anti-theft devices installed."
+        },
+        {
+            "id": 36,
+            "origin": "Mileage",
+            "content": "It is considered improbable that a car has a mileage of five thousand. A car with mileage of twenty thousand has a slightly less than about even chance. Similarly, a car with mileage of fifty thousand also has a slightly below even chance. A car with a mileage of one million only has slight chances."
+        },
+        {
+            "id": 37,
+            "origin": "CarValue",
+            "content": "Given that the car is a current year sports car with a mileage of 5,000, then it is impossible for the car to be worth only $5,000. There is a slight chance that the car is worth $10,000. There is a very good chance that the car is worth $20,000. There is a slight chance that the car is worth $50,000. There is almost no chance for the car to be worth $1,000,000."
+        },
+        {
+            "id": 38,
+            "origin": "CarValue",
+            "content": "Given that the car is a current year sports car with a mileage of 20,000, then it is impossible for the car to be worth only $5,000. There is a slight chance that the car is worth $10,000. There is a very good chance that the car is worth $20,000. There is a slight chance that the car is worth $50,000. There is almost no chance for the car to be worth $1,000,000."
+        },
+        {
+            "id": 39,
+            "origin": "CarValue",
+            "content": "Given that the car is a current year sports car with a mileage of 50,000, then it is impossible for the car to be worth only $5,000. There is a slight chance that the car is worth $10,000. There is a very good chance that the car is worth $20,000. There is a slight chance that the car is worth $50,000. There is almost no chance for the car to be worth $1,000,000."
+        },
+        {
+            "id": 40,
+            "origin": "CarValue",
+            "content": "Given that the car is a current year sports car with a mileage of 1,000,000, then it is impossible for the car to be worth only $5,000. There is a slight chance that the car is worth $10,000. There is a very good chance that the car is worth $20,000. There is a slight chance that the car is worth $50,000. There is almost no chance for the car to be worth $1,000,000."
+        },
+        {
+            "id": 41,
+            "origin": "CarValue",
+            "content": "Given that the car is an older sports car with a mileage of 5,000, then there is almost no chance for the car to be worth only $5,000. There is a good chance that the car is not worth $10,000. There is a better than even chance that the car is worth $20,000. It is highly unlikely for the car to be worth $50,000. There is almost no chance for the car to be worth $1,000,000."
+        },
+        {
+            "id": 42,
+            "origin": "CarValue",
+            "content": "Given that the car is an older sports car with a mileage of 20,000, then it is is unlikely for the car to be worth only $5,000. There is an about even chance that the car is worth $10,000. It is unlikely for the car to be worth $20,000. It is almost certain that the car is not worth $50,000 or $1,000,000."
+        },
+        {
+            "id": 43,
+            "origin": "CarValue",
+            "content": "When the car is an older sports model, and it has a mileage of 50,000, then the car is probably not worth five thousand dollars, there is an about even chance that it's worth ten thousand dollars, improbable that it's worth twenty thousand dollars, and there is almost no chance that it is worth fifty thousand dollars or a million dollars."
+        },
+        {
+            "id": 44,
+            "origin": "CarValue",
+            "content": "Given that the car is an older sports car with a mileage of 1,000,000, the following chances can be assigned to the current values of the car: It is highly likely for the car to be worth $5,000. It is highly unlikely for the car to be worth $10,000. There is almost no chance for the car to be worth $20,000, $50,000, or $1,000,000."
+        },
+        {
+            "id": 45,
+            "origin": "CarValue",
+            "content": "Given that the car is a current economy car with a mileage of 5,000, the following chances can be assigned to the current values of the car: There is a slight chance that the car is worth $5,000. There is a very good chance that the car is worth $10,000. It is unlikely that the car is worth $20,000. It is impossible for the car to be worth $50,000 or $1,000,000."
+        },
+        {
+            "id": 46,
+            "origin": "CarValue",
+            "content": "Given that the car is a current economy car with a mileage of 20,000, the following chances can be assigned to the current values of the car: There is a slight chance that the car is worth $5,000. There is a very good chance that the car is worth $10,000. It is unlikely that the car is worth $20,000. It is impossible for the car to be worth $50,000 or $1,000,000."
+        },
+        {
+            "id": 47,
+            "origin": "CarValue",
+            "content": "Given that the car is a current economy car with 50,000 miles, the following chances can be assigned to the current values of the car: There is a slight chance that the car is worth $5,000. There is a very good chance that the car is worth $10,000. It is unlikely that the car is worth $20,000. It is impossible for the car to be worth $50,000 or $1,000,000."
+        },
+        {
+            "id": 48,
+            "origin": "CarValue",
+            "content": "Given that the car is a current economy car with a mileage of 1,000,000, then it is improbable that the car is worth $5,000 or $20,000. There is a very good chance that the car is worth $10,000. It is impossible for the car to be worth $50,000 or $1,000,000."
+        },
+        {
+            "id": 49,
+            "origin": "CarValue",
+            "content": "Given that the car is an older economy car with a mileage of 5,000, then it is probably not the case that the car is worth $5,000. Highly likely, it is the case that the car is worth $10,000. Impossible, the car is worth $50,000 or $1,000,000. More likely, it is highly unlikely that the car is worth $20,000."
+        },
+        {
+            "id": 50,
+            "origin": "CarValue",
+            "content": "Given that the car is an older economy car with a mileage of 20,000, the following chances can be assigned to its current value: The car is likely worth $5,000. The car is unlikely to be worth $10,000. There is almost no chance that the car is worth $20,000. It is impossible for the car to be worth $50,000 or $1,000,000."
+        },
+        {
+            "id": 51,
+            "origin": "CarValue",
+            "content": "Given that the car is an older economy car with a mileage of 50,000, the following chances can be assigned to the current values of the car: It is almost certain that the car is worth $5,000. There is almost no chance that the car is worth $10,000 or $20,000. The car cannot be worth $50,000 or $1,000,000."
+        },
+        {
+            "id": 52,
+            "origin": "CarValue",
+            "content": "Given that the car is an older economy car with a mileage of 1,000,000, the following chances can be assigned to the current values of the car: It is almost certain that the car is worth $5,000. It is almost negligible that the car is worth $10,000 or $20,000. It is impossible for the car to be worth $50,000 or $1,000,000."
+        },
+        {
+            "id": 53,
+            "origin": "CarValue",
+            "content": "Given that the car is a current family sedan with a mileage of 5,000, the following chances can be assigned to the current values of the car: It is impossible for the car to be worth $5,000. There is only a slight chance that the car is worth $10,000. It is highly likely that the car is worth $20,000. The car cannot be worth $50,000 or $1,000,000."
+        },
+        {
+            "id": 54,
+            "origin": "CarValue",
+            "content": "Given that the car is a current family sedan with a mileage of 20,000, the following chances can be assigned to the current values of the car: The car cannot be worth $5,000. It is unlikely that the car is worth $10,000. It is highly likely that the car is worth $20,000. The car cannot be worth $50,000 or $1,000,000."
+        },
+        {
+            "id": 55,
+            "origin": "CarValue",
+            "content": "Given that the car is a current family sedan with a mileage of 50,000, the following chances can be assigned to the current values of the car: The car cannot possibly be worth $5,000. It is improbable that the car is worth $10,000. It is highly likely that the car is worth $20,000. The car cannot possibly be worth $50,000 or $1,000,000."
+        },
+        {
+            "id": 56,
+            "origin": "CarValue",
+            "content": "Given that the car is a current family sedan with a mileage of 1,000,000, the following chances can be assigned to the current values of the car: It is impossible for the car to be worth $5,000, $50,000 or $1,000,000. It is improbable that it is worth ten thousand dollars highly likely that it is worth $20,000."
+        },
+        {
+            "id": 57,
+            "origin": "CarValue",
+            "content": "Given is a family sedan from an older year, with a mileage of 5,000 on it, then there is a slight chance that the car is worth $5,000. It is probably not the case that the car is worth $10,000. The chances are about even that the car is worth $20,000. It is impossible for the car to be worth $50,000 or $1,000,000."
+        },
+        {
+            "id": 58,
+            "origin": "CarValue",
+            "content": "Given that the car is a family sedan from an older year with a mileage of 20,000, the following chances can be assigned to the current values of the car: The chances are even that the car is worth $5,000. It is probably not the case that the car is worth $10,000 or $20,000. Certainly, the car cannot be worth $50,000 or $1,000,000."
+        },
+        {
+            "id": 59,
+            "origin": "CarValue",
+            "content": "Given that the car is a family sedan from an older year with a mileage of 50,000, the following probabilities can be assigned to the current values of the car: The car probably has a value of $5,000. It is unlikely that the car is worth $10,000. There is only a slight chance that the car is worth $20,000. It is impossible for the car to be worth $50,000 or $1,000,000."
+        },
+        {
+            "id": 60,
+            "origin": "CarValue",
+            "content": "Given that the car is a family sedan from an older year with a mileage of 1,000,000, the following chances can be assigned to the current values of the car: It is almost certain that the car is worth $5,000. There is almost no chance that the car is worth $10,000 or $20,000. It is impossible for the car to be worth $50,000 or $1,000,000."
+        },
+        {
+            "id": 61,
+            "origin": "CarValue",
+            "content": "Given that the car is a luxury model from the current year with a mileage of 5,000, the following chances can be assigned to the current values of the car: The car cannot be worth $5,000, $10,000, or $20,000. The car certainly is worth $50,000. The car cannot be worth $1,000,000."
+        },
+        {
+            "id": 62,
+            "origin": "CarValue",
+            "content": "Given the luxury car is from the current year with 20,000 miles, it cannot be worth $5,000, $10,000, or $20,000. It certainly is worth $50,000, not $1,000,000."
+        },
+        {
+            "id": 63,
+            "origin": "CarValue",
+            "content": "Given the car is a luxury model from current year, with 50,000 mileage, following chances can be assigned to current values: impossible for the car to be worth $5,000, $10,000, or $20,000; certain that the car is worth $50,000; impossible for the car to be worth $1,000,000."
+        },
+        {
+            "id": 64,
+            "origin": "CarValue",
+            "content": "Given that the car is a luxury model from the current year with a mileage of 1,000,000, the following chances can be assigned to the current values of the car: The car cannot be worth $5,000, $10,000, or $20,000. The car certainly is worth $50,000. The car cannot be worth $1,000,000."
+        },
+        {
+            "id": 65,
+            "origin": "CarValue",
+            "content": "Given is a luxury car, an older model with 5,000 miles, then almost no chance exists that the car is worth $5,000. A little chance exists that the car is worth $10,000. It is unlikely that the car is worth $20,000. It is likely that the car is worth $50,000. Impossible it is for the car to be worth $1,000,000."
+        },
+        {
+            "id": 66,
+            "origin": "CarValue",
+            "content": "When the car is an older luxury model, and it has a mileage of 20,000, there is an about even chance that the car is worth fifty thousand dollars, it's probably not worth twenty thousand dollars, unlikely that it's worth ten thousand dollars, and highly unlikely that it's worth five thousand dollars. The car cannot be worth a million dollars in this case."
+        },
+        {
+            "id": 67,
+            "origin": "CarValue",
+            "content": "Given that the car is a luxury model from an older year with a mileage of 50,000, the following chances can be assigned to the current values of the car: It is improbable that the car is worth $5,000. It is equally likely the car is worth $10,000, $20,000 or $50,000. The car cannot be worth $1,000,000."
+        },
+        {
+            "id": 68,
+            "origin": "CarValue",
+            "content": "Given that the car is a luxury model from an older year with a mileage of 1,000,000, the following probabilities can be assigned to the current values of the car: The car is unlikely to be worth $5,000 or $10,000. It is probably not worth $20,000. There is an about even chance that the car is worth $50,000. The car is impossible to be worth $1,000,000."
+        },
+        {
+            "id": 69,
+            "origin": "CarValue",
+            "content": "Given that the car is a super luxury model from the current year with a mileage of 5,000, it is worth $1,000,000."
+        },
+        {
+            "id": 70,
+            "origin": "CarValue",
+            "content": "Given that the car is a super luxury model from the current year, with a mileage of 20,000, it is certainly worth $1,000,000."
+        },
+        {
+            "id": 71,
+            "origin": "CarValue",
+            "content": "Given that the car is a super luxury model from the current year, with a mileage of 50,000, it is certainly worth $1,000,000."
+        },
+        {
+            "id": 72,
+            "origin": "CarValue",
+            "content": "Given that the car is a super luxury model from the current year, with a mileage of 1,000,000, it is certainly worth $1,000,000."
+        },
+        {
+            "id": 73,
+            "origin": "CarValue",
+            "content": "Given that the car is a super luxury model from older years with a mileage of 5,000, it is certain that the car is worth $1,000,000."
+        },
+        {
+            "id": 74,
+            "origin": "CarValue",
+            "content": "Given that the car is a super luxury model from older years with a mileage of 20,000, it is certain that the car is worth $1,000,000."
+        },
+        {
+            "id": 75,
+            "origin": "CarValue",
+            "content": "Given that the car is a super luxury model from an older year with 50,000 miles, it is certain that the car is worth $1,000,000."
+        },
+        {
+            "id": 76,
+            "origin": "CarValue",
+            "content": "Given that the car is a super luxury model from older years with a mileage of 1,000,000, it is certain that the car is worth $1,000,000."
+        },
+        {
+            "id": 77,
+            "origin": "Theft",
+            "content": "A car with anti-theft devices, if parked in a secure location, and currently valued at $5,000, has very low odds of being stolen and is almost certainly not going to be stolen."
+        },
+        {
+            "id": 78,
+            "origin": "Theft",
+            "content": "If a car is equipped with anti-theft devices and is parked in a secure location, and its current value is $10,000, then there is a very low chance of the car being stolen, and it is almost certain that the car will not be stolen."
+        },
+        {
+            "id": 79,
+            "origin": "Theft",
+            "content": "If a car has anti-theft devices and is parked in a secure location, then the chance of the car being stolen is very low, and it is almost certain that the car will not be stolen, given that its current value is $20,000."
+        },
+        {
+            "id": 80,
+            "origin": "Theft",
+            "content": "If a car has anti-theft devices and is parked in a secure location, and the current value of the car is $50,000, then the chance of the car being stolen is very low, and it is almost certain that the car will not be stolen."
+        },
+        {
+            "id": 81,
+            "origin": "Theft",
+            "content": "If a car is equipped with anti-theft devices and is parked in a secure location, and its current value is $1,000,000, then there is a very low probability of the car being stolen, and it is almost certain that the car will not be stolen."
+        },
+        {
+            "id": 82,
+            "origin": "Theft",
+            "content": "If a car is equipped with anti-theft devices and is parked in the city, with a current value of $5,000, then there is very low likelihood that the car will be stolen, and it is almost certain that the car will not be stolen."
+        },
+        {
+            "id": 83,
+            "origin": "Theft",
+            "content": "If a car has anti-theft devices and is parked in the city, and the car's current value is $10,000, then there is a very low chance that the car will be stolen, and it is almost certain that the car will not be stolen."
+        },
+        {
+            "id": 84,
+            "origin": "Theft",
+            "content": "In a city home base, with a car valued at $20,000 and equipped with an anti-theft device, it is almost certain that the car will not get stolen."
+        },
+        {
+            "id": 85,
+            "origin": "Theft",
+            "content": "If a car has anti-theft devices and is parked in the city, and the current car value is $50,000, then there is a very low chance that the car will be stolen, and it is almost certain that the car will not be stolen."
+        },
+        {
+            "id": 86,
+            "origin": "Theft",
+            "content": "If a car has anti-theft devices and is parked in the city, and the current value of the car is $1,000,000, then there is a very low chance that the car will be stolen, and it is almost certain that the car will not be stolen."
+        },
+        {
+            "id": 87,
+            "origin": "Theft",
+            "content": "If a car has anti-theft devices and is parked in the suburbs, and the car's current value is $5,000, then there is a very low probability of the car being stolen, and it is almost certain that the car will not be stolen."
+        },
+        {
+            "id": 88,
+            "origin": "Theft",
+            "content": "If a car has anti-theft devices and is parked in the suburbs, and its current value is $10,000, then there is a very low chance that the car will be stolen, and it is almost certain that the car will not be stolen."
+        },
+        {
+            "id": 89,
+            "origin": "Theft",
+            "content": "If a car has anti-theft devices and is parked in the suburbs, and its current value is $20,000, then there is a very low chance that the car will be stolen, and it is almost certain that the car will not be stolen."
+        },
+        {
+            "id": 90,
+            "origin": "Theft",
+            "content": "If a car has anti-theft devices and is parked in the suburbs, and the current value of the car is $50,000, then there is a very low chance that the car will be stolen, and it is almost certain it will not be stolen."
+        },
+        {
+            "id": 91,
+            "origin": "Theft",
+            "content": "With an anti-theft device-equipped car, parked in the suburbs, and a current value of $1,000,000, the chance of the car being stolen is very low. In fact, it's almost certain the car will not be stolen."
+        },
+        {
+            "id": 92,
+            "origin": "Theft",
+            "content": "If a car is equipped with anti-theft devices and is located in a rural area, with a current value of $5,000, then there is a very low probability of the car being stolen, and it is almost certain that the car will not be stolen."
+        },
+        {
+            "id": 93,
+            "origin": "Theft",
+            "content": "If a car is equipped with anti-theft devices and is located in a rural area, with a current value of $10,000, then there is very low likelihood that the car will be stolen, and it is almost certain that the car will not be stolen."
+        },
+        {
+            "id": 94,
+            "origin": "Theft",
+            "content": "If a car has anti-theft devices and is parked in a rural area, then the chance of the car being stolen is very low, and it is almost certain that the car will not be stolen."
+        },
+        {
+            "id": 95,
+            "origin": "Theft",
+            "content": "If a car is equipped with anti-theft devices and is located in a rural area, and its current value is $50,000, then there is a very low likelihood of the car being stolen, and it is almost certain that the car will not be stolen."
+        },
+        {
+            "id": 96,
+            "origin": "Theft",
+            "content": "With anti-theft devices and parked in a rural area, a car valued at $1,000,000 has a very low probability of being stolen, and it is almost certain it will not be stolen."
+        },
+        {
+            "id": 97,
+            "origin": "Theft",
+            "content": "If a car does not have anti-theft devices and is parked in a secure location, then the chance of the car being stolen is very low, and it is almost certain that the car will not be stolen."
+        },
+        {
+            "id": 98,
+            "origin": "Theft",
+            "content": "If a car doesn't have anti-theft devices and is parked in a secure location, then there's very slim chance the car will be stolen, and it's almost certain the car won't be stolen."
+        },
+        {
+            "id": 99,
+            "origin": "Theft",
+            "content": "If a car does not have anti-theft devices and is parked in a secure location, and the current value of the car is $20,000, then there is a very low chance of the car being stolen, and it is almost certain that the car will not be stolen."
+        },
+        {
+            "id": 100,
+            "origin": "Theft",
+            "content": "If a car does not have anti-theft devices and is parked in a secure location, and the current value of the car is $50,000, then there is a very low chance that the car will be stolen, and it is almost certain that the car will not be stolen."
+        },
+        {
+            "id": 101,
+            "origin": "Theft",
+            "content": "If a car lacks anti-theft devices and is parked in a secure location, but its current value is $1,000,000, then there is a very low probability of the car being stolen, and it is almost certain that the car will not be stolen."
+        },
+        {
+            "id": 102,
+            "origin": "Theft",
+            "content": "If a car does not have anti-theft devices and is parked in the city, and the current value of the car is $5,000, there is a very low probability of the car being stolen, and it is almost certain that the car will not be stolen."
+        },
+        {
+            "id": 103,
+            "origin": "Theft",
+            "content": "If a car lacks anti-theft devices and is parked in the city, with a current value of $10,000, there is a very low probability of the car being stolen, and it is almost certain that the car will not be stolen."
+        },
+        {
+            "id": 104,
+            "origin": "Theft",
+            "content": "If a car does not have anti-theft devices and is parked in the city, currently valued at $20,000, then there is a very low probability of the car being stolen, and it is almost certain that the car will not be stolen."
+        },
+        {
+            "id": 105,
+            "origin": "Theft",
+            "content": "If a car, lacking anti-theft devices, is parked in the city, with a current value of $50,000, then there is a relatively low but not negligible chance of the car being stolen, and it is still quite certain, but not absolutely so, that the car will not be stolen."
+        },
+        {
+            "id": 106,
+            "origin": "Theft",
+            "content": "If a car does not have anti-theft devices and is parked in the city, with a current value of $1,000,000, then there is a relatively low but not negligible chance of the car being stolen, and it is still quite likely that the car will not be stolen."
+        },
+        {
+            "id": 107,
+            "origin": "Theft",
+            "content": "If a car lacks anti-theft devices and is located in the suburbs, with a current value of $5,000, then the chance of the car being stolen is very low, and it is almost certain that the car will not be stolen."
+        },
+        {
+            "id": 108,
+            "origin": "Theft",
+            "content": "If a car does not have anti-theft devices, and is parked in the suburbs, with a current value of $10,000, then there is very low probability that the car will be stolen, and it is almost certain that the car won't be stolen."
+        },
+        {
+            "id": 109,
+            "origin": "Theft",
+            "content": "If a car lacks anti-theft devices and is located in the suburbs, with a current value of $20,000, then there is a very low probability of the car being stolen, and it is almost certain that the car will not be stolen."
+        },
+        {
+            "id": 110,
+            "origin": "Theft",
+            "content": "If a car does not have anti-theft devices and is parked in the suburbs, and the current value of the car is $50,000, then the chance of the car being stolen is very low, but it is almost certain that it will not be stolen."
+        },
+        {
+            "id": 111,
+            "origin": "Theft",
+            "content": "The car, with a value of $1,000,000, is almost certainly not going to be stolen, even without anti-theft devices, when parked in the suburbs, due to its high value making it a rare and valuable target, and the suburban location further reducing the likelihood of theft."
+        },
+        {
+            "id": 112,
+            "origin": "Theft",
+            "content": "If a car lacks anti-theft devices and is situated in a rural area, with a current value of $5,000, then the chance of the car being stolen is very low, and it's almost certain that the car will not be stolen."
+        },
+        {
+            "id": 113,
+            "origin": "Theft",
+            "content": "If a car lacks anti-theft devices and is situated in a rural area, with a current value of $10,000, then the chance of the car being stolen is very low, and it's almost certain that the car will not be stolen."
+        },
+        {
+            "id": 114,
+            "origin": "Theft",
+            "content": "If a car does not have anti-theft devices and is parked in a rural area, and the current value of the car is $20,000, then the chance of the car being stolen is very low, and it is almost certain that the car will not be stolen."
+        },
+        {
+            "id": 115,
+            "origin": "Theft",
+            "content": "If a car does not have anti-theft devices and is parked in a rural area, and the current value of the car is $50,000, then the chance of the car being stolen is very low, and it is almost certain that the car will not be stolen."
+        },
+        {
+            "id": 116,
+            "origin": "Theft",
+            "content": "If a car is not equipped with an anti-theft device and its home base located in a rural area, with a value of $1,000,000, then it is almost certain that the car will not be stolen."
+        }
+    ],
+    "evidence_query_pairs": [
+        {
+            "id": 0,
+            "evidences": [
+                "The primary location of the car is a suburb.",
+                "The car has been driven for twenty thousand miles.",
+                "The car has a higher than average likelihood of being stolen.",
+                "The car does not have any anti-theft devices installed."
+            ],
+            "query": "What is the likelihood of this car having a current value of fifty thousand dollars?",
+            "answer": 0.15302481,
+            "reasoning_types": [
+                "causal",
+                "explaining_away"
+            ]
+        },
+        {
+            "id": 1,
+            "evidences": [
+                "The car is at risk of being stolen.",
+                "The car does not have anti-theft devices."
+            ],
+            "query": "What is the likelihood of the car having a value of ten thousand dollars?",
+            "answer": 0.27861336,
+            "reasoning_types": [
+                "evidential",
+                "explaining_away"
+            ]
+        },
+        {
+            "id": 2,
+            "evidences": [
+                "The car has a value of twenty thousand dollars.",
+                "The car is usually parked in a secure location.",
+                "The car does not have any anti-theft devices installed."
+            ],
+            "query": "What is the likelihood of this car being stolen?",
+            "answer": 0.0,
+            "reasoning_types": [
+                "causal"
+            ]
+        },
+        {
+            "id": 3,
+            "evidences": [
+                "The car has a value of twenty thousand dollars.",
+                "The car has been driven for one million miles.",
+                "The car does not have any anti-theft devices installed.",
+                "The car is usually parked in a rural area."
+            ],
+            "query": "What is the likelihood of this car being stolen?",
+            "answer": 0.0002,
+            "reasoning_types": [
+                "causal"
+            ]
+        },
+        {
+            "id": 4,
+            "evidences": [
+                "The car has a value of twenty thousand dollars.",
+                "The car has been driven for five thousand miles.",
+                "The car is likely to be stolen.",
+                "The car does not have anti-theft devices."
+            ],
+            "query": "What is the likelihood of this car being based in the city?",
+            "answer": 0.96770194,
+            "reasoning_types": [
+                "evidential",
+                "explaining_away"
+            ]
+        },
+        {
+            "id": 5,
+            "evidences": [
+                "The car has a value of one million dollars.",
+                "The car has been driven for twenty thousand miles.",
+                "The car is usually parked in a suburban area.",
+                "The car has a high likelihood of being stolen."
+            ],
+            "query": "What is the likelihood of this car having anti-theft devices installed?",
+            "answer": 0.1931662,
+            "reasoning_types": [
+                "evidential",
+                "explaining_away"
+            ]
+        },
+        {
+            "id": 6,
+            "evidences": [
+                "The car has a mileage of 5000.",
+                "The car is likely to be stolen."
+            ],
+            "query": "What is the likelihood of the car being parked or housed in a suburban area?",
+            "answer": 0.026969748,
+            "reasoning_types": [
+                "evidential"
+            ]
+        },
+        {
+            "id": 7,
+            "evidences": [
+                "The car is equipped with anti-theft devices."
+            ],
+            "query": "What is the likelihood of this car having a mileage of 5,000?",
+            "answer": 0.1,
+            "reasoning_types": []
+        },
+        {
+            "id": 8,
+            "evidences": [
+                "The car is not stolen.",
+                "The car is equipped with anti-theft devices."
+            ],
+            "query": "What is the likelihood of the car's primary location being rural?",
+            "answer": 0.089908557,
+            "reasoning_types": [
+                "evidential",
+                "explaining_away"
+            ]
+        },
+        {
+            "id": 9,
+            "evidences": [
+                "The anti-theft devices in the car are not present.",
+                "The car has been driven for a million miles."
+            ],
+            "query": "What is the likelihood of the car not being stolen?",
+            "answer": 0.997987,
+            "reasoning_types": [
+                "causal"
+            ]
+        },
+        {
+            "id": 10,
+            "evidences": [
+                "The car has been driven for over a million miles.",
+                "The car has not been stolen."
+            ],
+            "query": "What is the likelihood of the car being currently valued at 50 thousand dollars?",
+            "answer": 0.058412601,
+            "reasoning_types": [
+                "causal",
+                "evidential"
+            ]
+        },
+        {
+            "id": 11,
+            "evidences": [
+                "The car has a mileage of twenty thousand.",
+                "The car is likely to be stolen.",
+                "The car has a value of one million dollars."
+            ],
+            "query": "What is the likelihood of the car's home base being secure?",
+            "answer": 0.15725594,
+            "reasoning_types": [
+                "evidential",
+                "explaining_away"
+            ]
+        },
+        {
+            "id": 12,
+            "evidences": [
+                "The car has a mileage of 5000.",
+                "The car is usually parked in a secure location."
+            ],
+            "query": "What is the likelihood of this car not being stolen?",
+            "answer": 0.99999776,
+            "reasoning_types": [
+                "causal"
+            ]
+        },
+        {
+            "id": 13,
+            "evidences": [
+                "The theft likelihood of the car is low.",
+                "The car is parked in a secure location.",
+                "The car does not have anti-theft devices installed.",
+                "The current value of the car is fifty thousand dollars."
+            ],
+            "query": "What is the likelihood of the car having a mileage of twenty thousand?",
+            "answer": 0.43177782,
+            "reasoning_types": [
+                "evidential"
+            ]
+        },
+        {
+            "id": 14,
+            "evidences": [
+                "The car has a value of one million dollars.",
+                "The car is equipped with anti-theft devices."
+            ],
+            "query": "What is the likelihood of the car not being stolen?",
+            "answer": 0.999999,
+            "reasoning_types": [
+                "causal"
+            ]
+        },
+        {
+            "id": 15,
+            "evidences": [
+                "The primary location where the car is parked or housed is in a suburb.",
+                "The car does not have any anti-theft devices installed.",
+                "The current value of the car is estimated to be one million."
+            ],
+            "query": "What is the likelihood of this car having a mileage of five thousand?",
+            "answer": 0.10000002,
+            "reasoning_types": [
+                "evidential"
+            ]
+        },
+        {
+            "id": 16,
+            "evidences": [
+                "The anti-theft devices in the car are absent."
+            ],
+            "query": "What is the likelihood of this car being stolen?",
+            "answer": 0.002636998,
+            "reasoning_types": [
+                "causal"
+            ]
+        },
+        {
+            "id": 17,
+            "evidences": [
+                "The car does not have anti-theft devices."
+            ],
+            "query": "What is the likelihood of this car having a value of fifty thousand dollars?",
+            "answer": 0.06778968,
+            "reasoning_types": []
+        },
+        {
+            "id": 18,
+            "evidences": [
+                "The current value of the car is twenty thousand dollars."
+            ],
+            "query": "What is the likelihood of the car not having anti-theft devices?",
+            "answer": 0.77042959,
+            "reasoning_types": []
+        },
+        {
+            "id": 19,
+            "evidences": [
+                "The car's value is estimated to be $50,000.",
+                "The car does not have any anti-theft devices installed.",
+                "The car is primarily parked or housed in a secure location.",
+                "The car has a high likelihood of being stolen."
+            ],
+            "query": "What is the likelihood of this car having a mileage of 20,000?",
+            "answer": 0.43177782,
+            "reasoning_types": [
+                "evidential"
+            ]
+        }
+    ]
+}

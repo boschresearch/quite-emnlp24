@@ -1,0 +1,598 @@
+{
+    "nodes": [
+        {
+            "name": "bg_0",
+            "states": [
+                "20mmol_l",
+                "18mmol_l",
+                "16mmol_l",
+                "14mmol_l",
+                "12mmol_l",
+                "10mmol_l",
+                "8mmol_l",
+                "6mmol_l",
+                "4mmol_l",
+                "2mmol_l",
+                "1mmol_l"
+            ]
+        },
+        {
+            "name": "renal_cl_0",
+            "states": [
+                "0_8mmol_kg_h",
+                "0_4mmol_kg_h",
+                "0_0mmol_kg_h"
+            ]
+        },
+        {
+            "name": "ins_indep_util_0",
+            "states": [
+                "0_8mmol_kg_h",
+                "0_4mmol_kg_h",
+                "0_0mmol_kg_h"
+            ]
+        },
+        {
+            "name": "ins_indep_0",
+            "states": [
+                "1_6mmol_kg_h",
+                "1_2mmol_kg_h",
+                "0_8mmol_kg_h",
+                "0_4mmol_kg_h",
+                "0_0mmol_kg_h"
+            ]
+        }
+    ],
+    "connectivity": [
+        {
+            "node": "bg_0",
+            "incoming": []
+        },
+        {
+            "node": "renal_cl_0",
+            "incoming": [
+                "bg_0"
+            ]
+        },
+        {
+            "node": "ins_indep_util_0",
+            "incoming": [
+                "bg_0"
+            ]
+        },
+        {
+            "node": "ins_indep_0",
+            "incoming": [
+                "renal_cl_0",
+                "ins_indep_util_0"
+            ]
+        }
+    ],
+    "numeric_premises": [
+        {
+            "id": 0,
+            "origin": "bg_0",
+            "content": "The likelihood of a patient's blood glucose concentration (bg_0) ranging from 1mmol/l to 20mmol/l is distributed as follows: 1% for 1mmol/l and 2mmol/l, 7% for 4mmol/l, 15% for 6mmol/l, 20% for 8mmol/l, 30% for 10mmol/l, 15% for 12mmol/l, 7% for 14mmol/l, 2% for 16mmol/l, and 1% for both 18mmol/l and 20mmol/l."
+        },
+        {
+            "id": 1,
+            "origin": "ins_indep_util_0",
+            "content": "If the blood glucose concentration is 20 mmol/l, then the utility of insulin administration strategies is fully realized at a rate of 0.8 mmol/kg/h, with no utility at 0.4 mmol/kg/h or 0.0 mmol/kg/h."
+        },
+        {
+            "id": 2,
+            "origin": "ins_indep_util_0",
+            "content": "With a blood glucose level of 18 mmol/l, the utility of insulin administration strategies is fully effective at a rate of 0.8 mmol/kg/h, and there is no utility at 0.4 mmol/kg/h or 0.0 mmol/kg/h."
+        },
+        {
+            "id": 3,
+            "origin": "ins_indep_util_0",
+            "content": "In the case of a blood glucose concentration of 16 mmol/l, the utility of insulin administration strategies is at its maximum at a rate of 0.8 mmol/kg/h, and no utility is found at 0.4 mmol/kg/h or 0.0 mmol/kg/h."
+        },
+        {
+            "id": 4,
+            "origin": "ins_indep_util_0",
+            "content": "When the blood glucose level is 14 mmol/l, the utility of insulin administration strategies is almost certainly at its peak at a rate of 0.8 mmol/kg/h (99.97%), while the utility at 0.4 mmol/kg/h (0.03%) and 0.0 mmol/kg/h (0%) is negligible."
+        },
+        {
+            "id": 5,
+            "origin": "ins_indep_util_0",
+            "content": "If the blood glucose concentration is 12 mmol/l, the utility of insulin administration strategies is highly likely to be at 0.8 mmol/kg/h (99.63%), with a very small probability of being at 0.4 mmol/kg/h (0.37%), and no chance of being at 0.0 mmol/kg/h."
+        },
+        {
+            "id": 6,
+            "origin": "ins_indep_util_0",
+            "content": "When the blood glucose level is 10 mmol/l, the utility of insulin administration strategies is most likely at a rate of 0.8 mmol/kg/h (95.1%), with a 4.9% chance of being at 0.4 mmol/kg/h, and no chance of being at 0.0 mmol/kg/h."
+        },
+        {
+            "id": 7,
+            "origin": "ins_indep_util_0",
+            "content": "In the case of a blood glucose concentration of 8 mmol/l, the utility of insulin administration strategies is equally likely to be at 0.8 mmol/kg/h or 0.4 mmol/kg/h, with no probability of being at 0.0 mmol/kg/h."
+        },
+        {
+            "id": 8,
+            "origin": "ins_indep_util_0",
+            "content": "If the blood glucose concentration is 6 mmol/l, the utility of insulin administration strategies is most likely at a rate of 0.4 mmol/kg/h (92.04%), with a 7.96% chance of being at 0.8 mmol/kg/h, and no probability of being at 0.0 mmol/kg/h."
+        },
+        {
+            "id": 9,
+            "origin": "ins_indep_util_0",
+            "content": "When the blood glucose level is 4 mmol/l, the utility of insulin administration strategies is most likely at a rate of 0.4 mmol/kg/h (99.27%), with a 0.72% chance of being at 0.8 mmol/kg/h, and a negligible probability of being at 0.0 mmol/kg/h (0.01%)."
+        },
+        {
+            "id": 10,
+            "origin": "ins_indep_util_0",
+            "content": "If the blood glucose concentration is 2 mmol/l, the utility of insulin administration strategies is at a rate of 0.8 mmol/kg/h with a probability of 1.33%, with a 2.33% chance of being at 0.0 mmol/kg/h, and a 96.34% chance of being at 0.4 mmol/kg/h."
+        },
+        {
+            "id": 11,
+            "origin": "ins_indep_util_0",
+            "content": "When the blood glucose level is 1 mmol/l, the utility of insulin administration strategies is most likely at a rate of 0.0 mmol/kg/h, with a 19.73% chance of being at 0.4 mmol/kg/h, and an 80.23% chance of being at 0.0 mmol/kg/h."
+        },
+        {
+            "id": 12,
+            "origin": "renal_cl_0",
+            "content": "When the blood glucose level reaches 20 mmol/l, there is a 100% probability that the kidneys' ability to clear substances is 0.4 mmol/kg/h, whereas 0.8 and 0.0 mmol/kg/h are impossible."
+        },
+        {
+            "id": 13,
+            "origin": "renal_cl_0",
+            "content": "With a blood glucose level of 18 mmol/l, there is a 100% probability that the kidneys' ability to clear substances is 0.4 mmol/kg/h."
+        },
+        {
+            "id": 14,
+            "origin": "renal_cl_0",
+            "content": "Given a blood glucose level of 16 mmol/l, the kidneys' ability to clear substances has a 100% probability of being 0.4 mmol/kg/h."
+        },
+        {
+            "id": 15,
+            "origin": "renal_cl_0",
+            "content": "At a blood glucose level of 14 mmol/l, the kidneys' ability to clear substances has a 100% probability of being 0.0 mmol/kg/h."
+        },
+        {
+            "id": 16,
+            "origin": "renal_cl_0",
+            "content": "When the blood glucose level is 12 mmol/l, there is a 100% probability that the kidneys' ability to clear substances is 0.0 mmol/kg/h."
+        },
+        {
+            "id": 17,
+            "origin": "renal_cl_0",
+            "content": "With a blood glucose level of 10 mmol/l, the kidneys' ability to clear substances has a 100% probability of being 0.0 mmol/kg/h."
+        },
+        {
+            "id": 18,
+            "origin": "renal_cl_0",
+            "content": "Given a blood glucose level of 8 mmol/l, the kidneys' ability to clear substances has a 100% probability of being 0.0 mmol/kg/h."
+        },
+        {
+            "id": 19,
+            "origin": "renal_cl_0",
+            "content": "At a blood glucose level of 6 mmol/l, the kidneys' ability to clear substances has a 100% probability of being 0.0 mmol/kg/h."
+        },
+        {
+            "id": 20,
+            "origin": "renal_cl_0",
+            "content": "With a blood glucose level of 4 mmol/l, the kidneys' ability to clear substances has a 100% probability of being 0.0 mmol/kg/h."
+        },
+        {
+            "id": 21,
+            "origin": "renal_cl_0",
+            "content": "Given a blood glucose level of 2 mmol/l, the kidneys' ability to clear substances has a 100% probability of being 0.0 mmol/kg/h."
+        },
+        {
+            "id": 22,
+            "origin": "renal_cl_0",
+            "content": "At a blood glucose level of 1 mmol/l, the kidneys' ability to clear substances has a 100% probability of being 0.0 mmol/kg/h."
+        },
+        {
+            "id": 23,
+            "origin": "ins_indep_0",
+            "content": "When the kidneys' ability to clear substances is 0.8 mmol/kg*h and the utility of insulin administration strategies at this blood glucose level is also 0.8 mmol/kg*h, then the probability of the actual insulin administration rate being 1.6 mmol/kg*h is 99.97%, while the probabilities for other insulin administration rates (1.2, 0.8, 0.4, 0.0 mmol/kg*h) are virtually zero."
+        },
+        {
+            "id": 24,
+            "origin": "ins_indep_0",
+            "content": "If the kidneys' ability to clear substances is 0.8 mmol/kg*h and the utility of insulin administration strategies at this blood glucose level is 0.4 mmol/kg*h, then the probability of the actual insulin administration rate being 1.2 mmol/kg*h is an extremely high 99.94%, while the probabilities for other insulin administration rates (1.6, 0.8, 0.4, 0.0 mmol/kg*h) are very low."
+        },
+        {
+            "id": 25,
+            "origin": "ins_indep_0",
+            "content": "When the kidneys' ability to clear substances is 0.8 mmol/kg*h and the utility of insulin administration strategies at this blood glucose level is 0.0 mmol/kg*h, the probability of the actual insulin administration rate being 0.8 mmol/kg*h is an extremely high 99.94%, while the probabilities for other insulin administration rates (1.6, 1.2, 0.4, 0.0 mmol/kg*h) are very low."
+        },
+        {
+            "id": 26,
+            "origin": "ins_indep_0",
+            "content": "If the kidneys' ability to clear substances is 0.4 mmol/kg*h and the utility of insulin administration strategies at this blood glucose level is 0.8 mmol/kg*h, then the probability of the actual insulin administration rate being 1.2 mmol/kg*h is an extremely high 99.94%, while the probabilities for other insulin administration rates (1.6, 0.8, 0.4, 0.0 mmol/kg*h) are very low."
+        },
+        {
+            "id": 27,
+            "origin": "ins_indep_0",
+            "content": "When the kidneys' ability to clear substances is 0.4 mmol/kg*h and the utility of insulin administration strategies at this blood glucose level is 0.4 mmol/kg*h, the probability of the actual insulin administration rate being 0.8 mmol/kg*h is an extremely high 99.94%, while the probabilities for other insulin administration rates (1.6, 1.2, 0.4, 0.0 mmol/kg*h) are very low."
+        },
+        {
+            "id": 28,
+            "origin": "ins_indep_0",
+            "content": "If the kidneys' ability to clear substances is 0.4 mmol/kg*h and the utility of insulin administration strategies at this blood glucose level is 0.0 mmol/kg*h, then the probability of the actual insulin administration rate being 0.4 mmol/kg*h is an extremely high 99.94%, while the probabilities for other insulin administration rates (1.6, 1.2, 0.8, 0.0 mmol/kg*h) are very low."
+        },
+        {
+            "id": 29,
+            "origin": "ins_indep_0",
+            "content": "When the kidneys' ability to clear substances is 0.0 mmol/kg*h and the utility of insulin administration strategies at this blood glucose level is 0.8 mmol/kg*h, the probability of the actual insulin administration rate being 0.8 mmol/kg*h is an extremely high 99.94%, while the probabilities for other insulin administration rates (1.6, 1.2, 0.4, 0.0 mmol/kg*h) are very low."
+        },
+        {
+            "id": 30,
+            "origin": "ins_indep_0",
+            "content": "If the kidneys' ability to clear substances is 0.0 mmol/kg*h and the utility of insulin administration strategies at this blood glucose level is 0.4 mmol/kg*h, then the probability of the actual insulin administration rate being 0.4 mmol/kg*h is an extremely high 99.94%, while the probabilities for other insulin administration rates (1.6, 1.2, 0.8, 0.0 mmol/kg*h) are very low."
+        },
+        {
+            "id": 31,
+            "origin": "ins_indep_0",
+            "content": "When the kidneys' ability to clear substances is 0.0 mmol/kg*h and the utility of insulin administration strategies at this blood glucose level is 0.0 mmol/kg*h, the probability of the actual insulin administration rate being 0.0 mmol/kg*h is an extremely high 99.97%, while the probabilities for other insulin administration rates (1.6, 1.2, 0.8, 0.4 mmol/kg*h) are very low."
+        }
+    ],
+    "wep_based_premises": [
+        {
+            "id": 0,
+            "origin": "bg_0",
+            "content": "The likelihood of a patient's blood glucose concentration (bg_0) ranging from 1mmol/l to 20mmol/l is distributed as follows: there is almost no chance for it to be 1mmol/l, 2mmol/l, 16mmol/l, 18mmol/l, and 20mmol/l. It is highly unlikely to be at 4mmol/l or 14 mmol/l. It is unlikely to be at 6mmol/l, 8mmol/l or 12mmol/l. It is most likely, but still probably not at 10mmol/l."
+        },
+        {
+            "id": 1,
+            "origin": "ins_indep_util_0",
+            "content": "Given that the patient's current blood glucose level is 20mmol/l, it is certain that the utility or effectiveness of insulin administration strategies at a rate of 0.8mmol/kg/h is the most effective, while it is impossible for the strategies at rates of 0.4mmol/kg/h and 0.0mmol/kg/h to be effective."
+        },
+        {
+            "id": 2,
+            "origin": "ins_indep_util_0",
+            "content": "Given that the patient's current blood glucose level is 18mmol/l, it is certain that the utility of insulin administration strategies at a rate of 0.8mmol/kg/h is the most effective, while it is impossible for the strategies at rates of 0.4mmol/kg/h and 0.0mmol/kg/h to be effective."
+        },
+        {
+            "id": 3,
+            "origin": "ins_indep_util_0",
+            "content": "Given that the patient's current blood glucose level is 16mmol/l, it is certain that the utility of insulin administration strategies at 0.8mmol/kg/h is the most effective, while it is impossible for the strategies at 0.4mmol/kg/h and 0.0mmol/kg/h to be effective."
+        },
+        {
+            "id": 4,
+            "origin": "ins_indep_util_0",
+            "content": "Given that the patient's current blood glucose level is 14mmol/l, it is almost certain that the utility of insulin administration strategies at a rate of 0.8mmol/kg/h will be effective. However, there is almost no chance that the utility of insulin administration strategies at a rate of 0.4mmol/kg/h will be effective, and it is impossible for the utility of insulin administration strategies at a rate of 0.0mmol/kg/h to be effective."
+        },
+        {
+            "id": 5,
+            "origin": "ins_indep_util_0",
+            "content": "Given that the patient's current blood glucose level is 12mmol/l, it is almost certain that the utility or effectiveness of insulin administration strategies at a rate of 0.8mmol/kg/h will be beneficial. However, there is almost no chance that the utility or effectiveness of insulin administration strategies at a rate of 0.4mmol/kg/h will be beneficial, and it is impossible that the utility or effectiveness of insulin administration strategies at a rate of 0.0mmol/kg/h will be beneficial."
+        },
+        {
+            "id": 6,
+            "origin": "ins_indep_util_0",
+            "content": "Given that the patient's current blood glucose level is 10mmol/l, it is almost certain that the utility or effectiveness of insulin administration strategies at a rate of 0.8mmol/kg/h will be beneficial. However, it is highly unlikely that the same utility or effectiveness will be achieved at a rate of 0.4mmol/kg/h, and it is impossible to achieve any utility or effectiveness at a rate of 0.0mmol/kg/h."
+        },
+        {
+            "id": 7,
+            "origin": "ins_indep_util_0",
+            "content": "Given that the patient's current blood glucose level is 8mmol/l, the utility or effectiveness of insulin administration strategies at a rate of 0.8mmol/kg/h has about even chances, and at a rate of 0.4mmol/kg/h also has about even chances, while the utility or effectiveness of insulin administration strategies at a rate of 0.0mmol/kg/h is impossible."
+        },
+        {
+            "id": 8,
+            "origin": "ins_indep_util_0",
+            "content": "Given that the patient's current blood glucose level is 6mmol/l, there is little chance that an insulin administration strategy with a utility of 0.8mmol/kg/h will be effective, it is highly likely that an insulin administration strategy with a utility of 0.4mmol/kg/h will be effective, and it is impossible that an insulin administration strategy with a utility of 0.0mmol/kg/h will be effective."
+        },
+        {
+            "id": 9,
+            "origin": "ins_indep_util_0",
+            "content": "Given that the patient's current blood glucose level is 4mmol/l, there is almost no chance that an insulin administration strategy of 0.8mmol/kg/h will be effective, there is almost certain chance that an insulin administration strategy of 0.4mmol/kg/h will be effective, and there is almost no chance that an insulin administration strategy of 0.0mmol/kg/h will be effective."
+        },
+        {
+            "id": 10,
+            "origin": "ins_indep_util_0",
+            "content": "Given that the patient's current blood glucose level is 2mmol/l, there is almost no chance that an insulin administration strategy of 0.8mmol/kg/h will be effective, there is almost a certain chance that an insulin administration strategy of 0.4mmol/kg/h will be effective, and there is almost no chance that an insulin administration strategy of 0.0mmol/kg/h will be effective."
+        },
+        {
+            "id": 11,
+            "origin": "ins_indep_util_0",
+            "content": "Given that the patient's current blood glucose level is 1mmol/l, there is almost no chance that an insulin administration strategy with a utility of 0.8mmol/kg/h will be effective, it is unlikely that a strategy with a utility of 0.4mmol/kg/h will be effective, but there is a very good chance that a strategy with a utility of 0.0mmol/kg/h will be effective."
+        },
+        {
+            "id": 12,
+            "origin": "renal_cl_0",
+            "content": "Given that the patient's current blood glucose level is 20 mmol/l, it is impossible for the kidneys' ability to clear substances to be 0.8mmol/kg/h, it is certain that the kidneys' ability to clear substances is 0.4mmol/kg/h, and it is impossible for the kidneys' ability to clear substances to be 0.0mmol/kg/h."
+        },
+        {
+            "id": 13,
+            "origin": "renal_cl_0",
+            "content": "Given that the patient's current blood glucose level is 18 mmol/l, it is impossible for the kidneys' ability to clear substances to be 0.8mmol/kg/h, it is certain that the kidneys' ability to clear substances is 0.4mmol/kg/h, and it is impossible for the kidneys' ability to clear substances to be 0.0mmol/kg/h."
+        },
+        {
+            "id": 14,
+            "origin": "renal_cl_0",
+            "content": "Given that the patient's current blood glucose level is 16 mmol/l, it is impossible for the kidneys' ability to clear substances to be 0.8mmol/kg/h, it is certain for the kidneys' ability to clear substances to be 0.4mmol/kg/h, and it is impossible for the kidneys' ability to clear substances to be 0.0mmol/kg/h."
+        },
+        {
+            "id": 15,
+            "origin": "renal_cl_0",
+            "content": "Given that the patient's current blood glucose level is 14 mmol/l, it is impossible for the kidneys to clear substances at a rate of 0.8mmol/kg/h or 0.4mmol/kg/h, but it is certain that the kidneys will clear substances at a rate of 0.0mmol/kg/h."
+        },
+        {
+            "id": 16,
+            "origin": "renal_cl_0",
+            "content": "Given that the patient's current blood glucose level is 12mmol/l, it is impossible for the kidneys to clear substances at a rate of 0.8mmol/kg/h or 0.4mmol/kg/h, but it is certain that the kidneys will clear substances at a rate of 0.0mmol/kg/h."
+        },
+        {
+            "id": 17,
+            "origin": "renal_cl_0",
+            "content": "Given that the patient's current blood glucose level is 10 mmol/l, it is impossible for the kidneys to clear substances at a rate of 0.8mmol/kg/h or 0.4mmol/kg/h, but it is certain that the kidneys will clear substances at a rate of 0.0mmol/kg/h."
+        },
+        {
+            "id": 18,
+            "origin": "renal_cl_0",
+            "content": "Given that the patient's current blood glucose level is 8 mmol/l, it is impossible for the kidneys to clear substances at a rate of 0.8mmol/kg/h or 0.4mmol/kg/h, but it is certain that the kidneys will clear substances at a rate of 0.0mmol/kg/h."
+        },
+        {
+            "id": 19,
+            "origin": "renal_cl_0",
+            "content": "Given that the patient's current blood glucose level is 6 mmol/l, it is impossible for the kidneys to clear substances at a rate of 0.8mmol/kg/h or 0.4mmol/kg/h, but it is certain that the kidneys will clear substances at a rate of 0.0mmol/kg/h."
+        },
+        {
+            "id": 20,
+            "origin": "renal_cl_0",
+            "content": "Given that the patient's current blood glucose level is 4 mmol/l, it is impossible for the kidneys to clear substances at a rate of 0.8mmol/kg/h or 0.4mmol/kg/h, but it is certain that the kidneys will clear substances at a rate of 0.0mmol/kg/h."
+        },
+        {
+            "id": 21,
+            "origin": "renal_cl_0",
+            "content": "Given that the patient's current blood glucose level is 2 mmol/l, it is impossible for the kidneys to clear substances at a rate of 0.8mmol/kg/h or 0.4mmol/kg/h, but it is certain that the kidneys will clear substances at a rate of 0.0mmol/kg/h."
+        },
+        {
+            "id": 22,
+            "origin": "renal_cl_0",
+            "content": "Given that the patient's current blood glucose level is 1 mmol/l, it is impossible for the kidneys to clear substances at a rate of 0.8mmol/kg/h or 0.4mmol/kg/h, but it is certain that the kidneys will clear substances at a rate of 0.0mmol/kg/h."
+        },
+        {
+            "id": 23,
+            "origin": "ins_indep_0",
+            "content": "Given that the kidneys' ability to clear substances is 0.8mmol/kg/h and the utility or effectiveness of insulin administration strategies is also 0.8mmol/kg/h, then it is almost certain that the actual rate at which insulin is administered independently is 1.6mmol/kg/h, there is almost no chance that the actual rate is 1.2mmol/kg/h, and it is impossible that the actual rate is 0.8mmol/kg/h, 0.4mmol/kg/h, or 0.0mmol/kg/h."
+        },
+        {
+            "id": 24,
+            "origin": "ins_indep_0",
+            "content": "Given that the kidneys' ability to clear substances is 0.8mmol/kg/h and the utility or effectiveness of insulin administration strategies is 0.4mmol/kg/h, then it is almost impossible for the actual rate of insulin administration to be 1.6mmol/kg/h, almost certain for it to be 1.2mmol/kg/h, almost impossible for it to be 0.8mmol/kg/h, impossible for it to be 0.4mmol/kg/h, and impossible for it to be 0.0mmol/kg/h."
+        },
+        {
+            "id": 25,
+            "origin": "ins_indep_0",
+            "content": "Given that the kidneys' ability to clear substances is 0.8mmol/kg/h and the utility or effectiveness of insulin administration strategies is 0.0mmol/kg/h, then it is almost impossible to administer insulin independently at a rate of 1.6mmol/kg/h, there is almost no chance of administering insulin independently at a rate of 1.2mmol/kg/h, it is almost certain that insulin can be administered independently at a rate of 0.8mmol/kg/h, there is almost no chance of administering insulin independently at a rate of 0.4mmol/kg/h, and it is impossible to administer insulin independently at a rate of 0.0mmol/kg/h."
+        },
+        {
+            "id": 26,
+            "origin": "ins_indep_0",
+            "content": "Given that the kidneys' ability to clear substances is 0.4mmol/kg/h and the utility or effectiveness of insulin administration strategies is 0.8mmol/kg/h, then there is almost no chance that the actual rate at which insulin is administered independently is 1.6mmol/kg/h, it is almost certain that the actual rate is 1.2mmol/kg/h, there is almost no chance that the actual rate is 0.8mmol/kg/h, it is impossible that the actual rate is 0.4mmol/kg/h or 0.0mmol/kg/h."
+        },
+        {
+            "id": 27,
+            "origin": "ins_indep_0",
+            "content": "Given that the kidneys' ability to clear substances is 0.4mmol/kg/h and the utility or effectiveness of insulin administration strategies is also 0.4mmol/kg/h, then it is almost impossible to administer insulin independently at a rate of 1.6mmol/kg/h, there is almost no chance of administering insulin independently at a rate of 1.2mmol/kg/h, it is almost certain that insulin can be administered independently at a rate of 0.8mmol/kg/h, there is almost no chance of administering insulin independently at a rate of 0.4mmol/kg/h, and it is impossible to administer insulin independently at a rate of 0.0mmol/kg/h."
+        },
+        {
+            "id": 28,
+            "origin": "ins_indep_0",
+            "content": "Given that the kidneys' ability to clear substances is 0.4mmol/kg/h and the utility or effectiveness of insulin administration strategies is 0.0mmol/kg/h, then it is impossible for the actual rate of insulin administration to be 1.6mmol/kg/h or 1.2mmol/kg/h, there is almost no chance for it to be 0.8mmol/kg/h, it is almost certain for it to be 0.4mmol/kg/h, and there is almost no chance for it to be 0.0mmol/kg/h."
+        },
+        {
+            "id": 29,
+            "origin": "ins_indep_0",
+            "content": "Given that the kidneys' ability to clear substances is 0.0mmol/kg/h and the utility or effectiveness of insulin administration strategies is 0.8mmol/kg/h, then it is impossible to administer insulin independently at a rate of 1.6mmol/kg/h, there is almost no chance of administering insulin independently at a rate of 1.2mmol/kg/h, it is almost certain that insulin can be administered independently at a rate of 0.8mmol/kg/h, there is almost no chance of administering insulin independently at a rate of 0.4mmol/kg/h, and it is impossible to administer insulin independently at a rate of 0.0mmol/kg/h."
+        },
+        {
+            "id": 30,
+            "origin": "ins_indep_0",
+            "content": "Given that the kidneys' ability to clear substances is 0.0mmol/kg/h and the utility or effectiveness of insulin administration strategies is 0.4mmol/kg/h, then it is impossible for the actual rate of insulin administration to be 1.6mmol/kg/h or 1.2mmol/kg/h, there is almost no chance for it to be 0.8mmol/kg/h, it is almost certain for it to be 0.4mmol/kg/h, and there is almost no chance for it to be 0.0mmol/kg/h."
+        },
+        {
+            "id": 31,
+            "origin": "ins_indep_0",
+            "content": "Given that the kidneys' ability to clear substances is 0.0mmol/kg/h and the utility or effectiveness of insulin administration strategies is 0.0mmol/kg/h, then it is impossible to administer insulin independently at a rate of 1.6mmol/kg/h, 1.2mmol/kg/h, or 0.8mmol/kg/h, there is almost no chance of administering it at a rate of 0.4mmol/kg/h, and it is almost certain that insulin cannot be administered independently at a rate of 0.0mmol/kg/h."
+        }
+    ],
+    "evidence_query_pairs": [
+        {
+            "id": 0,
+            "evidences": [
+                "The patient's current blood glucose concentration is 10 mmol/l.",
+                "The kidneys' ability to clear substances from the blood is at its normal level (0.0mmol/kg/h)."
+            ],
+            "query": "What is the likelihood of insulin administration strategies being effective at a rate of 0.8 mmol/kg/h?",
+            "answer": 0.951,
+            "reasoning_types": [
+                "causal"
+            ]
+        },
+        {
+            "id": 1,
+            "evidences": [
+                "The utility or effectiveness of insulin administration strategies, given the current blood glucose levels, is 0.8 mmol/kg/h.",
+                "The actual rate at which insulin is administered independently is 0.4 mmol/kg/h."
+            ],
+            "query": "What is the likelihood of the kidneys' ability to clear substances being 0.8 mmol/kg/h?",
+            "answer": 0.0,
+            "reasoning_types": [
+                "evidential",
+                "explaining_away"
+            ]
+        },
+        {
+            "id": 2,
+            "evidences": [
+                "The patient's current blood glucose concentration is 8 mmol/l."
+            ],
+            "query": "What is the likelihood of the patient's kidneys having no ability to clear substances from the blood?",
+            "answer": 1.0,
+            "reasoning_types": [
+                "causal"
+            ]
+        },
+        {
+            "id": 3,
+            "evidences": [
+                "The utility or effectiveness of insulin administration strategies, given the current blood glucose levels, is 0.4 mmol/kg/h.",
+                "The actual rate at which insulin is administered independently is 0.4 mmol/kg/h.",
+                "The patient's current blood glucose concentration is 6 mmol/l."
+            ],
+            "query": "What is the likelihood of the patient's kidneys clearing substances (such as glucose or insulin) from the blood at a rate of 0.4 mmol/kg/h?",
+            "answer": 0.0,
+            "reasoning_types": [
+                "causal",
+                "evidential"
+            ]
+        },
+        {
+            "id": 4,
+            "evidences": [
+                "The utility or effectiveness of insulin administration strategies, given the current blood glucose levels, is 0.8 mmol/kg per hour.",
+                "The patient's current blood glucose concentration is 2 mmol/l."
+            ],
+            "query": "What is the likelihood of this patient's kidneys having no ability to clear substances from the blood?",
+            "answer": 1.0,
+            "reasoning_types": [
+                "causal"
+            ]
+        },
+        {
+            "id": 5,
+            "evidences": [
+                "The patient's current blood glucose concentration is 10 mmol/l.",
+                "The kidneys' ability to clear substances is currently 0.0 mmol/kg/h."
+            ],
+            "query": "What is the likelihood of the utility or effectiveness of insulin administration strategies being 0.0 mmol/kg/h?",
+            "answer": 0.0,
+            "reasoning_types": [
+                "causal"
+            ]
+        },
+        {
+            "id": 6,
+            "evidences": [
+                "The rate at which insulin is administered independently is 0.0 mmol/kg/h.",
+                "The kidneys' ability to clear substances from the blood is 0.4 mmol/kg/h."
+            ],
+            "query": "What is the likelihood of this person's blood glucose concentration being 14 mmol/l?",
+            "answer": 0.0,
+            "reasoning_types": [
+                "evidential"
+            ]
+        },
+        {
+            "id": 7,
+            "evidences": [
+                "The utility or effectiveness of insulin administration strategies, given the current blood glucose levels, is 0.4 mmol/kg/h.",
+                "The actual rate at which insulin is administered independently is 0 mmol/kg/h."
+            ],
+            "query": "What is the likelihood of this person's blood glucose concentration being 1 mmol/l?",
+            "answer": 0.0063769615,
+            "reasoning_types": [
+                "evidential"
+            ]
+        },
+        {
+            "id": 8,
+            "evidences": [
+                "The patient's current blood glucose concentration is 12 mmol/l.",
+                "The actual rate at which insulin is administered independently is 0.0 mmol/kg/h.",
+                "The utility or effectiveness of insulin administration strategies, given the current blood glucose levels, is 0.8 mmol/kg/h."
+            ],
+            "query": "What is the likelihood of the kidneys' ability to clear substances being 0.4 mmol/kg/h?",
+            "answer": 0.0,
+            "reasoning_types": [
+                "causal",
+                "evidential"
+            ]
+        },
+        {
+            "id": 9,
+            "evidences": [
+                "The insulin administration rate, independent of any other factors, is 0.8 mmol/kg/h."
+            ],
+            "query": "What is the likelihood of this person's kidneys having no ability to clear substances from the blood?",
+            "answer": 0.99999313,
+            "reasoning_types": [
+                "evidential"
+            ]
+        },
+        {
+            "id": 10,
+            "evidences": [
+                "The patient's current blood glucose concentration is 8 mmol/l.",
+                "The patient is currently administering insulin at a rate of 0.8 mmol/kg/h independently."
+            ],
+            "query": "What is the likelihood of the patient's kidneys clearing substances at a rate of 0.8 mmol/kg/h?",
+            "answer": 0.0,
+            "reasoning_types": [
+                "causal",
+                "evidential"
+            ]
+        },
+        {
+            "id": 11,
+            "evidences": [
+                "The utility or effectiveness of insulin administration strategies, given the current blood glucose levels, is 0.8 mmol/kg per hour.",
+                "The patient's current blood glucose concentration is 20 mmol/l."
+            ],
+            "query": "What is the likelihood of this patient having a kidney ability to clear substances at a rate of 0.4 mmol/kg per hour?",
+            "answer": 1.0,
+            "reasoning_types": [
+                "causal"
+            ]
+        },
+        {
+            "id": 12,
+            "evidences": [
+                "The blood glucose concentration of a person is 6 mmol/l.",
+                "The person is administering insulin at a rate of 0.0 mmol/kg/h."
+            ],
+            "query": "What is the likelihood of insulin administration being this effective (0.8 mmol/kg/h)?",
+            "answer": 0.0796,
+            "reasoning_types": [
+                "causal",
+                "evidential"
+            ]
+        },
+        {
+            "id": 13,
+            "evidences": [
+                "The utility or effectiveness of insulin administration strategies, given the current blood glucose levels, is 0.4 millimoles per kilogram per hour.",
+                "The actual rate at which insulin is administered independently is 0.4 millimoles per kilogram per hour.",
+                "The patient's current blood glucose concentration is 14 millimoles per liter."
+            ],
+            "query": "What is the likelihood of this patient's kidneys clearing substances (such as glucose or insulin) at a rate of 0.4 millimoles per kilogram per hour?",
+            "answer": 0.0,
+            "reasoning_types": [
+                "causal",
+                "evidential"
+            ]
+        },
+        {
+            "id": 14,
+            "evidences": [
+                "The blood glucose concentration of a person is 20 mmol/l.",
+                "The utility or effectiveness of insulin administration strategies, given the current blood glucose levels, is 0.4 mmol/kg/h."
+            ],
+            "query": "What is the likelihood of the actual rate at which insulin is administered independently being 0.8 mmol/kg/h?",
+            "answer": -1,
+            "reasoning_types": [
+                "causal"
+            ]
+        },
+        {
+            "id": 15,
+            "evidences": [
+                "The blood glucose concentration is 1 millimole per liter.",
+                "The utility or effectiveness of insulin administration strategies at this blood glucose level is 0.8 millimole per kilogram per hour.",
+                "The actual rate at which insulin is administered independently is 0 millimole per kilogram per hour."
+            ],
+            "query": "What is the likelihood of the kidneys' ability to clear substances being 0 millimole per kilogram per hour?",
+            "answer": -1,
+            "reasoning_types": [
+                "causal",
+                "evidential"
+            ]
+        }
+    ]
+}

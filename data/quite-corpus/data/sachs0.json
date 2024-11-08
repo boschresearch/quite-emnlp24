@@ -1,0 +1,504 @@
+{
+    "nodes": [
+        {
+            "name": "Plcg",
+            "states": [
+                "LOW",
+                "AVG",
+                "HIGH"
+            ]
+        },
+        {
+            "name": "PIP3",
+            "states": [
+                "LOW",
+                "AVG",
+                "HIGH"
+            ]
+        },
+        {
+            "name": "PIP2",
+            "states": [
+                "LOW",
+                "AVG",
+                "HIGH"
+            ]
+        }
+    ],
+    "connectivity": [
+        {
+            "node": "Plcg",
+            "incoming": []
+        },
+        {
+            "node": "PIP3",
+            "incoming": [
+                "Plcg"
+            ]
+        },
+        {
+            "node": "PIP2",
+            "incoming": [
+                "Plcg",
+                "PIP3"
+            ]
+        }
+    ],
+    "numeric_premises": [
+        {
+            "id": 0,
+            "origin": "Plcg",
+            "content": "The enzyme Plcg is in a low state with probability 81%, average state 8% and high state 11%."
+        },
+        {
+            "id": 1,
+            "origin": "PIP3",
+            "content": "If Plcg is in a low state, PIP3 is in a low state with a chance of 22%, average state with 45% and high state with 33%."
+        },
+        {
+            "id": 2,
+            "origin": "PIP3",
+            "content": "If Plcg is in an average state, the likelihood of the low state of PIP3 is 0.08, of the average state 0.21 and 0.71 of the high state."
+        },
+        {
+            "id": 3,
+            "origin": "PIP3",
+            "content": "If Plcg is in a high state, PIP3 appears in a low state in 42% of all cases, in an average state in 44% of all cases and in a high state in 14% of all cases."
+        },
+        {
+            "id": 4,
+            "origin": "PIP2",
+            "content": "If both Plcg and PIP3 are in a low state, PIP2 is also in a low state in 99% of all cases, high and normal states for PIP2 have an equal remaining probability."
+        },
+        {
+            "id": 5,
+            "origin": "PIP2",
+            "content": "If PIP3 is in a low state and Plcg in an average state, PIP2 is in low state with a chance of 0.998, whereas there is a 0.1% chance for it to be in an average or high state."
+        },
+        {
+            "id": 6,
+            "origin": "PIP2",
+            "content": "If PIP3 is low and Plcg is high, PIP2 is low with chance 22%, average 49% and high 29%."
+        },
+        {
+            "id": 7,
+            "origin": "PIP2",
+            "content": "PIP2 is in a low state in 98.7% of all cases when PIP3 is in an average state and Plcg is in a low state. Average and high state are each 0.65% likely."
+        },
+        {
+            "id": 8,
+            "origin": "PIP2",
+            "content": "PIP2 is in a low state with a probability of 0.957 if both PIP3 and Plcg are in an average state, whereas average and high state each have a likelihood of 0.0065."
+        },
+        {
+            "id": 9,
+            "origin": "PIP2",
+            "content": "When PIP3 is in an average state and Plcg in a high state, the distribution of PIP2 states is as follows: 8% low, 39% average and 53% high."
+        },
+        {
+            "id": 10,
+            "origin": "PIP2",
+            "content": "Given that PIP3 is in a high state and Plcg in a low state, chances are 87% that PIP2 is in a low state, 12% that it is in an average state and 1% that it is in a high state."
+        },
+        {
+            "id": 11,
+            "origin": "PIP2",
+            "content": "PIP3 being in a high state and Plcg in an average state lead to 52% probability of PIP2 being in a low state, 46% being in an average state and 2% being in a high state."
+        },
+        {
+            "id": 12,
+            "origin": "PIP2",
+            "content": "When both PIP3 and Plcg are in a high state, PIP2 is it too in 92% of all cases, whereas it is in low state in only 3% and average state in 5% of all cases."
+        }
+    ],
+    "wep_based_premises": [
+        {
+            "id": 0,
+            "origin": "Plcg",
+            "content": "The enzyme Plcg is in a low state with high probability, medium and low state are rather unlikely."
+        },
+        {
+            "id": 1,
+            "origin": "PIP3",
+            "content": "If Plcg is in a low state, PIP3 is in a low state with a rather low chance, average state in almost half of all cases and high state in one third of all cases."
+        },
+        {
+            "id": 2,
+            "origin": "PIP3",
+            "content": "If Plcg is in an average state, the likelihood of the low state of PIP3 is very low, of the average state rather low and high of the high state."
+        },
+        {
+            "id": 3,
+            "origin": "PIP3",
+            "content": "When Plcg is in a high state, low and average state of PIP3 are equally likely, whereas the high state is pretty unlikely."
+        },
+        {
+            "id": 4,
+            "origin": "PIP2",
+            "content": "If both Plcg and PIP3 are in a low state, it is almost set that PIP2 is also in a low state."
+        },
+        {
+            "id": 5,
+            "origin": "PIP2",
+            "content": "When PIP3 is in a low state and Plcg in an average state, PIP2 is in low state with a likelihood very close to one."
+        },
+        {
+            "id": 6,
+            "origin": "PIP2",
+            "content": "If PIP3 is low and Plcg is high, high and low state of PIP2 are almost equally likely, whereas average state makes half of all cases."
+        },
+        {
+            "id": 7,
+            "origin": "PIP2",
+            "content": "PIP2 is in a low state in the majority of all cases when PIP3 is in an average state and Plcg is in a low state."
+        },
+        {
+            "id": 8,
+            "origin": "PIP2",
+            "content": "PIP2 is in a low state with a probability close to one if both PIP3 and Plcg are in an average state."
+        },
+        {
+            "id": 9,
+            "origin": "PIP2",
+            "content": "When PIP3 is in an average state and Plcg in a high state, the distribution of PIP2 states is as follows: minority is low, a substantial amount is average and half is high."
+        },
+        {
+            "id": 10,
+            "origin": "PIP2",
+            "content": "Given that PIP3 is in a high state and Plcg in a low state, chances are high that PIP2 is in a low state, low that it is in an average state and negligeble that it is in a high state."
+        },
+        {
+            "id": 11,
+            "origin": "PIP2",
+            "content": "PIP3 being in a high state and Plcg in an average state leads to an equal probability of PIP2 being in a low or average state and consideribly low probability being in a high state."
+        },
+        {
+            "id": 12,
+            "origin": "PIP2",
+            "content": "When both PIP3 and Plcg are in a high state, PIP2 is it too in most cases, whereas it is in low state in only very few cases and average state in only a bit more of all cases."
+        }
+    ],
+    "evidence_query_pairs": [
+        {
+            "id": 0,
+            "evidences": [
+                "The level of PIP2 (phosphatidylinositol 4,5-bisphosphate) is high."
+            ],
+            "query": "What is the likelihood of the level of PIP3 (phosphatidylinositol (3,4,5)-trisphosphate) being average?",
+            "answer": 0.46793373,
+            "reasoning_types": [
+                "evidential"
+            ],
+            "sampled_nodes": [
+                "PIP2",
+                "PIP3"
+            ]
+        },
+        {
+            "id": 1,
+            "evidences": [
+                "The level of phospholipase C gamma (Plcg) is low."
+            ],
+            "query": "What is the likelihood of a low level of PIP3?",
+            "answer": 0.22,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "Plcg",
+                "PIP3"
+            ]
+        },
+        {
+            "id": 2,
+            "evidences": [
+                "The level of phospholipase C gamma (Plcg) is low.",
+                "The level of PIP3 is low."
+            ],
+            "query": "What is the likelihood of PIP2 having an average level?",
+            "answer": 0.005,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "Plcg",
+                "PIP3",
+                "PIP2"
+            ]
+        },
+        {
+            "id": 3,
+            "evidences": [
+                "The level of PIP3 (Phosphatidylinositol (3,4,5)-trisphosphate) is high."
+            ],
+            "query": "What is the likelihood of this system having a high level of phospholipase C gamma (Plcg)?",
+            "answer": 0.045360825,
+            "reasoning_types": [
+                "evidential"
+            ],
+            "sampled_nodes": [
+                "PIP3",
+                "Plcg"
+            ]
+        },
+        {
+            "id": 4,
+            "evidences": [
+                "The level of PIP2 is high.",
+                "The level of Plcg is low."
+            ],
+            "query": "What is the likelihood of the level of PIP3 being low?",
+            "answer": 0.15017065,
+            "reasoning_types": [
+                "causal",
+                "evidential",
+                "explaining_away"
+            ],
+            "sampled_nodes": [
+                "PIP2",
+                "Plcg",
+                "PIP3"
+            ]
+        },
+        {
+            "id": 5,
+            "evidences": [
+                "The Plcg level is low."
+            ],
+            "query": "What is the likelihood of the PIP3 level being average?",
+            "answer": 0.45,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "Plcg",
+                "PIP3"
+            ]
+        },
+        {
+            "id": 6,
+            "evidences": [
+                "The level of phospholipase C gamma (Plcg) is high."
+            ],
+            "query": "What is the likelihood of phosphatidylinositol (3,4,5)-trisphosphate (PIP3) being at a high level?",
+            "answer": 0.14,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "Plcg",
+                "PIP3"
+            ]
+        },
+        {
+            "id": 7,
+            "evidences": [
+                "The level of PIP2 (phosphatidylinositol 4,5-bisphosphate) is low."
+            ],
+            "query": "What is the likelihood of the level of PIP3 (phosphatidylinositol (3,4,5)-trisphosphate) being average?",
+            "answer": 0.45461899,
+            "reasoning_types": [
+                "evidential"
+            ],
+            "sampled_nodes": [
+                "PIP2",
+                "PIP3"
+            ]
+        },
+        {
+            "id": 8,
+            "evidences": [
+                "The level of PIP3 (Phosphatidylinositol (3,4,5)-trisphosphate) is high."
+            ],
+            "query": "What is the likelihood of this system having an average level of Plcg (phospholipase C gamma) under these conditions?",
+            "answer": 0.16730486,
+            "reasoning_types": [
+                "evidential"
+            ],
+            "sampled_nodes": [
+                "PIP3",
+                "Plcg"
+            ]
+        },
+        {
+            "id": 9,
+            "evidences": [
+                "The Plcg level is average."
+            ],
+            "query": "What is the likelihood of this system having a low PIP3 level?",
+            "answer": 0.08,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "Plcg",
+                "PIP3"
+            ]
+        },
+        {
+            "id": 10,
+            "evidences": [
+                "The level of PIP3 (Phosphatidylinositol (3,4,5)-trisphosphate) is low."
+            ],
+            "query": "What is the likelihood of this system having a high level of phospholipase C gamma (Plcg)?",
+            "answer": 0.20017331,
+            "reasoning_types": [
+                "evidential"
+            ],
+            "sampled_nodes": [
+                "PIP3",
+                "Plcg"
+            ]
+        },
+        {
+            "id": 11,
+            "evidences": [
+                "The level of PIP2 is low.",
+                "The level of PIP3 is high."
+            ],
+            "query": "What is the likelihood of Plcg having an average level?",
+            "answer": 0.1124971,
+            "reasoning_types": [
+                "evidential",
+                "explaining_away"
+            ],
+            "sampled_nodes": [
+                "PIP2",
+                "PIP3",
+                "Plcg"
+            ]
+        },
+        {
+            "id": 12,
+            "evidences": [
+                "The level of PIP3 is low.",
+                "The level of phospholipase C gamma (Plcg) is low."
+            ],
+            "query": "What is the likelihood of the level of PIP2 being average under these conditions?",
+            "answer": 0.005,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "PIP3",
+                "Plcg",
+                "PIP2"
+            ]
+        },
+        {
+            "id": 13,
+            "evidences": [
+                "The level of PIP2 is low.",
+                "The level of PIP3 is low."
+            ],
+            "query": "What is the likelihood of Plcg being highly active?",
+            "answer": 0.052671618,
+            "reasoning_types": [
+                "evidential",
+                "explaining_away"
+            ],
+            "sampled_nodes": [
+                "PIP2",
+                "PIP3",
+                "Plcg"
+            ]
+        },
+        {
+            "id": 14,
+            "evidences": [
+                "The level of phospholipase C gamma (Plcg) is high."
+            ],
+            "query": "What is the likelihood of phosphatidylinositol (3,4,5)-trisphosphate (PIP3) being at a high level?",
+            "answer": 0.14,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "Plcg",
+                "PIP3"
+            ]
+        },
+        {
+            "id": 15,
+            "evidences": [
+                "The level of PIP2 is high.",
+                "The level of Plcg is average."
+            ],
+            "query": "What is the likelihood of having a low level of PIP3 in this situation?",
+            "answer": 0.0042564512,
+            "reasoning_types": [
+                "causal",
+                "evidential",
+                "explaining_away"
+            ],
+            "sampled_nodes": [
+                "PIP2",
+                "Plcg",
+                "PIP3"
+            ]
+        },
+        {
+            "id": 16,
+            "evidences": [
+                "The Plcg level is average."
+            ],
+            "query": "What is the likelihood of this system having a low PIP3 level?",
+            "answer": 0.08,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "Plcg",
+                "PIP3"
+            ]
+        },
+        {
+            "id": 17,
+            "evidences": [
+                "The Plcg level is average."
+            ],
+            "query": "What is the likelihood of having a high level of PIP2?",
+            "answer": 0.018795,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "Plcg",
+                "PIP2"
+            ]
+        },
+        {
+            "id": 18,
+            "evidences": [
+                "The level of PIP3 (Phosphatidylinositol (3,4,5)-trisphosphate) is average."
+            ],
+            "query": "What is the likelihood of this system having an average level of Plcg (phospholipase C gamma)?",
+            "answer": 0.039097044,
+            "reasoning_types": [
+                "evidential"
+            ],
+            "sampled_nodes": [
+                "PIP3",
+                "Plcg"
+            ]
+        },
+        {
+            "id": 19,
+            "evidences": [
+                "The level of PIP3 is low.",
+                "The level of PIP2 is average."
+            ],
+            "query": "What is the likelihood of having a low level of phospholipase C gamma (Plcg)?",
+            "answer": 0.037857865,
+            "reasoning_types": [
+                "evidential",
+                "explaining_away"
+            ],
+            "sampled_nodes": [
+                "PIP3",
+                "PIP2",
+                "Plcg"
+            ]
+        }
+    ]
+}

@@ -1,0 +1,47 @@
+# Model arguments
+model_name_or_path: meta-llama/Llama-2-7b-hf
+model_revision: main
+torch_dtype: bfloat16
+attn_implementation: flash_attention_2
+
+# LoRA arguments
+load_in_4bit: false
+use_peft: true
+lora_r: 64
+lora_alpha: 32
+lora_dropout: 0.1
+lora_target_modules:
+  - q_proj
+  - k_proj
+  - v_proj
+  - o_proj
+  - gate_proj
+  - up_proj
+  - down_proj
+
+# SFT trainer config
+bf16: true
+do_eval: true
+evaluation_strategy: "epoch"
+gradient_accumulation_steps: 1
+gradient_checkpointing: true
+gradient_checkpointing_kwargs:
+  use_reentrant: false
+learning_rate: 0.00005
+log_level: info
+logging_steps: 5
+logging_strategy: steps
+lr_scheduler_type: cosine
+max_seq_length: 8000
+max_steps: -1
+num_train_epochs: 10
+overwrite_output_dir: true
+per_device_eval_batch_size: 4
+per_device_train_batch_size: 4
+save_strategy: "epoch"
+save_steps: 100
+save_total_limit: 2
+warmup_ratio: 0.0
+load_best_model_at_end: True
+metric_for_best_model: eval_loss
+greater_is_better: False

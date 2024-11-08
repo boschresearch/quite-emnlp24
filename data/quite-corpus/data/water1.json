@@ -1,0 +1,884 @@
+{
+    "nodes": [
+        {
+            "name": "CBODD_12_00",
+            "states": [
+                "15_MG_L",
+                "20_MG_L",
+                "25_MG_L",
+                "30_MG_L"
+            ]
+        },
+        {
+            "name": "CBODN_12_00",
+            "states": [
+                "5_MG_L",
+                "10_MG_L",
+                "15_MG_L",
+                "20_MG_L"
+            ]
+        },
+        {
+            "name": "CNON_12_00",
+            "states": [
+                "2_MG_L",
+                "4_MG_L",
+                "6_MG_L",
+                "10_MG_L"
+            ]
+        },
+        {
+            "name": "CBODN_12_15",
+            "states": [
+                "5_MG_L",
+                "10_MG_L",
+                "15_MG_L",
+                "20_MG_L"
+            ]
+        }
+    ],
+    "connectivity": [
+        {
+            "node": "CBODD_12_00",
+            "incoming": []
+        },
+        {
+            "node": "CBODN_12_00",
+            "incoming": []
+        },
+        {
+            "node": "CNON_12_00",
+            "incoming": []
+        },
+        {
+            "node": "CBODN_12_15",
+            "incoming": [
+                "CBODD_12_00",
+                "CBODN_12_00",
+                "CNON_12_00"
+            ]
+        }
+    ],
+    "numeric_premises": [
+        {
+            "id": 0,
+            "origin": "CBODN_12_00",
+            "content": "At 12:00, the Carbonaceous Biochemical Oxygen Demand for Nitrogen (CBODN) has a 100% probability of reaching 10 Milligrams per Liter (MG/L), as there is a 0% chance of it being 5, 15, or 20 MG/L."
+        },
+        {
+            "id": 1,
+            "origin": "CNON_12_00",
+            "content": "At 12:00, the concentration of a nitrogenous compound (CNON), such as nitrate or nitrogen, is certainly 4 milligrams per liter, as concentrations of 2, 6, and 10 milligrams per liter are impossible."
+        },
+        {
+            "id": 2,
+            "origin": "CBODD_12_00",
+            "content": "At 12:00, the Carbonaceous Biochemical Oxygen Demand (CBODD) is certainly 20 milligrams per liter, as there is a zero percent chance it is 15, 25, or 30 milligrams per liter."
+        },
+        {
+            "id": 3,
+            "origin": "CBODN_12_15",
+            "content": "Given that the Carbonaceous Biochemical Oxygen Demand for Nitrogen (CBODN) is 5 milligrams per liter (MG/L), the nitrogenous compound level (CNON) is 2 MG/L, and the Carbonaceous Biochemical Oxygen Demand (CBODD) level is 15 MG/L, all at 12:00, it is highly probable that the CBODN level will be 5 MG/L at the subsequent 15-minute timestep, with a 95.57% chance, while there is a 4.43% chance it will be 10 MG/L, and virtually no chance it will be 15 or 20 MG/L at 12:15."
+        },
+        {
+            "id": 4,
+            "origin": "CBODN_12_15",
+            "content": "With a Carbonaceous Biochemical Oxygen Demand for Nitrogen (CBODN) level of 5 MG/L and a nitrogenous compound concentration of 4 MG/L, both at 12:00, and given a CBODD level of 15 MG/L at the same time, it is highly probable that the CBODN level will be 5 MG/L at the following 15-minute mark, with a 95.61% chance, while there is a 4.39% chance it will be 10 MG/L, and no chance it will be 15 or 20 MG/L at 12:15."
+        },
+        {
+            "id": 5,
+            "origin": "CBODN_12_15",
+            "content": "In the case where the Carbonaceous Biochemical Oxygen Demand for Nitrogen (CBODN) is 5 MG/L, and the nitrogenous compound level is 6 MG/L, both at 12:00, and the CBODD level is 15 MG/L at the same time, it is highly probable that the CBODN level will be 5 MG/L at the subsequent 15-minute mark, with a 95.62% chance, while there is a 4.38% chance it will be 10 MG/L, and no chance it will be 15 or 20 MG/L at 12:15."
+        },
+        {
+            "id": 6,
+            "origin": "CBODN_12_15",
+            "content": "Given the Carbonaceous Biochemical Oxygen Demand for Nitrogen (CBODN) is 5 MG/L, and the nitrogenous compound level is 10 MG/L, both at 12:00, and the CBODD level is 15 MG/L at the same time, it is highly probable that the CBODN level will be 5 MG/L at the following 15-minute mark, with a 95.64% chance, while there is a 4.36% chance it will be 10 MG/L, and no chance it will be 15 or 20 MG/L at 12:15."
+        },
+        {
+            "id": 7,
+            "origin": "CBODN_12_15",
+            "content": "When the Carbonaceous Biochemical Oxygen Demand for Nitrogen (CBODN) is 10 MG/L, and the nitrogenous compound level is 2 MG/L, both at 12:00, and the CBODD level is 15 MG/L at the same time, it is highly probable that the CBODN level will be 10 MG/L at the subsequent 15-minute mark, with a 95.94% chance, while there is a 4.06% chance it will be 5 MG/L, and no chance it will be 15 or 20 MG/L at 12:15."
+        },
+        {
+            "id": 8,
+            "origin": "CBODN_12_15",
+            "content": "In the case where the Carbonaceous Biochemical Oxygen Demand for Nitrogen (CBODN) is 10 MG/L, and the nitrogenous compound level is 4 MG/L, both at 12:00, and the CBODD level is 15 MG/L at the same time, it is highly probable that the CBODN level will be 10 MG/L at the subsequent 15-minute mark, with a 95.88% chance, while there is a 4.12% chance it will be 5 MG/L, and no chance it will be 15 or 20 MG/L at 12:15."
+        },
+        {
+            "id": 9,
+            "origin": "CBODN_12_15",
+            "content": "Given the Carbonaceous Biochemical Oxygen Demand for Nitrogen (CBODN) is 10 MG/L, and the nitrogenous compound level is 6 MG/L, both at 12:00, and the CBODD level is 15 MG/L at the same time, it is highly probable that the CBODN level will be 10 MG/L at the following 15-minute mark, with a 95.86% chance, while there is a 4.14% chance it will be 5 MG/L, and no chance it will be 15 or 20 MG/L at 12:15."
+        },
+        {
+            "id": 10,
+            "origin": "CBODN_12_15",
+            "content": "When the Carbonaceous Biochemical Oxygen Demand for Nitrogen (CBODN) is 10 MG/L, and the nitrogenous compound level is 10 MG/L, both at 12:00, and the CBODD level is 15 MG/L at the same time, it is highly probable that the CBODN level will be 10 MG/L at the subsequent 15-minute mark, with a 95.84% chance, while there is a 4.16% chance it will be 5 MG/L, and no chance it will be 15 or 20 MG/L at 12:15."
+        },
+        {
+            "id": 11,
+            "origin": "CBODN_12_15",
+            "content": "Given the Carbonaceous Biochemical Oxygen Demand for Nitrogen (CBODN) is 15 MG/L, and the nitrogenous compound level is 2 MG/L, both at 12:00, and the CBODD level is 15 MG/L at the same time, it is highly probable that the CBODN level will be 15 MG/L at the following 15-minute mark, with an 88.48% chance, while there is a 11.52% chance it will be 10 MG/L, and no chance it will be 5 or 20 MG/L at 12:15."
+        },
+        {
+            "id": 12,
+            "origin": "CBODN_12_15",
+            "content": "When the Carbonaceous Biochemical Oxygen Demand for Nitrogen (CBODN) is 15 MG/L, and the nitrogenous compound level is 4 MG/L, both at 12:00, and the CBODD level is 15 MG/L at the same time, it is highly probable that the CBODN level will be 15 MG/L at the subsequent 15-minute mark, with an 88.4% chance, while there is a 11.6% chance it will be 10 MG/L, and no chance it will be 5 or 20 MG/L at 12:15."
+        },
+        {
+            "id": 13,
+            "origin": "CBODN_12_15",
+            "content": "Given the Carbonaceous Biochemical Oxygen Demand for Nitrogen (CBODN) is 15 MG/L, and the nitrogenous compound level is 6 MG/L, both at 12:00, and the CBODD level is 15 MG/L at the same time, it is highly probable that the CBODN level will be 15 MG/L at the following 15-minute mark, with an 88.37% chance, while there is a 11.63% chance it will be 10 MG/L, and no chance it will be 5 or 20 MG/L at 12:15."
+        },
+        {
+            "id": 14,
+            "origin": "CBODN_12_15",
+            "content": "When the Carbonaceous Biochemical Oxygen Demand for Nitrogen (CBODN) is 15 MG/L, and the nitrogenous compound level is 10 MG/L, both at 12:00, and the CBODD level is 15 MG/L at the same time, it is highly probable that the CBODN level will be 15 MG/L at the subsequent 15-minute mark, with an 88.34% chance, while there is a 11.66% chance it will be 10 MG/L, and no chance it will be 5 or 20 MG/L at 12:15."
+        },
+        {
+            "id": 15,
+            "origin": "CBODN_12_15",
+            "content": "Given the Carbonaceous Biochemical Oxygen Demand for Nitrogen (CBODN) is 20 MG/L, and the nitrogenous compound level is 2 MG/L, both at 12:00, and the CBODD level is 15 MG/L at the same time, it is highly probable that the CBODN level will be 20 MG/L at the following 15-minute mark, with an 81.65% chance, while there is an 18.35% chance it will be 15 MG/L, and no chance it will be 5 or 10 MG/L at 12:15."
+        },
+        {
+            "id": 16,
+            "origin": "CBODN_12_15",
+            "content": "Given the Carbonaceous Biochemical Oxygen Demand for Nitrogen (CBODN) is 20 MG/L, and the nitrogenous compound level is 4 MG/L, both at 12:00, and the CBODD level is 15 MG/L at the same time, it is highly probable that the CBODN level will be 20 MG/L at the following 15-minute mark, with an 81.56% chance, while there is an 18.44% chance it will be 15 MG/L, and no chance it will be 5 or 10 MG/L at 12:15."
+        },
+        {
+            "id": 17,
+            "origin": "CBODN_12_15",
+            "content": "Given the Carbonaceous Biochemical Oxygen Demand for Nitrogen (CBODN) is 20 MG/L, and the nitrogenous compound level is 6 MG/L, both at 12:00, and the CBODD level is 15 MG/L at the same time, it is highly probable that the CBODN level will be 20 MG/L at the following 15-minute mark, with an 81.53% chance, while there is an 18.47% chance it will be 15 MG/L, and no chance it will be 5 or 10 MG/L at 12:15."
+        },
+        {
+            "id": 18,
+            "origin": "CBODN_12_15",
+            "content": "Given the Carbonaceous Biochemical Oxygen Demand for Nitrogen (CBODN) is 20 MG/L, and the nitrogenous compound level is 10 MG/L, both at 12:00, and the CBODD level is 15 MG/L at the same time, it is highly probable that the CBODN level will be 20 MG/L at the following 15-minute mark, with an 81.5% chance, while there is an 18%.5% chance it will be 15 MG/L, and no chance it will be 5 or 10 MG/L at 12:15."
+        },
+        {
+            "id": 19,
+            "origin": "CBODN_12_15",
+            "content": "Given the Carbonaceous Biochemical Oxygen Demand for Nitrogen (CBODN) is 5 MG/L, and the nitrogenous compound level is 2 MG/L, both at 12:00, and the CBODD level is 20 MG/L at the same time, it is highly probable that the CBODN level will be 5 MG/L at the following 15-minute mark, with a 90.67% chance, while there is a 9.33% chance it will be 10 MG/L, and no chance it will be 15 or 20 MG/L at 12:15."
+        },
+        {
+            "id": 20,
+            "origin": "CBODN_12_15",
+            "content": "Given the Carbonaceous Biochemical Oxygen Demand for Nitrogen (CBODN) is 5 MG/L, and the nitrogenous compound level is 4 MG/L, both at 12:00, and the CBODD level is 20 MG/L at the same time, it is highly probable that the CBODN level will be 5 MG/L at the following 15-minute mark, with a 90.71% chance, while there is a 9.29% chance it will be 10 MG/L, and no chance it will be 15 or 20 MG/L at 12:15."
+        },
+        {
+            "id": 21,
+            "origin": "CBODN_12_15",
+            "content": "Given the Carbonaceous Biochemical Oxygen Demand for Nitrogen (CBODN) is 5 MG/L, and the nitrogenous compound level is 6 MG/L, both at 12:00, and the CBODD level is 20 MG/L at the same time, it is highly probable that the CBODN level will be 5 MG/L at the following 15-minute mark, with a 90.72% chance, while there is a 9.28% chance it will be 10 MG/L, and no chance it will be 15 or 20 MG/L at 12:15."
+        },
+        {
+            "id": 22,
+            "origin": "CBODN_12_15",
+            "content": "Given the Carbonaceous Biochemical Oxygen Demand for Nitrogen (CBODN) is 5 MG/L, and the nitrogenous compound level is 10 MG/L, both at 12:00, and the CBODD level is 20 MG/L at the same time, it is highly probable that the CBODN level will be 5 MG/L at the following 15-minute mark, with a 90.73% chance, while there is a 9.27% chance it will be 10 MG/L, and no chance it will be 15 or 20 MG/L at 12:15."
+        },
+        {
+            "id": 23,
+            "origin": "CBODN_12_15",
+            "content": "Given the Carbonaceous Biochemical Oxygen Demand for Nitrogen (CBODN) is 10 MG/L, and the nitrogenous compound level is 2 MG/L, both at 12:00, and the CBODD level is 20 MG/L at the same time, it is highly probable that the CBODN level will be 10 MG/L at the following 15-minute mark, with a 99.16% chance, while there is a 0.84% chance it will be 15 MG/L, and no chance it will be 5 or 20 MG/L at 12:15."
+        },
+        {
+            "id": 24,
+            "origin": "CBODN_12_15",
+            "content": "Given the Carbonaceous Biochemical Oxygen Demand for Nitrogen (CBODN) is 10 MG/L, and the nitrogenous compound level is 4 MG/L, both at 12:00, and the CBODD level is 20 MG/L at the same time, it is highly probable that the CBODN level will be 10 MG/L at the following 15-minute mark, with a 99.22% chance, while there is a 0.78% chance it will be 15 MG/L, and no chance it will be 5 or 20 MG/L at 12:15."
+        },
+        {
+            "id": 25,
+            "origin": "CBODN_12_15",
+            "content": "Given the Carbonaceous Biochemical Oxygen Demand for Nitrogen (CBODN) is 10 MG/L, and the nitrogenous compound level is 6 MG/L, both at 12:00, and the CBODD level is 20 MG/L at the same time, it is highly probable that the CBODN level will be 10 MG/L at the following 15-minute mark, with a 99.24% chance, while there is a 0.76% chance it will be 15 MG/L, and no chance it will be 5 or 20 MG/L at 12:15."
+        },
+        {
+            "id": 26,
+            "origin": "CBODN_12_15",
+            "content": "Given the Carbonaceous Biochemical Oxygen Demand for Nitrogen (CBODN) is 10 MG/L, and the nitrogenous compound level is 10 MG/L, both at 12:00, and the CBODD level is 20 MG/L at the same time, it is highly probable that the CBODN level will be 10 MG/L at the following 15-minute mark, with a 99.26% chance, while there is a 0.74% chance it will be 15 MG/L, and no chance it will be 5 or 20 MG/L at 12:15."
+        },
+        {
+            "id": 27,
+            "origin": "CBODN_12_15",
+            "content": "Given the Carbonaceous Biochemical Oxygen Demand for Nitrogen (CBODN) is 15 MG/L, and the nitrogenous compound level is 2 MG/L, both at 12:00, and the CBODD level is 20 MG/L at the same time, it is highly probable that the CBODN level will be 15 MG/L at the following 15-minute mark, with a 93.38% chance, while there is a 6.62% chance it will be 10 MG/L, and no chance it will be 5 or 20 MG/L at 12:15."
+        },
+        {
+            "id": 28,
+            "origin": "CBODN_12_15",
+            "content": "Given the Carbonaceous Biochemical Oxygen Demand for Nitrogen (CBODN) is 15 MG/L, and the nitrogenous compound level is 4 MG/L, both at 12:00, and the CBODD level is 20 MG/L at the same time, it is highly probable that the CBODN level will be 15 MG/L at the following 15-minute mark, with a 93.3% chance, while there is a 6.7% chance it will be 10 MG/L, and no chance it will be 5 or 20 MG/L at 12:15."
+        },
+        {
+            "id": 29,
+            "origin": "CBODN_12_15",
+            "content": "Given the Carbonaceous Biochemical Oxygen Demand for Nitrogen (CBODN) is 15 MG/L, and the nitrogenous compound level is 6 MG/L, both at 12:00, and the CBODD level is 20 MG/L at the same time, it is highly probable that the CBODN level will be 15 MG/L at the following 15-minute mark, with a 93.27% chance, while there is a 6.73% chance it will be 10 MG/L, and no chance it will be 5 or 20 MG/L at 12:15."
+        },
+        {
+            "id": 30,
+            "origin": "CBODN_12_15",
+            "content": "Given the Carbonaceous Biochemical Oxygen Demand for Nitrogen (CBODN) is 15 MG/L, and the nitrogenous compound level is 10 MG/L, both at 12:00, and the CBODD level is 20 MG/L at the same time, it is highly probable that the CBODN level will be 15 MG/L at the following 15-minute mark, with a 93.24% chance, while there is a 6.76% chance it will be 10 MG/L, and no chance it will be 5 or 20 MG/L at 12:15."
+        },
+        {
+            "id": 31,
+            "origin": "CBODN_12_15",
+            "content": "Given the Carbonaceous Biochemical Oxygen Demand for Nitrogen (CBODN) is 20 MG/L, and the nitrogenous compound level is 2 MG/L, both at 12:00, and the CBODD level is 20 MG/L at the same time, it is highly probable that the CBODN level will be 20 MG/L at the following 15-minute mark, with an 86.56% chance, while there is a 13.44% chance it will be 15 MG/L, and no chance it will be 5 or 10 MG/L at 12:15."
+        },
+        {
+            "id": 32,
+            "origin": "CBODN_12_15",
+            "content": "Given the Carbonaceous Biochemical Oxygen Demand for Nitrogen (CBODN) is 20 MG/L, and the nitrogenous compound level is 4 MG/L, both at 12:00, and the CBODD level is 20 MG/L at the same time, it is highly probable that the CBODN level will be 20 MG/L at the following 15-minute mark, with an 86.46% chance, while there is a 13.54% chance it will be 15 MG/L, and no chance it will be 5 or 10 MG/L at 12:15."
+        },
+        {
+            "id": 33,
+            "origin": "CBODN_12_15",
+            "content": "Given the Carbonaceous Biochemical Oxygen Demand for Nitrogen (CBODN) is 20 MG/L, and the nitrogenous compound level is 6 MG/L, both at 12:00, and the CBODD level is 20 MG/L at the same time, it is highly probable that the CBODN level will be 20 MG/L at the following 15-minute mark, with an 86.43% chance, while there is a 13.57% chance it will be 15 MG/L, and no chance it will be 5 or 10 MG/L at 12:15."
+        },
+        {
+            "id": 34,
+            "origin": "CBODN_12_15",
+            "content": "Given the Carbonaceous Biochemical Oxygen Demand for Nitrogen (CBODN) is 20 MG/L, and the nitrogenous compound level is 10 MG/L, both at 12:00, and the CBODD level is 20 MG/L at the same time, it is highly probable that the CBODN level will be 20 MG/L at the following 15-minute mark, with an 86.4% chance, while there is a 13.6% chance it will be 15 MG/L, and no chance it will be 5 or 10 MG/L at 12:15."
+        },
+        {
+            "id": 35,
+            "origin": "CBODN_12_15",
+            "content": "Given the Carbonaceous Biochemical Oxygen Demand for Nitrogen (CBODN) is 5 MG/L, and the nitrogenous compound level is 2 MG/L, both at 12:00, and the CBODD level is 25 MG/L at the same time, it is highly probable that the CBODN level will be 5 MG/L at the following 15-minute mark, with an 85.77% chance, while there is a 14.23% chance it will be 10 MG/L, and no chance it will be 15 or 20 MG/L at 12:15."
+        },
+        {
+            "id": 36,
+            "origin": "CBODN_12_15",
+            "content": "Given the Carbonaceous Biochemical Oxygen Demand for Nitrogen (CBODN) is 5 MG/L, and the nitrogenous compound level is 4 MG/L, both at 12:00, and the CBODD level is 25 MG/L at the same time, it is highly probable that the CBODN level will be 5 MG/L at the following 15-minute mark, with an 85.81% chance, while there is a 14.19% chance it will be 10 MG/L, and no chance it will be 15 or 20 MG/L at 12:15."
+        },
+        {
+            "id": 37,
+            "origin": "CBODN_12_15",
+            "content": "Given the Carbonaceous Biochemical Oxygen Demand for Nitrogen (CBODN) is 5 MG/L, and the nitrogenous compound level is 6 MG/L, both at 12:00, and the CBODD level is 25 MG/L at the same time, it is highly probable that the CBODN level will be 5 MG/L at the following 15-minute mark, with an 85.82% chance, while there is a 14.18% chance it will be 10 MG/L, and no chance it will be 15 or 20 MG/L at 12:15."
+        },
+        {
+            "id": 38,
+            "origin": "CBODN_12_15",
+            "content": "Given the Carbonaceous Biochemical Oxygen Demand for Nitrogen (CBODN) is 5 MG/L, and the nitrogenous compound level is 10 MG/L, both at 12:00, and the CBODD level is 25 MG/L at the same time, it is highly probable that the CBODN level will be 5 MG/L at the following 15-minute mark, with an 85.83% chance, while there is a 14.17% chance it will be 10 MG/L, and no chance it will be 15 or 20 MG/L at 12:15."
+        },
+        {
+            "id": 39,
+            "origin": "CBODN_12_15",
+            "content": "Given the Carbonaceous Biochemical Oxygen Demand for Nitrogen (CBODN) is 10 MG/L, and the nitrogenous compound level is 2 MG/L, both at 12:00, and the CBODD level is 25 MG/L at the same time, it is highly probable that the CBODN level will be 10 MG/L at the following 15-minute mark, with a 94.26% chance, while there is a 5.74% chance it will be 15 MG/L, and no chance it will be 5 or 20 MG/L at 12:15."
+        },
+        {
+            "id": 40,
+            "origin": "CBODN_12_15",
+            "content": "Given the Carbonaceous Biochemical Oxygen Demand for Nitrogen (CBODN) is 10 MG/L, and the nitrogenous compound level is 4 MG/L, both at 12:00, and the CBODD level is 25 MG/L at the same time, it is highly probable that the CBODN level will be 10 MG/L at the following 15-minute mark, with a 94.32% chance, while there is a 5.68% chance it will be 15 MG/L, and no chance it will be 5 or 20 MG/L at 12:15."
+        },
+        {
+            "id": 41,
+            "origin": "CBODN_12_15",
+            "content": "Given the Carbonaceous Biochemical Oxygen Demand for Nitrogen (CBODN) is 10 MG/L, and the nitrogenous compound level is 6 MG/L, both at 12:00, and the CBODD level is 25 MG/L at the same time, it is highly probable that the CBODN level will be 10 MG/L at the following 15-minute mark, with a 94.34% chance, while there is a 5.66% chance it will be 15 MG/L, and no chance it will be 5 or 20 MG/L at 12:15."
+        },
+        {
+            "id": 42,
+            "origin": "CBODN_12_15",
+            "content": "Given the Carbonaceous Biochemical Oxygen Demand for Nitrogen (CBODN) is 10 MG/L, and the nitrogenous compound level is 10 MG/L, both at 12:00, and the CBODD level is 25 MG/L at the same time, it is highly probable that the CBODN level will be 10 MG/L at the following 15-minute mark, with a 94.36% chance, while there is a 5.64% chance it will be 15 MG/L, and no chance it will be 5 or 20 MG/L at 12:15."
+        },
+        {
+            "id": 43,
+            "origin": "CBODN_12_15",
+            "content": "Given the Carbonaceous Biochemical Oxygen Demand for Nitrogen (CBODN) is 15 MG/L, and the nitrogenous compound level is 2 MG/L, both at 12:00, and the CBODD level is 25 MG/L at the same time, it is highly probable that the CBODN level will be 15 MG/L at the following 15-minute mark, with a 98.28% chance, while there is only a 1.72% chance it will be 10 MG/L, and no chance it will be 5 or 20 MG/L at 12:15."
+        },
+        {
+            "id": 44,
+            "origin": "CBODN_12_15",
+            "content": "Given the Carbonaceous Biochemical Oxygen Demand for Nitrogen (CBODN) is 15 MG/L, and the nitrogenous compound level is 4 MG/L, both at 12:00, and the CBODD level is 25 MG/L at the same time, it is highly probable that the CBODN level will be 15 MG/L at the following 15-minute mark, with a 98.2% chance, while there is only a 1.8% chance it will be 10 MG/L, and no chance it will be 5 or 20 MG/L at 12:15."
+        },
+        {
+            "id": 45,
+            "origin": "CBODN_12_15",
+            "content": "Given the Carbonaceous Biochemical Oxygen Demand for Nitrogen (CBODN) is 15 MG/L, and the nitrogenous compound level is 6 MG/L, both at 12:00, and the CBODD level is 25 MG/L at the same time, it is highly probable that the CBODN level will be 15 MG/L at the following 15-minute mark, with a 98.17% chance, while there is only a 1.83% chance it will be 10 MG/L, and no chance it will be 5 or 20 MG/L at 12:15."
+        },
+        {
+            "id": 46,
+            "origin": "CBODN_12_15",
+            "content": "Given the Carbonaceous Biochemical Oxygen Demand for Nitrogen (CBODN) is 15 MG/L, and the nitrogenous compound level is 10 MG/L, both at 12:00, and the CBODD level is 25 MG/L at the same time, it is highly probable that the CBODN level will be 15 MG/L at the following 15-minute mark, with a 98.15% chance, while there is only a 1.85% chance it will be 10 MG/L, and no chance it will be 5 or 20 MG/L at 12:15."
+        },
+        {
+            "id": 47,
+            "origin": "CBODN_12_15",
+            "content": "Given the Carbonaceous Biochemical Oxygen Demand for Nitrogen (CBODN) is 20 MG/L, and the nitrogenous compound level is 2 MG/L, both at 12:00, and the CBODD level is 25 MG/L at the same time, it is highly probable that the CBODN level will be 20 MG/L at the following 15-minute mark, with a 91.46% chance, while there is only an 8.54% chance it will be 15 MG/L, and no chance it will be 5 or 10 MG/L at 12:15."
+        },
+        {
+            "id": 48,
+            "origin": "CBODN_12_15",
+            "content": "Given the Carbonaceous Biochemical Oxygen Demand for Nitrogen (CBODN) is 20 MG/L, and the nitrogenous compound level is 4 MG/L, both at 12:00, and the CBODD level is 25 MG/L at the same time, it is highly probable that the CBODN level will be 20 MG/L at the following 15-minute mark, with a 91.37% chance, while there is only an 8.63% chance it will be 15 MG/L, and no chance it will be 5 or 10 MG/L at 12:15."
+        },
+        {
+            "id": 49,
+            "origin": "CBODN_12_15",
+            "content": "Given the Carbonaceous Biochemical Oxygen Demand for Nitrogen (CBODN) is 20 MG/L, and the nitrogenous compound level is 6 MG/L, both at 12:00, and the CBODD level is 25 MG/L at the same time, it is highly probable that the CBODN level will be 20 MG/L at the following 15-minute mark, with a 91.33% chance, while there is only an 8.67% chance it will be 15 MG/L, and no chance it will be 5 or 10 MG/L at 12:15."
+        },
+        {
+            "id": 50,
+            "origin": "CBODN_12_15",
+            "content": "Given the Carbonaceous Biochemical Oxygen Demand for Nitrogen (CBODN) is 20 MG/L, and the nitrogenous compound level is 10 MG/L, both at 12:00, and the CBODD level is 25 MG/L at the same time, it is highly probable that the CBODN level will be 20 MG/L at the following 15-minute mark, with a 91.3% chance, while there is only an 8.7% chance it will be 15 MG/L, and no chance it will be 5 or 10 MG/L at 12:15."
+        },
+        {
+            "id": 51,
+            "origin": "CBODN_12_15",
+            "content": "Given the Carbonaceous Biochemical Oxygen Demand for Nitrogen (CBODN) is 5 MG/L, and the nitrogenous compound level is 2 MG/L, both at 12:00, and the CBODD level is 30 MG/L at the same time, there is an 80.87% chance that the CBODN level will be 5 MG/L at the following 15-minute mark, and a 19.13% chance it will be 10 MG/L, while there is no chance it will be 15 or 20 MG/L at 12:15."
+        },
+        {
+            "id": 52,
+            "origin": "CBODN_12_15",
+            "content": "Given the Carbonaceous Biochemical Oxygen Demand for Nitrogen (CBODN) is 5 MG/L, and the nitrogenous compound level is 4 MG/L, both at 12:00, and the CBODD level is 30 MG/L at the same time, there is an 80.9% chance that the CBODN level will be 5 MG/L at the following 15-minute mark, and a 19.1% chance it will be 10 MG/L, while there is no chance it will be 15 or 20 MG/L at 12:15."
+        },
+        {
+            "id": 53,
+            "origin": "CBODN_12_15",
+            "content": "Given the Carbonaceous Biochemical Oxygen Demand for Nitrogen (CBODN) is 5 MG/L, and the nitrogenous compound level is 6 MG/L, both at 12:00, and the CBODD level is 30 MG/L at the same time, there is an 80.92% chance that the CBODN level will be 5 MG/L at the following 15-minute mark, and a 19.08% chance it will be 10 MG/L, while there is no chance it will be 15 or 20 MG/L at 12:15."
+        },
+        {
+            "id": 54,
+            "origin": "CBODN_12_15",
+            "content": "Given the Carbonaceous Biochemical Oxygen Demand for Nitrogen (CBODN) is 5 MG/L, and the nitrogenous compound level is 10 MG/L, both at 12:00, and the CBODD level is 30 MG/L at the same time, there is an 80.93% chance that the CBODN level will be 5 MG/L at the following 15-minute mark, and a 19.07% chance it will be 10 MG/L, while there is no chance it will be 15 or 20 MG/L at 12:15."
+        },
+        {
+            "id": 55,
+            "origin": "CBODN_12_15",
+            "content": "Given the Carbonaceous Biochemical Oxygen Demand for Nitrogen (CBODN) is 10 MG/L, and the nitrogenous compound level is 2 MG/L, both at 12:00, and the CBODD level is 30 MG/L at the same time, there is no chance that the CBODN level will be 5 MG/L at the following 15-minute mark, and an 89.36% chance it will be 10 MG/L, and a 10.64% chance it will be 15 MG/L, while there is no chance it will be 20 MG/L at 12:15."
+        },
+        {
+            "id": 56,
+            "origin": "CBODN_12_15",
+            "content": "Given the Carbonaceous Biochemical Oxygen Demand for Nitrogen (CBODN) is 10 MG/L, and the nitrogenous compound level is 4 MG/L, both at 12:00, and the CBODD level is 30 MG/L at the same time, there is no chance that the CBODN level will be 5 MG/L at the following 15-minute mark, and an 89.42% chance it will be 10 MG/L, and a 10.58% chance it will be 15 MG/L, while there is no chance it will be 20 MG/L at 12:15."
+        },
+        {
+            "id": 57,
+            "origin": "CBODN_12_15",
+            "content": "Given the Carbonaceous Biochemical Oxygen Demand for Nitrogen (CBODN) is 10 MG/L, and the nitrogenous compound level is 6 MG/L, both at 12:00, and the CBODD level is 30 MG/L at the same time, there is no chance that the CBODN level will be 5 MG/L at the following 15-minute mark, and an 89.44% chance it will be 10 MG/L, and a 10.56% chance it will be 15 MG/L, while there is no chance it will be 20 MG/L at 12:15."
+        },
+        {
+            "id": 58,
+            "origin": "CBODN_12_15",
+            "content": "Given the Carbonaceous Biochemical Oxygen Demand for Nitrogen (CBODN) is 10 MG/L, and the nitrogenous compound level is 10 MG/L, both at 12:00, and the CBODD level is 30 MG/L at the same time, there is no chance that the CBODN level will be 5 MG/L at the following 15-minute mark, and an 89.46% chance it will be 10 MG/L, and a 10.54% chance it will be 15 MG/L, while there is no chance it will be 20 MG/L at 12:15."
+        },
+        {
+            "id": 59,
+            "origin": "CBODN_12_15",
+            "content": "Given the Carbonaceous Biochemical Oxygen Demand for Nitrogen (CBODN) is 15 MG/L, and the nitrogenous compound level is 2 MG/L, both at 12:00, and the CBODD level is 30 MG/L at the same time, there is no chance that the CBODN level will be 5 or 10 MG/L at the following 15-minute mark, and a 96.82% chance it will be 15 MG/L, and a 3.18% chance it will be 20 MG/L at 12:15."
+        },
+        {
+            "id": 60,
+            "origin": "CBODN_12_15",
+            "content": "Given the Carbonaceous Biochemical Oxygen Demand for Nitrogen (CBODN) is 15 MG/L, and the nitrogenous compound level is 4 MG/L, both at 12:00, and the CBODD level is 30 MG/L at the same time, there is no chance that the CBODN level will be 5 or 10 MG/L at the following 15-minute mark, and a 96.9% chance it will be 15 MG/L, and a 3.1% chance it will be 20 MG/L at 12:15."
+        },
+        {
+            "id": 61,
+            "origin": "CBODN_12_15",
+            "content": "Given the Carbonaceous Biochemical Oxygen Demand for Nitrogen (CBODN) is 15 MG/L, and the nitrogenous compound level is 6 MG/L, both at 12:00, and the CBODD level is 30 MG/L at the same time, there is no chance that the CBODN level will be 5 or 10 MG/L at the following 15-minute mark, and a 96.93% chance it will be 15 MG/L, and a 3.07% chance it will be 20 MG/L at 12:15."
+        },
+        {
+            "id": 62,
+            "origin": "CBODN_12_15",
+            "content": "Given the Carbonaceous Biochemical Oxygen Demand for Nitrogen (CBODN) is 15 MG/L, and the nitrogenous compound level is 10 MG/L, both at 12:00, and the CBODD level is 30 MG/L at the same time, there is no chance that the CBODN level will be 5 or 10 MG/L at the following 15-minute mark, and a 96.95% chance it will be 15 MG/L, and a 3.05% chance it will be 20 MG/L at 12:15."
+        },
+        {
+            "id": 63,
+            "origin": "CBODN_12_15",
+            "content": "Given the Carbonaceous Biochemical Oxygen Demand for Nitrogen (CBODN) is 20 MG/L, and the nitrogenous compound level is 2 MG/L, both at 12:00, and the CBODD level is 30 MG/L at the same time, there is no chance that the CBODN level will be 5 or 10 MG/L at the following 15-minute mark, and a 3.64% chance it will be 15 MG/L, and a 96.36% chance it will be 20 MG/L at 12:15."
+        },
+        {
+            "id": 64,
+            "origin": "CBODN_12_15",
+            "content": "Given the Carbonaceous Biochemical Oxygen Demand for Nitrogen (CBODN) is 20 MG/L, and the nitrogenous compound level is 4 MG/L, both at 12:00, and the CBODD level is 30 MG/L at the same time, there is no chance that the CBODN level will be 5 or 10 MG/L at the following 15-minute mark, and a 3.73% chance it will be 15 MG/L, and a 96.27% chance it will be 20 MG/L at 12:15."
+        },
+        {
+            "id": 65,
+            "origin": "CBODN_12_15",
+            "content": "Given the Carbonaceous Biochemical Oxygen Demand for Nitrogen (CBODN) is 20 MG/L, and the nitrogenous compound level is 6 MG/L, both at 12:00, and the CBODD level is 30 MG/L at the same time, there is no chance that the CBODN level will be 5 or 10 MG/L at the following 15-minute mark, and a 3.77% chance it will be 15 MG/L, and a 96.23% chance it will be 20 MG/L at 12:15."
+        },
+        {
+            "id": 66,
+            "origin": "CBODN_12_15",
+            "content": "Given the Carbonaceous Biochemical Oxygen Demand for Nitrogen (CBODN) is 20 MG/L, and the nitrogenous compound level is 10 MG/L, both at 12:00, and the CBODD level is 30 MG/L at the same time, there is no chance that the CBODN level will be 5 or 10 MG/L at the following 15-minute mark, and a 3.8% chance it will be 15 MG/L, and a 96.2% chance it will be 20 MG/L at 12:15."
+        }
+    ],
+    "wep_based_premises": [
+        {
+            "id": 0,
+            "origin": "CBODN_12_00",
+            "content": "The CBODN (Carbonaceous Biochemical Oxygen Demand for Nitrogen) rate at 12:00 can only take the value of 10 mg/L; therefore, the CBODN measurement at 12:00 is certain to be 10 mg/L, with 5, 15, or 20 mg/L being impossible."
+        },
+        {
+            "id": 1,
+            "origin": "CNON_12_00",
+            "content": "The concentration of the nitrogenous compound at 12:00 cannot be 2 mg/L, 6 mg/L, or 10 mg/L; instead, it is certain that the concentration is exactly 4 mg/L."
+        },
+        {
+            "id": 2,
+            "origin": "CBODD_12_00",
+            "content": "At 12:00, the CBODD can only be 20 mg/L, and it is impossible for it to be 15 mg/L, 25 mg/L, or 30 mg/L."
+        },
+        {
+            "id": 3,
+            "origin": "CBODN_12_15",
+            "content": "If the measurement of CBODN (Carbonaceous Biochemical Oxygen Demand for Nitrogen) is 5 mg/L, the concentration of a nitrogenous compound (CNON) is 2 mg/L, and the Carbonaceous Biochemical Oxygen Demand (CBODD) is 15 mg/L at 12:00, then it is almost certainly true that the CBODN will be 5 mg/L at 12:15, highly unlikely that the CBODN will be 10 mg/L at 12:15, and impossible that the CBODN will be 15 mg/L or 20 mg/L at 12:15."
+        },
+        {
+            "id": 4,
+            "origin": "CBODN_12_15",
+            "content": "If the measurement of CBODD is 15 mg/L, CBODN is 5 mg/L, and CNON is 4 mg/L at 12:00, then it is almost certain that the CBODN will be 5 mg/L at 12:15, highly unlikely that the CBODN will be 10 mg/L at 12:15, and impossible that the CBODN will be 15 mg/L or 20 mg/L at 12:15."
+        },
+        {
+            "id": 5,
+            "origin": "CBODN_12_15",
+            "content": "At precisely 12:00, if CBODD is found to be 15 mg/L, CBODN measures 5 mg/L, and CNON registers 6 mg/L, then it is almost certain that the CBODN will be 5 mg/L at 12:15, highly unlikely that the CBODN will be 10 mg/L at 12:15, and impossible that the CBODN will be 15 mg/L or 20 mg/L at 12:15."
+        },
+        {
+            "id": 6,
+            "origin": "CBODN_12_15",
+            "content": "If the measurement of CBODD is 15 mg/L, CBODN is 5 mg/L, and CNON is 10 mg/L at 12:00, then it is almost certainly correct to say that the CBODN will be 5 mg/L at 12:15, highly unlikely that the CBODN will be 10 mg/L at 12:15, and impossible that the CBODN will be 15 mg/L or 20 mg/L at 12:15."
+        },
+        {
+            "id": 7,
+            "origin": "CBODN_12_15",
+            "content": "If the measurement of CBODD is 15 mg/L, CBODN is 10 mg/L, and CNON is 2 mg/L at 12:00, then it is highly unlikely that the CBODN will be 5 mg/L at 12:15, almost certain that the CBODN will be 10 mg/L at 12:15, and impossible that the CBODN will be 15 mg/L or 20 mg/L at 12:15."
+        },
+        {
+            "id": 8,
+            "origin": "CBODN_12_15",
+            "content": "If the measurement of CBODD is 15 mg/L, CBODN is 10 mg/L, and CNON is 4 mg/L at 12:00, then it is highly unlikely that the CBODN will be 5 mg/L at 12:15, almost certain that the CBODN will be 10 mg/L at 12:15, and impossible that the CBODN will be 15 mg/L or 20 mg/L at 12:15."
+        },
+        {
+            "id": 9,
+            "origin": "CBODN_12_15",
+            "content": "If the measurement of CBODD is 15 mg/L, CBODN is 10 mg/L, and CNON is 6 mg/L at 12:00, then it is highly unlikely that the CBODN will be 5 mg/L at 12:15, almost certain that the CBODN will be 10 mg/L at 12:15, and impossible that the CBODN will be 15 mg/L or 20 mg/L at 12:15."
+        },
+        {
+            "id": 10,
+            "origin": "CBODN_12_15",
+            "content": "If the measurement of CBODD is 15 mg/L, CBODN is 10 mg/L, and CNON is 10 mg/L at 12:00, then it is highly unlikely that the CBODN will be 5 mg/L at 12:15, almost certain that the CBODN will be 10 mg/L at 12:15, and impossible that the CBODN will be 15 mg/L or 20 mg/L at 12:15."
+        },
+        {
+            "id": 11,
+            "origin": "CBODN_12_15",
+            "content": "If the measurement of CBODD is 15 mg/L, CBODN is 15 mg/L, and CNON is 2 mg/L at 12:00, then it is impossible that the CBODN will be 5 mg/L at 12:15, there is little chance that the CBODN will be 10 mg/L at 12:15, highly likely that the CBODN will be 15 mg/L at 12:15, and impossible that the CBODN will be 20 mg/L at 12:15."
+        },
+        {
+            "id": 12,
+            "origin": "CBODN_12_15",
+            "content": "If the measurement of CBODD is 15 mg/L, CBODN is 15 mg/L, and CNON is 4 mg/L at 12:00, then it is impossible that the CBODN will be 5 mg/L at 12:15, whereas chances are slight that the CBODN will be 10 mg/L at 12:15, highly likely that the CBODN will be 15 mg/L at 12:15, and impossible that the CBODN will be 20 mg/L at 12:15."
+        },
+        {
+            "id": 13,
+            "origin": "CBODN_12_15",
+            "content": "If the measurement of CBODD is 15 mg/L, CBODN is 15 mg/L, and CNON is 6 mg/L at 12:00, then it is impossible that the CBODN will be 5 mg/L at 12:15, improbable that the CBODN will be 10 mg/L at 12:15, highly likely that the CBODN will be 15 mg/L at 12:15, and impossible that the CBODN will be 20 mg/L at 12:15."
+        },
+        {
+            "id": 14,
+            "origin": "CBODN_12_15",
+            "content": "If the measurement of CBODD is 15 mg/L, CBODN is 15 mg/L, and CNON is 10 mg/L at 12:00, then it is impossible that the CBODN will be 5 mg/L at 12:15, unlikely that the CBODN will be 10 mg/L at 12:15, highly likely that the CBODN will be 15 mg/L at 12:15, and impossible that the CBODN will be 20 mg/L at 12:15."
+        },
+        {
+            "id": 15,
+            "origin": "CBODN_12_15",
+            "content": "If the measurement of CBODD is 15 mg/L, CBODN is 20 mg/L, and CNON is 2 mg/L at 12:00, then it is impossible that the CBODN will be either 5 mg/L or 10 mg/L at 12:15, unlikely that the CBODN will be 15 mg/L at 12:15, and probable that the CBODN will be 20 mg/L at 12:15."
+        },
+        {
+            "id": 16,
+            "origin": "CBODN_12_15",
+            "content": "If the measurement of CBODD is 15 mg/L, CBODN is 20 mg/L, and CNON is 4 mg/L at 12:00, then it is impossible that the CBODN will be either 5 mg/L or 10 mg/L at 12:15, unlikely that the CBODN will be 15 mg/L at 12:15, and very likely that the CBODN will be 20 mg/L at 12:15."
+        },
+        {
+            "id": 17,
+            "origin": "CBODN_12_15",
+            "content": "If the measurement of CBODD is 15 mg/L, CBODN is 20 mg/L, and CNON is 6 mg/L at 12:00, then it is impossible that the CBODN will be either 5 mg/L or 10 mg/L at 12:15, unlikely that the CBODN will be 15 mg/L at 12:15, and very likely that the CBODN will be 20 mg/L at 12:15."
+        },
+        {
+            "id": 18,
+            "origin": "CBODN_12_15",
+            "content": "If the measurement of CBODD is 15 mg/L, CBODN is 20 mg/L, and CNON is 10 mg/L at 12:00, then it is impossible that the CBODN will be 5 mg/L or 10 mg/L at 12:15, unlikely that the CBODN will be 15 mg/L at 12:15, and very likely that the CBODN will be 20 mg/L at 12:15."
+        },
+        {
+            "id": 19,
+            "origin": "CBODN_12_15",
+            "content": "If the measurement of CBODD is 20 mg/L, CBODN is 5 mg/L, and CNON is 2 mg/L at 12:00, then it is highly likely that the CBODN will be 5 mg/L at 12:15, improbable that the CBODN will be 10 mg/L at 12:15, and impossible that the CBODN will be 15 mg/L or 20 mg/L at 12:15."
+        },
+        {
+            "id": 20,
+            "origin": "CBODN_12_15",
+            "content": "If the measurement of CBODD is 20 mg/L, CBODN is 5 mg/L, and CNON is 4 mg/L at 12:00, then it is highly likely that the CBODN will be 5 mg/L at 12:15, there are little chances that the CBODN will be 10 mg/L at 12:15, and impossible that the CBODN will be 15 mg/L or 20 mg/L at 12:15."
+        },
+        {
+            "id": 21,
+            "origin": "CBODN_12_15",
+            "content": "If the measurement of CBODD is 20 mg/L, CBODN is 5 mg/L, and CNON is 6 mg/L at 12:00, then it is highly likely that the CBODN will be 5 mg/L at 12:15, whereas chances are slight that the CBODN will be 10 mg/L at 12:15, and impossible that the CBODN will be 15 mg/L or 20 mg/L at 12:15."
+        },
+        {
+            "id": 22,
+            "origin": "CBODN_12_15",
+            "content": "If the measurement of CBODD is 20 mg/L, CBODN is 5 mg/L, and CNON is 10 mg/L at 12:00, then it is highly likely that the CBODN will be 5 mg/L at 12:15, chances are slight that the CBODN will be 10 mg/L at 12:15, and impossible that the CBODN will be 15 mg/L or 20 mg/L at 12:15."
+        },
+        {
+            "id": 23,
+            "origin": "CBODN_12_15",
+            "content": "If the measurement of CBODD is 20 mg/L, CBODN is 10 mg/L, and CNON is 2 mg/L at 12:00, then it is impossible that the CBODN will be 5 mg/L at 12:15, almost certain that the CBODN will be 10 mg/L at 12:15, whereas there is almost no chance that the CBODN will be 15 mg/L at 12:15, and impossible that the CBODN will be 20 mg/L at 12:15."
+        },
+        {
+            "id": 24,
+            "origin": "CBODN_12_15",
+            "content": "If the measurement of CBODD is 20 mg/L, CBODN is 10 mg/L, and CNON is 6 mg/L at 12:00, then it is impossible that the CBODN will be 5 mg/L at 12:15, almost certain that the CBODN will be 10 mg/L at 12:15, whereas there is almost no chance that the CBODN will be 15 mg/L at 12:15, and impossible that the CBODN will be 20 mg/L at 12:15."
+        },
+        {
+            "id": 25,
+            "origin": "CBODN_12_15",
+            "content": "If the measurement of CBODD is 20 mg/L, CBODN is 10 mg/L, and CNON is 6 mg/L at 12:00, then it is impossible that the CBODN will be 5 mg/L at 12:15, almost certain that the CBODN will be 10 mg/L at 12:15, while there is almost no chance that the CBODN will be 15 mg/L at 12:15, and impossible that the CBODN will be 20 mg/L at 12:15."
+        },
+        {
+            "id": 26,
+            "origin": "CBODN_12_15",
+            "content": "If the measurement of CBODD is 20 mg/L, CBODN is 10 mg/L, and CNON is 10 mg/L at 12:00, then it is impossible that the CBODN will be 5 mg/L at 12:15, almost certain that the CBODN will be 10 mg/L at 12:15, whilst there is almost no chance that the CBODN will be 15 mg/L at 12:15, and impossible that the CBODN will be 20 mg/L at 12:15."
+        },
+        {
+            "id": 27,
+            "origin": "CBODN_12_15",
+            "content": "If the measurement of CBODD is 20 mg/L, CBODN is 15 mg/L, and CNON is 2 mg/L at 12:00, then it is impossible that the CBODN will be 5 mg/L at 12:15, highly unlikely that the CBODN will be 10 mg/L at 12:15, almost certain that the CBODN will be 15 mg/L at 12:15, and impossible that the CBODN will be 20 mg/L at 12:15."
+        },
+        {
+            "id": 28,
+            "origin": "CBODN_12_15",
+            "content": "If the measurement of CBODD is 20 mg/L, CBODN is 15 mg/L, and CNON is 4 mg/L at 12:00, then it is impossible that the CBODN will be 5 mg/L at 12:15, highly unlikely that the CBODN will be 10 mg/L at 12:15, almost certain that the CBODN will be 15 mg/L at 12:15, and impossible that the CBODN will be 20 mg/L at 12:15."
+        },
+        {
+            "id": 29,
+            "origin": "CBODN_12_15",
+            "content": "If the measurement of CBODD is 20 mg/L, CBODN is 15 mg/L, and CNON is 6 mg/L at 12:00, then it is impossible that the CBODN will be 5 mg/L at 12:15, highly unlikely that the CBODN will be 10 mg/L at 12:15, almost certain that the CBODN will be 15 mg/L at 12:15, and impossible that the CBODN will be 20 mg/L at 12:15."
+        },
+        {
+            "id": 30,
+            "origin": "CBODN_12_15",
+            "content": "If the measurement of CBODD is 20 mg/L, CBODN is 15 mg/L, and CNON is 10 mg/L at 12:00, then it is impossible that the CBODN will be 5 mg/L at 12:15, highly unlikely that the CBODN will be 10 mg/L at 12:15, almost certain that the CBODN will be 15 mg/L at 12:15, and impossible that the CBODN will be 20 mg/L at 12:15."
+        },
+        {
+            "id": 31,
+            "origin": "CBODN_12_15",
+            "content": "If the measurement of CBODD is 20 mg/L, CBODN is 20 mg/L, and CNON is 2 mg/L at 12:00, then it is impossible that the CBODN will be either 5 mg/L or 10 mg/L at 12:15, there is little chance that the CBODN will be 15 mg/L at 12:15, and it is highly likely that the CBODN will be 20 mg/L at 12:15."
+        },
+        {
+            "id": 32,
+            "origin": "CBODN_12_15",
+            "content": "If the measurement of CBODD is 20 mg/L, CBODN is 20 mg/L, and CNON is 4 mg/L at 12:00, then it is impossible that the CBODN will be either 5 mg/L or 10 mg/L at 12:15, there is also only little chance that the CBODN will be 15 mg/L at 12:15, and it is highly likely that the CBODN will be 20 mg/L at 12:15."
+        },
+        {
+            "id": 33,
+            "origin": "CBODN_12_15",
+            "content": "If the measurement of CBODD is 20 mg/L, CBODN is 20 mg/L, and CNON is 6 mg/L at 12:00, then it is impossible that the CBODN will be either 5 mg/L or 10 mg/L at 12:15, unlikely that the CBODN will be 15 mg/L at 12:15, and highly likely that the CBODN will be 20 mg/L at 12:15."
+        },
+        {
+            "id": 34,
+            "origin": "CBODN_12_15",
+            "content": "If the measurement of CBODD is 20 mg/L, CBODN is 20 mg/L, and CNON is 10 mg/L at 12:00, then it is impossible that the CBODN will be 5 mg/L or 10 mg/L at 12:15, improbable that the CBODN will be 15 mg/L at 12:15, and highly likely that the CBODN will be 20 mg/L at 12:15."
+        },
+        {
+            "id": 35,
+            "origin": "CBODN_12_15",
+            "content": "If the measurement of CBODD is 25 mg/L, CBODN is 5 mg/L, and CNON is 2 mg/L at 12:00, then it is highly likely that the CBODN will be 5 mg/L at 12:15. There is only little chance that the CBODN will be 10 mg/L at 12:15, and impossible that the CBODN will be 15 mg/L or 20 mg/L at 12:15."
+        },
+        {
+            "id": 36,
+            "origin": "CBODN_12_15",
+            "content": "If the measurement of CBODD is 25 mg/L, CBODN is 5 mg/L, and CNON is 4 mg/L at 12:00, then it is highly likely that the CBODN will be 5 mg/L at 12:15. chances are slight that the CBODN will be 10 mg/L at 12:15, and impossible that the CBODN will be 15 mg/L or 20 mg/L at 12:15."
+        },
+        {
+            "id": 37,
+            "origin": "CBODN_12_15",
+            "content": "If the measurement of CBODD is 25 mg/L, CBODN is 5 mg/L, and CNON is 6 mg/L at 12:00, then it is highly likely that the CBODN will be 5 mg/L at 12:15. chances are slight that the CBODN will be 10 mg/L at 12:15, and impossible that the CBODN will be 15 mg/L or 20 mg/L at 12:15."
+        },
+        {
+            "id": 38,
+            "origin": "CBODN_12_15",
+            "content": "If the measurement of CBODD is 25 mg/L, CBODN is 5 mg/L, and CNON is 10 mg/L at 12:00, then it is highly likely that the CBODN will be 5 mg/L at 12:15. chances are slight that the CBODN will be 10 mg/L at 12:15, and impossible that the CBODN will be 15 mg/L or 20 mg/L at 12:15."
+        },
+        {
+            "id": 39,
+            "origin": "CBODN_12_15",
+            "content": "If the measurement of CBODD is 25 mg/L, CBODN is 10 mg/L, and CNON is 2 mg/L at 12:00, then it is impossible that the CBODN will be 5 mg/L at 12:15, almost certain that the CBODN will be 10 mg/L at 12:15, highly unlikely that the CBODN will be 15 mg/L at 12:15, and impossible that the CBODN will be 20 mg/L at 12:15."
+        },
+        {
+            "id": 40,
+            "origin": "CBODN_12_15",
+            "content": "If the measurement of CBODD is 25 mg/L, CBODN is 10 mg/L, and CNON is 4 mg/L at 12:00, then it is impossible that the CBODN will be 5 mg/L at 12:15, almost certain that the CBODN will be 10 mg/L at 12:15, highly unlikely that the CBODN will be 15 mg/L at 12:15, and impossible that the CBODN will be 20 mg/L at 12:15."
+        },
+        {
+            "id": 41,
+            "origin": "CBODN_12_15",
+            "content": "If the measurement of CBODD is 25 mg/L, CBODN is 10 mg/L, and CNON is 6 mg/L at 12:00, then it is impossible that the CBODN will be 5 mg/L at 12:15, almost certain that the CBODN will be 10 mg/L at 12:15, highly unlikely that the CBODN will be 15 mg/L at 12:15, and impossible that the CBODN will be 20 mg/L at 12:15."
+        },
+        {
+            "id": 42,
+            "origin": "CBODN_12_15",
+            "content": "If the measurement of CBODD is 25 mg/L, CBODN is 10 mg/L, and CNON is 10 mg/L at 12:00, then it is impossible that the CBODN will be 5 mg/L at 12:15, almost certain that the CBODN will be 10 mg/L at 12:15, highly unlikely that the CBODN will be 15 mg/L at 12:15, and impossible that the CBODN will be 20 mg/L at 12:15."
+        },
+        {
+            "id": 43,
+            "origin": "CBODN_12_15",
+            "content": "If the measurement of CBODD is 25 mg/L, CBODN is 15 mg/L, and CNON is 2 mg/L at 12:00, then it is impossible that the CBODN will be 5 mg/L at 12:15, very unlikely that the CBODN will be 10 mg/L at 12:15, almost certain that the CBODN will be 15 mg/L at 12:15, and impossible that the CBODN will be 20 mg/L at 12:15."
+        },
+        {
+            "id": 44,
+            "origin": "CBODN_12_15",
+            "content": "If the measurement of CBODD is 25 mg/L, CBODN is 15 mg/L, and CNON is 4 mg/L at 12:00, then it is impossible that the CBODN will be 5 mg/L at 12:15. There is almost no chance that the CBODN will be 10 mg/L at 12:15, whereas it is almost certain that the CBODN will be 15 mg/L at 12:15, and impossible that the CBODN will be 20 mg/L at 12:15."
+        },
+        {
+            "id": 45,
+            "origin": "CBODN_12_15",
+            "content": "If the measurement of CBODD is 25 mg/L, CBODN is 15 mg/L, and CNON is 6 mg/L at 12:00, then it is impossible that the CBODN will be 5 mg/L at 12:15. There is almost no chance that the CBODN will be 10 mg/L at 12:15, almost certain that the CBODN will be 15 mg/L at 12:15, and impossible that the CBODN will be 20 mg/L at 12:15."
+        },
+        {
+            "id": 46,
+            "origin": "CBODN_12_15",
+            "content": "If the measurement of CBODD is 25 mg/L, CBODN is 15 mg/L, and CNON is 10 mg/L at 12:00, then it is impossible that the CBODN will be 5 mg/L at 12:15. There is almost no chance that the CBODN will be 10 mg/L at 12:15, almost certain that the CBODN will be 15 mg/L at 12:15, and impossible that the CBODN will be 20 mg/L at 12:15."
+        },
+        {
+            "id": 47,
+            "origin": "CBODN_12_15",
+            "content": "If the measurement of CBODD is 25 mg/L, CBODN is 20 mg/L, and CNON is 2 mg/L at 12:00, then it is impossible that the CBODN will be either 5 mg/L or 10 mg/L at 12:15, there is only little chance that the CBODN will be 15 mg/L at 12:15, and it is highly likely that the CBODN will be 20 mg/L at 12:15."
+        },
+        {
+            "id": 48,
+            "origin": "CBODN_12_15",
+            "content": "If the measurement of CBODD is 25 mg/L, CBODN is 20 mg/L, and CNON is 4 mg/L at 12:00, then it is impossible that the CBODN will be either 5 mg/L or 10 mg/L at 12:15, chances are slight that the CBODN will be 15 mg/L at 12:15, and it is highly likely that the CBODN will be 20 mg/L at 12:15."
+        },
+        {
+            "id": 49,
+            "origin": "CBODN_12_15",
+            "content": "If the measurement of CBODD is 25 mg/L, CBODN is 20 mg/L, and CNON is 6 mg/L at 12:00, then it is impossible that the CBODN will be either 5 mg/L or 10 mg/L at 12:15, there is little chance that the CBODN will be 15 mg/L at 12:15, and it is highly likely that the CBODN will be 20 mg/L at 12:15."
+        },
+        {
+            "id": 50,
+            "origin": "CBODN_12_15",
+            "content": "If the measurement of CBODD is 25 mg/L, CBODN is 20 mg/L, and CNON is 10 mg/L at 12:00, then it is impossible that the CBODN will be either 5 mg/L or 10 mg/L at 12:15, there is little chance that the CBODN will be 15 mg/L at 12:15, and it highly likely that the CBODN will be 20 mg/L at 12:15."
+        },
+        {
+            "id": 51,
+            "origin": "CBODN_12_15",
+            "content": "If the measurement of CBODD is 30 mg/L, CBODN is 5 mg/L, and CNON is 2 mg/L at 12:00, then it is highly likely that the CBODN will be 5 mg/L at 12:15, unlikely that the CBODN will be 10 mg/L at 12:15, and impossible that the CBODN will be 15 mg/L or 20 mg/L at 12:15."
+        },
+        {
+            "id": 52,
+            "origin": "CBODN_12_15",
+            "content": "If the measurement of CBODD is 30 mg/L, CBODN is 5 mg/L, and CNON is 4 mg/L at 12:00, then it is very likely that the CBODN will be 5 mg/L at 12:15, unlikely that the CBODN will be 10 mg/L at 12:15, and impossible that the CBODN will be 15 mg/L or 20 mg/L at 12:15."
+        },
+        {
+            "id": 53,
+            "origin": "CBODN_12_15",
+            "content": "If the measurement of CBODD is 30 mg/L, CBODN is 5 mg/L, and CNON is 6 mg/L at 12:00, then it is very likely that the CBODN will be 5 mg/L at 12:15, unlikely that the CBODN will be 10 mg/L at 12:15, and impossible that the CBODN will be 15 mg/L or 20 mg/L at 12:15."
+        },
+        {
+            "id": 54,
+            "origin": "CBODN_12_15",
+            "content": "If the measurement of CBODD is 30 mg/L, CBODN is 5 mg/L, and CNON is 10 mg/L at 12:00, then it is very likely that the CBODN will be 5 mg/L at 12:15, unlikely that the CBODN will be 10 mg/L at 12:15, and impossible that the CBODN will be 15 mg/L or 20 mg/L at 12:15."
+        },
+        {
+            "id": 55,
+            "origin": "CBODN_12_15",
+            "content": "If the measurement of CBODD is 30 mg/L, CBODN is 10 mg/L, and CNON is 2 mg/L at 12:00, then it is impossible for the CBODN to be 5 mg/L at 12:15, highly likely that the CBODN will be 10 mg/L at 12:15, whereas there is almost no chance that the CBODN will be 15 mg/L at 12:15, and impossible for the CBODN to be 20 mg/L at 12:15."
+        },
+        {
+            "id": 56,
+            "origin": "CBODN_12_15",
+            "content": "If the measurement of CBODD is 30 mg/L, CBODN is 10 mg/L, and CNON is 4 mg/L at 12:00, then it is impossible that the CBODN will be 5 mg/L at 12:15, highly likely that the CBODN will be 10 mg/L at 12:15, improbable that the CBODN will be 15 mg/L at 12:15, and impossible that the CBODN will be 20 mg/L at 12:15."
+        },
+        {
+            "id": 57,
+            "origin": "CBODN_12_15",
+            "content": "If the measurement of CBODD is 30 mg/L, CBODN is 10 mg/L, and CNON is 6 mg/L at 12:00, then it is impossible that the CBODN will be 5 mg/L at 12:15, highly likely that the CBODN will be 10 mg/L at 12:15, improbable that the CBODN will be 15 mg/L at 12:15, and impossible that the CBODN will be 20 mg/L at 12:15."
+        },
+        {
+            "id": 58,
+            "origin": "CBODN_12_15",
+            "content": "If the measurement of CBODD is 30 mg/L, CBODN is 10 mg/L, and CNON is 10 mg/L at 12:00, then it is impossible that the CBODN will be 5 mg/L at 12:15, highly likely that the CBODN will be 10 mg/L at 12:15, there is little chance that the CBODN will be 15 mg/L at 12:15, and it is impossible that the CBODN will be 20 mg/L at 12:15."
+        },
+        {
+            "id": 59,
+            "origin": "CBODN_12_15",
+            "content": "If the measurement of CBODD is 30 mg/L, CBODN is 15 mg/L, and CNON is 2 mg/L at 12:00, then it is impossible that the CBODN will be either 5 mg/L or 10 mg/L at 12:15, almost certain that the CBODN will be 15 mg/L at 12:15, and almost no chance that the CBODN will be 20 mg/L at 12:15."
+        },
+        {
+            "id": 60,
+            "origin": "CBODN_12_15",
+            "content": "If the measurement of CBODD is 30 mg/L, CBODN is 15 mg/L, and CNON is 4 mg/L at 12:00, then it is impossible that the CBODN will be either 5 mg/L or 10 mg/L at 12:15, almost certain that the CBODN will be 15 mg/L at 12:15, and almost no chance that the CBODN will be 20 mg/L at 12:15."
+        },
+        {
+            "id": 61,
+            "origin": "CBODN_12_15",
+            "content": "If the measurement of CBODD is 30 mg/L, CBODN is 15 mg/L, and CNON is 6 mg/L at 12:00, then it is impossible that the CBODN will be either 5 mg/L or 10 mg/L at 12:15, almost certain that the CBODN will be 15 mg/L at 12:15, and almost no chance that the CBODN will be 20 mg/L at 12:15."
+        },
+        {
+            "id": 62,
+            "origin": "CBODN_12_15",
+            "content": "If the measurement of CBODD is 30 mg/L, CBODN is 15 mg/L, and CNON is 10 mg/L at 12:00, then it is impossible that the CBODN will be 5 mg/L or 10 mg/L at 12:15, almost certain that the CBODN will be 15 mg/L at 12:15, and almost no chance that the CBODN will be 20 mg/L at 12:15."
+        },
+        {
+            "id": 63,
+            "origin": "CBODN_12_15",
+            "content": "If the measurement of CBODD is 30 mg/L, CBODN is 20 mg/L, and CNON is 2 mg/L at 12:00, then it is impossible that the CBODN will be either 5 mg/L or 10 mg/L at 12:15, highly unlikely that the CBODN will be 15 mg/L at 12:15, and almost certain that the CBODN will be 20 mg/L at 12:15."
+        },
+        {
+            "id": 64,
+            "origin": "CBODN_12_15",
+            "content": "If the measurement of CBODD is 30 mg/L, CBODN is 20 mg/L, and CNON is 4 mg/L at 12:00, then it is impossible that the CBODN will be either 5 mg/L or 10 mg/L at 12:15, highly unlikely that the CBODN will be 15 mg/L at 12:15, and almost certain that the CBODN will be 20 mg/L at 12:15."
+        },
+        {
+            "id": 65,
+            "origin": "CBODN_12_15",
+            "content": "If the measurement of CBODD is 30 mg/L, CBODN is 20 mg/L, and CNON is 6 mg/L at 12:00, then it is impossible that the CBODN will be either 5 mg/L or 10 mg/L at 12:15, highly unlikely that the CBODN will be 15 mg/L at 12:15, and almost certain that the CBODN will be 20 mg/L at 12:15."
+        },
+        {
+            "id": 66,
+            "origin": "CBODN_12_15",
+            "content": "If the measurement of CBODD is 30 mg/L, CBODN is 20 mg/L, and CNON is 10 mg/L at 12:00, then it is impossible that the CBODN will be either 5 mg/L or 10 mg/L at 12:15, highly unlikely that the CBODN will be 15 mg/L at 12:15, and almost certain that the CBODN will be 20 mg/L at 12:15."
+        }
+    ],
+    "evidence_query_pairs": [
+        {
+            "id": 0,
+            "evidences": [
+                "The concentration of a nitrogenous compound (CNON) at 12:00 is 4 mg/L."
+            ],
+            "query": "What is the likelihood of the Carbonaceous Biochemical Oxygen Demand (CBODN) being 15 mg/L at 12:00?",
+            "answer": 0.0,
+            "reasoning_types": []
+        },
+        {
+            "id": 1,
+            "evidences": [
+                "The Carbonaceous Biochemical Oxygen Demand for Nitrogen (CBODN) was measured at 12:15 and was equal to 10 mg/L."
+            ],
+            "query": "What is the likelihood of the CBODN being 20 mg/L at 12:00?",
+            "answer": 0.0,
+            "reasoning_types": [
+                "evidential"
+            ]
+        },
+        {
+            "id": 2,
+            "evidences": [
+                "The concentration of a nitrogenous compound (CNON) at 12:00 is 4 mg/L."
+            ],
+            "query": "What is the likelihood of the Carbonaceous Biochemical Oxygen Demand being 25 mg/L at 12:00?",
+            "answer": 0.0,
+            "reasoning_types": []
+        },
+        {
+            "id": 3,
+            "evidences": [
+                "The Carbonaceous Biochemical Oxygen Demand for Nitrogen (CBODN) was 10 mg/L at 12:15."
+            ],
+            "query": "What is the likelihood of the concentration of some nitrogenous compound being 6 mg/L at 12:00?",
+            "answer": 0.0,
+            "reasoning_types": [
+                "evidential"
+            ]
+        },
+        {
+            "id": 4,
+            "evidences": [
+                "The CBODN was 15 mg/L at 12:15.",
+                "The Carbonaceous Biochemical Oxygen Demand for Nitrogen (CBODN) was 10 mg/L at 12:00."
+            ],
+            "query": "What is the likelihood of the Carbonaceous Biochemical Oxygen Demand (CBODD) being 20 mg/L at 12:00?",
+            "answer": 1.0,
+            "reasoning_types": [
+                "evidential",
+                "explaining_away"
+            ]
+        },
+        {
+            "id": 5,
+            "evidences": [
+                "The concentration of a nitrogenous compound (CNON) at 12:00 is 4 mg/L.",
+                "The Carbonaceous Biochemical Oxygen Demand for Nitrogen (CBODN) at 12:15 is 15 mg/L."
+            ],
+            "query": "What is the likelihood of the Carbonaceous Biochemical Oxygen Demand for Nitrogen (CBODN) being 20 mg/L at 12:00?",
+            "answer": 0.0,
+            "reasoning_types": [
+                "evidential",
+                "explaining_away"
+            ]
+        },
+        {
+            "id": 6,
+            "evidences": [
+                "The Carbonaceous Biochemical Oxygen Demand for Nitrogen (CBODN) was 10 mg/L at 12:15."
+            ],
+            "query": "What is the likelihood of the concentration of some nitrogenous compound (CNON) being 6 mg/L at 12:00?",
+            "answer": 0.0,
+            "reasoning_types": [
+                "evidential"
+            ]
+        },
+        {
+            "id": 7,
+            "evidences": [
+                "The Carbonaceous Biochemical Oxygen Demand for Nitrogen (CBODN) was measured at 12:00 and the value was 10 mg/L."
+            ],
+            "query": "What is the likelihood of the CBODN being 15 mg/L at 12:15?",
+            "answer": 0.0078,
+            "reasoning_types": [
+                "causal"
+            ]
+        },
+        {
+            "id": 8,
+            "evidences": [
+                "The Carbonaceous Biochemical Oxygen Demand for Nitrogen (CBODN) was 10 mg/L at 12:15."
+            ],
+            "query": "What is the likelihood of the concentration of some nitrogenous compound being 4 mg/L at 12:00?",
+            "answer": 1.0,
+            "reasoning_types": [
+                "evidential"
+            ]
+        },
+        {
+            "id": 9,
+            "evidences": [
+                "The concentration of a nitrogenous compound (CNON) is 4 mg/L at 12:00."
+            ],
+            "query": "What is the likelihood of the Carbonaceous Biochemical Oxygen Demand for Nitrogen (CBODN) being 5 mg/L at 12:00?",
+            "answer": 0.0,
+            "reasoning_types": []
+        },
+        {
+            "id": 10,
+            "evidences": [
+                "The Carbonaceous Biochemical Oxygen Demand for Nitrogen (CBODN) was measured at 12:15 and the result was 15 mg/L."
+            ],
+            "query": "What is the likelihood of the concentration of some nitrogenous compound being 4 mg/L at 12:00?",
+            "answer": 1.0,
+            "reasoning_types": [
+                "evidential"
+            ]
+        },
+        {
+            "id": 11,
+            "evidences": [
+                "The Carbonaceous Biochemical Oxygen Demand for Nitrogen (CBODN) was measured at 12:00 and the value was 20 mg/L.",
+                "The Carbonaceous Biochemical Oxygen Demand (CBODD) was measured at 12:00 and the value was 25 mg/L.",
+                "The concentration of some nitrogenous compound (CNON) was measured at 12:00 and the value was 10 mg/L."
+            ],
+            "query": "What is the likelihood of the Carbonaceous Biochemical Oxygen Demand for Nitrogen (CBODN) being 15 mg/L at 12:15",
+            "answer": -1,
+            "reasoning_types": [
+                "causal"
+            ]
+        },
+        {
+            "id": 12,
+            "evidences": [
+                "The Carbonaceous Biochemical Oxygen Demand for nitrogen (CBODN) was 10 mg/L at 12:00.",
+                "The CBOD for dissolved organic matter (CBODD) was 15 mg/L at 12:00.",
+                "The CBODN was 15 mg/L at 12:15."
+            ],
+            "query": "What is the likelihood of the concentration of some nitrogenous compound being 2 mg/L at 12:00?",
+            "answer": -1,
+            "reasoning_types": [
+                "evidential",
+                "explaining_away"
+            ]
+        }
+    ]
+}

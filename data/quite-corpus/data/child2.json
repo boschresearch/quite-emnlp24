@@ -1,0 +1,748 @@
+{
+    "nodes": [
+        {
+            "name": "Disease",
+            "states": [
+                "PFC",
+                "TGA",
+                "Fallot",
+                "PAIVS",
+                "TAPVD",
+                "Lung"
+            ]
+        },
+        {
+            "name": "HypDistrib",
+            "states": [
+                "Equal",
+                "Unequal"
+            ]
+        },
+        {
+            "name": "HypoxiaInO2",
+            "states": [
+                "Mild",
+                "Moderate",
+                "Severe"
+            ]
+        },
+        {
+            "name": "LowerBodyO2",
+            "states": [
+                "<5",
+                "5-12",
+                "12+"
+            ]
+        },
+        {
+            "name": "DuctFlow",
+            "states": [
+                "Lt_to_Rt",
+                "None",
+                "Rt_to_Lt"
+            ]
+        },
+        {
+            "name": "CardiacMixing",
+            "states": [
+                "None",
+                "Mild",
+                "Complete",
+                "Transp."
+            ]
+        }
+    ],
+    "connectivity": [
+        {
+            "node": "Disease",
+            "incoming": []
+        },
+        {
+            "node": "HypDistrib",
+            "incoming": [
+                "DuctFlow",
+                "CardiacMixing"
+            ]
+        },
+        {
+            "node": "HypoxiaInO2",
+            "incoming": [
+                "CardiacMixing",
+                "LungParench"
+            ]
+        },
+        {
+            "node": "LowerBodyO2",
+            "incoming": [
+                "HypDistrib",
+                "HypoxiaInO2"
+            ]
+        },
+        {
+            "node": "DuctFlow",
+            "incoming": [
+                "Disease"
+            ]
+        },
+        {
+            "node": "CardiacMixing",
+            "incoming": [
+                "Disease"
+            ]
+        }
+    ],
+    "numeric_premises": [
+        {
+            "id": 0,
+            "origin": "Disease",
+            "content": "There is a 29.5% chance that a child suffers from Fallot's Tetralogy, 5% that there is a lung related issue, 22.2% that it suffers from PAIVS, 4.7% for PFC, 5% for TAPVD, and 33.6% for TGA."
+        },
+        {
+            "id": 1,
+            "origin": "LungParench",
+            "content": "There's a 71.71% probability that a child's lung parenchyma will appear normal, an 8.985% probability it will be congested, and a 19.305% chance it will appear abnormal."
+        },
+        {
+            "id": 2,
+            "origin": "DuctFlow",
+            "content": "When a child suffers from PFC, then the flow of blood through the ductus arteriosus is more likely to be from the right to the left side in 80% of the cases, and slightly less likely to be not present or from the left to the right side, with 5% and 15% probability, respectively."
+        },
+        {
+            "id": 3,
+            "origin": "DuctFlow",
+            "content": "In the case of TGA, then the ductus arteriosus, a blood vessel in a fetus that bypasses lung circulation, is more likely to have no flow in 80% of the cases, and there is an equal 10% probability of having flow from the left to the right side or flow from the right to the left side."
+        },
+        {
+            "id": 4,
+            "origin": "DuctFlow",
+            "content": "If a child suffers from Fallot's disease, then the ductus arteriosus, a blood vessel in a fetus that bypasses lung circulation, is highly likely to have flow from the left to the right side in 80% of the cases, and less likely to have no flow in 20% of the cases, while flow from the right to the left side is impossible."
+        },
+        {
+            "id": 5,
+            "origin": "DuctFlow",
+            "content": "If the disease is PAIVS, then the ductus arteriosus, a blood vessel in a fetus that bypasses lung circulation, is certain to have flow from the left to the right side, and there is no chance of having no flow or flow from the right to the left side."
+        },
+        {
+            "id": 6,
+            "origin": "DuctFlow",
+            "content": "If the disease is TAPVD, then the ductus arteriosus, a blood vessel in a fetus that bypasses lung circulation, is slightly more likely to have flow from the left to the right side in 34% of the cases, and equally likely to have no flow or flow from the right to the left side in 33% of the cases."
+        },
+        {
+            "id": 7,
+            "origin": "DuctFlow",
+            "content": "If the disease is lung-related, then the ductus arteriosus, a blood vessel in a fetus that bypasses lung circulation, is equally likely to have no flow or flow from the right to the left side in 40% of the cases, and slightly less likely to have flow from the left to the right side in 20% of the cases."
+        },
+        {
+            "id": 8,
+            "origin": "CardiacMixing",
+            "content": "If a child has the disease PFC, there's a 40% chance of no cardiac mixing, 43% likelihood of mild mixing, 15% chance of complete mixing, and a 2% probability of transposition mixing."
+        },
+        {
+            "id": 9,
+            "origin": "CardiacMixing",
+            "content": "Should the child have the disease TGA, then the probabilities for cardiac mixing are as follows: there's a 2% chance of no cardiac mixing, 9% likelihood of mild mixing, 9% chance of complete mixing, and a substantial 80% probability of transposition mixing."
+        },
+        {
+            "id": 10,
+            "origin": "CardiacMixing",
+            "content": "When a child is diagnosed with Fallot, the cardiac mixing presents these probabilities: 2% chance of no mixing, 16% likelihood of mild mixing, a predominant 80% probability of complete mixing, and again, a 2% chance of transposition mixing."
+        },
+        {
+            "id": 11,
+            "origin": "CardiacMixing",
+            "content": "Should the child's disease be PAIVS, the cardiac mixing conditions are highly likely to be complete, with a 95% probability. The remaining probabilities are: 1% chance of no mixing, 2% likelihood of mild mixing, and a 2% probability of transposition mixing."
+        },
+        {
+            "id": 12,
+            "origin": "CardiacMixing",
+            "content": "If the disease is TAPVD, the cardiac mixing is highly probable to be complete, with a 95% chance. The remaining probabilities are: 1% chance of no mixing, 3% likelihood of mild mixing, and a 1% probability of transposition mixing."
+        },
+        {
+            "id": 13,
+            "origin": "CardiacMixing",
+            "content": "When the disease is lung-related, the cardiac mixing presents these probabilities: 40% chance of no mixing, 53% likelihood of mild mixing, a 5% probability of complete mixing, and a 2% chance of transposition mixing."
+        },
+        {
+            "id": 14,
+            "origin": "HypDistrib",
+            "content": "When blood flows largely from the left to the right side of the ductus arteriosus and there is no cardiac mixing, the distribution of oxygen is likely equal throughout the body in 95% of cases, with a 5% chance of unequal distribution."
+        },
+        {
+            "id": 15,
+            "origin": "HypDistrib",
+            "content": "With blood flowing from the left to the right side of the ductus arteriosus and a mild degree of cardiac mixing, the probability is 95% that the distribution of oxygen is equal throughout the body, and just 5% that it is unevenly distributed."
+        },
+        {
+            "id": 16,
+            "origin": "HypDistrib",
+            "content": "Given blood flow from the left to the right side of the ductus arteriosus and complete cardiac mixing, it is highly probable (95%) that the distribution of oxygen is equal throughout the body, with only a 5% chance of unequal distribution."
+        },
+        {
+            "id": 17,
+            "origin": "HypDistrib",
+            "content": "In the case of blood flowing from the left to the right side of the ductus arteriosus and with transposition cardiac mixing, the probability is 95% that the distribution of oxygen is equal throughout the body, and 5% that it is unevenly distributed."
+        },
+        {
+            "id": 18,
+            "origin": "HypDistrib",
+            "content": "When there is no blood flow in the ductus arteriosus and no cardiac mixing, the distribution of oxygen is likely equal throughout the body in 95% of cases, and unequal in just 5% of cases."
+        },
+        {
+            "id": 19,
+            "origin": "HypDistrib",
+            "content": "In the absence of blood flow in the ductus arteriosus and with mild cardiac mixing, the probability is 95% that the distribution of oxygen is equal throughout the body, and 5% that it is unevenly distributed."
+        },
+        {
+            "id": 20,
+            "origin": "HypDistrib",
+            "content": "If there is no blood flow in the ductus arteriosus and cardiac mixing is complete, the probability is 95% that the distribution of oxygen is equal throughout the body, and 5% that it is unevenly distributed."
+        },
+        {
+            "id": 21,
+            "origin": "HypDistrib",
+            "content": "In the absence of blood flow in the ductus arteriosus and with transposition cardiac mixing, the probability is 95% that the distribution of oxygen is equal throughout the body, and 5% that it is unevenly distributed."
+        },
+        {
+            "id": 22,
+            "origin": "HypDistrib",
+            "content": "When blood flows from the right to the left side of the ductus arteriosus and there is no cardiac mixing, the distribution of oxygen is likely to be unequal in 95% of cases, and equal in only 5% of cases."
+        },
+        {
+            "id": 23,
+            "origin": "HypDistrib",
+            "content": "If blood flows from the right to the left side of the ductus arteriosus and there is mild cardiac mixing, the distribution of oxygen is equally likely to be equal or unequal, with a 50% probability for each."
+        },
+        {
+            "id": 24,
+            "origin": "HypDistrib",
+            "content": "In the case of blood flowing from the right to the left side of the ductus arteriosus and complete cardiac mixing, the probability is 95% that the distribution of oxygen is equal throughout the body, and 5% that it is unevenly distributed."
+        },
+        {
+            "id": 25,
+            "origin": "HypDistrib",
+            "content": "If blood flows from the right to the left side of the ductus arteriosus and there is transposition cardiac mixing, the distribution of oxygen is equally likely to be equal or unequal, with a 50% probability for each."
+        },
+        {
+            "id": 26,
+            "origin": "HypoxiaInO2",
+            "content": "When the mixing of oxygenated and deoxygenated blood in the heart is normal and the lung parenchyma functions properly, there is a 93% probability of mild hypoxia, a 5% probability of moderate hypoxia, and a 2% probability of severe hypoxia in the blood."
+        },
+        {
+            "id": 27,
+            "origin": "HypoxiaInO2",
+            "content": "In the absence of mixing issues in the heart and with congested lung parenchyma, the likelihood of mild hypoxia is only 15%, while there is an 80% chance of moderate hypoxia and a 5% risk of severe hypoxia."
+        },
+        {
+            "id": 28,
+            "origin": "HypoxiaInO2",
+            "content": "With no mixing problems in the heart and abnormal lung parenchyma, there is a 70% probability of mild hypoxia, a 20% chance of moderate hypoxia, and a 10% risk of severe hypoxia."
+        },
+        {
+            "id": 29,
+            "origin": "HypoxiaInO2",
+            "content": "If there is a mild mixing of oxygenated and deoxygenated blood in the heart and normal lung parenchyma, the probability of mild hypoxia is only 10%, while there is an 80% chance of moderate hypoxia and a 10% risk of severe hypoxia."
+        },
+        {
+            "id": 30,
+            "origin": "HypoxiaInO2",
+            "content": "In the case of mild mixing of oxygenated and deoxygenated blood in the heart and congested lung parenchyma, the likelihood of mild hypoxia is 10%, moderate hypoxia is 75%, and severe hypoxia is 15%."
+        },
+        {
+            "id": 31,
+            "origin": "HypoxiaInO2",
+            "content": "When there is mild mixing of oxygenated and deoxygenated blood in the heart and abnormal lung parenchyma, the probability of mild hypoxia is 10%, moderate hypoxia is 65%, and severe hypoxia is 25%."
+        },
+        {
+            "id": 32,
+            "origin": "HypoxiaInO2",
+            "content": "If the mixing of oxygenated and deoxygenated blood in the heart is complete and lung parenchyma is normal, the probability of mild hypoxia is 10%, moderate hypoxia is 70%, and severe hypoxia is 20%."
+        },
+        {
+            "id": 33,
+            "origin": "HypoxiaInO2",
+            "content": "In the case of complete mixing of oxygenated and deoxygenated blood in the heart and congested lung parenchyma, the likelihood of mild hypoxia is 5%, moderate hypoxia is 65%, and severe hypoxia is 30%."
+        },
+        {
+            "id": 34,
+            "origin": "HypoxiaInO2",
+            "content": "When the mixing of oxygenated and deoxygenated blood in the heart is complete and lung parenchyma is abnormal, the probability of mild hypoxia is 10%, moderate hypoxia is 50%, and severe hypoxia is 40%."
+        },
+        {
+            "id": 35,
+            "origin": "HypoxiaInO2",
+            "content": "If the mixing of oxygenated and deoxygenated blood in the heart is transposition (transposition of the great vessels) and lung parenchyma is normal, the probability of mild hypoxia is 2%, moderate hypoxia is 18%, and severe hypoxia is 80%."
+        },
+        {
+            "id": 36,
+            "origin": "HypoxiaInO2",
+            "content": "In the case of transposition of the great vessels (cardiac mixing) and congested lung parenchyma, the likelihood of mild hypoxia is 10%, moderate hypoxia is 30%, and severe hypoxia is 60%."
+        },
+        {
+            "id": 37,
+            "origin": "HypoxiaInO2",
+            "content": "If the mixing of oxygenated and deoxygenated blood in the heart is transposition (transposition of the great vessels) and lung parenchyma is abnormal, the probability of mild hypoxia is 2%, moderate hypoxia is 18%, and severe hypoxia is 80%."
+        },
+        {
+            "id": 38,
+            "origin": "LowerBodyO2",
+            "content": "In the case of an equal distribution of oxygen and a mild hypoxia level, there's a 10% chance of having less than 5 on the lower body oxygen scale, a 30% chance of having a score between 5-12, and a 60% probability of a score of 12 or higher."
+        },
+        {
+            "id": 39,
+            "origin": "LowerBodyO2",
+            "content": "Given an equal distribution of oxygen and a moderate hypoxia level, there's a 30% chance of having a lower body oxygen score below 5, a 60% likelihood of a score between 5-12, and a slim 10% chance of a score of 12 or higher."
+        },
+        {
+            "id": 40,
+            "origin": "LowerBodyO2",
+            "content": "If the distribution of oxygen is equal and the hypoxia level is severe, there's a 50% chance of a lower body oxygen score below 5, a 40% probability of a score between 5-12, and a 10% likelihood of a score of 12 or higher."
+        },
+        {
+            "id": 41,
+            "origin": "LowerBodyO2",
+            "content": "Should the distribution of oxygen be unequal and the hypoxia level mild, there's a 40% chance of a lower body oxygen score below 5, a 50% probability of a score between 5-12, and a 10% likelihood of a score of 12 or higher."
+        },
+        {
+            "id": 42,
+            "origin": "LowerBodyO2",
+            "content": "In the case of unequal oxygen distribution and a moderate hypoxia level, there's a 50% chance of a lower body oxygen score below 5, a 45% probability of a score between 5-12, and a 5% likelihood of a score of 12 or higher."
+        },
+        {
+            "id": 43,
+            "origin": "LowerBodyO2",
+            "content": "If the distribution of oxygen is unequal and the hypoxia level is severe, there's a 60% chance of a lower body oxygen score below 5, a 35% probability of a score between 5-12, and a 5% likelihood of a score of 12 or higher."
+        }
+    ],
+    "wep_based_premises": [
+        {
+            "id": 0,
+            "origin": "Disease",
+            "content": "It is probably not the case that a child suffers from Fallot's Tetralogy, highly unlikely that there is a lung related issue, unlikely that it suffers from PAIVS, unlikely that it suffers from PAIVS, highly unlikely that it suffers from PFC and TAPVD, and the child does probably not suffer from TGA. Out of all, TGA is still the most likely one, closely followed by Fallot's Tetralogy."
+        },
+        {
+            "id": 1,
+            "origin": "LungParench",
+            "content": "It is probable that a child's lung parenchyma will appear normal, improbable that it will be congested, and unlikely that it will appear abnormal."
+        },
+        {
+            "id": 2,
+            "origin": "DuctFlow",
+            "content": "If a child has Persistent Fetal Circulation (PFC), then chances are slight that the blood flow through the ductus arteriosus is from left to right, whereas it is highly unlikely that there is no flow in the ductus arteriosus. Moreover, if a child has PFC, there is a very good chance that the blood flow through the ductus arteriosus is from right to left."
+        },
+        {
+            "id": 3,
+            "origin": "DuctFlow",
+            "content": "If a child has Transposition of the Great Arteries (TGA), then it is improbable that the blood flow through the ductus arteriosus is from left to right, whereas there is a very good chance that there is no flow in the ductus arteriosus. Furthermore, if a child has TGA, chances are slight that the blood flow through the ductus arteriosus is from right to left."
+        },
+        {
+            "id": 4,
+            "origin": "DuctFlow",
+            "content": "If a child has Tetralogy of Fallot, then there is a very good chance that the blood flow through the ductus arteriosus is from left to right, whereas it is unlikely that there is no flow in the ductus arteriosus. Furthermore, if a child has Tetralogy of Fallot, it is impossible that the blood flow through the ductus arteriosus is from right to left."
+        },
+        {
+            "id": 5,
+            "origin": "DuctFlow",
+            "content": "If a child has Pulmonary Atresia with Intact Ventricular Septum (PAIVS), then it is certain that the blood flow through the ductus arteriosus is from left to right, whereas it is impossible that there is no flow in the ductus arteriosus or that the blood flow is from right to left."
+        },
+        {
+            "id": 6,
+            "origin": "DuctFlow",
+            "content": "If a child has Total Anomalous Pulmonary Venous Drainage (TAPVD), then there is an about even chance that the blood flow through the ductus arteriosus is from left to right, right to left or that there is no blood flow at all."
+        },
+        {
+            "id": 7,
+            "origin": "DuctFlow",
+            "content": "If a child has a lung-related disease, then it is unlikely that the blood flow through the ductus arteriosus is from left to right, whereas there is an about even chance that there is no flow or that the blood flow is from right to left."
+        },
+        {
+            "id": 8,
+            "origin": "CardiacMixing",
+            "content": "Given that a child suffers from PFC, the chances of cardiac mixing being non-existent or mild are roughly even, while the chance of it being complete is improbable, whereas there is almost no chance of transposition of the great arteries when it comes to cardiac mixing."
+        },
+        {
+            "id": 9,
+            "origin": "CardiacMixing",
+            "content": "If a child is diagnosed with TGA (transposition of the great arteries), then there is almost no chance that cardiac mixing is non-existent, and only slight chances that it is mild. The likelihood of complete cardiac mixing is little, but the child has a very good chance of having transposition of the great arteries as condition of cardiac mixing."
+        },
+        {
+            "id": 10,
+            "origin": "CardiacMixing",
+            "content": "In the case of a child with fallot's tetralogy, there is almost no chance that cardiac mixing is non-existent or related to transposition of the great arteries. However, it is unlikely that cardiac mixing is mild, and there is a very good chance that it is complete."
+        },
+        {
+            "id": 11,
+            "origin": "CardiacMixing",
+            "content": "If a child is diagnosed with PAIVS, then there is almost no chance that cardiac mixing is non-existent, mild, or related to transposition of the great arteries. However, it is almost certain that cardiac mixing is complete."
+        },
+        {
+            "id": 12,
+            "origin": "CardiacMixing",
+            "content": "In the case of a child with TAPVD (Total Anomalous Pulmonary Venous Drainage), there is almost no chance that cardiac mixing is non-existent, mild, or related to transposition of the great arteries. However, it is almost certain that cardiac mixing is complete."
+        },
+        {
+            "id": 13,
+            "origin": "CardiacMixing",
+            "content": "If a child is diagnosed with a lung disease, then there is an about even chance that cardiac mixing is non-existent or mild, while it is highly unlikely that cardiac mixing is complete. The chance of cardiac mixing being related to transposition of the great arteries is almost none."
+        },
+        {
+            "id": 14,
+            "origin": "HypDistrib",
+            "content": "Given that the flow of blood from the left to the right side of the ductus arteriosus is present and there is no mixing of oxygenated and deoxygenated blood in the heart (no cardiac mixing), it is then almost certain that the distribution of oxygen within the body is equal, and it is highly unlikely that the distribution is unequal."
+        },
+        {
+            "id": 15,
+            "origin": "HypDistrib",
+            "content": "With blood flowing from the left to the right side of the ductus arteriosus and a mild degree of cardiac mixing, it is almost certain that the distribution of oxygen is equal throughout the body, and it is highly unlikely that it is unevenly distributed."
+        },
+        {
+            "id": 16,
+            "origin": "HypDistrib",
+            "content": "Given that the flow of blood from the left to the right side of the ductus arteriosus is present and there is complete mixing of oxygenated and deoxygenated blood in the heart, i.e., complete cardiac mixing, it is then highly likely that the distribution of oxygen within the body is equal, and it is highly unlikely that the distribution is unequal."
+        },
+        {
+            "id": 17,
+            "origin": "HypDistrib",
+            "content": "Given that the flow of blood from the left to the right side of the ductus arteriosus is present and there is transposition of the great arteries when it comes to cardiac mixing, it is then highly likely that the distribution of oxygen within the body is equal, and it is highly unlikely that the distribution is unequal."
+        },
+        {
+            "id": 18,
+            "origin": "HypDistrib",
+            "content": "Given that there is no flow in the ductus arteriosus and no mixing of oxygenated and deoxygenated blood in the heart (i.e., no cardiac mixing), it is then almost certain that the distribution of oxygen within the body is equal, and it is highly unlikely that the distribution is unequal."
+        },
+        {
+            "id": 19,
+            "origin": "HypDistrib",
+            "content": "Given that there is no flow in the ductus arteriosus and there is mild mixing of oxygenated and deoxygenated blood in the heart, it is then highly likely that the distribution of oxygen within the body is equal, and it is highly unlikely that the distribution is unequal."
+        },
+        {
+            "id": 20,
+            "origin": "HypDistrib",
+            "content": "Given that there is no flow in the ductus arteriosus and there is complete mixing of oxygenated and deoxygenated blood in the heart, it is then highly likely that the distribution of oxygen within the body is equal, and it is highly unlikely that the distribution is unequal."
+        },
+        {
+            "id": 21,
+            "origin": "HypDistrib",
+            "content": "Given that there is no flow in the ductus arteriosus and there is transposition of the great arteries when it comes to cardiac mixing, it is then highly unlikely that the distribution of oxygen within the body is unequal, and it is almost certain that the distribution is equal."
+        },
+        {
+            "id": 22,
+            "origin": "HypDistrib",
+            "content": "Given that the flow of blood is from the right to the left side of the ductus arteriosus and there is no mixing of oxygenated and deoxygenated blood in the heart, it is then highly unlikely that the distribution of oxygen within the body is unequal, and it is almost certain that the distribution is equal."
+        },
+        {
+            "id": 23,
+            "origin": "HypDistrib",
+            "content": "Given that the flow of blood is from the right to the left side of the ductus arteriosus and there is mild mixing of oxygenated and deoxygenated blood in the heart, there are about even chances that the distribution of oxygen within the body is equal or unequal."
+        },
+        {
+            "id": 24,
+            "origin": "HypDistrib",
+            "content": "Given that the flow of blood is from the right to the left side of the ductus arteriosus and there is complete mixing of oxygenated and deoxygenated blood in the heart, it is then almost certain that the distribution of oxygen within the body is equal, and it is highly unlikely that the distribution is unequal."
+        },
+        {
+            "id": 25,
+            "origin": "HypDistrib",
+            "content": "Given that the flow of blood is from the right to the left side of the ductus arteriosus and there is transposition of the great arteries when it comes to cardiac mixing, there are about even chances that the distribution of oxygen within the body is equal or unequal."
+        },
+        {
+            "id": 26,
+            "origin": "HypoxiaInO2",
+            "content": "Given that the mixing of oxygenated and deoxygenated blood in the heart is normal and the lung parenchyma (the functional tissue of the lungs) is also normal, it is almost certain that the hypoxia in the oxygen level of the blood is mild, whereas it is highly unlikely that the hypoxia is moderate, and there is almost no chance that the hypoxia is severe."
+        },
+        {
+            "id": 27,
+            "origin": "HypoxiaInO2",
+            "content": "Given that the mixing of oxygenated and deoxygenated blood in the heart is normal and the lung parenchyma is congested, there is only little chance that the hypoxia in the oxygen level of the blood is mild, whereas there is a very good chance that the hypoxia is moderate, and it is still relatively unlikely, but there is a chance that the hypoxia is severe."
+        },
+        {
+            "id": 28,
+            "origin": "HypoxiaInO2",
+            "content": "Given that the mixing of oxygenated and deoxygenated blood in the heart is normal and the lung parenchyma is abnormal, it is likely that the hypoxia in the oxygen level of the blood is mild, whereas moderate hypoxia is unlikely. There is also a slight chance that the hypoxia is severe."
+        },
+        {
+            "id": 29,
+            "origin": "HypoxiaInO2",
+            "content": "Given that the mixing of oxygenated and deoxygenated blood in the heart is mildly abnormal and the lung parenchyma is normal, there is little chance that the hypoxia in the oxygen level of the blood is mild. However, it is more probable that the hypoxia is moderate. There is only little chance for severe hypoxia."
+        },
+        {
+            "id": 30,
+            "origin": "HypoxiaInO2",
+            "content": "Given that the mixing of oxygenated and deoxygenated blood in the heart is mildly abnormal and the lung parenchyma is congested, there is only little chance that the hypoxia in the oxygen level of the blood is mild. However, there is a very good chance that the hypoxia is moderate. There is also a slight chance that the hypoxia is severe."
+        },
+        {
+            "id": 31,
+            "origin": "HypoxiaInO2",
+            "content": "Given that the mixing of oxygenated and deoxygenated blood in the heart is mildly abnormal and the lung parenchyma is abnormal, there is only little chance that the hypoxia in the oxygen level of the blood is mild. However, it is probable that the hypoxia is moderate, whereas there is probably no severe hypoxia."
+        },
+        {
+            "id": 32,
+            "origin": "HypoxiaInO2",
+            "content": "Given that the mixing of oxygenated and deoxygenated blood in the heart is completely abnormal and the lung parenchyma is normal, there is only little chance that the hypoxia in the oxygen level of the blood is mild. However, it is likely that the hypoxia is moderate. It is unlikely that the hypoxia is severe."
+        },
+        {
+            "id": 33,
+            "origin": "HypoxiaInO2",
+            "content": "Given that the mixing of oxygenated and deoxygenated blood in the heart is completely abnormal and the lung parenchyma is congested, it is highly unlikely that the hypoxia in the oxygen level of the blood is mild. However, it is probable that the hypoxia is moderate. It is also unlikely that the hypoxia is severe."
+        },
+        {
+            "id": 34,
+            "origin": "HypoxiaInO2",
+            "content": "Given that the mixing of oxygenated and deoxygenated blood in the heart is completely abnormal and the lung parenchyma is abnormal, chances are slight that the hypoxia in the oxygen level of the blood is mild. The chances of moderate and severe hypoxia are about even for both."
+        },
+        {
+            "id": 35,
+            "origin": "HypoxiaInO2",
+            "content": "Given that the mixing of oxygenated and deoxygenated blood in the heart is transpositioned (transposition of the great arteries) and the lung parenchyma is normal, there is almost no chance that the hypoxia in the oxygen level of the blood is mild. It is also unlikely that the hypoxia is moderate. However, there are very good chances that the hypoxia is severe."
+        },
+        {
+            "id": 36,
+            "origin": "HypoxiaInO2",
+            "content": "Given that the mixing of oxygenated and deoxygenated blood in the heart is transpositioned (transposition of the great arteries) and the lung parenchyma is congested, chances are slight that the hypoxia in the oxygen level of the blood is mild. There is also probably no moderate hypoxia. However, there is a better than even chance that the hypoxia is severe."
+        },
+        {
+            "id": 37,
+            "origin": "HypoxiaInO2",
+            "content": "Given that the mixing of oxygenated and deoxygenated blood in the heart is transpositioned (transposition of the great arteries) and the lung parenchyma is abnormal, there is almost no chance that the hypoxia in the oxygen level of the blood is mild. It is also unlikely that the hypoxia is moderate. However, there is a very good chance that the hypoxia is severe."
+        },
+        {
+            "id": 38,
+            "origin": "LowerBodyO2",
+            "content": "Assuming that the distribution of oxygen in the body is equal and the hypoxia in the oxygen level is mild, then there is only a slight chance for the oxygen level in the lower body being less than 5, while the range is probably not between 5-12; however, there is a better than even chance for 12 or above."
+        },
+        {
+            "id": 39,
+            "origin": "LowerBodyO2",
+            "content": "Assuming that the distribution of oxygen in the body is equal and the hypoxia in the oxygen level is moderate, then there is only a little chance for the oxygen level in the lower body being less more than 12, while it is probably not less than 5; however, there is a better than even chance for 5-12."
+        },
+        {
+            "id": 40,
+            "origin": "LowerBodyO2",
+            "content": "Assuming that the distribution of oxygen in the body is equal and the hypoxia in the oxygen level is severe, then there is an about even chance of the oxygen level in the lower body being less than 5 or between 5-12, whereas 12 or above is improbable."
+        },
+        {
+            "id": 41,
+            "origin": "LowerBodyO2",
+            "content": "Assuming that the distribution of oxygen in the body is equal and the hypoxia in the oxygen level is severe, then there is an about even chance of the oxygen level in the lower body being less than 5 or between 5-12, whereas 12 or above is improbable."
+        },
+        {
+            "id": 42,
+            "origin": "LowerBodyO2",
+            "content": "Assuming that the distribution of oxygen in the body is equal and the hypoxia in the oxygen level is severe, then there is an about even chance of the oxygen level in the lower body being less than 5 or between 5-12, whereas 12 or above is highly unlikely."
+        },
+        {
+            "id": 43,
+            "origin": "LowerBodyO2",
+            "content": "Assuming that the distribution of oxygen in the body is unequal and the hypoxia in the oxygen level is severe, then there is a better than even chance for the lower body being less than 5, whereas it is probably not between 5-12, and for 12 it can be asumed to be highly unlikely."
+        }
+    ],
+    "evidence_query_pairs": [
+        {
+            "id": 0,
+            "evidences": [
+                "The oxygen level in the lower part of the body is less than 5.",
+                "The flow of blood through the ductus arteriosus is from the right side to the left side.",
+                "There is no mixing of oxygenated and deoxygenated blood in the heart.",
+                "The hypoxia in the oxygen level in the blood is severe."
+            ],
+            "query": "What is the likelihood of the distribution of oxygen being equal in the body?",
+            "answer": 0.042016807,
+            "reasoning_types": [
+                "causal",
+                "explaining_away"
+            ]
+        },
+        {
+            "id": 1,
+            "evidences": [
+                "A child has severe hypoxia in their oxygen distribution."
+            ],
+            "query": "What is the likelihood of this child having no blood flow through the ductus arteriosus?",
+            "answer": 0.53284889,
+            "reasoning_types": [
+                "evidential"
+            ]
+        },
+        {
+            "id": 2,
+            "evidences": [
+                "The oxygen level in the lower part of the body is between 5 and 12.",
+                "The child has a moderate level of hypoxia.",
+                "The flow through the ductus arteriosus is normal (None).",
+                "There is no mixing of oxygenated and deoxygenated blood in the heart."
+            ],
+            "query": "Given the lower body oxygen levels and the moderate hypoxia, what is the likelihood of an unequal distribution of oxygen in the body?",
+            "answer": -1,
+            "reasoning_types": [
+                "causal",
+                "explaining_away"
+            ]
+        },
+        {
+            "id": 3,
+            "evidences": [
+                "A child has severe hypoxia in the blood."
+            ],
+            "query": "What is the likelihood of this child having lower oxygen levels in the range of less than 5.",
+            "answer": 0.50837767,
+            "reasoning_types": [
+                "causal"
+            ]
+        },
+        {
+            "id": 4,
+            "evidences": [
+                "A child has severe hypoxia in the blood oxygen levels.",
+                "The oxygen levels in the lower part of the body are between 5 and 12."
+            ],
+            "query": "What is the likelihood of this child having no flow through the ductus arteriosus?",
+            "answer": 0.53512244,
+            "reasoning_types": [
+                "evidential"
+            ]
+        },
+        {
+            "id": 5,
+            "evidences": [
+                "The flow of blood through the ductus arteriosus is non-existent.",
+                "Oxygen levels in the lower part of the body are between 5 and 12.",
+                "The child has severe hypoxia, indicating very low oxygen levels in the blood."
+            ],
+            "query": "Given these conditions, what is the likelihood of the distribution of oxygen within the body being equal in the upper and lower parts?",
+            "answer": 0.95597484,
+            "reasoning_types": [
+                "causal",
+                "explaining_away"
+            ]
+        },
+        {
+            "id": 6,
+            "evidences": [
+                "The oxygen level in the lower part of the body is less than 5.",
+                "There is no mixing of oxygenated and deoxygenated blood in the heart."
+            ],
+            "query": "What is the likelihood of the blood flow in the ductus arteriosus going from the left to the right side?",
+            "answer": 0.15903472,
+            "reasoning_types": [
+                "evidential"
+            ]
+        },
+        {
+            "id": 7,
+            "evidences": [
+                "The oxygen level in the lower part of the body is 12 or above."
+            ],
+            "query": "What is the likelihood of this child having mild hypoxia, or low oxygen levels in the blood?",
+            "answer": 0.40199337,
+            "reasoning_types": [
+                "evidential"
+            ]
+        },
+        {
+            "id": 8,
+            "evidences": [
+                "The distribution of oxygen in the body is unequal.",
+                "The ductus arteriosus flow is non-existent.",
+                "The oxygen level in the lower body is 12 or above."
+            ],
+            "query": "What is the likelihood of this child having a moderate level of hypoxia in the oxygen supply?",
+            "answer": 0.34343458,
+            "reasoning_types": [
+                "explaining_away"
+            ]
+        },
+        {
+            "id": 9,
+            "evidences": [
+                "The oxygen level in the lower part of the body is between 5 and 12.",
+                "The blood flow in the ductus arteriosus is from left to right."
+            ],
+            "query": "What is the likelihood of this child having mild hypoxia, or low oxygen levels in the blood?",
+            "answer": 0.067740259,
+            "reasoning_types": [
+                "evidential"
+            ]
+        },
+        {
+            "id": 10,
+            "evidences": [
+                "The oxygen distribution in the body is unequal.",
+                "The level of hypoxia, or low oxygen in the blood, is severe.",
+                "There is transposition of the great arteries, causing oxygenated and deoxygenated blood to mix in the heart.",
+                "The oxygen level in the lower part of the body is less than 5."
+            ],
+            "query": "What is the likelihood of there being no flow in the ductus arteriosus?",
+            "answer": 0.40502622,
+            "reasoning_types": [
+                "explaining_away"
+            ]
+        },
+        {
+            "id": 11,
+            "evidences": [
+                "The oxygen level in the lower part of the body is less than 5."
+            ],
+            "query": "What is the likelihood of this child having abnormal blood mixing in the heart, indicating transposition of the great arteries?",
+            "answer": 0.0,
+            "reasoning_types": [
+                "evidential"
+            ]
+        },
+        {
+            "id": 12,
+            "evidences": [
+                "The oxygen distribution in the body is unequal.",
+                "The oxygen level in the lower part of the body is less than 5.",
+                "There is no flow through the ductus arteriosus."
+            ],
+            "query": "What is the likelihood of blood mixing in the heart due to transposition?",
+            "answer": 0.62400218,
+            "reasoning_types": [
+                "evidential"
+            ]
+        },
+        {
+            "id": 13,
+            "evidences": [
+                "A child has severe hypoxia, that is, low levels of oxygen in the blood."
+            ],
+            "query": "What is the likelihood of this child having an equal distribution of oxygen within the body?",
+            "answer": 0.91622326,
+            "reasoning_types": []
+        },
+        {
+            "id": 14,
+            "evidences": [
+                "The distribution of oxygen within the body is unequal.",
+                "The flow of blood through the ductus arteriosus in the child is non-existent."
+            ],
+            "query": "What is the likelihood of there being no mixing of oxygenated and deoxygenated blood in the heart of the child?",
+            "answer": 0.04271376,
+            "reasoning_types": [
+                "explaining_away"
+            ]
+        },
+        {
+            "id": 15,
+            "evidences": [
+                "There is complete mixing of oxygenated and deoxygenated blood in the heart.",
+                "The lower body oxygen levels are between 5 and 12."
+            ],
+            "query": "What is the likelihood of the ductus flow being from the right side to the left side of the heart?",
+            "answer": 0.047434433,
+            "reasoning_types": [
+                "evidential"
+            ]
+        },
+        {
+            "id": 16,
+            "evidences": [
+                "There is mild hypoxia in the body."
+            ],
+            "query": "Given that a child has mild hypoxia, what is the likelihood of them having mild cardiac mixing (i.e., mixing of oxygenated and deoxygenated blood in the heart) due to a congenital heart defect?",
+            "answer": 0.11230556,
+            "reasoning_types": [
+                "evidential"
+            ]
+        }
+    ]
+}

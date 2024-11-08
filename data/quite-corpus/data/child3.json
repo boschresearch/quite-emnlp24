@@ -1,0 +1,425 @@
+{
+    "nodes": [
+        {
+            "name": "Disease",
+            "states": [
+                "PFC",
+                "TGA",
+                "Fallot",
+                "PAIVS",
+                "TAPVD",
+                "Lung"
+            ]
+        },
+        {
+            "name": "LVHreport",
+            "states": [
+                "yes",
+                "no"
+            ]
+        },
+        {
+            "name": "LVH",
+            "states": [
+                "yes",
+                "no"
+            ]
+        }
+    ],
+    "connectivity": [
+        {
+            "node": "Disease",
+            "incoming": []
+        },
+        {
+            "node": "LVHreport",
+            "incoming": [
+                "LVH"
+            ]
+        },
+        {
+            "node": "LVH",
+            "incoming": [
+                "Disease"
+            ]
+        }
+    ],
+    "numeric_premises": [
+        {
+            "id": 0,
+            "origin": "Disease",
+            "content": "There is a 29.5% chance that a child suffers from Fallot's Tetralogy, 5% that there is a lung related issue, 22.2% that it suffers from PAIVS, 4.7% for PFC, 5% for TAPVD, and 33.6% for TGA."
+        },
+        {
+            "id": 1,
+            "origin": "LVH",
+            "content": "If a child is diagnosed with PFC, the likelihood of Left Ventricular Hypertrophy (LVH) being present is quite low, with a 90% probability of it being absent and only a 10% chance of it being present."
+        },
+        {
+            "id": 2,
+            "origin": "LVH",
+            "content": "In the case of a TGA-diagnosed child, the probability of Left Ventricular Hypertrophy (LVH) being absent is high, with a 90% chance of it not being present and only a 10% likelihood of it being present."
+        },
+        {
+            "id": 3,
+            "origin": "LVH",
+            "content": "When a child is diagnosed with Fallot, the probability of Left Ventricular Hypertrophy (LVH) being absent is high, with a 90% chance of it not being present and just a 10% probability of it being present."
+        },
+        {
+            "id": 4,
+            "origin": "LVH",
+            "content": "In the context of a PAIVS-diagnosed child, the likelihood of Left Ventricular Hypertrophy (LVH) being present is high, with a 90% probability of it being present and only a 10% chance of it not being present."
+        },
+        {
+            "id": 5,
+            "origin": "LVH",
+            "content": "When a child is diagnosed with TAPVD, the probability of Left Ventricular Hypertrophy (LVH) being absent is very high, with a 95% chance of it not being present and only a 5% likelihood of it being present."
+        },
+        {
+            "id": 6,
+            "origin": "LVH",
+            "content": "In the case of a child with a lung disease, the likelihood of Left Ventricular Hypertrophy (LVH) being present is quite low, with a 90% probability of it being absent and only a 10% chance of it being present."
+        },
+        {
+            "id": 7,
+            "origin": "LVHreport",
+            "content": "If a child is diagnosed with Left Ventricular Hypertrophy (LVH), there is a 90% probability of the diagnosis being confirmed through a medical report, and only a 10% chance of no such report."
+        },
+        {
+            "id": 8,
+            "origin": "LVHreport",
+            "content": "In the absence of Left Ventricular Hypertrophy (LVH) in a child, there is only a 5% probability of a medical report indicating its presence, and a 95% chance that no such report will be issued."
+        }
+    ],
+    "wep_based_premises": [
+        {
+            "id": 0,
+            "origin": "Disease",
+            "content": "It is probably not the case that a child suffers from Fallot's Tetralogy, highly unlikely that there is a lung related issue, unlikely that it suffers from PAIVS, unlikely that it suffers from PAIVS, highly unlikely that it suffers from PFC and TAPVD, and the child does probably not suffer from TGA. Out of all, TGA is still the most likely one, closely followed by Fallot's Tetralogy."
+        },
+        {
+            "id": 1,
+            "origin": "LVH",
+            "content": "If a disease can be classified as disease that may be caused by or related to birth asphyxia, then it is highly likely that a medical diagnosis would confirm the absence of Left Ventricular Hypertrophy (LVH), an enlargement and thickening of the walls of the heart's left ventricle that could result from long-term pressure overload."
+        },
+        {
+            "id": 2,
+            "origin": "LVH",
+            "content": "If a disease can be classified as Transposition of the Great Arteries (TGA), then there is little chance that a medical diagnosis would confirm the presence of Left Ventricular Hypertrophy."
+        },
+        {
+            "id": 3,
+            "origin": "LVH",
+            "content": "If a disease can be classified as Tetralogy of Fallot, then there is little chance that a medical diagnosis would confirm the presence of Left Ventricular Hypertrophy."
+        },
+        {
+            "id": 4,
+            "origin": "LVH",
+            "content": "If a disease can be classified as Partial Anomalous Pulmonary Venous Return (PAIVS), then it is highly likely that a medical diagnosis would confirm the presence of Left Ventricular Hypertrophy."
+        },
+        {
+            "id": 5,
+            "origin": "LVH",
+            "content": "If a disease can be classified as Total Anomalous Pulmonary Venous Return (TAPVD), then it is highly unlikely that a medical diagnosis would confirm the presence of Left Ventricular Hypertrophy."
+        },
+        {
+            "id": 6,
+            "origin": "LVH",
+            "content": "If a disease can be classified as lung-related disease, then it is improbable that a medical diagnosis would confirm the presence of Left Ventricular Hypertrophy."
+        },
+        {
+            "id": 7,
+            "origin": "LVHreport",
+            "content": "If Left Ventricular Hypertrophy (LVH) is present, then it is highly likely that there is a medical report or diagnosis confirming this condition, as LVH could be a result of long-term pressure overload."
+        },
+        {
+            "id": 8,
+            "origin": "LVHreport",
+            "content": "If Left Ventricular Hypertrophy (LVH) is not present, then it is highly unlikely to have a medical report or diagnosis confirming this condition."
+        }
+    ],
+    "evidence_query_pairs": [
+        {
+            "id": 0,
+            "evidences": [
+                "The child has a medical report indicating Left Ventricular Hypertrophy."
+            ],
+            "query": "What is the likelihood that the child has Transposition of the Great Arteries (TGA)?",
+            "answer": 0.15981116,
+            "reasoning_types": [
+                "evidential"
+            ],
+            "sampled_nodes": [
+                "LVHreport",
+                "Disease"
+            ]
+        },
+        {
+            "id": 1,
+            "evidences": [
+                "The child does not have a medical report or diagnosis confirming Left Ventricular Hypertrophy."
+            ],
+            "query": "What is the likelihood of this child having Fallot's disease?",
+            "answer": 0.35630755,
+            "reasoning_types": [
+                "evidential"
+            ],
+            "sampled_nodes": [
+                "LVHreport",
+                "Disease"
+            ]
+        },
+        {
+            "id": 2,
+            "evidences": [
+                "The child has Left Ventricular Hypertrophy."
+            ],
+            "query": "What is the likelihood that the child has PAIVS?",
+            "answer": 0.72628135,
+            "reasoning_types": [
+                "evidential"
+            ],
+            "sampled_nodes": [
+                "LVH",
+                "Disease"
+            ]
+        },
+        {
+            "id": 3,
+            "evidences": [
+                "The child does not have Left Ventricular Hypertrophy."
+            ],
+            "query": "What is the likelihood of this child having lung disease?",
+            "answer": 0.062077528,
+            "reasoning_types": [
+                "evidential"
+            ],
+            "sampled_nodes": [
+                "LVH",
+                "Disease"
+            ]
+        },
+        {
+            "id": 4,
+            "evidences": [
+                "The child has a medical report indicating Left Ventricular Hypertrophy.",
+                "The child has Left Ventricular Hypertrophy."
+            ],
+            "query": "What is the likelihood that the child suffers from PAIVS?",
+            "answer": 0.72628135,
+            "reasoning_types": [
+                "evidential"
+            ],
+            "sampled_nodes": [
+                "LVHreport",
+                "LVH",
+                "Disease"
+            ]
+        },
+        {
+            "id": 5,
+            "evidences": [
+                "The child has a medical report indicating Left Ventricular Hypertrophy.",
+                "The child does not have Left Ventricular Hypertrophy."
+            ],
+            "query": "What is the likelihood that the disease is PAIVS?",
+            "answer": 0.030624914,
+            "reasoning_types": [
+                "evidential"
+            ],
+            "sampled_nodes": [
+                "LVHreport",
+                "LVH",
+                "Disease"
+            ]
+        },
+        {
+            "id": 6,
+            "evidences": [
+                "The child does not have a medical report or diagnosis confirming Left Ventricular Hypertrophy.",
+                "The child has Left Ventricular Hypertrophy."
+            ],
+            "query": "What is the likelihood of this child having a lung-related disease?",
+            "answer": 0.018175209,
+            "reasoning_types": [
+                "evidential"
+            ],
+            "sampled_nodes": [
+                "LVHreport",
+                "LVH",
+                "Disease"
+            ]
+        },
+        {
+            "id": 7,
+            "evidences": [
+                "The child does not have a medical report or diagnosis confirming Left Ventricular Hypertrophy.",
+                "The child does not have Left Ventricular Hypertrophy."
+            ],
+            "query": "What is the likelihood of this child having a disease called PFC?",
+            "answer": 0.058352876,
+            "reasoning_types": [
+                "evidential"
+            ],
+            "sampled_nodes": [
+                "LVHreport",
+                "LVH",
+                "Disease"
+            ]
+        },
+        {
+            "id": 8,
+            "evidences": [
+                "The child has a disease known as PFC."
+            ],
+            "query": "What is the likelihood that there is no medical report or diagnosis confirming the presence of Left Ventricular Hypertrophy (LVH)?",
+            "answer": 0.865,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "Disease",
+                "LVHreport"
+            ]
+        },
+        {
+            "id": 9,
+            "evidences": [
+                "The child has Transposition of the Great Arteries."
+            ],
+            "query": "What is the likelihood that there is a medical report or diagnosis confirming the presence of Left Ventricular Hypertrophy?",
+            "answer": 0.135,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "Disease",
+                "LVHreport"
+            ]
+        },
+        {
+            "id": 10,
+            "evidences": [
+                "The child has Fallot's disease."
+            ],
+            "query": "What is the likelihood that this child has a medical report or diagnosis confirming the presence of Left Ventricular Hypertrophy?",
+            "answer": 0.135,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "Disease",
+                "LVHreport"
+            ]
+        },
+        {
+            "id": 11,
+            "evidences": [
+                "The child has PAIVS."
+            ],
+            "query": "What is the likelihood that there is a medical report or diagnosis confirming the presence of Left Ventricular Hypertrophy (LVH)?",
+            "answer": 0.815,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "Disease",
+                "LVHreport"
+            ]
+        },
+        {
+            "id": 12,
+            "evidences": [
+                "The child has Total Anomalous Pulmonary Venous Return (TAPVD), a congenital heart defect."
+            ],
+            "query": "What is the likelihood that there is a medical report or diagnosis confirming Left Ventricular Hypertrophy?",
+            "answer": 0.0925,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "Disease",
+                "LVHreport"
+            ]
+        },
+        {
+            "id": 13,
+            "evidences": [
+                "The child has a lung disease."
+            ],
+            "query": "What is the likelihood of this child not having Left Ventricular Hypertrophy?",
+            "answer": 0.865,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "Disease",
+                "LVHreport"
+            ]
+        },
+        {
+            "id": 14,
+            "evidences": [
+                "The child has Left Ventricular Hypertrophy."
+            ],
+            "query": "What is the likelihood that there is a medical report indicating the presence of Left Ventricular Hypertrophy?",
+            "answer": 0.9,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "LVH",
+                "LVHreport"
+            ]
+        },
+        {
+            "id": 15,
+            "evidences": [
+                "The child does not have Left Ventricular Hypertrophy."
+            ],
+            "query": "What is the likelihood that there is no medical report or diagnosis confirming the presence of Left Ventricular Hypertrophy?",
+            "answer": 0.95,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "LVH",
+                "LVHreport"
+            ]
+        },
+        {
+            "id": 16,
+            "evidences": [
+                "The child has a disease known as PFC.",
+                "The child has Left Ventricular Hypertrophy (LVH)."
+            ],
+            "query": "What is the likelihood that there is no medical report or diagnosis confirming the presence of Left Ventricular Hypertrophy?",
+            "answer": 0.1,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "Disease",
+                "LVH",
+                "LVHreport"
+            ]
+        },
+        {
+            "id": 17,
+            "evidences": [
+                "The child has a disease known as PFC.",
+                "The child does not have Left Ventricular Hypertrophy (LVH)."
+            ],
+            "query": "What is the likelihood that a medical report or diagnosis confirms the presence of Left Ventricular Hypertrophy (LVH) for this child?",
+            "answer": 0.05,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "Disease",
+                "LVH",
+                "LVHreport"
+            ]
+        }
+    ]
+}

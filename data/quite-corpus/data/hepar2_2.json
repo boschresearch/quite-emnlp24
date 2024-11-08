@@ -1,0 +1,206 @@
+{
+    "nodes": [
+        {
+            "name": "alcoholism",
+            "states": [
+                "present",
+                "absent"
+            ]
+        },
+        {
+            "name": "diabetes",
+            "states": [
+                "present",
+                "absent"
+            ]
+        },
+        {
+            "name": "obesity",
+            "states": [
+                "present",
+                "absent"
+            ]
+        },
+        {
+            "name": "Steatosis",
+            "states": [
+                "present",
+                "absent"
+            ]
+        }
+    ],
+    "connectivity": [
+        {
+            "node": "alcoholism",
+            "incoming": []
+        },
+        {
+            "node": "diabetes",
+            "incoming": []
+        },
+        {
+            "node": "obesity",
+            "incoming": [
+                "diabetes"
+            ]
+        },
+        {
+            "node": "Steatosis",
+            "incoming": [
+                "obesity",
+                "alcoholism"
+            ]
+        }
+    ],
+    "numeric_premises": [
+        {
+            "id": 0,
+            "origin": "alcoholism",
+            "content": "With a 13.59% likelihood, a patient has alcoholism, while in 86.41% of the cases, alcoholism is absent."
+        },
+        {
+            "id": 1,
+            "origin": "diabetes",
+            "content": "With a 3.58% chance of its presence and a 96.42% probability of its absence, diabetes is rarely diagnosed in this context."
+        },
+        {
+            "id": 2,
+            "origin": "obesity",
+            "content": "If someone has been diagnosed with diabetes, the probability that they are also obese is 24%, and conversely, the probability that they are not obese is 76%."
+        },
+        {
+            "id": 3,
+            "origin": "obesity",
+            "content": "In the absence of diabetes, the probability that someone is obese is relatively low at 6.23%, and therefore, the probability that they are not obese is significantly higher at 93.77%."
+        },
+        {
+            "id": 4,
+            "origin": "Steatosis",
+            "content": "If a patient is both obese and struggles with alcoholism, there is a 36.36% chance that they also have steatosis, or fatty liver disease, and a 63.64% chance that they do not."
+        },
+        {
+            "id": 5,
+            "origin": "Steatosis",
+            "content": "In the case where a patient is obese but does not battle alcoholism, they have an 18.92% chance of having steatosis, or fatty liver disease, and an 81.08% chance of being free from this condition."
+        },
+        {
+            "id": 6,
+            "origin": "Steatosis",
+            "content": "When a patient is not obese but suffers from alcoholism, they have a 23.81% chance of having steatosis, or fatty liver disease, and a 76.19% chance of not having this condition."
+        },
+        {
+            "id": 7,
+            "origin": "Steatosis",
+            "content": "In the scenario where a patient has neither obesity nor alcoholism, they have a 6.35% chance of having steatosis, or fatty liver disease, and a 93.65% chance of not having this condition."
+        }
+    ],
+    "wep_based_premises": [
+        {
+            "id": 0,
+            "origin": "alcoholism",
+            "content": "There is only a little chance that a patient is addicted to alcohol."
+        },
+        {
+            "id": 1,
+            "origin": "diabetes",
+            "content": "It is highly unlikely for diabetes being present, whereas its absence is almost certain."
+        },
+        {
+            "id": 2,
+            "origin": "obesity",
+            "content": "If diabetes is present, then there is a very good chance that the patient is not obese."
+        },
+        {
+            "id": 3,
+            "origin": "obesity",
+            "content": "If diabetes is absent, it is highly unlikely that the patient is obese, and it is almost certain that the patient is not obese."
+        },
+        {
+            "id": 4,
+            "origin": "Steatosis",
+            "content": "If a patient is obese and has alcoholism, it is probably not the case that they have fatty deposits in their liver, but there are better than even odds that they do not have fatty deposits in their liver."
+        },
+        {
+            "id": 5,
+            "origin": "Steatosis",
+            "content": "If a patient is obese and does not have alcoholism, it is unlikely that they will have fatty deposits in their liver, indicating a very good chance of the absence of Steatosis."
+        },
+        {
+            "id": 6,
+            "origin": "Steatosis",
+            "content": "If a patient is not obese but has alcoholism, there is a very good chance that fatty deposits in the liver are absent, and it is probably not the case that fatty deposits are present."
+        },
+        {
+            "id": 7,
+            "origin": "Steatosis",
+            "content": "If a patient is not obese and does not have alcoholism, it is highly unlikely that they will have Steatosis, or the presence of fatty deposits, and it is almost certain that they will not have Steatosis."
+        }
+    ],
+    "evidence_query_pairs": [
+        {
+            "id": 0,
+            "evidences": [
+                "The patient does not have diabetes.",
+                "The patient is obese."
+            ],
+            "query": "What is the likelihood of this patient being an alcoholic?",
+            "answer": 0.1359,
+            "reasoning_types": []
+        },
+        {
+            "id": 1,
+            "evidences": [
+                "The patient is not diagnosed with diabetes.",
+                "The patient is obese.",
+                "The patient does not have fatty liver disease (steatosis)."
+            ],
+            "query": "What is the likelihood of this patient not having alcoholism?",
+            "answer": 0.8901196,
+            "reasoning_types": [
+                "evidential"
+            ]
+        },
+        {
+            "id": 2,
+            "evidences": [
+                "The patient does not have alcoholism.",
+                "The patient has fatty liver disease (steatosis)."
+            ],
+            "query": "What is the likelihood of this patient being obese?",
+            "answer": 0.18010048,
+            "reasoning_types": [
+                "evidential"
+            ]
+        },
+        {
+            "id": 3,
+            "evidences": [
+                "The patient does not have diabetes."
+            ],
+            "query": "What is the likelihood of this patient having alcoholism?",
+            "answer": 0.1359,
+            "reasoning_types": []
+        },
+        {
+            "id": 4,
+            "evidences": [
+                "The patient has fatty liver disease (steatosis).",
+                "The patient is also obese."
+            ],
+            "query": "What is the likelihood of this patient not having alcoholism?",
+            "answer": 0.76790504,
+            "reasoning_types": [
+                "evidential"
+            ]
+        },
+        {
+            "id": 5,
+            "evidences": [
+                "The patient is not obese."
+            ],
+            "query": "What is the likelihood of this patient not having alcoholism?",
+            "answer": 0.8641,
+            "reasoning_types": []
+        }
+    ]
+}

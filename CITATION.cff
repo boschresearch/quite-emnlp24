@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+message: "If you use this software or dataset, please cite it as below."
+authors:
+  - family-names: Schrader
+    given-names: Timo Pierre
+    orcid: https://orcid.org/0009-0006-5466-4939
+  - family-names: Lange
+    given-names: Lukas
+    orcid: https://orcid.org/0000-0002-4736-1001
+  - family-names: Razniewski
+    given-names: Simon
+    orcid: https://orcid.org/0000-0002-5410-218X
+  - family-names: Friedrich
+    given-names: Annemarie
+    orcid: https://orcid.org/0000-0001-8771-7634
+title: "QUITE: Quantifying Uncertainty in Natural Language Text in Bayesian Reasoning Scenarios"
+version: 1.0.0
+doi: 10.48550/arXiv.2410.10449
+date-released: 10-14-2024

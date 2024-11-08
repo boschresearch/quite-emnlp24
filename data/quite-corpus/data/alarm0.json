@@ -1,0 +1,723 @@
+{
+    "nodes": [
+        {
+            "name": "MINVOLSET",
+            "states": [
+                "LOW",
+                "NORMAL",
+                "HIGH"
+            ]
+        },
+        {
+            "name": "VENTMACH",
+            "states": [
+                "ZERO",
+                "LOW",
+                "NORMAL",
+                "HIGH"
+            ]
+        },
+        {
+            "name": "DISCONNECT",
+            "states": [
+                "TRUE",
+                "FALSE"
+            ]
+        },
+        {
+            "name": "INTUBATION",
+            "states": [
+                "NORMAL",
+                "ESOPHAGEAL",
+                "one-sided"
+            ]
+        },
+        {
+            "name": "VENTTUBE",
+            "states": [
+                "ZERO",
+                "LOW",
+                "NORMAL",
+                "HIGH"
+            ]
+        },
+        {
+            "name": "KINKEDTUBE",
+            "states": [
+                "TRUE",
+                "FALSE"
+            ]
+        },
+        {
+            "name": "PRESS",
+            "states": [
+                "ZERO",
+                "LOW",
+                "NORMAL",
+                "HIGH"
+            ]
+        }
+    ],
+    "connectivity": [
+        {
+            "node": "MINVOLSET",
+            "incoming": []
+        },
+        {
+            "node": "VENTMACH",
+            "incoming": [
+                "MINVOLSET"
+            ]
+        },
+        {
+            "node": "DISCONNECT",
+            "incoming": []
+        },
+        {
+            "node": "INTUBATION",
+            "incoming": []
+        },
+        {
+            "node": "VENTTUBE",
+            "incoming": [
+                "VENTMACH",
+                "DISCONNECT"
+            ]
+        },
+        {
+            "node": "KINKEDTUBE",
+            "incoming": []
+        },
+        {
+            "node": "PRESS",
+            "incoming": [
+                "INTUBATION",
+                "VENTTUBE",
+                "PRESS"
+            ]
+        }
+    ],
+    "numeric_premises": [
+        {
+            "id": 0,
+            "origin": "MINVOLSET",
+            "content": "With 95% probability, the minimum volume of the ventilator machine is set to NORMAL, only in 2.5% of cases it is set to either LOW or HIGH."
+        },
+        {
+            "id": 1,
+            "origin": "VENTMACH",
+            "content": "If the minimum volume of the ventilator machine is set to high, there is a 93% chance that the machine finds itself also in state high, whereas normal and low state only have a 1% chance. State zero has a 5% chance."
+        },
+        {
+            "id": 2,
+            "origin": "VENTMACH",
+            "content": "If the minimum volume of the ventilator machine is set to normal, there is a 93% chance that the machine finds itself also in state normal, whereas high and low state only have a 1% chance. State zero has a 5% chance."
+        },
+        {
+            "id": 3,
+            "origin": "VENTMACH",
+            "content": "If the minimum volume of the ventilator machine is set to low, there is a 93% chance that the machine finds itself also in state low, whereas normal and high state only have a 1% chance. State zero has a 5% chance."
+        },
+        {
+            "id": 4,
+            "origin": "DISCONNECT",
+            "content": "The ventilator is disconnected in 10% of all cases."
+        },
+        {
+            "id": 5,
+            "origin": "VENTTUBE",
+            "content": "If the ventilator is disconnected and the ventilator machine is set to ZERO, the ventilator tube is in state ZERO with probability 97%, whereas LOW, NORMAL and HIGH have a chance of 1% each."
+        },
+        {
+            "id": 6,
+            "origin": "VENTTUBE",
+            "content": "If the ventilator is disconnected and the ventilator machine is set to LOW, the ventilator tube is in state ZERO with probability 97%, whereas LOW, NORMAL and HIGH have a chance of 1% each."
+        },
+        {
+            "id": 7,
+            "origin": "VENTTUBE",
+            "content": "If the ventilator is disconnected and the ventilator machine is set to NORMAL, the ventilator tube is in state ZERO with probability 97%, whereas LOW, NORMAL and HIGH have a chance of 1% each."
+        },
+        {
+            "id": 8,
+            "origin": "VENTTUBE",
+            "content": "If the ventilator is disconnected and the ventilator machine is set to HIGH, the ventilator tube is in state NOMRAL with probability 97%, whereas LOW, ZERO and HIGH have a chance of 1% each."
+        },
+        {
+            "id": 9,
+            "origin": "VENTTUBE",
+            "content": "If the ventilator is connected and the ventilator machine is in ZERO state, the ventilator tube finds itself in ZERO state with 97% probability."
+        },
+        {
+            "id": 10,
+            "origin": "VENTTUBE",
+            "content": "If the ventilator is connected and the ventilator machine is in LOW state, the ventilator tube finds itself in ZERO state with 97% probability."
+        },
+        {
+            "id": 11,
+            "origin": "VENTTUBE",
+            "content": "There is a 97% chance of the ventilator tube being in LOW state if the ventilator is connected and the ventilator machine is in a NORMAL state."
+        },
+        {
+            "id": 12,
+            "origin": "VENTTUBE",
+            "content": "There is a 97% chance of the ventilator tube being in HIGH state if the ventilator is connected and the ventilator machine is in a HIGH state."
+        },
+        {
+            "id": 13,
+            "origin": "KINKEDTUBE",
+            "content": "The likelihood of the tube being kinked can be estimated to 0.04."
+        },
+        {
+            "id": 14,
+            "origin": "INTUBATION",
+            "content": "Intubation of the patient is done correctly in 92% of all trials, however, in the remaining trials, it is placed in the esophagus (3%) or it is one-sided (5%), which is very dangerous to the patient."
+        },
+        {
+            "id": 15,
+            "origin": "PRESS",
+            "content": "If Intubation is done correctly, but the tube is kinked and the ventilator tube is in state ZERO, the pressure in the system will also be ZERO with likelihood 97%, whereas LOW, NORMAL and HIGH have equal likelihood."
+        },
+        {
+            "id": 16,
+            "origin": "PRESS",
+            "content": "If Intubation is done correctly, but the tube is kinked and the ventilator tube is in state NORMAL, the pressure in the system will also be ZERO with likelihood 97%, whereas LOW, NORMAL and HIGH have equal likelihood."
+        },
+        {
+            "id": 17,
+            "origin": "PRESS",
+            "content": "If Intubation is done correctly, but the tube is kinked and the ventilator tube is in state LOW, the pressure in the system will be HIGH in 45 out of 100 cases, LOW or NORMAL in 25 cases, and ZERO in 5 cases."
+        },
+        {
+            "id": 18,
+            "origin": "PRESS",
+            "content": "If Intubation is done correctly, tube is kinked and the ventilator tube is in state HIGH, the pressure in the system still be in LOW state with a probability of 75%, ZERO with 20%, NORMAL with 4% and HIGH with 1%."
+        },
+        {
+            "id": 19,
+            "origin": "PRESS",
+            "content": "If Intubation is done correctly, the ventilation tube is not kinked, and the ventilator tube is in state ZERO, the pressure in the system will also be HIGH with likelihood 97%, whereas LOW, NORMAL and ZERO have equal likelihood."
+        },
+        {
+            "id": 20,
+            "origin": "PRESS",
+            "content": "If Intubation is done correctly, the ventilation tube is not kinked, and the ventilator tube is in state NORMAL, the pressure in the system will also be HIGH with likelihood 97%, whereas LOW, NORMAL and ZERO have equal likelihood."
+        },
+        {
+            "id": 21,
+            "origin": "PRESS",
+            "content": "If Intubation is done correctly, the ventilation tube is not kinked, and the ventilator tube is in state LOW, the pressure in the system will be HIGH in 40 out of 100 cases, LOW or NORMAL in 29 respectively 30 cases, and ZERO in 1 case."
+        },
+        {
+            "id": 22,
+            "origin": "PRESS",
+            "content": "If Intubation is done correctly, tube is not kinked and the ventilator tube is in state HIGH, the pressure in the system still be in LOW state with a probability of 90%, ZERO with 1%, NORMAL with 8% and HIGH with 1%."
+        },
+        {
+            "id": 23,
+            "origin": "PRESS",
+            "content": "If the airway is incorrectly intubated in the esophagus, the ventilator tube is kinked, and the ventilator is delivering no volume, there is a 49% probability that the pressure within the ventilator system is at normal level, 30% probability that it is low, and 20% probability that it is high. The probability of zero pressure is only 1%."
+        },
+        {
+            "id": 24,
+            "origin": "PRESS",
+            "content": "In the scenario where the airway is incorrectly intubated in the esophagus, the ventilator tube is kinked, and the ventilator is delivering a low volume, the pressure within the ventilator system is unlikely to be at a zero level, with only 1% probability, and has a higher chance of being low (15%), normal (25%), or high (59%)."
+        },
+        {
+            "id": 25,
+            "origin": "PRESS",
+            "content": "If the airway is incorrectly intubated in the esophagus and the ventilator tube is kinked while the ventilator is delivering a normal volume, there is a 97% probability that the pressure within the ventilator system is low, and only 1% chance each that it is at normal or high level. The probability of zero pressure is still 1%."
+        },
+        {
+            "id": 26,
+            "origin": "PRESS",
+            "content": "In the case where the airway is incorrectly intubated in the esophagus, the ventilator tube is kinked, and the ventilator is delivering a high volume, there is a 70% probability that the pressure within the ventilator system is low, 9% probability that it is normal, and 1% probability that it is high. The probability of zero pressure is 20%."
+        },
+        {
+            "id": 27,
+            "origin": "PRESS",
+            "content": "If the airway is incorrectly intubated in the esophagus, the ventilator tube is not kinked, and the ventilator is delivering no volume, there is a 97% probability that the pressure within the ventilator system is at zero level, and only 1% chance each that it is at low, normal, or high level."
+        },
+        {
+            "id": 28,
+            "origin": "PRESS",
+            "content": "In the scenario where the airway is incorrectly intubated in the esophagus, the ventilator tube is not kinked, and the ventilator is delivering a low volume, there is a 90% probability that the pressure within the ventilator system is high, 8% probability that it is normal, and only 1% chance each that it is at its lowest level or low."
+        },
+        {
+            "id": 29,
+            "origin": "PRESS",
+            "content": "If the airway is incorrectly intubated in the esophagus and the ventilator tube is not kinked while the ventilator is delivering a normal volume, there is a 97% probability that the pressure within the ventilator system is at zero, and only 1% chance each that it is at low, normal, or high level."
+        },
+        {
+            "id": 30,
+            "origin": "PRESS",
+            "content": "In the case where the airway is incorrectly intubated in the esophagus and the ventilator tube is not kinked while the ventilator is delivering a high volume, there is a 60% probability that the pressure within the ventilator system is high, 38% probability that it is normal, and only 1% chance each that it is at zero level or low."
+        },
+        {
+            "id": 31,
+            "origin": "PRESS",
+            "content": "If the airway is incorrectly intubated on one side and the ventilator tube is kinked while the ventilator is delivering no volume, there is a 90% probability that the pressure within the ventilator system is high, 8% probability that it is normal, and only 1% chance each that it is zero or low."
+        },
+        {
+            "id": 32,
+            "origin": "PRESS",
+            "content": "In the scenario where the airway is incorrectly intubated on one side, the ventilator tube is kinked, and the ventilator is delivering a low volume, there is a 97% probability that the pressure within the ventilator system is at zero, and only 1% chance each that it is at low, normal, or high level."
+        },
+        {
+            "id": 33,
+            "origin": "PRESS",
+            "content": "If the airway is incorrectly intubated on one side and the ventilator tube is kinked while the ventilator is delivering a normal volume, there is a 97% probability that the pressure within the ventilator system is normal, and only 1% chance each that it is at zero, low, or high level."
+        },
+        {
+            "id": 34,
+            "origin": "PRESS",
+            "content": "In the case where the airway is incorrectly intubated on one side, the ventilator tube is kinked, and the ventilator is delivering a high volume, there is a 97% probability that the pressure within the ventilator system is at zero, and only 1% chance each that it is at low, normal, or high level."
+        },
+        {
+            "id": 35,
+            "origin": "PRESS",
+            "content": "If the airway is incorrectly intubated on one side and the ventilator tube is not kinked while the ventilator is delivering no volume, there is an 84% probability that the pressure within the ventilator system is low, 10% probability that it is at zero level, 5% probability that it is normal, and 1% probability that it is high."
+        },
+        {
+            "id": 36,
+            "origin": "PRESS",
+            "content": "In the scenario where the airway is incorrectly intubated on one side and the ventilator tube is not kinked while the ventilator is delivering a low volume, there is a 97% probability that the pressure within the ventilator system is high, and only 1% chance each that it is at zero level, low, or normal."
+        },
+        {
+            "id": 37,
+            "origin": "PRESS",
+            "content": "If the airway is incorrectly intubated on one side and the ventilator tube is not kinked while the ventilator is delivering a normal volume, there is a 58% probability that the pressure within the ventilator system is low, 40% probability that it is zero, and 1% probability each that it is normal or high."
+        },
+        {
+            "id": 38,
+            "origin": "PRESS",
+            "content": "In the case where the airway is incorrectly intubated on one side and the ventilator tube is not kinked while the ventilator is delivering a high volume, there is a 97% probability that the pressure within the ventilator system is high, and only 1% chance each that it is zero, low, or normal."
+        }
+    ],
+    "wep_based_premises": [
+        {
+            "id": 0,
+            "origin": "MINVOLSET",
+            "content": "With very high probability, the minimum volume of the ventilator machine is set to normal, only in very rare occasions it is set to either low or high."
+        },
+        {
+            "id": 1,
+            "origin": "VENTMACH",
+            "content": "It is almost certain that the ventilator machine finds itself in state HIGH if the minimum volume is also set to HIGH, whereas ZERO is highly unlikely. There is almost no chance for LOW or NORMAL."
+        },
+        {
+            "id": 2,
+            "origin": "VENTMACH",
+            "content": "It is almost certain that the ventilator machine finds itself in state NORMAL if the minimum volume is also set to NORMAL, whereas ZERO is highly unlikely. There is almost no chance for LOW or HIGH."
+        },
+        {
+            "id": 3,
+            "origin": "VENTMACH",
+            "content": "It is almost certain that the ventilator machine finds itself in state LOW if the minimum volume is also set to LOW, whereas ZERO is highly unlikely. There is almost no chance for HIGH or NORMAL."
+        },
+        {
+            "id": 4,
+            "origin": "DISCONNECT",
+            "content": "The ventilator is disconnected very infrequently."
+        },
+        {
+            "id": 5,
+            "origin": "VENTTUBE",
+            "content": "If the ventilator is disconnected and the ventilator machine is in state ZERO, it is almost certain that the ventilator tube is in state ZERO, whereas there is almost no chance for state LOW, NORMAL, or HIGH."
+        },
+        {
+            "id": 6,
+            "origin": "VENTTUBE",
+            "content": "If the ventilator is disconnected and the ventilator machine is in state LOW, it is almost certain that the ventilator tube is in state ZERO, whereas there is almost no chance for state LOW, NORMAL, or HIGH."
+        },
+        {
+            "id": 7,
+            "origin": "VENTTUBE",
+            "content": "If the ventilator is disconnected and the ventilator machine is in state NORMAL, it is almost certain that the ventilator tube is in state ZERO, whereas there is almost no chance for state LOW, NORMAL, or HIGH."
+        },
+        {
+            "id": 8,
+            "origin": "VENTTUBE",
+            "content": "If the ventilator is disconnected and the ventilator machine is in state HIGH, it is almost certain that the ventilator tube is in state NORMAL, whereas there is almost no chance for state ZERO, LOW, or HIGH."
+        },
+        {
+            "id": 9,
+            "origin": "VENTTUBE",
+            "content": "If the ventilator is connected and the ventilator machine is in ZERO, the ventilator tube finds itself in ZERO state with almost certainty."
+        },
+        {
+            "id": 10,
+            "origin": "VENTTUBE",
+            "content": "If the ventilator is connected and the ventilator machine is in LOW, the ventilator tube finds itself in ZERO state with almost certainty."
+        },
+        {
+            "id": 11,
+            "origin": "VENTTUBE",
+            "content": "There is a very high chance of the ventilator tube being in LOW state if the ventilator is connected and the ventilator machine is in a NORMAL state."
+        },
+        {
+            "id": 12,
+            "origin": "VENTTUBE",
+            "content": "It is almost impossible for the ventilator tube being not in HIGH state if the ventilator is connected and the ventilator machine is in a HIGH state."
+        },
+        {
+            "id": 13,
+            "origin": "KINKEDTUBE",
+            "content": "The likelihood of the tube being kinked is close to impossible."
+        },
+        {
+            "id": 14,
+            "origin": "INTUBATION",
+            "content": "Intubation of the patient is done correctly most of the time, however, in the remaining trials, it is placed in the esophagus (very unlikely) or it is one-sided (also very unlikely to happen), which is very dangerous for the patient."
+        },
+        {
+            "id": 15,
+            "origin": "PRESS",
+            "content": "If Intubation is done correctly, but the tube is kinked and the ventilator tube is in state ZERO, the pressure in the system will also be ZERO with almost certainty, whereas LOW, NORMAL and HIGH are equally unlikely to appear."
+        },
+        {
+            "id": 16,
+            "origin": "PRESS",
+            "content": "If Intubation is done correctly, but the tube is kinked and the ventilator tube is in state NORMAL, the pressure in the system will also be ZERO with almost certainty, whereas LOW, NORMAL and HIGH are equally unlikely to appear."
+        },
+        {
+            "id": 17,
+            "origin": "PRESS",
+            "content": "If Intubation is done correctly, but the tube is kinked and the ventilator tube is in state LOW, the pressure in the system will be HIGH in almost half of all cases, LOW or NORMAL in a quarter of all cases, and ZERO in very few cases."
+        },
+        {
+            "id": 18,
+            "origin": "PRESS",
+            "content": "If Intubation is done correctly, tube is kinked and the ventilator tube is in state HIGH, the pressure in the system will still be in LOW state with a probability of three quarters, ZERO in one fifth, NORMAL with four percent and HIGH with one percent."
+        },
+        {
+            "id": 19,
+            "origin": "PRESS",
+            "content": "If Intubation is done correctly, the ventilation tube is not kinked, and the ventilator tube is in state ZERO, the pressure in the system will also be HIGH with almost certainty, whereas LOW, NORMAL and ZERO have equal likelihood."
+        },
+        {
+            "id": 20,
+            "origin": "PRESS",
+            "content": "If Intubation is done correctly, the ventilation tube is not kinked, and the ventilator tube is in state NORMAL, the pressure in the system will also be HIGH with almost certainty, whereas LOW, NORMAL and ZERO have equal likelihood."
+        },
+        {
+            "id": 21,
+            "origin": "PRESS",
+            "content": "If Intubation is done correctly, the ventilation tube is not kinked, and the ventilator tube is in state LOW, the pressure in the system will be HIGH in almost half of all cases, LOW or NORMAL in around one third of cases each, and ZERO in only one case."
+        },
+        {
+            "id": 22,
+            "origin": "PRESS",
+            "content": "If Intubation is done correctly, tube is not kinked and the ventilator tube is in state HIGH, the pressure in the system will still be most likely in LOW state, whereas NORMAL does only occur in 1 out of 12 cases and ZERO and HIGH almost never happen."
+        },
+        {
+            "id": 23,
+            "origin": "PRESS",
+            "content": "If the airway intubation is esophageal, the ventilator tube is kinked, and the ventilator tube is delivering zero volume, then there is almost no chance that the pressure within the ventilator system is zero, it is probably not the case that the pressure is low, chances are about even that the pressure is normal, and unlikely that the pressure is high."
+        },
+        {
+            "id": 24,
+            "origin": "PRESS",
+            "content": "Given that the airway intubation is esophageal, the ventilator tube is kinked, and the ventilator tube is delivering a low volume, then there is almost no chance that the pressure within the ventilator system is zero, there is also little chance that the pressure is low, it is probably not the case that the pressure is normal, and there are better than even chances that the pressure is high."
+        },
+        {
+            "id": 25,
+            "origin": "PRESS",
+            "content": "If the airway intubation is esophageal, the ventilator tube is kinked, and the ventilator tube is delivering a normal volume, then there is almost no chance that the pressure within the ventilator system is zero, low, normal, or high, and almost certain that the pressure is low."
+        },
+        {
+            "id": 26,
+            "origin": "PRESS",
+            "content": "Given that the airway intubation is esophageal, the ventilator tube is kinked, and the ventilator tube is delivering a high volume, then it is slight chances that the pressure within the ventilator system is zero, probable that the pressure is low, there is little chance that the pressure is normal, and almost no chance that the pressure is high."
+        },
+        {
+            "id": 27,
+            "origin": "PRESS",
+            "content": "If the airway intubation is esophageal, the ventilator tube is not kinked, and the ventilator tube is delivering zero volume, then it is almost certain that the pressure within the ventilator system is zero, and almost no chance that the pressure is low, normal, or high."
+        },
+        {
+            "id": 28,
+            "origin": "PRESS",
+            "content": "Given that the airway intubation is esophageal, the ventilator tube is not kinked, and the ventilator tube is delivering a low volume, then there is almost no chance that the pressure within the ventilator system is zero or low, there are slight chances that the pressure is normal, and it is highly likely that the pressure is high."
+        },
+        {
+            "id": 29,
+            "origin": "PRESS",
+            "content": "If the airway intubation is esophageal, the ventilator tube is not kinked, and the ventilator tube is delivering a normal volume, then it is almost certain that the pressure within the ventilator system is zero, and there is almost no chance that the pressure is low, normal, or high."
+        },
+        {
+            "id": 30,
+            "origin": "PRESS",
+            "content": "Given that the airway intubation is esophageal, the ventilator tube is not kinked, and the ventilator tube is delivering a high volume, then there is almost no chance that the pressure within the ventilator system is zero or low, it is probably not the case that the pressure is normal, and there are better than even chances that the pressure is high."
+        },
+        {
+            "id": 31,
+            "origin": "PRESS",
+            "content": "If the airway intubation is one-sided, the ventilator tube is kinked, and the ventilator tube is delivering zero volume, then there is almost no chance that the pressure within the ventilator system is zero or low, it is improbable that the pressure is normal, and highly likely that the pressure is high."
+        },
+        {
+            "id": 32,
+            "origin": "PRESS",
+            "content": "Given that the airway intubation is one-sided, the ventilator tube is kinked, and the ventilator tube is delivering a low volume, then it is almost certain that the pressure within the ventilator system is zero, and almost no chance that the pressure is low, normal, or high."
+        },
+        {
+            "id": 33,
+            "origin": "PRESS",
+            "content": "If the airway intubation is one-sided, the ventilator tube is kinked, and the ventilator tube is delivering a normal volume, then there is almost no chance that the pressure within the ventilator system is zero or low, almost certain that the pressure is normal, and almost no chance that the pressure is high."
+        },
+        {
+            "id": 34,
+            "origin": "PRESS",
+            "content": "Given that the airway intubation is one-sided, the ventilator tube is kinked, and the ventilator tube is delivering a high volume, then it is almost certain that the pressure within the ventilator system is zero, and almost no chance that the pressure is low, normal, or high."
+        },
+        {
+            "id": 35,
+            "origin": "PRESS",
+            "content": "If the airway intubation is one-sided, the ventilator tube is not kinked, and the ventilator tube is delivering zero volume, then the chances are slight that the pressure within the ventilator system is zero, there is a very good chance that the pressure is low, highly unlikely that the pressure is normal, and almost no chance that the pressure is high."
+        },
+        {
+            "id": 36,
+            "origin": "PRESS",
+            "content": "If the airway intubation is one-sided, the ventilator tube is not kinked, and the ventilator tube is delivering a low volume, then there is almost no chance that the pressure within the ventilator system is zero, low, or normal, and almost certain that the pressure is high."
+        },
+        {
+            "id": 37,
+            "origin": "PRESS",
+            "content": "If the airway intubation is one-sided, the ventilator tube is not kinked, and the ventilator tube is delivering a normal volume, then it is probably not the case that the pressure within the ventilator system is zero, there is a better than even chance that the pressure is low, almost no chance that the pressure is normal or high."
+        },
+        {
+            "id": 38,
+            "origin": "PRESS",
+            "content": "If the airway intubation is one-sided, the ventilator tube is not kinked, and the ventilator tube is delivering a high volume, then there is almost no chance that the pressure within the ventilator system is zero, low, or normal, and almost certain that the pressure is high."
+        }
+    ],
+    "evidence_query_pairs": [
+        {
+            "id": 0,
+            "evidences": [
+                "The minimum volume set on the ventilator is set to normal.",
+                "The ventilator tube is not kinked.",
+                "The pressure within the ventilator system is at zero.",
+                "The ventilator tube is delivering air at a normal level."
+            ],
+            "query": "What is the likelihood of the airway intubation being normal?",
+            "answer": 0.15780446,
+            "reasoning_types": [
+                "explaining_away"
+            ]
+        },
+        {
+            "id": 1,
+            "evidences": [
+                "The minimum volume of air delivered by the ventilator has been set to low.",
+                "The airway intubation is incorrectly placed in the esophagus.",
+                "The ventilator tubing is currently delivering air at normal levels.",
+                "The ventilator is not disconnected."
+            ],
+            "query": "What is the likelihood of the ventilator tube being kinked?",
+            "answer": 0.04,
+            "reasoning_types": []
+        },
+        {
+            "id": 2,
+            "evidences": [
+                "The ventilator machine is currently set to normal mode."
+            ],
+            "query": "What is the likelihood of the pressure within the ventilator system being low, given that the ventilator machine is in normal mode?",
+            "answer": 0.2486338,
+            "reasoning_types": [
+                "causal"
+            ]
+        },
+        {
+            "id": 3,
+            "evidences": [
+                "The ventilator machine is set to high.",
+                "The minimum volume set on the ventilator is normal.",
+                "The pressure within the ventilator system is normal.",
+                "The ventilator tubing is delivering a zero volume.",
+                "The airway intubation is normal."
+            ],
+            "query": "What is the likelihood of the ventilator tube being kinked?",
+            "answer": 0.04,
+            "reasoning_types": [
+                "explaining_away"
+            ]
+        },
+        {
+            "id": 4,
+            "evidences": [
+                "The ventilator is not disconnected.",
+                "The pressure within the ventilator system is high.",
+                "The ventilator tube is delivering zero volume."
+            ],
+            "query": "What is the likelihood of the ventilator tube not being kinked given these conditions?",
+            "answer": 0.99719961,
+            "reasoning_types": [
+                "explaining_away"
+            ]
+        },
+        {
+            "id": 5,
+            "evidences": [
+                "The pressure within the ventilator system is normal.",
+                "The ventilator is currently disconnected.",
+                "The minimum volume set on the ventilator is normal.",
+                "The ventilator tube is currently delivering a low volume."
+            ],
+            "query": "What is the likelihood of the airway intubation being placed in one main bronchus, given these conditions?",
+            "answer": 0.0018033354,
+            "reasoning_types": [
+                "explaining_away"
+            ]
+        },
+        {
+            "id": 6,
+            "evidences": [
+                "The ventilator machine is currently set to a low setting.",
+                "The airway intubation is currently in the normal position."
+            ],
+            "query": "What is the likelihood of the ventilator being disconnected from the patient?",
+            "answer": 0.1,
+            "reasoning_types": []
+        },
+        {
+            "id": 7,
+            "evidences": [
+                "The ventilator tube is kinked."
+            ],
+            "query": "What is the likelihood that the ventilator tubing is delivering a high volume of air?",
+            "answer": 0.038512,
+            "reasoning_types": []
+        },
+        {
+            "id": 8,
+            "evidences": [
+                "The ventilator machine is set to high.",
+                "The minimum volume set is normal.",
+                "The ventilator tubing is delivering high volumes.",
+                "The pressure within the ventilator system is low.",
+                "The intubation is normal.",
+                "The ventilator tube is not kinked."
+            ],
+            "query": "What is the likelihood of the ventilator not being disconnected?",
+            "answer": 0.99885584,
+            "reasoning_types": [
+                "explaining_away"
+            ]
+        },
+        {
+            "id": 9,
+            "evidences": [
+                "The ventilator tube is not kinked.",
+                "The minimum volume setting on the ventilator is high."
+            ],
+            "query": "What is the likelihood of the pressure within the ventilator system being normal given that the ventilator tube is not kinked and the minimum volume setting is high?",
+            "answer": 0.076570176,
+            "reasoning_types": [
+                "causal"
+            ]
+        },
+        {
+            "id": 10,
+            "evidences": [
+                "The pressure within the ventilator system is low.",
+                "The airway intubation is in the normal state."
+            ],
+            "query": "What is the likelihood of the ventilator tube being kinked, given that the pressure is low and the intubation is normal?",
+            "answer": 0.034564372,
+            "reasoning_types": [
+                "explaining_away"
+            ]
+        },
+        {
+            "id": 11,
+            "evidences": [
+                "The ventilator machine is set to high.",
+                "The ventilator tube is kinked.",
+                "The airway intubation is placed in one main bronchus.",
+                "The pressure within the ventilator system is normal.",
+                "The minimum volume set on the ventilator is high.",
+                "The ventilator is currently disconnected."
+            ],
+            "query": "What is the likelihood of the ventilator tube not delivering any air?",
+            "answer": 0.00084934706,
+            "reasoning_types": [
+                "causal",
+                "evidential"
+            ]
+        },
+        {
+            "id": 12,
+            "evidences": [
+                "The minimum volume setting on the ventilator is low.",
+                "The ventilator tube is kinked."
+            ],
+            "query": "What is the likelihood of the pressure within the ventilator system being high?",
+            "answer": 0.06564816,
+            "reasoning_types": [
+                "causal"
+            ]
+        },
+        {
+            "id": 13,
+            "evidences": [
+                "The ventilator is currently disconnected."
+            ],
+            "query": "What is the likelihood of the ventilator tube not being kinked?",
+            "answer": 0.96,
+            "reasoning_types": []
+        },
+        {
+            "id": 14,
+            "evidences": [
+                "The ventilator tube is kinked.",
+                "The ventilator tube is delivering a low volume."
+            ],
+            "query": "What is the likelihood of the pressure within the ventilator system being normal?",
+            "answer": 0.238,
+            "reasoning_types": [
+                "causal"
+            ]
+        },
+        {
+            "id": 15,
+            "evidences": [
+                "The ventilator is currently disconnected.",
+                "The airway intubation is currently in its normal state."
+            ],
+            "query": "What is the likelihood of the ventilator machine being set to high?",
+            "answer": 0.033,
+            "reasoning_types": [
+                "evidential"
+            ]
+        },
+        {
+            "id": 16,
+            "evidences": [
+                "The pressure within the ventilator system is low.",
+                "The ventilator tube is delivering zero volume.",
+                "The minimum volume set on the ventilator is high."
+            ],
+            "query": "What is the likelihood of the ventilator being disconnected?",
+            "answer": 0.1126021,
+            "reasoning_types": [
+                "evidential"
+            ]
+        },
+        {
+            "id": 17,
+            "evidences": [
+                "The ventilator machine is set to low level.",
+                "The minimum volume set is high.",
+                "The ventilator tubing is delivering high volumes.",
+                "The intubation is normal."
+            ],
+            "query": "What is the likelihood of the pressure within the ventilator system being high?",
+            "answer": 0.01,
+            "reasoning_types": [
+                "causal"
+            ]
+        }
+    ]
+}

@@ -1,0 +1,886 @@
+{
+    "nodes": [
+        {
+            "name": "CldShadeOth",
+            "states": [
+                "Cloudy",
+                "PC",
+                "Clear"
+            ]
+        },
+        {
+            "name": "AMInstabMt",
+            "states": [
+                "None",
+                "Weak",
+                "Strong"
+            ]
+        },
+        {
+            "name": "InsInMt",
+            "states": [
+                "None",
+                "Weak",
+                "Strong"
+            ]
+        },
+        {
+            "name": "WndHodograph",
+            "states": [
+                "DCVZFavor",
+                "StrongWest",
+                "Westerly",
+                "Other"
+            ]
+        },
+        {
+            "name": "OutflowFrMt",
+            "states": [
+                "None",
+                "Weak",
+                "Strong"
+            ]
+        },
+        {
+            "name": "CldShadeConv",
+            "states": [
+                "None",
+                "Some",
+                "Marked"
+            ]
+        }
+    ],
+    "connectivity": [
+        {
+            "node": "CldShadeOth",
+            "incoming": []
+        },
+        {
+            "node": "AMInstabMt",
+            "incoming": []
+        },
+        {
+            "node": "InsInMt",
+            "incoming": [
+                "CldShadeOth",
+                "AMInstabMt"
+            ]
+        },
+        {
+            "node": "WndHodograph",
+            "incoming": []
+        },
+        {
+            "node": "OutflowFrMt",
+            "incoming": [
+                "InsInMt",
+                "WndHodograph"
+            ]
+        },
+        {
+            "node": "CldShadeConv",
+            "incoming": [
+                "InsInMt",
+                "WndHodograph"
+            ]
+        }
+    ],
+    "numeric_premises": [
+        {
+            "id": 0,
+            "origin": "CldShadeOth",
+            "content": "The sky is cloudy with 21% probability, partly cloudy in 41% of the cases, and clear in 38% of all cases."
+        },
+        {
+            "id": 1,
+            "origin": "AMInstabMt",
+            "content": "Mountainous areas have an equal chance of experiencing no (33.33%), weak (33.33%), or strong (33.34%) atmospheric instability."
+        },
+        {
+            "id": 2,
+            "origin": "InsInMt",
+            "content": "When the sky is cloudy and there is no instability in the atmosphere, the likelihood of no instability in the mountains is 90%, with a weak instability being present in the remaining 10%. A strong instability is not a possibility under these conditions."
+        },
+        {
+            "id": 3,
+            "origin": "InsInMt",
+            "content": "Under cloudy conditions with a weak atmospheric instability, the probability of no instability in the mountains is only 1%, while a weak instability is slightly more likely at 40%. However, the most likely scenario is a strong mountain instability, with a probability of 59%."
+        },
+        {
+            "id": 4,
+            "origin": "InsInMt",
+            "content": "Given cloudy conditions and a strong atmospheric instability, there is no chance of no instability in the mountains, and a weak instability is highly unlikely, with only a 5% probability. In contrast, there is a 95% chance of a strong mountain instability under these conditions."
+        },
+        {
+            "id": 5,
+            "origin": "InsInMt",
+            "content": "If the sky is partly cloudy and there is no instability in the atmosphere, the probability of no mountain instability is 60%, while a weak instability is slightly more likely at 39%. A strong mountain instability is highly unlikely under these conditions, with only a 1% probability."
+        },
+        {
+            "id": 6,
+            "origin": "InsInMt",
+            "content": "When the sky is partly cloudy and the atmospheric instability is weak, there is no chance of no mountain instability, and the probability of a weak mountain instability is 40%. However, the most likely scenario is a strong mountain instability, with a probability of 60%."
+        },
+        {
+            "id": 7,
+            "origin": "InsInMt",
+            "content": "If the sky is partly cloudy and the atmospheric instability is strong, there is no chance of no mountain instability or a weak mountain instability. Under these conditions, the probability of a strong mountain instability is 100%."
+        },
+        {
+            "id": 8,
+            "origin": "InsInMt",
+            "content": "When the sky is clear and there is no atmospheric instability, the probability of no mountain instability is 50%, while a weak mountain instability is slightly more likely at 35%. A strong mountain instability is also possible, with a probability of 15%."
+        },
+        {
+            "id": 9,
+            "origin": "InsInMt",
+            "content": "If the sky is clear and the atmospheric instability is weak, there is no chance of no mountain instability, and the probability of a weak mountain instability is 15%. However, the most likely scenario is a strong mountain instability, with a probability of 85%."
+        },
+        {
+            "id": 10,
+            "origin": "InsInMt",
+            "content": "When the sky is clear and the atmospheric instability is strong, there is no chance of no mountain instability or a weak mountain instability. Under these conditions, the probability of a strong mountain instability is 100%."
+        },
+        {
+            "id": 11,
+            "origin": "WndHodograph",
+            "content": "The wind hodograph is characterized by a 30% chance of displaying DCVZ favorable conditions, a 25% probability of strong westerly winds, and a 25% likelihood of westerly winds, while other conditions occur 20% of the time."
+        },
+        {
+            "id": 12,
+            "origin": "OutflowFrMt",
+            "content": "In the absence of instability in the mountains and with DCVZ-favorable wind conditions, the outflow from the mountains will be nonexistent, holding a 100% probability. Weak and strong outflow is not possible in this scenario."
+        },
+        {
+            "id": 13,
+            "origin": "OutflowFrMt",
+            "content": "With no instability in the mountains and strong westerly wind conditions, the outflow from the mountains remains absent, maintaining a 100% probability."
+        },
+        {
+            "id": 14,
+            "origin": "OutflowFrMt",
+            "content": "In the case of no instability in the mountains and with westerly winds, the outflow from the mountains is still absent, retaining a 100% probability."
+        },
+        {
+            "id": 15,
+            "origin": "OutflowFrMt",
+            "content": "When there is no instability in the mountains and the wind conditions are classified as other than DCVZ-favorable, westerly, or strong west, the outflow from the mountains remains absent, holding a 100% probability."
+        },
+        {
+            "id": 16,
+            "origin": "OutflowFrMt",
+            "content": "If instability in the mountains is weak and the wind conditions are DCVZ-favorable, the outflow from the mountains has a 50% probability of being nonexistent, a 40% chance of being weak, and a 10% likelihood of being strong."
+        },
+        {
+            "id": 17,
+            "origin": "OutflowFrMt",
+            "content": "Should instability in the mountains be weak and the wind conditions be strong and westerly, the outflow from the mountains has a 15% probability of being nonexistent, a 40% chance of being weak, and a 45% likelihood of being strong."
+        },
+        {
+            "id": 18,
+            "origin": "OutflowFrMt",
+            "content": "If the instability in the mountains is weak and the wind conditions are westerly, the outflow from the mountains has a 35% probability of being nonexistent, a 60% chance of being weak, and a 5% likelihood of being strong."
+        },
+        {
+            "id": 19,
+            "origin": "OutflowFrMt",
+            "content": "In the case of weak instability in the mountains and other wind conditions, the outflow from the mountains has an 80% probability of being nonexistent, a 19% chance of being weak, and a 1% likelihood of being strong."
+        },
+        {
+            "id": 20,
+            "origin": "OutflowFrMt",
+            "content": "If the instability in the mountains is strong and the wind conditions are DCVZ-favorable, the outflow from the mountains has a 5% probability of being nonexistent, a 45% chance of being weak, and a 50% likelihood of being strong."
+        },
+        {
+            "id": 21,
+            "origin": "OutflowFrMt",
+            "content": "Should the instability in the mountains be strong and the wind conditions be strong and westerly, the outflow from the mountains has a 1% probability of being nonexistent, a 15% chance of being weak, and an 84% likelihood of being strong."
+        },
+        {
+            "id": 22,
+            "origin": "OutflowFrMt",
+            "content": "If the instability in the mountains is strong and the wind conditions are westerly, the outflow from the mountains has a 10% probability of being nonexistent, a 25% chance of being weak, and a 65% likelihood of being strong."
+        },
+        {
+            "id": 23,
+            "origin": "OutflowFrMt",
+            "content": "In the case of strong instability in the mountains and other wind conditions, the outflow from the mountains has a 60% probability of being nonexistent, a 30% chance of being weak, and a 10% likelihood of being strong."
+        },
+        {
+            "id": 24,
+            "origin": "CldShadeConv",
+            "content": "In the absence of instability in the mountains and with wind conditions favoring a DCVZ pattern, there is a 100% probability of no cloud shading or convection. There is no chance of some or marked cloud shading or convection."
+        },
+        {
+            "id": 25,
+            "origin": "CldShadeConv",
+            "content": "With no instability in the mountains and strong westerly winds, there is a 100% probability that there will be no cloud shading or convection."
+        },
+        {
+            "id": 26,
+            "origin": "CldShadeConv",
+            "content": "In the absence of instability in the mountains and with winds blowing from the west, there is a 100% probability that there will be no cloud shading or convection."
+        },
+        {
+            "id": 27,
+            "origin": "CldShadeConv",
+            "content": "If instability in the mountains is absent and the wind direction is something other than the given options, then there is a 100% probability that there will be no cloud shading or convection."
+        },
+        {
+            "id": 28,
+            "origin": "CldShadeConv",
+            "content": "If there is weak instability in the mountains and the wind direction is favorable for a DCVZ pattern, then there is a 30% probability that there will be no cloud shading or convection, a 60% probability that there will be some cloud shading or convection, and a 10% probability that there will be marked cloud shading or convection."
+        },
+        {
+            "id": 29,
+            "origin": "CldShadeConv",
+            "content": "If there is weak instability in the mountains and the wind direction is strong and from the west, then there is a 20% probability that there will be no cloud shading or convection, a 70% probability that there will be some cloud shading or convection, and a 10% probability that there will be marked cloud shading or convection."
+        },
+        {
+            "id": 30,
+            "origin": "CldShadeConv",
+            "content": "If there is weak instability in the mountains and the wind direction is westerly, then there is a 50% probability that there will be no cloud shading or convection, a 46% probability that there will be some cloud shading or convection, and a 4% probability that there will be marked cloud shading or convection."
+        },
+        {
+            "id": 31,
+            "origin": "CldShadeConv",
+            "content": "If there is weak instability in the mountains and the wind direction is something other than the given options, then there is an 80% probability that there will be no cloud shading or convection, a 19% probability that there will be some cloud shading or convection, and a 1% probability that there will be marked cloud shading or convection."
+        },
+        {
+            "id": 32,
+            "origin": "CldShadeConv",
+            "content": "If there is strong instability in the mountains and the wind direction is favorable for a DCVZ pattern, then there is a 0% probability that there will be no cloud shading or convection, a 30% probability that there will be some cloud shading or convection, and a 70% probability that there will be marked cloud shading or convection."
+        },
+        {
+            "id": 33,
+            "origin": "CldShadeConv",
+            "content": "If there is strong instability in the mountains and the wind direction is strong and from the west, then there is a 0% probability that there will be no cloud shading or convection, a 20% probability that there will be some cloud shading or convection, and an 80% probability that there will be marked cloud shading or convection."
+        },
+        {
+            "id": 34,
+            "origin": "CldShadeConv",
+            "content": "If there is strong instability in the mountains and the wind direction is westerly, then there is a 10% probability that there will be no cloud shading or convection, a 50% probability that there will be some cloud shading or convection, and a 40% probability that there will be marked cloud shading or convection."
+        },
+        {
+            "id": 35,
+            "origin": "CldShadeConv",
+            "content": "If there is strong instability in the mountains and the wind direction is something other than the given options, then there is a 50% probability that there will be no cloud shading or convection, a 38% probability that there will be some cloud shading or convection, and a 12% probability that there will be marked cloud shading or convection."
+        }
+    ],
+    "wep_based_premises": [
+        {
+            "id": 0,
+            "origin": "CldShadeOth",
+            "content": "The sky is unlikely to be cloudy, whereas it is also probably not partly cloudy or clear. However, it is most likely to be partly cloudy, closely followed by a clear sky."
+        },
+        {
+            "id": 1,
+            "origin": "AMInstabMt",
+            "content": "There is an equal chance that there is no, weak, or strong atmospheric instability in the mountains."
+        },
+        {
+            "id": 2,
+            "origin": "InsInMt",
+            "content": "If the cloud shading and convection (CldShadeConv) is cloudy and there is no atmospheric instability in the mountains (AMInstabMt), then it is highly likely that there is no instability in the mountains, and there are slight chances that the instability in the mountains is weak, while it is impossible that the instability in the mountains is strong."
+        },
+        {
+            "id": 3,
+            "origin": "InsInMt",
+            "content": "If the cloud shading and convection is cloudy and the atmospheric instability in the mountains is weak, then there is almost no chance that there is no instability in the mountains, and it is probably not the case that the instability in the mountains is weak. However, chances for the instability in the mountains being strong are about even."
+        },
+        {
+            "id": 4,
+            "origin": "InsInMt",
+            "content": "If the cloud shading and convection is cloudy and the atmospheric instability in the mountains is strong, then it is impossible that there is no instability in the mountains, and it is highly unlikely that the instability in the mountains is weak. However, it is almost certain that the instability in the mountains is strong."
+        },
+        {
+            "id": 5,
+            "origin": "InsInMt",
+            "content": "If the cloud shading and convection is partly cloudy and there is no instability in the mountains, then there are about even chances that there is no instability in the mountains, and it is probably not the case that the instability in the mountains is weak. However, there is almost no chance that the instability in the mountains is strong."
+        },
+        {
+            "id": 6,
+            "origin": "InsInMt",
+            "content": "If the cloud shading and convection is partly cloudy and the atmospheric instability in the mountains is weak, then it is impossible that there is no instability in the mountains, and it is probably not the case that the instability in the mountains is weak. However, the probability of the instability in the mountains being strong is better than even."
+        },
+        {
+            "id": 7,
+            "origin": "InsInMt",
+            "content": "If the cloud shading and convection is partly cloudy and the atmospheric instability in the mountains is strong, then it is impossible that there is no instability in the mountains or for the instability in the mountains to be weak. However, it is certain that the instability in the mountains is strong."
+        },
+        {
+            "id": 8,
+            "origin": "InsInMt",
+            "content": "If the cloud shading and convection is clear and there is no instability in the mountains, then there are about even chances that there is no instability in the mountains, and it is probably not the case that the instability in the mountains is weak. However, there is only a little chance that the instability in the mountains is strong."
+        },
+        {
+            "id": 9,
+            "origin": "InsInMt",
+            "content": "If the cloud shading and convection is clear and the atmospheric instability in the mountains is weak, then it is impossible that there is no instability in the mountains, and there is only a little chance that the instability in the mountains is weak. However, there is a very good chance that the instability in the mountains is strong."
+        },
+        {
+            "id": 10,
+            "origin": "InsInMt",
+            "content": "If the cloud shading and convection is clear and the atmospheric instability in the mountains is strong, then it is impossible that there is no instability in the mountains or for the instability in the mountains to be weak. However, it is certain that the instability in the mountains is strong."
+        },
+        {
+            "id": 11,
+            "origin": "WndHodograph",
+            "content": "The wind hodograph is probably not indicating a DCVZ (deep convective vortex zone) favorable situation, probably not strongly west, probably not westerly, and unlikely to indicate other situations."
+        },
+        {
+            "id": 12,
+            "origin": "OutflowFrMt",
+            "content": "If there is no instability in the mountains and the wind hodograph is favorable for a DCVZ situation, then it is certain that the outflow from the mountains (OutflowFrMt) will be nonexistent, and it is impossible that the outflow is weak or strong."
+        },
+        {
+            "id": 13,
+            "origin": "OutflowFrMt",
+            "content": "If there is no instability in the mountains and the wind hodograph is characterized by strong winds from the west, then it is certain that there will be no outflow from the mountains, and it is impossible that the outflow is weak or strong."
+        },
+        {
+            "id": 14,
+            "origin": "OutflowFrMt",
+            "content": "If there is no instability in the mountains and the wind hodograph exhibits westerly winds, then it is certain that there will be no outflow from the mountains, and it is impossible that the outflow is weak or strong."
+        },
+        {
+            "id": 15,
+            "origin": "OutflowFrMt",
+            "content": "If there is no instability in the mountains and the wind hodograph is classified as other than the specified options,, then it is certain that there will be no outflow from the mountains, and it is impossible that the outflow is weak or strong."
+        },
+        {
+            "id": 16,
+            "origin": "OutflowFrMt",
+            "content": "If there is weak instability in the mountains and the wind hodograph indicates DCVZ-related situations, then there are about even chances that there will be no outflow from the mountains, it is probably not the case that the outflow will be weak, and it is improbable that the outflow will be strong."
+        },
+        {
+            "id": 17,
+            "origin": "OutflowFrMt",
+            "content": "If there is weak instability in the mountains and the wind hodograph is characterized by strong winds from the west (WndHodograph = StrongWest), then there is little chance that there will be no outflow from the mountains, it is probably not the case that the outflow will be weak, and there are about even chances that the outflow will be strong."
+        },
+        {
+            "id": 18,
+            "origin": "OutflowFrMt",
+            "content": "If there is weak instability in the mountains and the wind hodograph indicates westerly winds, then it is probably not the case that there will be no outflow from the mountains, there is a better than even chance that the outflow will be weak, and it is highly unlikely that the outflow will be strong."
+        },
+        {
+            "id": 19,
+            "origin": "OutflowFrMt",
+            "content": "If there is weak instability in the mountains and the wind hodograph is classified as other than the specified options, then it is probably that there will be no outflow from the mountains, it is unlikely that the outflow will be weak, and there is almost no chance that the outflow will be strong."
+        },
+        {
+            "id": 20,
+            "origin": "OutflowFrMt",
+            "content": "If there is strong instability in the mountains and the wind hodograph indicates a DCVZ-favourable situation, then it is highly unlikely that there will be no outflow from the mountains, it is probably not the case that the outflow will be weak, and there are about even chances that the outflow will be strong."
+        },
+        {
+            "id": 21,
+            "origin": "OutflowFrMt",
+            "content": "If there is strong instability in the mountains and the wind hodograph exhibits strong winds from the west, then there is almost no chance that there will be no outflow from the mountains, it is improbable that the outflow will be weak, and there is a very good chance that the outflow will be strong."
+        },
+        {
+            "id": 22,
+            "origin": "OutflowFrMt",
+            "content": "Given that there is strong instability in the mountains and the wind hodograph exhibits westerly winds, then the chances are slight that there will be no outflow from the mountains, it is probably not the case that the outflow will be weak, and it is probable that the outflow will be strong."
+        },
+        {
+            "id": 23,
+            "origin": "OutflowFrMt",
+            "content": "If there is strong instability in the mountains and the wind hodograph is classified as other than the specified options, then there is a better than even chance that there will be no outflow from the mountains, it is probably not the case that the outflow will be weak, and it is improbable that the outflow will be strong."
+        },
+        {
+            "id": 24,
+            "origin": "CldShadeConv",
+            "content": "If there is no instability in the mountains and the wind hodograph is favorable for DCVZ, then it is certain that there will be no cloud shading or convection, and impossible that there is some or marked cloud shading or convection."
+        },
+        {
+            "id": 25,
+            "origin": "CldShadeConv",
+            "content": "If there is no instability in the mountains and the wind hodograph is strong from the west, then it is certain that there will be no cloud shading or convection, and impossible that there is some or marked cloud shading or convection."
+        },
+        {
+            "id": 26,
+            "origin": "CldShadeConv",
+            "content": "If there is no instability in the mountains and the wind hodograph is westerly, then it is certain that there will be no cloud shading or convection, and impossible that there is some or marked cloud shading or convection."
+        },
+        {
+            "id": 27,
+            "origin": "CldShadeConv",
+            "content": "If there is no instability in the mountains and the wind hodograph is something other than westerly or strong from the west, then it is certain that there will be no cloud shading or convection, and impossible that there is some or marked cloud shading or convection."
+        },
+        {
+            "id": 28,
+            "origin": "CldShadeConv",
+            "content": "If there is weak instability in the mountains and the wind hodograph is favorable for DCVZ, then it is probably not the case that there will be no cloud shading or convection, and there is a better than even chance that there will be some cloud shading or convection. Additionally, there is only a little chance that there will be marked cloud shading or convection."
+        },
+        {
+            "id": 29,
+            "origin": "CldShadeConv",
+            "content": "If there is weak instability in the mountains and the wind hodograph is strong from the west, then there is only a slight chance that there will be no cloud shading or convection, and it is likely that there will be some cloud shading or convection. Additionally, there is only a slight chance that there will be marked cloud shading or convection."
+        },
+        {
+            "id": 30,
+            "origin": "CldShadeConv",
+            "content": "If there is weak instability in the mountains and the wind hodograph is westerly, then there are about even chances whether there will be no cloud shading or convection or some cloud shading or convection. However, it is highly unlikely that there will be marked cloud shading or convection."
+        },
+        {
+            "id": 31,
+            "origin": "CldShadeConv",
+            "content": "If there is weak instability in the mountains and the wind hodograph is something other than westerly or strong from the west, then there is a very good chance that there will be no cloud shading or convection, and it is unlikely that there will be some cloud shading or convection. Additionally, there is almost no chance that there will be marked cloud shading or convection."
+        },
+        {
+            "id": 32,
+            "origin": "CldShadeConv",
+            "content": "If there is strong instability in the mountains and the wind hodograph is favorable for DCVZ, then it is impossible that there is no cloud shading or convection, and it is probably not the case that there will be some cloud shading or convection. However, it is probable that there will be marked cloud shading or convection."
+        },
+        {
+            "id": 33,
+            "origin": "CldShadeConv",
+            "content": "If there is strong instability in the mountains and the wind hodograph is strong from the west, then it is impossible that there is no cloud shading or convection, and it is unlikely that there will be some cloud shading or convection. However, there is a very good chance that there will be marked cloud shading or convection."
+        },
+        {
+            "id": 34,
+            "origin": "CldShadeConv",
+            "content": "If there is strong instability in the mountains and the wind hodograph is westerly, then there is little chance that there will be no cloud shading or convection, and there are about even chances whether there will be some cloud shading or convection. However, it is probably not the case that there will be marked cloud shading or convection."
+        },
+        {
+            "id": 35,
+            "origin": "CldShadeConv",
+            "content": "If there is strong instability in the mountains and the wind hodograph is something other than westerly or strong from the west, then there are about even chances whether there will be no cloud shading or convection, and it is probably not the case that there will be some cloud shading or convection. Additionally, it is improbable that there will be marked cloud shading or convection"
+        }
+    ],
+    "evidence_query_pairs": [
+        {
+            "id": 0,
+            "evidences": [
+                "The outflow from the mountains is strong.",
+                "The wind hodograph is DCVZ favorable.",
+                "The instability in the mountains is strong.",
+                "There is no AM instability in the mountains."
+            ],
+            "query": "What is the likelihood of marked cloud shading and convection in the mountains?",
+            "answer": 0.7,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "OutflowFrMt",
+                "WndHodograph",
+                "InsInMt",
+                "AMInstabMt",
+                "CldShadeConv"
+            ]
+        },
+        {
+            "id": 1,
+            "evidences": [
+                "The wind hodograph is classified as other.",
+                "The instability in the mountains is classified as weak.",
+                "The AM instability in the mountains is classified as none.",
+                "The outflow from the mountains is classified as weak."
+            ],
+            "query": "What is the likelihood of marked cloud shading and convection occurring in the mountains?",
+            "answer": 0.01,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "WndHodograph",
+                "InsInMt",
+                "AMInstabMt",
+                "OutflowFrMt",
+                "CldShadeConv"
+            ]
+        },
+        {
+            "id": 2,
+            "evidences": [
+                "The instability in the mountains is weak.",
+                "The outflow from the mountains is strong."
+            ],
+            "query": "What is the likelihood of there being no cloud shading or convection in the mountains?",
+            "answer": 0.25063694,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "InsInMt",
+                "OutflowFrMt",
+                "CldShadeConv"
+            ]
+        },
+        {
+            "id": 3,
+            "evidences": [
+                "The outflow from the mountains is nonexistent.",
+                "The wind hodograph is DCVZ favorable.",
+                "The AM instability is weak.",
+                "The instability in the mountains is strong."
+            ],
+            "query": "What is the likelihood of marked cloud shading and convection in the mountains?",
+            "answer": 0.7,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "OutflowFrMt",
+                "WndHodograph",
+                "AMInstabMt",
+                "InsInMt",
+                "CldShadeConv"
+            ]
+        },
+        {
+            "id": 4,
+            "evidences": [
+                "The wind hodograph is consistent with DCVZ (dryline, cold front, and low-level wind shear) favorable conditions."
+            ],
+            "query": "What is the likelihood of the clouds having some shading and convection?",
+            "answer": 0.30016829,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "WndHodograph",
+                "CldShadeConv"
+            ]
+        },
+        {
+            "id": 5,
+            "evidences": [
+                "The instability in the mountains is strong.",
+                "The wind hodograph is DCVZ favorable.",
+                "There is no AM instability in the mountains."
+            ],
+            "query": "What is the likelihood of there being no outflow from the mountains?",
+            "answer": 0.05,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "InsInMt",
+                "WndHodograph",
+                "AMInstabMt",
+                "OutflowFrMt"
+            ]
+        },
+        {
+            "id": 6,
+            "evidences": [
+                "The mountains have some cloud shading and convection."
+            ],
+            "query": "What is the likelihood of there being no instability in the mountains, given that there is some cloud shading and convection?",
+            "answer": 0.0,
+            "reasoning_types": [
+                "evidential"
+            ],
+            "sampled_nodes": [
+                "CldShadeConv",
+                "InsInMt"
+            ]
+        },
+        {
+            "id": 7,
+            "evidences": [
+                "The outflow from the mountains is strong.",
+                "There is no cloud shading or convection."
+            ],
+            "query": "What is the likelihood of no AM instability in the mountains?",
+            "answer": 0.19769534,
+            "reasoning_types": [
+                "evidential"
+            ],
+            "sampled_nodes": [
+                "OutflowFrMt",
+                "CldShadeConv",
+                "AMInstabMt"
+            ]
+        },
+        {
+            "id": 8,
+            "evidences": [
+                "The cloud shading and convection is none.",
+                "There is no AM instability.",
+                "However, there is a strong instability in the mountains.",
+                "The outflow from the mountain is weak."
+            ],
+            "query": "What is the likelihood of the wind hodograph being other than normal?",
+            "answer": 0.82758621,
+            "reasoning_types": [
+                "evidential",
+                "explaining_away"
+            ],
+            "sampled_nodes": [
+                "CldShadeConv",
+                "AMInstabMt",
+                "InsInMt",
+                "OutflowFrMt",
+                "WndHodograph"
+            ]
+        },
+        {
+            "id": 9,
+            "evidences": [
+                "The AM instability is weak."
+            ],
+            "query": "What is the likelihood of there being no outflow from the mountains?",
+            "answer": 0.24737125,
+            "reasoning_types": [],
+            "sampled_nodes": [
+                "AMInstabMt",
+                "OutflowFrMt"
+            ]
+        },
+        {
+            "id": 10,
+            "evidences": [
+                "The wind direction in the mountains is westerly.",
+                "There is currently no instability in the mountains.",
+                "There is also no recorded AM instability in the mountains."
+            ],
+            "query": "What is the likelihood of cloud shading and convection being present in the mountains?",
+            "answer": 0.0,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "InsInMt",
+                "WndHodograph",
+                "AMInstabMt",
+                "CldShadeConv"
+            ]
+        },
+        {
+            "id": 11,
+            "evidences": [
+                "The instability in the mountains is strong.",
+                "There is no cloud shading or convection."
+            ],
+            "query": "What is the likelihood of no AM instability in the mountains from an avalanche perspective?",
+            "answer": 0.035008051,
+            "reasoning_types": [
+                "evidential"
+            ],
+            "sampled_nodes": [
+                "InsInMt",
+                "CldShadeConv",
+                "AMInstabMt"
+            ]
+        },
+        {
+            "id": 12,
+            "evidences": [
+                "The outflow from the mountains is weak.",
+                "The wind hodograph is other than the typical.",
+                "The AM instability in the mountains is strong."
+            ],
+            "query": "What is the likelihood of observing some cloud shading and convection in the mountains?",
+            "answer": 0.37873162,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "OutflowFrMt",
+                "WndHodograph",
+                "AMInstabMt",
+                "CldShadeConv"
+            ]
+        },
+        {
+            "id": 13,
+            "evidences": [
+                "The mountain's AM instability is currently none.",
+                "There is no reported outflow from the mountain.",
+                "The mountain has some cloud shading and convection.",
+                "The mountain's instability is weak."
+            ],
+            "query": "What is the likelihood of the wind hodograph being other than the standard options?",
+            "answer": 0.16265383,
+            "reasoning_types": [
+                "evidential",
+                "explaining_away"
+            ],
+            "sampled_nodes": [
+                "AMInstabMt",
+                "OutflowFrMt",
+                "CldShadeConv",
+                "InsInMt",
+                "WndHodograph"
+            ]
+        },
+        {
+            "id": 14,
+            "evidences": [
+                "The outflow from the mountains is none.",
+                "There is no AM instability in the mountains.",
+                "The cloud shading and convection are none."
+            ],
+            "query": "What is the likelihood of the wind hodograph being strong and coming from the West?",
+            "answer": 0.22683323,
+            "reasoning_types": [
+                "evidential"
+            ],
+            "sampled_nodes": [
+                "OutflowFrMt",
+                "AMInstabMt",
+                "CldShadeConv",
+                "WndHodograph"
+            ]
+        },
+        {
+            "id": 15,
+            "evidences": [
+                "The cloud shading and convection is nonexistent."
+            ],
+            "query": "What is the likelihood of the AM instability in the mountains being weak?",
+            "answer": 0.19636761,
+            "reasoning_types": [
+                "evidential"
+            ],
+            "sampled_nodes": [
+                "CldShadeConv",
+                "AMInstabMt"
+            ]
+        },
+        {
+            "id": 16,
+            "evidences": [
+                "The instability in the mountains is weak.",
+                "There is no AM instability in the mountains.",
+                "The wind hodograph is strong and coming from the West."
+            ],
+            "query": "What is the likelihood of there being some cloud shading and convection in the mountains?",
+            "answer": 0.7,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "InsInMt",
+                "AMInstabMt",
+                "WndHodograph",
+                "CldShadeConv"
+            ]
+        },
+        {
+            "id": 17,
+            "evidences": [
+                "The wind hodograph is classified as other.",
+                "The AM mountain instability is classified as weak."
+            ],
+            "query": "What is the likelihood of observing some cloud shading and convection in the mountains?",
+            "answer": 0.321252,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "WndHodograph",
+                "AMInstabMt",
+                "CldShadeConv"
+            ]
+        },
+        {
+            "id": 18,
+            "evidences": [
+                "The instability in the mountains is weak.",
+                "The outflow from the mountains is strong.",
+                "The overall AM instability of the mountains is strong."
+            ],
+            "query": "What is the likelihood of the wind hodograph being strongly from the west?",
+            "answer": 0.71656051,
+            "reasoning_types": [
+                "evidential",
+                "explaining_away"
+            ],
+            "sampled_nodes": [
+                "InsInMt",
+                "OutflowFrMt",
+                "AMInstabMt",
+                "WndHodograph"
+            ]
+        },
+        {
+            "id": 19,
+            "evidences": [
+                "The instability in the mountains is none.",
+                "The AM instability in the mountains is none."
+            ],
+            "query": "What is the likelihood of marked cloud shading and convection in the mountains?",
+            "answer": 0.0,
+            "reasoning_types": [
+                "causal"
+            ],
+            "sampled_nodes": [
+                "InsInMt",
+                "AMInstabMt",
+                "CldShadeConv"
+            ]
+        },
+        {
+            "id": 20,
+            "evidences": [
+                "The cloud shading and convection is nonexistent."
+            ],
+            "query": "What is the likelihood of the AM instability in the mountains being weak?",
+            "answer": 0.19636761,
+            "reasoning_types": [
+                "evidential"
+            ],
+            "sampled_nodes": [
+                "CldShadeConv",
+                "AMInstabMt"
+            ]
+        },
+        {
+            "id": 21,
+            "evidences": [
+                "The cloud shading and convection is nonexistent."
+            ],
+            "query": "What is the likelihood of the wind hodograph being strong and moving from the west?",
+            "answer": 0.16916407,
+            "reasoning_types": [
+                "evidential"
+            ],
+            "sampled_nodes": [
+                "CldShadeConv",
+                "WndHodograph"
+            ]
+        },
+        {
+            "id": 22,
+            "evidences": [
+                "The outflow from the mountains is weak.",
+                "There is some cloud shading and convection.",
+                "The wind hodograph is strong and comes from the West."
+            ],
+            "query": "What is the likelihood of there being no AM instability in the mountains given the current conditions?",
+            "answer": 0.39237448,
+            "reasoning_types": [
+                "evidential"
+            ],
+            "sampled_nodes": [
+                "OutflowFrMt",
+                "CldShadeConv",
+                "WndHodograph",
+                "AMInstabMt"
+            ]
+        },
+        {
+            "id": 23,
+            "evidences": [
+                "The cloud shading and convection is present to some extent.",
+                "The AM mountain instability is weak."
+            ],
+            "query": "What is the likelihood of the mountain instability also being weak?",
+            "answer": 0.39604426,
+            "reasoning_types": [
+                "causal",
+                "evidential"
+            ],
+            "sampled_nodes": [
+                "CldShadeConv",
+                "AMInstabMt",
+                "InsInMt"
+            ]
+        }
+    ]
+}
