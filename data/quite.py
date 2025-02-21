@@ -213,7 +213,7 @@ class QuiteDataset(datasets.GeneratorBasedBuilder):
         split: str,
         metadata: list[str],
         metadata_key_to_idx: dict[str, int],
-    ) -> Generator[Tuple[int, Dict[Any]], None, None]:
+    ) -> Generator[Tuple[int, Dict[Any, Any]], None, None]:
         """
         The generator that yields every instance in QUITE step by step.
 
